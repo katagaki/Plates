@@ -6,8 +6,24 @@
     {
       "layers" : [
         {
-          "image-name" : "frying-pan.svg",
-          "name" : "Frying pan"
+          "image-name" : "pan-surface.svg",
+          "name" : "Pan surface"
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    },
+    {
+      "layers" : [
+        {
+          "image-name" : "pan-body.svg",
+          "name" : "Pan rim and handle"
         }
       ],
       "shadow" : {

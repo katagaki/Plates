@@ -1,0 +1,6 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Frying pan rim and handle">
+  <g fill="#ffffff" transform="rotate(-45 512 512) translate(512,512) scale(0.8) translate(-512,-512)">
+    <rect x="567" y="464" width="340" height="96" rx="48"/>
+    <path fill-rule="evenodd" d="M377 252 a260 260 0 1 0 0 520 a260 260 0 1 0 0 -520 Z M377 342 a170 170 0 1 0 0 340 a170 170 0 1 0 0 -340 Z"/>
+  </g>
+</svg>
