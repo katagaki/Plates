@@ -6,24 +6,8 @@
     {
       "layers" : [
         {
-          "image-name" : "chef-hat.svg",
-          "name" : "Chef hat"
-        }
-      ],
-      "shadow" : {
-        "kind" : "neutral",
-        "opacity" : 0.5
-      },
-      "translucency" : {
-        "enabled" : true,
-        "value" : 0.5
-      }
-    },
-    {
-      "layers" : [
-        {
-          "image-name" : "plate.svg",
-          "name" : "Plate"
+          "image-name" : "frying-pan.svg",
+          "name" : "Frying pan"
         }
       ],
       "shadow" : {
