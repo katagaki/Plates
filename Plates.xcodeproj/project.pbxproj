@@ -6,8 +6,13 @@
 	objectVersion = 110;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E47FE81A3047956D0038302E /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = E47FE8193047956D0038302E /* AppIcon.icon */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		E47FE75930478FED0038302E /* Plates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plates.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E47FE8193047956D0038302E /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -30,6 +35,7 @@
 		E47FE75030478FED0038302E = {
 			isa = PBXGroup;
 			children = (
+				E47FE8193047956D0038302E /* AppIcon.icon */,
 				E47FE75B30478FED0038302E /* Plates */,
 				E47FE75A30478FED0038302E /* Products */,
 			);
@@ -88,7 +94,7 @@
 			);
 			mainGroup = E47FE75030478FED0038302E;
 			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
+			preferredProjectObjectVersion = 100;
 			productRefGroup = E47FE75A30478FED0038302E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -102,6 +108,7 @@
 		E47FE75730478FED0038302E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
+				E47FE81A3047956D0038302E /* AppIcon.icon in Resources */,
 			);
 		};
 /* End PBXResourcesBuildPhase section */
