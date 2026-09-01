@@ -41,6 +41,12 @@ with `preserves-vector-representation`, named after the SVG file, so a schema pa
 with explicit `width` and `height` on the root element, otherwise the asset catalog will not
 take it.
 
+## App icon
+
+The app icon is an Icon Composer document at `AppIcon.icon`, not an asset catalog icon set.
+Layers are SVGs in `AppIcon.icon/Assets`, one group each, over an automatic gradient fill.
+`ASSETCATALOG_COMPILER_APPICON_NAME` stays `AppIcon` and resolves to that document.
+
 ## Commit rules
 
 - Single line only. No body, no trailers, no attribution or co-author lines.
