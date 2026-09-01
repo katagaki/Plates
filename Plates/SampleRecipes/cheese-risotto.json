@@ -1,0 +1,160 @@
+{
+  "id": "cheese-risotto",
+  "title": "Cheese Risotto",
+  "time": "25 min",
+  "serves": "1",
+  "ingredients": {
+    "supermarket": [
+      {
+        "item": "Bacon (half-size slices)",
+        "icon": "img/ingredients/bacon.svg",
+        "amount": "2 slices"
+      },
+      {
+        "item": "Grated cheese",
+        "icon": "img/ingredients/cheese.svg",
+        "amount": "2 tbsp"
+      }
+    ],
+    "general": [
+      {
+        "item": "Rice (unwashed)",
+        "icon": "img/ingredients/rice.svg",
+        "amount": "1 cup (180 ml)"
+      },
+      {
+        "item": "Water",
+        "icon": "img/ingredients/water.svg",
+        "amount": "400 ml"
+      },
+      {
+        "item": "Bouillon cube",
+        "icon": "img/ingredients/bouillon.svg",
+        "amount": "1"
+      },
+      {
+        "item": "Butter or olive oil",
+        "icon": "img/ingredients/butter.svg",
+        "amount": "10 g"
+      },
+      {
+        "item": "Salt and black pepper",
+        "icon": "img/ingredients/salt.svg",
+        "amount": "to taste"
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "Frying pan (about 24 cm)",
+      "icon": "img/tools/pan.svg",
+      "required": true
+    },
+    {
+      "name": "Wooden spatula or cooking chopsticks",
+      "icon": "img/tools/spatula.svg",
+      "required": true
+    },
+    {
+      "name": "Measuring cup",
+      "icon": "img/tools/measuring-cup.svg",
+      "required": false,
+      "note": "A 500 ml bottle filled to about 80% works too."
+    },
+    {
+      "name": "Lid",
+      "icon": "img/tools/lid.svg",
+      "required": false,
+      "note": "For an extra steam if the rice is still chalky at the end."
+    }
+  ],
+  "steps": [
+    {
+      "title": "Cut bacon",
+      "points": [
+        "Cut the bacon into strips about 1 cm wide.",
+        "This is the only knife work in the recipe."
+      ],
+      "image": "img/cheese-risotto-1.svg"
+    },
+    {
+      "title": "Fry bacon",
+      "points": [
+        "Put the strips in a dry frying pan.",
+        "Cook over medium heat for about a minute.",
+        "The fat that renders out becomes your cooking oil."
+      ],
+      "image": "img/cheese-risotto-2.svg"
+    },
+    {
+      "title": "Add rice",
+      "points": [
+        "Tip in the rice as it comes, unwashed.",
+        "Stir for a minute, until every grain is coated in fat.",
+        "Stop when the rice turns faintly translucent."
+      ],
+      "hint": "Rinsing washes off the surface starch, and with it the creaminess. For risotto, unwashed is correct.",
+      "image": "img/cheese-risotto-3.svg"
+    },
+    {
+      "title": "Add water and bouillon",
+      "points": [
+        "Pour in 400 ml of water and drop in the bouillon cube.",
+        "Break the cube up with the spatula as you stir.",
+        "Turn the heat to high and bring it to a boil."
+      ],
+      "image": "img/cheese-risotto-4.svg"
+    },
+    {
+      "title": "Simmer rice",
+      "points": [
+        "Drop to low heat once it boils.",
+        "Simmer uncovered for 15 minutes.",
+        "Stir slowly from the bottom about every 3 minutes."
+      ],
+      "hint": "Skip the stirring and the bottom scorches. Keep the heat low and stay close to the stove.",
+      "image": "img/cheese-risotto-5.svg"
+    },
+    {
+      "title": "Check rice",
+      "points": [
+        "Crush a grain of rice and taste it.",
+        "Still chalky in the center: add 50 ml of water and simmer 3 minutes more.",
+        "Soupy: raise to medium heat for about a minute to drive off the excess."
+      ],
+      "image": "img/cheese-risotto-6.svg"
+    },
+    {
+      "title": "Add cheese and butter",
+      "points": [
+        "Kill the heat first.",
+        "Add the 2 tablespoons of grated cheese and 10 g of butter, and stir for about 20 seconds.",
+        "Season with salt and black pepper."
+      ],
+      "hint": "Add cheese over a live flame and it splits, leaving a grainy texture.",
+      "image": "img/cheese-risotto-7.svg"
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "The bottom scorched",
+      "solution": "The heat was too high. Drop it to the lowest setting and stir every 2 minutes instead. Don't stir the burnt layer in. Scoop only from the top when serving."
+    },
+    {
+      "problem": "Still chalky after 15 minutes",
+      "solution": "Not enough water. Add 50 ml at a time and check every 3 minutes. A lid speeds things up, but traps moisture, so take it off and reduce for a final minute."
+    },
+    {
+      "problem": "It's loose, like soup",
+      "solution": "Raise to medium heat and reduce for about a minute while stirring. It tightens a little from residual heat after plating, so stop while it's just slightly loose."
+    },
+    {
+      "problem": "No bouillon cube",
+      "solution": "A scant teaspoon of salt plus a teaspoon of mentsuyu (if you have it) stands in. The bacon brings salt too, so hold back and adjust by taste at the end."
+    },
+    {
+      "problem": "The bacon was sold out",
+      "solution": "Two sausages or a can of tuna works instead. For tuna, add it oil and all, and halve the butter."
+    }
+  ]
+}

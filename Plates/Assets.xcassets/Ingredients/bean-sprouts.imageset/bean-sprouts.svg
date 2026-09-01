@@ -1,0 +1,11 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bean sprouts">
+  <g stroke="#f3dfae" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M12 34q6-12 18-14"/>
+    <path d="M14 40q8-12 22-12"/>
+    <path d="M20 42q6-16 18-20"/>
+  </g>
+  <circle cx="32" cy="19" r="4" fill="#f0e6c0"/>
+  <circle cx="37" cy="27" r="4" fill="#f0e6c0"/>
+  <circle cx="39" cy="21" r="3.5" fill="#e8dcae"/>
+  <path d="M10 34l-3 3M12 40l-4 2" stroke="#e8c66a" stroke-width="2" stroke-linecap="round"/>
+</svg>

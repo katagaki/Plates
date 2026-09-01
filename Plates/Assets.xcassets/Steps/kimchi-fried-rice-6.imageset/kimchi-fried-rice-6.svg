@@ -1,0 +1,30 @@
+<svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diced onion and kimchi frying in butter in a dry pan, steam rising">
+  <defs>
+    <linearGradient id="pan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5c6066"/><stop offset="1" stop-color="#3c4046"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="100" cy="126" rx="80" ry="8" fill="#000" opacity="0.25"/>
+  <path d="M30 58 L170 58 L160 108 Q100 120 40 108 Z" fill="url(#pan)"/>
+  <rect x="26" y="54" width="148" height="8" rx="4" fill="#6f747b"/>
+  <path d="M172 58 L198 52" stroke="#a97142" stroke-width="10" stroke-linecap="round"/>
+  <path d="M44 66 L156 66 L150 100 Q100 110 50 100 Z" fill="#2b2e33"/>
+  <path d="M62 94 Q100 88 138 94" stroke="#ffd75e" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.9"/>
+  <rect x="90" y="70" width="20" height="13" rx="3" fill="#f1c21b"/>
+  <rect x="90" y="70" width="20" height="5" rx="2.5" fill="#ffe97a"/>
+  <path d="M54 82 q10 -6 18 -1 q6 4 2 10 q-10 4 -20 -1 Z" fill="#e33b3b"/>
+  <path d="M58 84 q8 -4 13 0" stroke="#f7736d" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M116 88 q9 -6 17 -1 q5 4 1 9 q-9 3 -18 -1 Z" fill="#fa4d56"/>
+  <path d="M128 74 q9 -6 17 -1 q5 4 1 9 q-9 3 -18 -1 Z" fill="#e33b3b"/>
+  <g fill="#f3dfae">
+    <rect x="76" y="76" width="8" height="8" rx="2" transform="rotate(6 80 80)"/>
+    <rect x="88" y="90" width="8" height="8" rx="2" transform="rotate(-9 92 94)"/>
+    <rect x="104" y="88" width="8" height="8" rx="2" transform="rotate(4 108 92)"/>
+    <rect x="74" y="92" width="8" height="8" rx="2" transform="rotate(-5 78 96)"/>
+    <rect x="112" y="74" width="8" height="8" rx="2" transform="rotate(8 116 78)"/>
+  </g>
+  <circle cx="100" cy="98" r="2.5" fill="#ffd75e"/>
+  <circle cx="140" cy="94" r="2.5" fill="#ffd75e"/>
+  <path d="M70 44 q-5 -9 0 -18 M100 38 q-5 -9 0 -18 M130 44 q-5 -9 0 -18" stroke="#aab6c0" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+  <path d="M74 112 q-5 8 0 14 M100 112 q-5 8 0 14 M126 112 q-5 8 0 14" stroke="#ff832b" stroke-width="4" fill="none" stroke-linecap="round"/>
+</svg>

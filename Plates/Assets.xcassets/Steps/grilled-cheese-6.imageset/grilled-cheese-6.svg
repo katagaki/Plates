@@ -1,0 +1,22 @@
+<svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The grilled cheese cut in half on a plate with cheese stretching between the two pieces">
+  <defs>
+    <radialGradient id="plate" cx="0.5" cy="0.4" r="0.7">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#f0ece4"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="100" cy="128" rx="82" ry="8" fill="#000" opacity="0.25"/>
+  <ellipse cx="100" cy="104" rx="80" ry="28" fill="url(#plate)"/>
+  <ellipse cx="100" cy="102" rx="64" ry="22" fill="#e6e0d4"/>
+  <g transform="translate(24,52) rotate(-6)">
+    <path d="M0 46 L38 0 L74 46 Z" fill="#d99a4e"/>
+    <path d="M6 42 L38 6 L68 42 Z" fill="#fffaea"/>
+    <path d="M14 34 L38 16 L60 34 Z" fill="#ffd75e"/>
+  </g>
+  <g transform="translate(104,58) rotate(6)">
+    <path d="M0 40 L36 0 L70 40 Z" fill="#d99a4e"/>
+    <path d="M6 36 L36 6 L64 36 Z" fill="#fffaea"/>
+    <path d="M14 30 L36 14 L56 30 Z" fill="#ffd75e"/>
+  </g>
+  <path d="M84 62 q14 14 32 4" stroke="#ffd75e" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M62 34 q-5 -9 0 -18 M100 28 q-5 -9 0 -18 M136 36 q-5 -9 0 -18" stroke="#aab6c0" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+</svg>

@@ -1,0 +1,18 @@
+<svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Plated seafood curry beside rice with a pat of butter on top">
+  <defs>
+    <radialGradient id="plate" cx="0.5" cy="0.4" r="0.7">
+      <stop offset="0" stop-color="#f4f6f8"/><stop offset="1" stop-color="#c9d1d9"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="100" cy="132" rx="86" ry="9" fill="#000" opacity="0.25"/>
+  <ellipse cx="100" cy="88" rx="86" ry="44" fill="url(#plate)"/>
+  <ellipse cx="100" cy="86" rx="72" ry="35" fill="#e4e9ee"/>
+  <path d="M34 96 q7 -30 30 -30 q23 0 30 30 Z" fill="#ffffff"/>
+  <path d="M40 96 q6 -22 24 -22" stroke="#dfe5ea" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M98 98 q5 -28 32 -28 q27 0 32 28 Q130 108 98 98 Z" fill="#a4693a"/>
+  <path d="M108 84 q7 -5 13 0 M126 78 q6 -4 11 0" stroke="#c58a52" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M116 92 q-2 -8 6 -9 q8 -1 8 5 q0 6 -6 6" stroke="#fa7368" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+  <rect x="126" y="58" width="15" height="11" rx="2" fill="#f1c21b"/>
+  <rect x="126" y="58" width="15" height="4" rx="2" fill="#ffe97a"/>
+  <path d="M62 44 q-4 -7 0 -13 M78 40 q-4 -7 0 -13 M122 42 q-4 -7 0 -13" stroke="#aab6c0" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.85"/>
+</svg>

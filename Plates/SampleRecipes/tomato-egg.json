@@ -1,0 +1,187 @@
+{
+  "id": "tomato-egg",
+  "title": "Tomato & Egg Stir-Fry",
+  "time": "15 min",
+  "serves": "1 to 2",
+  "ingredients": {
+    "supermarket": [
+      {
+        "item": "Eggs",
+        "icon": "img/ingredients/egg.svg",
+        "amount": "3"
+      },
+      {
+        "item": "Tomatoes",
+        "icon": "img/ingredients/tomato.svg",
+        "amount": "2 (about 250 g)",
+        "note": "Ripe and soft ones break down into sauce. Firm pale ones stay chunky and sour."
+      },
+      {
+        "item": "Spring onion",
+        "icon": "img/ingredients/spring-onion.svg",
+        "amount": "1"
+      }
+    ],
+    "general": [
+      {
+        "item": "Cooking oil",
+        "icon": "img/ingredients/oil.svg",
+        "amount": "2 tbsp"
+      },
+      {
+        "item": "Sugar",
+        "icon": "img/ingredients/sugar.svg",
+        "amount": "1 tsp"
+      },
+      {
+        "item": "Salt",
+        "icon": "img/ingredients/salt.svg",
+        "amount": "to taste"
+      },
+      {
+        "item": "White pepper",
+        "icon": "img/ingredients/pepper.svg",
+        "amount": "a pinch"
+      }
+    ],
+    "optional": [
+      {
+        "item": "Ketchup",
+        "icon": "img/ingredients/ketchup.svg",
+        "amount": "1 tsp",
+        "note": "Worth adding when the tomatoes are out of season, it puts back the color and sweetness they lack."
+      },
+      {
+        "item": "Sesame oil",
+        "icon": "img/ingredients/sesame-oil.svg",
+        "amount": "a little"
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "Frying pan (about 24 cm)",
+      "icon": "img/tools/pan.svg",
+      "required": true
+    },
+    {
+      "name": "Cutting board",
+      "icon": "img/tools/cutting-board.svg",
+      "required": true
+    },
+    {
+      "name": "Knife",
+      "icon": "img/tools/knife.svg",
+      "required": true
+    },
+    {
+      "name": "Small bowl",
+      "icon": "img/tools/bowl.svg",
+      "required": true
+    },
+    {
+      "name": "Spatula",
+      "icon": "img/tools/spatula.svg",
+      "required": true
+    },
+    {
+      "name": "Plate",
+      "icon": "img/tools/plate.svg",
+      "required": false,
+      "note": "Somewhere to park the eggs halfway through. The bowl the eggs were beaten in works too."
+    }
+  ],
+  "steps": [
+    {
+      "title": "Cut tomatoes",
+      "points": [
+        "Cut each tomato into 6 to 8 wedges.",
+        "Keep the juice and seeds, they become the sauce.",
+        "Cut the spring onion into short pieces and keep the green tops separate."
+      ],
+      "image": "img/tomato-egg-1.svg"
+    },
+    {
+      "title": "Beat eggs",
+      "points": [
+        "Crack the eggs into a bowl with a pinch of salt and the white pepper.",
+        "Beat until the yolks and whites are one color, about 20 seconds.",
+        "Stop there. Beating longer makes them thin and rubbery."
+      ],
+      "image": "img/tomato-egg-2.svg"
+    },
+    {
+      "title": "Heat pan",
+      "points": [
+        "Put 1 tbsp of the oil in over medium-high and wait until it thins out and shimmers.",
+        "A drop of egg should sizzle and puff immediately.",
+        "A cold pan is the main reason eggs stick."
+      ],
+      "image": "img/tomato-egg-3.svg"
+    },
+    {
+      "title": "Scramble eggs",
+      "points": [
+        "Pour the eggs in and leave them for 10 seconds, until the edges set.",
+        "Push the set parts to the middle with the spatula in slow, large sweeps.",
+        "Take them out while the middle still looks wet, about 30 seconds in total."
+      ],
+      "hint": "The eggs go back into a hot pan later, so they finish cooking twice. Taking them out underdone is what keeps them soft at the end.",
+      "image": "img/tomato-egg-4.svg"
+    },
+    {
+      "title": "Cook tomatoes",
+      "points": [
+        "Add the remaining oil and the white parts of the spring onion, then the tomato wedges.",
+        "Press them gently with the spatula and cook 3 to 4 minutes.",
+        "They are ready when the skins slip loose and there is a pool of red juice in the pan."
+      ],
+      "hint": "If the tomatoes stay dry and firm, put the lid on for a minute. Trapped steam softens the skins much faster than heat alone.",
+      "image": "img/tomato-egg-5.svg"
+    },
+    {
+      "title": "Season sauce",
+      "points": [
+        "Stir in the sugar, a good pinch of salt, and the ketchup if you are using it.",
+        "Taste the juice now. It should be sweet first and sour second.",
+        "Let it bubble for another minute so it thickens slightly."
+      ],
+      "image": "img/tomato-egg-6.svg"
+    },
+    {
+      "title": "Return eggs",
+      "points": [
+        "Slide the eggs back in and fold them through the sauce two or three times.",
+        "Kill the heat after 30 seconds, while the curds are still in large pieces.",
+        "Finish with the green spring onion tops and a few drops of sesame oil, and serve it over rice."
+      ],
+      "image": "img/tomato-egg-7.svg"
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "The eggs came out rubbery",
+      "solution": "They were cooked through the first time and then cooked again. Pull them out of the pan while the middle is still glossy and wet, they set the rest of the way on the plate."
+    },
+    {
+      "problem": "The eggs stuck to the pan",
+      "solution": "The oil was not hot enough. Wait for it to shimmer before the eggs go in, and be generous: this dish wants more oil than feels right."
+    },
+    {
+      "problem": "It tastes sour",
+      "solution": "Underripe tomatoes, or not enough sugar. Add another 1/2 tsp sugar and a little more salt, both of them pull the sourness back."
+    },
+    {
+      "problem": "It came out watery",
+      "solution": "The tomatoes gave up more juice than the pan could boil off. Cook them a minute or two longer before the eggs go back in, since once the eggs return you cannot reduce it without overcooking them."
+    },
+    {
+      "problem": "The curds broke into small pieces",
+      "solution": "There was too much stirring at the end. Fold, do not stir, and count the folds: three is plenty."
+    },
+    {
+      "problem": "Want it more filling",
+      "solution": "Serve it over rice and pour the sauce on as well, it is the best part. A fourth egg also stretches it without changing anything else."
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Blocks of curry roux">
+  <rect x="9" y="15" width="30" height="19" rx="2" fill="#a4693a"/>
+  <path d="M19 15v19M29 15v19M9 24.5h30" stroke="#7d4e2a" stroke-width="2"/>
+  <path d="M9 17h30" stroke="#c98a4b" stroke-width="2.5"/>
+</svg>

@@ -1,0 +1,26 @@
+<svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Unwashed rice pouring into the pan with the bacon">
+  <defs>
+    <linearGradient id="pan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5c6066"/><stop offset="1" stop-color="#3c4046"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="100" cy="126" rx="80" ry="8" fill="#000" opacity="0.25"/>
+  <path d="M30 62 L170 62 L160 110 Q100 122 40 110 Z" fill="url(#pan)"/>
+  <rect x="26" y="58" width="148" height="8" rx="4" fill="#6f747b"/>
+  <path d="M172 62 L198 56" stroke="#a97142" stroke-width="10" stroke-linecap="round"/>
+  <path d="M44 70 L156 70 L150 102 Q100 112 50 102 Z" fill="#2b2e33"/>
+  <path d="M96 12 L134 12 L128 40 L102 40 Z" fill="#e8edf2"/>
+  <path d="M96 12 L134 12 L132 20 L98 20 Z" fill="#ffffff"/>
+  <g fill="#f0ece4">
+    <ellipse cx="112" cy="48" rx="2.6" ry="4"/><ellipse cx="119" cy="56" rx="2.6" ry="4"/><ellipse cx="108" cy="60" rx="2.6" ry="4"/>
+  </g>
+  <g fill="#f0ece4">
+    <ellipse cx="62" cy="82" rx="3" ry="4.5"/><ellipse cx="74" cy="78" rx="3" ry="4.5"/><ellipse cx="86" cy="84" rx="3" ry="4.5"/>
+    <ellipse cx="98" cy="79" rx="3" ry="4.5"/><ellipse cx="110" cy="85" rx="3" ry="4.5"/><ellipse cx="122" cy="80" rx="3" ry="4.5"/>
+    <ellipse cx="134" cy="84" rx="3" ry="4.5"/><ellipse cx="70" cy="92" rx="3" ry="4.5"/><ellipse cx="92" cy="94" rx="3" ry="4.5"/>
+    <ellipse cx="114" cy="95" rx="3" ry="4.5"/><ellipse cx="130" cy="92" rx="3" ry="4.5"/>
+  </g>
+  <path d="M54 76 q8 -5 14 0" stroke="#e05c66" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M138 76 q6 -4 11 0" stroke="#e05c66" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M88 116 q-5 8 0 14 M112 116 q-5 8 0 14" stroke="#ff832b" stroke-width="4" fill="none" stroke-linecap="round"/>
+</svg>

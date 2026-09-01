@@ -1,0 +1,28 @@
+<svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Egg fried rice mounded on a plate, scattered with green spring onion and steaming">
+  <defs>
+    <radialGradient id="plate" cx="0.5" cy="0.4" r="0.7">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#f0ece4"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="100" cy="128" rx="82" ry="8" fill="#000" opacity="0.25"/>
+  <ellipse cx="100" cy="102" rx="80" ry="28" fill="url(#plate)"/>
+  <ellipse cx="100" cy="100" rx="64" ry="22" fill="#e6e0d4"/>
+  <path d="M58 100 Q60 74 100 72 Q140 74 142 100 Q120 110 100 110 Q80 110 58 100 Z" fill="#f7ecd0"/>
+  <path d="M66 94 q12 6 24 0 M110 92 q12 6 24 0" stroke="#fffaea" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <g fill="#ffffff">
+    <ellipse cx="76" cy="88" rx="2.4" ry="3.6"/><ellipse cx="94" cy="84" rx="2.4" ry="3.6"/><ellipse cx="112" cy="88" rx="2.4" ry="3.6"/>
+    <ellipse cx="86" cy="98" rx="2.4" ry="3.6"/><ellipse cx="122" cy="98" rx="2.4" ry="3.6"/>
+  </g>
+  <path d="M78 80 q11 -7 20 -1 q6 5 0 11 q-12 4 -21 -2 Z" fill="#f1c21b"/>
+  <path d="M108 84 q11 -7 20 -1 q6 5 0 11 q-12 4 -21 -2 Z" fill="#ffd75e"/>
+  <path d="M64 96 q9 -6 17 -1 q5 4 0 9 q-10 3 -18 -2 Z" fill="#f1c21b"/>
+  <g fill="#42be65">
+    <circle cx="90" cy="76" r="3.4"/><circle cx="104" cy="79" r="3.4"/><circle cx="118" cy="76" r="3.4"/>
+    <circle cx="72" cy="90" r="3.4"/><circle cx="132" cy="92" r="3.4"/><circle cx="100" cy="92" r="3.4"/>
+  </g>
+  <path d="M84 34 q-5 -9 0 -18 M104 30 q-5 -9 0 -18 M124 36 q-5 -9 0 -18" stroke="#aab6c0" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+  <g transform="translate(28,52) rotate(-16)">
+    <line x1="0" y1="0" x2="4" y2="46" stroke="#a97142" stroke-width="5" stroke-linecap="round"/>
+    <line x1="10" y1="0" x2="12" y2="46" stroke="#c08a54" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>

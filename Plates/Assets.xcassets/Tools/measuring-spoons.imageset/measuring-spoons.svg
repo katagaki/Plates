@@ -1,0 +1,8 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Measuring spoons">
+  <ellipse cx="15" cy="16" rx="8" ry="6" fill="#cfd6dd"/>
+  <ellipse cx="15" cy="16" rx="5" ry="3.5" fill="#8d939b"/>
+  <rect x="21" y="18" width="18" height="4" rx="2" transform="rotate(20 21 18)" fill="#cfd6dd"/>
+  <ellipse cx="17" cy="33" rx="6.5" ry="5" fill="#cfd6dd"/>
+  <ellipse cx="17" cy="33" rx="4" ry="2.8" fill="#8d939b"/>
+  <rect x="22" y="34" width="16" height="4" rx="2" transform="rotate(-14 22 34)" fill="#cfd6dd"/>
+</svg>

@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bouillon cube">
+  <path d="M11 20 19 14h18l-8 6Z" fill="#c98a4b"/>
+  <rect x="11" y="20" width="18" height="14" fill="#a4693a"/>
+  <path d="M29 20 37 14v14l-8 6Z" fill="#8a5730"/>
+  <rect x="11" y="24" width="18" height="4" fill="#c98a4b" opacity="0.6"/>
+</svg>

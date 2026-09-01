@@ -1,0 +1,5 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kitchen scissors">
+  <path d="M16 9 30 30M32 9 18 30" stroke="#cfd6dd" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="17" cy="36" r="6" fill="none" stroke="#ff832b" stroke-width="4"/>
+  <circle cx="31" cy="36" r="6" fill="none" stroke="#ff832b" stroke-width="4"/>
+</svg>

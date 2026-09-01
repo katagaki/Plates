@@ -1,0 +1,28 @@
+<svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A tall pile of cabbage added to the pan on top of the sausage">
+  <defs>
+    <linearGradient id="pan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5c6066"/><stop offset="1" stop-color="#3c4046"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="100" cy="126" rx="80" ry="8" fill="#000" opacity="0.25"/>
+  <path d="M30 64 L170 64 L160 112 Q100 124 40 112 Z" fill="url(#pan)"/>
+  <rect x="26" y="60" width="148" height="8" rx="4" fill="#6f747b"/>
+  <path d="M172 64 L198 58" stroke="#a97142" stroke-width="10" stroke-linecap="round"/>
+  <g>
+    <rect x="52" y="52" width="26" height="20" rx="5" fill="#9be3a8" transform="rotate(-10 65 62)"/>
+    <rect x="82" y="44" width="26" height="20" rx="5" fill="#b8ecc1" transform="rotate(6 95 54)"/>
+    <rect x="114" y="52" width="26" height="20" rx="5" fill="#9be3a8" transform="rotate(-6 127 62)"/>
+    <rect x="66" y="34" width="26" height="20" rx="5" fill="#b8ecc1" transform="rotate(8 79 44)"/>
+    <rect x="98" y="30" width="26" height="20" rx="5" fill="#9be3a8" transform="rotate(-8 111 40)"/>
+    <rect x="62" y="66" width="26" height="20" rx="5" fill="#7fd694" transform="rotate(4 75 76)"/>
+    <rect x="96" y="68" width="26" height="20" rx="5" fill="#7fd694" transform="rotate(-5 109 78)"/>
+    <rect x="126" y="66" width="24" height="18" rx="5" fill="#b8ecc1" transform="rotate(7 138 75)"/>
+    <path d="M72 60 q6 4 12 0" stroke="#6fce85" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M104 42 q6 4 12 0" stroke="#6fce85" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  </g>
+  <ellipse cx="70" cy="100" rx="10" ry="6" fill="#b85a42" transform="rotate(-10 70 100)"/>
+  <ellipse cx="128" cy="102" rx="10" ry="6" fill="#b85a42" transform="rotate(8 128 102)"/>
+  <path d="M60 118 q-5 8 0 14 M100 120 q-5 8 0 14 M140 118 q-5 8 0 14" stroke="#ff832b" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M80 121 q-4 6 0 11 M120 121 q-4 6 0 11" stroke="#ffb000" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M150 40 q10 -6 20 0 M164 30 L170 38 L160 42" stroke="#f0ece4" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+</svg>

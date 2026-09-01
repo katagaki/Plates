@@ -1,0 +1,31 @@
+<svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rice pressed flat into the garlic oil with a spatula, chopped garlic scattered through it">
+  <defs>
+    <linearGradient id="pan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5c6066"/><stop offset="1" stop-color="#3c4046"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="100" cy="124" rx="80" ry="8" fill="#000" opacity="0.25"/>
+  <path d="M30 58 L170 58 L160 108 Q100 120 40 108 Z" fill="url(#pan)"/>
+  <rect x="26" y="54" width="148" height="8" rx="4" fill="#6f747b"/>
+  <path d="M172 58 L198 52" stroke="#a97142" stroke-width="10" stroke-linecap="round"/>
+  <path d="M44 66 L156 66 L150 100 Q100 110 50 100 Z" fill="#f0ece4"/>
+  <path d="M50 72 L150 72" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+  <g fill="#ffffff">
+    <ellipse cx="62" cy="84" rx="2.6" ry="3.8"/><ellipse cx="76" cy="90" rx="2.6" ry="3.8"/><ellipse cx="90" cy="84" rx="2.6" ry="3.8"/>
+    <ellipse cx="104" cy="90" rx="2.6" ry="3.8"/><ellipse cx="118" cy="84" rx="2.6" ry="3.8"/><ellipse cx="132" cy="90" rx="2.6" ry="3.8"/>
+    <ellipse cx="69" cy="96" rx="2.6" ry="3.8"/><ellipse cx="97" cy="96" rx="2.6" ry="3.8"/><ellipse cx="125" cy="96" rx="2.6" ry="3.8"/>
+  </g>
+  <g fill="#e8c66a">
+    <rect x="80" y="76" width="5" height="5" rx="1.5"/>
+    <rect x="110" y="78" width="5" height="5" rx="1.5"/>
+    <rect x="138" y="84" width="5" height="5" rx="1.5"/>
+    <rect x="54" y="90" width="5" height="5" rx="1.5"/>
+    <rect x="112" y="94" width="5" height="5" rx="1.5"/>
+  </g>
+  <g transform="translate(116,4) rotate(24)">
+    <rect x="0" y="0" width="10" height="44" rx="5" fill="#a97142"/>
+    <path d="M-9 44 L19 44 L17 64 Q5 68 -7 64 Z" fill="#cfd6dd"/>
+  </g>
+  <path d="M64 26 L64 40 M58 34 L64 41 L70 34" stroke="#f1c21b" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M74 112 q-5 8 0 14 M100 112 q-5 8 0 14 M126 112 q-5 8 0 14" stroke="#ff832b" stroke-width="4" fill="none" stroke-linecap="round"/>
+</svg>

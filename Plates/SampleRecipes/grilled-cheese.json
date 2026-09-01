@@ -1,0 +1,156 @@
+{
+  "id": "grilled-cheese",
+  "title": "Grilled Cheese Sandwich",
+  "time": "15 min",
+  "serves": "1",
+  "ingredients": {
+    "supermarket": [
+      {
+        "item": "White bread",
+        "icon": "img/ingredients/bread.svg",
+        "amount": "2 slices",
+        "note": "Plain sandwich slices work best, thick-cut bread takes longer to heat through."
+      },
+      {
+        "item": "Cheese",
+        "icon": "img/ingredients/cheese.svg",
+        "amount": "70 g",
+        "note": "Cheddar melts well and carries the most flavour. A pizza blend or half cheddar and half mozzarella melts even smoother."
+      },
+      {
+        "item": "Butter",
+        "icon": "img/ingredients/butter.svg",
+        "amount": "15 g",
+        "note": "Salted butter is worth picking here, since it is most of the seasoning in the sandwich."
+      }
+    ],
+    "optional": [
+      {
+        "item": "Mustard",
+        "icon": "img/ingredients/mustard.svg",
+        "amount": "1 tsp",
+        "note": "A thin smear inside cuts through the fat and makes the cheese taste sharper."
+      },
+      {
+        "item": "Black pepper",
+        "icon": "img/ingredients/pepper.svg",
+        "amount": "to taste"
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "Frying pan (about 24 cm)",
+      "icon": "img/tools/pan.svg",
+      "required": true
+    },
+    {
+      "name": "Spatula",
+      "icon": "img/tools/spatula.svg",
+      "required": true
+    },
+    {
+      "name": "Butter knife",
+      "icon": "img/tools/butter-knife.svg",
+      "required": true
+    },
+    {
+      "name": "Grater",
+      "icon": "img/tools/grater.svg",
+      "required": false,
+      "note": "Skip it if you buy the cheese already grated or sliced."
+    },
+    {
+      "name": "Lid",
+      "icon": "img/tools/lid.svg",
+      "required": false,
+      "note": "Traps heat so the cheese melts before the bread darkens."
+    }
+  ],
+  "steps": [
+    {
+      "title": "Butter bread",
+      "points": [
+        "Spread softened butter over one face of each slice, right out to the crust.",
+        "Those buttered faces go against the pan, so leave them facing up while you build.",
+        "Corners brown last and dry out first, so give them a little extra."
+      ],
+      "hint": "Butter straight from the fridge tears the bread. Thirty seconds in the microwave at low power softens it enough.",
+      "image": "img/grilled-cheese-1.svg"
+    },
+    {
+      "title": "Grate cheese",
+      "points": [
+        "Grate the cheese on the coarse side, or tear slices into rough pieces.",
+        "A block grated fresh melts more evenly than pre-grated cheese, which is dusted with starch to stop it clumping.",
+        "Keep it in a loose pile rather than pressing it down."
+      ],
+      "hint": "Cold cheese grates cleanly. Straight from the fridge is the right temperature, warm cheese smears on the grater.",
+      "image": "img/grilled-cheese-2.svg"
+    },
+    {
+      "title": "Build sandwich",
+      "points": [
+        "Turn one slice butter side down and smear the mustard over the dry face.",
+        "Pile the cheese on evenly, grind on the pepper, then top with the second slice, butter side up.",
+        "Keep the cheese about 1 cm short of the edges, since it spreads as it melts."
+      ],
+      "hint": "An even layer matters more than a thick one. A tall mound in the middle leaves the corners empty and pushes the slices apart.",
+      "image": "img/grilled-cheese-3.svg"
+    },
+    {
+      "title": "Toast first side",
+      "points": [
+        "Set the pan over medium-low heat and lay the sandwich in.",
+        "Press it flat with the spatula and toast for 3 to 4 minutes, covered if you have a lid.",
+        "Lift a corner to check: deep golden is right, and the cheese at the edges should be starting to soften."
+      ],
+      "hint": "Medium-low is the whole trick. Anything hotter browns the bread while the middle is still cold cheese.",
+      "image": "img/grilled-cheese-4.svg"
+    },
+    {
+      "title": "Flip and finish",
+      "points": [
+        "Slide the spatula fully under the sandwich and flip it in one move.",
+        "Press again and toast for another 3 minutes.",
+        "It is done when cheese bubbles out of the sides and the sandwich feels solid rather than loose under the spatula."
+      ],
+      "image": "img/grilled-cheese-5.svg"
+    },
+    {
+      "title": "Rest and cut",
+      "points": [
+        "Move it to a board and wait one minute before cutting.",
+        "Cut it in half on the diagonal and eat it straight away.",
+        "That minute lets the cheese set just enough to stay in the sandwich instead of running onto the board."
+      ],
+      "image": "img/grilled-cheese-6.svg"
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "The bread burned before the cheese melted",
+      "solution": "The heat was too high. Drop to medium-low, put a lid on, and give each side a full 3 minutes. A lid turns the pan into a small oven and melts the middle without touching the crust."
+    },
+    {
+      "problem": "The cheese came out greasy",
+      "solution": "Hard aged cheese splits into oil when it gets too hot. Keep the heat low and mix in something stretchy such as mozzarella, which holds the fat in as it melts."
+    },
+    {
+      "problem": "The bread is pale and soft",
+      "solution": "The pan was not hot enough when the sandwich went in, or there was too little butter. Let the pan warm for a minute first, and spread the butter all the way to the crust."
+    },
+    {
+      "problem": "The sandwich tastes flat",
+      "solution": "Cheese and bread alone need help. Use salted butter, add the mustard, and grind pepper straight onto the cheese. A pinch of salt on the cheese does the same job."
+    },
+    {
+      "problem": "Only sliced cheese in the fridge",
+      "solution": "Slices are fine, just tear them so they cover the bread in an even layer with no gaps. Two thin layers melt faster than one thick slice."
+    },
+    {
+      "problem": "Want it more filling",
+      "solution": "Lay a slice of ham or a few strips of cooked bacon between two layers of cheese, so the melted cheese holds them in place. Both go in cold, which keeps the toasting time the same."
+    }
+  ]
+}

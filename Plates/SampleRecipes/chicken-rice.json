@@ -1,0 +1,192 @@
+{
+  "id": "chicken-rice",
+  "title": "Ketchup Chicken Rice",
+  "time": "20 min",
+  "serves": "1",
+  "ingredients": {
+    "supermarket": [
+      {
+        "item": "Chicken thigh, boneless",
+        "icon": "img/ingredients/chicken.svg",
+        "amount": "150 g"
+      },
+      {
+        "item": "Onion",
+        "icon": "img/ingredients/onion.svg",
+        "amount": "1/2"
+      }
+    ],
+    "general": [
+      {
+        "item": "Microwavable packed rice",
+        "icon": "img/ingredients/rice.svg",
+        "amount": "200 g"
+      },
+      {
+        "item": "Ketchup",
+        "icon": "img/ingredients/ketchup.svg",
+        "amount": "3 tbsp"
+      },
+      {
+        "item": "Cooking oil",
+        "icon": "img/ingredients/oil.svg",
+        "amount": "1 tsp"
+      },
+      {
+        "item": "Salt",
+        "icon": "img/ingredients/salt.svg",
+        "amount": "a pinch"
+      },
+      {
+        "item": "Black pepper",
+        "icon": "img/ingredients/pepper.svg",
+        "amount": "to taste"
+      }
+    ],
+    "optional": [
+      {
+        "item": "Butter",
+        "icon": "img/ingredients/butter.svg",
+        "amount": "10 g"
+      },
+      {
+        "item": "Soy sauce",
+        "icon": "img/ingredients/soy-sauce.svg",
+        "amount": "1 tsp"
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "Frying pan (about 24 cm)",
+      "icon": "img/tools/pan.svg",
+      "required": true
+    },
+    {
+      "name": "Cutting board",
+      "icon": "img/tools/cutting-board.svg",
+      "required": true
+    },
+    {
+      "name": "Knife",
+      "icon": "img/tools/knife.svg",
+      "required": true
+    },
+    {
+      "name": "Spatula or rice paddle",
+      "icon": "img/tools/spatula.svg",
+      "required": true
+    },
+    {
+      "name": "Microwave",
+      "icon": "img/tools/microwave.svg",
+      "required": true
+    },
+    {
+      "name": "Measuring spoons",
+      "icon": "img/tools/measuring-spoons.svg",
+      "required": false
+    }
+  ],
+  "steps": [
+    {
+      "title": "Cut chicken",
+      "points": [
+        "Cut the chicken into bite-size pieces, about 2 cm.",
+        "Season the pieces with the salt.",
+        "Wash the board and knife before anything else touches them."
+      ],
+      "hint": "Raw chicken touched the board, so wash it with soap and hot water, not just a rinse.",
+      "image": "img/chicken-rice-1.svg"
+    },
+    {
+      "title": "Dice onion",
+      "points": [
+        "Dice the onion into small pieces, around 5 mm.",
+        "That is the last of the knife work."
+      ],
+      "image": "img/chicken-rice-2.svg"
+    },
+    {
+      "title": "Brown chicken",
+      "points": [
+        "Heat the oil over medium-high.",
+        "Lay the chicken in skin side down and leave it for 2 to 3 minutes, until well browned.",
+        "Flip and cook 1 minute more. It can stay slightly underdone, it finishes with the rice."
+      ],
+      "hint": "As with any searing, the less you poke it, the better the color.",
+      "image": "img/chicken-rice-3.svg"
+    },
+    {
+      "title": "Soften onion",
+      "points": [
+        "Add the onion to the pan.",
+        "Cook for about 2 minutes, stirring, until translucent."
+      ],
+      "image": "img/chicken-rice-4.svg"
+    },
+    {
+      "title": "Heat rice",
+      "points": [
+        "Microwave the packed rice as directed.",
+        "Keep it hot and within reach for the last two steps."
+      ],
+      "hint": "Hot rice separates easily. Cold rice clumps and tears, so heat it first, always.",
+      "image": "img/chicken-rice-5.svg"
+    },
+    {
+      "title": "Fry ketchup",
+      "points": [
+        "Push everything to one side and squeeze the ketchup onto the empty half.",
+        "Let it bubble for 30 seconds, stirring just the ketchup.",
+        "It is ready when it darkens slightly and smells sweet instead of sharp."
+      ],
+      "hint": "This little step cooks off the raw sourness and is what separates good chicken rice from rice with ketchup on it.",
+      "image": "img/chicken-rice-6.svg"
+    },
+    {
+      "title": "Add rice",
+      "points": [
+        "Add the hot rice and break it up with the spatula.",
+        "Fold until every grain is evenly orange, about 2 minutes.",
+        "Add the butter or soy sauce now if using, then finish with black pepper."
+      ],
+      "image": "img/chicken-rice-7.svg"
+    },
+    {
+      "title": "Plate chicken rice",
+      "points": [
+        "Taste, and adjust with a pinch of salt if needed.",
+        "Mound it onto a plate.",
+        "A little extra ketchup on top is traditional, and a fried egg is even better."
+      ],
+      "image": "img/chicken-rice-8.svg"
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "The rice turned mushy",
+      "solution": "Too much stirring after the rice went in, or the rice was overheated and wet. Fold gently to coat rather than mashing, and use the standard heating time on the pack, no longer."
+    },
+    {
+      "problem": "It tastes sour or raw",
+      "solution": "The ketchup wasn't fried. Give it its 30 seconds alone in the pan next time. If the dish is already mixed, keep tossing over medium heat for another minute or two and the sharpness fades."
+    },
+    {
+      "problem": "The color is patchy",
+      "solution": "The ketchup was dropped on top of the rice instead of under it. Frying it first, then folding the rice through, coats evenly. Streaks fix themselves with another minute of folding."
+    },
+    {
+      "problem": "The chicken is dry",
+      "solution": "It was fully cooked before the rice stage. Brown it well on the outside but pull the pan together while the center is still a touch pink, the last few minutes of tossing finish it."
+    },
+    {
+      "problem": "It's bland",
+      "solution": "Ketchup alone can fall flat. The optional teaspoon of soy sauce or knob of butter rounds it out, and enough salt on the chicken at the start matters more than it seems."
+    },
+    {
+      "problem": "Want the omurice experience",
+      "solution": "Beat 2 eggs with a pinch of salt, wipe the empty pan, and cook a soft thin omelet in butter. Slide it over the mounded rice and let it drape."
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bulb of garlic">
+  <path d="M24 13c7 5 12 10 12 17a12 10 0 0 1-24 0c0-7 5-12 12-17Z" fill="#f4f1e8"/>
+  <path d="M24 14v26M17 20c-2 5-2 12 0 17M31 20c2 5 2 12 0 17" stroke="#ddd6c4" stroke-width="1.8" fill="none"/>
+  <path d="M24 13c1-4 3-5 5-6-3 0-5 1-5 3-1-2-3-3-5-3 2 1 4 2 5 6Z" fill="#a8cf8e"/>
+</svg>

@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pan lid">
+  <path d="M6 30a18 13 0 0 1 36 0Z" fill="#cfd6dd"/>
+  <path d="M6 30a18 13 0 0 1 36 0Z" fill="none" stroke="#8d939b" stroke-width="1.5"/>
+  <rect x="4" y="30" width="40" height="4" rx="2" fill="#8d939b"/>
+  <circle cx="24" cy="14" r="4" fill="#3c4046"/>
+</svg>

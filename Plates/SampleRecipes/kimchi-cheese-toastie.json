@@ -1,0 +1,161 @@
+{
+  "id": "kimchi-cheese-toastie",
+  "title": "Kimchi Cheese Toastie",
+  "time": "15 min",
+  "serves": "1",
+  "tried": true,
+  "ingredients": {
+    "supermarket": [
+      {
+        "item": "White bread",
+        "icon": "img/ingredients/bread.svg",
+        "amount": "2 slices",
+        "note": "Plain sandwich slices work best, thick-cut bread takes longer to heat through."
+      },
+      {
+        "item": "Kimchi",
+        "icon": "img/ingredients/kimchi.svg",
+        "amount": "60 g"
+      },
+      {
+        "item": "Grated cheese",
+        "icon": "img/ingredients/cheese.svg",
+        "amount": "60 g",
+        "note": "Any melting cheese such as mozzarella, cheddar, or a pizza blend."
+      },
+      {
+        "item": "Butter",
+        "icon": "img/ingredients/butter.svg",
+        "amount": "15 g"
+      }
+    ],
+    "optional": [
+      {
+        "item": "Sugar",
+        "icon": "img/ingredients/sugar.svg",
+        "amount": "a pinch",
+        "note": "Stirred into the kimchi to round off the sourness."
+      },
+      {
+        "item": "Black pepper",
+        "icon": "img/ingredients/pepper.svg",
+        "amount": "to taste"
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "Frying pan (about 24 cm)",
+      "icon": "img/tools/pan.svg",
+      "required": true
+    },
+    {
+      "name": "Spatula",
+      "icon": "img/tools/spatula.svg",
+      "required": true
+    },
+    {
+      "name": "Butter knife",
+      "icon": "img/tools/butter-knife.svg",
+      "required": true
+    },
+    {
+      "name": "Chopping board and knife",
+      "icon": "img/tools/cutting-board.svg",
+      "required": false,
+      "note": "For chopping the kimchi, kitchen scissors do the same job in the bowl."
+    },
+    {
+      "name": "Lid",
+      "icon": "img/tools/lid.svg",
+      "required": false,
+      "note": "Traps heat so the cheese melts before the bread darkens."
+    }
+  ],
+  "steps": [
+    {
+      "title": "Prep kimchi",
+      "points": [
+        "Lift the kimchi out of its juice and squeeze it over the sink until it stops dripping.",
+        "Chop it into rough 1 cm pieces and stir in the pinch of sugar.",
+        "Wet kimchi steams inside the sandwich and turns the bread soggy, so take the squeeze seriously."
+      ],
+      "hint": "Keep the squeezed-out juice in a cup. A spoonful of it is good in fried rice or a salad dressing.",
+      "image": "img/kimchi-cheese-toastie-1.svg"
+    },
+    {
+      "title": "Butter bread",
+      "points": [
+        "Spread softened butter over one face of each slice, right out to the crust.",
+        "Those buttered faces go against the pan, so leave them facing up for now.",
+        "The corners brown last, so give them a little extra."
+      ],
+      "hint": "Butter straight from the fridge tears the bread. Thirty seconds in the microwave at low power softens it enough.",
+      "image": "img/kimchi-cheese-toastie-2.svg"
+    },
+    {
+      "title": "Build sandwich",
+      "points": [
+        "Turn one slice butter side down and cover it with half the cheese.",
+        "Spread the kimchi over that, grind on the pepper, then add the rest of the cheese and the second slice, butter side up.",
+        "Cheese on both sides glues the kimchi in place so nothing slides out when you flip."
+      ],
+      "hint": "Keep the filling about 1 cm short of the edges. It spreads as it melts and anything past the crust burns on the pan.",
+      "image": "img/kimchi-cheese-toastie-3.svg"
+    },
+    {
+      "title": "Toast first side",
+      "points": [
+        "Set the pan over medium-low heat and lay the sandwich in.",
+        "Press it flat with the spatula and toast for 3 to 4 minutes, covered if you have a lid.",
+        "Lift a corner to check: deep golden is right, and the cheese at the edges should be starting to soften."
+      ],
+      "hint": "Medium-low is the whole trick. Anything hotter browns the bread while the middle is still cold cheese.",
+      "image": "img/kimchi-cheese-toastie-4.svg"
+    },
+    {
+      "title": "Toast second side",
+      "points": [
+        "Slide the spatula fully under the sandwich and flip it in one move.",
+        "Press again and toast for another 3 minutes.",
+        "It is done when cheese bubbles out of the sides and the sandwich feels solid rather than loose when you press it."
+      ],
+      "image": "img/kimchi-cheese-toastie-5.svg"
+    },
+    {
+      "title": "Rest and cut",
+      "points": [
+        "Move it to a board and wait one minute before cutting.",
+        "Cut it in half on the diagonal and eat it straight away.",
+        "That minute lets the cheese set just enough to stay in the sandwich instead of running onto the board."
+      ],
+      "image": "img/kimchi-cheese-toastie-6.svg"
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "The bread burned before the cheese melted",
+      "solution": "The heat was too high. Drop to medium-low, put a lid on, and give each side a full 3 minutes. A lid turns the pan into a small oven and melts the middle without touching the crust."
+    },
+    {
+      "problem": "The sandwich came out soggy",
+      "solution": "The kimchi still held juice. Squeeze it hard before chopping, and dry-fry the chopped kimchi in the pan for a minute if it is very wet. Let it cool before it meets the cheese."
+    },
+    {
+      "problem": "The filling fell out when flipping",
+      "solution": "There was no cheese under the kimchi to hold it. Layer cheese, kimchi, cheese so the melted layers grip both slices, and flip with the spatula fully under the sandwich rather than tilting it."
+    },
+    {
+      "problem": "The kimchi tastes too sour",
+      "solution": "Older kimchi sharpens as it ferments. A pinch of sugar softens the edge, and so does a thicker layer of cheese. Very old kimchi is better fried for a minute first, which mellows it."
+    },
+    {
+      "problem": "No grated cheese",
+      "solution": "Sliced cheese works, just tear it so it covers the bread evenly. Blocks of hard cheese should be grated or shaved thin, thick pieces do not melt in the time the bread takes to toast."
+    },
+    {
+      "problem": "Want it more filling",
+      "solution": "Fry an egg in the pan first and lay it in with the kimchi, or add a slice of ham under the top layer of cheese. Both go in cold so the toasting time stays the same."
+    }
+  ]
+}

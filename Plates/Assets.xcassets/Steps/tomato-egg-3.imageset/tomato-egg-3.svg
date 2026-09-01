@@ -1,0 +1,17 @@
+<svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Oil heating in the pan until it shimmers">
+  <defs>
+    <linearGradient id="pan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5c6066"/><stop offset="1" stop-color="#3c4046"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="100" cy="126" rx="80" ry="8" fill="#000" opacity="0.25"/>
+  <path d="M30 64 L170 64 L160 112 Q100 124 40 112 Z" fill="url(#pan)"/>
+  <rect x="26" y="60" width="148" height="8" rx="4" fill="#6f747b"/>
+  <path d="M172 64 L198 58" stroke="#a97142" stroke-width="10" stroke-linecap="round"/>
+  <path d="M48 76 L152 76 L146 104 Q100 114 54 104 Z" fill="#e2b04a" opacity="0.75"/>
+  <path d="M60 86 Q100 94 140 86" stroke="#ffd75e" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.9"/>
+  <path d="M72 96 q10 -4 20 0" stroke="#ffe97a" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8"/>
+  <path d="M70 50 q-4 -8 0 -14 M100 46 q-4 -8 0 -14 M130 50 q-4 -8 0 -14" stroke="#aab6c0" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+  <path d="M60 118 q-5 8 0 14 M100 120 q-5 8 0 14 M140 118 q-5 8 0 14" stroke="#ff832b" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M80 121 q-4 6 0 11 M120 121 q-4 6 0 11" stroke="#ffb000" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

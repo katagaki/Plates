@@ -1,0 +1,29 @@
+<svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Soft egg curds forming in a hot oiled pan, stirred with chopsticks">
+  <defs>
+    <linearGradient id="pan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5c6066"/><stop offset="1" stop-color="#3c4046"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="100" cy="126" rx="80" ry="8" fill="#000" opacity="0.25"/>
+  <path d="M30 58 L170 58 L160 108 Q100 120 40 108 Z" fill="url(#pan)"/>
+  <rect x="26" y="54" width="148" height="8" rx="4" fill="#6f747b"/>
+  <path d="M172 58 L198 52" stroke="#a97142" stroke-width="10" stroke-linecap="round"/>
+  <path d="M44 66 L156 66 L150 100 Q100 110 50 100 Z" fill="#2b2e33"/>
+  <path d="M60 92 Q100 86 140 92" stroke="#ffd75e" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.55"/>
+  <g fill="#f1c21b">
+    <path d="M58 78 q12 -8 22 -1 q7 6 0 13 q-13 5 -23 -2 Z"/>
+    <path d="M86 88 q12 -8 22 -1 q7 6 0 12 q-13 5 -23 -2 Z"/>
+    <path d="M114 74 q12 -8 22 -1 q7 6 0 13 q-13 5 -23 -2 Z"/>
+  </g>
+  <g fill="#ffe97a">
+    <path d="M62 80 q10 -5 17 0" stroke="#ffe97a" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M90 90 q10 -5 17 0" stroke="#ffe97a" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M118 76 q10 -5 17 0" stroke="#ffe97a" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <circle cx="82" cy="96" r="2.4" fill="#ffd75e"/>
+  <circle cx="112" cy="94" r="2" fill="#ffd75e"/>
+  <line x1="118" y1="6" x2="96" y2="86" stroke="#a97142" stroke-width="5" stroke-linecap="round"/>
+  <line x1="128" y1="8" x2="102" y2="86" stroke="#c08a54" stroke-width="5" stroke-linecap="round"/>
+  <path d="M62 44 q-5 -9 0 -18 M92 40 q-5 -9 0 -18" stroke="#aab6c0" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+  <path d="M74 112 q-5 8 0 14 M100 112 q-5 8 0 14 M126 112 q-5 8 0 14" stroke="#ff832b" stroke-width="4" fill="none" stroke-linecap="round"/>
+</svg>

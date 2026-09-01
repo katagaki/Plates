@@ -1,0 +1,177 @@
+{
+  "id": "french-toast",
+  "title": "French Toast",
+  "time": "20 min",
+  "serves": "1",
+  "tried": true,
+  "ingredients": {
+    "supermarket": [
+      {
+        "item": "White bread",
+        "icon": "img/ingredients/bread.svg",
+        "amount": "2 slices",
+        "note": "Day-old bread soaks better than a fresh soft loaf."
+      },
+      {
+        "item": "Egg",
+        "icon": "img/ingredients/egg.svg",
+        "amount": "1"
+      },
+      {
+        "item": "Butter",
+        "icon": "img/ingredients/butter.svg",
+        "amount": "15 g"
+      }
+    ],
+    "general": [
+      {
+        "item": "Sugar",
+        "icon": "img/ingredients/sugar.svg",
+        "amount": "1 tbsp"
+      }
+    ],
+    "optional": [
+      {
+        "item": "Milk",
+        "icon": "img/ingredients/milk.svg",
+        "amount": "3 tbsp",
+        "note": "It loosens the egg so the bread soaks through to the middle."
+      },
+      {
+        "item": "Maple syrup",
+        "icon": "img/ingredients/maple-syrup.svg",
+        "amount": "to taste",
+        "note": "Real maple syrup and the cheaper pancake syrup both work here."
+      },
+      {
+        "item": "Honey",
+        "icon": "img/ingredients/honey.svg",
+        "amount": "to taste"
+      },
+      {
+        "item": "Salt",
+        "icon": "img/ingredients/salt.svg",
+        "amount": "a pinch"
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "Frying pan (about 24 cm)",
+      "icon": "img/tools/pan.svg",
+      "required": true
+    },
+    {
+      "name": "Shallow bowl",
+      "icon": "img/tools/bowl.svg",
+      "required": true,
+      "note": "A wide plate with a rim works just as well."
+    },
+    {
+      "name": "Chopsticks or a fork",
+      "icon": "img/tools/chopsticks.svg",
+      "required": true
+    },
+    {
+      "name": "Spatula",
+      "icon": "img/tools/spatula.svg",
+      "required": true
+    },
+    {
+      "name": "Lid",
+      "icon": "img/tools/lid.svg",
+      "required": false,
+      "note": "Worth getting out if your bread is thick, since it steams the middle through."
+    }
+  ],
+  "steps": [
+    {
+      "title": "Mix the custard",
+      "points": [
+        "Crack the egg into the shallow bowl and add the sugar.",
+        "Beat with chopsticks until the yolk, white and sugar are one even yellow.",
+        "Stir in the milk and the pinch of salt if you are using them."
+      ],
+      "hint": "Streaks of unbeaten white turn into rubbery patches on the finished toast, so keep going until the color is flat.",
+      "image": "img/french-toast-1.svg"
+    },
+    {
+      "title": "Soak the bread",
+      "points": [
+        "Lay a slice flat in the custard and leave it for a minute.",
+        "Turn it over and give the second side the same minute.",
+        "Press the middle gently with your fingertip: it should feel heavy and damp, not soggy."
+      ],
+      "hint": "Thick slices want longer, up to 5 minutes a side. Thin sandwich bread falls apart after about 30 seconds.",
+      "image": "img/french-toast-2.svg"
+    },
+    {
+      "title": "Melt the butter",
+      "points": [
+        "Set the pan over low heat and add about 10 g of butter.",
+        "Swirl it so it coats the whole base.",
+        "Stop as soon as the foam settles, before it takes on any color."
+      ],
+      "hint": "Sugar in the custard browns much faster than plain bread, so low heat is doing real work here.",
+      "image": "img/french-toast-3.svg"
+    },
+    {
+      "title": "Fry the first side",
+      "points": [
+        "Lift the bread out, let the drips fall back into the bowl, and lay it in the pan.",
+        "Cook for 3 to 4 minutes without moving it.",
+        "Lift a corner: the underside should be an even golden brown."
+      ],
+      "image": "img/french-toast-4.svg"
+    },
+    {
+      "title": "Fry the second side",
+      "points": [
+        "Flip with the spatula and add the last of the butter along the edge of the pan.",
+        "Cook for 3 minutes more, with the lid on if the slices are thick.",
+        "Press the centre with the spatula. It should spring back rather than squash."
+      ],
+      "hint": "If it still feels wet in the middle, drop the heat and give it another 2 minutes covered rather than turning the heat up.",
+      "image": "img/french-toast-5.svg"
+    },
+    {
+      "title": "Serve",
+      "points": [
+        "Move both slices to a plate and cut them across on the diagonal.",
+        "Pour over maple syrup while the surface is still hot enough to thin it out.",
+        "Eat straight away, before the crust softens."
+      ],
+      "image": "img/french-toast-6.svg"
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "The middle was still raw egg",
+      "solution": "The heat was too high, so the outside set before the centre did. Cook it on low with the lid on, and give a thick slice a full 4 minutes a side. A cold slice straight from the fridge also needs longer."
+    },
+    {
+      "problem": "The outside burned",
+      "solution": "Sugar caramelises well before bread toasts. Keep the pan on low, and wipe out any burnt butter between slices so the second one starts clean."
+    },
+    {
+      "problem": "The bread fell apart in the custard",
+      "solution": "Thin or very fresh bread soaks too fast. Cut thicker slices, leave them out on the counter for an hour first, or shorten the soak to about 20 seconds a side."
+    },
+    {
+      "problem": "It came out dry inside",
+      "solution": "The soak was too short for the thickness. Give it longer, and add the milk to loosen the custard so it can travel into the crumb instead of sitting on the surface."
+    },
+    {
+      "problem": "It tastes flat",
+      "solution": "Add the pinch of salt to the custard next time. Salt is what makes the sugar read as sweet rather than just heavy."
+    },
+    {
+      "problem": "Want it more filling",
+      "solution": "Use two eggs and four slices, and fry them in two goes so the pan stays hot. A second slice reheats badly, so cook both while you are already standing there."
+    },
+    {
+      "problem": "No maple syrup or honey",
+      "solution": "The toast is already sweet from the sugar in the custard, so it is fine plain. A dusting of sugar over the hot surface, or a spoon of jam on the side, covers the same ground."
+    }
+  ]
+}

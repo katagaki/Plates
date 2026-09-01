@@ -1,0 +1,29 @@
+<svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Golden butter toast on a plate with a pat of butter melting on top">
+  <defs>
+    <radialGradient id="plate" cx="0.5" cy="0.4" r="0.7">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#f0ece4"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="100" cy="128" rx="82" ry="8" fill="#000" opacity="0.25"/>
+  <ellipse cx="100" cy="102" rx="80" ry="28" fill="url(#plate)"/>
+  <ellipse cx="100" cy="100" rx="64" ry="22" fill="#e6e0d4"/>
+  <g transform="translate(60,58) rotate(-3)">
+    <rect x="0" y="14" width="80" height="14" rx="5" fill="#f3dfae"/>
+    <rect x="0" y="0" width="80" height="22" rx="8" fill="#d99a4e"/>
+    <rect x="0" y="0" width="80" height="22" rx="8" fill="none" stroke="#b07c3f" stroke-width="4"/>
+    <path d="M14 8 q8 6 16 0 M44 12 q8 6 16 0" stroke="#c07f34" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(90,44) rotate(-3)">
+    <rect x="0" y="0" width="20" height="13" rx="3" fill="#f1c21b"/>
+    <rect x="0" y="0" width="20" height="5" rx="3" fill="#ffe97a"/>
+    <path d="M-4 14 q10 6 28 0" stroke="#ffd75e" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g>
+  <path d="M76 32 q-5 -9 0 -18 M104 28 q-5 -9 0 -18 M130 34 q-5 -9 0 -18" stroke="#aab6c0" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+  <g transform="translate(172,58) rotate(20)">
+    <rect x="-3" y="0" width="6" height="16" rx="3" fill="#8d939b"/>
+    <path d="M-4 16 L4 16 L5 36 Q0 40 -5 36 Z" fill="#d0d4d9"/>
+  </g>
+  <ellipse cx="30" cy="52" rx="11" ry="8" fill="#f0ece4"/>
+  <ellipse cx="30" cy="50" rx="11" ry="7" fill="#ffffff"/>
+  <path d="M26 50 q4 -5 8 0" stroke="#ffb000" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

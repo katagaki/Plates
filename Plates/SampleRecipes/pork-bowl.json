@@ -1,0 +1,192 @@
+{
+  "id": "pork-bowl",
+  "title": "Pork & Onion Rice Bowl",
+  "time": "15 min",
+  "serves": "1",
+  "ingredients": {
+    "supermarket": [
+      {
+        "item": "Thin-sliced pork offcuts",
+        "icon": "img/ingredients/pork.svg",
+        "amount": "150 g"
+      },
+      {
+        "item": "Onion",
+        "icon": "img/ingredients/onion.svg",
+        "amount": "1/2"
+      }
+    ],
+    "general": [
+      {
+        "item": "Microwavable packed rice",
+        "icon": "img/ingredients/rice.svg",
+        "amount": "200 g"
+      },
+      {
+        "item": "Soy sauce",
+        "icon": "img/ingredients/soy-sauce.svg",
+        "amount": "2 tbsp"
+      },
+      {
+        "item": "Sugar",
+        "icon": "img/ingredients/sugar.svg",
+        "amount": "1 tbsp"
+      },
+      {
+        "item": "Sake",
+        "icon": "img/ingredients/sake.svg",
+        "amount": "1 tbsp"
+      },
+      {
+        "item": "Water",
+        "icon": "img/ingredients/water.svg",
+        "amount": "2 tbsp"
+      },
+      {
+        "item": "Cooking oil",
+        "icon": "img/ingredients/oil.svg",
+        "amount": "1 tsp"
+      }
+    ],
+    "optional": [
+      {
+        "item": "Butter",
+        "icon": "img/ingredients/butter.svg",
+        "amount": "5 g"
+      },
+      {
+        "item": "Ginger paste (tube)",
+        "icon": "img/ingredients/ginger.svg",
+        "amount": "2 cm"
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "Frying pan (about 24 cm)",
+      "icon": "img/tools/pan.svg",
+      "required": true
+    },
+    {
+      "name": "Cutting board",
+      "icon": "img/tools/cutting-board.svg",
+      "required": true
+    },
+    {
+      "name": "Knife",
+      "icon": "img/tools/knife.svg",
+      "required": true
+    },
+    {
+      "name": "Cooking chopsticks or tongs",
+      "icon": "img/tools/chopsticks.svg",
+      "required": true
+    },
+    {
+      "name": "Microwave",
+      "icon": "img/tools/microwave.svg",
+      "required": true
+    },
+    {
+      "name": "Measuring spoons",
+      "icon": "img/tools/measuring-spoons.svg",
+      "required": false
+    },
+    {
+      "name": "Donburi bowl",
+      "icon": "img/tools/bowl.svg",
+      "required": false
+    }
+  ],
+  "steps": [
+    {
+      "title": "Mix sauce",
+      "points": [
+        "Combine the soy sauce, sugar, sake, and water in a small bowl.",
+        "Stir until the sugar dissolves.",
+        "Add the ginger now if you are using it."
+      ],
+      "hint": "If you start measuring after the heat is on, the pork overcooks while you do it. Making the sauce first is the single most effective move in this recipe.",
+      "image": "img/pork-bowl-1.svg"
+    },
+    {
+      "title": "Slice onion",
+      "points": [
+        "Peel the onion and halve it lengthwise.",
+        "Slice with the grain into pieces about 5 mm thick.",
+        "Wash the board and knife now: the pork needs no cutting."
+      ],
+      "image": "img/pork-bowl-2.svg"
+    },
+    {
+      "title": "Brown pork",
+      "points": [
+        "Heat the oil over medium-high, or skip the oil if the pork is fatty.",
+        "Spread the pork so the pieces overlap as little as possible, then leave it alone for 1 to 2 minutes.",
+        "Flip only once the underside is well browned."
+      ],
+      "hint": "Stirring too early draws out moisture and you end up steaming the meat instead of searing it.",
+      "image": "img/pork-bowl-3.svg"
+    },
+    {
+      "title": "Soften onion",
+      "points": [
+        "Push the meat to one side and add the onion to the empty half.",
+        "Cook for about 2 minutes, until translucent with lightly colored edges."
+      ],
+      "image": "img/pork-bowl-4.svg"
+    },
+    {
+      "title": "Reduce sauce",
+      "points": [
+        "Pour in the sauce and keep it at a lively bubble, shaking the pan, for 1 to 2 minutes.",
+        "Kill the heat once it thickens, clings to the meat, and turns glossy.",
+        "Add the butter off the heat and let the residual warmth melt it."
+      ],
+      "hint": "Over-reduce and it suddenly turns salty. Stop while a little sauce still pools at the bottom of the pan.",
+      "image": "img/pork-bowl-5.svg"
+    },
+    {
+      "title": "Heat rice",
+      "points": [
+        "Heat the packed rice as directed.",
+        "Tip it into a deep bowl."
+      ],
+      "image": "img/pork-bowl-6.svg"
+    },
+    {
+      "title": "Assemble bowl",
+      "points": [
+        "Pile the pork and onion over the rice.",
+        "Scrape every last bit of sauce from the pan over the top."
+      ],
+      "image": "img/pork-bowl-7.svg"
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "The pork is tough or dry",
+      "solution": "It was overcooked. Thin-sliced pork is nearly done the moment it's browned. About 30 seconds after flipping is plenty, and the sauce finishes the rest."
+    },
+    {
+      "problem": "The meat weeps water and won't brown",
+      "solution": "The pan wasn't hot enough, or the meat was piled up. Wait until the oil shimmers with a wisp of smoke, then spread the pieces flat. 150 g is the most one pan can sear at once."
+    },
+    {
+      "problem": "The flavor is flat",
+      "solution": "The sauce wasn't reduced enough. Stopped while still watery, it soaks into the rice and turns thin. Boil it down until it's glossy and slightly thick."
+    },
+    {
+      "problem": "Too salty",
+      "solution": "Reduced too far. Add 1 tablespoon of water and bring it back to a brief simmer. Next time use 3 tablespoons of water for more margin."
+    },
+    {
+      "problem": "The onion tastes sharp",
+      "solution": "It needed more heat. Cook until translucent, then give it one more minute in the sauce and the sharpness turns to sweetness."
+    },
+    {
+      "problem": "Want to add something extra",
+      "solution": "Chopped scallions, shichimi pepper, an egg yolk, or mayonnaise. Pick exactly one. Stacking several muddies the flavor."
+    }
+  ]
+}

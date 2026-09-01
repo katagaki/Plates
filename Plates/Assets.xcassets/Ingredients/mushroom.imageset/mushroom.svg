@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mushroom">
+  <path d="M9 26c0-9 7-15 15-15s15 6 15 15Z" fill="#a4693a"/>
+  <path d="M16 20c3-4 8-6 13-5" stroke="#c08a56" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M18 26h12v9a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5Z" fill="#f0e6c0"/>
+  <path d="M9 26h30v3H9Z" fill="#f3dfae"/>
+</svg>

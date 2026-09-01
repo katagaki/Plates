@@ -1,0 +1,5 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cabbage">
+  <circle cx="24" cy="26" r="14" fill="#a8cf8e"/>
+  <path d="M24 12c-6 5-9 10-9 14s4 8 9 8 9-4 9-8-3-9-9-14Z" fill="#c4e0ad"/>
+  <path d="M24 14v20M18 20c-2 5-1 10 1 13M30 20c2 5 1 10-1 13" stroke="#7fb069" stroke-width="1.8" fill="none"/>
+</svg>

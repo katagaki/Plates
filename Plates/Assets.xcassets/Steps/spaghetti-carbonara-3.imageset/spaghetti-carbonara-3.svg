@@ -1,0 +1,24 @@
+<svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bacon batons crisping in the pan over a medium flame">
+  <defs>
+    <linearGradient id="pan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5c6066"/><stop offset="1" stop-color="#3c4046"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="100" cy="126" rx="80" ry="8" fill="#000" opacity="0.25"/>
+  <path d="M30 64 L170 64 L160 112 Q100 124 40 112 Z" fill="url(#pan)"/>
+  <rect x="26" y="60" width="148" height="8" rx="4" fill="#6f747b"/>
+  <path d="M172 64 L198 58" stroke="#a97142" stroke-width="10" stroke-linecap="round"/>
+  <path d="M60 118 q-5 8 0 14 M100 120 q-5 8 0 14 M140 118 q-5 8 0 14" stroke="#ff832b" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M80 121 q-4 6 0 11 M120 121 q-4 6 0 11" stroke="#ffb000" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <g stroke-linecap="round">
+    <rect x="56" y="78" width="26" height="11" rx="3" fill="#e05c54" transform="rotate(-8 69 83)"/>
+    <rect x="56" y="78" width="26" height="4" rx="2" fill="#fa9188" transform="rotate(-8 69 83)"/>
+    <rect x="92" y="84" width="26" height="11" rx="3" fill="#e05c54" transform="rotate(6 105 89)"/>
+    <rect x="92" y="84" width="26" height="4" rx="2" fill="#fa9188" transform="rotate(6 105 89)"/>
+    <rect x="124" y="76" width="26" height="11" rx="3" fill="#e05c54" transform="rotate(-5 137 81)"/>
+    <rect x="124" y="76" width="26" height="4" rx="2" fill="#fa9188" transform="rotate(-5 137 81)"/>
+  </g>
+  <circle cx="88" cy="98" r="2.5" fill="#ffd75e"/>
+  <circle cx="118" cy="100" r="2" fill="#ffd75e"/>
+  <path d="M70 52 q-5 -8 0 -16 M104 50 q-5 -8 0 -16 M138 52 q-5 -8 0 -16" stroke="#aab6c0" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+</svg>

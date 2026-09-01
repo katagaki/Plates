@@ -1,0 +1,22 @@
+<svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two slices of white bread with softened butter spread to the edges">
+  <ellipse cx="100" cy="128" rx="82" ry="8" fill="#000" opacity="0.25"/>
+  <g transform="translate(16,42) rotate(-3)">
+    <rect x="0" y="0" width="76" height="66" rx="10" fill="#e9d9b4"/>
+    <rect x="5" y="5" width="66" height="56" rx="7" fill="#fffaea"/>
+    <path d="M14 22 q10 6 20 0 t20 0 M14 40 q10 6 20 0 t20 0" stroke="#ffe97a" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.9"/>
+  </g>
+  <g transform="translate(108,42) rotate(3)">
+    <rect x="0" y="0" width="76" height="66" rx="10" fill="#e9d9b4"/>
+    <rect x="5" y="5" width="66" height="56" rx="7" fill="#fffaea"/>
+    <path d="M14 22 q10 6 20 0 t20 0 M14 40 q10 6 20 0 t20 0" stroke="#ffe97a" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.9"/>
+  </g>
+  <g transform="translate(84,10) rotate(30)">
+    <rect x="-3" y="0" width="6" height="12" rx="3" fill="#8d939b"/>
+    <path d="M-5 12 L5 12 L6 40 Q0 44 -6 40 Z" fill="#d0d4d9"/>
+    <path d="M-4 30 L4 30 L5 40 Q0 43 -5 40 Z" fill="#f1c21b"/>
+  </g>
+  <g transform="translate(14,12)">
+    <rect x="0" y="0" width="26" height="17" rx="3" fill="#f1c21b"/>
+    <rect x="0" y="0" width="26" height="6" rx="3" fill="#ffe97a"/>
+  </g>
+</svg>

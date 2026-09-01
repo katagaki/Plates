@@ -1,0 +1,248 @@
+{
+  "id": "vegetable-stir-fry",
+  "title": "Vegetable Stir-Fry",
+  "time": "20 min",
+  "serves": "1 to 2",
+  "ingredients": {
+    "supermarket": [
+      {
+        "item": "Cabbage",
+        "icon": "img/ingredients/cabbage.svg",
+        "amount": "1/4 head (about 200 g)"
+      },
+      {
+        "item": "Bean sprouts",
+        "icon": "img/ingredients/bean-sprouts.svg",
+        "amount": "1 bag (about 200 g)",
+        "note": "Buy them the same day if you can, they turn slimy within about two days."
+      },
+      {
+        "item": "Carrot",
+        "icon": "img/ingredients/carrot.svg",
+        "amount": "1/2"
+      },
+      {
+        "item": "Onion",
+        "icon": "img/ingredients/onion.svg",
+        "amount": "1/2"
+      },
+      {
+        "item": "Green bell pepper",
+        "icon": "img/ingredients/bell-pepper.svg",
+        "amount": "1"
+      },
+      {
+        "item": "Mushrooms",
+        "icon": "img/ingredients/mushroom.svg",
+        "amount": "4 (about 80 g)",
+        "note": "Shiitake bring the most flavor, but button or shimeji work the same way."
+      },
+      {
+        "item": "Garlic",
+        "icon": "img/ingredients/garlic.svg",
+        "amount": "1 clove"
+      },
+      {
+        "item": "Spring onion",
+        "icon": "img/ingredients/spring-onion.svg",
+        "amount": "1"
+      }
+    ],
+    "general": [
+      {
+        "item": "Cooking oil",
+        "icon": "img/ingredients/oil.svg",
+        "amount": "1 tbsp"
+      },
+      {
+        "item": "Soy sauce",
+        "icon": "img/ingredients/soy-sauce.svg",
+        "amount": "1 tbsp"
+      },
+      {
+        "item": "Chicken bouillon powder",
+        "icon": "img/ingredients/bouillon.svg",
+        "amount": "1/2 tsp",
+        "note": "A crumbled cube works, it just needs a moment longer to dissolve."
+      },
+      {
+        "item": "Salt",
+        "icon": "img/ingredients/salt.svg",
+        "amount": "to taste"
+      },
+      {
+        "item": "Black pepper",
+        "icon": "img/ingredients/pepper.svg",
+        "amount": "to taste"
+      }
+    ],
+    "optional": [
+      {
+        "item": "Ginger",
+        "icon": "img/ingredients/ginger.svg",
+        "amount": "a small piece"
+      },
+      {
+        "item": "Sesame oil",
+        "icon": "img/ingredients/sesame-oil.svg",
+        "amount": "1 tsp"
+      },
+      {
+        "item": "Pork belly slices",
+        "icon": "img/ingredients/pork.svg",
+        "amount": "80 g",
+        "note": "Turns this into a full meal. Brown it first and take it out, then follow the recipe as written."
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "Frying pan (about 24 cm)",
+      "icon": "img/tools/pan.svg",
+      "required": true,
+      "note": "The biggest one you own. Six vegetables need room or they steam instead of frying."
+    },
+    {
+      "name": "Cutting board",
+      "icon": "img/tools/cutting-board.svg",
+      "required": true
+    },
+    {
+      "name": "Knife",
+      "icon": "img/tools/knife.svg",
+      "required": true
+    },
+    {
+      "name": "Cooking chopsticks or tongs",
+      "icon": "img/tools/chopsticks.svg",
+      "required": true
+    },
+    {
+      "name": "Small bowl",
+      "icon": "img/tools/bowl.svg",
+      "required": true
+    },
+    {
+      "name": "Peeler",
+      "icon": "img/tools/peeler.svg",
+      "required": false,
+      "note": "Carrot skin is edible, so you can skip peeling."
+    }
+  ],
+  "steps": [
+    {
+      "title": "Cut hard vegetables",
+      "points": [
+        "Cut the carrot into thin strips and the onion into wedges about 1 cm thick.",
+        "These two go in first and take the longest, so keep them thinner than everything else.",
+        "Put them together in one pile."
+      ],
+      "image": "img/vegetable-stir-fry-1.svg"
+    },
+    {
+      "title": "Cut soft vegetables",
+      "points": [
+        "Cut the cabbage into rough 4 cm squares and the bell pepper into strips.",
+        "Slice the mushrooms about 5 mm thick.",
+        "Keep this second pile separate from the first."
+      ],
+      "hint": "Two piles is the whole trick to a stir-fry with this many vegetables. Sorting by how long each one needs means you never have to think about timing once the pan is hot.",
+      "image": "img/vegetable-stir-fry-2.svg"
+    },
+    {
+      "title": "Prep aromatics",
+      "points": [
+        "Chop the garlic and the ginger finely.",
+        "Cut the spring onion into short pieces, keeping the white and green parts apart.",
+        "Rinse the bean sprouts and shake them as dry as you can."
+      ],
+      "image": "img/vegetable-stir-fry-3.svg"
+    },
+    {
+      "title": "Mix sauce",
+      "points": [
+        "Stir the soy sauce and bouillon powder together in a small bowl.",
+        "Dissolving the powder now stops it clumping in the pan.",
+        "Set the bowl next to the stove, the pan work runs without pauses."
+      ],
+      "image": "img/vegetable-stir-fry-4.svg"
+    },
+    {
+      "title": "Fry aromatics",
+      "points": [
+        "Heat the oil over medium, then add the garlic, ginger, and the white spring onion.",
+        "Stir for about 30 seconds, until you can smell them.",
+        "Keep the heat off high here, garlic burns bitter in seconds."
+      ],
+      "image": "img/vegetable-stir-fry-5.svg"
+    },
+    {
+      "title": "Add hard vegetables",
+      "points": [
+        "Turn the heat to high and add the carrot and onion.",
+        "Stir-fry for 2 minutes, until the onion edges turn clear.",
+        "The carrot should still be firm, it keeps cooking to the end."
+      ],
+      "image": "img/vegetable-stir-fry-6.svg"
+    },
+    {
+      "title": "Add soft vegetables",
+      "points": [
+        "Add the cabbage, bell pepper, and mushrooms all at once.",
+        "Let the pile sit for 1 minute without touching it, then toss.",
+        "Repeat twice: rest, toss, rest. About 3 minutes in total."
+      ],
+      "hint": "Constant stirring steams vegetables in their own water. Letting them press against the hot pan is what browns the edges and keeps them crisp.",
+      "image": "img/vegetable-stir-fry-7.svg"
+    },
+    {
+      "title": "Add bean sprouts",
+      "points": [
+        "Tip in the bean sprouts and toss for 1 minute, no longer.",
+        "They should still squeak against your teeth.",
+        "Anything more and they go limp and start weeping water."
+      ],
+      "image": "img/vegetable-stir-fry-8.svg"
+    },
+    {
+      "title": "Add sauce",
+      "points": [
+        "Pour the soy and bouillon mixture around the edge of the pan.",
+        "Toss everything for 30 seconds, then kill the heat.",
+        "Taste before adding salt, then finish with black pepper, the green spring onion, and the sesame oil."
+      ],
+      "hint": "Sauce poured onto bare hot metal sizzles and turns fragrant. Poured onto the pile it just makes the vegetables wet.",
+      "image": "img/vegetable-stir-fry-9.svg"
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "It came out watery",
+      "solution": "Too much at once in too small a pan, or too much stirring. Cook it in two batches and combine them at the end, and let each pile sit against the pan between tosses."
+    },
+    {
+      "problem": "The carrot is still hard",
+      "solution": "The strips were too thick. Cut them thinner than the cabbage next time, or give the pan a lid and 1 more minute with a splash of water before the soft vegetables go in."
+    },
+    {
+      "problem": "The bean sprouts went limp",
+      "solution": "They were in the pan too long or went in wet. One minute at the very end is all they need, and shake the water off properly after rinsing."
+    },
+    {
+      "problem": "The garlic tastes burnt",
+      "solution": "It went into a pan that was already too hot. Start the aromatics on medium and only turn the heat up once the carrot and onion are in, since the vegetables cool the pan down."
+    },
+    {
+      "problem": "It tastes flat",
+      "solution": "Vegetables need more salt than they look like they do. Add another pinch, and a few drops of sesame oil off the heat give it the roundness it is missing."
+    },
+    {
+      "problem": "Missing one of the vegetables",
+      "solution": "Any of them can go. The recipe works with whatever you have as long as you keep the two piles: firm and slow in one, soft and quick in the other."
+    },
+    {
+      "problem": "Want it more filling",
+      "solution": "Serve it over rice, or add the pork belly at the start. A fried egg on top also works and costs you nothing extra in the pan."
+    }
+  ]
+}

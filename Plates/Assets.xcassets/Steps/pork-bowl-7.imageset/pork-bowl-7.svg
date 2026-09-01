@@ -1,0 +1,21 @@
+<svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Finished pork and onion piled over rice in a donburi bowl">
+  <defs>
+    <linearGradient id="bowl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4a90d9"/><stop offset="1" stop-color="#295f9e"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="100" cy="132" rx="72" ry="8" fill="#000" opacity="0.25"/>
+  <path d="M40 78 L160 78 Q152 126 100 126 Q48 126 40 78 Z" fill="url(#bowl)"/>
+  <path d="M40 78 L160 78 L158 88 L42 88 Z" fill="#6cabe8"/>
+  <rect x="82" y="126" width="36" height="7" rx="3.5" fill="#295f9e"/>
+  <path d="M50 78 Q54 58 74 56 Q92 44 122 54 Q144 56 150 78 Z" fill="#f0ece4"/>
+  <path d="M60 66 q8 -5 16 0 M96 58 q9 -5 17 0" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M62 74 q12 -9 24 0 q-8 9 -24 5 Z" fill="#a35c42"/>
+  <path d="M92 68 q13 -9 26 0 q-9 10 -26 5 Z" fill="#b56a4e"/>
+  <path d="M124 74 q11 -8 22 0 q-7 9 -22 5 Z" fill="#a35c42"/>
+  <path d="M98 70 q9 -5 15 0" stroke="#8a4a34" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M84 78 q10 -4 18 1" stroke="#e8c66a" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M70 79 q6 -3 11 0" stroke="#f3dfae" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <circle cx="88" cy="60" r="2.5" fill="#7a9e4e"/><circle cx="112" cy="64" r="2.5" fill="#7a9e4e"/><circle cx="130" cy="70" r="2.5" fill="#7a9e4e"/>
+  <path d="M74 40 q-4 -8 0 -14 M100 36 q-4 -8 0 -14 M126 40 q-4 -8 0 -14" stroke="#aab6c0" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.85"/>
+</svg>

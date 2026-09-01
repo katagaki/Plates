@@ -1,10 +1,3 @@
-//
-//  PlatesApp.swift
-//  Plates
-//
-//  Created by Justin Xin on 2026/09/02.
-//
-
 import SwiftUI
 
 @main

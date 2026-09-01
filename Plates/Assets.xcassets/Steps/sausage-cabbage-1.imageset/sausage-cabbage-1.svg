@@ -1,0 +1,24 @@
+<svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cabbage torn into rough squares on a board, the thick core set aside">
+  <ellipse cx="100" cy="128" rx="82" ry="8" fill="#000" opacity="0.25"/>
+  <rect x="24" y="58" width="152" height="64" rx="8" fill="#c9a15f"/>
+  <rect x="24" y="58" width="152" height="10" rx="5" fill="#dbb476"/>
+  <g>
+    <rect x="38" y="76" width="24" height="20" rx="4" fill="#9be3a8" transform="rotate(-8 50 86)"/>
+    <path d="M44 84 q7 5 14 0" stroke="#6fce85" stroke-width="2.5" fill="none" stroke-linecap="round" transform="rotate(-8 51 86)"/>
+    <rect x="66" y="86" width="24" height="20" rx="4" fill="#b8ecc1" transform="rotate(6 78 96)"/>
+    <path d="M72 94 q7 5 14 0" stroke="#6fce85" stroke-width="2.5" fill="none" stroke-linecap="round" transform="rotate(6 79 96)"/>
+    <rect x="42" y="100" width="22" height="18" rx="4" fill="#9be3a8" transform="rotate(-4 53 109)"/>
+    <rect x="96" y="74" width="24" height="20" rx="4" fill="#b8ecc1" transform="rotate(9 108 84)"/>
+    <path d="M102 82 q7 5 14 0" stroke="#6fce85" stroke-width="2.5" fill="none" stroke-linecap="round" transform="rotate(9 109 84)"/>
+    <rect x="92" y="100" width="22" height="18" rx="4" fill="#9be3a8" transform="rotate(-6 103 109)"/>
+  </g>
+  <g transform="translate(150,96) rotate(14)">
+    <path d="M-14 -8 L14 -12 L10 10 L-10 8 Z" fill="#f2f7e8"/>
+    <path d="M-14 -8 L14 -12 L12 -6 L-13 -3 Z" fill="#ffffff"/>
+  </g>
+  <g transform="translate(148,20) rotate(35)">
+    <rect x="-3" y="0" width="6" height="26" rx="3" fill="#33383e"/>
+    <path d="M-3 26 L3 26 L6 58 Q0 63 -6 58 Z" fill="#d0d4d9"/>
+  </g>
+  <path d="M50 34 q4 -8 10 0 M62 44 q4 -8 10 0" stroke="#9be3a8" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

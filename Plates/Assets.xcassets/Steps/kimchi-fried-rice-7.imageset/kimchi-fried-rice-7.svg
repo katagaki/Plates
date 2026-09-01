@@ -1,0 +1,30 @@
+<svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kimchi and egg coated rice pressed flat in the pan with a spatula">
+  <defs>
+    <linearGradient id="pan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5c6066"/><stop offset="1" stop-color="#3c4046"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="100" cy="124" rx="80" ry="8" fill="#000" opacity="0.25"/>
+  <path d="M30 58 L170 58 L160 108 Q100 120 40 108 Z" fill="url(#pan)"/>
+  <rect x="26" y="54" width="148" height="8" rx="4" fill="#6f747b"/>
+  <path d="M172 58 L198 52" stroke="#a97142" stroke-width="10" stroke-linecap="round"/>
+  <path d="M44 66 L156 66 L150 100 Q100 110 50 100 Z" fill="#eda972"/>
+  <path d="M50 72 L150 72" stroke="#f7cfa0" stroke-width="5" stroke-linecap="round"/>
+  <g fill="#fffaea">
+    <ellipse cx="62" cy="84" rx="2.6" ry="3.8"/><ellipse cx="78" cy="88" rx="2.6" ry="3.8"/><ellipse cx="94" cy="84" rx="2.6" ry="3.8"/>
+    <ellipse cx="110" cy="88" rx="2.6" ry="3.8"/><ellipse cx="126" cy="84" rx="2.6" ry="3.8"/><ellipse cx="140" cy="90" rx="2.6" ry="3.8"/>
+  </g>
+  <path d="M64 92 q8 -5 15 -1 q4 3 1 8 q-9 3 -16 -1 Z" fill="#e33b3b"/>
+  <path d="M120 90 q8 -5 15 -1 q4 3 1 8 q-9 3 -16 -1 Z" fill="#fa4d56"/>
+  <path d="M92 94 q7 -4 13 -1 q4 3 1 7 q-8 3 -14 -1 Z" fill="#e33b3b"/>
+  <g fill="#f7ecd0">
+    <rect x="84" y="76" width="7" height="7" rx="2" transform="rotate(5 87 79)"/>
+    <rect x="118" y="78" width="7" height="7" rx="2" transform="rotate(-7 121 81)"/>
+  </g>
+  <g transform="translate(120,8) rotate(24)">
+    <rect x="0" y="0" width="10" height="42" rx="5" fill="#a97142"/>
+    <path d="M-8 42 L18 42 L16 62 Q5 66 -6 62 Z" fill="#cfd6dd"/>
+  </g>
+  <path d="M70 28 L70 42 M64 36 L70 43 L76 36" stroke="#f1c21b" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M88 114 q-5 8 0 14 M112 114 q-5 8 0 14" stroke="#ff832b" stroke-width="4" fill="none" stroke-linecap="round"/>
+</svg>

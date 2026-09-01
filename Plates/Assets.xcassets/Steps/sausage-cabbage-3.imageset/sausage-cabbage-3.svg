@@ -1,0 +1,26 @@
+<svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Soy sauce and mustard stirred together in a small bowl">
+  <defs>
+    <linearGradient id="bowl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4a90d9"/><stop offset="1" stop-color="#2e6db1"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="92" cy="128" rx="70" ry="8" fill="#000" opacity="0.25"/>
+  <path d="M36 70 L148 70 L136 116 Q92 126 48 116 Z" fill="url(#bowl)"/>
+  <path d="M36 70 L148 70 L146 78 L38 78 Z" fill="#6cabe8"/>
+  <path d="M46 86 Q92 96 138 86 L132 110 Q92 118 52 110 Z" fill="#6b3f23"/>
+  <path d="M62 96 q10 -6 18 2 q-8 8 -18 -2 Z" fill="#f1c21b"/>
+  <path d="M104 92 q10 -6 18 2 q-8 8 -18 -2 Z" fill="#ffd75e"/>
+  <path d="M54 92 Q92 99 130 92" stroke="#8a5430" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M118 22 L136 44 L126 74" stroke="#c9a15f" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="124" cy="78" rx="9" ry="5" fill="#e0b877"/>
+  <g transform="translate(150,30)">
+    <rect x="0" y="0" width="22" height="32" rx="5" fill="#f1c21b"/>
+    <rect x="6" y="-8" width="10" height="10" rx="3" fill="#e8b000"/>
+    <rect x="3" y="10" width="16" height="12" rx="2" fill="#fff3c4"/>
+  </g>
+  <g transform="translate(18,30)">
+    <rect x="0" y="0" width="22" height="32" rx="5" fill="#3f2a1b"/>
+    <rect x="6" y="-8" width="10" height="10" rx="3" fill="#5a3418"/>
+    <rect x="3" y="10" width="16" height="12" rx="2" fill="#e0e4e8"/>
+  </g>
+</svg>

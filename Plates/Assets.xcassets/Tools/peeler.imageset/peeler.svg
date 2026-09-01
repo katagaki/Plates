@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Peeler">
+  <path d="M24 27 13 15M24 27l11-12" stroke="#8d939b" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+  <rect x="19" y="25" width="10" height="18" rx="5" fill="#5c6066"/>
+  <rect x="8" y="9" width="32" height="8" rx="3" fill="#cfd6dd"/>
+  <rect x="12" y="12" width="24" height="2.6" rx="1.3" fill="#3c4046"/>
+</svg>

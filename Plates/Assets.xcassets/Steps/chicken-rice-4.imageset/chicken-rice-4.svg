@@ -1,0 +1,22 @@
+<svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diced onion softening in the pan alongside the browned chicken">
+  <defs>
+    <linearGradient id="pan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5c6066"/><stop offset="1" stop-color="#3c4046"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="100" cy="126" rx="76" ry="8" fill="#000" opacity="0.25"/>
+  <path d="M30 66 L166 66 L157 110 Q100 121 39 110 Z" fill="url(#pan)"/>
+  <rect x="26" y="62" width="144" height="8" rx="4" fill="#6f747b"/>
+  <path d="M168 66 L196 60" stroke="#a97142" stroke-width="10" stroke-linecap="round"/>
+  <rect x="52" y="82" width="22" height="15" rx="5" fill="#e8b26a" transform="rotate(-6 63 89)"/>
+  <rect x="104" y="86" width="22" height="15" rx="5" fill="#e8b26a" transform="rotate(6 115 93)"/>
+  <g fill="#f3dfae">
+    <rect x="78" y="82" width="8" height="8" rx="2" transform="rotate(-8 82 86)"/>
+    <rect x="88" y="90" width="8" height="8" rx="2" transform="rotate(10 92 94)"/>
+    <rect x="70" y="96" width="8" height="8" rx="2" transform="rotate(-5 74 100)"/>
+    <rect x="128" y="92" width="8" height="8" rx="2" transform="rotate(6 132 96)"/>
+    <rect x="136" y="82" width="8" height="8" rx="2" transform="rotate(-8 140 86)"/>
+  </g>
+  <path d="M70 54 q-4 -8 0 -15 M100 52 q-4 -8 0 -15 M130 54 q-4 -8 0 -15" stroke="#aab6c0" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+  <path d="M70 118 q-5 8 0 14 M100 120 q-5 8 0 14 M130 118 q-5 8 0 14" stroke="#ff832b" stroke-width="4" fill="none" stroke-linecap="round"/>
+</svg>

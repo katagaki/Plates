@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bowl of kimchi">
+  <path d="M9 25h30a15 13 0 0 1-30 0Z" fill="#e6e0d4"/>
+  <path d="M12 24c2-6 7-9 12-9s10 3 12 9Z" fill="#d94f45"/>
+  <path d="M17 20c2-2 4-3 6-3M25 17c3 0 5 2 7 4" stroke="#f07a4f" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <rect x="20" y="38" width="8" height="3" rx="1.5" fill="#c8c2b6"/>
+</svg>

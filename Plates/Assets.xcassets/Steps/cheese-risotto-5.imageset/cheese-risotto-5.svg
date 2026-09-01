@@ -1,0 +1,20 @@
+<svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Risotto simmering on low heat for fifteen minutes, stirred with a wooden spatula">
+  <defs>
+    <linearGradient id="pan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5c6066"/><stop offset="1" stop-color="#3c4046"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="100" cy="126" rx="80" ry="8" fill="#000" opacity="0.25"/>
+  <path d="M30 62 L170 62 L160 110 Q100 122 40 110 Z" fill="url(#pan)"/>
+  <rect x="26" y="58" width="148" height="8" rx="4" fill="#6f747b"/>
+  <path d="M172 62 L198 56" stroke="#a97142" stroke-width="10" stroke-linecap="round"/>
+  <path d="M44 70 L156 70 L150 102 Q100 112 50 102 Z" fill="#f0e6cf"/>
+  <path d="M52 78 q10 6 20 0 t20 0 t20 0 t20 0" stroke="#e0d0a8" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <circle cx="66" cy="90" r="3" fill="#e05c66"/><circle cx="96" cy="94" r="3" fill="#e05c66"/><circle cx="126" cy="90" r="3" fill="#e05c66"/>
+  <path d="M132 16 L92 74" stroke="#c9975f" stroke-width="8" stroke-linecap="round"/>
+  <path d="M92 74 q-8 10 2 14 q10 3 12 -8" fill="#c9975f"/>
+  <path d="M74 46 q-4 -7 0 -13 M110 42 q-4 -7 0 -13" stroke="#aab6c0" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.85"/>
+  <path d="M100 114 q-4 6 0 11" stroke="#ffb000" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <rect x="8" y="98" width="48" height="22" rx="5" fill="#26489a"/>
+  <text x="32" y="113" font-family="sans-serif" font-size="12" font-weight="700" fill="#dce6ff" text-anchor="middle">15:00</text>
+</svg>

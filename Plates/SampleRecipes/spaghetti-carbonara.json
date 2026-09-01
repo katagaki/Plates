@@ -1,0 +1,210 @@
+{
+  "id": "spaghetti-carbonara",
+  "title": "Spaghetti Carbonara",
+  "time": "20 min",
+  "serves": "1",
+  "tried": true,
+  "ingredients": {
+    "supermarket": [
+      {
+        "item": "Bacon (block or thick-cut)",
+        "icon": "img/ingredients/bacon.svg",
+        "amount": "60 g"
+      },
+      {
+        "item": "Eggs",
+        "icon": "img/ingredients/egg.svg",
+        "amount": "2",
+        "note": "Whole eggs, not yolks only."
+      },
+      {
+        "item": "Grated parmesan",
+        "icon": "img/ingredients/cheese.svg",
+        "amount": "25 g"
+      }
+    ],
+    "general": [
+      {
+        "item": "Spaghetti",
+        "icon": "img/ingredients/spaghetti.svg",
+        "amount": "100 g"
+      },
+      {
+        "item": "Water",
+        "icon": "img/ingredients/water.svg",
+        "amount": "400 ml"
+      },
+      {
+        "item": "Salt",
+        "icon": "img/ingredients/salt.svg",
+        "amount": "1/3 tsp"
+      },
+      {
+        "item": "Coarse black pepper",
+        "icon": "img/ingredients/pepper.svg",
+        "amount": "plenty"
+      }
+    ],
+    "optional": [
+      {
+        "item": "Olive oil",
+        "icon": "img/ingredients/oil.svg",
+        "amount": "1 tsp"
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "Frying pan (about 24 cm)",
+      "icon": "img/tools/pan.svg",
+      "required": true
+    },
+    {
+      "name": "Cutting board",
+      "icon": "img/tools/cutting-board.svg",
+      "required": true
+    },
+    {
+      "name": "Knife",
+      "icon": "img/tools/knife.svg",
+      "required": true
+    },
+    {
+      "name": "Fine grater",
+      "icon": "img/tools/grater.svg",
+      "required": true,
+      "note": "For the cheese. A microplane or the fine side of a box grater. Skip it if you buy the cheese already grated."
+    },
+    {
+      "name": "Cooking chopsticks or tongs",
+      "icon": "img/tools/chopsticks.svg",
+      "required": true
+    },
+    {
+      "name": "Small bowl",
+      "icon": "img/tools/bowl.svg",
+      "required": true
+    },
+    {
+      "name": "Measuring cup",
+      "icon": "img/tools/measuring-cup.svg",
+      "required": false
+    }
+  ],
+  "steps": [
+    {
+      "title": "Mix egg and cheese",
+      "points": [
+        "Beat both eggs and the parmesan together in a small bowl.",
+        "Add a generous grind of pepper.",
+        "Set the bowl next to the stove."
+      ],
+      "hint": "The sauce comes together in seconds at the end, so it must be ready and within reach before anything touches the pan.",
+      "image": "img/spaghetti-carbonara-1.svg"
+    },
+    {
+      "title": "Cut bacon",
+      "points": [
+        "Cut the bacon into batons about 1 cm thick.",
+        "This is the only knife work in the recipe."
+      ],
+      "image": "img/spaghetti-carbonara-2.svg"
+    },
+    {
+      "title": "Brown bacon",
+      "points": [
+        "Put the bacon in the cold pan, then turn the heat to medium.",
+        "Cook for 2 to 3 minutes, until the fat runs and the edges crisp.",
+        "Add the olive oil only if the bacon is very lean."
+      ],
+      "hint": "Starting in a cold pan renders the fat gently instead of scorching the outside. That fat flavors the whole dish, so don't pour it off.",
+      "image": "img/spaghetti-carbonara-3.svg"
+    },
+    {
+      "title": "Boil water",
+      "points": [
+        "Leave the bacon and all its fat in the pan.",
+        "Pour in the water and the salt.",
+        "Bring it to a boil."
+      ],
+      "image": "img/spaghetti-carbonara-4.svg"
+    },
+    {
+      "title": "Add spaghetti",
+      "points": [
+        "Lay the spaghetti in whole, fanned across the pan, and let the submerged ends soften for about 30 seconds.",
+        "Press the standing ends down with the tongs until every strand is under.",
+        "Cook uncovered for the time on the packet, usually 8 to 9 minutes."
+      ],
+      "hint": "Whole strands are longer than the pan and will stick out at first. They bend on their own in half a minute. Stir during the first minute so they don't glue together while the surface starch dissolves.",
+      "image": "img/spaghetti-carbonara-5.svg"
+    },
+    {
+      "title": "Reduce liquid",
+      "points": [
+        "Keep it at a steady bubble, stirring now and then.",
+        "Aim for about two spoonfuls of starchy, cloudy liquid left when the pasta is done.",
+        "Add a splash of water if it dries out early, or boil it off if there's too much."
+      ],
+      "hint": "Whole eggs carry more water than yolks do, so leave the pan on the dry side. The sauce loosens easily later, but a watery one is hard to bring back.",
+      "image": "img/spaghetti-carbonara-6.svg"
+    },
+    {
+      "title": "Add egg mixture",
+      "points": [
+        "Turn the heat off and let the pan stop bubbling, about 45 seconds.",
+        "Pour in the egg mixture and toss fast with the tongs.",
+        "The residual heat and starchy liquid turn it into a glossy cream."
+      ],
+      "hint": "Egg into a bubbling pan means scrambled eggs. Egg white sets sooner than yolk, so give the pan the full wait. Off the heat with a short pause is the entire trick to carbonara.",
+      "image": "img/spaghetti-carbonara-7.svg"
+    },
+    {
+      "title": "Plate carbonara",
+      "points": [
+        "Twirl it onto a plate.",
+        "Scrape the sauce left in the pan over the top.",
+        "Finish with more black pepper and a little extra parmesan if you like."
+      ],
+      "image": "img/spaghetti-carbonara-8.svg"
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "The egg scrambled into lumps",
+      "solution": "The pan was too hot when the egg went in. Wait until the bubbling fully stops, and keep the pasta moving while you pour. The sauce thickens from gentle residual heat, not direct cooking."
+    },
+    {
+      "problem": "The sauce is watery",
+      "solution": "Too much liquid was left in the pan. Next time boil it down to about two spoonfuls before the egg goes in. This time, toss over the lowest possible heat for 10 to 15 seconds and it will tighten."
+    },
+    {
+      "problem": "Want a richer sauce",
+      "solution": "Richness comes from the yolk, not the white. Use one whole egg plus one extra yolk instead of two whole eggs. To separate one without a tool, crack the egg into a clean cupped hand over a bowl and let the white run between your fingers."
+    },
+    {
+      "problem": "The sauce seized after plating",
+      "solution": "Parmesan keeps drinking liquid as it sits. Loosen it with a spoonful of hot water and toss again. Serving on a warmed plate slows this down."
+    },
+    {
+      "problem": "Want the bacon crisp in the finished dish",
+      "solution": "Boiling with the pasta softens it. Lift the bacon out after browning, leaving every bit of fat behind, and stir it back in with the egg at the end. The fat still flavors the sauce and the bacon keeps its crunch, at the cost of one extra plate."
+    },
+    {
+      "problem": "The spaghetti won't fit in the pan",
+      "solution": "Fan it out so the strands hit the water at different points, and give it 30 seconds before pushing. Anything that softens goes under easily. There is no need to snap the strands: long spaghetti is what lets the sauce cling and twirl at the end."
+    },
+    {
+      "problem": "The pasta clumped together",
+      "solution": "It wasn't stirred in the first minute. Spaghetti in a shallow pan needs early loosening while the surface is at its stickiest, especially where the bent ends pile up in the middle."
+    },
+    {
+      "problem": "It's too salty",
+      "solution": "Bacon and parmesan both carry salt, so the water only needs a small pinch. If it's already done, a splash of hot water and an extra grind of pepper soften the edge."
+    },
+    {
+      "problem": "No parmesan on hand",
+      "solution": "Any hard grating cheese works, and the pre-grated kind is fine. Avoid soft melting cheese like mozzarella, which turns stringy instead of creamy."
+    }
+  ]
+}

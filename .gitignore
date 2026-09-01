@@ -1,0 +1,6 @@
+.DS_Store
+build/
+DerivedData/
+xcuserdata/
+*.xcuserstate
+Plates.xcodeproj/xcshareddata/xcodecloud/

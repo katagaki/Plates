@@ -1,0 +1,214 @@
+{
+  "id": "garlic-fried-rice",
+  "title": "Garlic Fried Rice",
+  "time": "20 min",
+  "serves": "1",
+  "tried": true,
+  "ingredients": {
+    "supermarket": [
+      {
+        "item": "Garlic",
+        "icon": "img/ingredients/garlic.svg",
+        "amount": "4 cloves"
+      },
+      {
+        "item": "Butter",
+        "icon": "img/ingredients/butter.svg",
+        "amount": "10 g"
+      }
+    ],
+    "general": [
+      {
+        "item": "Microwavable packed rice",
+        "icon": "img/ingredients/rice.svg",
+        "amount": "200 g",
+        "note": "Cold rice from the fridge works too, broken up before it goes in."
+      },
+      {
+        "item": "Cooking oil",
+        "icon": "img/ingredients/oil.svg",
+        "amount": "2 tbsp"
+      },
+      {
+        "item": "Soy sauce",
+        "icon": "img/ingredients/soy-sauce.svg",
+        "amount": "1 tsp"
+      },
+      {
+        "item": "Salt",
+        "icon": "img/ingredients/salt.svg",
+        "amount": "a pinch"
+      },
+      {
+        "item": "Black pepper",
+        "icon": "img/ingredients/pepper.svg",
+        "amount": "to taste"
+      }
+    ],
+    "optional": [
+      {
+        "item": "Sausage",
+        "icon": "img/ingredients/sausage.svg",
+        "amount": "2",
+        "note": "Any cooked sausage works, frankfurter or chorizo alike. It makes the plate a full meal rather than a side."
+      },
+      {
+        "item": "Spring onion",
+        "icon": "img/ingredients/spring-onion.svg",
+        "amount": "1 stalk"
+      },
+      {
+        "item": "Sesame oil",
+        "icon": "img/ingredients/sesame-oil.svg",
+        "amount": "1/2 tsp",
+        "note": "Added off the heat for aroma. Skip it and the rice is still good, just less nutty."
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "Frying pan (about 24 cm)",
+      "icon": "img/tools/pan.svg",
+      "required": true
+    },
+    {
+      "name": "Knife and cutting board",
+      "icon": "img/tools/knife.svg",
+      "required": true
+    },
+    {
+      "name": "Spatula or rice paddle",
+      "icon": "img/tools/spatula.svg",
+      "required": true
+    },
+    {
+      "name": "Microwave",
+      "icon": "img/tools/microwave.svg",
+      "required": true
+    },
+    {
+      "name": "Small plate",
+      "icon": "img/tools/plate.svg",
+      "required": true
+    },
+    {
+      "name": "Slotted spoon",
+      "icon": "img/tools/slotted-spoon.svg",
+      "required": false,
+      "note": "For lifting the chips out cleanly. A regular spoon and a tilt of the pan do the same job."
+    }
+  ],
+  "steps": [
+    {
+      "title": "Prep garlic",
+      "points": [
+        "Peel all four cloves. Slice one of them as thin as you can manage, and dice the other three fine.",
+        "Keep the two piles separate. The slices turn into crisp chips, the diced garlic flavors the rice.",
+        "Even thickness matters more than thinness, because uneven slices burn at different times."
+      ],
+      "hint": "A cold clove slices thinner than a room-temperature one. Ten minutes in the freezer firms it up.",
+      "image": "img/garlic-fried-rice-1.svg"
+    },
+    {
+      "title": "Heat rice",
+      "points": [
+        "Microwave the packed rice as directed.",
+        "Break it up with the spatula while it is still hot, and leave it beside the stove.",
+        "Rice that goes in as a solid block never separates properly."
+      ],
+      "image": "img/garlic-fried-rice-2.svg"
+    },
+    {
+      "title": "Crisp garlic slices",
+      "points": [
+        "Put the sliced garlic and the oil into the pan together, then turn the heat to low.",
+        "Starting from cold dries the garlic out slowly instead of scorching it.",
+        "Stir now and then for about 4 minutes, until the slices are pale gold at the edges."
+      ],
+      "hint": "Garlic goes from gold to bitter in under 20 seconds. Pull it a shade lighter than you want, it keeps browning off the heat.",
+      "image": "img/garlic-fried-rice-3.svg"
+    },
+    {
+      "title": "Lift out chips",
+      "points": [
+        "Scoop the slices onto the paper-lined plate the moment they turn pale gold.",
+        "Spread them in a single layer so they crisp as they cool.",
+        "Leave the oil in the pan. That is where most of the garlic flavor now lives."
+      ],
+      "image": "img/garlic-fried-rice-4.svg"
+    },
+    {
+      "title": "Cook diced garlic",
+      "points": [
+        "Turn the heat up to medium. If you are using sausage, cut it into thick coins and brown them in the garlic oil for about 2 minutes, then push them to one side of the pan.",
+        "Add the diced garlic and stir for about 30 seconds, until it smells sweet and the edges just start to color.",
+        "Drop in the butter and swirl the pan until it melts."
+      ],
+      "hint": "Diced garlic burns faster than sliced garlic. Have the rice within arm's reach before this step starts.",
+      "image": "img/garlic-fried-rice-5.svg"
+    },
+    {
+      "title": "Fry rice",
+      "points": [
+        "Turn the heat to medium-high and tip in the hot rice.",
+        "Press it flat with the spatula and leave it alone for 30 seconds before folding it over.",
+        "Repeat the press and fold for about 2 minutes, until the grains separate and jump loose in the pan."
+      ],
+      "hint": "Pressing puts the rice against hot metal. Constant stirring steams it instead, which is what makes fried rice go sticky.",
+      "image": "img/garlic-fried-rice-6.svg"
+    },
+    {
+      "title": "Season rice",
+      "points": [
+        "Pour the soy sauce around the rim of the pan so it hits bare metal and sizzles, then toss straight away.",
+        "Add the pinch of salt and a good grind of black pepper.",
+        "Taste it, and reach for more salt rather than more soy sauce if it needs lifting."
+      ],
+      "hint": "Soy sauce colors rice faster than it seasons it. A tablespoon would turn the whole pan brown before it tasted right.",
+      "image": "img/garlic-fried-rice-7.svg"
+    },
+    {
+      "title": "Plate and top",
+      "points": [
+        "Turn off the heat, drizzle over the sesame oil if using, and fold it through once before mounding the rice onto a plate.",
+        "Scatter the garlic chips over the top, along with the spring onion if using.",
+        "The chips go on at the last moment, because they soften as soon as they meet the hot rice."
+      ],
+      "image": "img/garlic-fried-rice-8.svg"
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "The garlic tastes bitter",
+      "solution": "It browned too far. Garlic turns bitter within seconds of hitting deep gold, and no amount of seasoning covers it. Start again with fresh slices in fresh oil, on a lower heat, and lift them out while they still look underdone."
+    },
+    {
+      "problem": "The garlic chips went soft",
+      "solution": "They were either lifted out late or left in a heap on the plate. Spread them in one layer as soon as they leave the pan, and keep them off the rice until the moment it is served."
+    },
+    {
+      "problem": "The rice is sticky and clumped",
+      "solution": "The pan wasn't hot enough, or the rice was stirred nonstop. Get the pan properly hot, press the rice flat, and leave it alone between folds. Day-old rice from the fridge, broken up cold, also fries drier than fresh."
+    },
+    {
+      "problem": "It doesn't taste garlicky enough",
+      "solution": "Most of the flavor is in the oil, so make sure all of it goes into the rice rather than staying in the pan. Dicing the second batch finer also helps, since more cut surface means more flavor released."
+    },
+    {
+      "problem": "The rice sticks to the pan",
+      "solution": "The oil went into the rice rather than under it. Tilt the pan so the oil pools, let it come back up to heat for a few seconds, then push the rice through it before pressing down again."
+    },
+    {
+      "problem": "It tastes flat",
+      "solution": "Usually not enough salt. Soy sauce adds color faster than it adds seasoning, so add a pinch of salt and a heavier grind of pepper before adding any more soy."
+    },
+    {
+      "problem": "Want it more filling",
+      "solution": "Add the optional sausage, or a fried egg on top with the yolk broken through the rice at the table. Diced spam or bacon can go into the pan the same way."
+    },
+    {
+      "problem": "No microwavable packed rice",
+      "solution": "Cold cooked rice from the fridge is better anyway. Break the grains apart with wet hands before it goes in, and give it an extra minute in the pan since it starts cold."
+    }
+  ]
+}

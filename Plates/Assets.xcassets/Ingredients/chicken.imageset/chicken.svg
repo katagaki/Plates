@@ -1,0 +1,5 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chicken drumstick">
+  <path d="M33 9c5 4 5 12 0 16-4 3-8 2-11 5s-3 8-7 9-9-4-8-9 5-5 7-8 1-8 4-11 10-5 15-2Z" fill="#dba36b"/>
+  <path d="M31 12c3 3 3 8 0 11" stroke="#e8bf95" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M14 31c-3 1-4 4-3 6s4 3 6 2" stroke="#f4f1e8" stroke-width="5" fill="none" stroke-linecap="round"/>
+</svg>

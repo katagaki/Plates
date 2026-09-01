@@ -1,0 +1,24 @@
+<svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A block of steamed noodles being pulled apart by hand into loose strands">
+  <ellipse cx="100" cy="128" rx="76" ry="8" fill="#000" opacity="0.25"/>
+  <rect x="30" y="60" width="140" height="60" rx="10" fill="#c9a15f"/>
+  <rect x="30" y="60" width="140" height="9" rx="4.5" fill="#dbb476"/>
+  <g stroke="#e8c66a" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M46 78 q16 -8 32 0 t32 0"/>
+    <path d="M44 90 q16 -8 32 0 t32 0"/>
+    <path d="M46 102 q16 -8 32 0 t32 0"/>
+  </g>
+  <g stroke="#f3dfae" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M50 77 q14 -7 28 0"/>
+    <path d="M50 101 q14 -7 28 0"/>
+  </g>
+  <g stroke="#e8c66a" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M118 80 q16 -6 30 2"/>
+    <path d="M120 92 q18 -2 30 6"/>
+    <path d="M118 104 q16 2 28 12"/>
+  </g>
+  <g fill="#f7c9a8">
+    <rect x="128" y="34" width="34" height="26" rx="10" transform="rotate(18 145 47)"/>
+    <rect x="122" y="26" width="10" height="22" rx="5" transform="rotate(24 127 37)"/>
+  </g>
+  <path d="M52 42 q6 -10 14 0 M72 34 q6 -10 14 0" stroke="#aab6c0" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8"/>
+</svg>

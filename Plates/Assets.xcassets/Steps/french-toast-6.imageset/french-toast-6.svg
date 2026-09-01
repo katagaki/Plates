@@ -1,0 +1,26 @@
+<svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two golden triangles of French toast leaning on a plate with syrup drizzled over">
+  <defs>
+    <radialGradient id="plate6" cx="0.5" cy="0.4" r="0.7">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#f0ece4"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="100" cy="130" rx="82" ry="8" fill="#000" opacity="0.25"/>
+  <ellipse cx="100" cy="106" rx="80" ry="28" fill="url(#plate6)"/>
+  <ellipse cx="100" cy="104" rx="64" ry="22" fill="#e6e0d4"/>
+  <g transform="translate(44,44) rotate(-7)">
+    <path d="M0 56 L36 0 L72 56 Z" fill="#d99a4e"/>
+    <path d="M0 56 L36 0 L72 56 Z" fill="none" stroke="#b07c3f" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M12 48 L36 12 L60 48 Z" fill="#f3dfae"/>
+  </g>
+  <g transform="translate(84,50) rotate(6)">
+    <path d="M0 56 L36 0 L72 56 Z" fill="#d99a4e"/>
+    <path d="M0 56 L36 0 L72 56 Z" fill="none" stroke="#b07c3f" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M12 48 L36 12 L60 48 Z" fill="#f3dfae"/>
+    <path d="M26 38 q10 6 20 0" stroke="#e8c66a" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <path d="M132 6 q-4 14 5 22 q9 8 3 18" stroke="#ffb000" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M54 28 q-5 -9 0 -18 M92 22 q-5 -9 0 -18" stroke="#aab6c0" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+  <ellipse cx="24" cy="42" rx="11" ry="8" fill="#f0ece4"/>
+  <ellipse cx="24" cy="40" rx="11" ry="7" fill="#ffffff"/>
+  <path d="M20 40 q4 -5 8 0" stroke="#ffb000" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

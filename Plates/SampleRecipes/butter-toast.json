@@ -1,0 +1,123 @@
+{
+  "id": "butter-toast",
+  "title": "Butter Toast",
+  "time": "10 min",
+  "serves": "1",
+  "tried": true,
+  "ingredients": {
+    "supermarket": [
+      {
+        "item": "Thick-cut bread (about 3 cm)",
+        "icon": "img/ingredients/bread.svg",
+        "amount": "1 slice"
+      },
+      {
+        "item": "Butter",
+        "icon": "img/ingredients/butter.svg",
+        "amount": "15 g"
+      }
+    ],
+    "optional": [
+      {
+        "item": "Salt",
+        "icon": "img/ingredients/salt.svg",
+        "amount": "a small pinch"
+      },
+      {
+        "item": "Honey",
+        "icon": "img/ingredients/honey.svg",
+        "amount": "1 tsp"
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "Frying pan (any size)",
+      "icon": "img/tools/pan.svg",
+      "required": true,
+      "note": "A lid helps but is not required."
+    },
+    {
+      "name": "Spatula or tongs",
+      "icon": "img/tools/spatula.svg",
+      "required": true
+    },
+    {
+      "name": "Butter knife",
+      "icon": "img/tools/butter-knife.svg",
+      "required": false
+    }
+  ],
+  "steps": [
+    {
+      "title": "Cut butter",
+      "points": [
+        "Take the butter out of the fridge and cut it in two.",
+        "About 10 g goes in the pan, about 5 g on top at the end.",
+        "Leave the finishing piece out so it softens while you cook."
+      ],
+      "hint": "Cold butter on hot toast just sits there. A softened piece melts in and soaks through.",
+      "image": "img/butter-toast-1.svg"
+    },
+    {
+      "title": "Melt butter",
+      "points": [
+        "Set the pan over low heat and add the 10 g piece.",
+        "Swirl it as it melts.",
+        "Stop as soon as the foam settles, before it browns."
+      ],
+      "hint": "High heat burns butter before the bread can toast. Low and patient is the whole technique.",
+      "image": "img/butter-toast-2.svg"
+    },
+    {
+      "title": "Toast first side",
+      "points": [
+        "Lay the bread in and slide it around once so the underside drinks the butter.",
+        "Toast for 2 to 3 minutes, pressing gently with the spatula.",
+        "It is ready when the underside is deep golden brown."
+      ],
+      "hint": "Peek early by lifting a corner. The line between golden and burnt is about 30 seconds wide.",
+      "image": "img/butter-toast-3.svg"
+    },
+    {
+      "title": "Toast second side",
+      "points": [
+        "Flip the bread over.",
+        "Toast for 2 minutes more.",
+        "If the pan looks dry, run a sliver of butter along the edge and tilt it underneath."
+      ],
+      "image": "img/butter-toast-4.svg"
+    },
+    {
+      "title": "Top with butter",
+      "points": [
+        "Move the toast to a plate and set the softened butter in the middle.",
+        "Add the pinch of salt or a thread of honey if you like.",
+        "Eat it right away, while the outside still crackles."
+      ],
+      "image": "img/butter-toast-5.svg"
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "The toast burned",
+      "solution": "The heat was too high. Butter solids scorch fast, so stay on low and check the underside after the first minute. A dark pan hides the color of the butter, so go by smell too: nutty is fine, acrid is past it."
+    },
+    {
+      "problem": "It came out greasy",
+      "solution": "Too much butter in the pan, or the heat was so low the bread soaked instead of toasting. 10 g is enough for one slice, and the pan should sizzle quietly the whole time."
+    },
+    {
+      "problem": "Crisp outside, cold inside",
+      "solution": "The slice was too thick for the heat, or straight from the freezer. Cover the pan with a lid for the first side, or give frozen bread 20 seconds in the microwave before it hits the pan."
+    },
+    {
+      "problem": "It went soft after a few minutes",
+      "solution": "Steam trapped under the toast softened the base. Rest it against the rim of the plate so air reaches both sides, and eat it sooner. Toast does not wait."
+    },
+    {
+      "problem": "No thick-cut bread",
+      "solution": "Regular sandwich bread works with about half the time per side. Watch it closely, thin slices go from pale to burnt quickly."
+    }
+  ]
+}

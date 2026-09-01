@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Measuring cup">
+  <path d="M11 13h20l-2 24a3 3 0 0 1-3 3h-10a3 3 0 0 1-3-3Z" fill="#d8eefc"/>
+  <path d="M12.4 24h17.2l-1 13a3 3 0 0 1-3 3h-9.2a3 3 0 0 1-3-3Z" fill="#33b1ff"/>
+  <path d="M14 19h6M14 29h6" stroke="#5c6066" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M31 18c5 1 5 9 0 10" stroke="#8d939b" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

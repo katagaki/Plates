@@ -1,0 +1,27 @@
+<svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two eggs and parmesan beaten together in a small bowl with black pepper">
+  <defs>
+    <linearGradient id="bowl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4a90d9"/><stop offset="1" stop-color="#2e6db1"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="92" cy="128" rx="70" ry="8" fill="#000" opacity="0.25"/>
+  <path d="M36 70 L148 70 L136 116 Q92 126 48 116 Z" fill="url(#bowl)"/>
+  <path d="M36 70 L148 70 L146 78 L38 78 Z" fill="#6cabe8"/>
+  <path d="M46 86 Q92 96 138 86 L132 110 Q92 118 52 110 Z" fill="#ffd75e"/>
+  <path d="M54 92 Q92 99 130 92" stroke="#f1c21b" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <circle cx="80" cy="97" r="6.5" fill="#ffb000"/>
+  <circle cx="104" cy="95" r="6.5" fill="#ffb000"/>
+  <path d="M116 24 L140 44 L128 74" stroke="#c9a15f" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M20 26 L48 26 L54 46 L14 46 Z" fill="#fddc69"/>
+  <path d="M20 26 L48 26 L50 33 L18 33 Z" fill="#ffeaa0"/>
+  <rect x="20" y="50" width="3" height="6" rx="1.5" fill="#fddc69"/>
+  <rect x="30" y="54" width="3" height="6" rx="1.5" fill="#fddc69"/>
+  <rect x="40" y="50" width="3" height="6" rx="1.5" fill="#fddc69"/>
+  <ellipse cx="166" cy="52" rx="12" ry="8" fill="#f0ece4"/>
+  <ellipse cx="166" cy="50" rx="12" ry="7" fill="#ffffff"/>
+  <circle cx="161" cy="49" r="1.6" fill="#33383e"/>
+  <circle cx="168" cy="52" r="1.6" fill="#33383e"/>
+  <circle cx="172" cy="47" r="1.6" fill="#33383e"/>
+  <circle cx="74" cy="90" r="1.8" fill="#33383e"/>
+  <circle cx="112" cy="102" r="1.8" fill="#33383e"/>
+</svg>
