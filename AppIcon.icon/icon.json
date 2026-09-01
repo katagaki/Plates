@@ -6,8 +6,8 @@
     {
       "layers" : [
         {
-          "image-name" : "pan-surface.svg",
-          "name" : "Pan surface"
+          "image-name" : "pan-body.svg",
+          "name" : "Pan rim and handle"
         }
       ],
       "shadow" : {
@@ -22,8 +22,8 @@
     {
       "layers" : [
         {
-          "image-name" : "pan-body.svg",
-          "name" : "Pan rim and handle"
+          "image-name" : "pan-surface.svg",
+          "name" : "Pan surface"
         }
       ],
       "shadow" : {
