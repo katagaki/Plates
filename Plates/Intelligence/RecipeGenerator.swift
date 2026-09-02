@@ -34,9 +34,41 @@ struct GenerationRequest: Equatable, Sendable {
     static let listLimit = 40
 }
 
-/// The first pass: what the dish is and what it needs. The method comes later, so this
-/// stays small enough to generate reliably.
-@Generable(description: "The idea for a one-pan recipe: what it is and what it needs")
+/// One ingredient the dish is built from, already pinned to an icon the app can draw.
+struct PickedIngredient: Equatable, Sendable {
+    /// The name the model wrote, kept as the cook reads it.
+    var name: String
+    /// The catalog asset it was resolved onto.
+    var asset: String
+}
+
+/// What the first pass settled on: the dish, and the ingredients it is cooked from.
+struct IngredientPick: Equatable, Sendable {
+    var dish: String
+    var items: [PickedIngredient]
+
+    var names: [String] { items.map(\.name) }
+}
+
+/// The first pass: the ingredients the dish is built from, chosen before anything is written
+/// about how to cook it. Settling the list on its own means the next pass measures ingredients
+/// that already work together, instead of inventing them and checking them against the catalog
+/// while it writes everything else.
+@Generable(description: "The ingredients a one-pan dish is built from")
+struct GeneratedIngredientPick {
+    @Guide(description: "The dish these ingredients make, in two to four words")
+    var dish: String
+
+    @Guide(
+        description: "Ingredient names that cook together in one pan, such as 'Spring onion'",
+        .count(4...10)
+    )
+    var items: [String]
+}
+
+/// The second pass: what the dish is called and what each picked ingredient is measured at.
+/// The method comes later, so this stays small enough to generate reliably.
+@Generable(description: "A one-pan recipe's title, timing, measured shopping list, and tools")
 struct GeneratedRecipeBase {
     @Guide(description: "Title in title case, two to four words. Do not use the words 'One-Pan'.")
     var title: String
@@ -47,27 +79,33 @@ struct GeneratedRecipeBase {
     @Guide(description: "How many people it serves, as a plain count such as '1' or '1 to 2'")
     var serves: String
 
-    @Guide(description: "Fresh and chilled items: vegetables, meat, seafood, dairy, bread, eggs", .count(1...6))
+    @Guide(
+        description: "The picked fresh and chilled items: vegetables, meat, seafood, dairy, bread, eggs",
+        .maximumCount(6)
+    )
     var supermarket: [GeneratedIngredient]
 
-    @Guide(description: "Shelf-stable pantry items: oil, soy sauce, salt, sugar, packed rice, pasta", .count(1...6))
+    @Guide(
+        description: "The picked shelf-stable items: oil, soy sauce, salt, sugar, packed rice, pasta",
+        .maximumCount(6)
+    )
     var general: [GeneratedIngredient]
 
-    @Guide(description: "Anything that can be skipped. Leave empty when nothing is optional.", .maximumCount(3))
+    @Guide(description: "Any picked item that can be skipped. Leave empty when nothing is optional.", .maximumCount(3))
     var optional: [GeneratedIngredient]
 
     @Guide(description: "The pans, knives and bowls needed", .count(2...6))
     var tools: [GeneratedTool]
 }
 
-/// The second pass: the shape of the method, titles only.
+/// The third pass: the shape of the method, titles only.
 @Generable(description: "The method for a one-pan recipe, as an ordered list of step titles")
 struct GeneratedStepOutline {
     @Guide(description: "Short imperative step titles in order, such as 'Brown pork'", .count(4...8))
     var steps: [String]
 }
 
-/// The third pass: one step written out on its own.
+/// The fourth pass: one step written out on its own.
 @Generable(description: "What to do during one step of a recipe")
 struct GeneratedStepDetail {
     @Guide(description: "Two to three plain sentences describing what to do", .count(2...3))
@@ -83,11 +121,8 @@ struct GeneratedTroubleshootingList {
 
 @Generable
 struct GeneratedIngredient {
-    @Guide(description: "The ingredient name, for example 'Thick-cut bread' or 'Spring onion'")
+    @Guide(description: "The picked ingredient's name, written exactly as it was given to you")
     var item: String
-
-    @Guide(description: "The catalog icon for this ingredient, lowercase and hyphenated, such as 'spring-onion'")
-    var icon: String
 
     @Guide(description: "The quantity only, such as '150 g', '1/2', '2 tbsp', or 'to taste'")
     var amount: String
@@ -124,6 +159,7 @@ struct GeneratedTroubleshooting {
 struct GenerationProgress: Equatable, Sendable {
     /// The passes the generator runs, in order.
     enum Stage: Int, Equatable, Sendable {
+        case pick
         case idea
         case outline
         case details
@@ -131,6 +167,7 @@ struct GenerationProgress: Equatable, Sendable {
 
         var title: LocalizedStringResource {
             switch self {
+            case .pick: "Generate.Progress.Stage.Pick"
             case .idea: "Generate.Progress.Stage.Idea"
             case .outline: "Generate.Progress.Stage.Outline"
             case .details: "Generate.Progress.Stage.Details"
@@ -139,10 +176,13 @@ struct GenerationProgress: Equatable, Sendable {
         }
     }
 
-    var stage: Stage = .idea
+    var stage: Stage = .pick
+    /// The dish the pick pass named, shown until the recipe has a title of its own.
+    var dish: String?
     var title: String?
     var time: String?
     var serves: String?
+    var pickedCount = 0
     var ingredientCount = 0
     var toolCount = 0
     var stepCount = 0
@@ -156,6 +196,7 @@ struct GenerationProgress: Equatable, Sendable {
     /// How far along the model is. Each pass carries the share of the work it does.
     var fraction: Double {
         guard !isFinished else { return 1 }
+        let pick = min(Double(pickedCount) / 6, 1)
         let idea = [
             title == nil ? 0 : 1,
             min(Double(ingredientCount) / 6, 1),
@@ -164,15 +205,16 @@ struct GenerationProgress: Equatable, Sendable {
         let outline = min(Double(stepCount) / 5, 1)
         let details = stepCount == 0 ? 0 : Double(writtenStepCount) / Double(stepCount)
         let troubleshooting = min(Double(troubleshootingCount) / 2, 1)
-        return idea * 0.35 + outline * 0.15 + details * 0.35 + troubleshooting * 0.15
+        return pick * 0.15 + idea * 0.25 + outline * 0.15 + details * 0.3 + troubleshooting * 0.15
     }
 }
 
 /// Wraps the on-device model and converts its output into a schema-shaped `Recipe`.
 ///
-/// The recipe is written in four passes, each in its own session: the idea and shopping list,
-/// then the step titles, then every step on its own, then troubleshooting. Nothing carries the
-/// whole recipe in its context, so a long recipe cannot run the window out.
+/// The recipe is written in five passes, each in its own session: the ingredients that work
+/// together, then the title and their amounts, then the step titles, then every step on its
+/// own, then troubleshooting. Nothing carries the whole recipe in its context, so a long
+/// recipe cannot run the window out.
 @MainActor
 @Observable
 final class RecipeGenerator {
@@ -215,13 +257,19 @@ final class RecipeGenerator {
         state = .generating
         progress = GenerationProgress()
         do {
-            let base = try await generateBase(request)
+            let pick = try await pickIngredients(request)
+            let base = try await generateBase(request, pick: pick)
             let outline = try await generateOutline(for: base)
             let steps = try await generateSteps(outline: outline, base: base)
             let troubleshooting = try await generateTroubleshooting(base: base, outline: outline)
             progress.isFinished = true
             state = .idle
-            return Self.makeRecipe(base: base, steps: steps, troubleshooting: troubleshooting)
+            return Self.makeRecipe(
+                base: base,
+                pick: pick,
+                steps: steps,
+                troubleshooting: troubleshooting
+            )
         } catch {
             state = .failed(error.localizedDescription)
             return nil
@@ -254,14 +302,64 @@ final class RecipeGenerator {
         }
     }
 
-    private func generateBase(_ request: GenerationRequest) async throws -> GeneratedRecipeBase {
-        progress.stage = .idea
-        return try await run(
+    /// Picks the shopping list first, from the cook's kitchen when they listed one and from
+    /// the catalog otherwise, and pins every name onto an icon before a word of the recipe is
+    /// written.
+    private func pickIngredients(_ request: GenerationRequest) async throws -> IngredientPick {
+        progress.stage = .pick
+        let picked = try await run(
             tools: [IngredientLookupTool(available: request.ingredients)],
-            instructions: Self.instructions(for: request)
+            instructions: Self.pickInstructions(for: request)
         ) { session in
             let stream = session.streamResponse(
                 to: Self.prompt(for: request),
+                generating: GeneratedIngredientPick.self
+            )
+            var latest: GeneratedContent?
+            for try await snapshot in stream {
+                progress.dish = snapshot.content.dish
+                progress.pickedCount = snapshot.content.items?.count ?? 0
+                latest = snapshot.rawContent
+            }
+            guard let latest else { throw GenerationError.empty }
+            return try GeneratedIngredientPick(latest)
+        }
+        let items = Self.resolve(picked.items, kitchen: request.ingredients)
+        guard !items.isEmpty else { throw GenerationError.empty }
+        progress.pickedCount = items.count
+        return IngredientPick(dish: picked.dish, items: items)
+    }
+
+    /// Pins each name the model wrote onto an icon that exists, dropping duplicates, anything
+    /// the catalog has nothing close to, and anything the cook did not say they have. When
+    /// that leaves nothing, the cook's own picks stand in.
+    private static func resolve(_ items: [String], kitchen: [String]) -> [PickedIngredient] {
+        let available = Set(kitchen)
+        var picked: [PickedIngredient] = []
+        for item in items {
+            let name = item.trimmingCharacters(in: .whitespacesAndNewlines)
+            guard !name.isEmpty,
+                  let asset = IconCatalog.ingredient(named: name)
+                      ?? IconCatalog.ingredientSuggestions(for: name, limit: 1).first,
+                  available.isEmpty || available.contains(asset),
+                  !picked.contains(where: { $0.asset == asset })
+            else { continue }
+            picked.append(PickedIngredient(name: name, asset: asset))
+        }
+        guard picked.isEmpty else { return picked }
+        return kitchen.prefix(GenerationRequest.listLimit).map {
+            PickedIngredient(name: IconCatalog.displayName(for: $0), asset: $0)
+        }
+    }
+
+    private func generateBase(
+        _ request: GenerationRequest,
+        pick: IngredientPick
+    ) async throws -> GeneratedRecipeBase {
+        progress.stage = .idea
+        return try await run(instructions: Self.instructions(for: request)) { session in
+            let stream = session.streamResponse(
+                to: Self.basePrompt(for: pick, request: request),
                 generating: GeneratedRecipeBase.self
             )
             var latest: GeneratedContent?
@@ -382,33 +480,48 @@ final class RecipeGenerator {
     and do not pad with rule-of-three lists. Write ranges with the word "to", never a dash.
     """
 
-    private static func instructions(for request: GenerationRequest) -> String {
+    private static func pickInstructions(for request: GenerationRequest) -> String {
         var instructions = houseStyle + "\n\n" + """
-        You are working out what a dish is and what it needs. Prep work such as "finely diced" \
-        belongs in the method, not in an ingredient amount, so leave it out here.
+        You are choosing the shopping list and nothing else. Name the dish, then list the \
+        ingredients it is cooked from, one name per entry, with no amounts and no prep work. \
+        Pick ingredients that cook together in the same pan over the same half hour, and \
+        leave out anything the dish can do without.
 
         The app draws each ingredient from a fixed catalog of icons. Call checkIngredient for \
-        any ingredient you are unsure of before you write it down, and take the swap it \
-        suggests when the catalog has nothing for it.
+        every ingredient before you list it, and take the swap it suggests when the catalog \
+        has nothing for it.
         """
 
         if !request.ingredients.isEmpty {
             instructions += "\n\n" + """
             The cook has told you everything they have in the kitchen. Ask for nothing else. \
-            Every ingredient in the recipe has to come from their list, and it is fine to leave \
-            some of the list unused. If the list cannot make the dish they named, write the \
-            closest dish it can make.
-            """
-        }
-        if !request.tools.isEmpty {
-            instructions += "\n\n" + """
-            They have listed the tools they own too, so the method can only use those. Do not \
-            ask for a tool they did not list.
+            Every ingredient you pick has to come from their list, and it is fine to leave \
+            some of the list unused. If the list cannot make the dish they named, pick the \
+            ingredients for the closest dish it can make.
             """
         }
         if request.trimmedDescription.isEmpty {
             instructions += "\n\n" + """
             They have not named a dish, so pick one their ingredients make well.
+            """
+        }
+        return instructions
+    }
+
+    private static func instructions(for request: GenerationRequest) -> String {
+        var instructions = houseStyle + "\n\n" + """
+        The dish and its ingredients are already chosen. Give the recipe its title and its \
+        timing, sort the ingredients you were given into fresh, pantry, and optional, and give \
+        each one an amount. Write every name exactly as it was given to you, add nothing that \
+        is not on the list, and drop an ingredient only when the dish truly does not need it. \
+        Prep work such as "finely diced" belongs in the method, not in an amount, so leave it \
+        out here.
+        """
+
+        if !request.tools.isEmpty {
+            instructions += "\n\n" + """
+            The cook has listed the tools they own, so the recipe can only use those. Do not \
+            ask for a tool they did not list.
             """
         }
         return instructions
@@ -447,6 +560,20 @@ final class RecipeGenerator {
         return lines.joined(separator: "\n")
     }
 
+    /// The picked list handed to the pass that measures it.
+    private static func basePrompt(for pick: IngredientPick, request: GenerationRequest) -> String {
+        var lines = [
+            "Dish: \(pick.dish).",
+            "Ingredients: \(pick.names.joined(separator: ", ")).",
+        ]
+        if !request.tools.isEmpty {
+            lines.append("All I have to cook in: \(request.toolNames.joined(separator: ", ")).")
+        }
+        lines.append("")
+        lines.append("Write the title, the timing, the measured shopping list, and the tools.")
+        return lines.joined(separator: "\n")
+    }
+
     /// A compact "item (amount)" list, small enough to hand to every later pass.
     private static func list(_ ingredients: [GeneratedIngredient]) -> String {
         ingredients.map { "\($0.item) (\($0.amount))" }.joined(separator: ", ")
@@ -457,13 +584,18 @@ final class RecipeGenerator {
     /// Maps generated content onto the on-disk schema, pinning every icon to one that exists.
     static func makeRecipe(
         base: GeneratedRecipeBase,
+        pick: IngredientPick,
         steps: [Step],
         troubleshooting: [Troubleshooting]
     ) -> Recipe {
+        let icons = Dictionary(
+            pick.items.map { ($0.name.lowercased(), $0.asset) },
+            uniquingKeysWith: { first, _ in first }
+        )
         let sections = IngredientSections(
-            supermarket: section(base.supermarket),
-            general: section(base.general),
-            optional: section(base.optional)
+            supermarket: section(base.supermarket, icons: icons),
+            general: section(base.general, icons: icons),
+            optional: section(base.optional, icons: icons)
         )
         let tools = base.tools.map { tool in
             Tool(
@@ -499,14 +631,21 @@ final class RecipeGenerator {
         )
     }
 
-    /// A section is written only when it holds entries.
-    private static func section(_ entries: [GeneratedIngredient]) -> [Ingredient]? {
+    /// A section is written only when it holds entries. Each entry keeps the icon the pick
+    /// pass settled on, and falls back to a search when the name came back changed.
+    private static func section(
+        _ entries: [GeneratedIngredient],
+        icons: [String: String]
+    ) -> [Ingredient]? {
         guard !entries.isEmpty else { return nil }
         return entries.map { entry in
             Ingredient(
                 item: entry.item,
                 icon: IconCatalog.ingredientPath(
-                    for: IconCatalog.resolveIngredient(entry.icon, itemName: entry.item)
+                    for: IconCatalog.resolveIngredient(
+                        icons[entry.item.lowercased()] ?? entry.item,
+                        itemName: entry.item
+                    )
                 ),
                 amount: entry.amount,
                 note: trimmed(entry.note)

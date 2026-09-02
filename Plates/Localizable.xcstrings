@@ -117,7 +117,18 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ingredients"
+            "value": "Ingredients measured"
+          }
+        }
+      }
+    },
+    "Generate.Progress.Row.Picked": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ingredients picked"
           }
         }
       }
@@ -195,6 +206,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Planning the method"
+          }
+        }
+      }
+    },
+    "Generate.Progress.Stage.Pick": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choosing ingredients"
           }
         }
       }

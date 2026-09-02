@@ -157,9 +157,9 @@ private struct GenerationProgressView: View {
                     .font(.subheadline)
             }
 
-            if let title = progress.title, !title.isEmpty {
+            if let heading = progress.title ?? progress.dish, !heading.isEmpty {
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(verbatim: title)
+                    Text(verbatim: heading)
                         .font(.headline)
                         .lineLimit(1)
                         .truncationMode(.tail)
@@ -171,11 +171,16 @@ private struct GenerationProgressView: View {
                 }
             }
 
-            stage("Generate.Progress.Row.Ingredients", count: progress.ingredientCount)
-            stage("Generate.Progress.Row.Tools", count: progress.toolCount)
-            stage("Generate.Progress.Row.Steps", count: progress.stepCount)
-            stage("Generate.Progress.Row.StepDetails", count: progress.writtenStepCount)
-            stage("Generate.Progress.Row.Troubleshooting", count: progress.troubleshootingCount)
+            row("Generate.Progress.Row.Picked", count: progress.pickedCount, stage: .pick)
+            row("Generate.Progress.Row.Ingredients", count: progress.ingredientCount, stage: .idea)
+            row("Generate.Progress.Row.Tools", count: progress.toolCount, stage: .idea)
+            row("Generate.Progress.Row.Steps", count: progress.stepCount, stage: .outline)
+            row("Generate.Progress.Row.StepDetails", count: progress.writtenStepCount, stage: .details)
+            row(
+                "Generate.Progress.Row.Troubleshooting",
+                count: progress.troubleshootingCount,
+                stage: .troubleshooting
+            )
 
             if progress.stage == .details, let latestStep = progress.latestStep, !latestStep.isEmpty {
                 Text(verbatim: latestStep)
@@ -187,10 +192,19 @@ private struct GenerationProgressView: View {
         .animation(.default, value: progress)
     }
 
-    private func stage(_ label: LocalizedStringResource, count: Int) -> some View {
+    /// One line of the checklist, spinning while its pass is the one running.
+    private func row(
+        _ label: LocalizedStringResource,
+        count: Int,
+        stage: GenerationProgress.Stage
+    ) -> some View {
         HStack(spacing: 8) {
-            Image(systemName: count > 0 ? "checkmark.circle.fill" : "circle.dotted")
-                .foregroundStyle(.secondary)
+            if progress.stage == stage && !progress.isFinished {
+                DonutSpinner()
+            } else {
+                Image(systemName: count > 0 ? "checkmark.circle.fill" : "circle.dotted")
+                    .foregroundStyle(.secondary)
+            }
             Text(label)
                 .font(.subheadline)
             Spacer(minLength: 0)
@@ -201,5 +215,21 @@ private struct GenerationProgressView: View {
                     .contentTransition(.numericText())
             }
         }
+    }
+}
+
+/// A ring with a gap in it, turning while the model works on that line. It sits where the
+/// line's checkmark goes, so nothing shifts when the pass finishes.
+private struct DonutSpinner: View {
+    @State private var isTurning = false
+
+    var body: some View {
+        Circle()
+            .trim(from: 0, to: 0.7)
+            .stroke(.secondary, style: StrokeStyle(lineWidth: 2, lineCap: .round))
+            .rotationEffect(.degrees(isTurning ? 360 : 0))
+            .animation(.linear(duration: 1).repeatForever(autoreverses: false), value: isTurning)
+            .frame(width: 15, height: 15)
+            .onAppear { isTurning = true }
     }
 }

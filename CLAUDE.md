@@ -28,10 +28,11 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
   file shape parts from the site's.
 - `Plates/Storage` holds the storage location and the file-backed `RecipeStore`.
 - `Plates/Intelligence` holds the Apple Intelligence `@Generable` types and the generator. The
-  recipe is written in four passes, each in its own session, so no one request carries the whole
-  recipe. A pass runs on device first, and only a pass the on-device model rejects with
-  `contextSizeExceeded` is run again on `PrivateCloudComputeLanguageModel`. Keep passes small
-  enough that the cloud stays a fallback.
+  recipe is written in five passes, each in its own session, so no one request carries the whole
+  recipe. The first pass picks the ingredients and pins each to a catalog icon, so every later
+  pass works from a list that already exists. A pass runs on device first, and only a pass the
+  on-device model rejects with `contextSizeExceeded` is run again on
+  `PrivateCloudComputeLanguageModel`. Keep passes small enough that the cloud stays a fallback.
 - `Plates/Views` holds the list, detail, and generation views.
 - `Plates/SampleRecipes` holds the recipes bundled with the app for the "Add Sample Recipes"
   menu item.
