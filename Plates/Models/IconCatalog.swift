@@ -1,143 +1,201 @@
 import Foundation
 
+/// The groups the ingredient catalog is browsed in. Every ingredient icon sits in exactly one,
+/// and the flat list `IconCatalog.ingredients` is built from them.
+nonisolated enum IngredientCategory: String, CaseIterable, Identifiable, Sendable {
+    case vegetables, fruits, meat, seafood, dairy, grains, seasonings, sauces, baking, pantry
+
+    var id: String { rawValue }
+
+    var title: LocalizedStringResource {
+        switch self {
+        case .vegetables: "Ingredient.Category.Vegetables"
+        case .fruits: "Ingredient.Category.Fruits"
+        case .meat: "Ingredient.Category.Meat"
+        case .seafood: "Ingredient.Category.Seafood"
+        case .dairy: "Ingredient.Category.Dairy"
+        case .grains: "Ingredient.Category.Grains"
+        case .seasonings: "Ingredient.Category.Seasonings"
+        case .sauces: "Ingredient.Category.Sauces"
+        case .baking: "Ingredient.Category.Baking"
+        case .pantry: "Ingredient.Category.Pantry"
+        }
+    }
+
+    /// The ingredient assets in this group, in the order the picker shows them.
+    var icons: [String] {
+        switch self {
+        case .vegetables:
+            [
+                "asparagus",
+                "bean-sprouts",
+                "bell-pepper",
+                "broccoli",
+                "cabbage",
+                "carrot",
+                "cauliflower",
+                "celery",
+                "chili",
+                "corn",
+                "cucumber",
+                "daikon",
+                "eggplant",
+                "garlic",
+                "ginger",
+                "green-beans",
+                "kimchi",
+                "leek",
+                "lettuce",
+                "mushroom",
+                "onion",
+                "peas",
+                "potato",
+                "pumpkin",
+                "spinach",
+                "spring-onion",
+                "sweet-potato",
+                "tomato",
+                "zucchini",
+            ]
+        case .fruits:
+            [
+                "apple",
+                "avocado",
+                "banana",
+                "lemon",
+                "lime",
+                "orange",
+                "strawberry",
+            ]
+        case .meat:
+            [
+                "bacon",
+                "beef",
+                "chicken",
+                "ham",
+                "minced-meat",
+                "pork",
+                "sausage",
+            ]
+        case .seafood:
+            [
+                "clams",
+                "fish",
+                "salmon",
+                "seafood",
+                "shrimp",
+                "squid",
+                "tuna",
+            ]
+        case .dairy:
+            [
+                "butter",
+                "cheese",
+                "cream",
+                "egg",
+                "milk",
+                "mozzarella",
+                "parmesan",
+                "yogurt",
+            ]
+        case .grains:
+            [
+                "bread",
+                "breadcrumbs",
+                "couscous",
+                "macaroni",
+                "noodles",
+                "oats",
+                "ramen",
+                "rice",
+                "rice-noodles",
+                "spaghetti",
+                "tortilla",
+                "udon",
+            ]
+        case .seasonings:
+            [
+                "basil",
+                "bay-leaf",
+                "chili-flakes",
+                "cinnamon",
+                "coriander",
+                "cumin",
+                "curry-powder",
+                "mint",
+                "oregano",
+                "paprika",
+                "parsley",
+                "pepper",
+                "rosemary",
+                "salt",
+                "sesame-seeds",
+                "thyme",
+                "turmeric",
+            ]
+        case .sauces:
+            [
+                "fish-sauce",
+                "gochujang",
+                "honey",
+                "ketchup",
+                "maple-syrup",
+                "mayonnaise",
+                "mirin",
+                "miso",
+                "mustard",
+                "oil",
+                "olive-oil",
+                "oyster-sauce",
+                "rice-vinegar",
+                "sake",
+                "sesame-oil",
+                "soy-sauce",
+                "sriracha",
+                "vinegar",
+                "water",
+                "worcestershire",
+                "yakisoba-sauce",
+            ]
+        case .baking:
+            [
+                "baking-powder",
+                "brown-sugar",
+                "chocolate",
+                "cornstarch",
+                "flour",
+                "jam",
+                "peanut-butter",
+                "sugar",
+                "vanilla",
+                "yeast",
+            ]
+        case .pantry:
+            [
+                "aonori",
+                "beans",
+                "bouillon",
+                "canned-tomatoes",
+                "chickpeas",
+                "coconut-milk",
+                "curry-roux",
+                "dried-shiitake",
+                "katsuobushi",
+                "lentils",
+                "nori",
+                "nuts",
+                "tofu",
+                "tomato-paste",
+                "wakame",
+            ]
+        }
+    }
+}
+
 /// The SVG icon sets shipped in the asset catalog, mirroring the folders in the recipe site's `img` directory.
 nonisolated enum IconCatalog {
-    /// Asset names for every icon in `img/ingredients`.
-    static let ingredients: [String] = [
-        "aonori",
-        "apple",
-        "asparagus",
-        "avocado",
-        "bacon",
-        "baking-powder",
-        "banana",
-        "basil",
-        "bay-leaf",
-        "bean-sprouts",
-        "beans",
-        "beef",
-        "bell-pepper",
-        "bouillon",
-        "bread",
-        "breadcrumbs",
-        "broccoli",
-        "brown-sugar",
-        "butter",
-        "cabbage",
-        "canned-tomatoes",
-        "carrot",
-        "cauliflower",
-        "celery",
-        "cheese",
-        "chicken",
-        "chickpeas",
-        "chili",
-        "chili-flakes",
-        "chocolate",
-        "cinnamon",
-        "clams",
-        "coconut-milk",
-        "coriander",
-        "corn",
-        "cornstarch",
-        "couscous",
-        "cream",
-        "cucumber",
-        "cumin",
-        "curry-powder",
-        "curry-roux",
-        "daikon",
-        "dried-shiitake",
-        "egg",
-        "eggplant",
-        "fish",
-        "fish-sauce",
-        "flour",
-        "garlic",
-        "ginger",
-        "gochujang",
-        "green-beans",
-        "ham",
-        "honey",
-        "jam",
-        "katsuobushi",
-        "ketchup",
-        "kimchi",
-        "leek",
-        "lemon",
-        "lentils",
-        "lettuce",
-        "lime",
-        "macaroni",
-        "maple-syrup",
-        "mayonnaise",
-        "milk",
-        "minced-meat",
-        "mint",
-        "mirin",
-        "miso",
-        "mozzarella",
-        "mushroom",
-        "mustard",
-        "noodles",
-        "nori",
-        "nuts",
-        "oats",
-        "oil",
-        "olive-oil",
-        "onion",
-        "orange",
-        "oregano",
-        "oyster-sauce",
-        "paprika",
-        "parmesan",
-        "parsley",
-        "peanut-butter",
-        "peas",
-        "pepper",
-        "pork",
-        "potato",
-        "pumpkin",
-        "ramen",
-        "rice",
-        "rice-noodles",
-        "rice-vinegar",
-        "rosemary",
-        "sake",
-        "salmon",
-        "salt",
-        "sausage",
-        "seafood",
-        "sesame-oil",
-        "sesame-seeds",
-        "shrimp",
-        "soy-sauce",
-        "spaghetti",
-        "spinach",
-        "spring-onion",
-        "squid",
-        "sriracha",
-        "strawberry",
-        "sugar",
-        "sweet-potato",
-        "thyme",
-        "tofu",
-        "tomato",
-        "tomato-paste",
-        "tortilla",
-        "tuna",
-        "turmeric",
-        "udon",
-        "vanilla",
-        "vinegar",
-        "wakame",
-        "water",
-        "worcestershire",
-        "yakisoba-sauce",
-        "yeast",
-        "yogurt",
-        "zucchini",
-    ]
+    /// Asset names for every icon in `img/ingredients`, gathered from the browsing groups.
+    static let ingredients: [String] = IngredientCategory.allCases.flatMap(\.icons).sorted()
 
     /// Asset names for every icon in `img/tools`.
     static let tools: [String] = [
@@ -256,6 +314,15 @@ nonisolated enum IconCatalog {
     /// returns the whole catalog.
     static func ingredients(matching query: String) -> [String] {
         search(query, in: ingredients)
+    }
+
+    /// The same search, kept in browsing groups. Groups with nothing left in them are dropped.
+    static func categories(matching query: String) -> [(category: IngredientCategory, icons: [String])] {
+        let matches = Set(ingredients(matching: query))
+        return IngredientCategory.allCases.compactMap { category in
+            let icons = category.icons.filter(matches.contains)
+            return icons.isEmpty ? nil : (category, icons)
+        }
     }
 
     /// The asset covering an ingredient name, when the catalog has one.

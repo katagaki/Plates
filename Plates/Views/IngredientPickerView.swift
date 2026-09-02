@@ -1,26 +1,32 @@
 import SwiftUI
 
-/// The catalog of ingredients the app can draw, searchable, so a cook can tick off what they
-/// have instead of typing it. Ingredient names are catalog data, so they are shown as written.
+/// The catalog of ingredients the app can draw, in a grid grouped the way a shop is, so a cook
+/// can tick off what they have instead of typing it. Ingredient names are catalog data, so they
+/// are shown as written.
 struct IngredientPickerView: View {
     @Binding var selection: [String]
 
     @State private var query = ""
 
+    private let columns = Array(repeating: GridItem(.flexible(), spacing: 12), count: 4)
+
     var body: some View {
-        List {
-            if !picked.isEmpty {
-                Section("Generate.Ingredients.Picked") {
-                    ForEach(picked, id: \.self) { row($0) }
+        ScrollView {
+            LazyVGrid(columns: columns, spacing: 12, pinnedViews: .sectionHeaders) {
+                if !picked.isEmpty {
+                    section("Generate.Ingredients.Picked", icons: picked)
+                }
+                ForEach(matches, id: \.category) { group in
+                    section(group.category.title, icons: group.icons)
                 }
             }
-            Section("Generate.Ingredients.All") {
-                ForEach(rest, id: \.self) { row($0) }
-            }
+            .padding(.horizontal, .listRowInset)
+            .padding(.bottom, 16)
         }
+        .background(Color(uiColor: .systemGroupedBackground))
         .searchable(text: $query, prompt: Text("Generate.Ingredients.Search"))
         .overlay {
-            if picked.isEmpty, rest.isEmpty {
+            if matches.isEmpty {
                 ContentUnavailableView.search(text: query)
             }
         }
@@ -28,30 +34,53 @@ struct IngredientPickerView: View {
         .navigationBarTitleDisplayMode(.inline)
     }
 
-    private var matches: [String] { IconCatalog.ingredients(matching: query) }
+    private var matches: [(category: IngredientCategory, icons: [String])] {
+        IconCatalog.categories(matching: query)
+    }
 
-    private var picked: [String] { selection.filter(matches.contains) }
+    /// What is already picked, kept at the top so a long list never hides it.
+    private var picked: [String] {
+        let shown = Set(matches.flatMap(\.icons))
+        return selection.filter(shown.contains)
+    }
 
-    private var rest: [String] { matches.filter { !selection.contains($0) } }
+    private func section(_ title: LocalizedStringResource, icons: [String]) -> some View {
+        Section {
+            ForEach(icons, id: \.self) { cell($0) }
+        } header: {
+            Text(title)
+                .font(.subheadline.weight(.semibold))
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.vertical, 8)
+                .background(Color(uiColor: .systemGroupedBackground))
+        }
+    }
 
-    private func row(_ asset: String) -> some View {
-        Button {
+    private func cell(_ asset: String) -> some View {
+        let isPicked = selection.contains(asset)
+        return Button {
             if let index = selection.firstIndex(of: asset) {
                 selection.remove(at: index)
             } else {
                 selection.append(asset)
             }
         } label: {
-            HStack(spacing: 12) {
-                RecipeIcon(path: IconCatalog.ingredientPath(for: asset), size: 32)
+            VStack(spacing: 4) {
+                RecipeIcon(path: IconCatalog.ingredientPath(for: asset), size: 40)
                 Text(verbatim: IconCatalog.displayName(for: asset))
-                    .foregroundStyle(.primary)
-                Spacer(minLength: 0)
-                if selection.contains(asset) {
-                    Image(systemName: "checkmark")
-                        .foregroundStyle(.tint)
-                }
+                    .font(.caption2)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.center)
+                    .foregroundStyle(isPicked ? Color.white : Color.primary)
             }
+            .padding(.vertical, 10)
+            .padding(.horizontal, 4)
+            .frame(maxWidth: .infinity, minHeight: 96, alignment: .top)
+            .background(
+                isPicked ? AnyShapeStyle(.tint) : AnyShapeStyle(Color(uiColor: .secondarySystemGroupedBackground)),
+                in: .rect(cornerRadius: 16, style: .continuous)
+            )
         }
+        .buttonStyle(.plain)
     }
 }

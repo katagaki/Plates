@@ -18,6 +18,8 @@ struct GenerateRecipeView: View {
             Group {
                 if let draft {
                     RecipeDetailView(recipe: draft)
+                } else if isGenerating {
+                    progress
                 } else {
                     form
                 }
@@ -26,7 +28,8 @@ struct GenerateRecipeView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("Shared.Cancel") { dismiss() }
+                    Button(role: .cancel) { dismiss() }
+                        .disabled(isGenerating)
                 }
                 ToolbarItem(placement: .confirmationAction) {
                     if let draft {
@@ -109,13 +112,20 @@ struct GenerateRecipeView: View {
                         .foregroundStyle(.red)
                 }
             }
-
-            if isGenerating {
-                Section {
-                    GenerationProgressView(progress: generator.progress)
-                }
-            }
         }
+    }
+
+    /// While the model works, the form goes away and the passes are all that is on screen.
+    private var progress: some View {
+        VStack {
+            GenerationProgressView(progress: generator.progress)
+                .padding(.listRowInset)
+                .cardBackground()
+            Spacer(minLength: 0)
+        }
+        .padding(.listRowInset)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Color(uiColor: .systemGroupedBackground))
     }
 
     private var isGenerating: Bool { generator.state == .generating }

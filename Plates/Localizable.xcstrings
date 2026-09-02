@@ -100,17 +100,6 @@
         }
       }
     },
-    "Generate.Ingredients.All": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "All Ingredients"
-          }
-        }
-      }
-    },
     "Generate.Ingredients.Picked": {
       "extractionState": "manual",
       "localizations": {
@@ -327,6 +316,116 @@
           "stringUnit": {
             "state": "translated",
             "value": "Apple Intelligence is not available right now."
+          }
+        }
+      }
+    },
+    "Ingredient.Category.Baking": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Baking"
+          }
+        }
+      }
+    },
+    "Ingredient.Category.Dairy": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dairy and Eggs"
+          }
+        }
+      }
+    },
+    "Ingredient.Category.Fruits": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fruits"
+          }
+        }
+      }
+    },
+    "Ingredient.Category.Grains": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Grains and Noodles"
+          }
+        }
+      }
+    },
+    "Ingredient.Category.Meat": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meat"
+          }
+        }
+      }
+    },
+    "Ingredient.Category.Pantry": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pantry"
+          }
+        }
+      }
+    },
+    "Ingredient.Category.Sauces": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sauces and Oils"
+          }
+        }
+      }
+    },
+    "Ingredient.Category.Seafood": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seafood"
+          }
+        }
+      }
+    },
+    "Ingredient.Category.Seasonings": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Herbs and Spices"
+          }
+        }
+      }
+    },
+    "Ingredient.Category.Vegetables": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vegetables"
           }
         }
       }
@@ -579,7 +678,7 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Plates"
+            "value": "Recipes"
           }
         }
       }
@@ -591,17 +690,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "%1$@, serves %2$@"
-          }
-        }
-      }
-    },
-    "Shared.Cancel": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cancel"
           }
         }
       }
