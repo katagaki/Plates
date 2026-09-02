@@ -1,7 +1,8 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Squid">
-  <path d="M24 6c6 0 10 6 10 13 0 5-2 8-4 9H18c-2-1-4-4-4-9 0-7 4-13 10-13Z" fill="#f2ede0"/>
+  <path d="M13 12 24 4l11 8-5 4H18Z" fill="#e0d0c0"/>
+  <path d="M17 14h14v10c0 4-3 7-7 7s-7-3-7-7Z" fill="#f2ede0"/>
   <g stroke="#e0d0c0" stroke-width="3" stroke-linecap="round" fill="none">
-    <path d="M18 28c-2 5-4 8-7 10"/><path d="M22 28c-1 6-2 9-3 12"/><path d="M26 28c1 6 2 9 3 12"/><path d="M30 28c2 5 4 8 7 10"/>
+    <path d="M19 30c-3 5-6 8-9 10"/><path d="M22 31c-2 6-3 9-4 12"/><path d="M26 31c2 6 3 9 4 12"/><path d="M29 30c3 5 6 8 9 10"/>
   </g>
-  <g fill="#3c4a55"><circle cx="20" cy="18" r="1.8"/><circle cx="28" cy="18" r="1.8"/></g>
+  <g fill="#4a3220"><circle cx="21" cy="21" r="1.8"/><circle cx="27" cy="21" r="1.8"/></g>
 </svg>

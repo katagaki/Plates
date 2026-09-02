@@ -9,28 +9,24 @@ struct IngredientPickerView: View {
     @State private var query = ""
     @State private var collapsed: Set<IngredientCategory> = []
 
-    private let columns = Array(repeating: GridItem(.flexible(), spacing: 12), count: 4)
+    private let columns = Array(repeating: GridItem(.flexible(), spacing: 8), count: 4)
 
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: columns, spacing: 12, pinnedViews: .sectionHeaders) {
-                if !picked.isEmpty {
-                    section("Generate.Ingredients.Picked", icons: picked)
-                }
-                ForEach(matches, id: \.category) { group in
-                    section(
-                        group.category.title,
-                        icons: group.icons,
-                        isExpanded: isExpanded(group.category)
-                    ) {
-                        collapsed.formSymmetricDifference([group.category])
-                    }
+        List {
+            if !picked.isEmpty {
+                Section("Generate.Ingredients.Picked") {
+                    grid(picked)
                 }
             }
-            .padding(.horizontal, .listRowInset)
-            .padding(.bottom, 16)
+            ForEach(matches, id: \.category) { group in
+                Section(isExpanded: expansion(for: group.category)) {
+                    grid(group.icons)
+                } header: {
+                    Text(group.category.title)
+                }
+            }
         }
-        .background(Color(uiColor: .systemGroupedBackground))
+        .listStyle(.sidebar)
         .searchable(text: $query, prompt: Text("Generate.Ingredients.Search"))
         .overlay {
             if matches.isEmpty {
@@ -53,39 +49,25 @@ struct IngredientPickerView: View {
 
     /// A group closes on a tap of its header. A search leaves every group it matched open,
     /// so nothing found is hidden behind a closed header.
-    private func isExpanded(_ category: IngredientCategory) -> Bool {
-        !query.isEmpty || !collapsed.contains(category)
-    }
-
-    private func section(
-        _ title: LocalizedStringResource,
-        icons: [String],
-        isExpanded: Bool = true,
-        toggle: (() -> Void)? = nil
-    ) -> some View {
-        Section {
-            if isExpanded {
-                ForEach(icons, id: \.self) { cell($0) }
-            }
-        } header: {
-            HStack {
-                Text(title)
-                Spacer(minLength: 0)
-                if toggle != nil {
-                    Image(systemName: "chevron.down")
-                        .font(.footnote.weight(.semibold))
-                        .foregroundStyle(.secondary)
-                        .rotationEffect(.degrees(isExpanded ? 0 : -90))
+    private func expansion(for category: IngredientCategory) -> Binding<Bool> {
+        Binding(
+            get: { !query.isEmpty || !collapsed.contains(category) },
+            set: { isExpanded in
+                if isExpanded {
+                    collapsed.remove(category)
+                } else {
+                    collapsed.insert(category)
                 }
             }
-            .font(.subheadline.weight(.semibold))
-            .padding(.vertical, 8)
-            .contentShape(.rect)
-            .background(Color(uiColor: .systemGroupedBackground))
-            .onTapGesture {
-                withAnimation { toggle?() }
-            }
+        )
+    }
+
+    private func grid(_ icons: [String]) -> some View {
+        LazyVGrid(columns: columns, spacing: 8) {
+            ForEach(icons, id: \.self) { cell($0) }
         }
+        .padding(.vertical, 4)
+        .listRowInsets(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
     }
 
     private func cell(_ asset: String) -> some View {
@@ -105,13 +87,15 @@ struct IngredientPickerView: View {
                     .multilineTextAlignment(.center)
                     .foregroundStyle(isPicked ? Color.white : Color.primary)
             }
-            .padding(.vertical, 10)
+            .padding(.vertical, 8)
             .padding(.horizontal, 4)
-            .frame(maxWidth: .infinity, minHeight: 96, alignment: .top)
-            .background(
-                isPicked ? AnyShapeStyle(.tint) : AnyShapeStyle(Color(uiColor: .secondarySystemGroupedBackground)),
-                in: .rect(cornerRadius: 16, style: .continuous)
-            )
+            .frame(maxWidth: .infinity, minHeight: 88, alignment: .top)
+            .background {
+                if isPicked {
+                    RoundedRectangle(cornerRadius: 16, style: .continuous)
+                        .fill(.tint)
+                }
+            }
         }
         .buttonStyle(.plain)
     }
