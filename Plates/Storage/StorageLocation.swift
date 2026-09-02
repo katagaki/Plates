@@ -7,10 +7,10 @@ enum StorageLocation: String, CaseIterable, Identifiable, Sendable {
 
     var id: String { rawValue }
 
-    var title: String {
+    var title: LocalizedStringResource {
         switch self {
-        case .onMyIPhone: "On My Device"
-        case .iCloudDrive: "iCloud Drive"
+        case .onMyIPhone: "Storage.OnMyDevice"
+        case .iCloudDrive: "Storage.ICloudDrive"
         }
     }
 

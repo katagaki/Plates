@@ -1,0 +1,435 @@
+{
+  "sourceLanguage": "en-US",
+  "strings": {
+    "Generate.Idea.Footer": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leave it empty and Apple Intelligence will pick something."
+          }
+        }
+      }
+    },
+    "Generate.Idea.Header": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Idea"
+          }
+        }
+      }
+    },
+    "Generate.Idea.Label": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "What do you feel like eating?"
+          }
+        }
+      }
+    },
+    "Generate.Idea.Prompt": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Something with kimchi and eggs"
+          }
+        }
+      }
+    },
+    "Generate.Title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New Recipe"
+          }
+        }
+      }
+    },
+    "Generate.Unavailable.AppleIntelligenceNotEnabled": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turn on Apple Intelligence in Settings to generate recipes."
+          }
+        }
+      }
+    },
+    "Generate.Unavailable.DeviceNotEligible": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This device does not support Apple Intelligence."
+          }
+        }
+      }
+    },
+    "Generate.Unavailable.ModelNotReady": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence is still downloading its model. Try again shortly."
+          }
+        }
+      }
+    },
+    "Generate.Unavailable.Unknown": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence is not available right now."
+          }
+        }
+      }
+    },
+    "Menu.AddSamples": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add Sample Recipes"
+          }
+        }
+      }
+    },
+    "Menu.Generate": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Generate Recipe"
+          }
+        }
+      }
+    },
+    "Menu.Label": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Menu"
+          }
+        }
+      }
+    },
+    "Menu.Refresh": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Refresh"
+          }
+        }
+      }
+    },
+    "Menu.Sort.Title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sort"
+          }
+        }
+      }
+    },
+    "Menu.Sort.TriedOnly": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Human tested only"
+          }
+        }
+      }
+    },
+    "Menu.Storage.Title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recipes are stored in"
+          }
+        }
+      }
+    },
+    "Recipe.Detail.Ingredients.General": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "From the pantry"
+          }
+        }
+      }
+    },
+    "Recipe.Detail.Ingredients.Optional": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Optional"
+          }
+        }
+      }
+    },
+    "Recipe.Detail.Ingredients.Supermarket": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fresh and chilled"
+          }
+        }
+      }
+    },
+    "Recipe.Detail.Serves": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Serves"
+          }
+        }
+      }
+    },
+    "Recipe.Detail.Step.Title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld. %2$@"
+          }
+        }
+      }
+    },
+    "Recipe.Detail.Steps": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Steps"
+          }
+        }
+      }
+    },
+    "Recipe.Detail.Time": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Time"
+          }
+        }
+      }
+    },
+    "Recipe.Detail.Tools.Optional": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tools, optional"
+          }
+        }
+      }
+    },
+    "Recipe.Detail.Tools.Required": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tools, required"
+          }
+        }
+      }
+    },
+    "Recipe.Detail.Tried": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Human tested"
+          }
+        }
+      }
+    },
+    "Recipe.Detail.Troubleshooting": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Troubleshooting"
+          }
+        }
+      }
+    },
+    "Recipe.List.Empty.Description": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Generate one with Apple Intelligence, or start from the samples."
+          }
+        }
+      }
+    },
+    "Recipe.List.Empty.Title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No Recipes"
+          }
+        }
+      }
+    },
+    "Recipe.List.Search.Prompt": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Search recipes"
+          }
+        }
+      }
+    },
+    "Recipe.List.Title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plates"
+          }
+        }
+      }
+    },
+    "Recipe.Row.Subtitle": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@, serves %2$@"
+          }
+        }
+      }
+    },
+    "Shared.Cancel": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancel"
+          }
+        }
+      }
+    },
+    "Shared.Save": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save"
+          }
+        }
+      }
+    },
+    "Sort.Alphabetical": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alphabetical"
+          }
+        }
+      }
+    },
+    "Sort.Quickest": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quickest"
+          }
+        }
+      }
+    },
+    "Storage.Error.NoDirectory": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not open the recipes folder."
+          }
+        }
+      }
+    },
+    "Storage.ICloudDrive": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iCloud Drive"
+          }
+        }
+      }
+    },
+    "Storage.OnMyDevice": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "On My Device"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

@@ -22,7 +22,8 @@ struct RecipeIcon: View {
 }
 
 /// A tile: icon, name, and the amount or nothing. The heading says what the group is,
-/// so the tile never repeats it.
+/// so the tile never repeats it. The name, amount, and note come from recipe data, so
+/// they are shown as written rather than looked up in the string catalog.
 struct IconTile: View {
     let iconPath: String
     let name: String
@@ -33,14 +34,14 @@ struct IconTile: View {
         HStack(alignment: .top, spacing: 12) {
             RecipeIcon(path: iconPath)
             VStack(alignment: .leading, spacing: 2) {
-                Text(name)
+                Text(verbatim: name)
                 if let detail, !detail.isEmpty {
-                    Text(detail)
+                    Text(verbatim: detail)
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
                 }
                 if let note, !note.isEmpty {
-                    Text(note)
+                    Text(verbatim: note)
                         .font(.footnote)
                         .foregroundStyle(.tertiary)
                 }
@@ -53,7 +54,7 @@ struct IconTile: View {
 
 /// A section heading carrying a colored left rule, matching the site.
 struct SectionHeading: View {
-    let title: String
+    let title: LocalizedStringResource
     let color: Color
 
     var body: some View {

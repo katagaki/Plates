@@ -7,10 +7,10 @@ struct ContentView: View {
 
         var id: String { rawValue }
 
-        var title: String {
+        var title: LocalizedStringResource {
             switch self {
-            case .alphabetical: "Alphabetical"
-            case .quickest: "Quickest"
+            case .alphabetical: "Sort.Alphabetical"
+            case .quickest: "Sort.Quickest"
             }
         }
     }
@@ -32,9 +32,9 @@ struct ContentView: View {
                 .onDelete { store.delete(atOffsets: $0, in: visibleRecipes) }
             }
             .listStyle(.insetGrouped)
-            .navigationTitle("Plates")
+            .navigationTitle("Recipe.List.Title")
             .navigationDestination(for: Recipe.self) { RecipeDetailView(recipe: $0) }
-            .searchable(text: $search, prompt: "Search recipes")
+            .searchable(text: $search, prompt: Text("Recipe.List.Search.Prompt"))
             .overlay {
                 if store.recipes.isEmpty {
                     emptyState
@@ -58,24 +58,31 @@ struct ContentView: View {
             Button {
                 isGenerating = true
             } label: {
-                Label("Generate Recipe", systemImage: "apple.intelligence")
+                Label("Menu.Generate", systemImage: "apple.intelligence")
             }
 
-            Section("Sort") {
-                Picker("Sort", selection: $sortOrder) {
+            Section("Menu.Sort.Title") {
+                Picker("Menu.Sort.Title", selection: $sortOrder) {
                     ForEach(SortOrder.allCases) { order in
                         Text(order.title).tag(order)
                     }
                 }
                 .pickerStyle(.inline)
-                Toggle("Human tested only", isOn: $showTriedOnly)
+                Toggle("Menu.Sort.TriedOnly", isOn: $showTriedOnly)
             }
 
-            Section("Recipes are stored in") {
-                Picker("Storage", selection: Binding(get: { store.location }, set: { store.location = $0 })) {
+            Section("Menu.Storage.Title") {
+                Picker(
+                    "Menu.Storage.Title",
+                    selection: Binding(get: { store.location }, set: { store.location = $0 })
+                ) {
                     ForEach(StorageLocation.allCases) { location in
-                        Label(location.title, systemImage: location.symbol)
-                            .tag(location)
+                        Label {
+                            Text(location.title)
+                        } icon: {
+                            Image(systemName: location.symbol)
+                        }
+                        .tag(location)
                     }
                 }
                 .pickerStyle(.inline)
@@ -85,28 +92,32 @@ struct ContentView: View {
                 Button {
                     store.addSampleRecipes()
                 } label: {
-                    Label("Add Sample Recipes", systemImage: "tray.and.arrow.down")
+                    Label("Menu.AddSamples", systemImage: "tray.and.arrow.down")
                 }
                 Button {
                     store.load()
                 } label: {
-                    Label("Refresh", systemImage: "arrow.clockwise")
+                    Label("Menu.Refresh", systemImage: "arrow.clockwise")
                 }
             }
         } label: {
-            Label("Menu", systemImage: "ellipsis")
+            Label("Menu.Label", systemImage: "ellipsis")
         }
     }
 
     private var emptyState: some View {
         ContentUnavailableView {
-            Label("No Recipes", systemImage: "frying.pan")
+            Label("Recipe.List.Empty.Title", systemImage: "frying.pan")
         } description: {
-            Text(store.loadError ?? "Generate one with Apple Intelligence, or start from the samples.")
+            if let loadError = store.loadError {
+                Text(verbatim: loadError)
+            } else {
+                Text("Recipe.List.Empty.Description")
+            }
         } actions: {
-            Button("Generate Recipe") { isGenerating = true }
+            Button("Menu.Generate") { isGenerating = true }
                 .buttonStyle(.borderedProminent)
-            Button("Add Sample Recipes") { store.addSampleRecipes() }
+            Button("Menu.AddSamples") { store.addSampleRecipes() }
         }
     }
 
@@ -142,8 +153,8 @@ private struct RecipeRow: View {
                 ?? recipe.ingredients.general?.first?.icon
                 ?? "", size: 36)
             VStack(alignment: .leading, spacing: 2) {
-                Text(recipe.title)
-                Text("\(recipe.time), serves \(recipe.serves)")
+                Text(verbatim: recipe.title)
+                Text(String(format: String(localized: "Recipe.Row.Subtitle"), recipe.time, recipe.serves))
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
             }

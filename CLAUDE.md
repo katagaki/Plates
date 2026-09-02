@@ -41,6 +41,20 @@ with `preserves-vector-representation`, named after the SVG file, so a schema pa
 with explicit `width` and `height` on the root element, otherwise the asset catalog will not
 take it.
 
+## Localization
+
+All user-facing text goes through `Plates/Localizable.xcstrings`, with English (US) as the
+source language and the project's development region set to `en-US`.
+
+- Keys are dot notated and Pascal cased by segment, from broad to narrow:
+  `Recipe.Detail.Ingredients.Supermarket`, `Menu.Sort.TriedOnly`, `Shared.Cancel`. Never write
+  the English text as the key.
+- Views pass the key as a string literal (`Text("Recipe.Detail.Time")`). Strings that come from
+  outside a view use `LocalizedStringResource`, and formatted ones use
+  `String(format: String(localized: "Key"), ...)` with positional specifiers such as `%1$@`.
+- Recipe data is not localized. Titles, ingredient names, amounts, steps, and error text from
+  the system are shown with `Text(verbatim:)` so they are never looked up as keys.
+
 ## App icon
 
 The app icon is an Icon Composer document at `AppIcon.icon`, not an asset catalog icon set.

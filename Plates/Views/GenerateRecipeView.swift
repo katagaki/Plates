@@ -15,20 +15,19 @@ struct GenerateRecipeView: View {
             Group {
                 if let draft {
                     RecipeDetailView(recipe: draft)
-                        .navigationTitle(draft.title)
                 } else {
                     form
                 }
             }
-            .navigationTitle(draft == nil ? "New Recipe" : draft?.title ?? "")
+            .navigationTitle(title)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("Cancel") { dismiss() }
+                    Button("Shared.Cancel") { dismiss() }
                 }
                 ToolbarItem(placement: .confirmationAction) {
                     if let draft {
-                        Button("Save") {
+                        Button("Shared.Save") {
                             store.save(draft, isNew: true)
                             dismiss()
                         }
@@ -39,21 +38,30 @@ struct GenerateRecipeView: View {
         .interactiveDismissDisabled(generator.state == .generating)
     }
 
+    /// A generated recipe titles itself, so its title is shown as written.
+    private var title: Text {
+        if let draft {
+            Text(verbatim: draft.title)
+        } else {
+            Text("Generate.Title")
+        }
+    }
+
     private var form: some View {
         Form {
             Section {
                 TextField(
-                    "What do you feel like eating?",
+                    "Generate.Idea.Label",
                     text: $idea,
-                    prompt: Text("Something with kimchi and eggs"),
+                    prompt: Text("Generate.Idea.Prompt"),
                     axis: .vertical
                 )
                 .lineLimit(2...5)
                 .disabled(!generator.isAvailable)
             } header: {
-                Text("Idea")
+                Text("Generate.Idea.Header")
             } footer: {
-                Text("Leave it empty and Apple Intelligence will pick something.")
+                Text("Generate.Idea.Footer")
             }
 
             Section {
@@ -61,7 +69,7 @@ struct GenerateRecipeView: View {
                     Task { draft = await generator.generate(from: idea) }
                 } label: {
                     HStack {
-                        Label("Generate Recipe", systemImage: "apple.intelligence")
+                        Label("Menu.Generate", systemImage: "apple.intelligence")
                         Spacer()
                         if generator.state == .generating {
                             ProgressView()
@@ -73,7 +81,7 @@ struct GenerateRecipeView: View {
                 if let reason = generator.unavailableReason {
                     Text(reason)
                 } else if case let .failed(message) = generator.state {
-                    Text(message)
+                    Text(verbatim: message)
                         .foregroundStyle(.red)
                 }
             }

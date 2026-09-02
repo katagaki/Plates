@@ -41,7 +41,7 @@ final class RecipeStore {
         loadError = nil
         guard let directory else {
             recipes = []
-            loadError = "Could not open the recipes folder."
+            loadError = String(localized: "Storage.Error.NoDirectory")
             return
         }
         do {

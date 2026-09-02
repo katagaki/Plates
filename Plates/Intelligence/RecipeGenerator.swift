@@ -103,18 +103,18 @@ final class RecipeGenerator {
     var isAvailable: Bool { model.availability == .available }
 
     /// Why the button is disabled, in words a cook can act on.
-    var unavailableReason: String? {
+    var unavailableReason: LocalizedStringResource? {
         switch model.availability {
         case .available:
             nil
         case .unavailable(.deviceNotEligible):
-            "This device does not support Apple Intelligence."
+            "Generate.Unavailable.DeviceNotEligible"
         case .unavailable(.appleIntelligenceNotEnabled):
-            "Turn on Apple Intelligence in Settings to generate recipes."
+            "Generate.Unavailable.AppleIntelligenceNotEnabled"
         case .unavailable(.modelNotReady):
-            "Apple Intelligence is still downloading its model. Try again shortly."
+            "Generate.Unavailable.ModelNotReady"
         case .unavailable:
-            "Apple Intelligence is not available right now."
+            "Generate.Unavailable.Unknown"
         }
     }
 

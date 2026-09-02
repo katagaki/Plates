@@ -86,10 +86,10 @@
 				};
 			};
 			buildConfigurationList = E47FE75430478FED0038302E /* Build configuration list for PBXProject "Plates" */;
-			developmentRegion = en;
+			developmentRegion = "en-US";
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
+				"en-US",
 				Base,
 			);
 			mainGroup = E47FE75030478FED0038302E;
