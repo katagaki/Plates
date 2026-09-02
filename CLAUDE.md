@@ -10,7 +10,7 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
   naming the file, the project, or the author.
 - Never use em-dashes anywhere: not in user-facing copy, code comments, commit messages, or
   this file. Use a period, comma, or colon instead.
-- All user-facing text is English.
+- All user-facing text ships in English (US) and Japanese. A new key is written in both.
 - The app is a single view. Do not add a `TabView`. Menu items and settings live in the top
   trailing ellipsis menu.
 
@@ -61,7 +61,10 @@ window, and an `.anyOf` over 178 ingredient names overruns it before the prompt 
 ## Localization
 
 All user-facing text goes through `Plates/Localizable.xcstrings`, with English (US) as the
-source language and the project's development region set to `en-US`.
+source language and the project's development region set to `en-US`. Japanese is the second
+language, listed in the project's `knownRegions` as `ja`. Every key carries both, so a key added
+without a Japanese value is unfinished. Japanese copy follows the same plain style, written in
+です・ます.
 
 - Keys are dot notated and Pascal cased by segment, from broad to narrow:
   `Recipe.Detail.Ingredients.Supermarket`, `Menu.Sort.TriedOnly`, `Shared.Cancel`. Never write

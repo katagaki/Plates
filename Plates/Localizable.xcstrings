@@ -9,6 +9,12 @@
             "state": "translated",
             "value": "Choose ingredients"
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "材料を選ぶ"
+          }
         }
       }
     },
@@ -19,6 +25,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Choose tools"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "道具を選ぶ"
           }
         }
       }
@@ -31,6 +43,12 @@
             "state": "translated",
             "value": "Name a dish, pick what is in your kitchen, or do both. When you pick ingredients, the recipe is written from those alone."
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "料理名を書くか、キッチンにあるものを選んでください。両方でもかまいません。材料を選ぶと、そのなかだけでレシピを作ります。"
+          }
         }
       }
     },
@@ -41,6 +59,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "What do you want to cook?"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "何を作りますか？"
           }
         }
       }
@@ -53,6 +77,12 @@
             "state": "translated",
             "value": "Kimchi fried rice"
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キムチチャーハン"
+          }
         }
       }
     },
@@ -63,6 +93,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Apple Intelligence returned nothing. Try again."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligenceから何も返ってきませんでした。もう一度お試しください。"
           }
         }
       }
@@ -75,6 +111,12 @@
             "state": "translated",
             "value": "There was too much to work out at once. Try again with fewer ingredients."
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一度に考えることが多すぎました。材料を減らしてもう一度お試しください。"
+          }
         }
       }
     },
@@ -85,6 +127,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "No ingredients selected"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "材料が選ばれていません"
           }
         }
       }
@@ -97,6 +145,12 @@
             "state": "translated",
             "value": "Search ingredients"
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "材料を検索"
+          }
         }
       }
     },
@@ -107,6 +161,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ingredients"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "材料"
           }
         }
       }
@@ -119,6 +179,12 @@
             "state": "translated",
             "value": "Ingredients measured"
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "分量を決めた材料"
+          }
         }
       }
     },
@@ -129,6 +195,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ingredients picked"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "選んだ材料"
           }
         }
       }
@@ -141,6 +213,12 @@
             "state": "translated",
             "value": "Steps written"
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "書いた手順"
+          }
         }
       }
     },
@@ -151,6 +229,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Steps"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手順"
           }
         }
       }
@@ -163,6 +247,12 @@
             "state": "translated",
             "value": "Tools"
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "道具"
+          }
         }
       }
     },
@@ -173,6 +263,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Troubleshooting"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "困ったときは"
           }
         }
       }
@@ -185,6 +281,12 @@
             "state": "translated",
             "value": "Writing the steps"
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手順を書いています"
+          }
         }
       }
     },
@@ -195,6 +297,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Working out the dish"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "料理を決めています"
           }
         }
       }
@@ -207,6 +315,12 @@
             "state": "translated",
             "value": "Planning the method"
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "作り方を組み立てています"
+          }
         }
       }
     },
@@ -217,6 +331,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Choosing ingredients"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "材料を選んでいます"
           }
         }
       }
@@ -229,6 +349,12 @@
             "state": "translated",
             "value": "Noting what goes wrong"
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "つまずきやすい点をまとめています"
+          }
         }
       }
     },
@@ -239,6 +365,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "New Recipe"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新しいレシピ"
           }
         }
       }
@@ -251,6 +383,12 @@
             "state": "translated",
             "value": "No tools selected"
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "道具が選ばれていません"
+          }
         }
       }
     },
@@ -261,6 +399,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Search tools"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "道具を検索"
           }
         }
       }
@@ -273,6 +417,12 @@
             "state": "translated",
             "value": "Tools"
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "道具"
+          }
         }
       }
     },
@@ -283,6 +433,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Turn on Apple Intelligence in Settings to generate recipes."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レシピを作るには、設定でApple Intelligenceをオンにしてください。"
           }
         }
       }
@@ -295,6 +451,12 @@
             "state": "translated",
             "value": "This device does not support Apple Intelligence."
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "このデバイスはApple Intelligenceに対応していません。"
+          }
         }
       }
     },
@@ -305,6 +467,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Apple Intelligence is still downloading its model. Try again shortly."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligenceがモデルをダウンロードしています。しばらくしてからお試しください。"
           }
         }
       }
@@ -317,6 +485,12 @@
             "state": "translated",
             "value": "Apple Intelligence is not available right now."
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "今はApple Intelligenceを使えません。"
+          }
         }
       }
     },
@@ -327,6 +501,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Baking"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "製菓"
           }
         }
       }
@@ -339,6 +519,12 @@
             "state": "translated",
             "value": "Dairy and Eggs"
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "乳製品と卵"
+          }
         }
       }
     },
@@ -349,6 +535,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Fruits"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "果物"
           }
         }
       }
@@ -361,6 +553,12 @@
             "state": "translated",
             "value": "Grains and Noodles"
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "穀類と麺"
+          }
         }
       }
     },
@@ -371,6 +569,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Meat"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "肉"
           }
         }
       }
@@ -383,6 +587,12 @@
             "state": "translated",
             "value": "Pantry"
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "常備品"
+          }
         }
       }
     },
@@ -393,6 +603,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Sauces and Oils"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "調味料と油"
           }
         }
       }
@@ -405,6 +621,12 @@
             "state": "translated",
             "value": "Seafood"
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "魚介"
+          }
         }
       }
     },
@@ -415,6 +637,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Herbs and Spices"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ハーブとスパイス"
           }
         }
       }
@@ -427,6 +655,12 @@
             "state": "translated",
             "value": "Vegetables"
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "野菜"
+          }
         }
       }
     },
@@ -437,6 +671,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Add Sample Recipes"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "サンプルレシピを追加"
           }
         }
       }
@@ -449,6 +689,12 @@
             "state": "translated",
             "value": "Delete"
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "削除"
+          }
         }
       }
     },
@@ -459,6 +705,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Generate Recipe"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レシピを作る"
           }
         }
       }
@@ -471,6 +723,12 @@
             "state": "translated",
             "value": "Menu"
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "メニュー"
+          }
         }
       }
     },
@@ -481,6 +739,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Refresh"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "再読み込み"
           }
         }
       }
@@ -493,6 +757,12 @@
             "state": "translated",
             "value": "Sort"
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "並べ替え"
+          }
         }
       }
     },
@@ -503,6 +773,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Human tested only"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "人が試したものだけ"
           }
         }
       }
@@ -515,6 +791,12 @@
             "state": "translated",
             "value": "Recipes are stored in"
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レシピの保存先"
+          }
         }
       }
     },
@@ -525,6 +807,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ingredients"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "材料"
           }
         }
       }
@@ -537,6 +825,12 @@
             "state": "translated",
             "value": "Optional Ingredients"
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "好みで加える材料"
+          }
         }
       }
     },
@@ -548,6 +842,12 @@
             "state": "translated",
             "value": "Serves"
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "人数"
+          }
         }
       }
     },
@@ -555,6 +855,12 @@
       "extractionState": "manual",
       "localizations": {
         "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld. %2$@"
+          }
+        },
+        "ja": {
           "stringUnit": {
             "state": "translated",
             "value": "%1$lld. %2$@"
@@ -570,6 +876,12 @@
             "state": "translated",
             "value": "Steps"
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手順"
+          }
         }
       }
     },
@@ -580,6 +892,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Time"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "時間"
           }
         }
       }
@@ -592,6 +910,12 @@
             "state": "translated",
             "value": "Tools"
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "道具"
+          }
         }
       }
     },
@@ -602,6 +926,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Optional Tools"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "あると便利な道具"
           }
         }
       }
@@ -614,6 +944,12 @@
             "state": "translated",
             "value": "Human tested"
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "人が試しました"
+          }
         }
       }
     },
@@ -624,6 +960,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Troubleshooting"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "困ったときは"
           }
         }
       }
@@ -636,6 +978,12 @@
             "state": "translated",
             "value": "Generate one with Apple Intelligence, or start from the samples."
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligenceで作るか、サンプルから始めてください。"
+          }
         }
       }
     },
@@ -646,6 +994,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "No Recipes"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レシピがありません"
           }
         }
       }
@@ -658,6 +1012,12 @@
             "state": "translated",
             "value": "Search recipes"
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レシピを検索"
+          }
         }
       }
     },
@@ -668,6 +1028,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Recipes"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レシピ"
           }
         }
       }
@@ -680,6 +1046,12 @@
             "state": "translated",
             "value": "%1$@, serves %2$@"
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@、%2$@人分"
+          }
         }
       }
     },
@@ -690,6 +1062,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Done"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "完了"
           }
         }
       }
@@ -702,6 +1080,12 @@
             "state": "translated",
             "value": "Save"
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保存"
+          }
         }
       }
     },
@@ -712,6 +1096,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Alphabetical"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "名前順"
           }
         }
       }
@@ -724,6 +1114,12 @@
             "state": "translated",
             "value": "Quickest"
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "短い順"
+          }
         }
       }
     },
@@ -735,6 +1131,12 @@
             "state": "translated",
             "value": "Could not open the recipes folder."
           }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レシピフォルダを開けませんでした。"
+          }
         }
       }
     },
@@ -742,6 +1144,12 @@
       "extractionState": "manual",
       "localizations": {
         "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iCloud Drive"
+          }
+        },
+        "ja": {
           "stringUnit": {
             "state": "translated",
             "value": "iCloud Drive"
@@ -756,6 +1164,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "On My Device"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "このデバイス内"
           }
         }
       }
