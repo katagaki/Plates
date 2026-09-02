@@ -72,8 +72,8 @@ struct IconTile: View {
             }
             Spacer(minLength: 0)
         }
-        .padding(10)
-        .frame(maxWidth: .infinity, minHeight: 72, maxHeight: 72, alignment: .leading)
+        .padding(8)
+        .frame(maxWidth: .infinity, minHeight: 80, maxHeight: 80, alignment: .leading)
         .cardBackground()
     }
 }
