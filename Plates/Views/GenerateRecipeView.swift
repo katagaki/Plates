@@ -42,6 +42,10 @@ struct GenerateRecipeView: View {
             }
         }
         .interactiveDismissDisabled(isGenerating)
+        // A pass can take a while, and the sheet is not touched while it runs, so the screen
+        // is held awake rather than locking part way through a recipe.
+        .onChange(of: isGenerating) { UIApplication.shared.isIdleTimerDisabled = isGenerating }
+        .onDisappear { UIApplication.shared.isIdleTimerDisabled = false }
         .onChange(of: request.ingredients) { Pantry.ingredients = request.ingredients }
         .onChange(of: request.tools) { Pantry.tools = request.tools }
     }
