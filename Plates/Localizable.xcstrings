@@ -67,6 +67,17 @@
         }
       }
     },
+    "Generate.Ingredients.Empty": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No ingredients selected"
+          }
+        }
+      }
+    },
     "Generate.Ingredients.Search": {
       "extractionState": "manual",
       "localizations": {
@@ -195,6 +206,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "New Recipe"
+          }
+        }
+      }
+    },
+    "Generate.Tools.Empty": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No tools selected"
           }
         }
       }

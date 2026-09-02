@@ -5,7 +5,7 @@ import SwiftUI
 /// written.
 struct CatalogPickerView: View {
     /// One collapsible group of icons.
-    struct Group: Identifiable {
+    struct IconGroup: Identifiable {
         let id: String
         let title: LocalizedStringResource
         let icons: [String]
@@ -13,8 +13,10 @@ struct CatalogPickerView: View {
 
     let title: LocalizedStringResource
     let searchPrompt: LocalizedStringResource
+    /// What the picked bar says while nothing is picked.
+    let emptyLabel: LocalizedStringResource
     /// The groups a search turns up. An empty search returns everything.
-    let groups: (String) -> [Group]
+    let groups: (String) -> [IconGroup]
     /// Where an asset name sits in the schema, so the tile can draw it.
     let path: (String) -> String
 
@@ -28,21 +30,15 @@ struct CatalogPickerView: View {
     var body: some View {
         List {
             ForEach(matches) { group in
-                Section {
-                    if isExpanded(group.id) {
-                        grid(group.icons)
-                    }
+                Section(isExpanded: expansion(for: group.id)) {
+                    grid(group.icons)
                 } header: {
-                    header(group)
+                    Text(group.title)
                 }
             }
         }
-        .listStyle(.grouped)
-        .safeAreaInset(edge: .bottom) {
-            if !selection.isEmpty {
-                pickedBar
-            }
-        }
+        .listStyle(.sidebar)
+        .safeAreaInset(edge: .bottom) { pickedBar }
         .animation(.default, value: selection)
         .searchable(text: $query, prompt: Text(searchPrompt))
         .overlay {
@@ -54,65 +50,66 @@ struct CatalogPickerView: View {
         .navigationBarTitleDisplayMode(.inline)
     }
 
-    private var matches: [Group] { groups(query) }
+    private var matches: [IconGroup] { groups(query) }
 
     /// What is picked so far, floating over the catalog rather than taking a section from it.
-    /// A tap in here drops the pick, so nothing in the bar is highlighted.
+    /// A tap in here drops the pick, so nothing in the bar is highlighted. The bar stays put
+    /// when nothing is picked, so the catalog never shifts under a finger.
     private var pickedBar: some View {
-        GlassEffectContainer {
-            ScrollView(.horizontal) {
-                HStack(spacing: 4) {
-                    ForEach(selection, id: \.self) { asset in
-                        Button {
-                            toggle(asset)
-                        } label: {
-                            VStack(spacing: 2) {
-                                RecipeIcon(path: path(asset), size: 30)
-                                Text(verbatim: IconCatalog.displayName(for: asset))
-                                    .font(.caption2)
-                                    .lineLimit(1)
-                                    .foregroundStyle(.primary)
+        let shape = RoundedRectangle(cornerRadius: 24, style: .continuous)
+        return GlassEffectContainer {
+            Group {
+                if selection.isEmpty {
+                    Text(emptyLabel)
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                        .frame(maxWidth: .infinity)
+                } else {
+                    ScrollView(.horizontal) {
+                        HStack(spacing: 4) {
+                            ForEach(selection, id: \.self) { asset in
+                                Button {
+                                    toggle(asset)
+                                } label: {
+                                    VStack(spacing: 2) {
+                                        RecipeIcon(path: path(asset), size: 30)
+                                        Text(verbatim: IconCatalog.displayName(for: asset))
+                                            .font(.caption2)
+                                            .lineLimit(1)
+                                            .foregroundStyle(.primary)
+                                    }
+                                    .frame(width: 66)
+                                }
+                                .buttonStyle(.plain)
                             }
-                            .frame(width: 66)
-                            .padding(.vertical, 6)
                         }
-                        .buttonStyle(.plain)
+                        .padding(.horizontal, 8)
                     }
+                    .scrollIndicators(.hidden)
                 }
-                .padding(.horizontal, 8)
             }
-            .scrollIndicators(.hidden)
-            .glassEffect(.regular, in: .rect(cornerRadius: 24, style: .continuous))
+            .frame(height: 62)
+            .glassEffect(.regular, in: shape)
+            .clipShape(shape)
         }
         .padding(.horizontal, 16)
         .padding(.bottom, 8)
     }
 
     /// A group closes on a tap of its header. A search leaves every group it matched open,
-    /// so nothing found is hidden behind a closed header. The grouped list style draws no
-    /// disclosure of its own, so the header carries the chevron.
-    private func isExpanded(_ id: String) -> Bool {
-        !query.isEmpty || !collapsed.contains(id)
-    }
-
-    private func header(_ group: Group) -> some View {
-        HStack {
-            Text(group.title)
-            Spacer(minLength: 0)
-            Image(systemName: "chevron.down")
-                .font(.footnote.weight(.semibold))
-                .rotationEffect(.degrees(isExpanded(group.id) ? 0 : -90))
-        }
-        .contentShape(.rect)
-        .onTapGesture {
-            withAnimation {
-                if collapsed.contains(group.id) {
-                    collapsed.remove(group.id)
+    /// so nothing found is hidden behind a closed header. The disclosure is the list's own,
+    /// which only the sidebar style draws.
+    private func expansion(for id: String) -> Binding<Bool> {
+        Binding(
+            get: { !query.isEmpty || !collapsed.contains(id) },
+            set: { isExpanded in
+                if isExpanded {
+                    collapsed.remove(id)
                 } else {
-                    collapsed.insert(group.id)
+                    collapsed.insert(id)
                 }
             }
-        }
+        )
     }
 
     private func grid(_ icons: [String]) -> some View {
@@ -121,7 +118,6 @@ struct CatalogPickerView: View {
         }
         .padding(.vertical, 2)
         .listRowInsets(EdgeInsets(top: 2, leading: 4, bottom: 2, trailing: 4))
-        .listRowBackground(Color.clear)
     }
 
     private func toggle(_ asset: String) {
@@ -165,9 +161,10 @@ extension CatalogPickerView {
         CatalogPickerView(
             title: "Generate.Ingredients.Title",
             searchPrompt: "Generate.Ingredients.Search",
+            emptyLabel: "Generate.Ingredients.Empty",
             groups: { query in
                 IconCatalog.categories(matching: query).map {
-                    Group(id: $0.category.rawValue, title: $0.category.title, icons: $0.icons)
+                    IconGroup(id: $0.category.rawValue, title: $0.category.title, icons: $0.icons)
                 }
             },
             path: IconCatalog.ingredientPath,
@@ -180,9 +177,10 @@ extension CatalogPickerView {
         CatalogPickerView(
             title: "Generate.Tools.Title",
             searchPrompt: "Generate.Tools.Search",
+            emptyLabel: "Generate.Tools.Empty",
             groups: { query in
                 let icons = IconCatalog.tools(matching: query)
-                return icons.isEmpty ? [] : [Group(id: "tools", title: "Generate.Tools.Title", icons: icons)]
+                return icons.isEmpty ? [] : [IconGroup(id: "tools", title: "Generate.Tools.Title", icons: icons)]
             },
             path: IconCatalog.toolPath,
             selection: selection

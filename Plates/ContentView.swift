@@ -59,6 +59,10 @@ struct ContentView: View {
                 ToolbarItem(placement: .topBarTrailing) {
                     menu
                 }
+                ToolbarItem(placement: .bottomBar) {
+                    sortFilterMenu
+                }
+                ToolbarSpacer(.fixed, placement: .bottomBar)
             }
             .sheet(isPresented: $isGenerating) {
                 GenerateRecipeView(store: store)
