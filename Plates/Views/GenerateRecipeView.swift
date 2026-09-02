@@ -131,17 +131,12 @@ struct GenerateRecipeView: View {
         }
     }
 
-    /// While the model works, the form goes away and the passes are all that is on screen.
+    /// While the model works, the form goes away and the passes have the screen to themselves.
     private var progress: some View {
-        VStack {
-            GenerationProgressView(progress: generator.progress)
-                .padding(.listRowInset)
-                .cardBackground()
-            Spacer(minLength: 0)
-        }
-        .padding(.listRowInset)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color(uiColor: .systemGroupedBackground))
+        GenerationProgressView(progress: generator.progress)
+            .padding(.listRowInset)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            .background(Color(uiColor: .systemGroupedBackground))
     }
 
     private var isGenerating: Bool { generator.state == .generating }
@@ -156,7 +151,7 @@ private struct GenerationProgressView: View {
     let progress: GenerationProgress
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
+        VStack(alignment: .leading, spacing: 16) {
             ProgressView(value: progress.fraction) {
                 Text(progress.stage.title)
                     .font(.subheadline)
@@ -165,12 +160,13 @@ private struct GenerationProgressView: View {
             if let heading = progress.title ?? progress.dish, !heading.isEmpty {
                 VStack(alignment: .leading, spacing: 2) {
                     Text(verbatim: heading)
-                        .font(.headline)
+                        .font(.title2)
+                        .fontWeight(.semibold)
                         .lineLimit(1)
                         .truncationMode(.tail)
                     if let time = progress.time, let serves = progress.serves {
                         Text(String(format: String(localized: "Recipe.Row.Subtitle"), time, serves))
-                            .font(.caption)
+                            .font(.subheadline)
                             .foregroundStyle(.secondary)
                     }
                 }
@@ -189,11 +185,10 @@ private struct GenerationProgressView: View {
 
             if progress.stage == .details, let latestStep = progress.latestStep, !latestStep.isEmpty {
                 Text(verbatim: latestStep)
-                    .font(.footnote)
+                    .font(.subheadline)
                     .foregroundStyle(.tertiary)
             }
         }
-        .padding(.vertical, 4)
         .animation(.default, value: progress)
     }
 
@@ -211,11 +206,9 @@ private struct GenerationProgressView: View {
                     .foregroundStyle(.secondary)
             }
             Text(label)
-                .font(.subheadline)
             Spacer(minLength: 0)
             if count > 0 {
                 Text(count, format: .number)
-                    .font(.subheadline)
                     .foregroundStyle(.secondary)
                     .contentTransition(.numericText())
             }
@@ -234,7 +227,7 @@ private struct DonutSpinner: View {
             .stroke(.secondary, style: StrokeStyle(lineWidth: 2, lineCap: .round))
             .rotationEffect(.degrees(isTurning ? 360 : 0))
             .animation(.linear(duration: 1).repeatForever(autoreverses: false), value: isTurning)
-            .frame(width: 15, height: 15)
+            .frame(width: 17, height: 17)
             .onAppear { isTurning = true }
     }
 }
