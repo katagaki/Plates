@@ -43,9 +43,11 @@
       "layers" : [
         {
           "image-name" : "flame.svg",
-          "name" : "Burner flame"
+          "name" : "Burner flame",
+          "glass" : false
         }
-      ]
+      ],
+      "specular" : false
     }
   ],
   "supported-platforms" : {
