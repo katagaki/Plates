@@ -148,21 +148,23 @@ struct CatalogPickerView: View {
         } label: {
             VStack(spacing: 2) {
                 RecipeIcon(path: path(asset), size: 34)
+                    .padding(4)
+                    .background {
+                        if isPicked {
+                            RoundedRectangle(cornerRadius: 12, style: .continuous)
+                                .stroke(.tint, lineWidth: 2)
+                        }
+                    }
                 Text(verbatim: IconCatalog.displayName(for: asset))
                     .font(.caption2)
+                    .fontWeight(isPicked ? .bold : .regular)
                     .lineLimit(2)
                     .multilineTextAlignment(.center)
-                    .foregroundStyle(isPicked ? Color.white : Color.primary)
+                    .foregroundStyle(.primary)
             }
             .padding(.vertical, 6)
             .padding(.horizontal, 2)
             .frame(maxWidth: .infinity, minHeight: 74, alignment: .top)
-            .background {
-                if isPicked {
-                    RoundedRectangle(cornerRadius: .listRowCornerRadius, style: .continuous)
-                        .fill(.tint)
-                }
-            }
         }
         .buttonStyle(.plain)
     }
