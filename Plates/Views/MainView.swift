@@ -1,6 +1,8 @@
 import SwiftUI
 
-struct ContentView: View {
+/// The app's one screen: the recipes, what is sorted and searched out of them, and the menus
+/// that act on the store.
+struct MainView: View {
     enum SortOrder: String, CaseIterable, Identifiable {
         case alphabetical
         case quickest
@@ -21,61 +23,40 @@ struct ContentView: View {
     @State private var search = ""
     @State private var isGenerating = false
 
-    private let columns = [GridItem(.flexible(), spacing: 12), GridItem(.flexible(), spacing: 12)]
-
     var body: some View {
         NavigationStack {
-            ScrollView {
-                LazyVGrid(columns: columns, spacing: 12) {
-                    ForEach(visibleRecipes) { recipe in
-                        NavigationLink(value: recipe) {
-                            RecipeCard(recipe: recipe)
-                        }
-                        .buttonStyle(.plain)
-                        .contextMenu {
-                            Button(role: .destructive) {
-                                store.delete(recipe)
-                            } label: {
-                                Label("Menu.Delete", systemImage: "trash")
-                            }
+            RecipesGridView(recipes: visibleRecipes, delete: store.delete)
+                .navigationTitle("Recipe.List.Title")
+                .navigationDestination(for: Recipe.self) { RecipeDetailView(recipe: $0) }
+                .searchable(text: $search, prompt: Text("Recipe.List.Search.Prompt"))
+                .overlay {
+                    if store.recipes.isEmpty {
+                        emptyState
+                    } else if visibleRecipes.isEmpty {
+                        ContentUnavailableView.search(text: search)
+                    }
+                }
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        menu
+                    }
+                    ToolbarItem(placement: .bottomBar) {
+                        sortFilterMenu
+                    }
+                    ToolbarSpacer(.fixed, placement: .bottomBar)
+                    DefaultToolbarItem(kind: .search, placement: .bottomBar)
+                    ToolbarSpacer(.fixed, placement: .bottomBar)
+                    ToolbarItem(placement: .bottomBar) {
+                        Button {
+                            isGenerating = true
+                        } label: {
+                            Label("Menu.Generate", systemImage: "apple.intelligence")
                         }
                     }
                 }
-                .padding(.horizontal, .listRowInset)
-                .padding(.vertical, 16)
-            }
-            .background(Color(uiColor: .systemGroupedBackground))
-            .navigationTitle("Recipe.List.Title")
-            .navigationDestination(for: Recipe.self) { RecipeDetailView(recipe: $0) }
-            .searchable(text: $search, prompt: Text("Recipe.List.Search.Prompt"))
-            .overlay {
-                if store.recipes.isEmpty {
-                    emptyState
-                } else if visibleRecipes.isEmpty {
-                    ContentUnavailableView.search(text: search)
+                .sheet(isPresented: $isGenerating) {
+                    GenerateRecipeView(store: store)
                 }
-            }
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    menu
-                }
-                ToolbarItem(placement: .bottomBar) {
-                    sortFilterMenu
-                }
-                ToolbarSpacer(.fixed, placement: .bottomBar)
-                DefaultToolbarItem(kind: .search, placement: .bottomBar)
-                ToolbarSpacer(.fixed, placement: .bottomBar)
-                ToolbarItem(placement: .bottomBar) {
-                    Button {
-                        isGenerating = true
-                    } label: {
-                        Label("Menu.Generate", systemImage: "apple.intelligence")
-                    }
-                }
-            }
-            .sheet(isPresented: $isGenerating) {
-                GenerateRecipeView(store: store)
-            }
         }
     }
 
@@ -168,47 +149,6 @@ struct ContentView: View {
     }
 }
 
-private struct RecipeCard: View {
-    let recipe: Recipe
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            HStack(spacing: 6) {
-                RecipeIcon(path: iconPath, size: 40)
-                Spacer(minLength: 0)
-            }
-            VStack(alignment: .leading, spacing: 2) {
-                HStack(spacing: 4) {
-                    Text(verbatim: recipe.title)
-                        .font(.headline)
-                        .lineLimit(1)
-                        .truncationMode(.tail)
-                    if recipe.tried == true {
-                        Image(systemName: "checkmark.seal.fill")
-                            .font(.footnote)
-                            .foregroundStyle(.secondary)
-                    }
-                    Spacer(minLength: 0)
-                }
-                Text(String(format: String(localized: "Recipe.Row.Subtitle"), recipe.time, recipe.serves))
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-            }
-        }
-        .multilineTextAlignment(.leading)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(14)
-        .cardBackground()
-    }
-
-    /// The first ingredient's icon stands in for the recipe.
-    private var iconPath: String {
-        recipe.ingredients.supermarket?.first?.icon
-            ?? recipe.ingredients.general?.first?.icon
-            ?? ""
-    }
-}
-
 #Preview {
-    ContentView()
+    MainView()
 }
