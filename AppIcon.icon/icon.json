@@ -53,11 +53,7 @@
           "image-name" : "flame.svg",
           "name" : "Burner flame"
         }
-      ],
-      "shadow" : {
-        "kind" : "neutral",
-        "opacity" : 0.4
-      }
+      ]
     }
   ],
   "supported-platforms" : {
