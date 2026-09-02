@@ -7,7 +7,9 @@ struct GenerateRecipeView: View {
     let store: RecipeStore
 
     @State private var generator = RecipeGenerator()
-    @State private var idea = ""
+    @State private var mode: GenerationMode = .dish
+    @State private var dishInput = ""
+    @State private var fridgeInput = ""
     @State private var draft: Recipe?
 
     var body: some View {
@@ -50,33 +52,33 @@ struct GenerateRecipeView: View {
     private var form: some View {
         Form {
             Section {
+                Picker("Generate.Mode.Title", selection: $mode) {
+                    ForEach(GenerationMode.allCases) { mode in
+                        Text(mode.title).tag(mode)
+                    }
+                }
+                .pickerStyle(.segmented)
+                .labelsHidden()
+
                 TextField(
-                    "Generate.Idea.Label",
-                    text: $idea,
-                    prompt: Text("Generate.Idea.Prompt"),
+                    mode.fieldLabel,
+                    text: input,
+                    prompt: Text(mode.fieldPrompt),
                     axis: .vertical
                 )
                 .lineLimit(2...5)
-                .disabled(!generator.isAvailable)
-            } header: {
-                Text("Generate.Idea.Header")
+                .disabled(!generator.isAvailable || isGenerating)
             } footer: {
-                Text("Generate.Idea.Footer")
+                Text(mode.footer)
             }
 
             Section {
                 Button {
-                    Task { draft = await generator.generate(from: idea) }
+                    Task { draft = await generator.generate(mode: mode, input: input.wrappedValue) }
                 } label: {
-                    HStack {
-                        Label("Menu.Generate", systemImage: "apple.intelligence")
-                        Spacer()
-                        if generator.state == .generating {
-                            ProgressView()
-                        }
-                    }
+                    Label("Menu.Generate", systemImage: "apple.intelligence")
                 }
-                .disabled(!generator.isAvailable || generator.state == .generating)
+                .disabled(!canGenerate)
             } footer: {
                 if let reason = generator.unavailableReason {
                     Text(reason)
@@ -84,6 +86,82 @@ struct GenerateRecipeView: View {
                     Text(verbatim: message)
                         .foregroundStyle(.red)
                 }
+            }
+
+            if isGenerating {
+                Section {
+                    GenerationProgressView(progress: generator.progress)
+                }
+            }
+        }
+    }
+
+    private var isGenerating: Bool { generator.state == .generating }
+
+    private var input: Binding<String> {
+        switch mode {
+        case .dish: $dishInput
+        case .fridge: $fridgeInput
+        }
+    }
+
+    private var canGenerate: Bool {
+        guard generator.isAvailable, !isGenerating else { return false }
+        guard mode.requiresInput else { return true }
+        return !input.wrappedValue.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+    }
+}
+
+/// The recipe filling in, stage by stage, while the model writes it.
+private struct GenerationProgressView: View {
+    let progress: GenerationProgress
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            ProgressView(value: progress.fraction) {
+                Text("Generate.Progress.Title")
+                    .font(.subheadline)
+            }
+
+            if let title = progress.title, !title.isEmpty {
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(verbatim: title)
+                        .font(.headline)
+                    if let time = progress.time, let serves = progress.serves {
+                        Text(String(format: String(localized: "Recipe.Row.Subtitle"), time, serves))
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+            }
+
+            stage("Recipe.Detail.Ingredients.Supermarket", count: progress.ingredientCount)
+            stage("Recipe.Detail.Tools.Required", count: progress.toolCount)
+            stage("Recipe.Detail.Steps", count: progress.stepCount)
+            stage("Recipe.Detail.Troubleshooting", count: progress.troubleshootingCount)
+
+            if let latestStep = progress.latestStep, !latestStep.isEmpty {
+                Text(verbatim: latestStep)
+                    .font(.footnote)
+                    .foregroundStyle(.tertiary)
+            }
+        }
+        .padding(.vertical, 4)
+        .animation(.default, value: progress)
+    }
+
+    private func stage(_ label: LocalizedStringResource, count: Int) -> some View {
+        HStack(spacing: 8) {
+            Image(systemName: count > 0 ? "checkmark.circle.fill" : "circle.dotted")
+                .foregroundStyle(.secondary)
+            Text(label)
+                .font(.subheadline)
+            Spacer(minLength: 0)
+            if count > 0 {
+                Text(count, format: .number)
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+                    .contentTransition(.numericText())
             }
         }
     }

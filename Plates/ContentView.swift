@@ -41,7 +41,8 @@ struct ContentView: View {
                         }
                     }
                 }
-                .padding(16)
+                .padding(.horizontal, .listRowInset)
+                .padding(.vertical, 16)
             }
             .background(Color(uiColor: .systemGroupedBackground))
             .navigationTitle("Recipe.List.Title")
@@ -180,7 +181,7 @@ private struct RecipeCard: View {
         .multilineTextAlignment(.leading)
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(14)
-        .background(Color(uiColor: .secondarySystemGroupedBackground), in: .rect(cornerRadius: 16))
+        .cardBackground()
     }
 
     /// The first ingredient's icon stands in for the recipe.

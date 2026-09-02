@@ -25,7 +25,8 @@ struct RecipeDetailView: View {
                     }
                 }
             }
-            .padding(16)
+            .padding(.horizontal, .listRowInset)
+            .padding(.vertical, 16)
         }
         .background(Color(uiColor: .systemGroupedBackground))
         .navigationTitle(recipe.title)
@@ -124,7 +125,7 @@ private struct SummaryCell<Value: View>: View {
         }
         .frame(maxWidth: .infinity)
         .padding(.vertical, 12)
-        .background(Color(uiColor: .secondarySystemGroupedBackground), in: .rect(cornerRadius: 16))
+        .cardBackground()
     }
 }
 
@@ -141,7 +142,10 @@ private struct StepCard: View {
                     .resizable()
                     .scaledToFit()
                     .frame(maxWidth: .infinity)
-                    .background(Color(uiColor: .tertiarySystemGroupedBackground), in: .rect(cornerRadius: 12))
+                    .background(
+                        Color(uiColor: .tertiarySystemGroupedBackground),
+                        in: .rect(cornerRadius: .listRowCornerRadius - 12, style: .continuous)
+                    )
             }
             Text(String(format: String(localized: "Recipe.Detail.Step.Title"), number, step.title))
                 .font(.headline)
@@ -161,6 +165,6 @@ private struct StepCard: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(12)
-        .background(Color(uiColor: .secondarySystemGroupedBackground), in: .rect(cornerRadius: 16))
+        .cardBackground()
     }
 }

@@ -25,6 +25,9 @@ struct RecipeIcon: View {
 /// so the tile never repeats it. The name, amount, and note come from recipe data, so
 /// they are shown as written rather than looked up in the string catalog.
 struct IconTile: View {
+    /// Every tile is the same height, so a long ingredient name never sets the row height.
+    static let height: CGFloat = 120
+
     let iconPath: String
     let name: String
     var detail: String?
@@ -35,21 +38,24 @@ struct IconTile: View {
             RecipeIcon(path: iconPath)
             VStack(alignment: .leading, spacing: 2) {
                 Text(verbatim: name)
+                    .lineLimit(2)
                 if let detail, !detail.isEmpty {
                     Text(verbatim: detail)
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
+                        .lineLimit(1)
                 }
                 if let note, !note.isEmpty {
                     Text(verbatim: note)
                         .font(.footnote)
                         .foregroundStyle(.tertiary)
+                        .lineLimit(2)
                 }
             }
             Spacer(minLength: 0)
         }
         .padding(12)
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-        .background(Color(uiColor: .secondarySystemGroupedBackground), in: .rect(cornerRadius: 16))
+        .frame(maxWidth: .infinity, minHeight: Self.height, maxHeight: Self.height, alignment: .topLeading)
+        .cardBackground()
     }
 }

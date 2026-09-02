@@ -1,6 +1,47 @@
 import FoundationModels
 import Foundation
 
+/// What a new recipe is built from.
+enum GenerationMode: String, CaseIterable, Identifiable, Sendable {
+    /// A dish the user names, written as a one-pan version.
+    case dish
+    /// Whatever the user has to hand.
+    case fridge
+
+    var id: String { rawValue }
+
+    var title: LocalizedStringResource {
+        switch self {
+        case .dish: "Generate.Mode.Dish"
+        case .fridge: "Generate.Mode.Fridge"
+        }
+    }
+
+    var fieldLabel: LocalizedStringResource {
+        switch self {
+        case .dish: "Generate.Dish.Label"
+        case .fridge: "Generate.Fridge.Label"
+        }
+    }
+
+    var fieldPrompt: LocalizedStringResource {
+        switch self {
+        case .dish: "Generate.Dish.Prompt"
+        case .fridge: "Generate.Fridge.Prompt"
+        }
+    }
+
+    var footer: LocalizedStringResource {
+        switch self {
+        case .dish: "Generate.Dish.Footer"
+        case .fridge: "Generate.Fridge.Footer"
+        }
+    }
+
+    /// The fridge needs a list to work from. A dish can be left to the model.
+    var requiresInput: Bool { self == .fridge }
+}
+
 /// The shape Apple Intelligence fills in. It mirrors the recipe schema, flattened where the
 /// nesting would only make the model's job harder.
 @Generable(description: "A one-pan recipe that can be cooked in a single frying pan on a home stove")
@@ -84,6 +125,50 @@ struct GeneratedTroubleshooting {
     var solution: String
 }
 
+/// How much of the recipe has arrived so far, read off each streamed snapshot.
+struct GenerationProgress: Equatable, Sendable {
+    var title: String?
+    var time: String?
+    var serves: String?
+    var ingredientCount = 0
+    var toolCount = 0
+    var stepCount = 0
+    var troubleshootingCount = 0
+    /// The step the model is writing right now.
+    var latestStep: String?
+    /// Set when the stream ends, so the bar always lands on full.
+    var isFinished = false
+
+    /// Roughly how far along the model is, weighted evenly across the five stages. The counts
+    /// it divides by are what a recipe usually comes back with, not the guided maximums.
+    var fraction: Double {
+        guard !isFinished else { return 1 }
+        let stages = [
+            title == nil ? 0 : 1,
+            min(Double(ingredientCount) / 6, 1),
+            min(Double(toolCount) / 3, 1),
+            min(Double(stepCount) / 5, 1),
+            min(Double(troubleshootingCount) / 2, 1),
+        ]
+        return stages.reduce(0, +) / Double(stages.count)
+    }
+
+    init() {}
+
+    init(_ partial: GeneratedRecipe.PartiallyGenerated) {
+        title = partial.title
+        time = partial.time
+        serves = partial.serves
+        ingredientCount = (partial.supermarket?.count ?? 0)
+            + (partial.general?.count ?? 0)
+            + (partial.optional?.count ?? 0)
+        toolCount = partial.tools?.count ?? 0
+        stepCount = partial.steps?.count ?? 0
+        troubleshootingCount = partial.troubleshooting?.count ?? 0
+        latestStep = partial.steps?.last?.title
+    }
+}
+
 /// Wraps the on-device model and converts its output into a schema-shaped `Recipe`.
 @MainActor
 @Observable
@@ -95,6 +180,7 @@ final class RecipeGenerator {
     }
 
     private(set) var state: State = .idle
+    private(set) var progress = GenerationProgress()
 
     private let model = SystemLanguageModel.default
 
@@ -118,30 +204,70 @@ final class RecipeGenerator {
         }
     }
 
-    func generate(from idea: String) async -> Recipe? {
+    /// Streams a recipe so the sheet can show it filling in rather than a bare spinner.
+    func generate(mode: GenerationMode, input: String) async -> Recipe? {
         state = .generating
-        let session = LanguageModelSession {
-            """
-            You write recipes for a one-pan cooking site. Every recipe is cooked in a single \
-            frying pan on a home stove, uses ingredients from an ordinary supermarket, and \
-            finishes in under half an hour.
-
-            Write plainly, like a good cookbook. Never use em-dashes. Do not use breathless \
-            adjectives, and do not pad with rule-of-three lists. Write ranges with the word \
-            "to", never a dash. Prep work such as "finely diced" belongs in a step, not in an \
-            ingredient amount.
-            """
-        }
+        progress = GenerationProgress()
+        let session = LanguageModelSession(instructions: Self.instructions(for: mode))
         do {
-            let response = try await session.respond(
-                to: idea.isEmpty ? "Invent a one-pan recipe for a weeknight dinner." : idea,
+            let stream = session.streamResponse(
+                to: Self.prompt(for: mode, input: input),
                 generating: GeneratedRecipe.self
             )
+            var latest: GeneratedContent?
+            for try await snapshot in stream {
+                progress = GenerationProgress(snapshot.content)
+                latest = snapshot.rawContent
+            }
+            guard let latest else {
+                state = .failed(String(localized: "Generate.Error.Empty"))
+                return nil
+            }
+            let generated = try GeneratedRecipe(latest)
+            progress.isFinished = true
             state = .idle
-            return Self.makeRecipe(from: response.content)
+            return Self.makeRecipe(from: generated)
         } catch {
             state = .failed(error.localizedDescription)
             return nil
+        }
+    }
+
+    private static func instructions(for mode: GenerationMode) -> String {
+        let shared = """
+        You write recipes for a one-pan cooking site. Every recipe is cooked in a single \
+        frying pan on a home stove, uses ingredients from an ordinary supermarket, and \
+        finishes in under half an hour.
+
+        Write plainly, like a good cookbook. Never use em-dashes. Do not use breathless \
+        adjectives, and do not pad with rule-of-three lists. Write ranges with the word \
+        "to", never a dash. Prep work such as "finely diced" belongs in a step, not in an \
+        ingredient amount.
+        """
+        switch mode {
+        case .dish:
+            return shared + "\n\n" + """
+            The cook names a dish. Write that dish as a one-pan recipe, keeping what makes \
+            it recognisable and dropping any step that needs a second pan or an oven.
+            """
+        case .fridge:
+            return shared + "\n\n" + """
+            The cook lists what they have. Build the recipe around that list. You may add \
+            pantry staples such as oil, salt, pepper, soy sauce, sugar, and water, but do \
+            not ask for anything else fresh that they did not mention.
+            """
+        }
+    }
+
+    private static func prompt(for mode: GenerationMode, input: String) -> String {
+        let input = input.trimmingCharacters(in: .whitespacesAndNewlines)
+        switch mode {
+        case .dish:
+            return input.isEmpty
+                ? "Invent a one-pan recipe for a weeknight dinner."
+                : "Write a one-pan version of \(input)."
+        case .fridge:
+            return "Write a one-pan recipe using what I have: \(input)."
         }
     }
 

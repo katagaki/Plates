@@ -1,46 +1,123 @@
 {
   "sourceLanguage": "en-US",
   "strings": {
-    "Generate.Idea.Footer": {
+    "Generate.Dish.Footer": {
       "extractionState": "manual",
       "localizations": {
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Leave it empty and Apple Intelligence will pick something."
+            "value": "Name a dish and Apple Intelligence writes a one-pan version of it. Leave it empty to let it pick."
           }
         }
       }
     },
-    "Generate.Idea.Header": {
+    "Generate.Dish.Label": {
       "extractionState": "manual",
       "localizations": {
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Idea"
+            "value": "Which dish?"
           }
         }
       }
     },
-    "Generate.Idea.Label": {
+    "Generate.Dish.Prompt": {
       "extractionState": "manual",
       "localizations": {
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "What do you feel like eating?"
+            "value": "Kimchi fried rice"
           }
         }
       }
     },
-    "Generate.Idea.Prompt": {
+    "Generate.Error.Empty": {
       "extractionState": "manual",
       "localizations": {
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Something with kimchi and eggs"
+            "value": "Apple Intelligence returned nothing. Try again."
+          }
+        }
+      }
+    },
+    "Generate.Fridge.Footer": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "List what is in your fridge, separated by commas. Pantry staples are assumed."
+          }
+        }
+      }
+    },
+    "Generate.Fridge.Label": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "What do you have?"
+          }
+        }
+      }
+    },
+    "Generate.Fridge.Prompt": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eggs, spring onion, leftover rice"
+          }
+        }
+      }
+    },
+    "Generate.Mode.Dish": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A dish"
+          }
+        }
+      }
+    },
+    "Generate.Mode.Fridge": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My fridge"
+          }
+        }
+      }
+    },
+    "Generate.Mode.Title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Base the recipe on"
+          }
+        }
+      }
+    },
+    "Generate.Progress.Title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Writing the recipe"
           }
         }
       }
