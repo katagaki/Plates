@@ -63,6 +63,15 @@ struct ContentView: View {
                     sortFilterMenu
                 }
                 ToolbarSpacer(.fixed, placement: .bottomBar)
+                DefaultToolbarItem(kind: .search, placement: .bottomBar)
+                ToolbarSpacer(.fixed, placement: .bottomBar)
+                ToolbarItem(placement: .bottomBar) {
+                    Button {
+                        isGenerating = true
+                    } label: {
+                        Label("Menu.Generate", systemImage: "apple.intelligence")
+                    }
+                }
             }
             .sheet(isPresented: $isGenerating) {
                 GenerateRecipeView(store: store)
@@ -72,22 +81,6 @@ struct ContentView: View {
 
     private var menu: some View {
         Menu {
-            Button {
-                isGenerating = true
-            } label: {
-                Label("Menu.Generate", systemImage: "apple.intelligence")
-            }
-
-            Section("Menu.Sort.Title") {
-                Picker("Menu.Sort.Title", selection: $sortOrder) {
-                    ForEach(SortOrder.allCases) { order in
-                        Text(order.title).tag(order)
-                    }
-                }
-                .pickerStyle(.inline)
-                Toggle("Menu.Sort.TriedOnly", isOn: $showTriedOnly)
-            }
-
             Section("Menu.Storage.Title") {
                 Picker(
                     "Menu.Storage.Title",
@@ -119,6 +112,20 @@ struct ContentView: View {
             }
         } label: {
             Label("Menu.Label", systemImage: "ellipsis")
+        }
+    }
+
+    private var sortFilterMenu: some View {
+        Menu {
+            Picker("Menu.Sort.Title", selection: $sortOrder) {
+                ForEach(SortOrder.allCases) { order in
+                    Text(order.title).tag(order)
+                }
+            }
+            .pickerStyle(.inline)
+            Toggle("Menu.Sort.TriedOnly", isOn: $showTriedOnly)
+        } label: {
+            Label("Menu.Sort.Title", systemImage: "line.3.horizontal.decrease")
         }
     }
 
