@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Clams">
+  <path d="M6 32c0-8 6-14 13-14s13 6 13 14Z" fill="#8d939b"/>
+  <path d="M19 18c-4 4-8 9-9 14M19 18c3 4 6 9 7 14" stroke="#b8bec6" stroke-width="1.8" fill="none"/>
+  <path d="M22 34c0-6 5-11 11-11s11 5 11 11Z" fill="#c9b79a"/>
+  <path d="M33 23c-3 3-6 7-7 11M33 23c3 3 5 7 6 11" stroke="#e0d3bd" stroke-width="1.8" fill="none"/>
+</svg>

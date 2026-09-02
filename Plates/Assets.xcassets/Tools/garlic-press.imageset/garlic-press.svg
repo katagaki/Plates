@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Garlic press">
+  <rect x="8" y="12" width="30" height="6" rx="3" transform="rotate(12 23 15)" fill="#8d939b"/>
+  <rect x="8" y="28" width="30" height="6" rx="3" transform="rotate(-12 23 31)" fill="#cfd6dd"/>
+  <rect x="30" y="18" width="10" height="10" rx="2" fill="#a8b0b8"/>
+  <g fill="#6f747b"><circle cx="33" cy="22" r="1.2"/><circle cx="37" cy="22" r="1.2"/><circle cx="33" cy="25.5" r="1.2"/><circle cx="37" cy="25.5" r="1.2"/></g>
+</svg>

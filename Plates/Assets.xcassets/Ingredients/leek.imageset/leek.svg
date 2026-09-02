@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Leek">
+  <path d="M20 22h8v16a4 4 0 0 1-8 0Z" fill="#f2ede0"/>
+  <path d="M20 22h8v8h-8Z" fill="#dfe8cf"/>
+  <path d="M24 22 15 6c5 0 8 5 9 10 1-5 4-10 9-10Z" fill="#5f8c3f"/>
+  <path d="M24 22V9" stroke="#7a9e4e" stroke-width="3" stroke-linecap="round"/>
+</svg>

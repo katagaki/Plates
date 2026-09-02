@@ -1,0 +1,5 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Brown sugar">
+  <path d="M9 32c0-7 7-12 15-12s15 5 15 12Z" fill="#a9682e"/>
+  <g fill="#c98a45"><rect x="15" y="25" width="7" height="5" rx="1"/><rect x="24" y="23" width="7" height="5" rx="1" transform="rotate(-8 27.5 25.5)"/><rect x="20" y="30" width="7" height="5" rx="1"/></g>
+  <path d="M7 32h34v3a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2Z" fill="#8d939b"/>
+</svg>

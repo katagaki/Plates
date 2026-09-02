@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cauliflower">
+  <path d="M12 24c-3-3 0-8 4-8 1-4 7-6 10-3 4-3 10 0 10 5 3 2 3 7-1 8Z" fill="#f2ede0"/>
+  <g fill="#e0d9c6"><circle cx="19" cy="19" r="3"/><circle cx="29" cy="18" r="2.6"/></g>
+  <path d="M13 25h22c-2 8-6 12-11 12s-9-4-11-12Z" fill="#a8cf8e"/>
+  <path d="M18 27c1 5 3 8 6 9" stroke="#7a9e4e" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>

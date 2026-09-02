@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Colander">
+  <path d="M8 22h32a16 14 0 0 1-32 0Z" fill="#cfd6dd"/>
+  <g fill="#8d939b"><circle cx="18" cy="27" r="1.6"/><circle cx="24" cy="29" r="1.6"/><circle cx="30" cy="27" r="1.6"/><circle cx="21" cy="33" r="1.6"/><circle cx="27" cy="33" r="1.6"/></g>
+  <rect x="6" y="19" width="36" height="4" rx="2" fill="#a8b0b8"/>
+  <rect x="19" y="38" width="10" height="3" rx="1.5" fill="#8d939b"/>
+</svg>

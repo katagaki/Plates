@@ -99,16 +99,14 @@
         "Add a generous grind of pepper.",
         "Set the bowl next to the stove."
       ],
-      "hint": "The sauce comes together in seconds at the end, so it must be ready and within reach before anything touches the pan.",
-      "image": "img/spaghetti-carbonara-1.svg"
+      "hint": "The sauce comes together in seconds at the end, so it must be ready and within reach before anything touches the pan."
     },
     {
       "title": "Cut bacon",
       "points": [
         "Cut the bacon into batons about 1 cm thick.",
         "This is the only knife work in the recipe."
-      ],
-      "image": "img/spaghetti-carbonara-2.svg"
+      ]
     },
     {
       "title": "Brown bacon",
@@ -117,8 +115,7 @@
         "Cook for 2 to 3 minutes, until the fat runs and the edges crisp.",
         "Add the olive oil only if the bacon is very lean."
       ],
-      "hint": "Starting in a cold pan renders the fat gently instead of scorching the outside. That fat flavors the whole dish, so don't pour it off.",
-      "image": "img/spaghetti-carbonara-3.svg"
+      "hint": "Starting in a cold pan renders the fat gently instead of scorching the outside. That fat flavors the whole dish, so don't pour it off."
     },
     {
       "title": "Boil water",
@@ -126,8 +123,7 @@
         "Leave the bacon and all its fat in the pan.",
         "Pour in the water and the salt.",
         "Bring it to a boil."
-      ],
-      "image": "img/spaghetti-carbonara-4.svg"
+      ]
     },
     {
       "title": "Add spaghetti",
@@ -136,8 +132,7 @@
         "Press the standing ends down with the tongs until every strand is under.",
         "Cook uncovered for the time on the packet, usually 8 to 9 minutes."
       ],
-      "hint": "Whole strands are longer than the pan and will stick out at first. They bend on their own in half a minute. Stir during the first minute so they don't glue together while the surface starch dissolves.",
-      "image": "img/spaghetti-carbonara-5.svg"
+      "hint": "Whole strands are longer than the pan and will stick out at first. They bend on their own in half a minute. Stir during the first minute so they don't glue together while the surface starch dissolves."
     },
     {
       "title": "Reduce liquid",
@@ -146,8 +141,7 @@
         "Aim for about two spoonfuls of starchy, cloudy liquid left when the pasta is done.",
         "Add a splash of water if it dries out early, or boil it off if there's too much."
       ],
-      "hint": "Whole eggs carry more water than yolks do, so leave the pan on the dry side. The sauce loosens easily later, but a watery one is hard to bring back.",
-      "image": "img/spaghetti-carbonara-6.svg"
+      "hint": "Whole eggs carry more water than yolks do, so leave the pan on the dry side. The sauce loosens easily later, but a watery one is hard to bring back."
     },
     {
       "title": "Add egg mixture",
@@ -156,8 +150,7 @@
         "Pour in the egg mixture and toss fast with the tongs.",
         "The residual heat and starchy liquid turn it into a glossy cream."
       ],
-      "hint": "Egg into a bubbling pan means scrambled eggs. Egg white sets sooner than yolk, so give the pan the full wait. Off the heat with a short pause is the entire trick to carbonara.",
-      "image": "img/spaghetti-carbonara-7.svg"
+      "hint": "Egg into a bubbling pan means scrambled eggs. Egg white sets sooner than yolk, so give the pan the full wait. Off the heat with a short pause is the entire trick to carbonara."
     },
     {
       "title": "Plate carbonara",
@@ -165,8 +158,7 @@
         "Twirl it onto a plate.",
         "Scrape the sauce left in the pan over the top.",
         "Finish with more black pepper and a little extra parmesan if you like."
-      ],
-      "image": "img/spaghetti-carbonara-8.svg"
+      ]
     }
   ],
   "troubleshooting": [

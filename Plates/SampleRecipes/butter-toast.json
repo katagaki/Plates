@@ -56,8 +56,7 @@
         "About 10 g goes in the pan, about 5 g on top at the end.",
         "Leave the finishing piece out so it softens while you cook."
       ],
-      "hint": "Cold butter on hot toast just sits there. A softened piece melts in and soaks through.",
-      "image": "img/butter-toast-1.svg"
+      "hint": "Cold butter on hot toast just sits there. A softened piece melts in and soaks through."
     },
     {
       "title": "Melt butter",
@@ -66,8 +65,7 @@
         "Swirl it as it melts.",
         "Stop as soon as the foam settles, before it browns."
       ],
-      "hint": "High heat burns butter before the bread can toast. Low and patient is the whole technique.",
-      "image": "img/butter-toast-2.svg"
+      "hint": "High heat burns butter before the bread can toast. Low and patient is the whole technique."
     },
     {
       "title": "Toast first side",
@@ -76,8 +74,7 @@
         "Toast for 2 to 3 minutes, pressing gently with the spatula.",
         "It is ready when the underside is deep golden brown."
       ],
-      "hint": "Peek early by lifting a corner. The line between golden and burnt is about 30 seconds wide.",
-      "image": "img/butter-toast-3.svg"
+      "hint": "Peek early by lifting a corner. The line between golden and burnt is about 30 seconds wide."
     },
     {
       "title": "Toast second side",
@@ -85,8 +82,7 @@
         "Flip the bread over.",
         "Toast for 2 minutes more.",
         "If the pan looks dry, run a sliver of butter along the edge and tilt it underneath."
-      ],
-      "image": "img/butter-toast-4.svg"
+      ]
     },
     {
       "title": "Top with butter",
@@ -94,8 +90,7 @@
         "Move the toast to a plate and set the softened butter in the middle.",
         "Add the pinch of salt or a thread of honey if you like.",
         "Eat it right away, while the outside still crackles."
-      ],
-      "image": "img/butter-toast-5.svg"
+      ]
     }
   ],
   "troubleshooting": [

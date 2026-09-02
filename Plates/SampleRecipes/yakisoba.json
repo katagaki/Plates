@@ -111,16 +111,14 @@
         "Cut the cabbage into rough 3 cm squares, the onion into thin wedges, and the carrot into thin strips.",
         "Keep the carrot thinner than everything else, it is the slowest to soften.",
         "Pile it all on one corner of the board so you can tip it in at once."
-      ],
-      "image": "img/yakisoba-1.svg"
+      ]
     },
     {
       "title": "Cut pork",
       "points": [
         "Cut the pork slices into pieces about 4 cm wide.",
         "Long strips tangle in the noodles later and come out in one clump."
-      ],
-      "image": "img/yakisoba-2.svg"
+      ]
     },
     {
       "title": "Loosen noodles",
@@ -128,8 +126,7 @@
         "Open the pack and pull the noodle brick apart with your fingers.",
         "They come out compressed and stuck together, and separating them dry is much easier than fighting them in a hot pan."
       ],
-      "hint": "If the block will not budge, put it on a plate and microwave it for 30 seconds. The steam inside loosens it.",
-      "image": "img/yakisoba-3.svg"
+      "hint": "If the block will not budge, put it on a plate and microwave it for 30 seconds. The steam inside loosens it."
     },
     {
       "title": "Brown pork",
@@ -137,8 +134,7 @@
         "Heat the oil over medium-high, then spread the pork in one layer.",
         "Cook about 2 minutes without moving it, until the edges are browned.",
         "Season it with a little black pepper here."
-      ],
-      "image": "img/yakisoba-4.svg"
+      ]
     },
     {
       "title": "Add vegetables",
@@ -146,8 +142,7 @@
         "Tip in the carrot, onion, and cabbage together.",
         "Toss for 2 to 3 minutes, until the cabbage has wilted but still has bite.",
         "The pork fat coats everything, so nothing should stick yet."
-      ],
-      "image": "img/yakisoba-5.svg"
+      ]
     },
     {
       "title": "Steam noodles",
@@ -156,8 +151,7 @@
         "Leave it 1 minute, then take the lid off and toss everything together.",
         "The noodles should be hot, glossy, and moving freely."
       ],
-      "hint": "The water is there to steam the noodles, not to boil them. If the pan still has liquid pooling after a minute, cook it off before the sauce goes in or the sauce will taste watered down.",
-      "image": "img/yakisoba-6.svg"
+      "hint": "The water is there to steam the noodles, not to boil them. If the pan still has liquid pooling after a minute, cook it off before the sauce goes in or the sauce will taste watered down."
     },
     {
       "title": "Add sauce",
@@ -166,8 +160,7 @@
         "Toss hard for about 1 minute, until every strand is the same brown.",
         "Let it sit still for the last 20 seconds so the sauce catches on the pan and turns fragrant."
       ],
-      "hint": "Sauce hitting bare hot metal caramelises. Poured straight onto the pile it just soaks in and stays flat.",
-      "image": "img/yakisoba-7.svg"
+      "hint": "Sauce hitting bare hot metal caramelises. Poured straight onto the pile it just soaks in and stays flat."
     },
     {
       "title": "Plate",
@@ -175,8 +168,7 @@
         "Pile it onto a plate while everything is still steaming.",
         "Add a pinch of aonori and a small heap of pickled ginger on the side if you have them.",
         "Grind over more black pepper and eat it straight away."
-      ],
-      "image": "img/yakisoba-8.svg"
+      ]
     }
   ],
   "troubleshooting": [

@@ -1,0 +1,5 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zucchini">
+  <rect x="6" y="19" width="36" height="12" rx="6" transform="rotate(-20 24 25)" fill="#3f6d34"/>
+  <path d="M14 31 31 16" stroke="#5f8c3f" stroke-width="4" stroke-linecap="round"/>
+  <rect x="33" y="10" width="3" height="6" rx="1.5" transform="rotate(-20 34.5 13)" fill="#7a9e4e"/>
+</svg>

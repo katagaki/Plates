@@ -136,8 +136,7 @@
         "Cut the carrot into thin strips and the onion into wedges about 1 cm thick.",
         "These two go in first and take the longest, so keep them thinner than everything else.",
         "Put them together in one pile."
-      ],
-      "image": "img/vegetable-stir-fry-1.svg"
+      ]
     },
     {
       "title": "Cut soft vegetables",
@@ -146,8 +145,7 @@
         "Slice the mushrooms about 5 mm thick.",
         "Keep this second pile separate from the first."
       ],
-      "hint": "Two piles is the whole trick to a stir-fry with this many vegetables. Sorting by how long each one needs means you never have to think about timing once the pan is hot.",
-      "image": "img/vegetable-stir-fry-2.svg"
+      "hint": "Two piles is the whole trick to a stir-fry with this many vegetables. Sorting by how long each one needs means you never have to think about timing once the pan is hot."
     },
     {
       "title": "Prep aromatics",
@@ -155,8 +153,7 @@
         "Chop the garlic and the ginger finely.",
         "Cut the spring onion into short pieces, keeping the white and green parts apart.",
         "Rinse the bean sprouts and shake them as dry as you can."
-      ],
-      "image": "img/vegetable-stir-fry-3.svg"
+      ]
     },
     {
       "title": "Mix sauce",
@@ -164,8 +161,7 @@
         "Stir the soy sauce and bouillon powder together in a small bowl.",
         "Dissolving the powder now stops it clumping in the pan.",
         "Set the bowl next to the stove, the pan work runs without pauses."
-      ],
-      "image": "img/vegetable-stir-fry-4.svg"
+      ]
     },
     {
       "title": "Fry aromatics",
@@ -173,8 +169,7 @@
         "Heat the oil over medium, then add the garlic, ginger, and the white spring onion.",
         "Stir for about 30 seconds, until you can smell them.",
         "Keep the heat off high here, garlic burns bitter in seconds."
-      ],
-      "image": "img/vegetable-stir-fry-5.svg"
+      ]
     },
     {
       "title": "Add hard vegetables",
@@ -182,8 +177,7 @@
         "Turn the heat to high and add the carrot and onion.",
         "Stir-fry for 2 minutes, until the onion edges turn clear.",
         "The carrot should still be firm, it keeps cooking to the end."
-      ],
-      "image": "img/vegetable-stir-fry-6.svg"
+      ]
     },
     {
       "title": "Add soft vegetables",
@@ -192,8 +186,7 @@
         "Let the pile sit for 1 minute without touching it, then toss.",
         "Repeat twice: rest, toss, rest. About 3 minutes in total."
       ],
-      "hint": "Constant stirring steams vegetables in their own water. Letting them press against the hot pan is what browns the edges and keeps them crisp.",
-      "image": "img/vegetable-stir-fry-7.svg"
+      "hint": "Constant stirring steams vegetables in their own water. Letting them press against the hot pan is what browns the edges and keeps them crisp."
     },
     {
       "title": "Add bean sprouts",
@@ -201,8 +194,7 @@
         "Tip in the bean sprouts and toss for 1 minute, no longer.",
         "They should still squeak against your teeth.",
         "Anything more and they go limp and start weeping water."
-      ],
-      "image": "img/vegetable-stir-fry-8.svg"
+      ]
     },
     {
       "title": "Add sauce",
@@ -211,8 +203,7 @@
         "Toss everything for 30 seconds, then kill the heat.",
         "Taste before adding salt, then finish with black pepper, the green spring onion, and the sesame oil."
       ],
-      "hint": "Sauce poured onto bare hot metal sizzles and turns fragrant. Poured onto the pile it just makes the vegetables wet.",
-      "image": "img/vegetable-stir-fry-9.svg"
+      "hint": "Sauce poured onto bare hot metal sizzles and turns fragrant. Poured onto the pile it just makes the vegetables wet."
     }
   ],
   "troubleshooting": [

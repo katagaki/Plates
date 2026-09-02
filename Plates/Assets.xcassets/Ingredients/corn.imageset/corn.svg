@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Corn on the cob">
+  <rect x="16" y="8" width="16" height="32" rx="8" fill="#f1c21b"/>
+  <g fill="#e0a900"><rect x="19" y="13" width="10" height="2" rx="1"/><rect x="19" y="19" width="10" height="2" rx="1"/><rect x="19" y="25" width="10" height="2" rx="1"/><rect x="19" y="31" width="10" height="2" rx="1"/></g>
+  <path d="M16 20c-6 2-8 8-6 14 6 1 9-4 9-10Z" fill="#7a9e4e"/>
+  <path d="M32 20c6 2 8 8 6 14-6 1-9-4-9-10Z" fill="#8fb35c"/>
+</svg>

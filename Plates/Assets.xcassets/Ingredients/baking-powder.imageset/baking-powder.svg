@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Baking powder">
+  <rect x="14" y="14" width="20" height="27" rx="3" fill="#d8eefc"/>
+  <rect x="17" y="8" width="14" height="7" rx="2" fill="#33b1ff"/>
+  <rect x="17" y="21" width="14" height="11" rx="1.5" fill="#f8f6f1"/>
+  <path d="M20 26h8M20 29h5" stroke="#8d939b" stroke-width="1.6" stroke-linecap="round"/>
+</svg>

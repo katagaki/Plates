@@ -97,24 +97,21 @@
         "Beat the eggs in a bowl with the pinch of salt.",
         "Mix until the yolks and whites are fully combined, no streaks."
       ],
-      "hint": "Fried rice cooks faster than you can chop. Everything goes in the pan within four minutes, so prep it all first.",
-      "image": "img/egg-fried-rice-1.svg"
+      "hint": "Fried rice cooks faster than you can chop. Everything goes in the pan within four minutes, so prep it all first."
     },
     {
       "title": "Slice spring onion",
       "points": [
         "Slice the spring onion thinly.",
         "Keep the white and the green parts in separate piles."
-      ],
-      "image": "img/egg-fried-rice-2.svg"
+      ]
     },
     {
       "title": "Heat rice",
       "points": [
         "Microwave the packed rice as directed.",
         "Have it hot and beside the stove before the pan goes on."
-      ],
-      "image": "img/egg-fried-rice-3.svg"
+      ]
     },
     {
       "title": "Scramble eggs",
@@ -123,8 +120,7 @@
         "Let them sit for 10 seconds, then stir with chopsticks for about 30 seconds.",
         "Scoop them back into the bowl while the curds are still a little wet."
       ],
-      "hint": "Take them out while they look underdone. They cook again at the end, and twice-cooked egg turns rubbery.",
-      "image": "img/egg-fried-rice-4.svg"
+      "hint": "Take them out while they look underdone. They cook again at the end, and twice-cooked egg turns rubbery."
     },
     {
       "title": "Fry rice",
@@ -133,8 +129,7 @@
         "Add the hot rice, press it flat with the spatula, and let it sit for 30 seconds before folding.",
         "Repeat the press and fold for about 2 minutes, until the grains jump loose in the pan."
       ],
-      "hint": "Pressing gives the rice contact with the hot metal. Constant stirring steams it instead, which is why it goes sticky.",
-      "image": "img/egg-fried-rice-5.svg"
+      "hint": "Pressing gives the rice contact with the hot metal. Constant stirring steams it instead, which is why it goes sticky."
     },
     {
       "title": "Add soy sauce",
@@ -143,8 +138,7 @@
         "It hits the bare metal, sizzles, and goes in toasty rather than wet.",
         "Add the white pepper, then the sesame oil or butter if using."
       ],
-      "hint": "Soy sauce poured straight onto the pile makes dark patches and soggy grains. The rim trick fixes both.",
-      "image": "img/egg-fried-rice-6.svg"
+      "hint": "Soy sauce poured straight onto the pile makes dark patches and soggy grains. The rim trick fixes both."
     },
     {
       "title": "Return eggs",
@@ -152,16 +146,14 @@
         "Tip the eggs back in along with the green parts of the spring onion.",
         "Break the curds up with the spatula.",
         "Fold everything together for 30 seconds."
-      ],
-      "image": "img/egg-fried-rice-7.svg"
+      ]
     },
     {
       "title": "Plate fried rice",
       "points": [
         "Taste, and adjust with a little salt.",
         "Mound it onto a plate while it is still steaming."
-      ],
-      "image": "img/egg-fried-rice-8.svg"
+      ]
     }
   ],
   "troubleshooting": [

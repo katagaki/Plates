@@ -1,0 +1,5 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nori sheets">
+  <rect x="9" y="12" width="26" height="26" rx="2" fill="#1f3a33"/>
+  <rect x="13" y="10" width="26" height="26" rx="2" fill="#2c5148"/>
+  <g stroke="#3f6f63" stroke-width="1.6" fill="none"><path d="M17 15h18"/><path d="M17 21h18"/><path d="M17 27h18"/></g>
+</svg>

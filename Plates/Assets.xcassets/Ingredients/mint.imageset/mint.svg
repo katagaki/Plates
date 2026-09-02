@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mint">
+  <path d="M24 42V20" stroke="#5f8c3f" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M23 30c-9 1-14-4-13-11 8-1 13 4 13 11Z" fill="#4f7c37"/>
+  <path d="M25 30c9 1 14-4 13-11-8-1-13 4-13 11Z" fill="#7a9e4e"/>
+  <path d="M12 21c4 2 8 5 11 9M36 21c-4 2-8 5-11 9" stroke="#a8cf8e" stroke-width="1.4" fill="none"/>
+</svg>

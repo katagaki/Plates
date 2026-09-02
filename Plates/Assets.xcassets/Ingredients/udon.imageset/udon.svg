@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Udon noodles">
+  <path d="M9 25h30a15 13 0 0 1-30 0Z" fill="#e6e0d4"/>
+  <g stroke="#f6f1e2" stroke-width="4" stroke-linecap="round" fill="none">
+    <path d="M14 24c3-6 8-9 12-9"/><path d="M19 25c3-7 9-10 14-9"/><path d="M25 25c3-5 8-7 12-6"/>
+  </g>
+  <rect x="20" y="38" width="8" height="3" rx="1.5" fill="#c8c2b6"/>
+</svg>

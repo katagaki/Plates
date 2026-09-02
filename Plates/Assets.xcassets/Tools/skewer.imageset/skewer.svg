@@ -1,0 +1,9 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Skewers">
+  <rect x="6" y="21" width="36" height="3" rx="1.5" transform="rotate(-15 24 22.5)" fill="#c99a5e"/>
+  <rect x="6" y="30" width="36" height="3" rx="1.5" transform="rotate(-15 24 31.5)" fill="#a97142"/>
+  <g fill="#b04a44">
+    <rect x="16" y="16" width="8" height="8" rx="2" transform="rotate(-15 20 20)"/>
+    <rect x="26" y="13" width="8" height="8" rx="2" transform="rotate(-15 30 17)"/>
+    <rect x="20" y="26" width="8" height="8" rx="2" transform="rotate(-15 24 30)"/>
+  </g>
+</svg>

@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Oven">
+  <rect x="7" y="9" width="34" height="32" rx="3" fill="#cfd6dd"/>
+  <rect x="10" y="19" width="28" height="19" rx="2" fill="#4a4e54"/>
+  <rect x="13" y="22" width="22" height="13" rx="1.5" fill="#8d939b"/>
+  <rect x="10" y="12" width="28" height="4" rx="2" fill="#8d939b"/>
+  <g fill="#5c6066"><circle cx="14" cy="14" r="1.4"/><circle cx="19" cy="14" r="1.4"/></g>
+</svg>

@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Oats">
+  <path d="M9 26h30a15 13 0 0 1-30 0Z" fill="#e6e0d4"/>
+  <path d="M12 26c2-5 7-8 12-8s10 3 12 8Z" fill="#d9c9a3"/>
+  <g fill="#f0e6cd"><ellipse cx="18" cy="23" rx="2.4" ry="1.6"/><ellipse cx="25" cy="21" rx="2.4" ry="1.6"/><ellipse cx="31" cy="24" rx="2.4" ry="1.6"/></g>
+  <rect x="19" y="39" width="10" height="3" rx="1.5" fill="#c8c2b6"/>
+</svg>

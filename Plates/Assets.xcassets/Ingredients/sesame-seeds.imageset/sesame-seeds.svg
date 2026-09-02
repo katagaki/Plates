@@ -1,0 +1,11 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sesame seeds">
+  <path d="M9 30c0-6 7-10 15-10s15 4 15 10Z" fill="#e0d9c6"/>
+  <g fill="#f6f1e2">
+    <ellipse cx="16" cy="26" rx="2.4" ry="1.6" transform="rotate(-20 16 26)"/>
+    <ellipse cx="24" cy="24" rx="2.4" ry="1.6" transform="rotate(15 24 24)"/>
+    <ellipse cx="32" cy="27" rx="2.4" ry="1.6" transform="rotate(-10 32 27)"/>
+    <ellipse cx="20" cy="29" rx="2.4" ry="1.6"/>
+    <ellipse cx="28" cy="29" rx="2.4" ry="1.6" transform="rotate(20 28 29)"/>
+  </g>
+  <path d="M7 30h34v3a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2Z" fill="#c8c2b6"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Steamer basket">
+  <path d="M9 26h30v8a6 6 0 0 1-6 6H15a6 6 0 0 1-6-6Z" fill="#c99a5e"/>
+  <rect x="7" y="23" width="34" height="4" rx="2" fill="#a97142"/>
+  <path d="M12 20h24v3H12Z" fill="#e0c08c"/>
+  <g stroke="#a8b0b8" stroke-width="2.4" fill="none" stroke-linecap="round">
+    <path d="M19 16c-2-2 0-4 0-6"/><path d="M24 14c-2-2 0-4 0-6"/><path d="M29 16c-2-2 0-4 0-6"/>
+  </g>
+</svg>

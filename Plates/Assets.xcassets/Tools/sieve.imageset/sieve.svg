@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sieve">
+  <path d="M9 20h22a11 11 0 0 1-22 0Z" fill="#e0e5ea"/>
+  <g stroke="#a8b0b8" stroke-width="1.4"><path d="M13 20v8"/><path d="M17 20v11"/><path d="M20 20v11"/><path d="M24 20v11"/><path d="M27 20v8"/><path d="M10 24h20"/><path d="M12 28h16"/></g>
+  <rect x="7" y="17" width="26" height="4" rx="2" fill="#8d939b"/>
+  <rect x="31" y="17" width="12" height="4" rx="2" fill="#a97142"/>
+</svg>

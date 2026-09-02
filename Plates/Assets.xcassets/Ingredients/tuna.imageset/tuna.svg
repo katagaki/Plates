@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Can of tuna">
+  <ellipse cx="24" cy="20" rx="16" ry="6" fill="#cfd6dd"/>
+  <path d="M8 20v8a16 6 0 0 0 32 0v-8Z" fill="#a8b0b8"/>
+  <ellipse cx="24" cy="20" rx="12" ry="4.2" fill="#d9a877"/>
+  <path d="M18 19c3-1 8-1 11 0" stroke="#c08f5c" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+</svg>

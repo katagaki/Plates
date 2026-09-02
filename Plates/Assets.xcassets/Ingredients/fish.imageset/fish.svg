@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Whole fish">
+  <path d="M6 24c6-8 14-12 22-12s14 5 14 12-6 12-14 12S12 32 6 24Z" fill="#8ab4cf"/>
+  <path d="M6 24c6-6 12-9 18-9 4 0 7 1 9 3" stroke="#b3d3e6" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <circle cx="35" cy="21" r="2" fill="#3c4a55"/>
+  <path d="M6 24 2 15v18Z" fill="#6f96b0"/>
+  <path d="M20 15c3 3 3 15 0 18" stroke="#6f96b0" stroke-width="1.8" fill="none"/>
+</svg>

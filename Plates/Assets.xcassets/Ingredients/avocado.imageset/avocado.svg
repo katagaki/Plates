@@ -1,0 +1,5 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Avocado half">
+  <path d="M24 6c8 0 14 9 14 19 0 10-6 17-14 17s-14-7-14-17C10 15 16 6 24 6Z" fill="#4f7c37"/>
+  <path d="M24 10c6 0 11 8 11 15s-5 13-11 13-11-6-11-13 5-15 11-15Z" fill="#d7e08a"/>
+  <ellipse cx="24" cy="26" rx="6.5" ry="7.5" fill="#a97142"/>
+</svg>

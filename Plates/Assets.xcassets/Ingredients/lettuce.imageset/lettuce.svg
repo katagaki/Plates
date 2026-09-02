@@ -1,0 +1,5 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Head of lettuce">
+  <path d="M8 26c0-9 7-16 16-16s16 7 16 16c0 6-7 11-16 11S8 32 8 26Z" fill="#7a9e4e"/>
+  <path d="M12 24c3-6 8-9 12-9s9 3 12 9c-3 5-7 8-12 8s-9-3-12-8Z" fill="#a8cf8e"/>
+  <path d="M24 15v17M17 18c-1 6 0 10 2 13M31 18c1 6 0 10-2 13" stroke="#cfe4b8" stroke-width="1.6" fill="none"/>
+</svg>

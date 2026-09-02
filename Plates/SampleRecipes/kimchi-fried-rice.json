@@ -125,8 +125,7 @@
         "Put the kimchi in a small bowl with its juice.",
         "Snip it into bite-size pieces with kitchen scissors.",
         "Keep about a tablespoon of the juice in the bowl: it is seasoning."
-      ],
-      "image": "img/kimchi-fried-rice-1.svg"
+      ]
     },
     {
       "title": "Dice onion",
@@ -134,8 +133,7 @@
         "Cut the onion into pieces about 5 mm across.",
         "Match the size of the shrimp in the seafood mix."
       ],
-      "hint": "Anything cut bigger than 5 mm will still be crunchy when the rice is done.",
-      "image": "img/kimchi-fried-rice-2.svg"
+      "hint": "Anything cut bigger than 5 mm will still be crunchy when the rice is done."
     },
     {
       "title": "Heat rice",
@@ -143,8 +141,7 @@
         "Microwave the pack for 2 minutes.",
         "Open it and let the steam escape while you cook.",
         "Slightly dry rice fries better than fresh, moist rice."
-      ],
-      "image": "img/kimchi-fried-rice-3.svg"
+      ]
     },
     {
       "title": "Cook seafood",
@@ -153,16 +150,14 @@
         "Bacon: skip the butter, snip it into 1 cm strips, and fry 3 minutes until the edges crisp.",
         "Move it to a plate and leave everything it rendered in the pan."
       ],
-      "hint": "This is the step that decides whether the fried rice is soggy. Frozen seafood dumps a lot of water, and the kimchi juice will add more, so get this water out of the pan first. Bacon leaves fat rather than water, which is worth keeping.",
-      "image": "img/kimchi-fried-rice-4.svg"
+      "hint": "This is the step that decides whether the fried rice is soggy. Frozen seafood dumps a lot of water, and the kimchi juice will add more, so get this water out of the pan first. Bacon leaves fat rather than water, which is worth keeping."
     },
     {
       "title": "Boil off liquid",
       "points": [
         "After seafood, let the liquid bubble away for about a minute, until the pan is nearly dry.",
         "After bacon, the rendered fat is ready as it is."
-      ],
-      "image": "img/kimchi-fried-rice-5.svg"
+      ]
     },
     {
       "title": "Fry onion and kimchi",
@@ -171,8 +166,7 @@
         "Fry the onion, and the garlic if using, for 2 minutes until translucent.",
         "Add the kimchi, its juice, and the sugar, and fry 2 minutes more."
       ],
-      "hint": "Frying the kimchi properly is the whole recipe. Raw kimchi tastes sharp; fried kimchi turns savory and mellow. Keep the heat at medium once the butter goes in, since butter burns and turns bitter over high heat.",
-      "image": "img/kimchi-fried-rice-6.svg"
+      "hint": "Frying the kimchi properly is the whole recipe. Raw kimchi tastes sharp; fried kimchi turns savory and mellow. Keep the heat at medium once the butter goes in, since butter burns and turns bitter over high heat."
     },
     {
       "title": "Add rice",
@@ -181,8 +175,7 @@
         "Add the rice, break up the lumps, and mix until every grain is evenly colored.",
         "Press it flat and leave it a minute so the bottom toasts, then turn it over and press again."
       ],
-      "hint": "Pressing, not constant stirring, is what makes the crispy bits. Add the rice while the egg is still wet and it will coat the grains instead of forming lumps.",
-      "image": "img/kimchi-fried-rice-7.svg"
+      "hint": "Pressing, not constant stirring, is what makes the crispy bits. Add the rice while the egg is still wet and it will coat the grains instead of forming lumps."
     },
     {
       "title": "Add soy sauce",
@@ -191,8 +184,7 @@
         "Return the seafood or bacon and season with salt and pepper.",
         "Toss for 30 seconds."
       ],
-      "hint": "It only goes back at the end. Squid fried twice turns rubbery, and bacon loses its crisp edge if it sits in the rice.",
-      "image": "img/kimchi-fried-rice-8.svg"
+      "hint": "It only goes back at the end. Squid fried twice turns rubbery, and bacon loses its crisp edge if it sits in the rice."
     },
     {
       "title": "Plate fried rice",
@@ -200,8 +192,7 @@
         "Kill the heat and stir in the sesame oil if you have it.",
         "Scatter over the scallion or sesame.",
         "Serve straight away."
-      ],
-      "image": "img/kimchi-fried-rice-9.svg"
+      ]
     }
   ],
   "troubleshooting": [

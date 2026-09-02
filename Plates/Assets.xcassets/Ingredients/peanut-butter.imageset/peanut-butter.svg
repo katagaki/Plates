@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Peanut butter">
+  <path d="M14 17h20v21a3 3 0 0 1-3 3H17a3 3 0 0 1-3-3Z" fill="#f2ede0"/>
+  <path d="M14 22h20v13a3 3 0 0 1-3 3H17a3 3 0 0 1-3-3Z" fill="#c98a45"/>
+  <rect x="12" y="12" width="24" height="6" rx="2" fill="#8a5a2b"/>
+  <path d="M18 27c2-2 4-2 6 0s4 2 6 0" stroke="#e0a869" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>

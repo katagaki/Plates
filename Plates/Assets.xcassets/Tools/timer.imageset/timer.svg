@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kitchen timer">
+  <circle cx="24" cy="27" r="15" fill="#d94f45"/>
+  <circle cx="24" cy="27" r="11" fill="#f8f6f1"/>
+  <path d="M24 27V19" stroke="#4a4e54" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M24 27h6" stroke="#4a4e54" stroke-width="2.4" stroke-linecap="round"/>
+  <rect x="20" y="7" width="8" height="5" rx="2" fill="#8d939b"/>
+</svg>

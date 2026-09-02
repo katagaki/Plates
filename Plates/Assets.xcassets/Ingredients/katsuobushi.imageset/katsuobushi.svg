@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bonito flakes">
+  <path d="M9 32c0-7 7-12 15-12s15 5 15 12Z" fill="#d9a877"/>
+  <g stroke="#efc99e" stroke-width="2.4" stroke-linecap="round" fill="none">
+    <path d="M13 30c3-4 7-6 11-6"/><path d="M18 32c3-5 8-8 13-8"/><path d="M24 32c2-3 5-5 8-6"/>
+  </g>
+  <path d="M7 32h34v3a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2Z" fill="#c8c2b6"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ramen">
+  <path d="M8 24h32a16 14 0 0 1-32 0Z" fill="#d94f45"/>
+  <path d="M11 25h26a13 11 0 0 1-26 0Z" fill="#e8b45c"/>
+  <g stroke="#f6e2b0" stroke-width="2.6" stroke-linecap="round" fill="none">
+    <path d="M15 27c3-3 7-4 11-3"/><path d="M18 31c3-3 8-4 12-3"/>
+  </g>
+  <circle cx="30" cy="28" r="3.4" fill="#f8f6f1"/>
+  <circle cx="30" cy="28" r="1.6" fill="#f1c21b"/>
+  <rect x="19" y="38" width="10" height="3" rx="1.5" fill="#b4423a"/>
+</svg>

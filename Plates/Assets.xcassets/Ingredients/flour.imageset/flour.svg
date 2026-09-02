@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bag of flour">
+  <path d="M13 16c3-2 5-4 11-4s8 2 11 4v22a3 3 0 0 1-3 3H16a3 3 0 0 1-3-3Z" fill="#e6e0d4"/>
+  <path d="M13 16c4 3 18 3 22 0" stroke="#c8c2b6" stroke-width="2" fill="none"/>
+  <rect x="17" y="22" width="14" height="12" rx="2" fill="#f8f6f1"/>
+  <path d="M20 27h8M20 31h5" stroke="#c8c2b6" stroke-width="1.8" stroke-linecap="round"/>
+</svg>

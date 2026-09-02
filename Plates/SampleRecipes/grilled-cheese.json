@@ -75,8 +75,7 @@
         "Those buttered faces go against the pan, so leave them facing up while you build.",
         "Corners brown last and dry out first, so give them a little extra."
       ],
-      "hint": "Butter straight from the fridge tears the bread. Thirty seconds in the microwave at low power softens it enough.",
-      "image": "img/grilled-cheese-1.svg"
+      "hint": "Butter straight from the fridge tears the bread. Thirty seconds in the microwave at low power softens it enough."
     },
     {
       "title": "Grate cheese",
@@ -85,8 +84,7 @@
         "A block grated fresh melts more evenly than pre-grated cheese, which is dusted with starch to stop it clumping.",
         "Keep it in a loose pile rather than pressing it down."
       ],
-      "hint": "Cold cheese grates cleanly. Straight from the fridge is the right temperature, warm cheese smears on the grater.",
-      "image": "img/grilled-cheese-2.svg"
+      "hint": "Cold cheese grates cleanly. Straight from the fridge is the right temperature, warm cheese smears on the grater."
     },
     {
       "title": "Build sandwich",
@@ -95,8 +93,7 @@
         "Pile the cheese on evenly, grind on the pepper, then top with the second slice, butter side up.",
         "Keep the cheese about 1 cm short of the edges, since it spreads as it melts."
       ],
-      "hint": "An even layer matters more than a thick one. A tall mound in the middle leaves the corners empty and pushes the slices apart.",
-      "image": "img/grilled-cheese-3.svg"
+      "hint": "An even layer matters more than a thick one. A tall mound in the middle leaves the corners empty and pushes the slices apart."
     },
     {
       "title": "Toast first side",
@@ -105,8 +102,7 @@
         "Press it flat with the spatula and toast for 3 to 4 minutes, covered if you have a lid.",
         "Lift a corner to check: deep golden is right, and the cheese at the edges should be starting to soften."
       ],
-      "hint": "Medium-low is the whole trick. Anything hotter browns the bread while the middle is still cold cheese.",
-      "image": "img/grilled-cheese-4.svg"
+      "hint": "Medium-low is the whole trick. Anything hotter browns the bread while the middle is still cold cheese."
     },
     {
       "title": "Flip and finish",
@@ -114,8 +110,7 @@
         "Slide the spatula fully under the sandwich and flip it in one move.",
         "Press again and toast for another 3 minutes.",
         "It is done when cheese bubbles out of the sides and the sandwich feels solid rather than loose under the spatula."
-      ],
-      "image": "img/grilled-cheese-5.svg"
+      ]
     },
     {
       "title": "Rest and cut",
@@ -123,8 +118,7 @@
         "Move it to a board and wait one minute before cutting.",
         "Cut it in half on the diagonal and eat it straight away.",
         "That minute lets the cheese set just enough to stay in the sandwich instead of running onto the board."
-      ],
-      "image": "img/grilled-cheese-6.svg"
+      ]
     }
   ],
   "troubleshooting": [

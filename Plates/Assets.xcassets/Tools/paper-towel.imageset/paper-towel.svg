@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Paper towel">
+  <rect x="14" y="8" width="20" height="26" rx="4" fill="#f8f6f1"/>
+  <rect x="20" y="8" width="8" height="26" rx="4" fill="#e6e0d4"/>
+  <path d="M34 20c5 1 5 12 0 14H24l4-14Z" fill="#f2ede0"/>
+  <path d="M28 34c-1-4-1-9 0-14" stroke="#ddd6c4" stroke-width="1.6" fill="none"/>
+</svg>

@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Minced meat">
+  <path d="M9 32c0-7 7-12 15-12s15 5 15 12Z" fill="#b04a44"/>
+  <g stroke="#d3675f" stroke-width="3" stroke-linecap="round" fill="none">
+    <path d="M13 30c3-3 6-4 9-4"/><path d="M24 30c3-3 6-4 9-4"/><path d="M18 24c3-2 5-2 8-2"/>
+  </g>
+  <path d="M7 32h34v3a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2Z" fill="#8d939b"/>
+</svg>

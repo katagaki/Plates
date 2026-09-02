@@ -74,8 +74,7 @@
       "points": [
         "Cut the bacon into strips about 1 cm wide.",
         "This is the only knife work in the recipe."
-      ],
-      "image": "img/cheese-risotto-1.svg"
+      ]
     },
     {
       "title": "Fry bacon",
@@ -83,8 +82,7 @@
         "Put the strips in a dry frying pan.",
         "Cook over medium heat for about a minute.",
         "The fat that renders out becomes your cooking oil."
-      ],
-      "image": "img/cheese-risotto-2.svg"
+      ]
     },
     {
       "title": "Add rice",
@@ -93,8 +91,7 @@
         "Stir for a minute, until every grain is coated in fat.",
         "Stop when the rice turns faintly translucent."
       ],
-      "hint": "Rinsing washes off the surface starch, and with it the creaminess. For risotto, unwashed is correct.",
-      "image": "img/cheese-risotto-3.svg"
+      "hint": "Rinsing washes off the surface starch, and with it the creaminess. For risotto, unwashed is correct."
     },
     {
       "title": "Add water and bouillon",
@@ -102,8 +99,7 @@
         "Pour in 400 ml of water and drop in the bouillon cube.",
         "Break the cube up with the spatula as you stir.",
         "Turn the heat to high and bring it to a boil."
-      ],
-      "image": "img/cheese-risotto-4.svg"
+      ]
     },
     {
       "title": "Simmer rice",
@@ -112,8 +108,7 @@
         "Simmer uncovered for 15 minutes.",
         "Stir slowly from the bottom about every 3 minutes."
       ],
-      "hint": "Skip the stirring and the bottom scorches. Keep the heat low and stay close to the stove.",
-      "image": "img/cheese-risotto-5.svg"
+      "hint": "Skip the stirring and the bottom scorches. Keep the heat low and stay close to the stove."
     },
     {
       "title": "Check rice",
@@ -121,8 +116,7 @@
         "Crush a grain of rice and taste it.",
         "Still chalky in the center: add 50 ml of water and simmer 3 minutes more.",
         "Soupy: raise to medium heat for about a minute to drive off the excess."
-      ],
-      "image": "img/cheese-risotto-6.svg"
+      ]
     },
     {
       "title": "Add cheese and butter",
@@ -131,8 +125,7 @@
         "Add the 2 tablespoons of grated cheese and 10 g of butter, and stir for about 20 seconds.",
         "Season with salt and black pepper."
       ],
-      "hint": "Add cheese over a live flame and it splits, leaving a grainy texture.",
-      "image": "img/cheese-risotto-7.svg"
+      "hint": "Add cheese over a live flame and it splits, leaving a grainy texture."
     }
   ],
   "troubleshooting": [

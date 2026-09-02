@@ -1,0 +1,5 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lemon">
+  <ellipse cx="24" cy="25" rx="16" ry="12" transform="rotate(-15 24 25)" fill="#f1c21b"/>
+  <path d="M11 20c3-4 8-6 12-5" stroke="#ffe97a" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+  <path d="M37 15c2-1 4 0 4 2s-3 3-4 1Z" fill="#e0a900"/>
+</svg>

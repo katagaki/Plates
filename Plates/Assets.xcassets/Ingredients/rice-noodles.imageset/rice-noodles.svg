@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rice noodles">
+  <path d="M11 20h26v4c0 9-5 16-13 16s-13-7-13-16Z" fill="#f2ede0"/>
+  <g stroke="#ddd6c4" stroke-width="1.8" fill="none" stroke-linecap="round">
+    <path d="M16 22v12"/><path d="M20 22v15"/><path d="M24 22v16"/><path d="M28 22v15"/><path d="M32 22v12"/>
+  </g>
+  <rect x="10" y="16" width="28" height="5" rx="2.5" fill="#e0d9c6"/>
+</svg>

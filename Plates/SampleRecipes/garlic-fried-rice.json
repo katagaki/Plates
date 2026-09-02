@@ -106,8 +106,7 @@
         "Keep the two piles separate. The slices turn into crisp chips, the diced garlic flavors the rice.",
         "Even thickness matters more than thinness, because uneven slices burn at different times."
       ],
-      "hint": "A cold clove slices thinner than a room-temperature one. Ten minutes in the freezer firms it up.",
-      "image": "img/garlic-fried-rice-1.svg"
+      "hint": "A cold clove slices thinner than a room-temperature one. Ten minutes in the freezer firms it up."
     },
     {
       "title": "Heat rice",
@@ -115,8 +114,7 @@
         "Microwave the packed rice as directed.",
         "Break it up with the spatula while it is still hot, and leave it beside the stove.",
         "Rice that goes in as a solid block never separates properly."
-      ],
-      "image": "img/garlic-fried-rice-2.svg"
+      ]
     },
     {
       "title": "Crisp garlic slices",
@@ -125,8 +123,7 @@
         "Starting from cold dries the garlic out slowly instead of scorching it.",
         "Stir now and then for about 4 minutes, until the slices are pale gold at the edges."
       ],
-      "hint": "Garlic goes from gold to bitter in under 20 seconds. Pull it a shade lighter than you want, it keeps browning off the heat.",
-      "image": "img/garlic-fried-rice-3.svg"
+      "hint": "Garlic goes from gold to bitter in under 20 seconds. Pull it a shade lighter than you want, it keeps browning off the heat."
     },
     {
       "title": "Lift out chips",
@@ -134,8 +131,7 @@
         "Scoop the slices onto the paper-lined plate the moment they turn pale gold.",
         "Spread them in a single layer so they crisp as they cool.",
         "Leave the oil in the pan. That is where most of the garlic flavor now lives."
-      ],
-      "image": "img/garlic-fried-rice-4.svg"
+      ]
     },
     {
       "title": "Cook diced garlic",
@@ -144,8 +140,7 @@
         "Add the diced garlic and stir for about 30 seconds, until it smells sweet and the edges just start to color.",
         "Drop in the butter and swirl the pan until it melts."
       ],
-      "hint": "Diced garlic burns faster than sliced garlic. Have the rice within arm's reach before this step starts.",
-      "image": "img/garlic-fried-rice-5.svg"
+      "hint": "Diced garlic burns faster than sliced garlic. Have the rice within arm's reach before this step starts."
     },
     {
       "title": "Fry rice",
@@ -154,8 +149,7 @@
         "Press it flat with the spatula and leave it alone for 30 seconds before folding it over.",
         "Repeat the press and fold for about 2 minutes, until the grains separate and jump loose in the pan."
       ],
-      "hint": "Pressing puts the rice against hot metal. Constant stirring steams it instead, which is what makes fried rice go sticky.",
-      "image": "img/garlic-fried-rice-6.svg"
+      "hint": "Pressing puts the rice against hot metal. Constant stirring steams it instead, which is what makes fried rice go sticky."
     },
     {
       "title": "Season rice",
@@ -164,8 +158,7 @@
         "Add the pinch of salt and a good grind of black pepper.",
         "Taste it, and reach for more salt rather than more soy sauce if it needs lifting."
       ],
-      "hint": "Soy sauce colors rice faster than it seasons it. A tablespoon would turn the whole pan brown before it tasted right.",
-      "image": "img/garlic-fried-rice-7.svg"
+      "hint": "Soy sauce colors rice faster than it seasons it. A tablespoon would turn the whole pan brown before it tasted right."
     },
     {
       "title": "Plate and top",
@@ -173,8 +166,7 @@
         "Turn off the heat, drizzle over the sesame oil if using, and fold it through once before mounding the rice onto a plate.",
         "Scatter the garlic chips over the top, along with the spring onion if using.",
         "The chips go on at the last moment, because they soften as soon as they meet the hot rice."
-      ],
-      "image": "img/garlic-fried-rice-8.svg"
+      ]
     }
   ],
   "troubleshooting": [

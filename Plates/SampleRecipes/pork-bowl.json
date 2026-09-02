@@ -106,8 +106,7 @@
         "Stir until the sugar dissolves.",
         "Add the ginger now if you are using it."
       ],
-      "hint": "If you start measuring after the heat is on, the pork overcooks while you do it. Making the sauce first is the single most effective move in this recipe.",
-      "image": "img/pork-bowl-1.svg"
+      "hint": "If you start measuring after the heat is on, the pork overcooks while you do it. Making the sauce first is the single most effective move in this recipe."
     },
     {
       "title": "Slice onion",
@@ -115,8 +114,7 @@
         "Peel the onion and halve it lengthwise.",
         "Slice with the grain into pieces about 5 mm thick.",
         "Wash the board and knife now: the pork needs no cutting."
-      ],
-      "image": "img/pork-bowl-2.svg"
+      ]
     },
     {
       "title": "Brown pork",
@@ -125,16 +123,14 @@
         "Spread the pork so the pieces overlap as little as possible, then leave it alone for 1 to 2 minutes.",
         "Flip only once the underside is well browned."
       ],
-      "hint": "Stirring too early draws out moisture and you end up steaming the meat instead of searing it.",
-      "image": "img/pork-bowl-3.svg"
+      "hint": "Stirring too early draws out moisture and you end up steaming the meat instead of searing it."
     },
     {
       "title": "Soften onion",
       "points": [
         "Push the meat to one side and add the onion to the empty half.",
         "Cook for about 2 minutes, until translucent with lightly colored edges."
-      ],
-      "image": "img/pork-bowl-4.svg"
+      ]
     },
     {
       "title": "Reduce sauce",
@@ -143,24 +139,21 @@
         "Kill the heat once it thickens, clings to the meat, and turns glossy.",
         "Add the butter off the heat and let the residual warmth melt it."
       ],
-      "hint": "Over-reduce and it suddenly turns salty. Stop while a little sauce still pools at the bottom of the pan.",
-      "image": "img/pork-bowl-5.svg"
+      "hint": "Over-reduce and it suddenly turns salty. Stop while a little sauce still pools at the bottom of the pan."
     },
     {
       "title": "Heat rice",
       "points": [
         "Heat the packed rice as directed.",
         "Tip it into a deep bowl."
-      ],
-      "image": "img/pork-bowl-6.svg"
+      ]
     },
     {
       "title": "Assemble bowl",
       "points": [
         "Pile the pork and onion over the rice.",
         "Scrape every last bit of sauce from the pan over the top."
-      ],
-      "image": "img/pork-bowl-7.svg"
+      ]
     }
   ],
   "troubleshooting": [

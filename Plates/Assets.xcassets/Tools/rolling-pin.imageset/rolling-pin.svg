@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rolling pin">
+  <rect x="12" y="19" width="24" height="11" rx="5.5" fill="#c99a5e"/>
+  <rect x="3" y="22" width="10" height="5" rx="2.5" fill="#a97142"/>
+  <rect x="35" y="22" width="10" height="5" rx="2.5" fill="#a97142"/>
+  <path d="M17 22v5M23 22v5" stroke="#b8834a" stroke-width="1.6" stroke-linecap="round"/>
+</svg>

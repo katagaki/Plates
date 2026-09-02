@@ -1,0 +1,5 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Broccoli">
+  <path d="M20 24h8v14a4 4 0 0 1-8 0Z" fill="#a8cf8e"/>
+  <g fill="#5f8c3f"><circle cx="17" cy="19" r="7"/><circle cx="31" cy="19" r="7"/><circle cx="24" cy="14" r="8"/></g>
+  <g fill="#7a9e4e"><circle cx="19" cy="15" r="3"/><circle cx="28" cy="21" r="3"/></g>
+</svg>

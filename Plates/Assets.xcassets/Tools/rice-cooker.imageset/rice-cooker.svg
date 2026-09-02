@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rice cooker">
+  <path d="M8 22h32v10a8 8 0 0 1-8 8H16a8 8 0 0 1-8-8Z" fill="#f0ece4"/>
+  <path d="M8 22c0-6 7-10 16-10s16 4 16 10Z" fill="#cfd6dd"/>
+  <rect x="21" y="8" width="6" height="4" rx="2" fill="#8d939b"/>
+  <rect x="16" y="28" width="16" height="7" rx="2" fill="#4a4e54"/>
+  <circle cx="20" cy="31.5" r="1.6" fill="#33b1ff"/>
+</svg>

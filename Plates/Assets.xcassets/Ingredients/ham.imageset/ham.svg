@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Slices of ham">
+  <circle cx="21" cy="26" r="13" fill="#e39a9a"/>
+  <circle cx="21" cy="26" r="9" fill="#f0b9b9"/>
+  <circle cx="28" cy="24" r="13" fill="#dd8a8a"/>
+  <circle cx="28" cy="24" r="9" fill="#eeadad"/>
+  <g fill="#f6dada"><circle cx="26" cy="21" r="1.6"/><circle cx="31" cy="27" r="1.4"/></g>
+</svg>

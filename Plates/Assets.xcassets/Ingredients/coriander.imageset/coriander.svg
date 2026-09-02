@@ -1,0 +1,8 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Coriander">
+  <path d="M24 42V22" stroke="#7a9e4e" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M24 22c-6 0-9 3-9 3s3 4 9 4Z" fill="#5f8c3f"/>
+  <path d="M24 22c6 0 9 3 9 3s-3 4-9 4Z" fill="#7a9e4e"/>
+  <path d="M24 12c-5 2-7 6-7 9 4 1 7-2 7-9Z" fill="#5f8c3f"/>
+  <path d="M24 12c5 2 7 6 7 9-4 1-7-2-7-9Z" fill="#7a9e4e"/>
+  <path d="M24 8c-3 3-3 7-1 9 2-2 3-6 1-9Z" fill="#a8cf8e"/>
+</svg>

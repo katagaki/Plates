@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Olive oil">
+  <path d="M21 13h6v4l4 7v17a3 3 0 0 1-3 3h-8a3 3 0 0 1-3-3V24l4-7Z" fill="#a8b96a"/>
+  <path d="M17 29h14v12a3 3 0 0 1-3 3h-8a3 3 0 0 1-3-3Z" fill="#7f9440"/>
+  <rect x="20" y="7" width="8" height="7" rx="2" fill="#5f7c34"/>
+  <rect x="19" y="30" width="10" height="6" rx="1" fill="#f0ece4"/>
+</svg>

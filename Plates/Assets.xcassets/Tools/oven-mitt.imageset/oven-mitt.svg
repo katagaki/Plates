@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Oven mitt">
+  <path d="M16 10h14a8 8 0 0 1 8 8v14H16Z" fill="#d94f45"/>
+  <path d="M16 16c-6 0-8 4-8 7s3 6 8 6Z" fill="#e8695f"/>
+  <rect x="14" y="32" width="24" height="8" rx="3" fill="#f0ece4"/>
+  <path d="M20 14v14" stroke="#e8695f" stroke-width="2" stroke-linecap="round"/>
+</svg>

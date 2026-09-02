@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Basil">
+  <path d="M24 42V18" stroke="#5f8c3f" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M23 26c-8 0-13-4-13-9 7-1 12 3 13 9Z" fill="#4f7c37"/>
+  <path d="M25 26c8 0 13-4 13-9-7-1-12 3-13 9Z" fill="#7a9e4e"/>
+  <path d="M23 16c-5-1-8-5-8-9 5 0 8 4 8 9Z" fill="#4f7c37"/>
+  <path d="M25 16c5-1 8-5 8-9-5 0-8 4-8 9Z" fill="#7a9e4e"/>
+</svg>

@@ -96,16 +96,14 @@
         "Season the pieces with the salt.",
         "Wash the board and knife before anything else touches them."
       ],
-      "hint": "Raw chicken touched the board, so wash it with soap and hot water, not just a rinse.",
-      "image": "img/chicken-rice-1.svg"
+      "hint": "Raw chicken touched the board, so wash it with soap and hot water, not just a rinse."
     },
     {
       "title": "Dice onion",
       "points": [
         "Dice the onion into small pieces, around 5 mm.",
         "That is the last of the knife work."
-      ],
-      "image": "img/chicken-rice-2.svg"
+      ]
     },
     {
       "title": "Brown chicken",
@@ -114,16 +112,14 @@
         "Lay the chicken in skin side down and leave it for 2 to 3 minutes, until well browned.",
         "Flip and cook 1 minute more. It can stay slightly underdone, it finishes with the rice."
       ],
-      "hint": "As with any searing, the less you poke it, the better the color.",
-      "image": "img/chicken-rice-3.svg"
+      "hint": "As with any searing, the less you poke it, the better the color."
     },
     {
       "title": "Soften onion",
       "points": [
         "Add the onion to the pan.",
         "Cook for about 2 minutes, stirring, until translucent."
-      ],
-      "image": "img/chicken-rice-4.svg"
+      ]
     },
     {
       "title": "Heat rice",
@@ -131,8 +127,7 @@
         "Microwave the packed rice as directed.",
         "Keep it hot and within reach for the last two steps."
       ],
-      "hint": "Hot rice separates easily. Cold rice clumps and tears, so heat it first, always.",
-      "image": "img/chicken-rice-5.svg"
+      "hint": "Hot rice separates easily. Cold rice clumps and tears, so heat it first, always."
     },
     {
       "title": "Fry ketchup",
@@ -141,8 +136,7 @@
         "Let it bubble for 30 seconds, stirring just the ketchup.",
         "It is ready when it darkens slightly and smells sweet instead of sharp."
       ],
-      "hint": "This little step cooks off the raw sourness and is what separates good chicken rice from rice with ketchup on it.",
-      "image": "img/chicken-rice-6.svg"
+      "hint": "This little step cooks off the raw sourness and is what separates good chicken rice from rice with ketchup on it."
     },
     {
       "title": "Add rice",
@@ -150,8 +144,7 @@
         "Add the hot rice and break it up with the spatula.",
         "Fold until every grain is evenly orange, about 2 minutes.",
         "Add the butter or soy sauce now if using, then finish with black pepper."
-      ],
-      "image": "img/chicken-rice-7.svg"
+      ]
     },
     {
       "title": "Plate chicken rice",
@@ -159,8 +152,7 @@
         "Taste, and adjust with a pinch of salt if needed.",
         "Mound it onto a plate.",
         "A little extra ketchup on top is traditional, and a fried egg is even better."
-      ],
-      "image": "img/chicken-rice-8.svg"
+      ]
     }
   ],
   "troubleshooting": [

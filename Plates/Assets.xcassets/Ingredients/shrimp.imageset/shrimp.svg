@@ -1,0 +1,5 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shrimp">
+  <path d="M36 14c-14 0-22 7-22 15 0 6 5 9 10 9 6 0 9-4 9-8 0-3-2-5-5-5-2 0-4 1-4 3 2-1 4 0 4 2s-2 3-4 3c-3 0-5-2-5-5 0-6 7-10 17-10Z" fill="#e8804f"/>
+  <path d="M36 14c-8 0-14 2-18 6" stroke="#f4a97f" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M36 14c3-2 6-3 8-2-2 2-3 4-3 6Z" fill="#f4a97f"/>
+</svg>

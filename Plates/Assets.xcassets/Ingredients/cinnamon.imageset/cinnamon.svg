@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cinnamon sticks">
+  <rect x="8" y="20" width="32" height="9" rx="4.5" transform="rotate(-12 24 24)" fill="#a9682e"/>
+  <rect x="10" y="29" width="30" height="8" rx="4" transform="rotate(6 25 33)" fill="#8a5a2b"/>
+  <path d="M12 24c8-2 18-4 26-6" stroke="#c9a05e" stroke-width="1.6" fill="none"/>
+  <path d="M13 33c8 1 18 1 26 0" stroke="#a9682e" stroke-width="1.6" fill="none"/>
+</svg>

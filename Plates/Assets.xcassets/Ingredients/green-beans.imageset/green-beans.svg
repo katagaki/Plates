@@ -1,0 +1,10 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Green beans">
+  <g stroke="#5f8c3f" stroke-width="6" stroke-linecap="round" fill="none">
+    <path d="M10 32c6-10 16-16 26-18"/>
+    <path d="M12 40c6-10 16-16 26-18"/>
+  </g>
+  <g stroke="#8fb35c" stroke-width="1.6" fill="none">
+    <path d="M14 31c6-8 14-13 21-15"/>
+    <path d="M16 39c6-8 14-13 21-15"/>
+  </g>
+</svg>

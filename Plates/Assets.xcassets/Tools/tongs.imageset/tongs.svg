@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tongs">
+  <path d="M20 8c-4 10-6 20-6 32" stroke="#cfd6dd" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M28 8c4 10 6 20 6 32" stroke="#a8b0b8" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M20 8c2-3 6-3 8 0" stroke="#8d939b" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <rect x="10" y="36" width="9" height="5" rx="2.5" fill="#4a4e54"/>
+  <rect x="29" y="36" width="9" height="5" rx="2.5" fill="#4a4e54"/>
+</svg>

@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aluminium foil">
+  <rect x="8" y="18" width="32" height="12" rx="3" fill="#a8b0b8"/>
+  <rect x="8" y="18" width="32" height="6" rx="3" fill="#cfd6dd"/>
+  <path d="M40 24c4 2 4 8 0 10H16l6-10Z" fill="#e8edf2"/>
+  <path d="M22 34c-2-3-2-7 0-10" stroke="#a8b0b8" stroke-width="1.6" fill="none"/>
+</svg>

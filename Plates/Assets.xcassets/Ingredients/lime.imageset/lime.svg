@@ -1,0 +1,5 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lime half">
+  <circle cx="24" cy="25" r="15" fill="#5f8c3f"/>
+  <circle cx="24" cy="25" r="12" fill="#d7e08a"/>
+  <g stroke="#a8cf8e" stroke-width="2" stroke-linecap="round"><path d="M24 25V14"/><path d="M24 25v11"/><path d="M24 25H13"/><path d="M24 25h11"/><path d="m24 25-8-8"/><path d="m24 25 8 8"/><path d="m24 25 8-8"/><path d="m24 25-8 8"/></g>
+</svg>

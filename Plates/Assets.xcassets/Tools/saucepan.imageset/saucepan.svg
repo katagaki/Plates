@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Saucepan">
+  <path d="M6 20h24v12a7 7 0 0 1-7 7h-10a7 7 0 0 1-7-7Z" fill="#cfd6dd"/>
+  <rect x="4" y="17" width="28" height="4" rx="2" fill="#8d939b"/>
+  <rect x="30" y="17" width="14" height="4" rx="2" fill="#4a4e54"/>
+  <path d="M10 26h16" stroke="#a8b0b8" stroke-width="2" stroke-linecap="round"/>
+</svg>

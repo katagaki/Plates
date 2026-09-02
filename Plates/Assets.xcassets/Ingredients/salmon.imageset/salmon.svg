@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Salmon fillet">
+  <path d="M8 30c2-9 10-16 20-16 8 0 13 4 12 10-1 7-9 12-19 12-8 0-14-2-13-6Z" fill="#e8804f"/>
+  <g stroke="#f6c3a5" stroke-width="2.6" fill="none" stroke-linecap="round">
+    <path d="M13 30c4-6 10-10 16-11"/><path d="M15 35c4-6 11-10 17-11"/>
+  </g>
+  <path d="M8 30c-2 4 2 6 6 6" stroke="#cfd6dd" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

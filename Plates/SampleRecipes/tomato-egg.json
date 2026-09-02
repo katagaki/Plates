@@ -98,8 +98,7 @@
         "Cut each tomato into 6 to 8 wedges.",
         "Keep the juice and seeds, they become the sauce.",
         "Cut the spring onion into short pieces and keep the green tops separate."
-      ],
-      "image": "img/tomato-egg-1.svg"
+      ]
     },
     {
       "title": "Beat eggs",
@@ -107,8 +106,7 @@
         "Crack the eggs into a bowl with a pinch of salt and the white pepper.",
         "Beat until the yolks and whites are one color, about 20 seconds.",
         "Stop there. Beating longer makes them thin and rubbery."
-      ],
-      "image": "img/tomato-egg-2.svg"
+      ]
     },
     {
       "title": "Heat pan",
@@ -116,8 +114,7 @@
         "Put 1 tbsp of the oil in over medium-high and wait until it thins out and shimmers.",
         "A drop of egg should sizzle and puff immediately.",
         "A cold pan is the main reason eggs stick."
-      ],
-      "image": "img/tomato-egg-3.svg"
+      ]
     },
     {
       "title": "Scramble eggs",
@@ -126,8 +123,7 @@
         "Push the set parts to the middle with the spatula in slow, large sweeps.",
         "Take them out while the middle still looks wet, about 30 seconds in total."
       ],
-      "hint": "The eggs go back into a hot pan later, so they finish cooking twice. Taking them out underdone is what keeps them soft at the end.",
-      "image": "img/tomato-egg-4.svg"
+      "hint": "The eggs go back into a hot pan later, so they finish cooking twice. Taking them out underdone is what keeps them soft at the end."
     },
     {
       "title": "Cook tomatoes",
@@ -136,8 +132,7 @@
         "Press them gently with the spatula and cook 3 to 4 minutes.",
         "They are ready when the skins slip loose and there is a pool of red juice in the pan."
       ],
-      "hint": "If the tomatoes stay dry and firm, put the lid on for a minute. Trapped steam softens the skins much faster than heat alone.",
-      "image": "img/tomato-egg-5.svg"
+      "hint": "If the tomatoes stay dry and firm, put the lid on for a minute. Trapped steam softens the skins much faster than heat alone."
     },
     {
       "title": "Season sauce",
@@ -145,8 +140,7 @@
         "Stir in the sugar, a good pinch of salt, and the ketchup if you are using it.",
         "Taste the juice now. It should be sweet first and sour second.",
         "Let it bubble for another minute so it thickens slightly."
-      ],
-      "image": "img/tomato-egg-6.svg"
+      ]
     },
     {
       "title": "Return eggs",
@@ -154,8 +148,7 @@
         "Slide the eggs back in and fold them through the sauce two or three times.",
         "Kill the heat after 30 seconds, while the curds are still in large pieces.",
         "Finish with the green spring onion tops and a few drops of sesame oil, and serve it over rice."
-      ],
-      "image": "img/tomato-egg-7.svg"
+      ]
     }
   ],
   "troubleshooting": [

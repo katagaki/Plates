@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Thermometer">
+  <rect x="20" y="6" width="8" height="26" rx="4" fill="#e8edf2"/>
+  <circle cx="24" cy="35" r="7" fill="#d94f45"/>
+  <rect x="22" y="14" width="4" height="20" rx="2" fill="#d94f45"/>
+  <g stroke="#8d939b" stroke-width="1.6" stroke-linecap="round"><path d="M28 12h3"/><path d="M28 17h3"/><path d="M28 22h3"/></g>
+</svg>

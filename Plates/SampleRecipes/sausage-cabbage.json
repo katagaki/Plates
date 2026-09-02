@@ -80,24 +80,21 @@
       "points": [
         "Tear or cut the cabbage into rough 4 cm squares.",
         "Discard the thick core."
-      ],
-      "image": "img/sausage-cabbage-1.svg"
+      ]
     },
     {
       "title": "Slice sausage",
       "points": [
         "Slice the sausages diagonally into coins about 1 cm thick.",
         "Diagonal cuts give each piece more surface to brown."
-      ],
-      "image": "img/sausage-cabbage-2.svg"
+      ]
     },
     {
       "title": "Mix sauce",
       "points": [
         "Stir the soy sauce and mustard together in a small bowl.",
         "Set it next to the stove: the end of this recipe goes fast."
-      ],
-      "image": "img/sausage-cabbage-3.svg"
+      ]
     },
     {
       "title": "Brown sausage",
@@ -105,8 +102,7 @@
         "Heat the oil over medium-high.",
         "Spread the sausage coins in one layer and cook about 2 minutes, turning once.",
         "They are ready when both sides have color and the fat starts to run."
-      ],
-      "image": "img/sausage-cabbage-4.svg"
+      ]
     },
     {
       "title": "Add cabbage",
@@ -115,8 +111,7 @@
         "Let it sit untouched for 1 minute so the bottom layer chars a little.",
         "Toss, then repeat: rest, toss, rest."
       ],
-      "hint": "Constant stirring steams the cabbage. Letting it sit against the hot pan is what gives you sweet, browned edges.",
-      "image": "img/sausage-cabbage-5.svg"
+      "hint": "Constant stirring steams the cabbage. Letting it sit against the hot pan is what gives you sweet, browned edges."
     },
     {
       "title": "Check cabbage",
@@ -124,8 +119,7 @@
         "After 3 to 4 minutes it should be glossy and wilted at the edges.",
         "The thick parts should still have some crunch.",
         "Kill the heat there, it keeps cooking in the pan."
-      ],
-      "image": "img/sausage-cabbage-6.svg"
+      ]
     },
     {
       "title": "Add sauce",
@@ -134,8 +128,7 @@
         "Toss everything for 30 seconds, then plate.",
         "Taste before you finish with black pepper: the sausage may carry enough salt on its own."
       ],
-      "hint": "Sauce poured onto the hot pan edge sizzles and gets aromatic. Poured on the vegetables it just makes them wet.",
-      "image": "img/sausage-cabbage-7.svg"
+      "hint": "Sauce poured onto the hot pan edge sizzles and gets aromatic. Poured on the vegetables it just makes them wet."
     }
   ],
   "troubleshooting": [
