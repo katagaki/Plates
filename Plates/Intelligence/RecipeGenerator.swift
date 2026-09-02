@@ -239,7 +239,10 @@ final class RecipeGenerator {
 
     private func generateBase(mode: GenerationMode, input: String) async throws -> GeneratedRecipeBase {
         progress.stage = .idea
-        let session = LanguageModelSession(instructions: Self.instructions(for: mode))
+        let session = LanguageModelSession(
+            tools: [IngredientLookupTool()],
+            instructions: Self.instructions(for: mode)
+        )
         let stream = session.streamResponse(
             to: Self.prompt(for: mode, input: input),
             generating: GeneratedRecipeBase.self
@@ -361,6 +364,10 @@ final class RecipeGenerator {
         let shared = houseStyle + "\n\n" + """
         You are working out what a dish is and what it needs. Prep work such as "finely diced" \
         belongs in the method, not in an ingredient amount, so leave it out here.
+
+        The app draws each ingredient from a fixed catalog of icons. Call checkIngredient for \
+        any ingredient you are unsure of before you write it down, and take the swap it \
+        suggests when the catalog has nothing for it.
         """
         switch mode {
         case .dish:

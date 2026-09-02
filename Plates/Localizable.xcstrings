@@ -45,6 +45,28 @@
         }
       }
     },
+    "Generate.Fridge.Choose": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose ingredients"
+          }
+        }
+      }
+    },
+    "Generate.Fridge.Choose.Footer": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pick what you have from the ingredients the app draws. Type anything else in the box above."
+          }
+        }
+      }
+    },
     "Generate.Fridge.Footer": {
       "extractionState": "manual",
       "localizations": {
@@ -74,6 +96,50 @@
           "stringUnit": {
             "state": "translated",
             "value": "Eggs, spring onion, leftover rice"
+          }
+        }
+      }
+    },
+    "Generate.Ingredients.All": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All Ingredients"
+          }
+        }
+      }
+    },
+    "Generate.Ingredients.Picked": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Picked"
+          }
+        }
+      }
+    },
+    "Generate.Ingredients.Search": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Search ingredients"
+          }
+        }
+      }
+    },
+    "Generate.Ingredients.Title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ingredients"
           }
         }
       }

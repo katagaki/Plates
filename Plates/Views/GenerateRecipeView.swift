@@ -10,6 +10,7 @@ struct GenerateRecipeView: View {
     @State private var mode: GenerationMode = .dish
     @State private var dishInput = ""
     @State private var fridgeInput = ""
+    @State private var fridgePicks: [String] = []
     @State private var draft: Recipe?
 
     var body: some View {
@@ -72,9 +73,30 @@ struct GenerateRecipeView: View {
                 Text(mode.footer)
             }
 
+            if mode == .fridge {
+                Section {
+                    ForEach(fridgePicks, id: \.self) { asset in
+                        HStack(spacing: 12) {
+                            RecipeIcon(path: IconCatalog.ingredientPath(for: asset), size: 32)
+                            Text(verbatim: IconCatalog.displayName(for: asset))
+                        }
+                    }
+                    .onDelete { fridgePicks.remove(atOffsets: $0) }
+
+                    NavigationLink {
+                        IngredientPickerView(selection: $fridgePicks)
+                    } label: {
+                        Label("Generate.Fridge.Choose", systemImage: "magnifyingglass")
+                    }
+                    .disabled(isGenerating)
+                } footer: {
+                    Text("Generate.Fridge.Choose.Footer")
+                }
+            }
+
             Section {
                 Button {
-                    Task { draft = await generator.generate(mode: mode, input: input.wrappedValue) }
+                    Task { draft = await generator.generate(mode: mode, input: generationInput) }
                 } label: {
                     Label("Menu.Generate", systemImage: "apple.intelligence")
                 }
@@ -108,7 +130,16 @@ struct GenerateRecipeView: View {
     private var canGenerate: Bool {
         guard generator.isAvailable, !isGenerating else { return false }
         guard mode.requiresInput else { return true }
-        return !input.wrappedValue.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+        return !generationInput.isEmpty
+    }
+
+    /// What the model is given: for the fridge, the ingredients picked from the catalog and
+    /// anything else typed in, as one list.
+    private var generationInput: String {
+        let typed = input.wrappedValue.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard mode == .fridge, !fridgePicks.isEmpty else { return typed }
+        let picked = fridgePicks.map(IconCatalog.displayName).joined(separator: ", ")
+        return typed.isEmpty ? picked : "\(picked), \(typed)"
     }
 }
 
