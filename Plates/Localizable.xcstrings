@@ -89,17 +89,6 @@
         }
       }
     },
-    "Generate.Picker.Picked": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Picked"
-          }
-        }
-      }
-    },
     "Generate.Progress.Row.Ingredients": {
       "extractionState": "manual",
       "localizations": {

@@ -23,15 +23,10 @@ struct CatalogPickerView: View {
     @State private var query = ""
     @State private var collapsed: Set<String> = []
 
-    private let columns = Array(repeating: GridItem(.flexible(), spacing: 8), count: 4)
+    private let columns = Array(repeating: GridItem(.flexible(), spacing: 4), count: 4)
 
     var body: some View {
         List {
-            if !picked.isEmpty {
-                Section("Generate.Picker.Picked") {
-                    grid(picked)
-                }
-            }
             ForEach(matches) { group in
                 Section(isExpanded: expansion(for: group.id)) {
                     grid(group.icons)
@@ -41,6 +36,12 @@ struct CatalogPickerView: View {
             }
         }
         .listStyle(.sidebar)
+        .safeAreaInset(edge: .bottom) {
+            if !selection.isEmpty {
+                pickedBar
+            }
+        }
+        .animation(.default, value: selection)
         .searchable(text: $query, prompt: Text(searchPrompt))
         .overlay {
             if matches.isEmpty {
@@ -53,10 +54,36 @@ struct CatalogPickerView: View {
 
     private var matches: [Group] { groups(query) }
 
-    /// What is already picked, kept at the top so a long list never hides it.
-    private var picked: [String] {
-        let shown = Set(matches.flatMap(\.icons))
-        return selection.filter(shown.contains)
+    /// What is picked so far, floating over the catalog rather than taking a section from it.
+    /// A tap in here drops the pick, so nothing in the bar is highlighted.
+    private var pickedBar: some View {
+        GlassEffectContainer {
+            ScrollView(.horizontal) {
+                HStack(spacing: 4) {
+                    ForEach(selection, id: \.self) { asset in
+                        Button {
+                            toggle(asset)
+                        } label: {
+                            VStack(spacing: 2) {
+                                RecipeIcon(path: path(asset), size: 30)
+                                Text(verbatim: IconCatalog.displayName(for: asset))
+                                    .font(.caption2)
+                                    .lineLimit(1)
+                                    .foregroundStyle(.primary)
+                            }
+                            .frame(width: 66)
+                            .padding(.vertical, 6)
+                        }
+                        .buttonStyle(.plain)
+                    }
+                }
+                .padding(.horizontal, 8)
+            }
+            .scrollIndicators(.hidden)
+            .glassEffect(.regular, in: .rect(cornerRadius: 24, style: .continuous))
+        }
+        .padding(.horizontal, 16)
+        .padding(.bottom, 8)
     }
 
     /// A group closes on a tap of its header. A search leaves every group it matched open,
@@ -75,36 +102,40 @@ struct CatalogPickerView: View {
     }
 
     private func grid(_ icons: [String]) -> some View {
-        LazyVGrid(columns: columns, spacing: 8) {
+        LazyVGrid(columns: columns, spacing: 4) {
             ForEach(icons, id: \.self) { cell($0) }
         }
-        .padding(.vertical, 4)
-        .listRowInsets(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
+        .padding(.vertical, 2)
+        .listRowInsets(EdgeInsets(top: 2, leading: 4, bottom: 2, trailing: 4))
+    }
+
+    private func toggle(_ asset: String) {
+        if let index = selection.firstIndex(of: asset) {
+            selection.remove(at: index)
+        } else {
+            selection.append(asset)
+        }
     }
 
     private func cell(_ asset: String) -> some View {
         let isPicked = selection.contains(asset)
         return Button {
-            if let index = selection.firstIndex(of: asset) {
-                selection.remove(at: index)
-            } else {
-                selection.append(asset)
-            }
+            toggle(asset)
         } label: {
-            VStack(spacing: 4) {
-                RecipeIcon(path: path(asset), size: 40)
+            VStack(spacing: 2) {
+                RecipeIcon(path: path(asset), size: 34)
                 Text(verbatim: IconCatalog.displayName(for: asset))
                     .font(.caption2)
                     .lineLimit(2)
                     .multilineTextAlignment(.center)
                     .foregroundStyle(isPicked ? Color.white : Color.primary)
             }
-            .padding(.vertical, 8)
-            .padding(.horizontal, 4)
-            .frame(maxWidth: .infinity, minHeight: 88, alignment: .top)
+            .padding(.vertical, 6)
+            .padding(.horizontal, 2)
+            .frame(maxWidth: .infinity, minHeight: 74, alignment: .top)
             .background {
                 if isPicked {
-                    RoundedRectangle(cornerRadius: 16, style: .continuous)
+                    RoundedRectangle(cornerRadius: 14, style: .continuous)
                         .fill(.tint)
                 }
             }
