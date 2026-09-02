@@ -1,8 +1,32 @@
 {
   "fill" : {
-    "automatic-gradient" : "extended-srgb:1.00000,0.51373,0.16863,1.00000"
+    "automatic-gradient" : "extended-srgb:0.54118,0.56471,0.59608,1.00000"
   },
   "groups" : [
+    {
+      "layers" : [
+        {
+          "image-name" : "yolk.svg",
+          "name" : "Yolk"
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.35
+      }
+    },
+    {
+      "layers" : [
+        {
+          "image-name" : "egg-white.svg",
+          "name" : "Egg white"
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.35
+      }
+    },
     {
       "layers" : [
         {
@@ -13,10 +37,6 @@
       "shadow" : {
         "kind" : "neutral",
         "opacity" : 0.5
-      },
-      "translucency" : {
-        "enabled" : true,
-        "value" : 0.5
       }
     },
     {
@@ -25,14 +45,18 @@
           "image-name" : "pan-surface.svg",
           "name" : "Pan surface"
         }
+      ]
+    },
+    {
+      "layers" : [
+        {
+          "image-name" : "flame.svg",
+          "name" : "Burner flame"
+        }
       ],
       "shadow" : {
         "kind" : "neutral",
-        "opacity" : 0.5
-      },
-      "translucency" : {
-        "enabled" : true,
-        "value" : 0.15
+        "opacity" : 0.4
       }
     }
   ],
