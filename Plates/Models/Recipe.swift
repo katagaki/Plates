@@ -107,8 +107,8 @@ extension Step {
     /// An entry is in the step when the step names it, or names the icon it carries.
     private static func matches(_ words: Set<String>, name: String, icon: String) -> Bool {
         var candidates = terms(in: name)
-        if let asset = IconCatalog.assetName(for: icon) {
-            candidates += terms(in: IconCatalog.displayName(for: asset))
+        if let name = IconCatalog.iconName(for: icon) {
+            candidates += terms(in: IconCatalog.displayName(for: name))
         }
         return candidates.contains { words.contains($0) }
     }

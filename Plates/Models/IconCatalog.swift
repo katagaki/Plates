@@ -330,10 +330,19 @@ nonisolated enum IconCatalog {
         "yoghurt": "yogurt",
     ].reduce(into: [:]) { table, entry in table[normalized(entry.key)] = entry.value }
 
-    /// Turns a schema icon path such as `img/ingredients/garlic.svg` into an asset name.
+    /// Turns a schema icon path such as `img/ingredients/spring-onion.svg` into the catalog
+    /// name `spring-onion`. Paths are kebab cased because that is how recipe files are written.
+    static func iconName(for path: String) -> String? {
+        let stem = (path as NSString).lastPathComponent.replacingOccurrences(of: ".svg", with: "")
+        return stem.isEmpty ? nil : stem
+    }
+
+    /// The asset catalog entry a path draws from, such as `SpringOnion`. The catalog is Pascal
+    /// cased throughout, so the kebab cased name is converted on the way in.
     static func assetName(for path: String) -> String? {
-        let name = (path as NSString).lastPathComponent.replacingOccurrences(of: ".svg", with: "")
-        return name.isEmpty ? nil : name
+        iconName(for: path).map { name in
+            name.split(separator: "-").map { $0.prefix(1).uppercased() + $0.dropFirst() }.joined()
+        }
     }
 
     /// The icon path a recipe file should carry for an ingredient asset.
@@ -440,7 +449,7 @@ nonisolated enum IconCatalog {
     }
 
     private static func resolve(_ guess: String, itemName: String, in set: [String]) -> String? {
-        let cleaned = (assetName(for: guess) ?? guess).lowercased()
+        let cleaned = (iconName(for: guess) ?? guess).lowercased()
         if set.contains(cleaned) { return cleaned }
         return search(itemName, in: set).first ?? search(cleaned, in: set).first
     }

@@ -31,18 +31,25 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
 - `Plates/Views` holds the list, detail, and generation views.
 - `Plates/SampleRecipes` holds the recipes bundled with the app for the "Add Sample Recipes"
   menu item.
-- `Config` holds `Info.plist` and the entitlements, kept outside the synchronized `Plates`
-  group so they are not also copied in as resources.
+- `Plates` also holds `Info.plist` and `Plates.entitlements`. They sit in the synchronized
+  group, so the target lists them as membership exceptions to keep them out of the bundle's
+  resources.
 
 ## Icons
 
 Every SVG lives in `Plates/Assets.xcassets`: ingredient icons in `Ingredients` and tool icons
 in `Tools`. The site's step illustrations are not shipped. They are asset catalog vector images
-with `preserves-vector-representation`, named after the SVG file, so a schema path such as
-`img/ingredients/garlic.svg` maps to the asset `garlic`. When adding an icon, copy the SVG in
-with explicit `width` and `height` on the root element, otherwise the asset catalog will not
-take it. `IconCatalog` lists every asset, groups the ingredients into the categories the
-picker browses, and is the single source for the `.anyOf` guides the generator hands the model.
+with `preserves-vector-representation`.
+
+Asset catalog items are always Pascal cased, including the SVG file inside the image set:
+`SpringOnion.imageset/SpringOnion.svg`. Recipe files stay kebab cased because that is the
+site's schema, so `img/ingredients/spring-onion.svg` is read by `IconCatalog.iconName(for:)`
+as `spring-onion` and drawn through `IconCatalog.assetName(for:)` as `SpringOnion`. When
+adding an icon, copy the SVG in with explicit `width` and `height` on the root element,
+otherwise the asset catalog will not take it.
+
+`IconCatalog` lists every icon, groups the ingredients into the categories the picker browses,
+and is the single source for the `.anyOf` guides the generator hands the model.
 
 ## Localization
 
