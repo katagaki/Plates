@@ -8,15 +8,7 @@
         {
           "image-name" : "yolk.svg",
           "name" : "Yolk"
-        }
-      ],
-      "shadow" : {
-        "kind" : "neutral",
-        "opacity" : 0.35
-      }
-    },
-    {
-      "layers" : [
+        },
         {
           "image-name" : "egg-white.svg",
           "name" : "Egg white"
