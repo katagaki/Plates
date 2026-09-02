@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sage">
+  <path d="M24 42V20" stroke="#6f8a5c" stroke-width="2.4" stroke-linecap="round"/>
+  <ellipse cx="15" cy="22" rx="8" ry="5" transform="rotate(-25 15 22)" fill="#8fa17c"/>
+  <ellipse cx="33" cy="20" rx="8" ry="5" transform="rotate(20 33 20)" fill="#a3b391"/>
+  <ellipse cx="24" cy="13" rx="6" ry="8" fill="#8fa17c"/>
+  <path d="M24 8v10" stroke="#b9c6a9" stroke-width="1.4"/>
+</svg>

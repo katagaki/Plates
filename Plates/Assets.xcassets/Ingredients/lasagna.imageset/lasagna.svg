@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lasagna sheets">
+  <rect x="8" y="14" width="30" height="9" rx="2" fill="#f0c463"/>
+  <rect x="11" y="22" width="30" height="9" rx="2" fill="#e8b850"/>
+  <rect x="8" y="30" width="30" height="9" rx="2" fill="#f0c463"/>
+  <g stroke="#d9a63c" stroke-width="1.4"><path d="M8 18h30"/><path d="M11 26h30"/><path d="M8 34h30"/></g>
+</svg>

@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Napa cabbage">
+  <path d="M24 6c8 0 13 8 13 18s-5 18-13 18-13-8-13-18S16 6 24 6Z" fill="#dfe8cf"/>
+  <path d="M24 6c5 0 8 8 8 18s-3 18-8 18Z" fill="#f2f6e9"/>
+  <path d="M17 12c-2 6-2 20 1 26M31 12c2 6 2 20-1 26" stroke="#a8cf8e" stroke-width="1.8" fill="none"/>
+  <path d="M13 30c2 7 6 12 11 12s9-5 11-12Z" fill="#f6f4ea"/>
+</svg>

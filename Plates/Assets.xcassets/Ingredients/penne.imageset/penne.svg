@@ -1,0 +1,11 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Penne">
+  <g fill="#f0c463">
+    <path d="M10 26 20 18l8 5-10 8Z"/>
+    <path d="M22 34 32 26l8 5-10 8Z"/>
+    <path d="M26 18 36 10l6 4-10 8Z"/>
+  </g>
+  <g fill="#d9a63c">
+    <path d="M18 20 20 18l8 5-2 2Z"/>
+    <path d="M30 28l2-2 8 5-2 2Z"/>
+  </g>
+</svg>

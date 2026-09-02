@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Anchovies">
+  <path d="M6 20c5-5 12-7 18-6 5 1 8 3 8 5s-3 4-8 5c-6 1-13-1-18-4Z" fill="#a8b0b8"/>
+  <path d="M32 19 40 15v8Z" fill="#8d939b"/>
+  <path d="M8 30c5-4 12-6 18-5 5 1 8 3 8 5s-3 4-8 4c-6 1-13-1-18-4Z" fill="#c3ccd5"/>
+  <path d="M34 29 42 26v7Z" fill="#a8b0b8"/>
+  <g fill="#4a4e54"><circle cx="14" cy="17" r="1.2"/><circle cx="16" cy="28" r="1.2"/></g>
+</svg>

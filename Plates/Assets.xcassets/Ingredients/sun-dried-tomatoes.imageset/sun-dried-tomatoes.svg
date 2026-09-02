@@ -1,0 +1,9 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sun-dried tomatoes">
+  <path d="M9 30c0-6 7-10 15-10s15 4 15 10Z" fill="#8f2f28"/>
+  <g fill="#b4423a">
+    <path d="M14 28c2-3 5-4 7-2s0 5-3 5-5-1-4-3Z"/>
+    <path d="M24 25c2-3 6-3 7-1s-1 5-4 5-4-2-3-4Z"/>
+    <path d="M31 30c2-2 5-2 6 0Z"/>
+  </g>
+  <path d="M7 30h34v3a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2Z" fill="#c8c2b6"/>
+</svg>

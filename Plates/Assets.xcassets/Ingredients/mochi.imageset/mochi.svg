@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mochi">
+  <ellipse cx="24" cy="28" rx="15" ry="11" fill="#f8f6f1"/>
+  <ellipse cx="24" cy="24" rx="13" ry="9" fill="#ffffff"/>
+  <path d="M16 22c3-3 8-4 12-2" stroke="#f0ece4" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M20 33c3 2 6 2 9 0" stroke="#e6e0d4" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+</svg>

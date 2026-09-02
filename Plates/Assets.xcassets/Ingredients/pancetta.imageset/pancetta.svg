@@ -1,0 +1,5 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pancetta">
+  <circle cx="24" cy="26" r="14" fill="#e39a9a"/>
+  <path d="M24 12a14 14 0 0 1 0 28" fill="#dd8a8a"/>
+  <g fill="#f8f6f1"><path d="M12 22c8-2 16-2 24 0v3c-8-2-16-2-24 0Z"/><path d="M13 31c7-2 15-2 22 0v3c-7-2-15-2-22 0Z"/></g>
+</svg>

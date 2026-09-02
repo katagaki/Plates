@@ -1,0 +1,10 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fusilli">
+  <g stroke="#f0c463" stroke-width="6" fill="none" stroke-linecap="round">
+    <path d="M15 40c-4-4 4-6 0-10s4-6 0-10"/>
+    <path d="M30 38c-4-4 4-6 0-10s4-6 0-10"/>
+  </g>
+  <g stroke="#d9a63c" stroke-width="1.6" fill="none">
+    <path d="M15 40c-4-4 4-6 0-10s4-6 0-10"/>
+    <path d="M30 38c-4-4 4-6 0-10s4-6 0-10"/>
+  </g>
+</svg>

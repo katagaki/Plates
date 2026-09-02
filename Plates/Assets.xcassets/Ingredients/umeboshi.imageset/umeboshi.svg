@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Umeboshi">
+  <circle cx="24" cy="27" r="13" fill="#c0445c"/>
+  <path d="M15 22c3-4 7-5 10-4" stroke="#d96b80" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M20 30c2-2 4-2 6 0s4 2 6 0" stroke="#9c2f45" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <path d="M24 14c1-3 3-4 5-4-2 2-2 3-1 5Z" fill="#5f8c3f"/>
+</svg>

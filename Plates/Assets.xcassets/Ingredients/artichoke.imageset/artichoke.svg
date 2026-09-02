@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Artichoke">
+  <path d="M24 8c8 4 11 12 9 20-2 7-6 11-9 11s-7-4-9-11c-2-8 1-16 9-20Z" fill="#5f7c45"/>
+  <path d="M24 8c4 4 5 12 4 19-1 5-2 9-4 12" fill="#7a9e4e"/>
+  <g stroke="#8fb35c" stroke-width="1.6" fill="none">
+    <path d="M17 16c3 2 11 2 14 0"/><path d="M16 24c4 2 12 2 16 0"/><path d="M17 31c3 2 11 2 14 0"/>
+  </g>
+</svg>

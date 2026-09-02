@@ -1,0 +1,5 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pecorino">
+  <path d="M10 30 34 14v12L10 38Z" fill="#f2e2b8"/>
+  <path d="M10 30v8l24-12v-4Z" fill="#d9c489"/>
+  <path d="M34 14c3 1 3 10 0 12" stroke="#3c2a1c" stroke-width="3" fill="none"/>
+</svg>

@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Polenta">
+  <path d="M9 28h30a15 12 0 0 1-30 0Z" fill="#e6e0d4"/>
+  <path d="M12 28c2-6 7-9 12-9s10 3 12 9Z" fill="#f1c21b"/>
+  <g fill="#ffe97a"><circle cx="19" cy="25" r="1.4"/><circle cx="25" cy="23" r="1.4"/><circle cx="30" cy="26" r="1.4"/></g>
+  <rect x="20" y="40" width="8" height="3" rx="1.5" fill="#c8c2b6"/>
+</svg>

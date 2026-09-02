@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Prosciutto">
+  <path d="M8 30c4-9 12-14 22-14 7 0 11 3 10 7-1 5-8 8-16 10s-14 4-16-3Z" fill="#dd8a8a"/>
+  <g stroke="#f6dada" stroke-width="2.4" fill="none" stroke-linecap="round">
+    <path d="M13 29c5-6 12-9 19-10"/><path d="M16 34c5-6 12-9 19-11"/>
+  </g>
+</svg>

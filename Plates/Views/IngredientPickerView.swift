@@ -7,6 +7,7 @@ struct IngredientPickerView: View {
     @Binding var selection: [String]
 
     @State private var query = ""
+    @State private var collapsed: Set<IngredientCategory> = []
 
     private let columns = Array(repeating: GridItem(.flexible(), spacing: 12), count: 4)
 
@@ -17,7 +18,13 @@ struct IngredientPickerView: View {
                     section("Generate.Ingredients.Picked", icons: picked)
                 }
                 ForEach(matches, id: \.category) { group in
-                    section(group.category.title, icons: group.icons)
+                    section(
+                        group.category.title,
+                        icons: group.icons,
+                        isExpanded: isExpanded(group.category)
+                    ) {
+                        collapsed.formSymmetricDifference([group.category])
+                    }
                 }
             }
             .padding(.horizontal, .listRowInset)
@@ -44,15 +51,40 @@ struct IngredientPickerView: View {
         return selection.filter(shown.contains)
     }
 
-    private func section(_ title: LocalizedStringResource, icons: [String]) -> some View {
+    /// A group closes on a tap of its header. A search leaves every group it matched open,
+    /// so nothing found is hidden behind a closed header.
+    private func isExpanded(_ category: IngredientCategory) -> Bool {
+        !query.isEmpty || !collapsed.contains(category)
+    }
+
+    private func section(
+        _ title: LocalizedStringResource,
+        icons: [String],
+        isExpanded: Bool = true,
+        toggle: (() -> Void)? = nil
+    ) -> some View {
         Section {
-            ForEach(icons, id: \.self) { cell($0) }
+            if isExpanded {
+                ForEach(icons, id: \.self) { cell($0) }
+            }
         } header: {
-            Text(title)
-                .font(.subheadline.weight(.semibold))
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.vertical, 8)
-                .background(Color(uiColor: .systemGroupedBackground))
+            HStack {
+                Text(title)
+                Spacer(minLength: 0)
+                if toggle != nil {
+                    Image(systemName: "chevron.down")
+                        .font(.footnote.weight(.semibold))
+                        .foregroundStyle(.secondary)
+                        .rotationEffect(.degrees(isExpanded ? 0 : -90))
+                }
+            }
+            .font(.subheadline.weight(.semibold))
+            .padding(.vertical, 8)
+            .contentShape(.rect)
+            .background(Color(uiColor: .systemGroupedBackground))
+            .onTapGesture {
+                withAnimation { toggle?() }
+            }
         }
     }
 

@@ -1,0 +1,5 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Arugula">
+  <path d="M24 41V22" stroke="#5f8c3f" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M23 24c-6-1-9-4-11-9 5-1 9 1 11 4-1-4 0-8 2-11 3 4 3 9 1 12 3-3 7-4 11-3-2 5-6 8-12 7Z" fill="#4f7c37"/>
+  <path d="M25 24c5 0 9-3 11-7" stroke="#8fb35c" stroke-width="1.6" fill="none"/>
+</svg>
