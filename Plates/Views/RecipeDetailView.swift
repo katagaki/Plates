@@ -122,9 +122,11 @@ private struct SummaryCell<Value: View>: View {
             Text(label)
                 .font(.caption)
                 .foregroundStyle(.secondary)
+                .multilineTextAlignment(.center)
         }
-        .frame(maxWidth: .infinity)
         .padding(.vertical, 12)
+        .padding(.horizontal, 8)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .cardBackground()
     }
 }
