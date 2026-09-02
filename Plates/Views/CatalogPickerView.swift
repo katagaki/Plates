@@ -147,14 +147,8 @@ struct CatalogPickerView: View {
             toggle(asset)
         } label: {
             VStack(spacing: 2) {
-                RecipeIcon(path: path(asset), size: 34)
+                RecipeIcon(path: path(asset), size: 34, outline: isPicked ? .accentColor : nil)
                     .padding(4)
-                    .background {
-                        if isPicked {
-                            RoundedRectangle(cornerRadius: 12, style: .continuous)
-                                .stroke(.tint, lineWidth: 2)
-                        }
-                    }
                 Text(verbatim: IconCatalog.displayName(for: asset))
                     .font(.caption2)
                     .fontWeight(isPicked ? .bold : .regular)
