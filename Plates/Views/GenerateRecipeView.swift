@@ -7,7 +7,10 @@ struct GenerateRecipeView: View {
     let store: RecipeStore
 
     @State private var generator = RecipeGenerator()
-    @State private var request = GenerationRequest()
+    @State private var request = GenerationRequest(
+        ingredients: Pantry.ingredients,
+        tools: Pantry.tools
+    )
     @State private var draft: Recipe?
 
     var body: some View {
@@ -39,6 +42,8 @@ struct GenerateRecipeView: View {
             }
         }
         .interactiveDismissDisabled(isGenerating)
+        .onChange(of: request.ingredients) { Pantry.ingredients = request.ingredients }
+        .onChange(of: request.tools) { Pantry.tools = request.tools }
     }
 
     /// A generated recipe titles itself, so its title is shown as written.
