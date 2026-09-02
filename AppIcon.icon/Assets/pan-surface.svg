@@ -1,5 +1,5 @@
 <svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Frying pan cooking surface">
-  <g fill="#ffffff" transform="rotate(-45 512 512) translate(512,512) scale(0.8) translate(-512,-512)">
-    <circle cx="377" cy="512" r="260"/>
+  <g fill="#4e5359" transform="rotate(-45 512 512) translate(512,512) scale(0.86) translate(-512,-512)">
+    <circle cx="365" cy="512" r="260"/>
   </g>
 </svg>
