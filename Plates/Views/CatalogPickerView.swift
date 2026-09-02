@@ -28,14 +28,16 @@ struct CatalogPickerView: View {
     var body: some View {
         List {
             ForEach(matches) { group in
-                Section(isExpanded: expansion(for: group.id)) {
-                    grid(group.icons)
+                Section {
+                    if isExpanded(group.id) {
+                        grid(group.icons)
+                    }
                 } header: {
-                    Text(group.title)
+                    header(group)
                 }
             }
         }
-        .listStyle(.sidebar)
+        .listStyle(.grouped)
         .safeAreaInset(edge: .bottom) {
             if !selection.isEmpty {
                 pickedBar
@@ -87,18 +89,30 @@ struct CatalogPickerView: View {
     }
 
     /// A group closes on a tap of its header. A search leaves every group it matched open,
-    /// so nothing found is hidden behind a closed header.
-    private func expansion(for id: String) -> Binding<Bool> {
-        Binding(
-            get: { !query.isEmpty || !collapsed.contains(id) },
-            set: { isExpanded in
-                if isExpanded {
-                    collapsed.remove(id)
+    /// so nothing found is hidden behind a closed header. The grouped list style draws no
+    /// disclosure of its own, so the header carries the chevron.
+    private func isExpanded(_ id: String) -> Bool {
+        !query.isEmpty || !collapsed.contains(id)
+    }
+
+    private func header(_ group: Group) -> some View {
+        HStack {
+            Text(group.title)
+            Spacer(minLength: 0)
+            Image(systemName: "chevron.down")
+                .font(.footnote.weight(.semibold))
+                .rotationEffect(.degrees(isExpanded(group.id) ? 0 : -90))
+        }
+        .contentShape(.rect)
+        .onTapGesture {
+            withAnimation {
+                if collapsed.contains(group.id) {
+                    collapsed.remove(group.id)
                 } else {
-                    collapsed.insert(id)
+                    collapsed.insert(group.id)
                 }
             }
-        )
+        }
     }
 
     private func grid(_ icons: [String]) -> some View {
@@ -107,6 +121,7 @@ struct CatalogPickerView: View {
         }
         .padding(.vertical, 2)
         .listRowInsets(EdgeInsets(top: 2, leading: 4, bottom: 2, trailing: 4))
+        .listRowBackground(Color.clear)
     }
 
     private func toggle(_ asset: String) {
@@ -135,7 +150,7 @@ struct CatalogPickerView: View {
             .frame(maxWidth: .infinity, minHeight: 74, alignment: .top)
             .background {
                 if isPicked {
-                    RoundedRectangle(cornerRadius: 14, style: .continuous)
+                    RoundedRectangle(cornerRadius: .listRowCornerRadius, style: .continuous)
                         .fill(.tint)
                 }
             }
