@@ -111,6 +111,17 @@
         }
       }
     },
+    "Menu.Delete": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete"
+          }
+        }
+      }
+    },
     "Menu.Generate": {
       "extractionState": "manual",
       "localizations": {
@@ -360,6 +371,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Cancel"
+          }
+        }
+      }
+    },
+    "Shared.Done": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Done"
           }
         }
       }

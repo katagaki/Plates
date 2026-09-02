@@ -21,17 +21,29 @@ struct ContentView: View {
     @State private var search = ""
     @State private var isGenerating = false
 
+    private let columns = [GridItem(.flexible(), spacing: 12), GridItem(.flexible(), spacing: 12)]
+
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(visibleRecipes) { recipe in
-                    NavigationLink(value: recipe) {
-                        RecipeRow(recipe: recipe)
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: 12) {
+                    ForEach(visibleRecipes) { recipe in
+                        NavigationLink(value: recipe) {
+                            RecipeCard(recipe: recipe)
+                        }
+                        .buttonStyle(.plain)
+                        .contextMenu {
+                            Button(role: .destructive) {
+                                store.delete(recipe)
+                            } label: {
+                                Label("Menu.Delete", systemImage: "trash")
+                            }
+                        }
                     }
                 }
-                .onDelete { store.delete(atOffsets: $0, in: visibleRecipes) }
+                .padding(16)
             }
-            .listStyle(.insetGrouped)
+            .background(Color(uiColor: .systemGroupedBackground))
             .navigationTitle("Recipe.List.Title")
             .navigationDestination(for: Recipe.self) { RecipeDetailView(recipe: $0) }
             .searchable(text: $search, prompt: Text("Recipe.List.Search.Prompt"))
@@ -144,26 +156,38 @@ struct ContentView: View {
     }
 }
 
-private struct RecipeRow: View {
+private struct RecipeCard: View {
     let recipe: Recipe
 
     var body: some View {
-        HStack(spacing: 12) {
-            RecipeIcon(path: recipe.ingredients.supermarket?.first?.icon
-                ?? recipe.ingredients.general?.first?.icon
-                ?? "", size: 36)
+        VStack(alignment: .leading, spacing: 10) {
+            HStack(spacing: 6) {
+                RecipeIcon(path: iconPath, size: 40)
+                if recipe.tried == true {
+                    Image(systemName: "checkmark.seal.fill")
+                        .foregroundStyle(.secondary)
+                }
+                Spacer(minLength: 0)
+            }
             VStack(alignment: .leading, spacing: 2) {
                 Text(verbatim: recipe.title)
+                    .font(.headline)
                 Text(String(format: String(localized: "Recipe.Row.Subtitle"), recipe.time, recipe.serves))
-                    .font(.subheadline)
+                    .font(.caption)
                     .foregroundStyle(.secondary)
             }
-            Spacer(minLength: 0)
-            if recipe.tried == true {
-                Image(systemName: "checkmark.seal.fill")
-                    .foregroundStyle(.green)
-            }
         }
+        .multilineTextAlignment(.leading)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(14)
+        .background(Color(uiColor: .secondarySystemGroupedBackground), in: .rect(cornerRadius: 16))
+    }
+
+    /// The first ingredient's icon stands in for the recipe.
+    private var iconPath: String {
+        recipe.ingredients.supermarket?.first?.icon
+            ?? recipe.ingredients.general?.first?.icon
+            ?? ""
     }
 }
 

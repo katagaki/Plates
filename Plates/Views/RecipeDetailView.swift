@@ -3,85 +3,83 @@ import SwiftUI
 struct RecipeDetailView: View {
     let recipe: Recipe
 
+    @State private var isShowingTroubleshooting = false
+
+    private let tileColumns = [GridItem(.adaptive(minimum: 160), spacing: 12)]
+
     var body: some View {
-        List {
-            Section {
-                LabeledContent {
-                    Text(verbatim: recipe.time)
-                } label: {
-                    Text("Recipe.Detail.Time")
-                }
-                LabeledContent {
-                    Text(verbatim: recipe.serves)
-                } label: {
-                    Text("Recipe.Detail.Serves")
-                }
-                if recipe.tried == true {
-                    Label("Recipe.Detail.Tried", systemImage: "checkmark.seal.fill")
-                        .foregroundStyle(.green)
-                }
-            }
+        ScrollView {
+            VStack(alignment: .leading, spacing: 24) {
+                summary
 
-            ingredientSection(
-                "Recipe.Detail.Ingredients.Supermarket",
-                recipe.ingredients.supermarket,
-                color: .orange
-            )
-            ingredientSection(
-                "Recipe.Detail.Ingredients.General",
-                recipe.ingredients.general,
-                color: .yellow
-            )
-            ingredientSection(
-                "Recipe.Detail.Ingredients.Optional",
-                recipe.ingredients.optional,
-                color: .mint
-            )
+                ingredientSection("Recipe.Detail.Ingredients.Supermarket", recipe.ingredients.supermarket)
+                ingredientSection("Recipe.Detail.Ingredients.General", recipe.ingredients.general)
+                ingredientSection("Recipe.Detail.Ingredients.Optional", recipe.ingredients.optional)
 
-            toolSection(required: true)
-            toolSection(required: false)
+                toolSection(required: true)
+                toolSection(required: false)
 
-            Section {
-                ForEach(Array(recipe.steps.enumerated()), id: \.offset) { index, step in
-                    StepRow(number: index + 1, step: step)
-                }
-            } header: {
-                SectionHeading(title: "Recipe.Detail.Steps", color: .red)
-            }
-
-            if !recipe.troubleshooting.isEmpty {
-                Section {
-                    ForEach(recipe.troubleshooting) { entry in
-                        VStack(alignment: .leading, spacing: 4) {
-                            Text(verbatim: entry.problem)
-                                .font(.headline)
-                            Text(verbatim: entry.solution)
-                                .foregroundStyle(.secondary)
-                        }
-                        .padding(.vertical, 2)
+                section("Recipe.Detail.Steps") {
+                    ForEach(Array(recipe.steps.enumerated()), id: \.offset) { index, step in
+                        StepCard(number: index + 1, step: step)
                     }
-                } header: {
-                    SectionHeading(title: "Recipe.Detail.Troubleshooting", color: .purple)
+                }
+            }
+            .padding(16)
+        }
+        .background(Color(uiColor: .systemGroupedBackground))
+        .navigationTitle(recipe.title)
+        .navigationBarTitleDisplayMode(.large)
+        .toolbar {
+            if !recipe.troubleshooting.isEmpty {
+                ToolbarItem(placement: .bottomBar) {
+                    Button {
+                        isShowingTroubleshooting = true
+                    } label: {
+                        Label("Recipe.Detail.Troubleshooting", systemImage: "questionmark.circle")
+                    }
                 }
             }
         }
-        .navigationTitle(recipe.title)
-        .navigationBarTitleDisplayMode(.large)
+        .sheet(isPresented: $isShowingTroubleshooting) {
+            TroubleshootingView(entries: recipe.troubleshooting)
+        }
+    }
+
+    /// Time, servings, and whether it has been cooked, side by side.
+    private var summary: some View {
+        Grid(horizontalSpacing: 12) {
+            GridRow {
+                SummaryCell(label: "Recipe.Detail.Time") {
+                    Text(verbatim: recipe.time)
+                }
+                SummaryCell(label: "Recipe.Detail.Serves") {
+                    Text(verbatim: recipe.serves)
+                }
+                SummaryCell(label: "Recipe.Detail.Tried") {
+                    Image(systemName: recipe.tried == true ? "checkmark" : "minus")
+                }
+            }
+        }
     }
 
     @ViewBuilder
     private func ingredientSection(
         _ title: LocalizedStringResource,
-        _ entries: [Ingredient]?,
-        color: Color
+        _ entries: [Ingredient]?
     ) -> some View {
         if let entries, !entries.isEmpty {
-            Section {
-                ForEach(entries) { entry in
-                    IconTile(iconPath: entry.icon, name: entry.item, detail: entry.amount, note: entry.note)
+            section(title) {
+                LazyVGrid(columns: tileColumns, spacing: 12) {
+                    ForEach(entries) { entry in
+                        IconTile(
+                            iconPath: entry.icon,
+                            name: entry.item,
+                            detail: entry.amount,
+                            note: entry.note
+                        )
+                    }
                 }
-            } header: {
-                SectionHeading(title: title, color: color)
             }
         }
     }
@@ -90,21 +88,47 @@ struct RecipeDetailView: View {
     private func toolSection(required: Bool) -> some View {
         let entries = recipe.tools.filter { $0.required == required }
         if !entries.isEmpty {
-            Section {
-                ForEach(entries) { tool in
-                    IconTile(iconPath: tool.icon, name: tool.name, note: tool.note)
+            section(required ? "Recipe.Detail.Tools.Required" : "Recipe.Detail.Tools.Optional") {
+                LazyVGrid(columns: tileColumns, spacing: 12) {
+                    ForEach(entries) { tool in
+                        IconTile(iconPath: tool.icon, name: tool.name, note: tool.note)
+                    }
                 }
-            } header: {
-                SectionHeading(
-                    title: required ? "Recipe.Detail.Tools.Required" : "Recipe.Detail.Tools.Optional",
-                    color: .blue
-                )
             }
+        }
+    }
+
+    private func section(
+        _ title: LocalizedStringResource,
+        @ViewBuilder content: () -> some View
+    ) -> some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text(title)
+                .font(.headline)
+            content()
         }
     }
 }
 
-private struct StepRow: View {
+private struct SummaryCell<Value: View>: View {
+    let label: LocalizedStringResource
+    @ViewBuilder let value: Value
+
+    var body: some View {
+        VStack(spacing: 4) {
+            value
+                .font(.title3.weight(.semibold))
+            Text(label)
+                .font(.caption)
+                .foregroundStyle(.secondary)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 12)
+        .background(Color(uiColor: .secondarySystemGroupedBackground), in: .rect(cornerRadius: 16))
+    }
+}
+
+private struct StepCard: View {
     let number: Int
     let step: Step
 
@@ -117,7 +141,7 @@ private struct StepRow: View {
                     .resizable()
                     .scaledToFit()
                     .frame(maxWidth: .infinity)
-                    .background(Color(uiColor: .secondarySystemBackground), in: .rect(cornerRadius: 12))
+                    .background(Color(uiColor: .tertiarySystemGroupedBackground), in: .rect(cornerRadius: 12))
             }
             Text(String(format: String(localized: "Recipe.Detail.Step.Title"), number, step.title))
                 .font(.headline)
@@ -135,6 +159,8 @@ private struct StepRow: View {
                 .foregroundStyle(.tertiary)
             }
         }
-        .padding(.vertical, 6)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(12)
+        .background(Color(uiColor: .secondarySystemGroupedBackground), in: .rect(cornerRadius: 16))
     }
 }

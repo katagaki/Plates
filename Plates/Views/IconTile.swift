@@ -48,21 +48,8 @@ struct IconTile: View {
             }
             Spacer(minLength: 0)
         }
-        .padding(.vertical, 4)
-    }
-}
-
-/// A section heading carrying a colored left rule, matching the site.
-struct SectionHeading: View {
-    let title: LocalizedStringResource
-    let color: Color
-
-    var body: some View {
-        HStack(spacing: 8) {
-            Capsule()
-                .fill(color)
-                .frame(width: 3, height: 14)
-            Text(title)
-        }
+        .padding(12)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+        .background(Color(uiColor: .secondarySystemGroupedBackground), in: .rect(cornerRadius: 16))
     }
 }
