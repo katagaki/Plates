@@ -31,6 +31,7 @@ struct RecipeDetailView: View {
         .navigationBarTitleDisplayMode(.large)
         .toolbar {
             if !recipe.troubleshooting.isEmpty {
+                ToolbarSpacer(.flexible, placement: .bottomBar)
                 ToolbarItem(placement: .bottomBar) {
                     Button {
                         isShowingTroubleshooting = true
