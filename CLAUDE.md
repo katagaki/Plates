@@ -27,7 +27,11 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
   title, the icons it works with, and its points. It has no hint or image, which is where the
   file shape parts from the site's.
 - `Plates/Storage` holds the storage location and the file-backed `RecipeStore`.
-- `Plates/Intelligence` holds the Apple Intelligence `@Generable` types and the generator.
+- `Plates/Intelligence` holds the Apple Intelligence `@Generable` types and the generator. The
+  recipe is written in four passes, each in its own session, so no one request carries the whole
+  recipe. A pass runs on device first, and only a pass the on-device model rejects with
+  `contextSizeExceeded` is run again on `PrivateCloudComputeLanguageModel`. Keep passes small
+  enough that the cloud stays a fallback.
 - `Plates/Views` holds the list, detail, and generation views.
 - `Plates/SampleRecipes` holds the recipes bundled with the app for the "Add Sample Recipes"
   menu item.
@@ -49,7 +53,9 @@ adding an icon, copy the SVG in with explicit `width` and `height` on the root e
 otherwise the asset catalog will not take it.
 
 `IconCatalog` lists every icon, groups the ingredients into the categories the picker browses,
-and is the single source for the `.anyOf` guides the generator hands the model.
+and resolves whatever icon name the generator's model writes back onto one that exists. The
+catalog is never inlined into a `@Generable` schema: the on-device model has a 4,096 token
+window, and an `.anyOf` over 178 ingredient names overruns it before the prompt is even added.
 
 ## Localization
 

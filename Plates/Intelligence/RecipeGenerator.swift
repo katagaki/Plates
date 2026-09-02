@@ -20,11 +20,18 @@ struct GenerationRequest: Equatable, Sendable {
         description.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 
-    /// The picked ingredients as a cook would read them.
-    var ingredientNames: [String] { ingredients.map(IconCatalog.displayName) }
+    /// The picked ingredients as a cook would read them. A cook can tap the whole catalog,
+    /// which is more than the on-device window holds, so only the first `listLimit` are named.
+    /// Narrowing the choice is safe: what is left is still only things they have.
+    var ingredientNames: [String] {
+        ingredients.prefix(Self.listLimit).map(IconCatalog.displayName)
+    }
 
-    /// The picked tools as a cook would read them.
-    var toolNames: [String] { tools.map(IconCatalog.displayName) }
+    /// The picked tools as a cook would read them, capped the same way.
+    var toolNames: [String] { tools.prefix(Self.listLimit).map(IconCatalog.displayName) }
+
+    /// How many picked items a prompt names before it stops listing.
+    static let listLimit = 40
 }
 
 /// The first pass: what the dish is and what it needs. The method comes later, so this
@@ -79,7 +86,7 @@ struct GeneratedIngredient {
     @Guide(description: "The ingredient name, for example 'Thick-cut bread' or 'Spring onion'")
     var item: String
 
-    @Guide(description: "The icon that best matches this ingredient", .anyOf(IconCatalog.ingredients))
+    @Guide(description: "The catalog icon for this ingredient, lowercase and hyphenated, such as 'spring-onion'")
     var icon: String
 
     @Guide(description: "The quantity only, such as '150 g', '1/2', '2 tbsp', or 'to taste'")
@@ -94,7 +101,7 @@ struct GeneratedTool {
     @Guide(description: "The tool name. The main pan names its size, for example 'Frying pan (about 24 cm)'.")
     var name: String
 
-    @Guide(description: "The icon that best matches this tool", .anyOf(IconCatalog.tools))
+    @Guide(description: "The catalog icon for this tool, lowercase and hyphenated, such as 'cutting-board'")
     var icon: String
 
     @Guide(description: "True when the recipe cannot be cooked without it")
@@ -180,6 +187,10 @@ final class RecipeGenerator {
 
     private let model = SystemLanguageModel.default
 
+    /// Where a pass goes when it does not fit on device. Held rather than made per pass so
+    /// availability and quota are read from one place.
+    private let cloud = PrivateCloudComputeLanguageModel()
+
     var availability: SystemLanguageModel.Availability { model.availability }
 
     var isAvailable: Bool { model.availability == .available }
@@ -219,52 +230,78 @@ final class RecipeGenerator {
 
     // MARK: - Passes
 
+    /// Runs one pass on device, and runs it again on Private Cloud Compute when the request
+    /// does not fit the on-device window. Nothing leaves the device until the on-device model
+    /// has turned the pass down, and a pass small enough to run at home never reaches the
+    /// cloud at all.
+    private func run<Value>(
+        tools: [any FoundationModels.Tool] = [],
+        instructions: String,
+        _ body: (LanguageModelSession) async throws -> Value
+    ) async throws -> Value {
+        do {
+            return try await body(LanguageModelSession(tools: tools, instructions: instructions))
+        } catch let error as LanguageModelError {
+            guard case .contextSizeExceeded = error else { throw error }
+            guard cloud.isAvailable else { throw GenerationError.tooLarge }
+            return try await body(
+                LanguageModelSession(
+                    model: cloud,
+                    tools: cloud.capabilities.contains(.toolCalling) ? tools : [],
+                    instructions: instructions
+                )
+            )
+        }
+    }
+
     private func generateBase(_ request: GenerationRequest) async throws -> GeneratedRecipeBase {
         progress.stage = .idea
-        let session = LanguageModelSession(
+        return try await run(
             tools: [IngredientLookupTool(available: request.ingredients)],
             instructions: Self.instructions(for: request)
-        )
-        let stream = session.streamResponse(
-            to: Self.prompt(for: request),
-            generating: GeneratedRecipeBase.self
-        )
-        var latest: GeneratedContent?
-        for try await snapshot in stream {
-            let partial = snapshot.content
-            progress.title = partial.title
-            progress.time = partial.time
-            progress.serves = partial.serves
-            progress.ingredientCount = (partial.supermarket?.count ?? 0)
-                + (partial.general?.count ?? 0)
-                + (partial.optional?.count ?? 0)
-            progress.toolCount = partial.tools?.count ?? 0
-            latest = snapshot.rawContent
+        ) { session in
+            let stream = session.streamResponse(
+                to: Self.prompt(for: request),
+                generating: GeneratedRecipeBase.self
+            )
+            var latest: GeneratedContent?
+            for try await snapshot in stream {
+                let partial = snapshot.content
+                progress.title = partial.title
+                progress.time = partial.time
+                progress.serves = partial.serves
+                progress.ingredientCount = (partial.supermarket?.count ?? 0)
+                    + (partial.general?.count ?? 0)
+                    + (partial.optional?.count ?? 0)
+                progress.toolCount = partial.tools?.count ?? 0
+                latest = snapshot.rawContent
+            }
+            guard let latest else { throw GenerationError.empty }
+            return try GeneratedRecipeBase(latest)
         }
-        guard let latest else { throw GenerationError.empty }
-        return try GeneratedRecipeBase(latest)
     }
 
     private func generateOutline(for base: GeneratedRecipeBase) async throws -> [String] {
         progress.stage = .outline
-        let session = LanguageModelSession(instructions: Self.outlineInstructions)
-        let stream = session.streamResponse(
-            to: """
-            Recipe: \(base.title), \(base.time), serves \(base.serves).
-            Ingredients: \(Self.list(base.supermarket + base.general + base.optional)).
-            Tools: \(base.tools.map(\.name).joined(separator: ", ")).
+        let steps = try await run(instructions: Self.outlineInstructions) { session in
+            let stream = session.streamResponse(
+                to: """
+                Recipe: \(base.title), \(base.time), serves \(base.serves).
+                Ingredients: \(Self.list(base.supermarket + base.general + base.optional)).
+                Tools: \(base.tools.map(\.name).joined(separator: ", ")).
 
-            Outline the method as step titles, from prep to plating.
-            """,
-            generating: GeneratedStepOutline.self
-        )
-        var latest: GeneratedContent?
-        for try await snapshot in stream {
-            progress.stepCount = snapshot.content.steps?.count ?? 0
-            latest = snapshot.rawContent
+                Outline the method as step titles, from prep to plating.
+                """,
+                generating: GeneratedStepOutline.self
+            )
+            var latest: GeneratedContent?
+            for try await snapshot in stream {
+                progress.stepCount = snapshot.content.steps?.count ?? 0
+                latest = snapshot.rawContent
+            }
+            guard let latest else { throw GenerationError.empty }
+            return try GeneratedStepOutline(latest).steps
         }
-        guard let latest else { throw GenerationError.empty }
-        let steps = try GeneratedStepOutline(latest).steps
         progress.stepCount = steps.count
         return steps
     }
@@ -275,18 +312,20 @@ final class RecipeGenerator {
         var steps: [Step] = []
         for (index, title) in outline.enumerated() {
             progress.latestStep = title
-            let session = LanguageModelSession(instructions: Self.stepInstructions)
-            let response = try await session.respond(
-                to: """
-                Recipe: \(base.title), \(base.time), serves \(base.serves).
-                Ingredients: \(Self.list(base.supermarket + base.general + base.optional)).
-                Method: \(outline.enumerated().map { "\($0.offset + 1). \($0.element)" }.joined(separator: " ")).
+            let points = try await run(instructions: Self.stepInstructions) { session in
+                let response = try await session.respond(
+                    to: """
+                    Recipe: \(base.title), \(base.time), serves \(base.serves).
+                    Ingredients: \(Self.list(base.supermarket + base.general + base.optional)).
+                    Method: \(outline.enumerated().map { "\($0.offset + 1). \($0.element)" }.joined(separator: " ")).
 
-                Write step \(index + 1), "\(title)".
-                """,
-                generating: GeneratedStepDetail.self
-            )
-            steps.append(Step(title: title, icons: nil, points: response.content.points))
+                    Write step \(index + 1), "\(title)".
+                    """,
+                    generating: GeneratedStepDetail.self
+                )
+                return response.content.points
+            }
+            steps.append(Step(title: title, icons: nil, points: points))
             progress.writtenStepCount = steps.count
         }
         return steps
@@ -297,24 +336,25 @@ final class RecipeGenerator {
         outline: [String]
     ) async throws -> [Troubleshooting] {
         progress.stage = .troubleshooting
-        let session = LanguageModelSession(instructions: Self.troubleshootingInstructions)
-        let stream = session.streamResponse(
-            to: """
-            Recipe: \(base.title), \(base.time), serves \(base.serves).
-            Method: \(outline.enumerated().map { "\($0.offset + 1). \($0.element)" }.joined(separator: " ")).
+        return try await run(instructions: Self.troubleshootingInstructions) { session in
+            let stream = session.streamResponse(
+                to: """
+                Recipe: \(base.title), \(base.time), serves \(base.serves).
+                Method: \(outline.enumerated().map { "\($0.offset + 1). \($0.element)" }.joined(separator: " ")).
 
-            What goes wrong when someone cooks this, and how do they fix it?
-            """,
-            generating: GeneratedTroubleshootingList.self
-        )
-        var latest: GeneratedContent?
-        for try await snapshot in stream {
-            progress.troubleshootingCount = snapshot.content.entries?.count ?? 0
-            latest = snapshot.rawContent
-        }
-        guard let latest else { throw GenerationError.empty }
-        return try GeneratedTroubleshootingList(latest).entries.map {
-            Troubleshooting(problem: $0.problem, solution: $0.solution)
+                What goes wrong when someone cooks this, and how do they fix it?
+                """,
+                generating: GeneratedTroubleshootingList.self
+            )
+            var latest: GeneratedContent?
+            for try await snapshot in stream {
+                progress.troubleshootingCount = snapshot.content.entries?.count ?? 0
+                latest = snapshot.rawContent
+            }
+            guard let latest else { throw GenerationError.empty }
+            return try GeneratedTroubleshootingList(latest).entries.map {
+                Troubleshooting(problem: $0.problem, solution: $0.solution)
+            }
         }
     }
 
@@ -322,8 +362,15 @@ final class RecipeGenerator {
 
     private enum GenerationError: LocalizedError {
         case empty
+        /// Too big for this iPhone, with no cloud to send it to.
+        case tooLarge
 
-        var errorDescription: String? { String(localized: "Generate.Error.Empty") }
+        var errorDescription: String? {
+            switch self {
+            case .empty: String(localized: "Generate.Error.Empty")
+            case .tooLarge: String(localized: "Generate.Error.TooLarge")
+            }
+        }
     }
 
     private static let houseStyle = """

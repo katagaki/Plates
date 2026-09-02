@@ -67,6 +67,17 @@
         }
       }
     },
+    "Generate.Error.TooLarge": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "There was too much to work out at once. Try again with fewer ingredients."
+          }
+        }
+      }
+    },
     "Generate.Ingredients.Empty": {
       "extractionState": "manual",
       "localizations": {
