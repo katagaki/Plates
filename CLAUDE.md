@@ -23,7 +23,9 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
 ## Layout
 
 - `Plates/Models` holds `Recipe` and the icon catalog. Property order in the `Codable` types
-  is the key order written back to disk, so keep it matching the schema.
+  is the key order written back to disk, so keep it matching the schema. A step carries a
+  title, the icons it works with, and its points. It has no hint or image, which is where the
+  file shape parts from the site's.
 - `Plates/Storage` holds the storage location and the file-backed `RecipeStore`.
 - `Plates/Intelligence` holds the Apple Intelligence `@Generable` types and the generator.
 - `Plates/Views` holds the list, detail, and generation views.
@@ -34,12 +36,13 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
 
 ## Icons
 
-Every SVG from the site lives in `Plates/Assets.xcassets`: ingredient icons in `Ingredients`,
-tool icons in `Tools`, and step illustrations in `Steps`. They are asset catalog vector images
+Every SVG lives in `Plates/Assets.xcassets`: ingredient icons in `Ingredients` and tool icons
+in `Tools`. The site's step illustrations are not shipped. They are asset catalog vector images
 with `preserves-vector-representation`, named after the SVG file, so a schema path such as
 `img/ingredients/garlic.svg` maps to the asset `garlic`. When adding an icon, copy the SVG in
 with explicit `width` and `height` on the root element, otherwise the asset catalog will not
-take it.
+take it. `IconCatalog` lists every asset, groups the ingredients into the categories the
+picker browses, and is the single source for the `.anyOf` guides the generator hands the model.
 
 ## Localization
 
