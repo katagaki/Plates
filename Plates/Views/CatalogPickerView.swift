@@ -30,14 +30,16 @@ struct CatalogPickerView: View {
     var body: some View {
         List {
             ForEach(matches) { group in
-                Section(isExpanded: expansion(for: group.id)) {
-                    grid(group.icons)
+                Section {
+                    if isExpanded(group.id) {
+                        grid(group.icons)
+                    }
                 } header: {
-                    Text(group.title)
+                    header(group)
                 }
             }
         }
-        .listStyle(.sidebar)
+        .listStyle(.insetGrouped)
         .safeAreaInset(edge: .bottom) { pickedBar }
         .animation(.default, value: selection)
         .searchable(text: $query, prompt: Text(searchPrompt))
@@ -97,19 +99,30 @@ struct CatalogPickerView: View {
     }
 
     /// A group closes on a tap of its header. A search leaves every group it matched open,
-    /// so nothing found is hidden behind a closed header. The disclosure is the list's own,
-    /// which only the sidebar style draws.
-    private func expansion(for id: String) -> Binding<Bool> {
-        Binding(
-            get: { !query.isEmpty || !collapsed.contains(id) },
-            set: { isExpanded in
-                if isExpanded {
-                    collapsed.remove(id)
+    /// so nothing found is hidden behind a closed header. The inset grouped style draws no
+    /// disclosure of its own, so the header carries the chevron.
+    private func isExpanded(_ id: String) -> Bool {
+        !query.isEmpty || !collapsed.contains(id)
+    }
+
+    private func header(_ group: IconGroup) -> some View {
+        HStack {
+            Text(group.title)
+            Spacer(minLength: 0)
+            Image(systemName: "chevron.down")
+                .font(.footnote.weight(.semibold))
+                .rotationEffect(.degrees(isExpanded(group.id) ? 0 : -90))
+        }
+        .contentShape(.rect)
+        .onTapGesture {
+            withAnimation {
+                if collapsed.contains(group.id) {
+                    collapsed.remove(group.id)
                 } else {
-                    collapsed.insert(id)
+                    collapsed.insert(group.id)
                 }
             }
-        )
+        }
     }
 
     private func grid(_ icons: [String]) -> some View {
