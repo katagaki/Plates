@@ -66,7 +66,8 @@ struct RecipeDetailView: View {
                     Text(verbatim: recipe.serves)
                 }
                 SummaryCell(label: "Recipe.Detail.Tried") {
-                    Image(systemName: recipe.tried == true ? "checkmark" : "minus")
+                    // Drawn as text so the mark sits on the same line as the other two cells.
+                    Text(Image(systemName: recipe.tried == true ? "checkmark" : "xmark"))
                 }
             }
         }
