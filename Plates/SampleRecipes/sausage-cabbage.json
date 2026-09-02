@@ -77,6 +77,9 @@
   "steps": [
     {
       "title": "Cut cabbage",
+      "icons": [
+        "img/ingredients/cabbage.svg"
+      ],
       "points": [
         "Tear or cut the cabbage into rough 4 cm squares.",
         "Discard the thick core."
@@ -84,6 +87,9 @@
     },
     {
       "title": "Slice sausage",
+      "icons": [
+        "img/ingredients/sausage.svg"
+      ],
       "points": [
         "Slice the sausages diagonally into coins about 1 cm thick.",
         "Diagonal cuts give each piece more surface to brown."
@@ -91,6 +97,11 @@
     },
     {
       "title": "Mix sauce",
+      "icons": [
+        "img/ingredients/soy-sauce.svg",
+        "img/ingredients/mustard.svg",
+        "img/tools/bowl.svg"
+      ],
       "points": [
         "Stir the soy sauce and mustard together in a small bowl.",
         "Set it next to the stove: the end of this recipe goes fast."
@@ -98,6 +109,10 @@
     },
     {
       "title": "Brown sausage",
+      "icons": [
+        "img/ingredients/sausage.svg",
+        "img/ingredients/oil.svg"
+      ],
       "points": [
         "Heat the oil over medium-high.",
         "Spread the sausage coins in one layer and cook about 2 minutes, turning once.",
@@ -106,15 +121,21 @@
     },
     {
       "title": "Add cabbage",
+      "icons": [
+        "img/ingredients/cabbage.svg"
+      ],
       "points": [
         "Pile in all the cabbage. It looks like too much, it isn't.",
         "Let it sit untouched for 1 minute so the bottom layer chars a little.",
         "Toss, then repeat: rest, toss, rest."
-      ],
-      "hint": "Constant stirring steams the cabbage. Letting it sit against the hot pan is what gives you sweet, browned edges."
+      ]
     },
     {
       "title": "Check cabbage",
+      "icons": [
+        "img/ingredients/cabbage.svg",
+        "img/tools/pan.svg"
+      ],
       "points": [
         "After 3 to 4 minutes it should be glossy and wilted at the edges.",
         "The thick parts should still have some crunch.",
@@ -123,12 +144,19 @@
     },
     {
       "title": "Add sauce",
+      "icons": [
+        "img/ingredients/sausage.svg",
+        "img/ingredients/soy-sauce.svg",
+        "img/ingredients/mustard.svg",
+        "img/ingredients/pepper.svg",
+        "img/ingredients/salt.svg",
+        "img/tools/pan.svg"
+      ],
       "points": [
         "Pour the soy and mustard mixture around the edge of the pan.",
         "Toss everything for 30 seconds, then plate.",
         "Taste before you finish with black pepper: the sausage may carry enough salt on its own."
-      ],
-      "hint": "Sauce poured onto the hot pan edge sizzles and gets aromatic. Poured on the vegetables it just makes them wet."
+      ]
     }
   ],
   "troubleshooting": [

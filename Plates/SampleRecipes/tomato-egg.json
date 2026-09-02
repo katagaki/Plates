@@ -94,6 +94,10 @@
   "steps": [
     {
       "title": "Cut tomatoes",
+      "icons": [
+        "img/ingredients/tomato.svg",
+        "img/ingredients/spring-onion.svg"
+      ],
       "points": [
         "Cut each tomato into 6 to 8 wedges.",
         "Keep the juice and seeds, they become the sauce.",
@@ -102,6 +106,12 @@
     },
     {
       "title": "Beat eggs",
+      "icons": [
+        "img/ingredients/egg.svg",
+        "img/ingredients/salt.svg",
+        "img/ingredients/pepper.svg",
+        "img/tools/bowl.svg"
+      ],
       "points": [
         "Crack the eggs into a bowl with a pinch of salt and the white pepper.",
         "Beat until the yolks and whites are one color, about 20 seconds.",
@@ -110,6 +120,12 @@
     },
     {
       "title": "Heat pan",
+      "icons": [
+        "img/ingredients/egg.svg",
+        "img/ingredients/oil.svg",
+        "img/ingredients/sesame-oil.svg",
+        "img/tools/pan.svg"
+      ],
       "points": [
         "Put 1 tbsp of the oil in over medium-high and wait until it thins out and shimmers.",
         "A drop of egg should sizzle and puff immediately.",
@@ -118,24 +134,39 @@
     },
     {
       "title": "Scramble eggs",
+      "icons": [
+        "img/ingredients/egg.svg",
+        "img/tools/spatula.svg"
+      ],
       "points": [
         "Pour the eggs in and leave them for 10 seconds, until the edges set.",
         "Push the set parts to the middle with the spatula in slow, large sweeps.",
         "Take them out while the middle still looks wet, about 30 seconds in total."
-      ],
-      "hint": "The eggs go back into a hot pan later, so they finish cooking twice. Taking them out underdone is what keeps them soft at the end."
+      ]
     },
     {
       "title": "Cook tomatoes",
+      "icons": [
+        "img/ingredients/tomato.svg",
+        "img/ingredients/spring-onion.svg",
+        "img/ingredients/oil.svg",
+        "img/ingredients/pepper.svg",
+        "img/ingredients/sesame-oil.svg",
+        "img/tools/pan.svg"
+      ],
       "points": [
         "Add the remaining oil and the white parts of the spring onion, then the tomato wedges.",
         "Press them gently with the spatula and cook 3 to 4 minutes.",
         "They are ready when the skins slip loose and there is a pool of red juice in the pan."
-      ],
-      "hint": "If the tomatoes stay dry and firm, put the lid on for a minute. Trapped steam softens the skins much faster than heat alone."
+      ]
     },
     {
       "title": "Season sauce",
+      "icons": [
+        "img/ingredients/sugar.svg",
+        "img/ingredients/salt.svg",
+        "img/ingredients/ketchup.svg"
+      ],
       "points": [
         "Stir in the sugar, a good pinch of salt, and the ketchup if you are using it.",
         "Taste the juice now. It should be sweet first and sour second.",
@@ -144,6 +175,12 @@
     },
     {
       "title": "Return eggs",
+      "icons": [
+        "img/ingredients/egg.svg",
+        "img/ingredients/spring-onion.svg",
+        "img/ingredients/oil.svg",
+        "img/ingredients/sesame-oil.svg"
+      ],
       "points": [
         "Slide the eggs back in and fold them through the sauce two or three times.",
         "Kill the heat after 30 seconds, while the curds are still in large pieces.",

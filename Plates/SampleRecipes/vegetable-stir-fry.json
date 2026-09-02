@@ -132,6 +132,11 @@
   "steps": [
     {
       "title": "Cut hard vegetables",
+      "icons": [
+        "img/ingredients/carrot.svg",
+        "img/ingredients/onion.svg",
+        "img/ingredients/spring-onion.svg"
+      ],
       "points": [
         "Cut the carrot into thin strips and the onion into wedges about 1 cm thick.",
         "These two go in first and take the longest, so keep them thinner than everything else.",
@@ -140,15 +145,29 @@
     },
     {
       "title": "Cut soft vegetables",
+      "icons": [
+        "img/ingredients/cabbage.svg",
+        "img/ingredients/bell-pepper.svg",
+        "img/ingredients/mushroom.svg",
+        "img/ingredients/pepper.svg",
+        "img/ingredients/pork.svg"
+      ],
       "points": [
         "Cut the cabbage into rough 4 cm squares and the bell pepper into strips.",
         "Slice the mushrooms about 5 mm thick.",
         "Keep this second pile separate from the first."
-      ],
-      "hint": "Two piles is the whole trick to a stir-fry with this many vegetables. Sorting by how long each one needs means you never have to think about timing once the pan is hot."
+      ]
     },
     {
       "title": "Prep aromatics",
+      "icons": [
+        "img/ingredients/bean-sprouts.svg",
+        "img/ingredients/onion.svg",
+        "img/ingredients/bell-pepper.svg",
+        "img/ingredients/garlic.svg",
+        "img/ingredients/spring-onion.svg",
+        "img/ingredients/ginger.svg"
+      ],
       "points": [
         "Chop the garlic and the ginger finely.",
         "Cut the spring onion into short pieces, keeping the white and green parts apart.",
@@ -157,6 +176,12 @@
     },
     {
       "title": "Mix sauce",
+      "icons": [
+        "img/ingredients/soy-sauce.svg",
+        "img/ingredients/bouillon.svg",
+        "img/tools/pan.svg",
+        "img/tools/bowl.svg"
+      ],
       "points": [
         "Stir the soy sauce and bouillon powder together in a small bowl.",
         "Dissolving the powder now stops it clumping in the pan.",
@@ -165,6 +190,14 @@
     },
     {
       "title": "Fry aromatics",
+      "icons": [
+        "img/ingredients/onion.svg",
+        "img/ingredients/garlic.svg",
+        "img/ingredients/spring-onion.svg",
+        "img/ingredients/oil.svg",
+        "img/ingredients/ginger.svg",
+        "img/ingredients/sesame-oil.svg"
+      ],
       "points": [
         "Heat the oil over medium, then add the garlic, ginger, and the white spring onion.",
         "Stir for about 30 seconds, until you can smell them.",
@@ -173,6 +206,11 @@
     },
     {
       "title": "Add hard vegetables",
+      "icons": [
+        "img/ingredients/carrot.svg",
+        "img/ingredients/onion.svg",
+        "img/ingredients/spring-onion.svg"
+      ],
       "points": [
         "Turn the heat to high and add the carrot and onion.",
         "Stir-fry for 2 minutes, until the onion edges turn clear.",
@@ -181,15 +219,23 @@
     },
     {
       "title": "Add soft vegetables",
+      "icons": [
+        "img/ingredients/cabbage.svg",
+        "img/ingredients/bell-pepper.svg",
+        "img/ingredients/mushroom.svg",
+        "img/ingredients/pepper.svg"
+      ],
       "points": [
         "Add the cabbage, bell pepper, and mushrooms all at once.",
         "Let the pile sit for 1 minute without touching it, then toss.",
         "Repeat twice: rest, toss, rest. About 3 minutes in total."
-      ],
-      "hint": "Constant stirring steams vegetables in their own water. Letting them press against the hot pan is what browns the edges and keeps them crisp."
+      ]
     },
     {
       "title": "Add bean sprouts",
+      "icons": [
+        "img/ingredients/bean-sprouts.svg"
+      ],
       "points": [
         "Tip in the bean sprouts and toss for 1 minute, no longer.",
         "They should still squeak against your teeth.",
@@ -198,12 +244,19 @@
     },
     {
       "title": "Add sauce",
+      "icons": [
+        "img/ingredients/onion.svg",
+        "img/ingredients/bell-pepper.svg",
+        "img/ingredients/spring-onion.svg",
+        "img/ingredients/oil.svg",
+        "img/ingredients/soy-sauce.svg",
+        "img/ingredients/bouillon.svg"
+      ],
       "points": [
         "Pour the soy and bouillon mixture around the edge of the pan.",
         "Toss everything for 30 seconds, then kill the heat.",
         "Taste before adding salt, then finish with black pepper, the green spring onion, and the sesame oil."
-      ],
-      "hint": "Sauce poured onto bare hot metal sizzles and turns fragrant. Poured onto the pile it just makes the vegetables wet."
+      ]
     }
   ],
   "troubleshooting": [

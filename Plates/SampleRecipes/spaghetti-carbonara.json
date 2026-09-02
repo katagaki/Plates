@@ -94,15 +94,24 @@
   "steps": [
     {
       "title": "Mix egg and cheese",
+      "icons": [
+        "img/ingredients/egg.svg",
+        "img/ingredients/cheese.svg",
+        "img/ingredients/pepper.svg",
+        "img/tools/bowl.svg"
+      ],
       "points": [
         "Beat both eggs and the parmesan together in a small bowl.",
         "Add a generous grind of pepper.",
         "Set the bowl next to the stove."
-      ],
-      "hint": "The sauce comes together in seconds at the end, so it must be ready and within reach before anything touches the pan."
+      ]
     },
     {
       "title": "Cut bacon",
+      "icons": [
+        "img/ingredients/bacon.svg",
+        "img/tools/knife.svg"
+      ],
       "points": [
         "Cut the bacon into batons about 1 cm thick.",
         "This is the only knife work in the recipe."
@@ -110,15 +119,25 @@
     },
     {
       "title": "Brown bacon",
+      "icons": [
+        "img/ingredients/bacon.svg",
+        "img/ingredients/oil.svg",
+        "img/tools/pan.svg"
+      ],
       "points": [
         "Put the bacon in the cold pan, then turn the heat to medium.",
         "Cook for 2 to 3 minutes, until the fat runs and the edges crisp.",
         "Add the olive oil only if the bacon is very lean."
-      ],
-      "hint": "Starting in a cold pan renders the fat gently instead of scorching the outside. That fat flavors the whole dish, so don't pour it off."
+      ]
     },
     {
       "title": "Boil water",
+      "icons": [
+        "img/ingredients/bacon.svg",
+        "img/ingredients/water.svg",
+        "img/ingredients/salt.svg",
+        "img/tools/pan.svg"
+      ],
       "points": [
         "Leave the bacon and all its fat in the pan.",
         "Pour in the water and the salt.",
@@ -127,33 +146,48 @@
     },
     {
       "title": "Add spaghetti",
+      "icons": [
+        "img/ingredients/spaghetti.svg",
+        "img/tools/pan.svg",
+        "img/tools/chopsticks.svg"
+      ],
       "points": [
         "Lay the spaghetti in whole, fanned across the pan, and let the submerged ends soften for about 30 seconds.",
         "Press the standing ends down with the tongs until every strand is under.",
         "Cook uncovered for the time on the packet, usually 8 to 9 minutes."
-      ],
-      "hint": "Whole strands are longer than the pan and will stick out at first. They bend on their own in half a minute. Stir during the first minute so they don't glue together while the surface starch dissolves."
+      ]
     },
     {
       "title": "Reduce liquid",
+      "icons": [
+        "img/ingredients/water.svg"
+      ],
       "points": [
         "Keep it at a steady bubble, stirring now and then.",
         "Aim for about two spoonfuls of starchy, cloudy liquid left when the pasta is done.",
         "Add a splash of water if it dries out early, or boil it off if there's too much."
-      ],
-      "hint": "Whole eggs carry more water than yolks do, so leave the pan on the dry side. The sauce loosens easily later, but a watery one is hard to bring back."
+      ]
     },
     {
       "title": "Add egg mixture",
+      "icons": [
+        "img/ingredients/egg.svg",
+        "img/tools/pan.svg",
+        "img/tools/chopsticks.svg"
+      ],
       "points": [
         "Turn the heat off and let the pan stop bubbling, about 45 seconds.",
         "Pour in the egg mixture and toss fast with the tongs.",
         "The residual heat and starchy liquid turn it into a glossy cream."
-      ],
-      "hint": "Egg into a bubbling pan means scrambled eggs. Egg white sets sooner than yolk, so give the pan the full wait. Off the heat with a short pause is the entire trick to carbonara."
+      ]
     },
     {
       "title": "Plate carbonara",
+      "icons": [
+        "img/ingredients/cheese.svg",
+        "img/ingredients/pepper.svg",
+        "img/tools/pan.svg"
+      ],
       "points": [
         "Twirl it onto a plate.",
         "Scrape the sauce left in the pan over the top.",

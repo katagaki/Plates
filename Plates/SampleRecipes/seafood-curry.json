@@ -89,14 +89,20 @@
   "steps": [
     {
       "title": "Cut carrots",
+      "icons": [
+        "img/ingredients/carrot.svg"
+      ],
       "points": [
         "Cut the carrots into thin quarter-rounds, about 3 mm thick.",
         "Two small carrots are about a handful of slices."
-      ],
-      "hint": "A frying pan holds less water than a pot, so thin slices are the trick to cooking everything through before the liquid reduces away."
+      ]
     },
     {
       "title": "Slice onion",
+      "icons": [
+        "img/ingredients/onion.svg",
+        "img/ingredients/carrot.svg"
+      ],
       "points": [
         "Slice the onion thinly.",
         "Keep it about as fine as the carrots so both cook in the same time."
@@ -104,39 +110,55 @@
     },
     {
       "title": "Fry vegetables",
+      "icons": [
+        "img/ingredients/onion.svg",
+        "img/ingredients/carrot.svg",
+        "img/ingredients/butter.svg"
+      ],
       "points": [
         "Melt 1 tbsp of butter over medium heat.",
         "Add the carrots and cook for 2 minutes.",
         "Add the onion and cook 3 minutes more, until translucent."
-      ],
-      "hint": "Don't turn the heat up high. Butter burns at high temperatures and turns bitter."
+      ]
     },
     {
       "title": "Simmer vegetables",
+      "icons": [
+        "img/ingredients/water.svg"
+      ],
       "points": [
         "Add 250 ml of water and bring it to a boil.",
         "Drop the heat to low, cover, and simmer for 8 minutes."
-      ],
-      "hint": "Poke a carrot with the tip of a knife to check. If it slides in without resistance, it's done."
+      ]
     },
     {
       "title": "Add roux",
+      "icons": [
+        "img/ingredients/curry-roux.svg"
+      ],
       "points": [
         "Turn the heat off first.",
         "Break in the 2 blocks and stir until completely dissolved."
-      ],
-      "hint": "Turning off the heat matters. Roux added to boiling liquid goes lumpy, and it scorches in a thin pan."
+      ]
     },
     {
       "title": "Add seafood",
+      "icons": [
+        "img/ingredients/seafood.svg"
+      ],
       "points": [
         "Add the seafood straight from frozen.",
         "Return to low heat and simmer for 4 minutes, stirring gently."
-      ],
-      "hint": "When the shrimp turn opaque and the squid curls up, it's cooked. Any longer and the squid turns rubbery."
+      ]
     },
     {
       "title": "Heat rice",
+      "icons": [
+        "img/ingredients/rice.svg",
+        "img/tools/pan.svg",
+        "img/tools/spatula.svg",
+        "img/tools/microwave.svg"
+      ],
       "points": [
         "Microwave the rice for 2 minutes.",
         "Turn it out onto a plate and fluff it with a spoon."
@@ -144,6 +166,12 @@
     },
     {
       "title": "Serve curry",
+      "icons": [
+        "img/ingredients/butter.svg",
+        "img/ingredients/rice.svg",
+        "img/ingredients/curry-roux.svg",
+        "img/tools/pan.svg"
+      ],
       "points": [
         "Stir the last of the butter through the pan off the heat.",
         "Ladle the curry beside the rice rather than on top.",

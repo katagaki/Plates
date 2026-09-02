@@ -4,28 +4,26 @@ struct RecipeDetailView: View {
     let recipe: Recipe
 
     @State private var isShowingTroubleshooting = false
-
-    private let tileColumns = [GridItem(.adaptive(minimum: 160), spacing: 12)]
+    @State private var tapped: TileInfo?
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 24) {
                 summary
+                    .padding(.horizontal, .listRowInset)
 
-                ingredientSection("Recipe.Detail.Ingredients.Supermarket", recipe.ingredients.supermarket)
-                ingredientSection("Recipe.Detail.Ingredients.General", recipe.ingredients.general)
-                ingredientSection("Recipe.Detail.Ingredients.Optional", recipe.ingredients.optional)
-
-                toolSection(required: true)
-                toolSection(required: false)
+                carousel("Recipe.Detail.Ingredients", ingredients)
+                carousel("Recipe.Detail.Ingredients.Optional", optionalIngredients)
+                carousel("Recipe.Detail.Tools", tools(required: true))
+                carousel("Recipe.Detail.Tools.Optional", tools(required: false))
 
                 section("Recipe.Detail.Steps") {
                     ForEach(Array(recipe.steps.enumerated()), id: \.offset) { index, step in
                         StepCard(number: index + 1, step: step)
                     }
                 }
+                .padding(.horizontal, .listRowInset)
             }
-            .padding(.horizontal, .listRowInset)
             .padding(.vertical, 16)
         }
         .background(Color(uiColor: .systemGroupedBackground))
@@ -44,6 +42,15 @@ struct RecipeDetailView: View {
         }
         .sheet(isPresented: $isShowingTroubleshooting) {
             TroubleshootingView(entries: recipe.troubleshooting)
+        }
+        .alert(
+            Text(verbatim: tapped?.name ?? ""),
+            isPresented: Binding(get: { tapped != nil }, set: { if !$0 { tapped = nil } }),
+            presenting: tapped
+        ) { _ in
+            Button("Shared.Done", role: .cancel) {}
+        } message: { info in
+            Text(verbatim: info.message)
         }
     }
 
@@ -64,41 +71,51 @@ struct RecipeDetailView: View {
         }
     }
 
+    /// The shopping list is written in sections, but a cook reads it as one list.
+    private var ingredients: [TileInfo] {
+        ((recipe.ingredients.supermarket ?? []) + (recipe.ingredients.general ?? [])).map(TileInfo.init)
+    }
+
+    private var optionalIngredients: [TileInfo] {
+        (recipe.ingredients.optional ?? []).map(TileInfo.init)
+    }
+
+    private func tools(required: Bool) -> [TileInfo] {
+        recipe.tools.filter { $0.required == required }.map(TileInfo.init)
+    }
+
+    /// A row that scrolls sideways, cut so the third card is half on screen and the cook can
+    /// see there is more to come.
     @ViewBuilder
-    private func ingredientSection(
-        _ title: LocalizedStringResource,
-        _ entries: [Ingredient]?
-    ) -> some View {
-        if let entries, !entries.isEmpty {
-            section(title) {
-                LazyVGrid(columns: tileColumns, spacing: 12) {
-                    ForEach(entries) { entry in
-                        IconTile(
-                            iconPath: entry.icon,
-                            name: entry.item,
-                            detail: entry.amount,
-                            note: entry.note
-                        )
+    private func carousel(_ title: LocalizedStringResource, _ items: [TileInfo]) -> some View {
+        if !items.isEmpty {
+            VStack(alignment: .leading, spacing: 12) {
+                Text(title)
+                    .font(.headline)
+                    .padding(.horizontal, .listRowInset)
+
+                ScrollView(.horizontal) {
+                    LazyHStack(spacing: 12) {
+                        ForEach(items) { item in
+                            Button {
+                                if item.message.isEmpty == false { tapped = item }
+                            } label: {
+                                IconTile(item: item)
+                            }
+                            .buttonStyle(.plain)
+                            .containerRelativeFrame(.horizontal, count: 5, span: 2, spacing: 12)
+                        }
                     }
+                    .scrollTargetLayout()
                 }
+                .scrollTargetBehavior(.viewAligned)
+                .scrollIndicators(.hidden)
+                .contentMargins(.horizontal, .listRowInset, for: .scrollContent)
             }
         }
     }
 
     @ViewBuilder
-    private func toolSection(required: Bool) -> some View {
-        let entries = recipe.tools.filter { $0.required == required }
-        if !entries.isEmpty {
-            section(required ? "Recipe.Detail.Tools.Required" : "Recipe.Detail.Tools.Optional") {
-                LazyVGrid(columns: tileColumns, spacing: 12) {
-                    ForEach(entries) { tool in
-                        IconTile(iconPath: tool.icon, name: tool.name, note: tool.note)
-                    }
-                }
-            }
-        }
-    }
-
     private func section(
         _ title: LocalizedStringResource,
         @ViewBuilder content: () -> some View
@@ -111,9 +128,10 @@ struct RecipeDetailView: View {
     }
 }
 
-private struct SummaryCell<Value: View>: View {
+/// Time, servings, or whether the recipe has been cooked.
+private struct SummaryCell<Content: View>: View {
     let label: LocalizedStringResource
-    @ViewBuilder let value: Value
+    @ViewBuilder let value: Content
 
     var body: some View {
         VStack(spacing: 4) {
@@ -137,32 +155,23 @@ private struct StepCard: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            if let image = step.image,
-               let name = IconCatalog.assetName(for: image),
-               UIImage(named: name) != nil {
-                Image(name)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(maxWidth: .infinity)
-                    .background(
-                        Color(uiColor: .tertiarySystemGroupedBackground),
-                        in: .rect(cornerRadius: .listRowCornerRadius - 12, style: .continuous)
-                    )
-            }
             Text(String(format: String(localized: "Recipe.Detail.Step.Title"), number, step.title))
                 .font(.headline)
+
+            if let icons = step.icons, !icons.isEmpty {
+                ScrollView(.horizontal) {
+                    HStack(spacing: 8) {
+                        ForEach(icons, id: \.self) { icon in
+                            RecipeIcon(path: icon, size: 32)
+                        }
+                    }
+                }
+                .scrollIndicators(.hidden)
+            }
+
             ForEach(step.points, id: \.self) { point in
                 Text(verbatim: point)
                     .foregroundStyle(.secondary)
-            }
-            if let hint = step.hint, !hint.isEmpty {
-                Label {
-                    Text(verbatim: hint)
-                } icon: {
-                    Image(systemName: "lightbulb")
-                }
-                .font(.footnote)
-                .foregroundStyle(.tertiary)
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)

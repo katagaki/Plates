@@ -91,15 +91,24 @@
   "steps": [
     {
       "title": "Cut chicken",
+      "icons": [
+        "img/ingredients/chicken.svg",
+        "img/ingredients/salt.svg",
+        "img/tools/cutting-board.svg",
+        "img/tools/knife.svg"
+      ],
       "points": [
         "Cut the chicken into bite-size pieces, about 2 cm.",
         "Season the pieces with the salt.",
         "Wash the board and knife before anything else touches them."
-      ],
-      "hint": "Raw chicken touched the board, so wash it with soap and hot water, not just a rinse."
+      ]
     },
     {
       "title": "Dice onion",
+      "icons": [
+        "img/ingredients/onion.svg",
+        "img/tools/knife.svg"
+      ],
       "points": [
         "Dice the onion into small pieces, around 5 mm.",
         "That is the last of the knife work."
@@ -107,15 +116,24 @@
     },
     {
       "title": "Brown chicken",
+      "icons": [
+        "img/ingredients/chicken.svg",
+        "img/ingredients/rice.svg",
+        "img/ingredients/oil.svg",
+        "img/tools/spatula.svg"
+      ],
       "points": [
         "Heat the oil over medium-high.",
         "Lay the chicken in skin side down and leave it for 2 to 3 minutes, until well browned.",
         "Flip and cook 1 minute more. It can stay slightly underdone, it finishes with the rice."
-      ],
-      "hint": "As with any searing, the less you poke it, the better the color."
+      ]
     },
     {
       "title": "Soften onion",
+      "icons": [
+        "img/ingredients/onion.svg",
+        "img/tools/pan.svg"
+      ],
       "points": [
         "Add the onion to the pan.",
         "Cook for about 2 minutes, stirring, until translucent."
@@ -123,23 +141,36 @@
     },
     {
       "title": "Heat rice",
+      "icons": [
+        "img/ingredients/rice.svg",
+        "img/tools/spatula.svg",
+        "img/tools/microwave.svg"
+      ],
       "points": [
         "Microwave the packed rice as directed.",
         "Keep it hot and within reach for the last two steps."
-      ],
-      "hint": "Hot rice separates easily. Cold rice clumps and tears, so heat it first, always."
+      ]
     },
     {
       "title": "Fry ketchup",
+      "icons": [
+        "img/ingredients/ketchup.svg"
+      ],
       "points": [
         "Push everything to one side and squeeze the ketchup onto the empty half.",
         "Let it bubble for 30 seconds, stirring just the ketchup.",
         "It is ready when it darkens slightly and smells sweet instead of sharp."
-      ],
-      "hint": "This little step cooks off the raw sourness and is what separates good chicken rice from rice with ketchup on it."
+      ]
     },
     {
       "title": "Add rice",
+      "icons": [
+        "img/ingredients/rice.svg",
+        "img/ingredients/pepper.svg",
+        "img/ingredients/butter.svg",
+        "img/ingredients/soy-sauce.svg",
+        "img/tools/spatula.svg"
+      ],
       "points": [
         "Add the hot rice and break it up with the spatula.",
         "Fold until every grain is evenly orange, about 2 minutes.",
@@ -148,6 +179,13 @@
     },
     {
       "title": "Plate chicken rice",
+      "icons": [
+        "img/ingredients/chicken.svg",
+        "img/ingredients/rice.svg",
+        "img/ingredients/ketchup.svg",
+        "img/ingredients/salt.svg",
+        "img/tools/spatula.svg"
+      ],
       "points": [
         "Taste, and adjust with a pinch of salt if needed.",
         "Mound it onto a plate.",

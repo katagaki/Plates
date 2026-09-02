@@ -75,42 +75,70 @@
   "steps": [
     {
       "title": "Prep kimchi",
+      "icons": [
+        "img/ingredients/bread.svg",
+        "img/ingredients/kimchi.svg",
+        "img/ingredients/sugar.svg",
+        "img/tools/cutting-board.svg"
+      ],
       "points": [
         "Lift the kimchi out of its juice and squeeze it over the sink until it stops dripping.",
         "Chop it into rough 1 cm pieces and stir in the pinch of sugar.",
         "Wet kimchi steams inside the sandwich and turns the bread soggy, so take the squeeze seriously."
-      ],
-      "hint": "Keep the squeezed-out juice in a cup. A spoonful of it is good in fried rice or a salad dressing."
+      ]
     },
     {
       "title": "Butter bread",
+      "icons": [
+        "img/ingredients/bread.svg",
+        "img/ingredients/butter.svg",
+        "img/tools/pan.svg",
+        "img/tools/butter-knife.svg"
+      ],
       "points": [
         "Spread softened butter over one face of each slice, right out to the crust.",
         "Those buttered faces go against the pan, so leave them facing up for now.",
         "The corners brown last, so give them a little extra."
-      ],
-      "hint": "Butter straight from the fridge tears the bread. Thirty seconds in the microwave at low power softens it enough."
+      ]
     },
     {
       "title": "Build sandwich",
+      "icons": [
+        "img/ingredients/kimchi.svg",
+        "img/ingredients/cheese.svg",
+        "img/ingredients/butter.svg",
+        "img/ingredients/pepper.svg",
+        "img/tools/butter-knife.svg",
+        "img/tools/cutting-board.svg"
+      ],
       "points": [
         "Turn one slice butter side down and cover it with half the cheese.",
         "Spread the kimchi over that, grind on the pepper, then add the rest of the cheese and the second slice, butter side up.",
         "Cheese on both sides glues the kimchi in place so nothing slides out when you flip."
-      ],
-      "hint": "Keep the filling about 1 cm short of the edges. It spreads as it melts and anything past the crust burns on the pan."
+      ]
     },
     {
       "title": "Toast first side",
+      "icons": [
+        "img/ingredients/cheese.svg",
+        "img/tools/pan.svg",
+        "img/tools/spatula.svg",
+        "img/tools/cutting-board.svg",
+        "img/tools/lid.svg"
+      ],
       "points": [
         "Set the pan over medium-low heat and lay the sandwich in.",
         "Press it flat with the spatula and toast for 3 to 4 minutes, covered if you have a lid.",
         "Lift a corner to check: deep golden is right, and the cheese at the edges should be starting to soften."
-      ],
-      "hint": "Medium-low is the whole trick. Anything hotter browns the bread while the middle is still cold cheese."
+      ]
     },
     {
       "title": "Toast second side",
+      "icons": [
+        "img/ingredients/cheese.svg",
+        "img/tools/spatula.svg",
+        "img/tools/cutting-board.svg"
+      ],
       "points": [
         "Slide the spatula fully under the sandwich and flip it in one move.",
         "Press again and toast for another 3 minutes.",
@@ -119,6 +147,10 @@
     },
     {
       "title": "Rest and cut",
+      "icons": [
+        "img/ingredients/cheese.svg",
+        "img/tools/cutting-board.svg"
+      ],
       "points": [
         "Move it to a board and wait one minute before cutting.",
         "Cut it in half on the diagonal and eat it straight away.",

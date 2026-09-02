@@ -1,29 +1,51 @@
 {
   "sourceLanguage": "en-US",
   "strings": {
-    "Generate.Dish.Footer": {
+    "Generate.Choose.Ingredients": {
       "extractionState": "manual",
       "localizations": {
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Name a dish and Apple Intelligence writes a one-pan version of it. Leave it empty to let it pick."
+            "value": "Choose ingredients"
           }
         }
       }
     },
-    "Generate.Dish.Label": {
+    "Generate.Choose.Tools": {
       "extractionState": "manual",
       "localizations": {
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Which dish?"
+            "value": "Choose tools"
           }
         }
       }
     },
-    "Generate.Dish.Prompt": {
+    "Generate.Description.Footer": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Name a dish, pick what is in your kitchen, or do both. When you pick ingredients, the recipe is written from those alone."
+          }
+        }
+      }
+    },
+    "Generate.Description.Label": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "What do you want to cook?"
+          }
+        }
+      }
+    },
+    "Generate.Description.Prompt": {
       "extractionState": "manual",
       "localizations": {
         "en-US": {
@@ -41,72 +63,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "Apple Intelligence returned nothing. Try again."
-          }
-        }
-      }
-    },
-    "Generate.Fridge.Choose": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Choose ingredients"
-          }
-        }
-      }
-    },
-    "Generate.Fridge.Choose.Footer": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Pick what you have from the ingredients the app draws. Type anything else in the box above."
-          }
-        }
-      }
-    },
-    "Generate.Fridge.Footer": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "List what is in your fridge, separated by commas. Pantry staples are assumed."
-          }
-        }
-      }
-    },
-    "Generate.Fridge.Label": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "What do you have?"
-          }
-        }
-      }
-    },
-    "Generate.Fridge.Prompt": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Eggs, spring onion, leftover rice"
-          }
-        }
-      }
-    },
-    "Generate.Ingredients.Picked": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Picked"
           }
         }
       }
@@ -133,35 +89,13 @@
         }
       }
     },
-    "Generate.Mode.Dish": {
+    "Generate.Picker.Picked": {
       "extractionState": "manual",
       "localizations": {
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "A dish"
-          }
-        }
-      }
-    },
-    "Generate.Mode.Fridge": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "My fridge"
-          }
-        }
-      }
-    },
-    "Generate.Mode.Title": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Base the recipe on"
+            "value": "Picked"
           }
         }
       }
@@ -272,6 +206,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "New Recipe"
+          }
+        }
+      }
+    },
+    "Generate.Tools.Search": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Search tools"
+          }
+        }
+      }
+    },
+    "Generate.Tools.Title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tools"
           }
         }
       }
@@ -518,13 +474,13 @@
         }
       }
     },
-    "Recipe.Detail.Ingredients.General": {
+    "Recipe.Detail.Ingredients": {
       "extractionState": "manual",
       "localizations": {
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "From the pantry"
+            "value": "Ingredients"
           }
         }
       }
@@ -535,18 +491,7 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Optional"
-          }
-        }
-      }
-    },
-    "Recipe.Detail.Ingredients.Supermarket": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Fresh and chilled"
+            "value": "Optional Ingredients"
           }
         }
       }
@@ -595,24 +540,24 @@
         }
       }
     },
+    "Recipe.Detail.Tools": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tools"
+          }
+        }
+      }
+    },
     "Recipe.Detail.Tools.Optional": {
       "extractionState": "manual",
       "localizations": {
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tools, optional"
-          }
-        }
-      }
-    },
-    "Recipe.Detail.Tools.Required": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tools, required"
+            "value": "Optional Tools"
           }
         }
       }

@@ -101,15 +101,26 @@
   "steps": [
     {
       "title": "Prep garlic",
+      "icons": [
+        "img/ingredients/garlic.svg",
+        "img/ingredients/rice.svg",
+        "img/tools/knife.svg",
+        "img/tools/spatula.svg"
+      ],
       "points": [
         "Peel all four cloves. Slice one of them as thin as you can manage, and dice the other three fine.",
         "Keep the two piles separate. The slices turn into crisp chips, the diced garlic flavors the rice.",
         "Even thickness matters more than thinness, because uneven slices burn at different times."
-      ],
-      "hint": "A cold clove slices thinner than a room-temperature one. Ten minutes in the freezer firms it up."
+      ]
     },
     {
       "title": "Heat rice",
+      "icons": [
+        "img/ingredients/rice.svg",
+        "img/tools/knife.svg",
+        "img/tools/spatula.svg",
+        "img/tools/microwave.svg"
+      ],
       "points": [
         "Microwave the packed rice as directed.",
         "Break it up with the spatula while it is still hot, and leave it beside the stove.",
@@ -118,15 +129,28 @@
     },
     {
       "title": "Crisp garlic slices",
+      "icons": [
+        "img/ingredients/garlic.svg",
+        "img/ingredients/oil.svg",
+        "img/ingredients/sesame-oil.svg",
+        "img/tools/pan.svg",
+        "img/tools/knife.svg"
+      ],
       "points": [
         "Put the sliced garlic and the oil into the pan together, then turn the heat to low.",
         "Starting from cold dries the garlic out slowly instead of scorching it.",
         "Stir now and then for about 4 minutes, until the slices are pale gold at the edges."
-      ],
-      "hint": "Garlic goes from gold to bitter in under 20 seconds. Pull it a shade lighter than you want, it keeps browning off the heat."
+      ]
     },
     {
       "title": "Lift out chips",
+      "icons": [
+        "img/ingredients/garlic.svg",
+        "img/ingredients/oil.svg",
+        "img/ingredients/sesame-oil.svg",
+        "img/tools/pan.svg",
+        "img/tools/plate.svg"
+      ],
       "points": [
         "Scoop the slices onto the paper-lined plate the moment they turn pale gold.",
         "Spread them in a single layer so they crisp as they cool.",
@@ -135,33 +159,60 @@
     },
     {
       "title": "Cook diced garlic",
+      "icons": [
+        "img/ingredients/garlic.svg",
+        "img/ingredients/butter.svg",
+        "img/ingredients/oil.svg",
+        "img/ingredients/sausage.svg",
+        "img/ingredients/sesame-oil.svg",
+        "img/tools/pan.svg"
+      ],
       "points": [
         "Turn the heat up to medium. If you are using sausage, cut it into thick coins and brown them in the garlic oil for about 2 minutes, then push them to one side of the pan.",
         "Add the diced garlic and stir for about 30 seconds, until it smells sweet and the edges just start to color.",
         "Drop in the butter and swirl the pan until it melts."
-      ],
-      "hint": "Diced garlic burns faster than sliced garlic. Have the rice within arm's reach before this step starts."
+      ]
     },
     {
       "title": "Fry rice",
+      "icons": [
+        "img/ingredients/rice.svg",
+        "img/tools/pan.svg",
+        "img/tools/knife.svg",
+        "img/tools/spatula.svg"
+      ],
       "points": [
         "Turn the heat to medium-high and tip in the hot rice.",
         "Press it flat with the spatula and leave it alone for 30 seconds before folding it over.",
         "Repeat the press and fold for about 2 minutes, until the grains separate and jump loose in the pan."
-      ],
-      "hint": "Pressing puts the rice against hot metal. Constant stirring steams it instead, which is what makes fried rice go sticky."
+      ]
     },
     {
       "title": "Season rice",
+      "icons": [
+        "img/ingredients/rice.svg",
+        "img/ingredients/soy-sauce.svg",
+        "img/ingredients/salt.svg",
+        "img/ingredients/pepper.svg",
+        "img/tools/pan.svg",
+        "img/tools/knife.svg"
+      ],
       "points": [
         "Pour the soy sauce around the rim of the pan so it hits bare metal and sizzles, then toss straight away.",
         "Add the pinch of salt and a good grind of black pepper.",
         "Taste it, and reach for more salt rather than more soy sauce if it needs lifting."
-      ],
-      "hint": "Soy sauce colors rice faster than it seasons it. A tablespoon would turn the whole pan brown before it tasted right."
+      ]
     },
     {
       "title": "Plate and top",
+      "icons": [
+        "img/ingredients/garlic.svg",
+        "img/ingredients/rice.svg",
+        "img/ingredients/oil.svg",
+        "img/ingredients/spring-onion.svg",
+        "img/ingredients/sesame-oil.svg",
+        "img/tools/knife.svg"
+      ],
       "points": [
         "Turn off the heat, drizzle over the sesame oil if using, and fold it through once before mounding the rice onto a plate.",
         "Scatter the garlic chips over the top, along with the spring onion if using.",

@@ -93,14 +93,25 @@
   "steps": [
     {
       "title": "Beat eggs",
+      "icons": [
+        "img/ingredients/egg.svg",
+        "img/ingredients/salt.svg",
+        "img/ingredients/pepper.svg",
+        "img/tools/bowl.svg",
+        "img/tools/knife.svg"
+      ],
       "points": [
         "Beat the eggs in a bowl with the pinch of salt.",
         "Mix until the yolks and whites are fully combined, no streaks."
-      ],
-      "hint": "Fried rice cooks faster than you can chop. Everything goes in the pan within four minutes, so prep it all first."
+      ]
     },
     {
       "title": "Slice spring onion",
+      "icons": [
+        "img/ingredients/spring-onion.svg",
+        "img/ingredients/pepper.svg",
+        "img/tools/knife.svg"
+      ],
       "points": [
         "Slice the spring onion thinly.",
         "Keep the white and the green parts in separate piles."
@@ -108,6 +119,13 @@
     },
     {
       "title": "Heat rice",
+      "icons": [
+        "img/ingredients/rice.svg",
+        "img/tools/pan.svg",
+        "img/tools/spatula.svg",
+        "img/tools/microwave.svg",
+        "img/tools/knife.svg"
+      ],
       "points": [
         "Microwave the packed rice as directed.",
         "Have it hot and beside the stove before the pan goes on."
@@ -115,33 +133,58 @@
     },
     {
       "title": "Scramble eggs",
+      "icons": [
+        "img/ingredients/egg.svg",
+        "img/ingredients/oil.svg",
+        "img/ingredients/sesame-oil.svg",
+        "img/tools/bowl.svg",
+        "img/tools/chopsticks.svg"
+      ],
       "points": [
         "Heat the oil over medium-high until it shimmers, then pour in the eggs.",
         "Let them sit for 10 seconds, then stir with chopsticks for about 30 seconds.",
         "Scoop them back into the bowl while the curds are still a little wet."
-      ],
-      "hint": "Take them out while they look underdone. They cook again at the end, and twice-cooked egg turns rubbery."
+      ]
     },
     {
       "title": "Fry rice",
+      "icons": [
+        "img/ingredients/spring-onion.svg",
+        "img/ingredients/rice.svg",
+        "img/ingredients/pepper.svg",
+        "img/tools/pan.svg",
+        "img/tools/spatula.svg",
+        "img/tools/knife.svg"
+      ],
       "points": [
         "Add the white parts of the spring onion and stir for 20 seconds.",
         "Add the hot rice, press it flat with the spatula, and let it sit for 30 seconds before folding.",
         "Repeat the press and fold for about 2 minutes, until the grains jump loose in the pan."
-      ],
-      "hint": "Pressing gives the rice contact with the hot metal. Constant stirring steams it instead, which is why it goes sticky."
+      ]
     },
     {
       "title": "Add soy sauce",
+      "icons": [
+        "img/ingredients/rice.svg",
+        "img/ingredients/oil.svg",
+        "img/ingredients/soy-sauce.svg",
+        "img/ingredients/pepper.svg",
+        "img/ingredients/sesame-oil.svg",
+        "img/ingredients/butter.svg"
+      ],
       "points": [
         "Pour the soy sauce around the rim of the pan, not onto the rice, and toss immediately.",
         "It hits the bare metal, sizzles, and goes in toasty rather than wet.",
         "Add the white pepper, then the sesame oil or butter if using."
-      ],
-      "hint": "Soy sauce poured straight onto the pile makes dark patches and soggy grains. The rim trick fixes both."
+      ]
     },
     {
       "title": "Return eggs",
+      "icons": [
+        "img/ingredients/egg.svg",
+        "img/ingredients/spring-onion.svg",
+        "img/tools/spatula.svg"
+      ],
       "points": [
         "Tip the eggs back in along with the green parts of the spring onion.",
         "Break the curds up with the spatula.",
@@ -150,6 +193,12 @@
     },
     {
       "title": "Plate fried rice",
+      "icons": [
+        "img/ingredients/rice.svg",
+        "img/ingredients/salt.svg",
+        "img/tools/spatula.svg",
+        "img/tools/knife.svg"
+      ],
       "points": [
         "Taste, and adjust with a little salt.",
         "Mound it onto a plate while it is still steaming."

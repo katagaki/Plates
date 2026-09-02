@@ -87,33 +87,50 @@
   "steps": [
     {
       "title": "Mix the custard",
+      "icons": [
+        "img/ingredients/bread.svg",
+        "img/ingredients/egg.svg",
+        "img/ingredients/sugar.svg",
+        "img/ingredients/milk.svg",
+        "img/ingredients/salt.svg",
+        "img/tools/bowl.svg"
+      ],
       "points": [
         "Crack the egg into the shallow bowl and add the sugar.",
         "Beat with chopsticks until the yolk, white and sugar are one even yellow.",
         "Stir in the milk and the pinch of salt if you are using them."
-      ],
-      "hint": "Streaks of unbeaten white turn into rubbery patches on the finished toast, so keep going until the color is flat."
+      ]
     },
     {
       "title": "Soak the bread",
+      "icons": [
+        "img/ingredients/bread.svg"
+      ],
       "points": [
         "Lay a slice flat in the custard and leave it for a minute.",
         "Turn it over and give the second side the same minute.",
         "Press the middle gently with your fingertip: it should feel heavy and damp, not soggy."
-      ],
-      "hint": "Thick slices want longer, up to 5 minutes a side. Thin sandwich bread falls apart after about 30 seconds."
+      ]
     },
     {
       "title": "Melt the butter",
+      "icons": [
+        "img/ingredients/butter.svg",
+        "img/tools/pan.svg"
+      ],
       "points": [
         "Set the pan over low heat and add about 10 g of butter.",
         "Swirl it so it coats the whole base.",
         "Stop as soon as the foam settles, before it takes on any color."
-      ],
-      "hint": "Sugar in the custard browns much faster than plain bread, so low heat is doing real work here."
+      ]
     },
     {
       "title": "Fry the first side",
+      "icons": [
+        "img/ingredients/bread.svg",
+        "img/tools/pan.svg",
+        "img/tools/bowl.svg"
+      ],
       "points": [
         "Lift the bread out, let the drips fall back into the bowl, and lay it in the pan.",
         "Cook for 3 to 4 minutes without moving it.",
@@ -122,15 +139,23 @@
     },
     {
       "title": "Fry the second side",
+      "icons": [
+        "img/ingredients/butter.svg",
+        "img/tools/pan.svg",
+        "img/tools/spatula.svg",
+        "img/tools/lid.svg"
+      ],
       "points": [
         "Flip with the spatula and add the last of the butter along the edge of the pan.",
         "Cook for 3 minutes more, with the lid on if the slices are thick.",
         "Press the centre with the spatula. It should spring back rather than squash."
-      ],
-      "hint": "If it still feels wet in the middle, drop the heat and give it another 2 minutes covered rather than turning the heat up."
+      ]
     },
     {
       "title": "Serve",
+      "icons": [
+        "img/ingredients/maple-syrup.svg"
+      ],
       "points": [
         "Move both slices to a plate and cut them across on the diagonal.",
         "Pour over maple syrup while the surface is still hot enough to thin it out.",

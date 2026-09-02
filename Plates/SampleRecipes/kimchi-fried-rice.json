@@ -121,6 +121,11 @@
   "steps": [
     {
       "title": "Snip kimchi",
+      "icons": [
+        "img/ingredients/kimchi.svg",
+        "img/tools/scissors.svg",
+        "img/tools/bowl.svg"
+      ],
       "points": [
         "Put the kimchi in a small bowl with its juice.",
         "Snip it into bite-size pieces with kitchen scissors.",
@@ -129,14 +134,23 @@
     },
     {
       "title": "Dice onion",
+      "icons": [
+        "img/ingredients/seafood.svg",
+        "img/ingredients/onion.svg",
+        "img/ingredients/spring-onion.svg"
+      ],
       "points": [
         "Cut the onion into pieces about 5 mm across.",
         "Match the size of the shrimp in the seafood mix."
-      ],
-      "hint": "Anything cut bigger than 5 mm will still be crunchy when the rice is done."
+      ]
     },
     {
       "title": "Heat rice",
+      "icons": [
+        "img/ingredients/rice.svg",
+        "img/ingredients/salt.svg",
+        "img/tools/microwave.svg"
+      ],
       "points": [
         "Microwave the pack for 2 minutes.",
         "Open it and let the steam escape while you cook.",
@@ -145,15 +159,25 @@
     },
     {
       "title": "Cook seafood",
+      "icons": [
+        "img/ingredients/seafood.svg",
+        "img/ingredients/butter.svg",
+        "img/ingredients/salt.svg",
+        "img/tools/pan.svg",
+        "img/tools/plate.svg"
+      ],
       "points": [
         "Seafood: melt 1 tbsp of butter over medium-high, add the mix from frozen, and cook 3 minutes until the shrimp turn opaque.",
         "Bacon: skip the butter, snip it into 1 cm strips, and fry 3 minutes until the edges crisp.",
         "Move it to a plate and leave everything it rendered in the pan."
-      ],
-      "hint": "This is the step that decides whether the fried rice is soggy. Frozen seafood dumps a lot of water, and the kimchi juice will add more, so get this water out of the pan first. Bacon leaves fat rather than water, which is worth keeping."
+      ]
     },
     {
       "title": "Boil off liquid",
+      "icons": [
+        "img/ingredients/seafood.svg",
+        "img/tools/pan.svg"
+      ],
       "points": [
         "After seafood, let the liquid bubble away for about a minute, until the pan is nearly dry.",
         "After bacon, the rendered fat is ready as it is."
@@ -161,33 +185,56 @@
     },
     {
       "title": "Fry onion and kimchi",
+      "icons": [
+        "img/ingredients/seafood.svg",
+        "img/ingredients/kimchi.svg",
+        "img/ingredients/butter.svg",
+        "img/ingredients/onion.svg",
+        "img/ingredients/sugar.svg",
+        "img/ingredients/salt.svg"
+      ],
       "points": [
         "Add the remaining 1/2 tbsp of butter, holding some back if the bacon left plenty of fat.",
         "Fry the onion, and the garlic if using, for 2 minutes until translucent.",
         "Add the kimchi, its juice, and the sugar, and fry 2 minutes more."
-      ],
-      "hint": "Frying the kimchi properly is the whole recipe. Raw kimchi tastes sharp; fried kimchi turns savory and mellow. Keep the heat at medium once the butter goes in, since butter burns and turns bitter over high heat."
+      ]
     },
     {
       "title": "Add rice",
+      "icons": [
+        "img/ingredients/seafood.svg",
+        "img/ingredients/rice.svg",
+        "img/ingredients/salt.svg",
+        "img/ingredients/egg.svg"
+      ],
       "points": [
         "For the egg, push everything to one side, crack it into the bare half, and scramble it loosely for 20 seconds.",
         "Add the rice, break up the lumps, and mix until every grain is evenly colored.",
         "Press it flat and leave it a minute so the bottom toasts, then turn it over and press again."
-      ],
-      "hint": "Pressing, not constant stirring, is what makes the crispy bits. Add the rice while the egg is still wet and it will coat the grains instead of forming lumps."
+      ]
     },
     {
       "title": "Add soy sauce",
+      "icons": [
+        "img/ingredients/seafood.svg",
+        "img/ingredients/soy-sauce.svg",
+        "img/ingredients/salt.svg"
+      ],
       "points": [
         "Pour the soy sauce onto the bare metal around the edge so it scorches for a second, then stir it through.",
         "Return the seafood or bacon and season with salt and pepper.",
         "Toss for 30 seconds."
-      ],
-      "hint": "It only goes back at the end. Squid fried twice turns rubbery, and bacon loses its crisp edge if it sits in the rice."
+      ]
     },
     {
       "title": "Plate fried rice",
+      "icons": [
+        "img/ingredients/rice.svg",
+        "img/ingredients/salt.svg",
+        "img/ingredients/sesame-oil.svg",
+        "img/ingredients/spring-onion.svg",
+        "img/tools/plate.svg"
+      ],
       "points": [
         "Kill the heat and stir in the sesame oil if you have it.",
         "Scatter over the scallion or sesame.",

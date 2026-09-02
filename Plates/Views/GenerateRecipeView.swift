@@ -7,10 +7,7 @@ struct GenerateRecipeView: View {
     let store: RecipeStore
 
     @State private var generator = RecipeGenerator()
-    @State private var mode: GenerationMode = .dish
-    @State private var dishInput = ""
-    @State private var fridgeInput = ""
-    @State private var fridgePicks: [String] = []
+    @State private var request = GenerationRequest()
     @State private var draft: Recipe?
 
     var body: some View {
@@ -41,7 +38,7 @@ struct GenerateRecipeView: View {
                 }
             }
         }
-        .interactiveDismissDisabled(generator.state == .generating)
+        .interactiveDismissDisabled(isGenerating)
     }
 
     /// A generated recipe titles itself, so its title is shown as written.
@@ -56,50 +53,39 @@ struct GenerateRecipeView: View {
     private var form: some View {
         Form {
             Section {
-                Picker("Generate.Mode.Title", selection: $mode) {
-                    ForEach(GenerationMode.allCases) { mode in
-                        Text(mode.title).tag(mode)
-                    }
-                }
-                .pickerStyle(.segmented)
-                .labelsHidden()
-
                 TextField(
-                    mode.fieldLabel,
-                    text: input,
-                    prompt: Text(mode.fieldPrompt),
+                    "Generate.Description.Label",
+                    text: $request.description,
+                    prompt: Text("Generate.Description.Prompt"),
                     axis: .vertical
                 )
                 .lineLimit(2...5)
-                .disabled(!generator.isAvailable || isGenerating)
+                .disabled(!generator.isAvailable)
             } footer: {
-                Text(mode.footer)
+                Text("Generate.Description.Footer")
             }
 
-            if mode == .fridge {
-                Section {
-                    ForEach(fridgePicks, id: \.self) { asset in
-                        HStack(spacing: 12) {
-                            RecipeIcon(path: IconCatalog.ingredientPath(for: asset), size: 32)
-                            Text(verbatim: IconCatalog.displayName(for: asset))
-                        }
-                    }
-                    .onDelete { fridgePicks.remove(atOffsets: $0) }
+            picks(
+                "Generate.Choose.Ingredients",
+                systemImage: "carrot",
+                assets: $request.ingredients,
+                path: IconCatalog.ingredientPath
+            ) {
+                CatalogPickerView.ingredients(selection: $request.ingredients)
+            }
 
-                    NavigationLink {
-                        IngredientPickerView(selection: $fridgePicks)
-                    } label: {
-                        Label("Generate.Fridge.Choose", systemImage: "magnifyingglass")
-                    }
-                    .disabled(isGenerating)
-                } footer: {
-                    Text("Generate.Fridge.Choose.Footer")
-                }
+            picks(
+                "Generate.Choose.Tools",
+                systemImage: "frying.pan",
+                assets: $request.tools,
+                path: IconCatalog.toolPath
+            ) {
+                CatalogPickerView.tools(selection: $request.tools)
             }
 
             Section {
                 Button {
-                    Task { draft = await generator.generate(mode: mode, input: generationInput) }
+                    Task { draft = await generator.generate(request) }
                 } label: {
                     Label("Menu.Generate", systemImage: "apple.intelligence")
                 }
@@ -111,6 +97,31 @@ struct GenerateRecipeView: View {
                     Text(verbatim: message)
                         .foregroundStyle(.red)
                 }
+            }
+        }
+    }
+
+    /// What the cook has already picked, with the way back into the catalog under it.
+    private func picks(
+        _ label: LocalizedStringResource,
+        systemImage: String,
+        assets: Binding<[String]>,
+        path: @escaping (String) -> String,
+        @ViewBuilder picker: @escaping () -> some View
+    ) -> some View {
+        Section {
+            ForEach(assets.wrappedValue, id: \.self) { asset in
+                HStack(spacing: 12) {
+                    RecipeIcon(path: path(asset), size: 32)
+                    Text(verbatim: IconCatalog.displayName(for: asset))
+                }
+            }
+            .onDelete { assets.wrappedValue.remove(atOffsets: $0) }
+
+            NavigationLink {
+                picker()
+            } label: {
+                Label(label, systemImage: systemImage)
             }
         }
     }
@@ -130,26 +141,8 @@ struct GenerateRecipeView: View {
 
     private var isGenerating: Bool { generator.state == .generating }
 
-    private var input: Binding<String> {
-        switch mode {
-        case .dish: $dishInput
-        case .fridge: $fridgeInput
-        }
-    }
-
     private var canGenerate: Bool {
-        guard generator.isAvailable, !isGenerating else { return false }
-        guard mode.requiresInput else { return true }
-        return !generationInput.isEmpty
-    }
-
-    /// What the model is given: for the fridge, the ingredients picked from the catalog and
-    /// anything else typed in, as one list.
-    private var generationInput: String {
-        let typed = input.wrappedValue.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard mode == .fridge, !fridgePicks.isEmpty else { return typed }
-        let picked = fridgePicks.map(IconCatalog.displayName).joined(separator: ", ")
-        return typed.isEmpty ? picked : "\(picked), \(typed)"
+        generator.isAvailable && !isGenerating && !request.isEmpty
     }
 }
 

@@ -101,15 +101,28 @@
   "steps": [
     {
       "title": "Mix sauce",
+      "icons": [
+        "img/ingredients/soy-sauce.svg",
+        "img/ingredients/sugar.svg",
+        "img/ingredients/sake.svg",
+        "img/ingredients/water.svg",
+        "img/ingredients/ginger.svg",
+        "img/tools/bowl.svg"
+      ],
       "points": [
         "Combine the soy sauce, sugar, sake, and water in a small bowl.",
         "Stir until the sugar dissolves.",
         "Add the ginger now if you are using it."
-      ],
-      "hint": "If you start measuring after the heat is on, the pork overcooks while you do it. Making the sauce first is the single most effective move in this recipe."
+      ]
     },
     {
       "title": "Slice onion",
+      "icons": [
+        "img/ingredients/pork.svg",
+        "img/ingredients/onion.svg",
+        "img/tools/cutting-board.svg",
+        "img/tools/knife.svg"
+      ],
       "points": [
         "Peel the onion and halve it lengthwise.",
         "Slice with the grain into pieces about 5 mm thick.",
@@ -118,15 +131,21 @@
     },
     {
       "title": "Brown pork",
+      "icons": [
+        "img/ingredients/pork.svg",
+        "img/ingredients/oil.svg"
+      ],
       "points": [
         "Heat the oil over medium-high, or skip the oil if the pork is fatty.",
         "Spread the pork so the pieces overlap as little as possible, then leave it alone for 1 to 2 minutes.",
         "Flip only once the underside is well browned."
-      ],
-      "hint": "Stirring too early draws out moisture and you end up steaming the meat instead of searing it."
+      ]
     },
     {
       "title": "Soften onion",
+      "icons": [
+        "img/ingredients/onion.svg"
+      ],
       "points": [
         "Push the meat to one side and add the onion to the empty half.",
         "Cook for about 2 minutes, until translucent with lightly colored edges."
@@ -134,15 +153,23 @@
     },
     {
       "title": "Reduce sauce",
+      "icons": [
+        "img/ingredients/soy-sauce.svg",
+        "img/ingredients/butter.svg",
+        "img/tools/pan.svg"
+      ],
       "points": [
         "Pour in the sauce and keep it at a lively bubble, shaking the pan, for 1 to 2 minutes.",
         "Kill the heat once it thickens, clings to the meat, and turns glossy.",
         "Add the butter off the heat and let the residual warmth melt it."
-      ],
-      "hint": "Over-reduce and it suddenly turns salty. Stop while a little sauce still pools at the bottom of the pan."
+      ]
     },
     {
       "title": "Heat rice",
+      "icons": [
+        "img/ingredients/rice.svg",
+        "img/tools/bowl.svg"
+      ],
       "points": [
         "Heat the packed rice as directed.",
         "Tip it into a deep bowl."
@@ -150,6 +177,14 @@
     },
     {
       "title": "Assemble bowl",
+      "icons": [
+        "img/ingredients/pork.svg",
+        "img/ingredients/onion.svg",
+        "img/ingredients/rice.svg",
+        "img/ingredients/soy-sauce.svg",
+        "img/tools/pan.svg",
+        "img/tools/bowl.svg"
+      ],
       "points": [
         "Pile the pork and onion over the rice.",
         "Scrape every last bit of sauce from the pan over the top."

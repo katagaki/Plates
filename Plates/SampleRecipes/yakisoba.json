@@ -107,6 +107,12 @@
   "steps": [
     {
       "title": "Cut vegetables",
+      "icons": [
+        "img/ingredients/cabbage.svg",
+        "img/ingredients/carrot.svg",
+        "img/ingredients/onion.svg",
+        "img/tools/cutting-board.svg"
+      ],
       "points": [
         "Cut the cabbage into rough 3 cm squares, the onion into thin wedges, and the carrot into thin strips.",
         "Keep the carrot thinner than everything else, it is the slowest to soften.",
@@ -115,6 +121,10 @@
     },
     {
       "title": "Cut pork",
+      "icons": [
+        "img/ingredients/noodles.svg",
+        "img/ingredients/pork.svg"
+      ],
       "points": [
         "Cut the pork slices into pieces about 4 cm wide.",
         "Long strips tangle in the noodles later and come out in one clump."
@@ -122,14 +132,22 @@
     },
     {
       "title": "Loosen noodles",
+      "icons": [
+        "img/ingredients/noodles.svg",
+        "img/tools/pan.svg"
+      ],
       "points": [
         "Open the pack and pull the noodle brick apart with your fingers.",
         "They come out compressed and stuck together, and separating them dry is much easier than fighting them in a hot pan."
-      ],
-      "hint": "If the block will not budge, put it on a plate and microwave it for 30 seconds. The steam inside loosens it."
+      ]
     },
     {
       "title": "Brown pork",
+      "icons": [
+        "img/ingredients/pork.svg",
+        "img/ingredients/oil.svg",
+        "img/ingredients/pepper.svg"
+      ],
       "points": [
         "Heat the oil over medium-high, then spread the pork in one layer.",
         "Cook about 2 minutes without moving it, until the edges are browned.",
@@ -138,6 +156,12 @@
     },
     {
       "title": "Add vegetables",
+      "icons": [
+        "img/ingredients/pork.svg",
+        "img/ingredients/cabbage.svg",
+        "img/ingredients/carrot.svg",
+        "img/ingredients/onion.svg"
+      ],
       "points": [
         "Tip in the carrot, onion, and cabbage together.",
         "Toss for 2 to 3 minutes, until the cabbage has wilted but still has bite.",
@@ -146,24 +170,37 @@
     },
     {
       "title": "Steam noodles",
+      "icons": [
+        "img/ingredients/noodles.svg",
+        "img/ingredients/water.svg",
+        "img/tools/lid.svg"
+      ],
       "points": [
         "Lay the loosened noodles over the top, pour the water around them, and cover.",
         "Leave it 1 minute, then take the lid off and toss everything together.",
         "The noodles should be hot, glossy, and moving freely."
-      ],
-      "hint": "The water is there to steam the noodles, not to boil them. If the pan still has liquid pooling after a minute, cook it off before the sauce goes in or the sauce will taste watered down."
+      ]
     },
     {
       "title": "Add sauce",
+      "icons": [
+        "img/ingredients/noodles.svg",
+        "img/ingredients/yakisoba-sauce.svg",
+        "img/tools/pan.svg"
+      ],
       "points": [
         "Pour the yakisoba sauce around the edge of the pan, not onto the noodles.",
         "Toss hard for about 1 minute, until every strand is the same brown.",
         "Let it sit still for the last 20 seconds so the sauce catches on the pan and turns fragrant."
-      ],
-      "hint": "Sauce hitting bare hot metal caramelises. Poured straight onto the pile it just soaks in and stays flat."
+      ]
     },
     {
       "title": "Plate",
+      "icons": [
+        "img/ingredients/pepper.svg",
+        "img/ingredients/aonori.svg",
+        "img/ingredients/ginger.svg"
+      ],
       "points": [
         "Pile it onto a plate while everything is still steaming.",
         "Add a pinch of aonori and a small heap of pickled ginger on the side if you have them.",

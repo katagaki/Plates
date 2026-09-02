@@ -1,45 +1,30 @@
 import FoundationModels
 import Foundation
 
-/// What a new recipe is built from.
-enum GenerationMode: String, CaseIterable, Identifiable, Sendable {
-    /// A dish the user names, written as a one-pan version.
-    case dish
-    /// Whatever the user has to hand.
-    case fridge
+/// What a new recipe is built from: a dish in the cook's words, what they have in the
+/// kitchen, or both.
+struct GenerationRequest: Equatable, Sendable {
+    /// The dish, written by the cook. May be empty when they only picked what they have.
+    var description = ""
+    /// Ingredient asset names picked from the catalog.
+    var ingredients: [String] = []
+    /// Tool asset names picked from the catalog.
+    var tools: [String] = []
 
-    var id: String { rawValue }
-
-    var title: LocalizedStringResource {
-        switch self {
-        case .dish: "Generate.Mode.Dish"
-        case .fridge: "Generate.Mode.Fridge"
-        }
+    /// Nothing to work from, so there is nothing to ask for.
+    var isEmpty: Bool {
+        trimmedDescription.isEmpty && ingredients.isEmpty && tools.isEmpty
     }
 
-    var fieldLabel: LocalizedStringResource {
-        switch self {
-        case .dish: "Generate.Dish.Label"
-        case .fridge: "Generate.Fridge.Label"
-        }
+    var trimmedDescription: String {
+        description.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 
-    var fieldPrompt: LocalizedStringResource {
-        switch self {
-        case .dish: "Generate.Dish.Prompt"
-        case .fridge: "Generate.Fridge.Prompt"
-        }
-    }
+    /// The picked ingredients as a cook would read them.
+    var ingredientNames: [String] { ingredients.map(IconCatalog.displayName) }
 
-    var footer: LocalizedStringResource {
-        switch self {
-        case .dish: "Generate.Dish.Footer"
-        case .fridge: "Generate.Fridge.Footer"
-        }
-    }
-
-    /// The fridge needs a list to work from. A dish can be left to the model.
-    var requiresInput: Bool { self == .fridge }
+    /// The picked tools as a cook would read them.
+    var toolNames: [String] { tools.map(IconCatalog.displayName) }
 }
 
 /// The first pass: what the dish is and what it needs. The method comes later, so this
@@ -80,9 +65,6 @@ struct GeneratedStepOutline {
 struct GeneratedStepDetail {
     @Guide(description: "Two to three plain sentences describing what to do", .count(2...3))
     var points: [String]
-
-    @Guide(description: "Optional background on why the step works. Leave empty when there is nothing to add.")
-    var hint: String
 }
 
 /// The last pass: what goes wrong and how to fix it.
@@ -218,11 +200,11 @@ final class RecipeGenerator {
         }
     }
 
-    func generate(mode: GenerationMode, input: String) async -> Recipe? {
+    func generate(_ request: GenerationRequest) async -> Recipe? {
         state = .generating
         progress = GenerationProgress()
         do {
-            let base = try await generateBase(mode: mode, input: input)
+            let base = try await generateBase(request)
             let outline = try await generateOutline(for: base)
             let steps = try await generateSteps(outline: outline, base: base)
             let troubleshooting = try await generateTroubleshooting(base: base, outline: outline)
@@ -237,14 +219,14 @@ final class RecipeGenerator {
 
     // MARK: - Passes
 
-    private func generateBase(mode: GenerationMode, input: String) async throws -> GeneratedRecipeBase {
+    private func generateBase(_ request: GenerationRequest) async throws -> GeneratedRecipeBase {
         progress.stage = .idea
         let session = LanguageModelSession(
-            tools: [IngredientLookupTool()],
-            instructions: Self.instructions(for: mode)
+            tools: [IngredientLookupTool(available: request.ingredients)],
+            instructions: Self.instructions(for: request)
         )
         let stream = session.streamResponse(
-            to: Self.prompt(for: mode, input: input),
+            to: Self.prompt(for: request),
             generating: GeneratedRecipeBase.self
         )
         var latest: GeneratedContent?
@@ -304,14 +286,7 @@ final class RecipeGenerator {
                 """,
                 generating: GeneratedStepDetail.self
             )
-            steps.append(
-                Step(
-                    title: title,
-                    points: response.content.points,
-                    hint: Self.trimmed(response.content.hint),
-                    image: nil
-                )
-            )
+            steps.append(Step(title: title, icons: nil, points: response.content.points))
             progress.writtenStepCount = steps.count
         }
         return steps
@@ -360,8 +335,8 @@ final class RecipeGenerator {
     and do not pad with rule-of-three lists. Write ranges with the word "to", never a dash.
     """
 
-    private static func instructions(for mode: GenerationMode) -> String {
-        let shared = houseStyle + "\n\n" + """
+    private static func instructions(for request: GenerationRequest) -> String {
+        var instructions = houseStyle + "\n\n" + """
         You are working out what a dish is and what it needs. Prep work such as "finely diced" \
         belongs in the method, not in an ingredient amount, so leave it out here.
 
@@ -369,19 +344,27 @@ final class RecipeGenerator {
         any ingredient you are unsure of before you write it down, and take the swap it \
         suggests when the catalog has nothing for it.
         """
-        switch mode {
-        case .dish:
-            return shared + "\n\n" + """
-            The cook names a dish. Work out the one-pan version of it, keeping what makes it \
-            recognisable and dropping anything that needs a second pan or an oven.
-            """
-        case .fridge:
-            return shared + "\n\n" + """
-            The cook lists what they have. Build the recipe around that list. You may add pantry \
-            staples such as oil, salt, pepper, soy sauce, sugar, and water, but do not ask for \
-            anything else fresh that they did not mention.
+
+        if !request.ingredients.isEmpty {
+            instructions += "\n\n" + """
+            The cook has told you everything they have in the kitchen. Ask for nothing else. \
+            Every ingredient in the recipe has to come from their list, and it is fine to leave \
+            some of the list unused. If the list cannot make the dish they named, write the \
+            closest dish it can make.
             """
         }
+        if !request.tools.isEmpty {
+            instructions += "\n\n" + """
+            They have listed the tools they own too, so the method can only use those. Do not \
+            ask for a tool they did not list.
+            """
+        }
+        if request.trimmedDescription.isEmpty {
+            instructions += "\n\n" + """
+            They have not named a dish, so pick one their ingredients make well.
+            """
+        }
+        return instructions
     }
 
     private static let outlineInstructions = houseStyle + "\n\n" + """
@@ -392,8 +375,7 @@ final class RecipeGenerator {
 
     private static let stepInstructions = houseStyle + "\n\n" + """
     You are writing one step of a method that is already planned. Cover that step only, and \
-    do not repeat what earlier or later steps do. The hint is for background on why the step \
-    works, so leave it empty when there is nothing worth adding.
+    do not repeat what earlier or later steps do.
     """
 
     private static let troubleshootingInstructions = houseStyle + "\n\n" + """
@@ -402,16 +384,20 @@ final class RecipeGenerator {
     the pronoun such as "Want it more filling". Each solution is one to three full sentences.
     """
 
-    private static func prompt(for mode: GenerationMode, input: String) -> String {
-        let input = input.trimmingCharacters(in: .whitespacesAndNewlines)
-        switch mode {
-        case .dish:
-            return input.isEmpty
-                ? "Invent a one-pan recipe for a weeknight dinner."
-                : "Work out a one-pan version of \(input)."
-        case .fridge:
-            return "Work out a one-pan recipe using what I have: \(input)."
+    private static func prompt(for request: GenerationRequest) -> String {
+        var lines: [String] = []
+        if request.trimmedDescription.isEmpty {
+            lines.append("Work out a one-pan recipe I can cook tonight.")
+        } else {
+            lines.append("Work out a one-pan version of \(request.trimmedDescription).")
         }
+        if !request.ingredients.isEmpty {
+            lines.append("All I have to cook with: \(request.ingredientNames.joined(separator: ", ")).")
+        }
+        if !request.tools.isEmpty {
+            lines.append("All I have to cook in: \(request.toolNames.joined(separator: ", ")).")
+        }
+        return lines.joined(separator: "\n")
     }
 
     /// A compact "item (amount)" list, small enough to hand to every later pass.
@@ -432,6 +418,17 @@ final class RecipeGenerator {
             general: section(base.general),
             optional: section(base.optional)
         )
+        let tools = base.tools.map { tool in
+            Tool(
+                name: tool.name,
+                icon: IconCatalog.toolPath(for: IconCatalog.resolveTool(tool.icon, itemName: tool.name)),
+                required: tool.required,
+                note: trimmed(tool.note)
+            )
+        }
+        let ingredients = [sections.supermarket, sections.general, sections.optional]
+            .compactMap { $0 }
+            .flatMap { $0 }
         return Recipe(
             id: Recipe.makeID(from: base.title),
             title: base.title,
@@ -439,15 +436,18 @@ final class RecipeGenerator {
             serves: base.serves,
             tried: nil,
             ingredients: sections,
-            tools: base.tools.map { tool in
-                Tool(
-                    name: tool.name,
-                    icon: IconCatalog.toolPath(for: IconCatalog.resolveTool(tool.icon, itemName: tool.name)),
-                    required: tool.required,
-                    note: trimmed(tool.note)
+            tools: tools,
+            steps: steps.map { step in
+                Step(
+                    title: step.title,
+                    icons: Step.icons(
+                        forText: ([step.title] + step.points).joined(separator: " "),
+                        ingredients: ingredients,
+                        tools: tools
+                    ),
+                    points: step.points
                 )
             },
-            steps: steps,
             troubleshooting: troubleshooting
         )
     }

@@ -51,33 +51,52 @@
   "steps": [
     {
       "title": "Cut butter",
+      "icons": [
+        "img/ingredients/butter.svg",
+        "img/tools/pan.svg",
+        "img/tools/butter-knife.svg"
+      ],
       "points": [
         "Take the butter out of the fridge and cut it in two.",
         "About 10 g goes in the pan, about 5 g on top at the end.",
         "Leave the finishing piece out so it softens while you cook."
-      ],
-      "hint": "Cold butter on hot toast just sits there. A softened piece melts in and soaks through."
+      ]
     },
     {
       "title": "Melt butter",
+      "icons": [
+        "img/ingredients/butter.svg",
+        "img/tools/pan.svg",
+        "img/tools/butter-knife.svg"
+      ],
       "points": [
         "Set the pan over low heat and add the 10 g piece.",
         "Swirl it as it melts.",
         "Stop as soon as the foam settles, before it browns."
-      ],
-      "hint": "High heat burns butter before the bread can toast. Low and patient is the whole technique."
+      ]
     },
     {
       "title": "Toast first side",
+      "icons": [
+        "img/ingredients/bread.svg",
+        "img/ingredients/butter.svg",
+        "img/tools/spatula.svg",
+        "img/tools/butter-knife.svg"
+      ],
       "points": [
         "Lay the bread in and slide it around once so the underside drinks the butter.",
         "Toast for 2 to 3 minutes, pressing gently with the spatula.",
         "It is ready when the underside is deep golden brown."
-      ],
-      "hint": "Peek early by lifting a corner. The line between golden and burnt is about 30 seconds wide."
+      ]
     },
     {
       "title": "Toast second side",
+      "icons": [
+        "img/ingredients/bread.svg",
+        "img/ingredients/butter.svg",
+        "img/tools/pan.svg",
+        "img/tools/butter-knife.svg"
+      ],
       "points": [
         "Flip the bread over.",
         "Toast for 2 minutes more.",
@@ -86,6 +105,12 @@
     },
     {
       "title": "Top with butter",
+      "icons": [
+        "img/ingredients/butter.svg",
+        "img/ingredients/salt.svg",
+        "img/ingredients/honey.svg",
+        "img/tools/butter-knife.svg"
+      ],
       "points": [
         "Move the toast to a plate and set the softened butter in the middle.",
         "Add the pinch of salt or a thread of honey if you like.",

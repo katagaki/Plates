@@ -70,42 +70,64 @@
   "steps": [
     {
       "title": "Butter bread",
+      "icons": [
+        "img/ingredients/bread.svg",
+        "img/ingredients/butter.svg",
+        "img/tools/pan.svg",
+        "img/tools/butter-knife.svg"
+      ],
       "points": [
         "Spread softened butter over one face of each slice, right out to the crust.",
         "Those buttered faces go against the pan, so leave them facing up while you build.",
         "Corners brown last and dry out first, so give them a little extra."
-      ],
-      "hint": "Butter straight from the fridge tears the bread. Thirty seconds in the microwave at low power softens it enough."
+      ]
     },
     {
       "title": "Grate cheese",
+      "icons": [
+        "img/ingredients/cheese.svg"
+      ],
       "points": [
         "Grate the cheese on the coarse side, or tear slices into rough pieces.",
         "A block grated fresh melts more evenly than pre-grated cheese, which is dusted with starch to stop it clumping.",
         "Keep it in a loose pile rather than pressing it down."
-      ],
-      "hint": "Cold cheese grates cleanly. Straight from the fridge is the right temperature, warm cheese smears on the grater."
+      ]
     },
     {
       "title": "Build sandwich",
+      "icons": [
+        "img/ingredients/cheese.svg",
+        "img/ingredients/butter.svg",
+        "img/ingredients/mustard.svg",
+        "img/ingredients/pepper.svg",
+        "img/tools/butter-knife.svg"
+      ],
       "points": [
         "Turn one slice butter side down and smear the mustard over the dry face.",
         "Pile the cheese on evenly, grind on the pepper, then top with the second slice, butter side up.",
         "Keep the cheese about 1 cm short of the edges, since it spreads as it melts."
-      ],
-      "hint": "An even layer matters more than a thick one. A tall mound in the middle leaves the corners empty and pushes the slices apart."
+      ]
     },
     {
       "title": "Toast first side",
+      "icons": [
+        "img/ingredients/cheese.svg",
+        "img/tools/pan.svg",
+        "img/tools/spatula.svg",
+        "img/tools/lid.svg"
+      ],
       "points": [
         "Set the pan over medium-low heat and lay the sandwich in.",
         "Press it flat with the spatula and toast for 3 to 4 minutes, covered if you have a lid.",
         "Lift a corner to check: deep golden is right, and the cheese at the edges should be starting to soften."
-      ],
-      "hint": "Medium-low is the whole trick. Anything hotter browns the bread while the middle is still cold cheese."
+      ]
     },
     {
       "title": "Flip and finish",
+      "icons": [
+        "img/ingredients/cheese.svg",
+        "img/tools/spatula.svg"
+      ],
       "points": [
         "Slide the spatula fully under the sandwich and flip it in one move.",
         "Press again and toast for another 3 minutes.",
@@ -114,6 +136,9 @@
     },
     {
       "title": "Rest and cut",
+      "icons": [
+        "img/ingredients/cheese.svg"
+      ],
       "points": [
         "Move it to a board and wait one minute before cutting.",
         "Cut it in half on the diagonal and eat it straight away.",

@@ -370,6 +370,11 @@ nonisolated enum IconCatalog {
         search(query, in: ingredients)
     }
 
+    /// The tools a cook's search text turns up, closest match first.
+    static func tools(matching query: String) -> [String] {
+        search(query, in: tools)
+    }
+
     /// The same search, kept in browsing groups. Groups with nothing left in them are dropped.
     static func categories(matching query: String) -> [(category: IngredientCategory, icons: [String])] {
         let matches = Set(ingredients(matching: query))

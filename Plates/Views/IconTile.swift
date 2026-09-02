@@ -21,41 +21,59 @@ struct RecipeIcon: View {
     }
 }
 
-/// A tile: icon, name, and the amount or nothing. The heading says what the group is,
-/// so the tile never repeats it. The name, amount, and note come from recipe data, so
-/// they are shown as written rather than looked up in the string catalog.
-struct IconTile: View {
-    /// Every tile is the same height, so a long ingredient name never sets the row height.
-    static let height: CGFloat = 120
-
-    let iconPath: String
+/// An ingredient or a tool as the detail view shows it. The name, amount, and note come from
+/// recipe data, so they are shown as written rather than looked up in the string catalog.
+nonisolated struct TileInfo: Identifiable, Hashable {
+    let id: String
+    let icon: String
     let name: String
-    var detail: String?
-    var note: String?
+    let detail: String?
+    let note: String?
+
+    init(_ ingredient: Ingredient) {
+        id = "ingredient-" + ingredient.id
+        icon = ingredient.icon
+        name = ingredient.item
+        detail = ingredient.amount
+        note = ingredient.note
+    }
+
+    init(_ tool: Tool) {
+        id = "tool-" + tool.id
+        icon = tool.icon
+        name = tool.name
+        detail = nil
+        note = tool.note
+    }
+
+    /// What the card has no room for, shown in an alert when the card is tapped.
+    var message: String {
+        [detail, note].compactMap { $0 }.filter { !$0.isEmpty }.joined(separator: "\n\n")
+    }
+}
+
+/// A card in one of the carousels: the icon, the name, and the amount when there is one.
+struct IconTile: View {
+    let item: TileInfo
 
     var body: some View {
-        HStack(alignment: .top, spacing: 12) {
-            RecipeIcon(path: iconPath)
-            VStack(alignment: .leading, spacing: 2) {
-                Text(verbatim: name)
+        HStack(spacing: 10) {
+            RecipeIcon(path: item.icon, size: 36)
+            VStack(alignment: .leading, spacing: 1) {
+                Text(verbatim: item.name)
+                    .font(.subheadline)
                     .lineLimit(2)
-                if let detail, !detail.isEmpty {
+                if let detail = item.detail, !detail.isEmpty {
                     Text(verbatim: detail)
-                        .font(.subheadline)
+                        .font(.caption)
                         .foregroundStyle(.secondary)
                         .lineLimit(1)
-                }
-                if let note, !note.isEmpty {
-                    Text(verbatim: note)
-                        .font(.footnote)
-                        .foregroundStyle(.tertiary)
-                        .lineLimit(2)
                 }
             }
             Spacer(minLength: 0)
         }
-        .padding(12)
-        .frame(maxWidth: .infinity, minHeight: Self.height, maxHeight: Self.height, alignment: .topLeading)
+        .padding(10)
+        .frame(maxWidth: .infinity, minHeight: 72, maxHeight: 72, alignment: .leading)
         .cardBackground()
     }
 }

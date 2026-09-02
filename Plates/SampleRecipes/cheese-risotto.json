@@ -71,6 +71,9 @@
   "steps": [
     {
       "title": "Cut bacon",
+      "icons": [
+        "img/ingredients/bacon.svg"
+      ],
       "points": [
         "Cut the bacon into strips about 1 cm wide.",
         "This is the only knife work in the recipe."
@@ -78,6 +81,11 @@
     },
     {
       "title": "Fry bacon",
+      "icons": [
+        "img/ingredients/bacon.svg",
+        "img/ingredients/butter.svg",
+        "img/tools/pan.svg"
+      ],
       "points": [
         "Put the strips in a dry frying pan.",
         "Cook over medium heat for about a minute.",
@@ -86,15 +94,23 @@
     },
     {
       "title": "Add rice",
+      "icons": [
+        "img/ingredients/rice.svg"
+      ],
       "points": [
         "Tip in the rice as it comes, unwashed.",
         "Stir for a minute, until every grain is coated in fat.",
         "Stop when the rice turns faintly translucent."
-      ],
-      "hint": "Rinsing washes off the surface starch, and with it the creaminess. For risotto, unwashed is correct."
+      ]
     },
     {
       "title": "Add water and bouillon",
+      "icons": [
+        "img/ingredients/water.svg",
+        "img/ingredients/bouillon.svg",
+        "img/ingredients/salt.svg",
+        "img/tools/spatula.svg"
+      ],
       "points": [
         "Pour in 400 ml of water and drop in the bouillon cube.",
         "Break the cube up with the spatula as you stir.",
@@ -103,15 +119,22 @@
     },
     {
       "title": "Simmer rice",
+      "icons": [
+        "img/ingredients/rice.svg"
+      ],
       "points": [
         "Drop to low heat once it boils.",
         "Simmer uncovered for 15 minutes.",
         "Stir slowly from the bottom about every 3 minutes."
-      ],
-      "hint": "Skip the stirring and the bottom scorches. Keep the heat low and stay close to the stove."
+      ]
     },
     {
       "title": "Check rice",
+      "icons": [
+        "img/ingredients/rice.svg",
+        "img/ingredients/water.svg",
+        "img/ingredients/salt.svg"
+      ],
       "points": [
         "Crush a grain of rice and taste it.",
         "Still chalky in the center: add 50 ml of water and simmer 3 minutes more.",
@@ -120,12 +143,16 @@
     },
     {
       "title": "Add cheese and butter",
+      "icons": [
+        "img/ingredients/cheese.svg",
+        "img/ingredients/butter.svg",
+        "img/ingredients/salt.svg"
+      ],
       "points": [
         "Kill the heat first.",
         "Add the 2 tablespoons of grated cheese and 10 g of butter, and stir for about 20 seconds.",
         "Season with salt and black pepper."
-      ],
-      "hint": "Add cheese over a live flame and it splits, leaving a grainy texture."
+      ]
     }
   ],
   "troubleshooting": [
