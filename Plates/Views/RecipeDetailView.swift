@@ -60,7 +60,7 @@ struct RecipeDetailView: View {
         Grid(horizontalSpacing: 12) {
             GridRow {
                 SummaryCell(label: "Recipe.Detail.Time") {
-                    Text(verbatim: recipe.time)
+                    Text(verbatim: recipe.formattedTime)
                 }
                 SummaryCell(label: "Recipe.Detail.Serves") {
                     Text(verbatim: recipe.serves)

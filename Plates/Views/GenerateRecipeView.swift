@@ -187,7 +187,11 @@ private struct GenerationProgressView: View {
                         .lineLimit(1)
                         .truncationMode(.tail)
                     if let time = progress.time, let serves = progress.serves {
-                        Text(String(format: String(localized: "Recipe.Row.Subtitle"), time, serves))
+                        Text(String(
+                            format: String(localized: "Recipe.Row.Subtitle"),
+                            Recipe.formatTime(time),
+                            serves
+                        ))
                             .font(.subheadline)
                             .foregroundStyle(.secondary)
                     }

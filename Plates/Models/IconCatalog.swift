@@ -340,9 +340,13 @@ nonisolated enum IconCatalog {
     /// The asset catalog entry a path draws from, such as `SpringOnion`. The catalog is Pascal
     /// cased throughout, so the kebab cased name is converted on the way in.
     static func assetName(for path: String) -> String? {
-        iconName(for: path).map { name in
-            name.split(separator: "-").map { $0.prefix(1).uppercased() + $0.dropFirst() }.joined()
-        }
+        iconName(for: path).map(pascalCased)
+    }
+
+    /// `spring-onion` written the way the asset catalog and the string catalog write it,
+    /// `SpringOnion`.
+    private static func pascalCased(_ name: String) -> String {
+        name.split(separator: "-").map { $0.prefix(1).uppercased() + $0.dropFirst() }.joined()
     }
 
     /// The icon path a recipe file should carry for an ingredient asset.
@@ -355,11 +359,37 @@ nonisolated enum IconCatalog {
         "img/tools/\(name).svg"
     }
 
-    /// How an asset name reads in a list: `spring-onion` becomes "Spring onion".
+    /// How an asset name reads in a list, in the reader's language: `spring-onion` is "Spring
+    /// onion" in English and "ねぎ" in Japanese. Every asset has a key of its own in the
+    /// string catalog, and an asset with no entry falls back to its own name.
     static func displayName(for asset: String) -> String {
-        let words = asset.replacingOccurrences(of: "-", with: " ")
-        return words.prefix(1).uppercased() + words.dropFirst()
+        let key = nameKey(for: asset)
+        let localized = String(localized: String.LocalizationValue(key))
+        guard localized != key else {
+            let words = asset.replacingOccurrences(of: "-", with: " ")
+            return words.prefix(1).uppercased() + words.dropFirst()
+        }
+        return localized
     }
+
+    /// Where an asset's name is written in the string catalog, such as
+    /// `Ingredient.Name.SpringOnion` or `Tool.Name.CuttingBoard`.
+    private static func nameKey(for asset: String) -> String {
+        let group = ingredientSet.contains(asset) ? "Ingredient.Name." : "Tool.Name."
+        return group + pascalCased(asset)
+    }
+
+    /// Every asset name as a search compares it, worked out once. The reader's language is
+    /// fixed for the life of the process, so nothing here is looked up twice.
+    private static let searchNames: [String: String] = (ingredients + tools)
+        .reduce(into: [:]) { table, asset in table[asset] = normalized(displayName(for: asset)) }
+
+    private static let ingredientSet = Set(ingredients)
+
+    /// The localized ingredient names, mapped back onto their assets, so a name the model
+    /// wrote in the reader's language is found the same way an English one is.
+    private static let localizedIngredients: [String: String] = ingredients
+        .reduce(into: [:]) { table, asset in table[searchNames[asset] ?? ""] = asset }
 
     /// Maps a model guess back onto an icon that actually exists, falling back to a sensible default.
     static func resolveIngredient(_ guess: String, itemName: String) -> String {
@@ -398,6 +428,7 @@ nonisolated enum IconCatalog {
         let cleaned = normalized(name)
         guard !cleaned.isEmpty else { return nil }
         if let alias = aliases[cleaned] { return alias }
+        if let localized = localizedIngredients[cleaned] { return localized }
         return ingredients.first { normalized($0) == cleaned }
     }
 
@@ -407,26 +438,16 @@ nonisolated enum IconCatalog {
     }
 
     /// Ranks a set by how well each name matches the search text: whole word, then prefix,
-    /// then anywhere in the name.
+    /// then anywhere in the name. Both the asset's own name and its localized name are scored,
+    /// so a cook finds an icon by either.
     private static func search(_ query: String, in set: [String]) -> [String] {
         let cleaned = normalized(query)
         guard !cleaned.isEmpty else { return set }
         let words = cleaned.split(separator: " ").map(String.init)
         var ranked: [(name: String, score: Int)] = []
         for name in set {
-            let candidate = normalized(name)
-            var score = 0
-            if candidate == cleaned {
-                score = 100
-            } else if candidate.hasPrefix(cleaned) || cleaned.hasPrefix(candidate) {
-                score = 60
-            } else if candidate.contains(cleaned) || cleaned.contains(candidate) {
-                score = 40
-            } else {
-                let candidateWords = Set(candidate.split(separator: " ").map(String.init))
-                let shared = candidateWords.intersection(words)
-                if !shared.isEmpty { score = 20 + shared.count }
-            }
+            let candidates = [normalized(name), searchNames[name] ?? normalized(displayName(for: name))]
+            let score = candidates.map { score($0, against: cleaned, words: words) }.max() ?? 0
             if score > 0 { ranked.append((name, score)) }
         }
         if let alias = aliases[cleaned], !ranked.contains(where: { $0.name == alias }) {
@@ -435,6 +456,20 @@ nonisolated enum IconCatalog {
         return ranked
             .sorted { $0.score == $1.score ? $0.name < $1.name : $0.score > $1.score }
             .map(\.name)
+    }
+
+    /// How well one name answers the search text.
+    private static func score(_ candidate: String, against query: String, words: [String]) -> Int {
+        if candidate == query {
+            return 100
+        } else if candidate.hasPrefix(query) || query.hasPrefix(candidate) {
+            return 60
+        } else if candidate.contains(query) || query.contains(candidate) {
+            return 40
+        }
+        let candidateWords = Set(candidate.split(separator: " ").map(String.init))
+        let shared = candidateWords.intersection(words)
+        return shared.isEmpty ? 0 : 20 + shared.count
     }
 
     /// Lowercased, punctuation free, and space separated, so `Spring Onions!` and

@@ -383,13 +383,7 @@ final class RecipeGenerator {
         progress.stage = .outline
         let steps = try await run(instructions: Self.outlineInstructions) { session in
             let stream = session.streamResponse(
-                to: """
-                Recipe: \(base.title), \(base.time), serves \(base.serves).
-                Ingredients: \(Self.list(base.supermarket + base.general + base.optional)).
-                Tools: \(base.tools.map(\.name).joined(separator: ", ")).
-
-                Outline the method as step titles, from prep to plating.
-                """,
+                to: Self.outlinePrompt(for: base),
                 generating: GeneratedStepOutline.self
             )
             var latest: GeneratedContent?
@@ -412,13 +406,7 @@ final class RecipeGenerator {
             progress.latestStep = title
             let points = try await run(instructions: Self.stepInstructions) { session in
                 let response = try await session.respond(
-                    to: """
-                    Recipe: \(base.title), \(base.time), serves \(base.serves).
-                    Ingredients: \(Self.list(base.supermarket + base.general + base.optional)).
-                    Method: \(outline.enumerated().map { "\($0.offset + 1). \($0.element)" }.joined(separator: " ")).
-
-                    Write step \(index + 1), "\(title)".
-                    """,
+                    to: Self.stepPrompt(number: index + 1, title: title, base: base, outline: outline),
                     generating: GeneratedStepDetail.self
                 )
                 return response.content.points
@@ -436,12 +424,7 @@ final class RecipeGenerator {
         progress.stage = .troubleshooting
         return try await run(instructions: Self.troubleshootingInstructions) { session in
             let stream = session.streamResponse(
-                to: """
-                Recipe: \(base.title), \(base.time), serves \(base.serves).
-                Method: \(outline.enumerated().map { "\($0.offset + 1). \($0.element)" }.joined(separator: " ")).
-
-                What goes wrong when someone cooks this, and how do they fix it?
-                """,
+                to: Self.troubleshootingPrompt(base: base, outline: outline),
                 generating: GeneratedTroubleshootingList.self
             )
             var latest: GeneratedContent?
@@ -471,91 +454,63 @@ final class RecipeGenerator {
         }
     }
 
-    private static let houseStyle = """
-    You write recipes for a one-pan cooking site. Every recipe is cooked in a single frying \
-    pan on a home stove, uses ingredients from an ordinary supermarket, and finishes in under \
-    half an hour.
+    /// Every word the model is given is written in the reader's language, so the recipe
+    /// comes back in the language the app is being read in.
+    private static func text(_ key: String.LocalizationValue, _ arguments: CVarArg...) -> String {
+        let format = String(localized: key)
+        return arguments.isEmpty ? format : String(format: format, arguments: arguments)
+    }
 
-    Write plainly, like a good cookbook. Never use em-dashes. Do not use breathless adjectives, \
-    and do not pad with rule-of-three lists. Write ranges with the word "to", never a dash.
-    """
+    /// A list as the reader's language punctuates one.
+    private static func joined(_ items: [String]) -> String {
+        items.joined(separator: text("Generate.Prompt.Separator"))
+    }
+
+    private static var houseStyle: String { text("Generate.Prompt.HouseStyle") }
 
     private static func pickInstructions(for request: GenerationRequest) -> String {
-        var instructions = houseStyle + "\n\n" + """
-        You are choosing the shopping list and nothing else. Name the dish, then list the \
-        ingredients it is cooked from, one name per entry, with no amounts and no prep work. \
-        Pick ingredients that cook together in the same pan over the same half hour, and \
-        leave out anything the dish can do without.
-
-        The app draws each ingredient from a fixed catalog of icons. Call checkIngredient for \
-        every ingredient before you list it, and take the swap it suggests when the catalog \
-        has nothing for it.
-        """
-
+        var instructions = houseStyle + "\n\n" + text("Generate.Prompt.Pick")
         if !request.ingredients.isEmpty {
-            instructions += "\n\n" + """
-            The cook has told you everything they have in the kitchen. Ask for nothing else. \
-            Every ingredient you pick has to come from their list, and it is fine to leave \
-            some of the list unused. If the list cannot make the dish they named, pick the \
-            ingredients for the closest dish it can make.
-            """
+            instructions += "\n\n" + text("Generate.Prompt.Pick.Kitchen")
         }
         if request.trimmedDescription.isEmpty {
-            instructions += "\n\n" + """
-            They have not named a dish, so pick one their ingredients make well.
-            """
+            instructions += "\n\n" + text("Generate.Prompt.Pick.NoDish")
         }
         return instructions
     }
 
     private static func instructions(for request: GenerationRequest) -> String {
-        var instructions = houseStyle + "\n\n" + """
-        The dish and its ingredients are already chosen. Give the recipe its title and its \
-        timing, sort the ingredients you were given into fresh, pantry, and optional, and give \
-        each one an amount. Write every name exactly as it was given to you, add nothing that \
-        is not on the list, and drop an ingredient only when the dish truly does not need it. \
-        Prep work such as "finely diced" belongs in the method, not in an amount, so leave it \
-        out here.
-        """
-
+        var instructions = houseStyle + "\n\n" + text("Generate.Prompt.Base")
         if !request.tools.isEmpty {
-            instructions += "\n\n" + """
-            The cook has listed the tools they own, so the recipe can only use those. Do not \
-            ask for a tool they did not list.
-            """
+            instructions += "\n\n" + text("Generate.Prompt.Base.Tools")
         }
         return instructions
     }
 
-    private static let outlineInstructions = houseStyle + "\n\n" + """
-    You are outlining the method only. Give each step a short imperative title such as \
-    "Brown pork" or "Toast first side". Do not explain the steps, the titles alone are enough, \
-    and do not number them.
-    """
+    private static var outlineInstructions: String {
+        houseStyle + "\n\n" + text("Generate.Prompt.Outline")
+    }
 
-    private static let stepInstructions = houseStyle + "\n\n" + """
-    You are writing one step of a method that is already planned. Cover that step only, and \
-    do not repeat what earlier or later steps do.
-    """
+    private static var stepInstructions: String {
+        houseStyle + "\n\n" + text("Generate.Prompt.Step")
+    }
 
-    private static let troubleshootingInstructions = houseStyle + "\n\n" + """
-    You are writing the troubleshooting notes. Each problem is a short symptom with no closing \
-    period, written in the third person such as "The rice turned mushy", or as a want without \
-    the pronoun such as "Want it more filling". Each solution is one to three full sentences.
-    """
+    private static var troubleshootingInstructions: String {
+        houseStyle + "\n\n" + text("Generate.Prompt.Troubleshooting")
+    }
 
     private static func prompt(for request: GenerationRequest) -> String {
         var lines: [String] = []
         if request.trimmedDescription.isEmpty {
-            lines.append("Work out a one-pan recipe I can cook tonight.")
+            lines.append(text("Generate.Prompt.Ask.Any"))
         } else {
-            lines.append("Work out a one-pan version of \(request.trimmedDescription).")
+            lines.append(text("Generate.Prompt.Ask.Dish", request.trimmedDescription))
         }
         if !request.ingredients.isEmpty {
-            lines.append("All I have to cook with: \(request.ingredientNames.joined(separator: ", ")).")
+            lines.append(text("Generate.Prompt.Have.Ingredients", joined(request.ingredientNames)))
         }
         if !request.tools.isEmpty {
-            lines.append("All I have to cook in: \(request.toolNames.joined(separator: ", ")).")
+            lines.append(text("Generate.Prompt.Have.Tools", joined(request.toolNames)))
         }
         return lines.joined(separator: "\n")
     }
@@ -563,20 +518,65 @@ final class RecipeGenerator {
     /// The picked list handed to the pass that measures it.
     private static func basePrompt(for pick: IngredientPick, request: GenerationRequest) -> String {
         var lines = [
-            "Dish: \(pick.dish).",
-            "Ingredients: \(pick.names.joined(separator: ", ")).",
+            text("Generate.Prompt.Line.Dish", pick.dish),
+            text("Generate.Prompt.Line.Ingredients", joined(pick.names)),
         ]
         if !request.tools.isEmpty {
-            lines.append("All I have to cook in: \(request.toolNames.joined(separator: ", ")).")
+            lines.append(text("Generate.Prompt.Have.Tools", joined(request.toolNames)))
         }
         lines.append("")
-        lines.append("Write the title, the timing, the measured shopping list, and the tools.")
+        lines.append(text("Generate.Prompt.Base.Ask"))
         return lines.joined(separator: "\n")
+    }
+
+    private static func outlinePrompt(for base: GeneratedRecipeBase) -> String {
+        [
+            summary(of: base),
+            text("Generate.Prompt.Line.Ingredients", list(base.supermarket + base.general + base.optional)),
+            text("Generate.Prompt.Line.Tools", joined(base.tools.map(\.name))),
+            "",
+            text("Generate.Prompt.Outline.Ask"),
+        ].joined(separator: "\n")
+    }
+
+    private static func stepPrompt(
+        number: Int,
+        title: String,
+        base: GeneratedRecipeBase,
+        outline: [String]
+    ) -> String {
+        [
+            summary(of: base),
+            text("Generate.Prompt.Line.Ingredients", list(base.supermarket + base.general + base.optional)),
+            text("Generate.Prompt.Line.Method", method(outline)),
+            "",
+            text("Generate.Prompt.Step.Ask", String(number), title),
+        ].joined(separator: "\n")
+    }
+
+    private static func troubleshootingPrompt(base: GeneratedRecipeBase, outline: [String]) -> String {
+        [
+            summary(of: base),
+            text("Generate.Prompt.Line.Method", method(outline)),
+            "",
+            text("Generate.Prompt.Troubleshooting.Ask"),
+        ].joined(separator: "\n")
+    }
+
+    /// The one line every later pass opens with: what is being cooked, how long it takes, and
+    /// how many it feeds.
+    private static func summary(of base: GeneratedRecipeBase) -> String {
+        text("Generate.Prompt.Line.Summary", base.title, base.time, base.serves)
+    }
+
+    /// The outline as one numbered line.
+    private static func method(_ outline: [String]) -> String {
+        outline.enumerated().map { "\($0.offset + 1). \($0.element)" }.joined(separator: " ")
     }
 
     /// A compact "item (amount)" list, small enough to hand to every later pass.
     private static func list(_ ingredients: [GeneratedIngredient]) -> String {
-        ingredients.map { "\($0.item) (\($0.amount))" }.joined(separator: ", ")
+        joined(ingredients.map { "\($0.item) (\($0.amount))" })
     }
 
     // MARK: - Assembly

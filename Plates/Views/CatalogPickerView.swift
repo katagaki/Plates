@@ -1,8 +1,8 @@
 import SwiftUI
 
 /// A grid of catalog icons to tick off, grouped into native list sections, so a cook can pick
-/// what they have instead of typing it. Icon names are catalog data, so they are shown as
-/// written.
+/// what they have instead of typing it. Icon names come back from the catalog already in the
+/// reader's language, so they are shown as they are handed over.
 struct CatalogPickerView: View {
     /// One collapsible group of icons.
     struct IconGroup: Identifiable {

@@ -16,7 +16,52 @@ nonisolated struct Recipe: Codable, Identifiable, Hashable {
 
     /// The minute count behind `time`, used for sorting. Unreadable values sort last.
     var minutes: Int {
-        Int(time.prefix { $0.isNumber }) ?? Int.max
+        Recipe.minutes(in: time) ?? Int.max
+    }
+
+    /// `time` as the reader's language writes a duration: "25 min" in English, "25分" in
+    /// Japanese. Recipe files carry whatever the recipe was written with, so a time nothing
+    /// can be read out of is shown as it stands.
+    var formattedTime: String {
+        Recipe.formatTime(time)
+    }
+
+    /// The same formatting for a time that has not been saved to a recipe yet.
+    static func formatTime(_ time: String) -> String {
+        guard let minutes = minutes(in: time) else { return time }
+        return Duration.seconds(minutes * 60).formatted(
+            .units(allowed: [.hours, .minutes], width: .abbreviated)
+        )
+    }
+
+    /// The minutes a written time comes to, read out of text such as "25 min", "1 h 30 min",
+    /// or "25分". A range keeps its later figure, so "10 to 15 min" is a quarter of an hour.
+    static func minutes(in time: String) -> Int? {
+        var counts: [(value: Int, unit: String)] = []
+        let text = time.lowercased()
+        var index = text.startIndex
+        while index < text.endIndex {
+            guard text[index].isNumber else {
+                index = text.index(after: index)
+                continue
+            }
+            let numberEnd = text[index...].firstIndex { !$0.isNumber } ?? text.endIndex
+            let unitEnd = text[numberEnd...].firstIndex(where: \.isNumber) ?? text.endIndex
+            counts.append((
+                Int(text[index..<numberEnd]) ?? 0,
+                text[numberEnd..<unitEnd].trimmingCharacters(in: .whitespaces)
+            ))
+            index = unitEnd
+        }
+        guard !counts.isEmpty else { return nil }
+        let hours = counts.last { isHours($0.unit) }?.value ?? 0
+        let minutes = counts.last { !isHours($0.unit) }?.value ?? 0
+        return hours * 60 + minutes
+    }
+
+    /// Whether a figure was written in hours rather than minutes.
+    private static func isHours(_ unit: String) -> Bool {
+        unit.hasPrefix("h") || unit.hasPrefix("時")
     }
 }
 
@@ -94,23 +139,31 @@ extension Step {
         limit: Int = 6
     ) -> [String] {
         let words = Set(terms(in: text))
+        let written = text.lowercased()
         let ingredientIcons = ingredients.filter { entry in
-            matches(words, name: entry.item, icon: entry.icon)
+            matches(words, in: written, name: entry.item, icon: entry.icon)
         }
         let toolIcons = tools.filter { tool in
-            matches(words, name: tool.name, icon: tool.icon)
+            matches(words, in: written, name: tool.name, icon: tool.icon)
         }
         let icons = ingredientIcons.map(\.icon) + toolIcons.map(\.icon)
         return Array(NSOrderedSet(array: icons).compactMap { $0 as? String }.prefix(limit))
     }
 
     /// An entry is in the step when the step names it, or names the icon it carries.
-    private static func matches(_ words: Set<String>, name: String, icon: String) -> Bool {
-        var candidates = terms(in: name)
-        if let name = IconCatalog.iconName(for: icon) {
-            candidates += terms(in: IconCatalog.displayName(for: name))
+    private static func matches(_ words: Set<String>, in text: String, name: String, icon: String) -> Bool {
+        var names = [name]
+        if let asset = IconCatalog.iconName(for: icon) {
+            names.append(IconCatalog.displayName(for: asset))
         }
-        return candidates.contains { words.contains($0) }
+        if names.contains(where: { runsTogether($0) && text.contains($0.lowercased()) }) { return true }
+        return names.flatMap(terms).contains { words.contains($0) }
+    }
+
+    /// True when a name is written without spaces, as Japanese is. Those names are looked for
+    /// in the step as written, since there are no words to split them into.
+    private static func runsTogether(_ name: String) -> Bool {
+        !name.isEmpty && !name.contains { $0.isASCII && $0.isLetter }
     }
 
     /// The words worth matching on: lowercased, singular, and long enough to mean something.

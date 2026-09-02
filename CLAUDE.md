@@ -72,8 +72,22 @@ without a Japanese value is unfinished. Japanese copy follows the same plain sty
 - Views pass the key as a string literal (`Text("Recipe.Detail.Time")`). Strings that come from
   outside a view use `LocalizedStringResource`, and formatted ones use
   `String(format: String(localized: "Key"), ...)` with positional specifiers such as `%1$@`.
-- Recipe data is not localized. Titles, ingredient names, amounts, steps, and error text from
-  the system are shown with `Text(verbatim:)` so they are never looked up as keys.
+- Recipe data is not localized. Titles, amounts, steps, and error text from the system are
+  shown with `Text(verbatim:)` so they are never looked up as keys. A generated recipe is
+  written in the reader's language because the prompts are, not because it is translated after
+  the fact.
+- Every catalog icon carries its own name key, `Ingredient.Name.SpringOnion` and
+  `Tool.Name.CuttingBoard`, read through `IconCatalog.displayName(for:)`. The key is built at
+  runtime from the asset name, so the entries are kept in the string catalog by hand with
+  `extractionState` set to `manual`, and adding an icon means adding its name in both
+  languages.
+- Everything the model is given is a key too, under `Generate.Prompt.` and `Generate.Lookup.`,
+  down to the comma a list is joined with. Only the `@Generable` schema descriptions stay in
+  English: they are the shape of the answer, not the prompt, and the house style tells the
+  model which language to write in.
+- A recipe's `time` is stored as the model wrote it and shown through `Recipe.formattedTime`,
+  which reads the minute count out of it and formats it with `Duration.UnitsFormatStyle`, so
+  "25 min" is read as "25分" in Japanese.
 
 ## App icon
 

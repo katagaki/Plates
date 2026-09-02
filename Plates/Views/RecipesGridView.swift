@@ -56,7 +56,7 @@ private struct RecipeCard: View {
                     }
                     Spacer(minLength: 0)
                 }
-                Text(String(format: String(localized: "Recipe.Row.Subtitle"), recipe.time, recipe.serves))
+                Text(String(format: String(localized: "Recipe.Row.Subtitle"), recipe.formattedTime, recipe.serves))
                     .font(.caption)
                     .foregroundStyle(.secondary)
             }

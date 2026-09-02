@@ -1,17 +1,17 @@
 import FoundationModels
+import Foundation
 
 /// Lets the model check an ingredient against the icon catalog while it writes the shopping
-/// list, so it asks for something the app can draw and suggests a swap when it cannot.
+/// list, so it asks for something the app can draw and suggests a swap when it cannot. The
+/// answers are written in the language the recipe is being written in, and the icon names in
+/// them are catalog data, so they stay as the catalog spells them.
 struct IngredientLookupTool: FoundationModels.Tool {
     /// What the cook said they have. Empty when they did not narrow it down, and the whole
     /// catalog is fair game.
     let available: [String]
 
     let name = "checkIngredient"
-    let description = """
-    Check whether an ingredient is in the app's catalog. Answers with the icon to use, or with \
-    the closest ingredients to use instead when the catalog does not carry it.
-    """
+    var description: String { String(localized: "Generate.Lookup.Description") }
 
     @Generable
     struct Arguments {
@@ -23,27 +23,22 @@ struct IngredientLookupTool: FoundationModels.Tool {
         let ingredient = arguments.ingredient
         let asset = IconCatalog.ingredient(named: ingredient)
         if let asset, available.isEmpty || available.contains(asset) {
-            return "\(ingredient) is in the catalog. Use the icon \"\(asset)\"."
+            return text("Generate.Lookup.InCatalog", ingredient, asset)
         }
         let suggestions = available.isEmpty
             ? IconCatalog.ingredientSuggestions(for: ingredient)
             : Array(available.prefix(8))
         guard !suggestions.isEmpty else {
-            return """
-            \(ingredient) is not in the catalog and nothing comes close. Leave it out and \
-            build the recipe from ingredients that are in the catalog.
-            """
+            return text("Generate.Lookup.Nothing", ingredient)
         }
         let closest = suggestions.map { "\"\($0)\"" }.joined(separator: ", ")
         if available.isEmpty {
-            return """
-            \(ingredient) is not in the catalog. The closest entries are \(closest). Use one \
-            of those as the icon, or swap the ingredient for one of them.
-            """
+            return text("Generate.Lookup.Closest", ingredient, closest)
         }
-        return """
-        The cook does not have \(ingredient). Leave it out, or use one of the things they do \
-        have: \(closest).
-        """
+        return text("Generate.Lookup.NotAvailable", ingredient, closest)
+    }
+
+    private func text(_ key: String.LocalizationValue, _ arguments: CVarArg...) -> String {
+        String(format: String(localized: key), arguments: arguments)
     }
 }
