@@ -58,8 +58,7 @@ struct CatalogPickerView: View {
     /// A tap in here drops the pick, so nothing in the bar is highlighted. The bar stays put
     /// when nothing is picked, so the catalog never shifts under a finger.
     private var pickedBar: some View {
-        let shape = RoundedRectangle(cornerRadius: 24, style: .continuous)
-        return GlassEffectContainer {
+        GlassEffectContainer {
             Group {
                 if selection.isEmpty {
                     Text(emptyLabel)
@@ -85,14 +84,13 @@ struct CatalogPickerView: View {
                                 .buttonStyle(.plain)
                             }
                         }
-                        .padding(.horizontal, 8)
                     }
                     .scrollIndicators(.hidden)
+                    .contentMargins(.horizontal, 16, for: .scrollContent)
                 }
             }
             .frame(height: 62)
-            .glassEffect(.regular, in: shape)
-            .clipShape(shape)
+            .glassEffect(.regular, in: .rect(cornerRadius: 24, style: .continuous))
         }
         .padding(.horizontal, 16)
         .padding(.bottom, 8)

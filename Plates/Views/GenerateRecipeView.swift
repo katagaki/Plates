@@ -115,13 +115,31 @@ struct GenerateRecipeView: View {
         @ViewBuilder picker: @escaping () -> some View
     ) -> some View {
         Section {
-            ForEach(assets.wrappedValue, id: \.self) { asset in
-                HStack(spacing: 12) {
-                    RecipeIcon(path: path(asset), size: 32)
-                    Text(verbatim: IconCatalog.displayName(for: asset))
+            if !assets.wrappedValue.isEmpty {
+                ScrollView(.horizontal) {
+                    HStack(spacing: 4) {
+                        ForEach(assets.wrappedValue, id: \.self) { asset in
+                            Button {
+                                assets.wrappedValue.removeAll { $0 == asset }
+                            } label: {
+                                VStack(spacing: 2) {
+                                    RecipeIcon(path: path(asset), size: 30)
+                                    Text(verbatim: IconCatalog.displayName(for: asset))
+                                        .font(.caption2)
+                                        .lineLimit(1)
+                                        .foregroundStyle(.primary)
+                                }
+                                .frame(width: 66)
+                            }
+                            .buttonStyle(.plain)
+                        }
+                    }
+                    .padding(.vertical, 8)
                 }
+                .scrollIndicators(.hidden)
+                .contentMargins(.horizontal, 16, for: .scrollContent)
+                .listRowInsets(EdgeInsets())
             }
-            .onDelete { assets.wrappedValue.remove(atOffsets: $0) }
 
             NavigationLink {
                 picker()
@@ -203,7 +221,10 @@ private struct GenerationProgressView: View {
                 DonutSpinner()
             } else {
                 Image(systemName: count > 0 ? "checkmark.circle.fill" : "circle.dotted")
+                    .resizable()
+                    .scaledToFit()
                     .foregroundStyle(.secondary)
+                    .frame(width: .markerSize, height: .markerSize)
             }
             Text(label)
             Spacer(minLength: 0)
@@ -216,6 +237,15 @@ private struct GenerationProgressView: View {
     }
 }
 
+private extension CGFloat {
+    /// The circle every checklist marker is drawn in, so the ring, the dotted circle, and the
+    /// checkmark are all the same size.
+    static let markerSize: CGFloat = 20
+    /// How thick the ring is drawn. The ring is inset by half of it so its outer edge lands on
+    /// the circle the symbols fill.
+    static let markerLineWidth: CGFloat = 2
+}
+
 /// A ring with a gap in it, turning while the model works on that line. It sits where the
 /// line's checkmark goes, so nothing shifts when the pass finishes.
 private struct DonutSpinner: View {
@@ -224,10 +254,11 @@ private struct DonutSpinner: View {
     var body: some View {
         Circle()
             .trim(from: 0, to: 0.7)
-            .stroke(.secondary, style: StrokeStyle(lineWidth: 2, lineCap: .round))
+            .stroke(.secondary, style: StrokeStyle(lineWidth: .markerLineWidth, lineCap: .round))
+            .padding(.markerLineWidth / 2)
             .rotationEffect(.degrees(isTurning ? 360 : 0))
             .animation(.linear(duration: 1).repeatForever(autoreverses: false), value: isTurning)
-            .frame(width: 17, height: 17)
+            .frame(width: .markerSize, height: .markerSize)
             .onAppear { isTurning = true }
     }
 }
