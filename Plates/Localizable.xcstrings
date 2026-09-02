@@ -111,13 +111,101 @@
         }
       }
     },
-    "Generate.Progress.Title": {
+    "Generate.Progress.Row.Ingredients": {
       "extractionState": "manual",
       "localizations": {
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Writing the recipe"
+            "value": "Ingredients"
+          }
+        }
+      }
+    },
+    "Generate.Progress.Row.StepDetails": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Steps written"
+          }
+        }
+      }
+    },
+    "Generate.Progress.Row.Steps": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Steps"
+          }
+        }
+      }
+    },
+    "Generate.Progress.Row.Tools": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tools"
+          }
+        }
+      }
+    },
+    "Generate.Progress.Row.Troubleshooting": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Troubleshooting"
+          }
+        }
+      }
+    },
+    "Generate.Progress.Stage.Details": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Writing the steps"
+          }
+        }
+      }
+    },
+    "Generate.Progress.Stage.Idea": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Working out the dish"
+          }
+        }
+      }
+    },
+    "Generate.Progress.Stage.Outline": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Planning the method"
+          }
+        }
+      }
+    },
+    "Generate.Progress.Stage.Troubleshooting": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Noting what goes wrong"
           }
         }
       }

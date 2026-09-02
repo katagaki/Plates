@@ -119,7 +119,7 @@ private struct GenerationProgressView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             ProgressView(value: progress.fraction) {
-                Text("Generate.Progress.Title")
+                Text(progress.stage.title)
                     .font(.subheadline)
             }
 
@@ -127,6 +127,8 @@ private struct GenerationProgressView: View {
                 VStack(alignment: .leading, spacing: 2) {
                     Text(verbatim: title)
                         .font(.headline)
+                        .lineLimit(1)
+                        .truncationMode(.tail)
                     if let time = progress.time, let serves = progress.serves {
                         Text(String(format: String(localized: "Recipe.Row.Subtitle"), time, serves))
                             .font(.caption)
@@ -135,12 +137,13 @@ private struct GenerationProgressView: View {
                 }
             }
 
-            stage("Recipe.Detail.Ingredients.Supermarket", count: progress.ingredientCount)
-            stage("Recipe.Detail.Tools.Required", count: progress.toolCount)
-            stage("Recipe.Detail.Steps", count: progress.stepCount)
-            stage("Recipe.Detail.Troubleshooting", count: progress.troubleshootingCount)
+            stage("Generate.Progress.Row.Ingredients", count: progress.ingredientCount)
+            stage("Generate.Progress.Row.Tools", count: progress.toolCount)
+            stage("Generate.Progress.Row.Steps", count: progress.stepCount)
+            stage("Generate.Progress.Row.StepDetails", count: progress.writtenStepCount)
+            stage("Generate.Progress.Row.Troubleshooting", count: progress.troubleshootingCount)
 
-            if let latestStep = progress.latestStep, !latestStep.isEmpty {
+            if progress.stage == .details, let latestStep = progress.latestStep, !latestStep.isEmpty {
                 Text(verbatim: latestStep)
                     .font(.footnote)
                     .foregroundStyle(.tertiary)

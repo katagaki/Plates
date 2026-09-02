@@ -164,15 +164,21 @@ private struct RecipeCard: View {
         VStack(alignment: .leading, spacing: 10) {
             HStack(spacing: 6) {
                 RecipeIcon(path: iconPath, size: 40)
-                if recipe.tried == true {
-                    Image(systemName: "checkmark.seal.fill")
-                        .foregroundStyle(.secondary)
-                }
                 Spacer(minLength: 0)
             }
             VStack(alignment: .leading, spacing: 2) {
-                Text(verbatim: recipe.title)
-                    .font(.headline)
+                HStack(spacing: 4) {
+                    Text(verbatim: recipe.title)
+                        .font(.headline)
+                        .lineLimit(1)
+                        .truncationMode(.tail)
+                    if recipe.tried == true {
+                        Image(systemName: "checkmark.seal.fill")
+                            .font(.footnote)
+                            .foregroundStyle(.secondary)
+                    }
+                    Spacer(minLength: 0)
+                }
                 Text(String(format: String(localized: "Recipe.Row.Subtitle"), recipe.time, recipe.serves))
                     .font(.caption)
                     .foregroundStyle(.secondary)
