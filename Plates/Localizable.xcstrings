@@ -296,13 +296,13 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ingredients measured"
+            "value": "Measuring ingredients"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "分量を決定しました"
+            "value": "分量を決定中"
           }
         }
       }
@@ -313,13 +313,13 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ingredients picked"
+            "value": "Picking ingredients"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "材料を選択しました"
+            "value": "材料を選択中"
           }
         }
       }
@@ -330,13 +330,13 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Steps written"
+            "value": "Writing steps"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "手順を記述しました"
+            "value": "手順を記述中"
           }
         }
       }
@@ -347,13 +347,13 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Steps planned"
+            "value": "Planning steps"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "手順を構成しました"
+            "value": "手順を構成中"
           }
         }
       }
@@ -364,13 +364,13 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tools chosen"
+            "value": "Choosing tools"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "道具を選択しました"
+            "value": "道具を選択中"
           }
         }
       }
@@ -381,13 +381,13 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Fixes noted"
+            "value": "Noting fixes"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "対処法をまとめました"
+            "value": "対処法を整理中"
           }
         }
       }
