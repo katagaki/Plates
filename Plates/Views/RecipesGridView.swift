@@ -32,45 +32,48 @@ struct RecipesGridView: View {
     }
 }
 
-/// One recipe at a glance: an icon, the title, and how long it takes. Recipe data is shown as
-/// written rather than looked up in the string catalog.
+/// One recipe at a glance: the title and how long it takes, over a blend of the colours its
+/// ingredients are drawn in. Recipe data is shown as written rather than looked up in the
+/// string catalog.
 private struct RecipeCard: View {
     let recipe: Recipe
 
+    private static let points: [SIMD2<Float>] = [
+        SIMD2(0, 0), SIMD2(1, 0),
+        SIMD2(0, 1), SIMD2(1, 1),
+    ]
+
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            HStack(spacing: 6) {
-                RecipeIcon(path: iconPath, size: 40)
+        VStack(alignment: .leading, spacing: 2) {
+            HStack(alignment: .firstTextBaseline, spacing: 4) {
+                Text(verbatim: recipe.title)
+                    .font(.headline)
+                    .lineLimit(2)
+                    .truncationMode(.tail)
+                if recipe.tried == true {
+                    Image(systemName: "checkmark.seal.fill")
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                }
                 Spacer(minLength: 0)
             }
-            VStack(alignment: .leading, spacing: 2) {
-                HStack(spacing: 4) {
-                    Text(verbatim: recipe.title)
-                        .font(.headline)
-                        .lineLimit(1)
-                        .truncationMode(.tail)
-                    if recipe.tried == true {
-                        Image(systemName: "checkmark.seal.fill")
-                            .font(.footnote)
-                            .foregroundStyle(.secondary)
-                    }
-                    Spacer(minLength: 0)
-                }
-                Text(String(format: String(localized: "Recipe.Row.Subtitle"), recipe.formattedTime, recipe.serves))
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-            }
+            Text(String(format: String(localized: "Recipe.Row.Subtitle"), recipe.formattedTime, recipe.serves))
+                .font(.caption)
+                .foregroundStyle(.secondary)
         }
         .multilineTextAlignment(.leading)
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(14)
+        .background { blend }
         .cardBackground()
     }
 
-    /// The first ingredient's icon stands in for the recipe.
-    private var iconPath: String {
-        recipe.ingredients.supermarket?.first?.icon
-            ?? recipe.ingredients.general?.first?.icon
-            ?? ""
+    /// The ingredient colours poured into the four corners of the card. It sits over the card
+    /// background rather than replacing it, so the title keeps its contrast in either
+    /// appearance.
+    private var blend: some View {
+        MeshGradient(width: 2, height: 2, points: Self.points, colors: IngredientPalette.colors(for: recipe))
+            .opacity(0.5)
+            .clipShape(.rect(cornerRadius: .listRowCornerRadius, style: .continuous))
     }
 }

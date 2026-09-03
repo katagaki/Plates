@@ -11,6 +11,28 @@
 		E4B00000000000000000000C /* PlatesActivity.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E4B000000000000000000004 /* PlatesActivity.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E4B00000000000000000000E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E47FE75130478FED0038302E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E4B000000000000000000003;
+			remoteInfo = PlatesActivity;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E4B00000000000000000000B /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "";
+			dstSubfolder = PlugIns;
+			files = (
+				E4B00000000000000000000C /* PlatesActivity.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		E47FE75930478FED0038302E /* Plates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E47FE8193047956D0038302E /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
@@ -18,19 +40,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		E4B00000000000000000000F /* Exceptions for "PlatesActivity" folder in "PlatesActivity" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = E4B000000000000000000003 /* PlatesActivity */;
-		};
 		E47FE90030479ABC0038302E /* Exceptions for "Plates" folder in "Plates" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
 			target = E47FE75830478FED0038302E /* Plates */;
+		};
+		E4B00000000000000000000F /* Exceptions for "PlatesActivity" folder in "PlatesActivity" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = E4B000000000000000000003 /* PlatesActivity */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -43,17 +65,17 @@
 			path = Plates;
 			sourceTree = "<group>";
 		};
+		E4B000000000000000000001 /* Shared */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		E4B000000000000000000002 /* PlatesActivity */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				E4B00000000000000000000F /* Exceptions for "PlatesActivity" folder in "PlatesActivity" target */,
 			);
 			path = PlatesActivity;
-			sourceTree = "<group>";
-		};
-		E4B000000000000000000001 /* Shared */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -128,11 +150,9 @@
 			);
 			buildRules = (
 			);
-			dependencies = (
-			);
 			fileSystemSynchronizedGroups = (
-				E4B000000000000000000002 /* PlatesActivity */,
 				E4B000000000000000000001 /* Shared */,
+				E4B000000000000000000002 /* PlatesActivity */,
 			);
 			name = PlatesActivity;
 			productName = PlatesActivity;
@@ -178,20 +198,6 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		E4B00000000000000000000B /* Embed Foundation Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				E4B00000000000000000000C /* PlatesActivity.appex in Embed Foundation Extensions */,
-			);
-			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXResourcesBuildPhase section */
 		E47FE75730478FED0038302E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
@@ -218,16 +224,6 @@
 			);
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXContainerItemProxy section */
-		E4B00000000000000000000E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E47FE75130478FED0038302E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E4B000000000000000000003;
-			remoteInfo = PlatesActivity;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXTargetDependency section */
 		E4B00000000000000000000D /* PBXTargetDependency */ = {
