@@ -49,7 +49,7 @@ private struct RecipeCard: View {
         VStack(alignment: .leading, spacing: 2) {
             Text(verbatim: recipe.title)
                 .font(.headline)
-                .lineLimit(2)
+                .lineLimit(2, reservesSpace: true)
                 .truncationMode(.tail)
                 .frame(maxWidth: .infinity, alignment: .leading)
             HStack(spacing: 4) {
