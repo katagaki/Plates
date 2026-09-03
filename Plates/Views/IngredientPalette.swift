@@ -12,12 +12,12 @@ enum IngredientPalette {
     /// The four corner colours a recipe's card blends. Ingredients are read in the order they
     /// are written, the flattest ones are passed over, and a short list is filled out by
     /// shading the colours it does have.
-    static func colors(for recipe: Recipe) -> [Color] {
+    static func colors(for recipe: Recipe, in scheme: ColorScheme) -> [Color] {
         let paths = (recipe.ingredients.supermarket ?? []).map(\.icon)
             + (recipe.ingredients.general ?? []).map(\.icon)
         let candidates = paths.compactMap(color(forIcon:))
         let picked = spread(candidates)
-        guard !picked.isEmpty else { return fallback }
+        guard !picked.isEmpty else { return fallback.map { $0.tuned(for: scheme) } }
         var colors = picked
         let shades = [0.10, -0.10, 0.18]
         var index = 0
@@ -25,7 +25,7 @@ enum IngredientPalette {
             colors.append(picked[index % picked.count].shaded(by: shades[index % shades.count]))
             index += 1
         }
-        return colors
+        return colors.map { $0.tuned(for: scheme) }
     }
 
     /// Colours that read as their own, so a card of four near identical greens does not
@@ -89,7 +89,6 @@ enum IngredientPalette {
         }
         guard weight > 0 else { return nil }
         return Color(red: red / weight, green: green / weight, blue: blue / weight)
-            .clamped()
     }
 
     /// What a recipe with nothing to take a colour from is drawn in.
@@ -109,14 +108,17 @@ private extension Color {
         return (Double(hue), Double(saturation), Double(brightness))
     }
 
-    /// The same colour with its saturation and brightness pulled into the range a card reads
-    /// well in, so neither a pale flour nor a near black squid ink flattens the blend.
-    func clamped() -> Color {
+    /// The same colour pulled into the range a card reads well in: pale and light against a
+    /// white card, deeper and darker against a black one, so the title keeps its contrast
+    /// either way and neither a pale flour nor a near black squid ink flattens the blend.
+    func tuned(for scheme: ColorScheme) -> Color {
         let hsb = hsb
+        let saturation = scheme == .dark ? (0.35, 0.72) : (0.22, 0.62)
+        let brightness = scheme == .dark ? (0.30, 0.46) : (0.55, 0.92)
         return Color(
             hue: hsb.hue,
-            saturation: min(max(hsb.saturation, 0.22), 0.62),
-            brightness: min(max(hsb.brightness, 0.55), 0.92)
+            saturation: min(max(hsb.saturation, saturation.0), saturation.1),
+            brightness: min(max(hsb.brightness, brightness.0), brightness.1)
         )
     }
 

@@ -38,6 +38,8 @@ struct RecipesGridView: View {
 private struct RecipeCard: View {
     let recipe: Recipe
 
+    @Environment(\.colorScheme) private var scheme
+
     private static let points: [SIMD2<Float>] = [
         SIMD2(0, 0), SIMD2(1, 0),
         SIMD2(0, 1), SIMD2(1, 1),
@@ -45,21 +47,20 @@ private struct RecipeCard: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 2) {
-            HStack(alignment: .firstTextBaseline, spacing: 4) {
-                Text(verbatim: recipe.title)
-                    .font(.headline)
-                    .lineLimit(2)
-                    .truncationMode(.tail)
+            Text(verbatim: recipe.title)
+                .font(.headline)
+                .lineLimit(2)
+                .truncationMode(.tail)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            HStack(spacing: 4) {
+                Text(String(format: String(localized: "Recipe.Row.Subtitle"), recipe.formattedTime, recipe.serves))
                 if recipe.tried == true {
                     Image(systemName: "checkmark.seal.fill")
-                        .font(.footnote)
-                        .foregroundStyle(.secondary)
                 }
                 Spacer(minLength: 0)
             }
-            Text(String(format: String(localized: "Recipe.Row.Subtitle"), recipe.formattedTime, recipe.serves))
-                .font(.caption)
-                .foregroundStyle(.secondary)
+            .font(.caption)
+            .foregroundStyle(.secondary)
         }
         .multilineTextAlignment(.leading)
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -72,8 +73,13 @@ private struct RecipeCard: View {
     /// background rather than replacing it, so the title keeps its contrast in either
     /// appearance.
     private var blend: some View {
-        MeshGradient(width: 2, height: 2, points: Self.points, colors: IngredientPalette.colors(for: recipe))
-            .opacity(0.5)
+        MeshGradient(
+            width: 2,
+            height: 2,
+            points: Self.points,
+            colors: IngredientPalette.colors(for: recipe, in: scheme)
+        )
+        .opacity(scheme == .dark ? 0.9 : 0.5)
             .clipShape(.rect(cornerRadius: .listRowCornerRadius, style: .continuous))
     }
 }
