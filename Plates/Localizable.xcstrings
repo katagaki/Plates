@@ -13,7 +13,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "レシピができました"
+            "value": "レシピが完成しました"
           }
         }
       }
@@ -30,7 +30,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "レシピを作れませんでした"
+            "value": "レシピを生成できませんでした"
           }
         }
       }
@@ -47,7 +47,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "材料を選ぶ"
+            "value": "材料を選択"
           }
         }
       }
@@ -64,7 +64,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "道具を選ぶ"
+            "value": "道具を選択"
           }
         }
       }
@@ -81,7 +81,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "料理名を書くか、キッチンにあるものを選んでください。両方でもかまいません。材料を選ぶと、そのなかだけでレシピを作ります。"
+            "value": "料理名を入力するか、キッチンにある材料を選択してください。両方でもかまいません。材料を選択した場合は、その材料だけでレシピを生成します。"
           }
         }
       }
@@ -98,7 +98,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "何を作りますか？"
+            "value": "何を調理しますか？"
           }
         }
       }
@@ -149,7 +149,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "一度に考えることが多すぎました。材料を減らしてもう一度お試しください。"
+            "value": "一度に処理する内容が多すぎました。材料を減らして、もう一度お試しください。"
           }
         }
       }
@@ -166,7 +166,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "材料が選ばれていません"
+            "value": "材料が選択されていません"
           }
         }
       }
@@ -302,7 +302,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "分量を決めました"
+            "value": "分量を決定しました"
           }
         }
       }
@@ -319,7 +319,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "材料を選びました"
+            "value": "材料を選択しました"
           }
         }
       }
@@ -336,7 +336,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "手順を書きました"
+            "value": "手順を記述しました"
           }
         }
       }
@@ -353,7 +353,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "手順を決めました"
+            "value": "手順を構成しました"
           }
         }
       }
@@ -370,7 +370,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "道具を選びました"
+            "value": "道具を選択しました"
           }
         }
       }
@@ -387,7 +387,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "困りごとをまとめました"
+            "value": "対処法をまとめました"
           }
         }
       }
@@ -404,7 +404,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "手順を書いています"
+            "value": "手順を記述しています"
           }
         }
       }
@@ -421,7 +421,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "料理を決めています"
+            "value": "料理を決定しています"
           }
         }
       }
@@ -438,7 +438,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "作り方を組み立てています"
+            "value": "手順を構成しています"
           }
         }
       }
@@ -455,7 +455,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "材料を選んでいます"
+            "value": "材料を選択しています"
           }
         }
       }
@@ -472,7 +472,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "つまずきやすい点をまとめています"
+            "value": "対処法をまとめています"
           }
         }
       }
@@ -897,7 +897,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "道具が選ばれていません"
+            "value": "道具が選択されていません"
           }
         }
       }
@@ -948,7 +948,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "レシピを作るには、設定でApple Intelligenceをオンにしてください。"
+            "value": "レシピを生成するには、設定でApple Intelligenceをオンにしてください。"
           }
         }
       }
@@ -4246,7 +4246,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "レシピを作る"
+            "value": "レシピを生成"
           }
         }
       }
@@ -4314,7 +4314,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "人が試したものだけ"
+            "value": "人が検証したレシピのみ"
           }
         }
       }
@@ -4365,7 +4365,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "好みで加える材料"
+            "value": "任意の材料"
           }
         }
       }
@@ -4467,7 +4467,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "あると便利な道具"
+            "value": "任意の道具"
           }
         }
       }
@@ -4484,7 +4484,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "人が試した"
+            "value": "人が検証済み"
           }
         }
       }
@@ -4501,7 +4501,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "困ったときは"
+            "value": "対処法"
           }
         }
       }
@@ -4518,7 +4518,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "Apple Intelligenceで作るか、サンプルから始めてください。"
+            "value": "Apple Intelligenceで生成するか、サンプルから始めてください。"
           }
         }
       }
