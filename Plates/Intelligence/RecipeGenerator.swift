@@ -1,5 +1,6 @@
 import FoundationModels
 import Foundation
+import UIKit
 
 /// What a new recipe is built from: a dish in the cook's words, what they have in the
 /// kitchen, or both.
@@ -225,9 +226,21 @@ final class RecipeGenerator {
     }
 
     private(set) var state: State = .idle
-    private(set) var progress = GenerationProgress()
+
+    /// Every change is pushed to the Live Activity, so the lock screen keeps up with the sheet.
+    private(set) var progress = GenerationProgress() {
+        didSet { activity.update(progress) }
+    }
 
     private let model = SystemLanguageModel.default
+
+    /// The lock screen face of the run.
+    private let activity = GenerationActivity()
+
+    /// Held while a recipe is being written, so walking away from the app does not suspend a
+    /// pass part way through. iOS grants around half a minute, which is enough for the pass in
+    /// flight to land.
+    private var backgroundTask: UIBackgroundTaskIdentifier = .invalid
 
     /// Where a pass goes when it does not fit on device. Held rather than made per pass so
     /// availability and quota are read from one place.
@@ -256,6 +269,9 @@ final class RecipeGenerator {
     func generate(_ request: GenerationRequest) async -> Recipe? {
         state = .generating
         progress = GenerationProgress()
+        activity.start(progress)
+        beginBackgroundRun()
+        defer { endBackgroundRun() }
         do {
             let pick = try await pickIngredients(request)
             let base = try await generateBase(request, pick: pick)
@@ -264,6 +280,7 @@ final class RecipeGenerator {
             let troubleshooting = try await generateTroubleshooting(base: base, outline: outline)
             progress.isFinished = true
             state = .idle
+            activity.end(progress, outcome: "Generate.Activity.Done")
             return Self.makeRecipe(
                 base: base,
                 pick: pick,
@@ -272,8 +289,27 @@ final class RecipeGenerator {
             )
         } catch {
             state = .failed(error.localizedDescription)
+            activity.end(progress, outcome: "Generate.Activity.Failed")
             return nil
         }
+    }
+
+    // MARK: - Running in the background
+
+    /// Asks for the time to finish once the app is no longer on screen. The system takes it
+    /// back when it runs out, and whatever is left of the recipe carries on when the cook
+    /// comes back.
+    private func beginBackgroundRun() {
+        guard backgroundTask == .invalid else { return }
+        backgroundTask = UIApplication.shared.beginBackgroundTask(withName: "Recipe generation") {
+            [weak self] in self?.endBackgroundRun()
+        }
+    }
+
+    private func endBackgroundRun() {
+        guard backgroundTask != .invalid else { return }
+        UIApplication.shared.endBackgroundTask(backgroundTask)
+        backgroundTask = .invalid
     }
 
     // MARK: - Passes

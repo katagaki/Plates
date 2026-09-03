@@ -34,6 +34,11 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
   on-device model rejects with `contextSizeExceeded` is run again on
   `PrivateCloudComputeLanguageModel`. Keep passes small enough that the cloud stays a fallback.
 - `Plates/Views` holds the list, detail, and generation views.
+- `Shared` holds `GenerationActivityAttributes`, the one file both the app and the widget
+  extension compile. The app localizes every string before it goes into the activity state, so
+  the extension never looks a key up and carries no strings of its own.
+- `PlatesActivity` is the widget extension holding the Live Activity, bundle identifier
+  `com.tsubuzaki.Plates.Seasoning`. The app embeds it and declares `NSSupportsLiveActivities`.
 - `Plates/SampleRecipes` holds the recipes bundled with the app for the "Add Sample Recipes"
   menu item.
 - `Plates` also holds `Info.plist` and `Plates.entitlements`. They sit in the synchronized

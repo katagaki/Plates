@@ -1,6 +1,40 @@
 {
   "sourceLanguage": "en-US",
   "strings": {
+    "Generate.Activity.Done": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recipe ready"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レシピができました"
+          }
+        }
+      }
+    },
+    "Generate.Activity.Failed": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not finish the recipe"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レシピを作れませんでした"
+          }
+        }
+      }
+    },
     "Generate.Choose.Ingredients": {
       "extractionState": "manual",
       "localizations": {

@@ -8,14 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		E47FE81A3047956D0038302E /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = E47FE8193047956D0038302E /* AppIcon.icon */; };
+		E4B00000000000000000000C /* PlatesActivity.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E4B000000000000000000004 /* PlatesActivity.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E47FE75930478FED0038302E /* Plates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E47FE8193047956D0038302E /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
+		E4B000000000000000000004 /* PlatesActivity.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PlatesActivity.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E4B00000000000000000000F /* Exceptions for "PlatesActivity" folder in "PlatesActivity" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = E4B000000000000000000003 /* PlatesActivity */;
+		};
 		E47FE90030479ABC0038302E /* Exceptions for "Plates" folder in "Plates" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -34,10 +43,28 @@
 			path = Plates;
 			sourceTree = "<group>";
 		};
+		E4B000000000000000000002 /* PlatesActivity */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E4B00000000000000000000F /* Exceptions for "PlatesActivity" folder in "PlatesActivity" target */,
+			);
+			path = PlatesActivity;
+			sourceTree = "<group>";
+		};
+		E4B000000000000000000001 /* Shared */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Shared;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E47FE75630478FED0038302E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		E4B000000000000000000006 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
 			);
@@ -50,6 +77,8 @@
 			children = (
 				E47FE8193047956D0038302E /* AppIcon.icon */,
 				E47FE75B30478FED0038302E /* Plates */,
+				E4B000000000000000000002 /* PlatesActivity */,
+				E4B000000000000000000001 /* Shared */,
 				E47FE75A30478FED0038302E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				E47FE75930478FED0038302E /* Plates.app */,
+				E4B000000000000000000004 /* PlatesActivity.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,16 +102,42 @@
 				E47FE75530478FED0038302E /* Sources */,
 				E47FE75630478FED0038302E /* Frameworks */,
 				E47FE75730478FED0038302E /* Resources */,
+				E4B00000000000000000000B /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
+			dependencies = (
+				E4B00000000000000000000D /* PBXTargetDependency */,
+			);
 			fileSystemSynchronizedGroups = (
 				E47FE75B30478FED0038302E /* Plates */,
+				E4B000000000000000000001 /* Shared */,
 			);
 			name = Plates;
 			productName = Plates;
 			productReference = E47FE75930478FED0038302E /* Plates.app */;
 			productType = "com.apple.product-type.application";
+		};
+		E4B000000000000000000003 /* PlatesActivity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4B000000000000000000008 /* Build configuration list for PBXNativeTarget "PlatesActivity" */;
+			buildPhases = (
+				E4B000000000000000000005 /* Sources */,
+				E4B000000000000000000006 /* Frameworks */,
+				E4B000000000000000000007 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				E4B000000000000000000002 /* PlatesActivity */,
+				E4B000000000000000000001 /* Shared */,
+			);
+			name = PlatesActivity;
+			productName = PlatesActivity;
+			productReference = E4B000000000000000000004 /* PlatesActivity.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -94,6 +150,9 @@
 				LastUpgradeCheck = 2700;
 				TargetAttributes = {
 					E47FE75830478FED0038302E = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					E4B000000000000000000003 = {
 						CreatedOnToolsVersion = 27.0;
 					};
 				};
@@ -114,15 +173,35 @@
 			projectRoot = "";
 			targets = (
 				E47FE75830478FED0038302E /* Plates */,
+				E4B000000000000000000003 /* PlatesActivity */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E4B00000000000000000000B /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E4B00000000000000000000C /* PlatesActivity.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E47FE75730478FED0038302E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
 				E47FE81A3047956D0038302E /* AppIcon.icon in Resources */,
+			);
+		};
+		E4B000000000000000000007 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
 			);
 		};
 /* End PBXResourcesBuildPhase section */
@@ -133,7 +212,30 @@
 			files = (
 			);
 		};
+		E4B000000000000000000005 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXContainerItemProxy section */
+		E4B00000000000000000000E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E47FE75130478FED0038302E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E4B000000000000000000003;
+			remoteInfo = PlatesActivity;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXTargetDependency section */
+		E4B00000000000000000000D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E4B000000000000000000003 /* PlatesActivity */;
+			targetProxy = E4B00000000000000000000E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		E47FE76230478FED0038302E /* Debug configuration for PBXProject "Plates" */ = {
@@ -331,6 +433,68 @@
 			};
 			name = Release;
 		};
+		E4B000000000000000000009 /* Debug configuration for PBXNativeTarget "PlatesActivity" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YYM4Z6MU8F;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlatesActivity/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Plates;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tsubuzaki.Plates.Seasoning;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E4B00000000000000000000A /* Release configuration for PBXNativeTarget "PlatesActivity" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YYM4Z6MU8F;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlatesActivity/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Plates;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tsubuzaki.Plates.Seasoning;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -347,6 +511,14 @@
 			buildConfigurations = (
 				E47FE76530478FED0038302E /* Debug configuration for PBXNativeTarget "Plates" */,
 				E47FE76630478FED0038302E /* Release configuration for PBXNativeTarget "Plates" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		E4B000000000000000000008 /* Build configuration list for PBXNativeTarget "PlatesActivity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B000000000000000000009 /* Debug configuration for PBXNativeTarget "PlatesActivity" */,
+				E4B00000000000000000000A /* Release configuration for PBXNativeTarget "PlatesActivity" */,
 			);
 			defaultConfigurationName = Release;
 		};
