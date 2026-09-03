@@ -302,7 +302,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "分量を決めた材料"
+            "value": "分量を決めました"
           }
         }
       }
@@ -319,7 +319,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "選んだ材料"
+            "value": "材料を選びました"
           }
         }
       }
@@ -336,7 +336,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "書いた手順"
+            "value": "手順を書きました"
           }
         }
       }
@@ -347,13 +347,13 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Steps"
+            "value": "Steps planned"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "手順"
+            "value": "手順を決めました"
           }
         }
       }
@@ -364,13 +364,13 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tools"
+            "value": "Tools chosen"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "道具"
+            "value": "道具を選びました"
           }
         }
       }
@@ -381,13 +381,13 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Troubleshooting"
+            "value": "Fixes noted"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "困ったときは"
+            "value": "困りごとをまとめました"
           }
         }
       }
@@ -4484,7 +4484,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "人が試しました"
+            "value": "人が試した"
           }
         }
       }
