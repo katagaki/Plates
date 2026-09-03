@@ -25,7 +25,7 @@ struct CatalogPickerView: View {
     @State private var query = ""
     @State private var collapsed: Set<String> = []
 
-    private let columns = Array(repeating: GridItem(.flexible(), spacing: 4), count: 4)
+    private let columns = Array(repeating: GridItem(.flexible(), spacing: 4), count: 3)
 
     var body: some View {
         List {
@@ -59,27 +59,27 @@ struct CatalogPickerView: View {
     /// when nothing is picked, so the catalog never shifts under a finger.
     private var pickedBar: some View {
         GlassEffectContainer {
-            Group {
-                if selection.isEmpty {
-                    Text(emptyLabel)
-                        .font(.footnote)
-                        .foregroundStyle(.secondary)
-                        .frame(maxWidth: .infinity)
-                } else {
+            VStack(alignment: .leading, spacing: 4) {
+                Text(selection.isEmpty ? emptyLabel : "Generate.Picker.Selected")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .padding(.horizontal, 16)
+                    .frame(maxWidth: .infinity, alignment: selection.isEmpty ? .center : .leading)
+                if !selection.isEmpty {
                     ScrollView(.horizontal) {
-                        HStack(spacing: 4) {
+                        HStack(spacing: 8) {
                             ForEach(selection, id: \.self) { asset in
                                 Button {
                                     toggle(asset)
                                 } label: {
                                     VStack(spacing: 2) {
-                                        RecipeIcon(path: path(asset), size: 30)
+                                        RecipeIcon(path: path(asset), size: 36)
                                         Text(verbatim: IconCatalog.displayName(for: asset))
                                             .font(.caption2)
                                             .lineLimit(1)
                                             .foregroundStyle(.primary)
                                     }
-                                    .frame(width: 66)
+                                    .frame(width: 72)
                                 }
                                 .buttonStyle(.plain)
                             }
@@ -89,7 +89,8 @@ struct CatalogPickerView: View {
                     .contentMargins(.horizontal, 16, for: .scrollContent)
                 }
             }
-            .frame(height: 62)
+            .padding(.vertical, 10)
+            .frame(height: 92, alignment: selection.isEmpty ? .center : .top)
             .glassEffect(.regular, in: .rect(cornerRadius: 24, style: .continuous))
         }
         .padding(.horizontal, 16)
@@ -144,19 +145,27 @@ struct CatalogPickerView: View {
         return Button {
             toggle(asset)
         } label: {
-            VStack(spacing: 2) {
-                RecipeIcon(path: path(asset), size: 34, outline: isPicked ? .accentColor : nil)
+            VStack(spacing: 4) {
+                RecipeIcon(path: path(asset), size: 52, outline: isPicked ? .accentColor : nil)
                     .padding(4)
+                    .overlay(alignment: .topTrailing) {
+                        if isPicked {
+                            Image(systemName: "checkmark.circle.fill")
+                                .font(.footnote)
+                                .symbolRenderingMode(.palette)
+                                .foregroundStyle(.white, Color.accentColor)
+                        }
+                    }
                 Text(verbatim: IconCatalog.displayName(for: asset))
-                    .font(.caption2)
-                    .fontWeight(isPicked ? .bold : .regular)
-                    .lineLimit(2)
+                    .font(.caption)
+                    .fontWeight(isPicked ? .semibold : .regular)
+                    .lineLimit(2, reservesSpace: true)
                     .multilineTextAlignment(.center)
-                    .foregroundStyle(.primary)
+                    .foregroundStyle(isPicked ? Color.accentColor : .primary)
             }
             .padding(.vertical, 6)
             .padding(.horizontal, 2)
-            .frame(maxWidth: .infinity, minHeight: 74, alignment: .top)
+            .frame(maxWidth: .infinity, alignment: .top)
         }
         .buttonStyle(.plain)
     }

@@ -290,6 +290,23 @@
         }
       }
     },
+    "Generate.Picker.Selected": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Selected items"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "選択中の項目"
+          }
+        }
+      }
+    },
     "Generate.Progress.Row.Ingredients": {
       "extractionState": "manual",
       "localizations": {
