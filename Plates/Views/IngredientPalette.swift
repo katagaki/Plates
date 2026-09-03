@@ -113,8 +113,8 @@ private extension Color {
     /// either way and neither a pale flour nor a near black squid ink flattens the blend.
     func tuned(for scheme: ColorScheme) -> Color {
         let hsb = hsb
-        let saturation = scheme == .dark ? (0.35, 0.72) : (0.22, 0.62)
-        let brightness = scheme == .dark ? (0.30, 0.46) : (0.55, 0.92)
+        let saturation = scheme == .dark ? (0.62, 0.95) : (0.22, 0.62)
+        let brightness = scheme == .dark ? (0.42, 0.58) : (0.55, 0.92)
         return Color(
             hue: hsb.hue,
             saturation: min(max(hsb.saturation, saturation.0), saturation.1),

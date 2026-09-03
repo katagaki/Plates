@@ -79,7 +79,7 @@ private struct RecipeCard: View {
             points: Self.points,
             colors: IngredientPalette.colors(for: recipe, in: scheme)
         )
-        .opacity(scheme == .dark ? 0.9 : 0.5)
+        .opacity(scheme == .dark ? 1 : 0.5)
             .clipShape(.rect(cornerRadius: .listRowCornerRadius, style: .continuous))
     }
 }
