@@ -50,7 +50,7 @@ struct MainView: View {
                         Button {
                             isGenerating = true
                         } label: {
-                            Label("Menu.Generate", systemImage: "apple.intelligence")
+                            Label("Menu.Generate", systemImage: "plus")
                         }
                     }
                 }
