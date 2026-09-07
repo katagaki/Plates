@@ -76,7 +76,6 @@ struct GenerateRecipeView: View {
 
             picks(
                 "Generate.Choose.Ingredients",
-                systemImage: "carrot",
                 assets: $request.ingredients,
                 path: IconCatalog.ingredientPath
             ) {
@@ -85,35 +84,53 @@ struct GenerateRecipeView: View {
 
             picks(
                 "Generate.Choose.Tools",
-                systemImage: "frying.pan",
                 assets: $request.tools,
                 path: IconCatalog.toolPath
             ) {
                 CatalogPickerView.tools(selection: $request.tools)
             }
-
-            Section {
-                Button {
-                    Task { draft = await generator.generate(request) }
-                } label: {
-                    Label("Menu.Generate", systemImage: "apple.intelligence")
-                }
-                .disabled(!canGenerate)
-            } footer: {
-                if let reason = generator.unavailableReason {
-                    Text(reason)
-                } else if case let .failed(message) = generator.state {
-                    Text(verbatim: message)
-                        .foregroundStyle(.red)
-                }
-            }
         }
+        .safeAreaInset(edge: .bottom) { generateBar }
+    }
+
+    /// The one thing left to do on this screen, so it floats over the form rather than sitting
+    /// at the end of it. Whatever is keeping the model from answering is said above the button.
+    private var generateBar: some View {
+        VStack(spacing: 8) {
+            if let reason = generator.unavailableReason {
+                Text(reason)
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+            } else if case let .failed(message) = generator.state {
+                Text(verbatim: message)
+                    .font(.footnote)
+                    .foregroundStyle(.red)
+            }
+
+            Button {
+                Task { draft = await generator.generate(request) }
+            } label: {
+                HStack(spacing: 8) {
+                    Image(systemName: "apple.intelligence")
+                    Text("Menu.Generate")
+                }
+                .font(.body.weight(.semibold))
+                .foregroundStyle(.white)
+                .frame(maxWidth: .infinity)
+            }
+            .buttonStyle(.glassProminent)
+            .controlSize(.large)
+            .tint(.accentColor)
+            .disabled(!canGenerate)
+        }
+        .multilineTextAlignment(.center)
+        .padding(.horizontal, 16)
+        .padding(.bottom, 8)
     }
 
     /// What the cook has already picked, with the way back into the catalog under it.
     private func picks(
         _ label: LocalizedStringResource,
-        systemImage: String,
         assets: Binding<[String]>,
         path: @escaping (String) -> String,
         @ViewBuilder picker: @escaping () -> some View
@@ -148,7 +165,7 @@ struct GenerateRecipeView: View {
             NavigationLink {
                 picker()
             } label: {
-                Label(label, systemImage: systemImage)
+                Text(label)
             }
         }
     }

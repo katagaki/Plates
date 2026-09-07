@@ -151,13 +151,13 @@ struct CatalogPickerView: View {
                     .overlay(alignment: .topTrailing) {
                         if isPicked {
                             Image(systemName: "checkmark.circle.fill")
-                                .font(.footnote)
+                                .font(.title3)
                                 .symbolRenderingMode(.palette)
                                 .foregroundStyle(.white, Color.accentColor)
                         }
                     }
                 Text(verbatim: IconCatalog.displayName(for: asset))
-                    .font(.caption)
+                    .font(.subheadline)
                     .fontWeight(isPicked ? .semibold : .regular)
                     .lineLimit(2, reservesSpace: true)
                     .multilineTextAlignment(.center)
