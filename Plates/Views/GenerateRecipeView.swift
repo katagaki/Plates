@@ -76,10 +76,18 @@ struct GenerateRecipeView: View {
 
             picks(
                 "Generate.Choose.Ingredients",
-                assets: $request.ingredients,
+                assets: shelf(.fresh),
                 path: IconCatalog.ingredientPath
             ) {
-                CatalogPickerView.ingredients(selection: $request.ingredients)
+                CatalogPickerView.ingredients(selection: shelf(.fresh))
+            }
+
+            picks(
+                "Generate.Choose.Pantry",
+                assets: shelf(.pantry),
+                path: IconCatalog.ingredientPath
+            ) {
+                CatalogPickerView.pantry(selection: shelf(.pantry))
             }
 
             picks(
@@ -126,6 +134,18 @@ struct GenerateRecipeView: View {
         .multilineTextAlignment(.center)
         .padding(.horizontal, 16)
         .padding(.bottom, 8)
+    }
+
+    /// One shelf of the picks, so each picker shows and edits its own half while the model is
+    /// still handed a single list. Writing back keeps the other shelf as it was.
+    private func shelf(_ shelf: IngredientShelf) -> Binding<[String]> {
+        Binding(
+            get: { request.ingredients.filter { IconCatalog.shelf(of: $0) == shelf } },
+            set: { picks in
+                request.ingredients =
+                    request.ingredients.filter { IconCatalog.shelf(of: $0) != shelf } + picks
+            }
+        )
     }
 
     /// What the cook has already picked, with the way back into the catalog under it.

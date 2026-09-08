@@ -52,6 +52,23 @@
         }
       }
     },
+    "Generate.Choose.Pantry": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose pantry items"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "常備品を選択"
+          }
+        }
+      }
+    },
     "Generate.Choose.Tools": {
       "extractionState": "manual",
       "localizations": {
@@ -286,6 +303,57 @@
           "stringUnit": {
             "state": "translated",
             "value": "%1$@は一覧になく、近いものもありません。これは使わず、一覧にある材料でレシピを組み立ててください。"
+          }
+        }
+      }
+    },
+    "Generate.Pantry.Empty": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No pantry items selected"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "常備品が選択されていません"
+          }
+        }
+      }
+    },
+    "Generate.Pantry.Search": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Search pantry"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "常備品を検索"
+          }
+        }
+      }
+    },
+    "Generate.Pantry.Title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pantry"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "常備品"
           }
         }
       }
@@ -1106,19 +1174,19 @@
         }
       }
     },
-    "Ingredient.Category.Pantry": {
+    "Ingredient.Category.Preserved": {
       "extractionState": "manual",
       "localizations": {
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pantry"
+            "value": "Tins and Dried Goods"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "常備品"
+            "value": "缶詰と乾物"
           }
         }
       }
@@ -1599,6 +1667,23 @@
         }
       }
     },
+    "Ingredient.Name.BlackVinegar": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Black vinegar"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "黒酢"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Blueberry": {
       "extractionState": "manual",
       "localizations": {
@@ -1884,6 +1969,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "セロリ"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.CharSiuSauce": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Char siu sauce"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "チャーシューだれ"
           }
         }
       }
@@ -2411,6 +2513,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "大根"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.DarkSoySauce": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dark soy sauce"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "老抽醤油"
           }
         }
       }
@@ -4234,6 +4353,23 @@
         }
       }
     },
+    "Ingredient.Name.PlumSauce": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plum sauce"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "梅ソース"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Polenta": {
       "extractionState": "manual",
       "localizations": {
@@ -4727,6 +4863,23 @@
         }
       }
     },
+    "Ingredient.Name.ShachaSauce": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shacha sauce"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "沙茶醤"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Shallot": {
       "extractionState": "manual",
       "localizations": {
@@ -4740,6 +4893,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "エシャロット"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.ShaoxingWine": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shaoxing wine"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "紹興酒"
           }
         }
       }
@@ -5118,6 +5288,23 @@
         }
       }
     },
+    "Ingredient.Name.Tianmianjiang": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tianmianjiang"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "甜麺醤"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Tofu": {
       "extractionState": "manual",
       "localizations": {
@@ -5420,6 +5607,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "ウスターソース"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.XoSauce": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "XO sauce"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "XO醤"
           }
         }
       }

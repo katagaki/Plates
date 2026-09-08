@@ -1,9 +1,25 @@
 import Foundation
 
+/// The two halves the ingredient catalog is picked in: what is bought for the week, and what
+/// sits on the shelf between recipes. Each half has a picker of its own.
+nonisolated enum IngredientShelf: String, CaseIterable, Identifiable, Sendable {
+    case fresh, pantry
+
+    var id: String { rawValue }
+
+    /// The browsing groups on this shelf, in the order the picker shows them.
+    var categories: [IngredientCategory] {
+        switch self {
+        case .fresh: [.vegetables, .fruits, .meat, .seafood, .dairy, .grains]
+        case .pantry: [.seasonings, .sauces, .baking, .preserved]
+        }
+    }
+}
+
 /// The groups the ingredient catalog is browsed in. Every ingredient icon sits in exactly one,
 /// and the flat list `IconCatalog.ingredients` is built from them.
 nonisolated enum IngredientCategory: String, CaseIterable, Identifiable, Sendable {
-    case vegetables, fruits, meat, seafood, dairy, grains, seasonings, sauces, baking, pantry
+    case vegetables, fruits, meat, seafood, dairy, grains, seasonings, sauces, baking, preserved
 
     var id: String { rawValue }
 
@@ -18,8 +34,13 @@ nonisolated enum IngredientCategory: String, CaseIterable, Identifiable, Sendabl
         case .seasonings: "Ingredient.Category.Seasonings"
         case .sauces: "Ingredient.Category.Sauces"
         case .baking: "Ingredient.Category.Baking"
-        case .pantry: "Ingredient.Category.Pantry"
+        case .preserved: "Ingredient.Category.Preserved"
         }
+    }
+
+    /// The shelf this group is picked from.
+    var shelf: IngredientShelf {
+        IngredientShelf.allCases.first { $0.categories.contains(self) } ?? .fresh
     }
 
     /// The ingredient assets in this group, in the order the picker shows them.
@@ -221,8 +242,11 @@ nonisolated enum IngredientCategory: String, CaseIterable, Identifiable, Sendabl
         case .sauces:
             [
                 "balsamic-vinegar",
+                "black-vinegar",
+                "char-siu-sauce",
                 "chili-oil",
                 "coconut-oil",
+                "dark-soy-sauce",
                 "dashi",
                 "doubanjiang",
                 "fish-sauce",
@@ -241,21 +265,26 @@ nonisolated enum IngredientCategory: String, CaseIterable, Identifiable, Sendabl
                 "olive-oil",
                 "oyster-sauce",
                 "pesto",
+                "plum-sauce",
                 "ponzu",
                 "red-wine",
                 "rice-vinegar",
                 "sake",
                 "sesame-oil",
+                "shacha-sauce",
+                "shaoxing-wine",
                 "soy-milk",
                 "soy-sauce",
                 "sriracha",
                 "tahini",
                 "teriyaki-sauce",
+                "tianmianjiang",
                 "tonkatsu-sauce",
                 "vinegar",
                 "water",
                 "white-wine",
                 "worcestershire",
+                "xo-sauce",
                 "yakisoba-sauce",
             ]
         case .baking:
@@ -277,7 +306,7 @@ nonisolated enum IngredientCategory: String, CaseIterable, Identifiable, Sendabl
                 "vanilla",
                 "yeast",
             ]
-        case .pantry:
+        case .preserved:
             [
                 "aburaage",
                 "aonori",
@@ -411,7 +440,10 @@ nonisolated enum IconCatalog {
         "bonito flakes": "katsuobushi",
         "capsicum": "bell-pepper",
         "chilli": "chili",
+        "chinese black vinegar": "black-vinegar",
         "chinese cabbage": "napa-cabbage",
+        "chinese rice wine": "shaoxing-wine",
+        "chinkiang vinegar": "black-vinegar",
         "cilantro": "coriander",
         "confectioners sugar": "icing-sugar",
         "corn flour": "cornstarch",
@@ -447,8 +479,10 @@ nonisolated enum IconCatalog {
         "sea bream": "fish",
         "seaweed": "nori",
         "sesame paste": "tahini",
+        "sha cha": "shacha-sauce",
         "shiitake": "dried-shiitake",
         "stock cube": "bouillon",
+        "sweet bean sauce": "tianmianjiang",
         "takenoko": "bamboo-shoots",
         "tako": "octopus",
         "togarashi": "shichimi",
@@ -540,14 +574,29 @@ nonisolated enum IconCatalog {
         search(query, in: tools)
     }
 
-    /// The same search, kept in browsing groups. Groups with nothing left in them are dropped.
-    static func categories(matching query: String) -> [(category: IngredientCategory, icons: [String])] {
+    /// The same search, kept in the browsing groups of one shelf. Groups with nothing left in
+    /// them are dropped.
+    static func categories(
+        matching query: String,
+        on shelf: IngredientShelf
+    ) -> [(category: IngredientCategory, icons: [String])] {
         let matches = Set(ingredients(matching: query))
-        return IngredientCategory.allCases.compactMap { category in
+        return shelf.categories.compactMap { category in
             let icons = category.icons.filter(matches.contains)
             return icons.isEmpty ? nil : (category, icons)
         }
     }
+
+    /// The shelf an ingredient asset is picked from, so a selection can be split the way the
+    /// pickers are.
+    static func shelf(of asset: String) -> IngredientShelf {
+        shelves[asset] ?? .fresh
+    }
+
+    private static let shelves: [String: IngredientShelf] = IngredientCategory.allCases
+        .reduce(into: [:]) { table, category in
+            for asset in category.icons { table[asset] = category.shelf }
+        }
 
     /// The tools a search turns up, kept in browsing groups. Groups with nothing left in
     /// them are dropped.

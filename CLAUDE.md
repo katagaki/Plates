@@ -59,10 +59,13 @@ adding an icon, copy the SVG in with explicit `width` and `height` on the root e
 otherwise the asset catalog will not take it.
 
 `IconCatalog` lists every icon, groups the ingredients and the tools into the categories the
-picker browses, and resolves whatever icon name the generator's model writes back onto one
-that exists. The
-catalog is never inlined into a `@Generable` schema: the on-device model has a 4,096 token
-window, and an `.anyOf` over 256 ingredient names overruns it before the prompt is even added.
+pickers browse, and resolves whatever icon name the generator's model writes back onto one
+that exists. The ingredient groups sit on one of two shelves, fresh and pantry, and each shelf
+has a picker of its own. Both write into the one ingredient list the model is handed, so the
+split is in the browsing, not in the request.
+
+The catalog is never inlined into a `@Generable` schema: the on-device model has a 4,096 token
+window, and an `.anyOf` over 264 ingredient names overruns it before the prompt is even added.
 
 ## Localization
 

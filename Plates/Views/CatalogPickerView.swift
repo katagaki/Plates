@@ -172,14 +172,42 @@ struct CatalogPickerView: View {
 }
 
 extension CatalogPickerView {
-    /// The ingredient catalog, in the groups a shop is laid out in.
+    /// The fresh half of the ingredient catalog, in the groups a shop is laid out in.
     static func ingredients(selection: Binding<[String]>) -> CatalogPickerView {
-        CatalogPickerView(
+        catalog(
+            on: .fresh,
             title: "Generate.Ingredients.Title",
             searchPrompt: "Generate.Ingredients.Search",
             emptyLabel: "Generate.Ingredients.Empty",
+            selection: selection
+        )
+    }
+
+    /// The half of the catalog that keeps: seasonings, sauces, baking, and what is tinned or
+    /// dried.
+    static func pantry(selection: Binding<[String]>) -> CatalogPickerView {
+        catalog(
+            on: .pantry,
+            title: "Generate.Pantry.Title",
+            searchPrompt: "Generate.Pantry.Search",
+            emptyLabel: "Generate.Pantry.Empty",
+            selection: selection
+        )
+    }
+
+    private static func catalog(
+        on shelf: IngredientShelf,
+        title: LocalizedStringResource,
+        searchPrompt: LocalizedStringResource,
+        emptyLabel: LocalizedStringResource,
+        selection: Binding<[String]>
+    ) -> CatalogPickerView {
+        CatalogPickerView(
+            title: title,
+            searchPrompt: searchPrompt,
+            emptyLabel: emptyLabel,
             groups: { query in
-                IconCatalog.categories(matching: query).map {
+                IconCatalog.categories(matching: query, on: shelf).map {
                     IconGroup(id: $0.category.rawValue, title: $0.category.title, icons: $0.icons)
                 }
             },
