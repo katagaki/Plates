@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Feta">
+  <path d="M11 22 20 16h17l-9 6Z" fill="#ffffff"/>
+  <rect x="11" y="22" width="17" height="14" fill="#f4f1e8"/>
+  <path d="M28 22 37 16v14l-9 6Z" fill="#e2ddd2"/>
+  <g fill="#5f9e4a"><circle cx="17" cy="27" r="1.6"/><circle cx="23" cy="32" r="1.4"/><circle cx="32" cy="26" r="1.4"/></g>
+</svg>

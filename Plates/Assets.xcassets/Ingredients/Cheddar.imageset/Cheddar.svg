@@ -1,0 +1,5 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cheddar">
+  <path d="M8 26 20 19h20l-12 7Z" fill="#f0a03a"/>
+  <rect x="8" y="26" width="20" height="10" fill="#e8862d"/>
+  <path d="M28 26 40 19v10l-12 7Z" fill="#c96f1e"/>
+</svg>

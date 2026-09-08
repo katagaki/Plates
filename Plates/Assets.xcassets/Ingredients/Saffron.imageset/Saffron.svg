@@ -1,0 +1,9 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Saffron">
+  <g stroke="#c9302c" stroke-width="2.4" fill="none" stroke-linecap="round">
+    <path d="M12 33c4-6 6-11 5-17"/><path d="M20 36c2-7 5-12 4-18"/>
+    <path d="M28 36c0-7 2-13 5-17"/><path d="M35 34c-1-6 1-11 4-15"/>
+  </g>
+  <g stroke="#e8622d" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M17 16l-3-4M25 18l3-5M33 19l4-4"/>
+  </g>
+</svg>

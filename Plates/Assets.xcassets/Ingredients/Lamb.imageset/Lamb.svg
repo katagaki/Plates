@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lamb chop">
+  <path d="M16 30c-2-7 3-13 11-13 8 0 13 5 12 12-1 6-7 10-13 10-5 0-9-3-10-9Z" fill="#b04a44"/>
+  <path d="M22 29c2-4 6-6 10-5 4 1 5 5 3 8-2 4-7 5-11 4s-4-4-2-7Z" fill="#d3675f"/>
+  <path d="M16 32c-4 1-7 3-9 6" stroke="#f0ece4" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <circle cx="6" cy="39" r="3.5" fill="#f0ece4"/>
+</svg>

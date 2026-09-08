@@ -1,0 +1,5 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Scallops">
+  <path d="M24 12c9 0 16 8 16 17 0 3-2 5-5 5H13c-3 0-5-2-5-5 0-9 7-17 16-17Z" fill="#f0e0c8"/>
+  <path d="M24 13v21M17 15l-3 19M31 15l3 19M11 21l-1 13M37 21l1 13" stroke="#d9c3a3" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <rect x="20" y="34" width="8" height="4" rx="2" fill="#e0cbb0"/>
+</svg>

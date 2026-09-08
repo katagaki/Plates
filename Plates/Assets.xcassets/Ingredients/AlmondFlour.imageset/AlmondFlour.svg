@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Almond flour">
+  <path d="M13 16c3-2 5-4 11-4s8 2 11 4v22a3 3 0 0 1-3 3H16a3 3 0 0 1-3-3Z" fill="#efe6d6"/>
+  <path d="M13 16c4 3 18 3 22 0" stroke="#d2c4a8" stroke-width="2" fill="none"/>
+  <ellipse cx="24" cy="29" rx="6" ry="8" fill="#c98a45"/>
+  <path d="M21 24c3 4 3 10 0 10" stroke="#a9682e" stroke-width="1.4" fill="none"/>
+</svg>

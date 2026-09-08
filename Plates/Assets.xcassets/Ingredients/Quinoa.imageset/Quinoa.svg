@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Quinoa">
+  <path d="M9 32c0-7 7-12 15-12s15 5 15 12Z" fill="#e6d9b8"/>
+  <g fill="none" stroke="#c9b184" stroke-width="1.4">
+    <circle cx="17" cy="27" r="2.6"/><circle cx="25" cy="25" r="2.6"/><circle cx="32" cy="29" r="2.6"/>
+    <circle cx="21" cy="31" r="2.6"/><circle cx="29" cy="32" r="2.6"/>
+  </g>
+</svg>

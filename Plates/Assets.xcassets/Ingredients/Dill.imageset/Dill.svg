@@ -1,0 +1,9 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dill">
+  <path d="M24 42V14" stroke="#5f8c3f" stroke-width="2.2" stroke-linecap="round"/>
+  <g stroke="#6ba14a" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M24 15l-9-5M24 15l9-5M24 22l-10-3M24 22l10-3M24 29l-9 1M24 29l9 1M24 35l-8 4M24 35l8 4"/>
+  </g>
+  <g stroke="#8fb35c" stroke-width="1.6" fill="none" stroke-linecap="round">
+    <path d="M15 10l-4-2M15 10V6M33 10l4-2M33 10V6M14 19l-4-2M34 19l4-2M15 30l-4 1M33 30l4 1"/>
+  </g>
+</svg>

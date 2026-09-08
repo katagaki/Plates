@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pickled ginger">
+  <g fill="#f2a7b8" stroke="#dd8298" stroke-width="1.4">
+    <ellipse cx="18" cy="27" rx="8" ry="4" transform="rotate(-15 18 27)"/>
+    <ellipse cx="29" cy="24" rx="8" ry="4" transform="rotate(10 29 24)"/>
+    <ellipse cx="24" cy="34" rx="8" ry="4" transform="rotate(-5 24 34)"/>
+  </g>
+</svg>

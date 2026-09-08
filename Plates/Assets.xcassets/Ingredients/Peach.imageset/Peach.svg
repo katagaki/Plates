@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Peach">
+  <circle cx="24" cy="27" r="14" fill="#f8a07a"/>
+  <path d="M24 13a14 14 0 0 1 0 28Z" fill="#e8795a"/>
+  <path d="M24 13v28" stroke="#e05f45" stroke-width="1.5"/>
+  <path d="M24 13c1-4 4-7 9-8-1 5-4 8-9 8Z" fill="#5f9e4a"/>
+</svg>

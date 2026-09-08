@@ -1,0 +1,8 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rigatoni">
+  <rect x="8" y="13" width="22" height="12" rx="3" fill="#f0c463"/>
+  <ellipse cx="30" cy="19" rx="2.6" ry="6" fill="#d9a63c"/>
+  <g stroke="#e0b04a" stroke-width="1.4"><path d="M12 13v12"/><path d="M17 13v12"/><path d="M22 13v12"/></g>
+  <rect x="16" y="28" width="22" height="12" rx="3" fill="#e8b850"/>
+  <ellipse cx="38" cy="34" rx="2.6" ry="6" fill="#c9942f"/>
+  <g stroke="#d9a63c" stroke-width="1.4"><path d="M20 28v12"/><path d="M25 28v12"/><path d="M30 28v12"/></g>
+</svg>

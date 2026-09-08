@@ -1,0 +1,5 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pear">
+  <path d="M24 14c5 0 6 4 6 7 3 2 6 6 6 11 0 6-5 10-12 10s-12-4-12-10c0-5 3-9 6-11 0-3 1-7 6-7Z" fill="#c9d15e"/>
+  <path d="M24 8v7" stroke="#7a5a3a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M25 11c3-3 6-3 9-2-3 4-7 5-9 2Z" fill="#5f9e4a"/>
+</svg>

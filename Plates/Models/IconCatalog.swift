@@ -30,15 +30,19 @@ nonisolated enum IngredientCategory: String, CaseIterable, Identifiable, Sendabl
                 "artichoke",
                 "arugula",
                 "asparagus",
+                "bamboo-shoots",
                 "bean-sprouts",
                 "bell-pepper",
+                "bok-choy",
                 "broccoli",
+                "brussels-sprouts",
                 "burdock",
                 "cabbage",
                 "carrot",
                 "cauliflower",
                 "celery",
                 "chili",
+                "chives",
                 "corn",
                 "cucumber",
                 "daikon",
@@ -49,22 +53,30 @@ nonisolated enum IngredientCategory: String, CaseIterable, Identifiable, Sendabl
                 "garlic",
                 "ginger",
                 "green-beans",
+                "kale",
                 "kimchi",
+                "king-oyster",
                 "leek",
                 "lettuce",
                 "lotus-root",
                 "mushroom",
                 "napa-cabbage",
+                "okra",
                 "onion",
                 "peas",
                 "potato",
                 "pumpkin",
+                "radish",
+                "shallot",
                 "shimeji",
                 "shiso",
                 "spinach",
                 "spring-onion",
                 "sweet-potato",
                 "tomato",
+                "turnip",
+                "watercress",
+                "yam",
                 "zucchini",
             ]
         case .fruits:
@@ -72,9 +84,19 @@ nonisolated enum IngredientCategory: String, CaseIterable, Identifiable, Sendabl
                 "apple",
                 "avocado",
                 "banana",
+                "blueberry",
+                "cherry",
+                "grape",
+                "kiwi",
                 "lemon",
                 "lime",
+                "mango",
+                "melon",
                 "orange",
+                "peach",
+                "pear",
+                "persimmon",
+                "pineapple",
                 "strawberry",
                 "yuzu",
             ]
@@ -83,20 +105,31 @@ nonisolated enum IngredientCategory: String, CaseIterable, Identifiable, Sendabl
                 "bacon",
                 "beef",
                 "chicken",
+                "chorizo",
+                "duck",
                 "guanciale",
                 "ham",
+                "lamb",
                 "minced-meat",
                 "pancetta",
                 "pork",
                 "prosciutto",
+                "salami",
                 "sausage",
             ]
         case .seafood:
             [
                 "anchovies",
                 "clams",
+                "cod",
+                "crab",
                 "fish",
+                "mackerel",
+                "mussels",
+                "octopus",
+                "oyster",
                 "salmon",
+                "scallops",
                 "seafood",
                 "shrimp",
                 "squid",
@@ -105,23 +138,30 @@ nonisolated enum IngredientCategory: String, CaseIterable, Identifiable, Sendabl
         case .dairy:
             [
                 "butter",
+                "cheddar",
                 "cheese",
+                "condensed-milk",
                 "cream",
+                "cream-cheese",
                 "egg",
+                "feta",
                 "mascarpone",
                 "milk",
                 "mozzarella",
                 "parmesan",
                 "pecorino",
                 "ricotta",
+                "sour-cream",
                 "yogurt",
             ]
         case .grains:
             [
                 "arborio-rice",
+                "barley",
                 "bread",
                 "breadcrumbs",
                 "couscous",
+                "fettuccine",
                 "fusilli",
                 "gnocchi",
                 "lasagna",
@@ -129,12 +169,18 @@ nonisolated enum IngredientCategory: String, CaseIterable, Identifiable, Sendabl
                 "mochi",
                 "noodles",
                 "oats",
+                "orzo",
                 "panko",
                 "penne",
+                "pita",
                 "polenta",
+                "quinoa",
                 "ramen",
+                "ravioli",
                 "rice",
                 "rice-noodles",
+                "rigatoni",
+                "soba",
                 "spaghetti",
                 "tortilla",
                 "udon",
@@ -143,32 +189,47 @@ nonisolated enum IngredientCategory: String, CaseIterable, Identifiable, Sendabl
             [
                 "basil",
                 "bay-leaf",
+                "cardamom",
                 "chili-flakes",
                 "cinnamon",
+                "cloves",
                 "coriander",
                 "cumin",
                 "curry-powder",
+                "dill",
+                "five-spice",
+                "furikake",
                 "mint",
+                "nutmeg",
                 "oregano",
                 "paprika",
                 "parsley",
                 "pepper",
                 "rosemary",
+                "saffron",
                 "sage",
                 "salt",
+                "sansho",
                 "sesame-seeds",
                 "shichimi",
+                "star-anise",
                 "thyme",
                 "turmeric",
                 "wasabi",
+                "yuzu-kosho",
             ]
         case .sauces:
             [
                 "balsamic-vinegar",
+                "chili-oil",
+                "coconut-oil",
                 "dashi",
+                "doubanjiang",
                 "fish-sauce",
                 "gochujang",
+                "hoisin",
                 "honey",
+                "hot-sauce",
                 "ketchup",
                 "maple-syrup",
                 "mayonnaise",
@@ -185,8 +246,11 @@ nonisolated enum IngredientCategory: String, CaseIterable, Identifiable, Sendabl
                 "rice-vinegar",
                 "sake",
                 "sesame-oil",
+                "soy-milk",
                 "soy-sauce",
                 "sriracha",
+                "tahini",
+                "teriyaki-sauce",
                 "tonkatsu-sauce",
                 "vinegar",
                 "water",
@@ -196,12 +260,18 @@ nonisolated enum IngredientCategory: String, CaseIterable, Identifiable, Sendabl
             ]
         case .baking:
             [
+                "almond-flour",
                 "baking-powder",
+                "baking-soda",
                 "brown-sugar",
                 "chocolate",
+                "cocoa-powder",
                 "cornstarch",
                 "flour",
+                "gelatin",
+                "icing-sugar",
                 "jam",
+                "molasses",
                 "peanut-butter",
                 "sugar",
                 "vanilla",
@@ -209,8 +279,10 @@ nonisolated enum IngredientCategory: String, CaseIterable, Identifiable, Sendabl
             ]
         case .pantry:
             [
+                "aburaage",
                 "aonori",
                 "beans",
+                "black-beans",
                 "bouillon",
                 "canned-tomatoes",
                 "capers",
@@ -218,15 +290,21 @@ nonisolated enum IngredientCategory: String, CaseIterable, Identifiable, Sendabl
                 "coconut-milk",
                 "curry-roux",
                 "dried-shiitake",
+                "hijiki",
+                "kamaboko",
                 "katsuobushi",
+                "kidney-beans",
                 "kombu",
                 "lentils",
+                "matcha",
                 "natto",
                 "nori",
                 "nuts",
                 "olives",
                 "passata",
+                "pickled-ginger",
                 "pine-nuts",
+                "shirataki",
                 "sun-dried-tomatoes",
                 "tofu",
                 "tomato-paste",
@@ -237,94 +315,142 @@ nonisolated enum IngredientCategory: String, CaseIterable, Identifiable, Sendabl
     }
 }
 
+/// The groups the tool catalog is browsed in. Every tool icon sits in exactly one, and the
+/// flat list `IconCatalog.tools` is built from them.
+nonisolated enum ToolCategory: String, CaseIterable, Identifiable, Sendable {
+    case utensils, stovetop, other
+
+    var id: String { rawValue }
+
+    var title: LocalizedStringResource {
+        switch self {
+        case .utensils: "Tool.Category.Utensils"
+        case .stovetop: "Tool.Category.Stovetop"
+        case .other: "Tool.Category.Other"
+        }
+    }
+
+    /// The tool assets in this group, in the order the picker shows them.
+    var icons: [String] {
+        switch self {
+        case .utensils:
+            [
+                "bowl",
+                "brush",
+                "butter-knife",
+                "can-opener",
+                "chopsticks",
+                "colander",
+                "cutting-board",
+                "fork",
+                "garlic-press",
+                "grater",
+                "knife",
+                "ladle",
+                "masher",
+                "measuring-cup",
+                "measuring-spoons",
+                "mortar-pestle",
+                "peeler",
+                "plate",
+                "rolling-pin",
+                "scissors",
+                "sieve",
+                "skewer",
+                "slotted-spoon",
+                "spatula",
+                "spoon",
+                "tongs",
+                "whisk",
+                "wooden-spoon",
+            ]
+        case .stovetop:
+            [
+                "blender",
+                "kettle",
+                "lid",
+                "microwave",
+                "oven",
+                "pan",
+                "pot",
+                "rice-cooker",
+                "saucepan",
+                "steamer",
+                "toaster",
+                "wok",
+            ]
+        case .other:
+            [
+                "baking-sheet",
+                "foil",
+                "oven-mitt",
+                "paper-towel",
+                "parchment-paper",
+                "storage-container",
+                "thermometer",
+                "timer",
+            ]
+        }
+    }
+}
+
 /// The SVG icon sets shipped in the asset catalog, mirroring the folders in the recipe site's `img` directory.
 nonisolated enum IconCatalog {
     /// Asset names for every icon in `img/ingredients`, gathered from the browsing groups.
     static let ingredients: [String] = IngredientCategory.allCases.flatMap(\.icons).sorted()
 
-    /// Asset names for every icon in `img/tools`.
-    static let tools: [String] = [
-        "baking-sheet",
-        "blender",
-        "bowl",
-        "brush",
-        "butter-knife",
-        "can-opener",
-        "chopsticks",
-        "colander",
-        "cutting-board",
-        "foil",
-        "fork",
-        "garlic-press",
-        "grater",
-        "kettle",
-        "knife",
-        "ladle",
-        "lid",
-        "masher",
-        "measuring-cup",
-        "measuring-spoons",
-        "microwave",
-        "mortar-pestle",
-        "oven",
-        "oven-mitt",
-        "pan",
-        "paper-towel",
-        "parchment-paper",
-        "peeler",
-        "plate",
-        "pot",
-        "rice-cooker",
-        "rolling-pin",
-        "saucepan",
-        "scissors",
-        "sieve",
-        "skewer",
-        "slotted-spoon",
-        "spatula",
-        "spoon",
-        "steamer",
-        "storage-container",
-        "thermometer",
-        "timer",
-        "toaster",
-        "tongs",
-        "whisk",
-        "wok",
-        "wooden-spoon",
-    ]
+    /// Asset names for every icon in `img/tools`, gathered from the browsing groups.
+    static let tools: [String] = ToolCategory.allCases.flatMap(\.icons).sorted()
 
     /// Other words cooks use for an ingredient, mapped onto the asset that covers it.
     /// Looked up through `normalized`, so plurals and spacing do not need their own entries.
     private static let aliases: [String: String] = [
         "aubergine": "eggplant",
+        "beni shoga": "pickled-ginger",
+        "bicarbonate of soda": "baking-soda",
         "bonito flakes": "katsuobushi",
         "capsicum": "bell-pepper",
         "chilli": "chili",
         "chinese cabbage": "napa-cabbage",
         "cilantro": "coriander",
+        "confectioners sugar": "icing-sugar",
         "corn flour": "cornstarch",
         "courgette": "zucchini",
         "double cream": "cream",
+        "eringi": "king-oyster",
+        "fish cake": "kamaboko",
+        "fried tofu": "aburaage",
+        "gari": "pickled-ginger",
         "gobo": "burdock",
         "green onion": "spring-onion",
         "ground beef": "minced-meat",
         "ground pork": "minced-meat",
         "hakusai": "napa-cabbage",
         "heavy cream": "cream",
+        "hotate": "scallops",
+        "kani": "crab",
         "katakuriko": "cornstarch",
+        "konnyaku": "shirataki",
         "mange tout": "peas",
+        "nagaimo": "yam",
         "negi": "spring-onion",
+        "pak choi": "bok-choy",
         "parmigiano": "parmesan",
         "peanut": "nuts",
+        "powdered sugar": "icing-sugar",
         "prawn": "shrimp",
+        "rayu": "chili-oil",
         "renkon": "lotus-root",
         "rocket": "arugula",
+        "saba": "mackerel",
         "scallion": "spring-onion",
         "sea bream": "fish",
         "seaweed": "nori",
+        "sesame paste": "tahini",
         "shiitake": "dried-shiitake",
         "stock cube": "bouillon",
+        "takenoko": "bamboo-shoots",
+        "tako": "octopus",
         "togarashi": "shichimi",
         "white radish": "daikon",
         "yoghurt": "yogurt",
@@ -418,6 +544,16 @@ nonisolated enum IconCatalog {
     static func categories(matching query: String) -> [(category: IngredientCategory, icons: [String])] {
         let matches = Set(ingredients(matching: query))
         return IngredientCategory.allCases.compactMap { category in
+            let icons = category.icons.filter(matches.contains)
+            return icons.isEmpty ? nil : (category, icons)
+        }
+    }
+
+    /// The tools a search turns up, kept in browsing groups. Groups with nothing left in
+    /// them are dropped.
+    static func toolCategories(matching query: String) -> [(category: ToolCategory, icons: [String])] {
+        let matches = Set(tools(matching: query))
+        return ToolCategory.allCases.compactMap { category in
             let icons = category.icons.filter(matches.contains)
             return icons.isEmpty ? nil : (category, icons)
         }

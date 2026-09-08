@@ -1,0 +1,5 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kamaboko">
+  <path d="M11 34c0-9 6-15 13-15s13 6 13 15Z" fill="#f8f6f1"/>
+  <path d="M11 34c0-9 6-15 13-15s13 6 13 15h-3c0-8-4-12-10-12s-10 4-10 12Z" fill="#e8829a"/>
+  <rect x="9" y="34" width="30" height="5" rx="2" fill="#dcd7cc"/>
+</svg>

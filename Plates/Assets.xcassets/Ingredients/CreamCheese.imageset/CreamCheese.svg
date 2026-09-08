@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cream cheese">
+  <path d="M12 24h24v12a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2Z" fill="#f8f6f1" stroke="#d2ccbe" stroke-width="1.2"/>
+  <path d="M12 24l4-6h24l-4 6Z" fill="#ffffff" stroke="#d2ccbe" stroke-width="1.2"/>
+  <path d="M40 18v12l-4 6V24Z" fill="#e6e0d4" stroke="#d2ccbe" stroke-width="1.2"/>
+  <rect x="16" y="28" width="14" height="5" rx="2" fill="#8fd0ee"/>
+</svg>

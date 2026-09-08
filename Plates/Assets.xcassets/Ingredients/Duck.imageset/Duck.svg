@@ -1,0 +1,12 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sliced duck breast">
+  <g fill="#a8523f" stroke="#f0e2cf" stroke-width="2">
+    <ellipse cx="15" cy="31" rx="8" ry="6" transform="rotate(-15 15 31)"/>
+    <ellipse cx="24" cy="27" rx="8" ry="6" transform="rotate(-15 24 27)"/>
+    <ellipse cx="33" cy="23" rx="8" ry="6" transform="rotate(-15 33 23)"/>
+  </g>
+  <g fill="#cd6f60">
+    <ellipse cx="15" cy="31" rx="4.5" ry="3" transform="rotate(-15 15 31)"/>
+    <ellipse cx="24" cy="27" rx="4.5" ry="3" transform="rotate(-15 24 27)"/>
+    <ellipse cx="33" cy="23" rx="4.5" ry="3" transform="rotate(-15 33 23)"/>
+  </g>
+</svg>

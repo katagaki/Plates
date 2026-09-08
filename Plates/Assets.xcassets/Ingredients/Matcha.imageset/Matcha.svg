@@ -1,0 +1,5 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Matcha">
+  <path d="M9 26h30a15 13 0 0 1-30 0Z" fill="#e6e0d4"/>
+  <path d="M12 26c2-5 7-8 12-8s10 3 12 8Z" fill="#7a9e3f"/>
+  <path d="M16 24c4-2 12-2 16 0" stroke="#5f8c2f" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+</svg>

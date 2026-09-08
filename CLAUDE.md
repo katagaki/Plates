@@ -58,10 +58,11 @@ as `spring-onion` and drawn through `IconCatalog.assetName(for:)` as `SpringOnio
 adding an icon, copy the SVG in with explicit `width` and `height` on the root element,
 otherwise the asset catalog will not take it.
 
-`IconCatalog` lists every icon, groups the ingredients into the categories the picker browses,
-and resolves whatever icon name the generator's model writes back onto one that exists. The
+`IconCatalog` lists every icon, groups the ingredients and the tools into the categories the
+picker browses, and resolves whatever icon name the generator's model writes back onto one
+that exists. The
 catalog is never inlined into a `@Generable` schema: the on-device model has a 4,096 token
-window, and an `.anyOf` over 178 ingredient names overruns it before the prompt is even added.
+window, and an `.anyOf` over 256 ingredient names overruns it before the prompt is even added.
 
 ## Localization
 

@@ -1,0 +1,9 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Star anise">
+  <g fill="#8a4a2a">
+    <path d="M24 6l4 10-4 4-4-4Z"/><path d="M42 24l-10 4-4-4 4-4Z"/>
+    <path d="M24 42l-4-10 4-4 4 4Z"/><path d="M6 24l10-4 4 4-4 4Z"/>
+    <path d="M37 11l-5 9-5-1-1-5Z"/><path d="M37 37l-9-5 1-5 5-1Z"/>
+    <path d="M11 37l5-9 5 1 1 5Z"/><path d="M11 11l9 5-1 5-5 1Z"/>
+  </g>
+  <circle cx="24" cy="24" r="4" fill="#6b3a1e"/>
+</svg>

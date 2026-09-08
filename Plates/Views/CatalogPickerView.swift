@@ -188,15 +188,16 @@ extension CatalogPickerView {
         )
     }
 
-    /// The tool catalog, which is short enough to read as one group.
+    /// The tool catalog, in the groups a kitchen is laid out in.
     static func tools(selection: Binding<[String]>) -> CatalogPickerView {
         CatalogPickerView(
             title: "Generate.Tools.Title",
             searchPrompt: "Generate.Tools.Search",
             emptyLabel: "Generate.Tools.Empty",
             groups: { query in
-                let icons = IconCatalog.tools(matching: query)
-                return icons.isEmpty ? [] : [IconGroup(id: "tools", title: "Generate.Tools.Title", icons: icons)]
+                IconCatalog.toolCategories(matching: query).map {
+                    IconGroup(id: $0.category.rawValue, title: $0.category.title, icons: $0.icons)
+                }
             },
             path: IconCatalog.toolPath,
             selection: selection

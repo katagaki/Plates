@@ -1,0 +1,5 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gelatin">
+  <rect x="9" y="13" width="13" height="22" rx="2" fill="#e8ba5a" stroke="#c9942f" stroke-width="1.4"/>
+  <rect x="26" y="13" width="13" height="22" rx="2" fill="#f0c96a" stroke="#c9942f" stroke-width="1.4"/>
+  <g stroke="#f4d99a" stroke-width="1.4"><path d="M12 19h7M12 25h7M29 19h7M29 25h7"/></g>
+</svg>

@@ -1,0 +1,11 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Barley">
+  <path d="M24 42V24" stroke="#c9a24a" stroke-width="2.5" stroke-linecap="round"/>
+  <g fill="#e0b85c" stroke="#c08e2a" stroke-width="1">
+    <ellipse cx="19" cy="24" rx="4" ry="6" transform="rotate(25 19 24)"/>
+    <ellipse cx="29" cy="24" rx="4" ry="6" transform="rotate(-25 29 24)"/>
+    <ellipse cx="19" cy="17" rx="4" ry="6" transform="rotate(25 19 17)"/>
+    <ellipse cx="29" cy="17" rx="4" ry="6" transform="rotate(-25 29 17)"/>
+    <ellipse cx="24" cy="12" rx="4" ry="6"/>
+  </g>
+  <g stroke="#d9c08a" stroke-width="1.5" stroke-linecap="round"><path d="M20 8l-3-5M28 8l3-5M24 6V3"/></g>
+</svg>
