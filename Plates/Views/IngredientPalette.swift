@@ -2,16 +2,16 @@ import SwiftUI
 import UIKit
 
 /// The colours a recipe is drawn in, taken from the ingredient icons themselves. Each icon is
-/// averaged down to the one colour it reads as, so a tomato is red and spinach is green
-/// without a colour ever being written down by hand.
+/// read down to the one colour it reads as, so a tomato is red and spinach is green without a
+/// colour ever being written down by hand.
 enum IngredientPalette {
-    /// Averaged icon colours, kept for as long as the app runs so a scrolling grid measures
-    /// each icon once.
+    /// Icon colours, kept for as long as the app runs so a scrolling grid measures each icon
+    /// once.
     private static var cache: [String: Color?] = [:]
 
-    /// The four corner colours a recipe's card blends. Ingredients are read in the order they
-    /// are written, the flattest ones are passed over, and a short list is filled out by
-    /// shading the colours it does have.
+    /// The four corner colours a recipe's card blends, taken from across the whole ingredient
+    /// list rather than the first few entries of it. A short list is filled out by shading the
+    /// colours it does have.
     static func colors(for recipe: Recipe, in scheme: ColorScheme) -> [Color] {
         let paths = (recipe.ingredients.supermarket ?? []).map(\.icon)
             + (recipe.ingredients.general ?? []).map(\.icon)
@@ -28,21 +28,29 @@ enum IngredientPalette {
         return colors.map { $0.tuned(for: scheme) }
     }
 
-    /// Colours that read as their own, so a card of four near identical greens does not
-    /// happen. Anything passed over is put back on the end to fill the four out.
+    /// The four colours that sit furthest apart on the wheel, so a card takes from the whole
+    /// list instead of the ingredients that happen to be written first. The first ingredient
+    /// leads, then each pick is whichever colour is least like the ones already held.
     private static func spread(_ candidates: [Color]) -> [Color] {
-        var picked: [Color] = []
-        var rest: [Color] = []
-        for color in candidates {
-            let hue = color.hsb.hue
-            if picked.contains(where: { abs(hueDistance($0.hsb.hue, hue)) < 0.06 }) {
-                rest.append(color)
-            } else {
-                picked.append(color)
+        guard let first = candidates.first else { return [] }
+        var picked = [first]
+        var rest = Array(candidates.dropFirst())
+        while picked.count < 4, !rest.isEmpty {
+            let hues = picked.map(\.hsb.hue)
+            let scored = rest.enumerated().max { left, right in
+                distance(left.element, from: hues) < distance(right.element, from: hues)
             }
-            if picked.count == 4 { return picked }
+            guard let next = scored, distance(next.element, from: hues) >= 0.04 else { break }
+            picked.append(next.element)
+            rest.remove(at: next.offset)
         }
-        return Array((picked + rest).prefix(4))
+        return picked
+    }
+
+    /// How far a colour sits from the nearest hue already picked.
+    private static func distance(_ color: Color, from hues: [Double]) -> Double {
+        let hue = color.hsb.hue
+        return hues.map { hueDistance($0, hue) }.min() ?? 1
     }
 
     /// How far apart two hues are on the wheel, the short way round.
@@ -51,21 +59,23 @@ enum IngredientPalette {
         return min(difference, 1 - difference)
     }
 
-    /// The one colour an ingredient icon averages out to, or nothing when the icon is missing
-    /// or too washed out to colour a card with.
+    /// The one colour an ingredient icon reads as, or nothing when the icon is missing or has
+    /// no colour in it to draw a card with.
     private static func color(forIcon path: String) -> Color? {
         guard let asset = IconCatalog.assetName(for: path) else { return nil }
         if let cached = cache[asset] { return cached }
-        let color = averageColor(ofAsset: asset).flatMap { $0.hsb.saturation < 0.18 ? nil : $0 }
+        let color = dominantColor(ofAsset: asset)
         cache[asset] = color
         return color
     }
 
-    /// The icon drawn small and averaged, weighting each pixel by how opaque it is so the
-    /// transparent ground around the shape counts for nothing.
-    private static func averageColor(ofAsset asset: String) -> Color? {
+    /// The icon drawn small and sorted into hue bins, each pixel counting for as much as it is
+    /// opaque and saturated. The heaviest bin wins, which is the colour the icon reads as.
+    /// Averaging the pixels instead would mix a green stalk into a red body and hand back the
+    /// muddy yellow that lies between them.
+    private static func dominantColor(ofAsset asset: String) -> Color? {
         guard let image = UIImage(named: asset)?.cgImage else { return nil }
-        let side = 16
+        let side = 32
         var pixels = [UInt8](repeating: 0, count: side * side * 4)
         guard let context = CGContext(
             data: &pixels,
@@ -78,17 +88,63 @@ enum IngredientPalette {
         ) else { return nil }
         context.draw(image, in: CGRect(x: 0, y: 0, width: side, height: side))
 
-        var red = 0.0, green = 0.0, blue = 0.0, weight = 0.0
+        let bins = 18
+        var weights = [Double](repeating: 0, count: bins)
+        var sines = [Double](repeating: 0, count: bins)
+        var cosines = [Double](repeating: 0, count: bins)
+        var saturations = [Double](repeating: 0, count: bins)
+        var brightnesses = [Double](repeating: 0, count: bins)
+
         for pixel in stride(from: 0, to: pixels.count, by: 4) {
             let alpha = Double(pixels[pixel + 3]) / 255
-            guard alpha > 0 else { continue }
-            red += Double(pixels[pixel]) / 255
-            green += Double(pixels[pixel + 1]) / 255
-            blue += Double(pixels[pixel + 2]) / 255
-            weight += alpha
+            guard alpha > 0.35 else { continue }
+            let hsb = components(
+                red: min(Double(pixels[pixel]) / 255 / alpha, 1),
+                green: min(Double(pixels[pixel + 1]) / 255 / alpha, 1),
+                blue: min(Double(pixels[pixel + 2]) / 255 / alpha, 1)
+            )
+            guard hsb.saturation > 0.2, hsb.brightness > 0.12 else { continue }
+            let bin = min(Int(hsb.hue * Double(bins)), bins - 1)
+            let weight = alpha * hsb.saturation
+            let angle = hsb.hue * 2 * .pi
+            weights[bin] += weight
+            sines[bin] += sin(angle) * weight
+            cosines[bin] += cos(angle) * weight
+            saturations[bin] += hsb.saturation * weight
+            brightnesses[bin] += hsb.brightness * weight
         }
-        guard weight > 0 else { return nil }
-        return Color(red: red / weight, green: green / weight, blue: blue / weight)
+
+        guard let bin = weights.indices.max(by: { weights[$0] < weights[$1] }), weights[bin] > 0.5
+        else { return nil }
+        let weight = weights[bin]
+        var hue = atan2(sines[bin], cosines[bin]) / (2 * .pi)
+        if hue < 0 { hue += 1 }
+        return Color(
+            hue: hue,
+            saturation: saturations[bin] / weight,
+            brightness: brightnesses[bin] / weight
+        )
+    }
+
+    /// A straight colour read as hue, saturation, and brightness, done by hand so a whole
+    /// icon's worth of pixels is not run through `UIColor` one at a time.
+    private static func components(
+        red: Double,
+        green: Double,
+        blue: Double
+    ) -> (hue: Double, saturation: Double, brightness: Double) {
+        let high = max(red, green, blue)
+        let low = min(red, green, blue)
+        let range = high - low
+        guard range > 0 else { return (0, 0, high) }
+        var hue: Double
+        switch high {
+        case red: hue = (green - blue) / range / 6
+        case green: hue = (2 + (blue - red) / range) / 6
+        default: hue = (4 + (red - green) / range) / 6
+        }
+        if hue < 0 { hue += 1 }
+        return (hue, range / high, high)
     }
 
     /// What a recipe with nothing to take a colour from is drawn in.
