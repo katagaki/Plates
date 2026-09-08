@@ -71,13 +71,16 @@ private struct RecipeCard: View {
 
     /// The ingredient colours poured into the four corners of the card. It sits over the card
     /// background rather than replacing it, so the title keeps its contrast in either
-    /// appearance.
+    /// appearance. The blend is mixed perceptually, so a red corner meeting a green one passes
+    /// through the colours between them instead of dipping through a dark band the way mixing
+    /// the channels straight does.
     private var blend: some View {
         MeshGradient(
             width: 2,
             height: 2,
             points: Self.points,
-            colors: IngredientPalette.colors(for: recipe, in: scheme)
+            colors: IngredientPalette.colors(for: recipe, in: scheme),
+            colorSpace: .perceptual
         )
         .opacity(scheme == .dark ? 1 : 0.5)
             .clipShape(.rect(cornerRadius: .listRowCornerRadius, style: .continuous))
