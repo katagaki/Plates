@@ -43,7 +43,9 @@ nonisolated enum IngredientCategory: String, CaseIterable, Identifiable, Sendabl
         IngredientShelf.allCases.first { $0.categories.contains(self) } ?? .fresh
     }
 
-    /// The ingredient assets in this group, in the order the picker shows them.
+    /// The ingredient assets in this group, in the order the picker shows them. Groups run
+    /// alphabetically, except the sauces, which run by cuisine so a shelf of them reads the
+    /// way a cook reaches for them.
     var icons: [String] {
         switch self {
         case .vegetables:
@@ -241,51 +243,57 @@ nonisolated enum IngredientCategory: String, CaseIterable, Identifiable, Sendabl
             ]
         case .sauces:
             [
+                // Italian
                 "balsamic-vinegar",
+                "olive-oil",
+                "pesto",
+                "red-wine",
+                "white-wine",
+                // Chinese
                 "black-vinegar",
                 "char-siu-sauce",
                 "chili-oil",
-                "coconut-oil",
                 "dark-soy-sauce",
-                "dashi",
                 "doubanjiang",
-                "fish-sauce",
-                "gochujang",
                 "hoisin",
+                "oyster-sauce",
+                "plum-sauce",
+                "sesame-oil",
+                "shacha-sauce",
+                "shaoxing-wine",
+                "tianmianjiang",
+                "xo-sauce",
+                // Japanese
+                "dashi",
+                "mentsuyu",
+                "mirin",
+                "miso",
+                "ponzu",
+                "rice-vinegar",
+                "sake",
+                "soy-sauce",
+                "teriyaki-sauce",
+                "tonkatsu-sauce",
+                "yakisoba-sauce",
+                // Korean
+                "gochujang",
+                // Southeast Asian
+                "coconut-oil",
+                "fish-sauce",
+                "sriracha",
+                // Everything else
                 "honey",
                 "hot-sauce",
                 "ketchup",
                 "maple-syrup",
                 "mayonnaise",
-                "mentsuyu",
-                "mirin",
-                "miso",
                 "mustard",
                 "oil",
-                "olive-oil",
-                "oyster-sauce",
-                "pesto",
-                "plum-sauce",
-                "ponzu",
-                "red-wine",
-                "rice-vinegar",
-                "sake",
-                "sesame-oil",
-                "shacha-sauce",
-                "shaoxing-wine",
                 "soy-milk",
-                "soy-sauce",
-                "sriracha",
                 "tahini",
-                "teriyaki-sauce",
-                "tianmianjiang",
-                "tonkatsu-sauce",
                 "vinegar",
                 "water",
-                "white-wine",
                 "worcestershire",
-                "xo-sauce",
-                "yakisoba-sauce",
             ]
         case .baking:
             [
