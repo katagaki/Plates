@@ -16,6 +16,7 @@ struct RecipeDetailView: View {
     @State private var editingNote: ListEdit?
     @State private var shared: SharedFile?
     @State private var shareFailed = false
+    @State private var isAsking = false
 
     /// The three things about a recipe that are edited in an alert rather than a sheet.
     private enum Field {
@@ -60,6 +61,13 @@ struct RecipeDetailView: View {
             if store != nil {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
+                        isAsking = true
+                    } label: {
+                        Label("Edit.Ask.Title", systemImage: "apple.intelligence")
+                    }
+                }
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
                         isEditing.toggle()
                     } label: {
                         Label(
@@ -87,6 +95,12 @@ struct RecipeDetailView: View {
         }
         .sheet(isPresented: $isShowingTroubleshooting) {
             TroubleshootingView(entries: recipe.troubleshooting)
+        }
+        .sheet(isPresented: $isAsking) {
+            AskEditRecipeView(recipe: recipe) { edited in
+                recipe = edited
+                save()
+            }
         }
         .sheet(item: $shared) { file in
             ShareSheet(url: file.url)

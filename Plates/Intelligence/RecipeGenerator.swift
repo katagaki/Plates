@@ -194,6 +194,16 @@ struct GenerationProgress: Equatable, Sendable {
     /// Set when the last pass ends, so the bar always lands on full.
     var isFinished = false
 
+    /// What the lock screen is told, which is the pass in words and the dish once it has a
+    /// name of its own.
+    var activity: ActivityProgress {
+        ActivityProgress(
+            stage: String(localized: stage.title),
+            dish: title ?? dish,
+            fraction: fraction
+        )
+    }
+
     /// How far along the model is. Each pass carries the share of the work it does.
     var fraction: Double {
         guard !isFinished else { return 1 }
@@ -229,49 +239,28 @@ final class RecipeGenerator {
 
     /// Every change is pushed to the Live Activity, so the lock screen keeps up with the sheet.
     private(set) var progress = GenerationProgress() {
-        didSet { activity.update(progress) }
+        didSet { activity.update(progress.activity) }
     }
 
-    private let model = SystemLanguageModel.default
+    /// The model, the cloud it falls back to, and the background time a pass runs in.
+    private let passes = ModelPasses()
 
     /// The lock screen face of the run.
     private let activity = GenerationActivity()
 
-    /// Held while a recipe is being written, so walking away from the app does not suspend a
-    /// pass part way through. iOS grants around half a minute, which is enough for the pass in
-    /// flight to land.
-    private var backgroundTask: UIBackgroundTaskIdentifier = .invalid
+    var availability: SystemLanguageModel.Availability { passes.availability }
 
-    /// Where a pass goes when it does not fit on device. Held rather than made per pass so
-    /// availability and quota are read from one place.
-    private let cloud = PrivateCloudComputeLanguageModel()
-
-    var availability: SystemLanguageModel.Availability { model.availability }
-
-    var isAvailable: Bool { model.availability == .available }
+    var isAvailable: Bool { passes.isAvailable }
 
     /// Why the button is disabled, in words a cook can act on.
-    var unavailableReason: LocalizedStringResource? {
-        switch model.availability {
-        case .available:
-            nil
-        case .unavailable(.deviceNotEligible):
-            "Generate.Unavailable.DeviceNotEligible"
-        case .unavailable(.appleIntelligenceNotEnabled):
-            "Generate.Unavailable.AppleIntelligenceNotEnabled"
-        case .unavailable(.modelNotReady):
-            "Generate.Unavailable.ModelNotReady"
-        case .unavailable:
-            "Generate.Unavailable.Unknown"
-        }
-    }
+    var unavailableReason: LocalizedStringResource? { passes.unavailableReason }
 
     func generate(_ request: GenerationRequest) async -> Recipe? {
         state = .generating
         progress = GenerationProgress()
-        activity.start(progress)
-        beginBackgroundRun()
-        defer { endBackgroundRun() }
+        activity.start(progress.activity)
+        passes.beginBackgroundRun(named: "Recipe generation")
+        defer { passes.endBackgroundRun() }
         do {
             let pick = try await pickIngredients(request)
             let base = try await generateBase(request, pick: pick)
@@ -280,7 +269,7 @@ final class RecipeGenerator {
             let troubleshooting = try await generateTroubleshooting(base: base, outline: outline)
             progress.isFinished = true
             state = .idle
-            activity.end(progress, outcome: "Generate.Activity.Done")
+            activity.end(progress.activity, outcome: "Generate.Activity.Done")
             return Self.makeRecipe(
                 base: base,
                 pick: pick,
@@ -289,61 +278,19 @@ final class RecipeGenerator {
             )
         } catch {
             state = .failed(error.localizedDescription)
-            activity.end(progress, outcome: "Generate.Activity.Failed")
+            activity.end(progress.activity, outcome: "Generate.Activity.Failed")
             return nil
         }
     }
 
-    // MARK: - Running in the background
-
-    /// Asks for the time to finish once the app is no longer on screen. The system takes it
-    /// back when it runs out, and whatever is left of the recipe carries on when the cook
-    /// comes back.
-    private func beginBackgroundRun() {
-        guard backgroundTask == .invalid else { return }
-        backgroundTask = UIApplication.shared.beginBackgroundTask(withName: "Recipe generation") {
-            [weak self] in self?.endBackgroundRun()
-        }
-    }
-
-    private func endBackgroundRun() {
-        guard backgroundTask != .invalid else { return }
-        UIApplication.shared.endBackgroundTask(backgroundTask)
-        backgroundTask = .invalid
-    }
-
     // MARK: - Passes
-
-    /// Runs one pass on device, and runs it again on Private Cloud Compute when the request
-    /// does not fit the on-device window. Nothing leaves the device until the on-device model
-    /// has turned the pass down, and a pass small enough to run at home never reaches the
-    /// cloud at all.
-    private func run<Value>(
-        tools: [any FoundationModels.Tool] = [],
-        instructions: String,
-        _ body: (LanguageModelSession) async throws -> Value
-    ) async throws -> Value {
-        do {
-            return try await body(LanguageModelSession(tools: tools, instructions: instructions))
-        } catch let error as LanguageModelError {
-            guard case .contextSizeExceeded = error else { throw error }
-            guard cloud.isAvailable else { throw GenerationError.tooLarge }
-            return try await body(
-                LanguageModelSession(
-                    model: cloud,
-                    tools: cloud.capabilities.contains(.toolCalling) ? tools : [],
-                    instructions: instructions
-                )
-            )
-        }
-    }
 
     /// Picks the shopping list first, from the cook's kitchen when they listed one and from
     /// the catalog otherwise, and pins every name onto an icon before a word of the recipe is
     /// written.
     private func pickIngredients(_ request: GenerationRequest) async throws -> IngredientPick {
         progress.stage = .pick
-        let picked = try await run(
+        let picked = try await passes.run(
             tools: [IngredientLookupTool(available: request.ingredients)],
             instructions: Self.pickInstructions(for: request)
         ) { session in
@@ -357,11 +304,11 @@ final class RecipeGenerator {
                 progress.pickedCount = snapshot.content.items?.count ?? 0
                 latest = snapshot.rawContent
             }
-            guard let latest else { throw GenerationError.empty }
+            guard let latest else { throw IntelligenceError.empty }
             return try GeneratedIngredientPick(latest)
         }
         let items = Self.resolve(picked.items, kitchen: request.ingredients)
-        guard !items.isEmpty else { throw GenerationError.empty }
+        guard !items.isEmpty else { throw IntelligenceError.empty }
         progress.pickedCount = items.count
         return IngredientPick(dish: picked.dish, items: items)
     }
@@ -393,7 +340,7 @@ final class RecipeGenerator {
         pick: IngredientPick
     ) async throws -> GeneratedRecipeBase {
         progress.stage = .idea
-        return try await run(instructions: Self.instructions(for: request)) { session in
+        return try await passes.run(instructions: Self.instructions(for: request)) { session in
             let stream = session.streamResponse(
                 to: Self.basePrompt(for: pick, request: request),
                 generating: GeneratedRecipeBase.self
@@ -410,14 +357,14 @@ final class RecipeGenerator {
                 progress.toolCount = partial.tools?.count ?? 0
                 latest = snapshot.rawContent
             }
-            guard let latest else { throw GenerationError.empty }
+            guard let latest else { throw IntelligenceError.empty }
             return try GeneratedRecipeBase(latest)
         }
     }
 
     private func generateOutline(for base: GeneratedRecipeBase) async throws -> [String] {
         progress.stage = .outline
-        let steps = try await run(instructions: Self.outlineInstructions) { session in
+        let steps = try await passes.run(instructions: Self.outlineInstructions) { session in
             let stream = session.streamResponse(
                 to: Self.outlinePrompt(for: base),
                 generating: GeneratedStepOutline.self
@@ -427,7 +374,7 @@ final class RecipeGenerator {
                 progress.stepCount = snapshot.content.steps?.count ?? 0
                 latest = snapshot.rawContent
             }
-            guard let latest else { throw GenerationError.empty }
+            guard let latest else { throw IntelligenceError.empty }
             return try GeneratedStepOutline(latest).steps
         }
         progress.stepCount = steps.count
@@ -440,7 +387,7 @@ final class RecipeGenerator {
         var steps: [Step] = []
         for (index, title) in outline.enumerated() {
             progress.latestStep = title
-            let points = try await run(instructions: Self.stepInstructions) { session in
+            let points = try await passes.run(instructions: Self.stepInstructions) { session in
                 let response = try await session.respond(
                     to: Self.stepPrompt(number: index + 1, title: title, base: base, outline: outline),
                     generating: GeneratedStepDetail.self
@@ -458,7 +405,7 @@ final class RecipeGenerator {
         outline: [String]
     ) async throws -> [Troubleshooting] {
         progress.stage = .troubleshooting
-        return try await run(instructions: Self.troubleshootingInstructions) { session in
+        return try await passes.run(instructions: Self.troubleshootingInstructions) { session in
             let stream = session.streamResponse(
                 to: Self.troubleshootingPrompt(base: base, outline: outline),
                 generating: GeneratedTroubleshootingList.self
@@ -468,7 +415,7 @@ final class RecipeGenerator {
                 progress.troubleshootingCount = snapshot.content.entries?.count ?? 0
                 latest = snapshot.rawContent
             }
-            guard let latest else { throw GenerationError.empty }
+            guard let latest else { throw IntelligenceError.empty }
             return try GeneratedTroubleshootingList(latest).entries.map {
                 Troubleshooting(problem: $0.problem, solution: $0.solution)
             }
@@ -477,32 +424,15 @@ final class RecipeGenerator {
 
     // MARK: - Prompts
 
-    private enum GenerationError: LocalizedError {
-        case empty
-        /// Too big for this iPhone, with no cloud to send it to.
-        case tooLarge
-
-        var errorDescription: String? {
-            switch self {
-            case .empty: String(localized: "Generate.Error.Empty")
-            case .tooLarge: String(localized: "Generate.Error.TooLarge")
-            }
-        }
-    }
-
-    /// Every word the model is given is written in the reader's language, so the recipe
-    /// comes back in the language the app is being read in.
+    /// The prompt shorthands, so a prompt below reads as prose rather than as calls.
     private static func text(_ key: String.LocalizationValue, _ arguments: CVarArg...) -> String {
         let format = String(localized: key)
         return arguments.isEmpty ? format : String(format: format, arguments: arguments)
     }
 
-    /// A list as the reader's language punctuates one.
-    private static func joined(_ items: [String]) -> String {
-        items.joined(separator: text("Generate.Prompt.Separator"))
-    }
+    private static func joined(_ items: [String]) -> String { ModelPasses.joined(items) }
 
-    private static var houseStyle: String { text("Generate.Prompt.HouseStyle") }
+    private static var houseStyle: String { ModelPasses.houseStyle }
 
     private static func pickInstructions(for request: GenerationRequest) -> String {
         var instructions = houseStyle + "\n\n" + text("Generate.Prompt.Pick")

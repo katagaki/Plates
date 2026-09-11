@@ -211,10 +211,8 @@ private struct GenerationProgressView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            ProgressView(value: progress.fraction) {
-                Text(progress.stage.title)
-                    .font(.subheadline)
-            }
+            Text(progress.stage.title)
+                .font(.subheadline)
 
             if let heading = progress.title ?? progress.dish, !heading.isEmpty {
                 VStack(alignment: .leading, spacing: 2) {
@@ -255,6 +253,16 @@ private struct GenerationProgressView: View {
         .animation(.default, value: progress)
     }
 
+    /// Where a line has got to: spinning while its pass is the one running, ticked once it has
+    /// something to show.
+    private func marker(
+        for stage: GenerationProgress.Stage,
+        count: Int
+    ) -> ProgressMarkerState {
+        if progress.stage == stage && !progress.isFinished { return .working }
+        return count > 0 ? .done : .waiting
+    }
+
     /// One line of the checklist, spinning while its pass is the one running.
     private func row(
         _ label: LocalizedStringResource,
@@ -262,15 +270,7 @@ private struct GenerationProgressView: View {
         stage: GenerationProgress.Stage
     ) -> some View {
         HStack(spacing: 8) {
-            if progress.stage == stage && !progress.isFinished {
-                DonutSpinner()
-            } else {
-                Image(systemName: count > 0 ? "checkmark.circle.fill" : "circle.dotted")
-                    .resizable()
-                    .scaledToFit()
-                    .foregroundStyle(.secondary)
-                    .frame(width: .markerSize, height: .markerSize)
-            }
+            ProgressMarker(state: marker(for: stage, count: count))
             Text(label)
             Spacer(minLength: 0)
             if count > 0 {
@@ -282,28 +282,3 @@ private struct GenerationProgressView: View {
     }
 }
 
-private extension CGFloat {
-    /// The circle every checklist marker is drawn in, so the ring, the dotted circle, and the
-    /// checkmark are all the same size.
-    static let markerSize: CGFloat = 20
-    /// How thick the ring is drawn. The ring is inset by half of it so its outer edge lands on
-    /// the circle the symbols fill.
-    static let markerLineWidth: CGFloat = 2
-}
-
-/// A ring with a gap in it, turning while the model works on that line. It sits where the
-/// line's checkmark goes, so nothing shifts when the pass finishes.
-private struct DonutSpinner: View {
-    @State private var isTurning = false
-
-    var body: some View {
-        Circle()
-            .trim(from: 0, to: 0.7)
-            .stroke(.secondary, style: StrokeStyle(lineWidth: .markerLineWidth, lineCap: .round))
-            .padding(.markerLineWidth / 2)
-            .rotationEffect(.degrees(isTurning ? 360 : 0))
-            .animation(.linear(duration: 1).repeatForever(autoreverses: false), value: isTurning)
-            .frame(width: .markerSize, height: .markerSize)
-            .onAppear { isTurning = true }
-    }
-}

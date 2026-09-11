@@ -1,6 +1,346 @@
 {
   "sourceLanguage": "en-US",
   "strings": {
+    "Edit.Activity.Done": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recipe updated"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レシピを更新しました"
+          }
+        }
+      }
+    },
+    "Edit.Activity.Failed": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not finish the changes"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "変更を完了できませんでした"
+          }
+        }
+      }
+    },
+    "Edit.Ask.Action": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Make Changes"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "変更する"
+          }
+        }
+      }
+    },
+    "Edit.Ask.Footer": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence works out what to change, then makes the changes one at a time. Nothing is saved until you keep it."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligenceが変更内容を判断し、1つずつ変更していきます。保存するまでレシピは変わりません。"
+          }
+        }
+      }
+    },
+    "Edit.Ask.Label": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "What should change?"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "どこを変更しますか？"
+          }
+        }
+      }
+    },
+    "Edit.Ask.Prompt": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Make it for four, without the pork"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "4人分にして、豚肉を抜く"
+          }
+        }
+      }
+    },
+    "Edit.Ask.Recipe": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recipe"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レシピ"
+          }
+        }
+      }
+    },
+    "Edit.Ask.Title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ask for Changes"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "変更を依頼"
+          }
+        }
+      }
+    },
+    "Edit.Error.NoChanges": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence found nothing to change. Try asking another way."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "変更する箇所が見つかりませんでした。別の言い方で依頼してください。"
+          }
+        }
+      }
+    },
+    "Edit.Progress.Applying": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Making the changes"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "変更しています"
+          }
+        }
+      }
+    },
+    "Edit.Progress.Planning": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Working out what to change"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "変更内容を検討しています"
+          }
+        }
+      }
+    },
+    "Edit.Prompt.Apply.Details": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You are changing a recipe's title, timing, or serving count. Write all three back, keeping whatever the change does not touch exactly as it was."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レシピのタイトル、時間、人数を変更します。3つとも書き出し、変更しない項目はそのままにします。"
+          }
+        }
+      }
+    },
+    "Edit.Prompt.Apply.Ingredients": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You are changing a recipe's shopping list. Write the whole list back, keeping the ingredients and amounts the change does not touch exactly as they were. Sort them into fresh, pantry, and optional."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レシピの材料を変更します。材料表を全部書き出し、変更しない材料と分量はそのままにします。生鮮、常備品、任意に分けます。"
+          }
+        }
+      }
+    },
+    "Edit.Prompt.Apply.Step": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You are writing one step of a method that is already planned. Cover that step only, and do not repeat what earlier or later steps do."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すでに決まっている手順のうち、1つだけを書きます。その手順だけを書き、前後の手順の内容は繰り返しません。"
+          }
+        }
+      }
+    },
+    "Edit.Prompt.Apply.Tools": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You are changing the tools a recipe needs. Write the whole list back, keeping the tools the change does not touch exactly as they were."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レシピに必要な道具を変更します。道具を全部書き出し、変更しない道具はそのままにします。"
+          }
+        }
+      }
+    },
+    "Edit.Prompt.Apply.Troubleshooting": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You are writing the troubleshooting notes. Each problem is a short symptom with no closing period, and each fix is one to three full sentences."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "対処法を書きます。問題は句点なしの短い症状で書き、対処は1文から3文で書きます。"
+          }
+        }
+      }
+    },
+    "Edit.Prompt.Ask": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The change to make: %1$@"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "行う変更：%1$@"
+          }
+        }
+      }
+    },
+    "Edit.Prompt.Line.Step": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Step %1$@ now reads: %2$@"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在の手順%1$@：%2$@"
+          }
+        }
+      }
+    },
+    "Edit.Prompt.Plan": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You are working out what to change about a recipe someone already has, and nothing else. Change only what the cook asked for, and leave the rest of the recipe alone. Give each change a short imperative title in the cook's words, and one sentence saying exactly what to do. Use as few changes as the request needs. When a change is about one step, give that step's number."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すでにあるレシピのどこを変更するかだけを考えます。依頼された箇所だけを変更し、ほかはそのままにします。変更ごとに、短い命令形のタイトルと、何をするかを1文で書きます。変更は必要な数だけにします。1つの手順に関する変更では、その手順の番号を書きます。"
+          }
+        }
+      }
+    },
+    "Edit.Prompt.Plan.Ask": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The cook asks: %1$@\n\nWork out what to change."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "依頼：%1$@\n\n変更内容を考えてください。"
+          }
+        }
+      }
+    },
     "Generate.Activity.Done": {
       "extractionState": "manual",
       "localizations": {
