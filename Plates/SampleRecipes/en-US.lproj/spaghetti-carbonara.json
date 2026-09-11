@@ -1,0 +1,268 @@
+{
+  "id": "spaghetti-carbonara",
+  "title": "Spaghetti Carbonara",
+  "time": "25 min",
+  "serves": "2",
+  "tried": true,
+  "ingredients": {
+    "supermarket": [
+      {
+        "item": "Guanciale",
+        "icon": "img/ingredients/guanciale.svg",
+        "amount": "100 g",
+        "note": "Cured pork cheek. Pancetta is the closest substitute."
+      },
+      {
+        "item": "Egg yolks",
+        "icon": "img/ingredients/egg.svg",
+        "amount": "4 yolks and 1 whole egg"
+      },
+      {
+        "item": "Pecorino romano",
+        "icon": "img/ingredients/pecorino.svg",
+        "amount": "60 g",
+        "note": "Grated fine."
+      }
+    ],
+    "general": [
+      {
+        "item": "Spaghetti",
+        "icon": "img/ingredients/spaghetti.svg",
+        "amount": "200 g"
+      },
+      {
+        "item": "Water",
+        "icon": "img/ingredients/water.svg",
+        "amount": "2 L"
+      },
+      {
+        "item": "Salt",
+        "icon": "img/ingredients/salt.svg",
+        "amount": "1 tbsp",
+        "note": "Less than you would use for other sauces. The pork and the cheese are already salty."
+      },
+      {
+        "item": "Black pepper",
+        "icon": "img/ingredients/pepper.svg",
+        "amount": "plenty",
+        "note": "Coarsely ground, and more at the table."
+      }
+    ],
+    "optional": [
+      {
+        "item": "Pancetta",
+        "icon": "img/ingredients/pancetta.svg",
+        "amount": "100 g",
+        "note": "In place of the guanciale."
+      },
+      {
+        "item": "Parmesan",
+        "icon": "img/ingredients/parmesan.svg",
+        "amount": "30 g",
+        "note": "Half the pecorino swapped out, for a milder sauce."
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "Large pot",
+      "icon": "img/tools/pot.svg",
+      "required": true,
+      "note": "Big enough for 2 litres at a rolling boil."
+    },
+    {
+      "name": "Frying pan (about 24 cm)",
+      "icon": "img/tools/pan.svg",
+      "required": true
+    },
+    {
+      "name": "Grater",
+      "icon": "img/tools/grater.svg",
+      "required": true,
+      "note": "The fine side."
+    },
+    {
+      "name": "Bowl",
+      "icon": "img/tools/bowl.svg",
+      "required": true,
+      "note": "Wide, and warmed if you can."
+    },
+    {
+      "name": "Whisk",
+      "icon": "img/tools/whisk.svg",
+      "required": true
+    },
+    {
+      "name": "Tongs",
+      "icon": "img/tools/tongs.svg",
+      "required": true
+    },
+    {
+      "name": "Ladle",
+      "icon": "img/tools/ladle.svg",
+      "required": true,
+      "note": "For the pasta water, which is part of the sauce."
+    },
+    {
+      "name": "Knife",
+      "icon": "img/tools/knife.svg",
+      "required": true
+    },
+    {
+      "name": "Cutting board",
+      "icon": "img/tools/cutting-board.svg",
+      "required": true
+    },
+    {
+      "name": "Plate",
+      "icon": "img/tools/plate.svg",
+      "required": true
+    }
+  ],
+  "steps": [
+    {
+      "title": "Grate the cheese",
+      "icons": [
+        "img/ingredients/pecorino.svg",
+        "img/tools/grater.svg",
+        "img/tools/bowl.svg"
+      ],
+      "points": [
+        "Grate the pecorino as fine as you can.",
+        "Coarse cheese does not melt in time and leaves the sauce grainy.",
+        "Keep a small handful back for the top."
+      ]
+    },
+    {
+      "title": "Cut the guanciale",
+      "icons": [
+        "img/ingredients/guanciale.svg",
+        "img/tools/knife.svg",
+        "img/tools/cutting-board.svg"
+      ],
+      "points": [
+        "Cut the rind off and keep it for a soup.",
+        "Cut the rest into batons about 1 cm thick.",
+        "Thick pieces stay chewy in the middle and crisp at the edge, which is the point."
+      ]
+    },
+    {
+      "title": "Boil the water",
+      "icons": [
+        "img/ingredients/water.svg",
+        "img/ingredients/salt.svg",
+        "img/tools/pot.svg"
+      ],
+      "points": [
+        "Bring 2 litres of water to a rolling boil and add the salt.",
+        "Taste it. It should be noticeably less salty than seawater.",
+        "Everything else in this dish is salted already."
+      ]
+    },
+    {
+      "title": "Render the guanciale",
+      "icons": [
+        "img/ingredients/guanciale.svg",
+        "img/tools/pan.svg"
+      ],
+      "points": [
+        "Put it in a cold pan and turn the heat to medium-low.",
+        "Cook for 6 to 8 minutes, until the fat has run clear and the pieces are gold.",
+        "Lift the pieces out with the tongs and leave every drop of the fat behind."
+      ]
+    },
+    {
+      "title": "Make the cream",
+      "icons": [
+        "img/ingredients/egg.svg",
+        "img/ingredients/pecorino.svg",
+        "img/ingredients/pepper.svg",
+        "img/tools/bowl.svg",
+        "img/tools/whisk.svg",
+        "img/tools/ladle.svg"
+      ],
+      "points": [
+        "Whisk the yolks, the whole egg, the pecorino and a lot of pepper into a thick paste.",
+        "Loosen it with a ladle of the boiling pasta water, whisking as you pour.",
+        "Warming it like this is what stops it scrambling later."
+      ]
+    },
+    {
+      "title": "Cook the spaghetti",
+      "icons": [
+        "img/ingredients/spaghetti.svg",
+        "img/tools/pot.svg",
+        "img/tools/tongs.svg"
+      ],
+      "points": [
+        "Drop the spaghetti in and stir it for the first minute.",
+        "Cook it one minute short of the time on the packet.",
+        "Save a mugful of the water before you do anything else."
+      ]
+    },
+    {
+      "title": "Toss it together",
+      "icons": [
+        "img/ingredients/spaghetti.svg",
+        "img/ingredients/egg.svg",
+        "img/tools/pan.svg",
+        "img/tools/tongs.svg",
+        "img/tools/ladle.svg"
+      ],
+      "points": [
+        "Lift the pasta straight into the pan of warm fat, off the heat, and toss it.",
+        "Pour the egg cream in and keep tossing. It thickens in about 30 seconds.",
+        "Loosen it with the saved water a splash at a time until it coats the strands and runs slowly."
+      ]
+    },
+    {
+      "title": "Plate the carbonara",
+      "icons": [
+        "img/ingredients/guanciale.svg",
+        "img/ingredients/pecorino.svg",
+        "img/ingredients/pepper.svg",
+        "img/tools/plate.svg",
+        "img/tools/tongs.svg"
+      ],
+      "points": [
+        "Twirl it onto warm plates.",
+        "Scatter the guanciale over and finish with the last of the pecorino and more pepper.",
+        "Serve it at once. Carbonara tightens as it sits."
+      ]
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "The egg scrambled",
+      "solution": "The pan was still on the heat, or the egg went in cold. Take the pan off, and loosen the egg mixture with hot pasta water first. Residual heat is enough to thicken it."
+    },
+    {
+      "problem": "The sauce stayed watery",
+      "solution": "Too much pasta water, or not enough cheese. Put the pan back over the lowest heat for 10 to 15 seconds, tossing the whole time, and it will come together."
+    },
+    {
+      "problem": "The sauce is grainy",
+      "solution": "The cheese was grated too coarsely, or it was pre-grated with starch in it. Grate it fine yourself, and let the hot water loosen it into a paste before it meets the pasta."
+    },
+    {
+      "problem": "It seized after plating",
+      "solution": "Pecorino keeps drinking liquid as it sits. Loosen it with a spoonful of hot water and toss again. Warm plates slow it down."
+    },
+    {
+      "problem": "It is too salty",
+      "solution": "The water was salted as usual. A tablespoon in 2 litres is enough here. Once it is made, an extra splash of plain water and more pepper soften the edge."
+    },
+    {
+      "problem": "No guanciale",
+      "solution": "Pancetta is closest, and thick-cut bacon works if you accept the smoke. Neither renders as much fat, so start them in a teaspoon of oil."
+    },
+    {
+      "problem": "No pecorino",
+      "solution": "Parmesan makes a milder, less sharp carbonara. Half and half is a fair compromise. Avoid anything that melts stringy, like mozzarella."
+    },
+    {
+      "problem": "Want it for one",
+      "solution": "Halve everything except the water, and use 2 yolks with no whole egg. A small amount of sauce cools fast, so warm the plate."
+    }
+  ]
+}

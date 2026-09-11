@@ -1,0 +1,220 @@
+{
+  "id": "french-toast",
+  "title": "フレンチトースト",
+  "time": "45分",
+  "serves": "2",
+  "tried": true,
+  "ingredients": {
+    "supermarket": [
+      {
+        "item": "厚切り食パン",
+        "icon": "img/ingredients/bread.svg",
+        "amount": "2枚",
+        "note": "3cmほど。前日のパンのほうが卵液をよく吸います。"
+      },
+      {
+        "item": "卵",
+        "icon": "img/ingredients/egg.svg",
+        "amount": "2個"
+      },
+      {
+        "item": "牛乳",
+        "icon": "img/ingredients/milk.svg",
+        "amount": "200ml"
+      },
+      {
+        "item": "バター",
+        "icon": "img/ingredients/butter.svg",
+        "amount": "15g"
+      }
+    ],
+    "general": [
+      {
+        "item": "砂糖",
+        "icon": "img/ingredients/sugar.svg",
+        "amount": "大さじ2"
+      },
+      {
+        "item": "塩",
+        "icon": "img/ingredients/salt.svg",
+        "amount": "ひとつまみ"
+      }
+    ],
+    "optional": [
+      {
+        "item": "バニラ",
+        "icon": "img/ingredients/vanilla.svg",
+        "amount": "数滴"
+      },
+      {
+        "item": "生クリーム",
+        "icon": "img/ingredients/cream.svg",
+        "amount": "大さじ2",
+        "note": "牛乳を同量減らして置き換えます。中がしっとりします。"
+      },
+      {
+        "item": "シナモン",
+        "icon": "img/ingredients/cinnamon.svg",
+        "amount": "少々"
+      },
+      {
+        "item": "メープルシロップ",
+        "icon": "img/ingredients/maple-syrup.svg",
+        "amount": "適量"
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "浅いバットまたはボウル",
+      "icon": "img/tools/bowl.svg",
+      "required": true,
+      "note": "パンが平らに寝かせられる広さのもの。"
+    },
+    {
+      "name": "泡立て器",
+      "icon": "img/tools/whisk.svg",
+      "required": true
+    },
+    {
+      "name": "ざる",
+      "icon": "img/tools/sieve.svg",
+      "required": false,
+      "note": "卵液をこす分です。"
+    },
+    {
+      "name": "フライパン(24cmほど)",
+      "icon": "img/tools/pan.svg",
+      "required": true
+    },
+    {
+      "name": "ふた",
+      "icon": "img/tools/lid.svg",
+      "required": true,
+      "note": "片面はふたをして焼きます。"
+    },
+    {
+      "name": "フライ返し",
+      "icon": "img/tools/spatula.svg",
+      "required": true
+    },
+    {
+      "name": "皿",
+      "icon": "img/tools/plate.svg",
+      "required": true
+    }
+  ],
+  "steps": [
+    {
+      "title": "卵液を作る",
+      "icons": [
+        "img/ingredients/egg.svg",
+        "img/ingredients/sugar.svg",
+        "img/ingredients/salt.svg",
+        "img/ingredients/milk.svg",
+        "img/ingredients/vanilla.svg",
+        "img/tools/bowl.svg",
+        "img/tools/whisk.svg"
+      ],
+      "points": [
+        "卵に砂糖と塩を入れ、白身の筋がなくなるまで混ぜます。",
+        "牛乳とバニラを加えてさらに混ぜます。",
+        "ざるでこしてバットに移します。これで焼き上がりがなめらかになります。"
+      ]
+    },
+    {
+      "title": "パンを浸す",
+      "icons": [
+        "img/ingredients/bread.svg",
+        "img/tools/bowl.svg"
+      ],
+      "points": [
+        "パンを並べて15分置きます。",
+        "裏返してさらに15分置きます。",
+        "持ち上げると重く、中心が白から薄い黄色に変わっていれば十分です。"
+      ]
+    },
+    {
+      "title": "バターを溶かす",
+      "icons": [
+        "img/ingredients/butter.svg",
+        "img/tools/pan.svg"
+      ],
+      "points": [
+        "フライパンを弱火にかけ、バターの3分の2を入れます。",
+        "溶かしながら回し、泡が落ち着いたら止めます。",
+        "ここから最後まで弱火です。卵液は固まるより先に焦げます。"
+      ]
+    },
+    {
+      "title": "片面を焼く",
+      "icons": [
+        "img/ingredients/bread.svg",
+        "img/tools/pan.svg",
+        "img/tools/lid.svg",
+        "img/tools/spatula.svg"
+      ],
+      "points": [
+        "余分な卵液を切ってからパンを入れます。",
+        "ふたをして5分焼きます。",
+        "こもった蒸気が中を固め、そのあいだに下面が色づきます。"
+      ]
+    },
+    {
+      "title": "裏面を焼く",
+      "icons": [
+        "img/ingredients/bread.svg",
+        "img/ingredients/butter.svg",
+        "img/tools/pan.svg",
+        "img/tools/spatula.svg"
+      ],
+      "points": [
+        "裏返し、残りのバターをふちから入れます。",
+        "ふたを取って4分焼きます。",
+        "最後に耳の面を20秒ずつ立てて焼き、側面を固めます。"
+      ]
+    },
+    {
+      "title": "休ませて盛る",
+      "icons": [
+        "img/ingredients/maple-syrup.svg",
+        "img/tools/plate.svg"
+      ],
+      "points": [
+        "皿に移し、1分置きます。",
+        "休ませるあいだに中が締まります。すぐ切ると実際より生っぽく見えます。",
+        "シロップは食卓でかけます。"
+      ]
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "中が生の卵液のままだった",
+      "solution": "ふたをせずに焼いたか、火が強くて中まで火が通る前に表面が色づきました。ここはふたが仕事をします。弱火で5分しっかり取ってください。"
+    },
+    {
+      "problem": "外側が焦げた",
+      "solution": "砂糖の多い生地に火が強すぎます。最後まで弱火にし、2枚目を焼く前に茶色くなったバターを拭き取ります。"
+    },
+    {
+      "problem": "浸しているあいだにパンが崩れた",
+      "solution": "焼きたての柔らかいパンには支えがありません。一晩出して乾かすか、低温のオーブンで10分乾かしてから浸します。"
+    },
+    {
+      "problem": "中がぱさついた",
+      "solution": "厚みに対して浸し時間が足りません。3cmなら30分、できれば冷蔵庫で一晩です。卵液はふちだけでなく中心まで届かせます。"
+    },
+    {
+      "problem": "白い筋が残った",
+      "solution": "卵が混ざりきっておらず、卵液をこしていません。どちらも1分で済み、どちらも焼き上がりに出ます。"
+    },
+    {
+      "problem": "浸す時間がない",
+      "solution": "牛乳を人肌に温めてから混ぜます。温かい卵液なら片面10分ほどで中まで入ります。"
+    },
+    {
+      "problem": "もっとこくがほしい",
+      "solution": "牛乳大さじ2を生クリームに替えるか、卵黄を1個足します。こくのために砂糖を増やすと、甘くなる前に焦げます。"
+    }
+  ]
+}

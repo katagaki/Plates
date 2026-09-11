@@ -1,0 +1,153 @@
+{
+  "id": "butter-toast",
+  "title": "Butter Toast",
+  "time": "10 min",
+  "serves": "1",
+  "tried": true,
+  "ingredients": {
+    "supermarket": [
+      {
+        "item": "Thick-cut white bread",
+        "icon": "img/ingredients/bread.svg",
+        "amount": "1 slice",
+        "note": "A four-slice loaf, about 3 cm. Day-old is better than fresh."
+      },
+      {
+        "item": "Butter",
+        "icon": "img/ingredients/butter.svg",
+        "amount": "15 g",
+        "note": "Left out of the fridge until it spreads without tearing the bread."
+      }
+    ],
+    "optional": [
+      {
+        "item": "Flaky salt",
+        "icon": "img/ingredients/salt.svg",
+        "amount": "a small pinch"
+      },
+      {
+        "item": "Honey",
+        "icon": "img/ingredients/honey.svg",
+        "amount": "1 tsp"
+      },
+      {
+        "item": "Sugar",
+        "icon": "img/ingredients/sugar.svg",
+        "amount": "1 tsp",
+        "note": "For sugar toast. Goes on before toasting, over a thin layer of butter."
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "Toaster",
+      "icon": "img/tools/toaster.svg",
+      "required": true,
+      "note": "A toaster oven or the grill of a normal oven. Both want preheating."
+    },
+    {
+      "name": "Butter knife",
+      "icon": "img/tools/butter-knife.svg",
+      "required": true
+    },
+    {
+      "name": "Knife",
+      "icon": "img/tools/knife.svg",
+      "required": false,
+      "note": "For scoring the surface."
+    },
+    {
+      "name": "Plate",
+      "icon": "img/tools/plate.svg",
+      "required": true
+    }
+  ],
+  "steps": [
+    {
+      "title": "Preheat the toaster",
+      "icons": [
+        "img/tools/toaster.svg"
+      ],
+      "points": [
+        "Run the toaster empty for 2 minutes.",
+        "A cold toaster dries the crumb through before the surface colors.",
+        "Skip this only if yours has a preheat setting of its own."
+      ]
+    },
+    {
+      "title": "Score the bread",
+      "icons": [
+        "img/ingredients/bread.svg",
+        "img/tools/knife.svg"
+      ],
+      "points": [
+        "Cut a grid across the slice, lines about 2 cm apart.",
+        "Go halfway down, not through.",
+        "The cuts open as it toasts and take the butter into the middle."
+      ]
+    },
+    {
+      "title": "Toast the bread",
+      "icons": [
+        "img/ingredients/bread.svg",
+        "img/tools/toaster.svg"
+      ],
+      "points": [
+        "Toast for 2 to 3 minutes.",
+        "It is ready when the raised squares are deep gold and the valleys are still pale.",
+        "Stay next to it. The last 20 seconds are the difference between gold and black."
+      ]
+    },
+    {
+      "title": "Butter the toast",
+      "icons": [
+        "img/ingredients/butter.svg",
+        "img/tools/butter-knife.svg",
+        "img/tools/plate.svg"
+      ],
+      "points": [
+        "Move it to a plate and lay the butter across the middle while the surface is hot.",
+        "Push it around only enough to cover the edges.",
+        "Let the rest sink into the cuts on its own."
+      ]
+    },
+    {
+      "title": "Finish and eat",
+      "icons": [
+        "img/ingredients/salt.svg",
+        "img/ingredients/honey.svg"
+      ],
+      "points": [
+        "Add the pinch of salt or a thread of honey if you like.",
+        "Eat it right away, while the crust still cracks under the knife.",
+        "Toast does not wait."
+      ]
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "It came out dry and hard",
+      "solution": "The toaster was cold at the start, so the whole slice baked instead of the surface toasting. Preheat for 2 minutes, and cut the toasting time if your bread is thinner than 3 cm."
+    },
+    {
+      "problem": "The butter sat on top and never sank in",
+      "solution": "The toast had cooled, or there were no cuts for it to run into. Butter the slice the moment it comes out, and score it before it goes in."
+    },
+    {
+      "problem": "The edges burned while the middle stayed pale",
+      "solution": "The slice was too close to the element, or sitting off center. Move it to the middle of the rack and lower the heat setting, giving it an extra minute."
+    },
+    {
+      "problem": "It went soft a few minutes after plating",
+      "solution": "Steam under the slice softened the base. Rest it against the rim of the plate so air reaches both sides."
+    },
+    {
+      "problem": "Only thin sandwich bread on hand",
+      "solution": "Toast two slices for about half the time and butter them together, one on top of the other. Thin bread has no middle to keep soft, so it wants to be eaten hot and fast."
+    },
+    {
+      "problem": "Want it sweeter",
+      "solution": "Spread a thin layer of butter, scatter the sugar over it, and toast. The sugar melts into a thin crust. Honey does the same job but goes on after, since it burns."
+    }
+  ]
+}

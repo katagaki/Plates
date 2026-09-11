@@ -1,0 +1,232 @@
+{
+  "id": "egg-fried-rice",
+  "title": "卵チャーハン",
+  "time": "15分",
+  "serves": "1",
+  "tried": true,
+  "ingredients": {
+    "supermarket": [
+      {
+        "item": "卵",
+        "icon": "img/ingredients/egg.svg",
+        "amount": "2個"
+      },
+      {
+        "item": "長ねぎ",
+        "icon": "img/ingredients/spring-onion.svg",
+        "amount": "2本"
+      }
+    ],
+    "general": [
+      {
+        "item": "ごはん",
+        "icon": "img/ingredients/rice.svg",
+        "amount": "250g",
+        "note": "前日に炊いて冷やしたもの。冷やごはんだから粒がほぐれます。"
+      },
+      {
+        "item": "サラダ油",
+        "icon": "img/ingredients/oil.svg",
+        "amount": "大さじ2"
+      },
+      {
+        "item": "しょうゆ",
+        "icon": "img/ingredients/soy-sauce.svg",
+        "amount": "小さじ2"
+      },
+      {
+        "item": "塩",
+        "icon": "img/ingredients/salt.svg",
+        "amount": "小さじ1/3"
+      },
+      {
+        "item": "白こしょう",
+        "icon": "img/ingredients/pepper.svg",
+        "amount": "適量"
+      }
+    ],
+    "optional": [
+      {
+        "item": "ごま油",
+        "icon": "img/ingredients/sesame-oil.svg",
+        "amount": "小さじ1/2"
+      },
+      {
+        "item": "紹興酒",
+        "icon": "img/ingredients/shaoxing-wine.svg",
+        "amount": "小さじ1"
+      },
+      {
+        "item": "ハムまたはチャーシュー",
+        "icon": "img/ingredients/ham.svg",
+        "amount": "40g",
+        "note": "小さめに切り、ごはんと一緒に入れます。"
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "中華鍋",
+      "icon": "img/tools/wok.svg",
+      "required": true,
+      "note": "24cmのフライパンでも作れます。熱が逃げやすいので、一人分ずつ、あまり動かさずに炒めます。"
+    },
+    {
+      "name": "炊飯器",
+      "icon": "img/tools/rice-cooker.svg",
+      "required": false,
+      "note": "前日のごはん用です。鍋で炊いてもかまいません。"
+    },
+    {
+      "name": "お玉またはフライ返し",
+      "icon": "img/tools/spatula.svg",
+      "required": true
+    },
+    {
+      "name": "ボウル",
+      "icon": "img/tools/bowl.svg",
+      "required": true
+    },
+    {
+      "name": "包丁",
+      "icon": "img/tools/knife.svg",
+      "required": true
+    },
+    {
+      "name": "まな板",
+      "icon": "img/tools/cutting-board.svg",
+      "required": true
+    },
+    {
+      "name": "皿",
+      "icon": "img/tools/plate.svg",
+      "required": true
+    }
+  ],
+  "steps": [
+    {
+      "title": "前日にごはんを炊く",
+      "icons": [
+        "img/ingredients/rice.svg",
+        "img/tools/rice-cooker.svg"
+      ],
+      "points": [
+        "前日に炊き、皿に広げて冷まします。",
+        "ふたをせずに冷蔵庫で一晩置き、表面を乾かします。",
+        "急ぐときは、炊きたてを薄く広げて冷凍庫に20分入れます。"
+      ]
+    },
+    {
+      "title": "下ごしらえをする",
+      "icons": [
+        "img/ingredients/egg.svg",
+        "img/ingredients/spring-onion.svg",
+        "img/ingredients/rice.svg",
+        "img/tools/knife.svg",
+        "img/tools/bowl.svg"
+      ],
+      "points": [
+        "長ねぎを小口に切り、白い部分と青い部分を分けておきます。",
+        "卵に塩をひとつまみ落として溶きます。",
+        "冷やごはんは濡らした手でほぐし、かたまりをなくします。"
+      ]
+    },
+    {
+      "title": "鍋を熱する",
+      "icons": [
+        "img/ingredients/oil.svg",
+        "img/tools/wok.svg"
+      ],
+      "points": [
+        "強火にかけ、水を一滴落とすと滑って消えるまで熱します。",
+        "油を入れ、鍋肌にいきわたらせます。",
+        "思うより時間がかかります。2分ほどが目安です。"
+      ]
+    },
+    {
+      "title": "卵を炒める",
+      "icons": [
+        "img/ingredients/egg.svg",
+        "img/tools/wok.svg",
+        "img/tools/spatula.svg"
+      ],
+      "points": [
+        "溶き卵を中央に流し、3秒待ちます。",
+        "大きなかたまりのまま、ざっくりと崩します。",
+        "まだ半熟のうちに止めます。残りはごはんの中で火が通ります。"
+      ]
+    },
+    {
+      "title": "ごはんを入れる",
+      "icons": [
+        "img/ingredients/rice.svg",
+        "img/tools/wok.svg",
+        "img/tools/spatula.svg"
+      ],
+      "points": [
+        "半熟の卵の上に、そのままごはんをのせます。",
+        "お玉の背で押し付けて5つ数え、返してまた押します。",
+        "粒が油をまとってほぐれるまで、3分ほど繰り返します。"
+      ]
+    },
+    {
+      "title": "味をつける",
+      "icons": [
+        "img/ingredients/salt.svg",
+        "img/ingredients/pepper.svg",
+        "img/ingredients/soy-sauce.svg",
+        "img/ingredients/shaoxing-wine.svg",
+        "img/tools/wok.svg"
+      ],
+      "points": [
+        "残りの塩と白こしょうを高い位置からふり、全体に散らします。",
+        "しょうゆはごはんではなく、熱い鍋肌に沿わせて回し入れます。",
+        "音を立てて香りに変わり、水っぽい部分が残りません。"
+      ]
+    },
+    {
+      "title": "仕上げて盛る",
+      "icons": [
+        "img/ingredients/spring-onion.svg",
+        "img/ingredients/sesame-oil.svg",
+        "img/tools/wok.svg",
+        "img/tools/plate.svg"
+      ],
+      "points": [
+        "長ねぎを混ぜ込み、火を止めます。",
+        "ごま油は火を止めてから入れると、香りが残ります。",
+        "茶碗に詰めて皿に返し、山の形に盛ります。"
+      ]
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "ごはんがべたついてかたまる",
+      "solution": "炊きたて、または水分が多いごはんです。前日の冷やごはんは表面が乾いていて、お玉で押すとほぐれます。炊きたてでは鍋の中で蒸れて固まります。"
+    },
+    {
+      "problem": "卵がかたい",
+      "solution": "ごはんを入れる前に火が通りきっています。半熟で止めてください。そのあと3分はごはんの中で加熱され続けます。"
+    },
+    {
+      "problem": "ところどころ黒くて水っぽい",
+      "solution": "しょうゆがごはんに直接かかっています。熱い鍋肌に沿わせて入れると、大半が蒸気になって飛びます。"
+    },
+    {
+      "problem": "味がぼやける",
+      "solution": "足りないのはたいていしょうゆではなく塩です。塩が粒に味をつけ、しょうゆは香りをつけます。塩と白こしょうをひとつまみ足して炒め合わせます。"
+    },
+    {
+      "problem": "鍋が十分に熱くならない",
+      "solution": "家庭のコンロは食材を入れた瞬間に温度が落ちます。一人分ずつ作り、材料を足すたびに10秒ほど待ち、混ぜすぎないようにします。"
+    },
+    {
+      "problem": "ごはんが鍋にくっつく",
+      "solution": "油を入れた時点で鍋が熱くなかったか、油が少なすぎます。一人分に大さじ2は多く見えますが、これが適量です。"
+    },
+    {
+      "problem": "もっと食べ応えがほしい",
+      "solution": "ハムかチャーシューを40g、小さく切ってごはんと一緒に入れます。生野菜のように水分の多いものはごはんを水っぽくします。"
+    }
+  ]
+}

@@ -1,0 +1,327 @@
+{
+  "id": "seafood-curry",
+  "title": "シーフードカレー",
+  "time": "50分",
+  "serves": "2",
+  "tried": true,
+  "ingredients": {
+    "supermarket": [
+      {
+        "item": "シーフードミックス",
+        "icon": "img/ingredients/seafood.svg",
+        "amount": "200g"
+      },
+      {
+        "item": "玉ねぎ",
+        "icon": "img/ingredients/onion.svg",
+        "amount": "大1個"
+      },
+      {
+        "item": "にんじん",
+        "icon": "img/ingredients/carrot.svg",
+        "amount": "1本"
+      },
+      {
+        "item": "じゃがいも",
+        "icon": "img/ingredients/potato.svg",
+        "amount": "1個"
+      },
+      {
+        "item": "バター",
+        "icon": "img/ingredients/butter.svg",
+        "amount": "大さじ1"
+      }
+    ],
+    "general": [
+      {
+        "item": "カレールー",
+        "icon": "img/ingredients/curry-roux.svg",
+        "amount": "3かけ",
+        "note": "60gほど。濃さは商品で倍ほど違うので、箱の表示を見てください。"
+      },
+      {
+        "item": "水",
+        "icon": "img/ingredients/water.svg",
+        "amount": "500ml"
+      },
+      {
+        "item": "ごはん",
+        "icon": "img/ingredients/rice.svg",
+        "amount": "1人1杯"
+      },
+      {
+        "item": "サラダ油",
+        "icon": "img/ingredients/oil.svg",
+        "amount": "大さじ1"
+      },
+      {
+        "item": "塩",
+        "icon": "img/ingredients/salt.svg",
+        "amount": "少々"
+      }
+    ],
+    "optional": [
+      {
+        "item": "にんにく",
+        "icon": "img/ingredients/garlic.svg",
+        "amount": "1かけ"
+      },
+      {
+        "item": "しょうが",
+        "icon": "img/ingredients/ginger.svg",
+        "amount": "1かけ"
+      },
+      {
+        "item": "ローリエ",
+        "icon": "img/ingredients/bay-leaf.svg",
+        "amount": "1枚"
+      },
+      {
+        "item": "牛乳",
+        "icon": "img/ingredients/milk.svg",
+        "amount": "大さじ2"
+      },
+      {
+        "item": "はちみつ",
+        "icon": "img/ingredients/honey.svg",
+        "amount": "小さじ1"
+      },
+      {
+        "item": "しょうゆ",
+        "icon": "img/ingredients/soy-sauce.svg",
+        "amount": "小さじ1"
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "鍋(20cmほど)",
+      "icon": "img/tools/pot.svg",
+      "required": true
+    },
+    {
+      "name": "ふた",
+      "icon": "img/tools/lid.svg",
+      "required": true
+    },
+    {
+      "name": "フライパン",
+      "icon": "img/tools/pan.svg",
+      "required": true,
+      "note": "シーフードはカレーとは別に火を通します。"
+    },
+    {
+      "name": "ざる",
+      "icon": "img/tools/colander.svg",
+      "required": true,
+      "note": "シーフードを解凍して水気を切る分です。"
+    },
+    {
+      "name": "キッチンペーパー",
+      "icon": "img/tools/paper-towel.svg",
+      "required": true
+    },
+    {
+      "name": "包丁",
+      "icon": "img/tools/knife.svg",
+      "required": true
+    },
+    {
+      "name": "まな板",
+      "icon": "img/tools/cutting-board.svg",
+      "required": true
+    },
+    {
+      "name": "ピーラー",
+      "icon": "img/tools/peeler.svg",
+      "required": true
+    },
+    {
+      "name": "木べら",
+      "icon": "img/tools/wooden-spoon.svg",
+      "required": true
+    },
+    {
+      "name": "お玉",
+      "icon": "img/tools/ladle.svg",
+      "required": true
+    },
+    {
+      "name": "計量カップ",
+      "icon": "img/tools/measuring-cup.svg",
+      "required": false
+    },
+    {
+      "name": "炊飯器",
+      "icon": "img/tools/rice-cooker.svg",
+      "required": false
+    },
+    {
+      "name": "皿",
+      "icon": "img/tools/plate.svg",
+      "required": true
+    }
+  ],
+  "steps": [
+    {
+      "title": "シーフードを解凍する",
+      "icons": [
+        "img/ingredients/seafood.svg",
+        "img/ingredients/salt.svg",
+        "img/tools/colander.svg",
+        "img/tools/paper-towel.svg"
+      ],
+      "points": [
+        "ざるに入れ、氷が溶けるまで3分ほど流水にあてます。",
+        "水気を切り、キッチンペーパーで押さえて塩を軽くふります。",
+        "シーフードに残った水が、カレーが薄くなるいちばんの原因です。"
+      ]
+    },
+    {
+      "title": "野菜を切る",
+      "icons": [
+        "img/ingredients/onion.svg",
+        "img/ingredients/carrot.svg",
+        "img/ingredients/potato.svg",
+        "img/tools/knife.svg",
+        "img/tools/cutting-board.svg",
+        "img/tools/peeler.svg"
+      ],
+      "points": [
+        "玉ねぎは薄切りにします。",
+        "にんじんは皮をむいて乱切り、じゃがいもは皮をむいて6つに切ります。",
+        "じゃがいもは最後に切り、鍋に入れるまで水にさらしておきます。"
+      ]
+    },
+    {
+      "title": "玉ねぎを炒める",
+      "icons": [
+        "img/ingredients/onion.svg",
+        "img/ingredients/oil.svg",
+        "img/ingredients/garlic.svg",
+        "img/ingredients/ginger.svg",
+        "img/tools/pot.svg",
+        "img/tools/wooden-spoon.svg"
+      ],
+      "points": [
+        "鍋に油と玉ねぎを入れ、弱めの中火で10分、ときどき混ぜながら炒めます。",
+        "透き通るだけでなく、しっかり色づくまで炒めます。",
+        "にんにくとしょうがは最後の1分で加えます。甘みはこの手順から出ます。"
+      ]
+    },
+    {
+      "title": "根菜を加える",
+      "icons": [
+        "img/ingredients/carrot.svg",
+        "img/ingredients/potato.svg",
+        "img/tools/pot.svg",
+        "img/tools/wooden-spoon.svg"
+      ],
+      "points": [
+        "にんじんとじゃがいもを加え、2分ほど玉ねぎとからめます。",
+        "先に油をまとわせておくと、煮ても崩れません。"
+      ]
+    },
+    {
+      "title": "煮込む",
+      "icons": [
+        "img/ingredients/water.svg",
+        "img/ingredients/bay-leaf.svg",
+        "img/tools/pot.svg",
+        "img/tools/lid.svg",
+        "img/tools/ladle.svg",
+        "img/tools/measuring-cup.svg"
+      ],
+      "points": [
+        "水を注ぎ、ローリエを入れます。",
+        "沸いたらあくを取り、ふたをずらして15分煮ます。",
+        "にんじんに包丁がすっと入れば大丈夫です。"
+      ]
+    },
+    {
+      "title": "ルーを溶かす",
+      "icons": [
+        "img/ingredients/curry-roux.svg",
+        "img/tools/pot.svg",
+        "img/tools/ladle.svg"
+      ],
+      "points": [
+        "火を止め、1分ほど置いて煮立ちを鎮めます。",
+        "ルーを割り入れ、完全に溶けるまで混ぜます。",
+        "煮立った中に入れるとかたまります。"
+      ]
+    },
+    {
+      "title": "シーフードを焼く",
+      "icons": [
+        "img/ingredients/seafood.svg",
+        "img/ingredients/butter.svg",
+        "img/tools/pan.svg"
+      ],
+      "points": [
+        "フライパンを強火にかけ、バターを溶かします。",
+        "えびの色が変わり、いかが白くなるまで1分だけ火を通します。",
+        "バターごと、鍋にすべて移します。"
+      ]
+    },
+    {
+      "title": "とろみをつける",
+      "icons": [
+        "img/ingredients/milk.svg",
+        "img/ingredients/honey.svg",
+        "img/ingredients/soy-sauce.svg",
+        "img/tools/pot.svg",
+        "img/tools/wooden-spoon.svg"
+      ],
+      "points": [
+        "鍋を弱火に戻し、5分混ぜながら温めます。",
+        "煮立てません。強く煮立てるとシーフードがかたくなり、ルーが分離します。",
+        "味をみて、足りなければ牛乳、はちみつ、しょうゆで整えます。"
+      ]
+    },
+    {
+      "title": "盛りつける",
+      "icons": [
+        "img/ingredients/rice.svg",
+        "img/tools/plate.svg",
+        "img/tools/ladle.svg",
+        "img/tools/rice-cooker.svg"
+      ],
+      "points": [
+        "皿の片側にごはんを盛り、隣にカレーをよそいます。",
+        "ローリエは取り出します。",
+        "一晩置いて落ち着いた翌日のほうがおいしくなります。"
+      ]
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "水っぽく仕上がった",
+      "solution": "シーフードから水が出たか、ルーを入れたあと温め直していません。解凍して水気をしっかり取り、最後に弱火で5分かけます。"
+    },
+    {
+      "problem": "固すぎる",
+      "solution": "ルーに対して水が少ないか、ふたを開けたまま煮詰めすぎました。湯を少しずつ足してのばします。冷めるとまた固くなります。"
+    },
+    {
+      "problem": "ルーが溶けない",
+      "solution": "煮立った中に入れています。火を止め、泡が消えてから小さく割って入れます。できてしまったかたまりは、お玉で鍋肌に押し付けて潰します。"
+    },
+    {
+      "problem": "いかがゴムのようになった",
+      "solution": "火を通しすぎです。シーフードは最後の数分だけ鍋に入れ、入れたあとは煮立てません。"
+    },
+    {
+      "problem": "味がぼやける",
+      "solution": "玉ねぎの炒めが足りません。10分が最低線です。できあがったカレーには、しょうゆ小さじ1とはちみつ小さじ1で厚みが出ます。"
+    },
+    {
+      "problem": "とがった味がする",
+      "solution": "火を止めてから牛乳を大さじ2入れると和らぎます。バターを少し落としても同じです。どちらも入れたあとは煮立てません。"
+    },
+    {
+      "problem": "フライパンが空いていない",
+      "solution": "ルーを溶かしたあとの鍋に、水気を取ったシーフードをそのまま入れて弱火で2分煮ます。焼き目は出ませんが、食感は保てます。"
+    }
+  ]
+}

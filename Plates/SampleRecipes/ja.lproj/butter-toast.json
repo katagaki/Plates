@@ -1,0 +1,153 @@
+{
+  "id": "butter-toast",
+  "title": "バタートースト",
+  "time": "10分",
+  "serves": "1",
+  "tried": true,
+  "ingredients": {
+    "supermarket": [
+      {
+        "item": "厚切り食パン",
+        "icon": "img/ingredients/bread.svg",
+        "amount": "1枚",
+        "note": "4枚切り、3cmほど。焼きたてより前日のものが向きます。"
+      },
+      {
+        "item": "バター",
+        "icon": "img/ingredients/butter.svg",
+        "amount": "15g",
+        "note": "パンが破れずに塗れるくらいまで室温に戻しておきます。"
+      }
+    ],
+    "optional": [
+      {
+        "item": "粗塩",
+        "icon": "img/ingredients/salt.svg",
+        "amount": "少々"
+      },
+      {
+        "item": "はちみつ",
+        "icon": "img/ingredients/honey.svg",
+        "amount": "小さじ1"
+      },
+      {
+        "item": "砂糖",
+        "icon": "img/ingredients/sugar.svg",
+        "amount": "小さじ1",
+        "note": "シュガートーストにする分です。焼く前に薄くバターを塗ってからかけます。"
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "トースター",
+      "icon": "img/tools/toaster.svg",
+      "required": true,
+      "note": "オーブントースターでも、オーブンのグリルでもかまいません。どちらも予熱します。"
+    },
+    {
+      "name": "バターナイフ",
+      "icon": "img/tools/butter-knife.svg",
+      "required": true
+    },
+    {
+      "name": "包丁",
+      "icon": "img/tools/knife.svg",
+      "required": false,
+      "note": "表面に切れ目を入れる分です。"
+    },
+    {
+      "name": "皿",
+      "icon": "img/tools/plate.svg",
+      "required": true
+    }
+  ],
+  "steps": [
+    {
+      "title": "トースターを予熱する",
+      "icons": [
+        "img/tools/toaster.svg"
+      ],
+      "points": [
+        "何も入れずに2分ほど温めます。",
+        "冷えたトースターに入れると、表面に色がつく前に中まで乾いてしまいます。",
+        "予熱の機能が付いているトースターなら、この手順は省けます。"
+      ]
+    },
+    {
+      "title": "切れ目を入れる",
+      "icons": [
+        "img/ingredients/bread.svg",
+        "img/tools/knife.svg"
+      ],
+      "points": [
+        "2cm間隔で格子に切れ目を入れます。",
+        "深さは半分まで、下まで切り落としません。",
+        "焼くと切れ目が開き、バターが中まで入ります。"
+      ]
+    },
+    {
+      "title": "焼く",
+      "icons": [
+        "img/ingredients/bread.svg",
+        "img/tools/toaster.svg"
+      ],
+      "points": [
+        "2分から3分焼きます。",
+        "格子の山がこんがりと色づき、谷がまだ白いところが頃合いです。",
+        "そばを離れないでください。最後の20秒で色が変わります。"
+      ]
+    },
+    {
+      "title": "バターをのせる",
+      "icons": [
+        "img/ingredients/butter.svg",
+        "img/tools/butter-knife.svg",
+        "img/tools/plate.svg"
+      ],
+      "points": [
+        "皿に移し、熱いうちに真ん中にバターをのせます。",
+        "端まで届く程度に軽く広げます。",
+        "残りは切れ目に沿って自然に染み込みます。"
+      ]
+    },
+    {
+      "title": "仕上げて食べる",
+      "icons": [
+        "img/ingredients/salt.svg",
+        "img/ingredients/honey.svg"
+      ],
+      "points": [
+        "好みで塩をひとつまみ、またははちみつを細く回しかけます。",
+        "表面がまだ音を立てているうちに食べます。",
+        "トーストは待ってくれません。"
+      ]
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "ぱさぱさに焼き上がった",
+      "solution": "トースターが冷えたままだったので、表面が焼ける前に全体が乾きました。2分の予熱を入れ、パンが3cmより薄いときは焼き時間を短くします。"
+    },
+    {
+      "problem": "バターが上に残って染み込まない",
+      "solution": "パンが冷めていたか、切れ目がありませんでした。焼き上がりと同時に塗り、焼く前に切れ目を入れておきます。"
+    },
+    {
+      "problem": "端が焦げて真ん中が白いまま",
+      "solution": "熱源に近すぎるか、中央からずれています。網の真ん中に置き、火力を下げて1分長く焼きます。"
+    },
+    {
+      "problem": "少し置いたらしんなりした",
+      "solution": "パンの下にこもった蒸気で底がふやけています。皿のふちに立てかけて、両面に空気が通るようにします。"
+    },
+    {
+      "problem": "薄い食パンしかない",
+      "solution": "半分ほどの時間で2枚焼き、重ねてバターを塗ります。薄いパンには柔らかい中身がないので、熱いうちに食べきります。"
+    },
+    {
+      "problem": "甘いほうが好み",
+      "solution": "薄くバターを塗り、砂糖をふってから焼きます。砂糖が溶けて薄い膜になります。はちみつも同じ役割ですが、焦げるので焼いたあとにかけます。"
+    }
+  ]
+}

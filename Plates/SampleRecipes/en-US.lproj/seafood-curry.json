@@ -1,0 +1,327 @@
+{
+  "id": "seafood-curry",
+  "title": "Seafood Curry",
+  "time": "50 min",
+  "serves": "2",
+  "tried": true,
+  "ingredients": {
+    "supermarket": [
+      {
+        "item": "Frozen seafood mix",
+        "icon": "img/ingredients/seafood.svg",
+        "amount": "200 g"
+      },
+      {
+        "item": "Onion",
+        "icon": "img/ingredients/onion.svg",
+        "amount": "1 large"
+      },
+      {
+        "item": "Carrot",
+        "icon": "img/ingredients/carrot.svg",
+        "amount": "1"
+      },
+      {
+        "item": "Potato",
+        "icon": "img/ingredients/potato.svg",
+        "amount": "1"
+      },
+      {
+        "item": "Butter",
+        "icon": "img/ingredients/butter.svg",
+        "amount": "1 tbsp"
+      }
+    ],
+    "general": [
+      {
+        "item": "Curry roux",
+        "icon": "img/ingredients/curry-roux.svg",
+        "amount": "3 blocks",
+        "note": "About 60 g. Check the packet, some brands are twice as strong."
+      },
+      {
+        "item": "Water",
+        "icon": "img/ingredients/water.svg",
+        "amount": "500 ml"
+      },
+      {
+        "item": "Cooked rice",
+        "icon": "img/ingredients/rice.svg",
+        "amount": "1 bowl per person"
+      },
+      {
+        "item": "Cooking oil",
+        "icon": "img/ingredients/oil.svg",
+        "amount": "1 tbsp"
+      },
+      {
+        "item": "Salt",
+        "icon": "img/ingredients/salt.svg",
+        "amount": "a pinch"
+      }
+    ],
+    "optional": [
+      {
+        "item": "Garlic",
+        "icon": "img/ingredients/garlic.svg",
+        "amount": "1 clove"
+      },
+      {
+        "item": "Ginger",
+        "icon": "img/ingredients/ginger.svg",
+        "amount": "a thumb"
+      },
+      {
+        "item": "Bay leaf",
+        "icon": "img/ingredients/bay-leaf.svg",
+        "amount": "1"
+      },
+      {
+        "item": "Milk",
+        "icon": "img/ingredients/milk.svg",
+        "amount": "2 tbsp"
+      },
+      {
+        "item": "Honey",
+        "icon": "img/ingredients/honey.svg",
+        "amount": "1 tsp"
+      },
+      {
+        "item": "Soy sauce",
+        "icon": "img/ingredients/soy-sauce.svg",
+        "amount": "1 tsp"
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "Pot (about 20 cm)",
+      "icon": "img/tools/pot.svg",
+      "required": true
+    },
+    {
+      "name": "Lid",
+      "icon": "img/tools/lid.svg",
+      "required": true
+    },
+    {
+      "name": "Frying pan",
+      "icon": "img/tools/pan.svg",
+      "required": true,
+      "note": "For the seafood, which is cooked apart from the curry."
+    },
+    {
+      "name": "Colander",
+      "icon": "img/tools/colander.svg",
+      "required": true,
+      "note": "For thawing and draining the seafood."
+    },
+    {
+      "name": "Paper towel",
+      "icon": "img/tools/paper-towel.svg",
+      "required": true
+    },
+    {
+      "name": "Knife",
+      "icon": "img/tools/knife.svg",
+      "required": true
+    },
+    {
+      "name": "Cutting board",
+      "icon": "img/tools/cutting-board.svg",
+      "required": true
+    },
+    {
+      "name": "Peeler",
+      "icon": "img/tools/peeler.svg",
+      "required": true
+    },
+    {
+      "name": "Wooden spoon",
+      "icon": "img/tools/wooden-spoon.svg",
+      "required": true
+    },
+    {
+      "name": "Ladle",
+      "icon": "img/tools/ladle.svg",
+      "required": true
+    },
+    {
+      "name": "Measuring cup",
+      "icon": "img/tools/measuring-cup.svg",
+      "required": false
+    },
+    {
+      "name": "Rice cooker",
+      "icon": "img/tools/rice-cooker.svg",
+      "required": false
+    },
+    {
+      "name": "Plate",
+      "icon": "img/tools/plate.svg",
+      "required": true
+    }
+  ],
+  "steps": [
+    {
+      "title": "Thaw the seafood",
+      "icons": [
+        "img/ingredients/seafood.svg",
+        "img/ingredients/salt.svg",
+        "img/tools/colander.svg",
+        "img/tools/paper-towel.svg"
+      ],
+      "points": [
+        "Put the seafood in a colander and run cold water over it until the ice is gone, about 3 minutes.",
+        "Leave it to drain, then pat it dry and salt it lightly.",
+        "Water left on the seafood is the main reason seafood curry comes out thin."
+      ]
+    },
+    {
+      "title": "Cut the vegetables",
+      "icons": [
+        "img/ingredients/onion.svg",
+        "img/ingredients/carrot.svg",
+        "img/ingredients/potato.svg",
+        "img/tools/knife.svg",
+        "img/tools/cutting-board.svg",
+        "img/tools/peeler.svg"
+      ],
+      "points": [
+        "Slice the onion thin.",
+        "Peel the carrot and cut it into rough chunks, peel the potato and cut it into sixths.",
+        "Cut the potato last and leave it in water until it goes in."
+      ]
+    },
+    {
+      "title": "Brown the onion",
+      "icons": [
+        "img/ingredients/onion.svg",
+        "img/ingredients/oil.svg",
+        "img/ingredients/garlic.svg",
+        "img/ingredients/ginger.svg",
+        "img/tools/pot.svg",
+        "img/tools/wooden-spoon.svg"
+      ],
+      "points": [
+        "Cook the onion in the oil over medium-low heat for 10 minutes, stirring now and then.",
+        "Take it to a proper golden brown, not just soft.",
+        "Add the garlic and ginger for the last minute. This step is where the sweetness comes from."
+      ]
+    },
+    {
+      "title": "Add the roots",
+      "icons": [
+        "img/ingredients/carrot.svg",
+        "img/ingredients/potato.svg",
+        "img/tools/pot.svg",
+        "img/tools/wooden-spoon.svg"
+      ],
+      "points": [
+        "Add the carrot and potato and turn them in the onion for 2 minutes.",
+        "Coating them in fat first keeps them whole through the simmer."
+      ]
+    },
+    {
+      "title": "Simmer",
+      "icons": [
+        "img/ingredients/water.svg",
+        "img/ingredients/bay-leaf.svg",
+        "img/tools/pot.svg",
+        "img/tools/lid.svg",
+        "img/tools/ladle.svg",
+        "img/tools/measuring-cup.svg"
+      ],
+      "points": [
+        "Pour in the water and add the bay leaf.",
+        "Bring it to a boil, skim the foam off, then set the lid ajar and simmer for 15 minutes.",
+        "The carrot is ready when a knife goes in without pushing."
+      ]
+    },
+    {
+      "title": "Melt the roux",
+      "icons": [
+        "img/ingredients/curry-roux.svg",
+        "img/tools/pot.svg",
+        "img/tools/ladle.svg"
+      ],
+      "points": [
+        "Turn the heat off and wait a minute for the bubbling to stop.",
+        "Break the roux in and stir until it has dissolved completely.",
+        "Roux dropped into boiling liquid seizes into lumps."
+      ]
+    },
+    {
+      "title": "Sear the seafood",
+      "icons": [
+        "img/ingredients/seafood.svg",
+        "img/ingredients/butter.svg",
+        "img/tools/pan.svg"
+      ],
+      "points": [
+        "Melt the butter in the frying pan over high heat.",
+        "Cook the seafood for 1 minute, just until the prawns turn and the squid goes opaque.",
+        "Tip the whole lot, butter included, into the pot."
+      ]
+    },
+    {
+      "title": "Thicken",
+      "icons": [
+        "img/ingredients/milk.svg",
+        "img/ingredients/honey.svg",
+        "img/ingredients/soy-sauce.svg",
+        "img/tools/pot.svg",
+        "img/tools/wooden-spoon.svg"
+      ],
+      "points": [
+        "Put the pot back over low heat and stir for 5 minutes.",
+        "Keep it below a boil. Hard boiling toughens the seafood and splits the roux.",
+        "Taste, then round it out with the milk, honey or soy sauce if it needs it."
+      ]
+    },
+    {
+      "title": "Serve",
+      "icons": [
+        "img/ingredients/rice.svg",
+        "img/tools/plate.svg",
+        "img/tools/ladle.svg",
+        "img/tools/rice-cooker.svg"
+      ],
+      "points": [
+        "Spoon the rice onto one side of each plate and ladle the curry beside it.",
+        "Fish the bay leaf out as you go.",
+        "It is better the next day, once everything has settled."
+      ]
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "It came out thin",
+      "solution": "Water came off the seafood, or the pot never came back to heat after the roux. Thaw and dry the seafood properly, and give it the full 5 minutes on low at the end."
+    },
+    {
+      "problem": "It came out too thick",
+      "solution": "Too little water for the roux, or too long at a simmer with the lid off. Loosen it with hot water a splash at a time. It thickens again as it cools."
+    },
+    {
+      "problem": "The roux would not dissolve",
+      "solution": "It went into boiling liquid. Turn the heat off, wait for the bubbles to stop, and break the blocks up small. Lumps that have already formed can be crushed against the side of the pot with the ladle."
+    },
+    {
+      "problem": "The squid is rubbery",
+      "solution": "It cooked too long. Seafood belongs in the pot for the last few minutes only, and the curry must not boil after it goes in."
+    },
+    {
+      "problem": "It tastes flat",
+      "solution": "The onion was not browned enough. Ten minutes is the floor. For a curry already made, a teaspoon of soy sauce and a teaspoon of honey will fill it out."
+    },
+    {
+      "problem": "It tastes too sharp",
+      "solution": "Two tablespoons of milk, off the heat, softens it. So does a knob of butter. Neither should be boiled afterwards."
+    },
+    {
+      "problem": "No frying pan free",
+      "solution": "Add the dried seafood straight to the pot after the roux has melted and cook it for 2 minutes over low heat. You lose the browning and keep the texture."
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "id": "kimchi-fried-rice",
+  "title": "キムチチャーハン",
+  "time": "20分",
+  "serves": "2",
+  "tried": true,
+  "ingredients": {
+    "supermarket": [
+      {
+        "item": "白菜キムチ",
+        "icon": "img/ingredients/kimchi.svg",
+        "amount": "200g",
+        "note": "よく発酵した酸っぱいもの。浅いキムチには出せる深みがありません。"
+      },
+      {
+        "item": "豚バラ肉",
+        "icon": "img/ingredients/pork.svg",
+        "amount": "120g",
+        "note": "薄切り。"
+      },
+      {
+        "item": "卵",
+        "icon": "img/ingredients/egg.svg",
+        "amount": "2個",
+        "note": "目玉焼きにして一皿に1個のせます。"
+      }
+    ],
+    "general": [
+      {
+        "item": "ごはん",
+        "icon": "img/ingredients/rice.svg",
+        "amount": "350g",
+        "note": "前日に炊いて冷やしたもの。"
+      },
+      {
+        "item": "コチュジャン",
+        "icon": "img/ingredients/gochujang.svg",
+        "amount": "小さじ1"
+      },
+      {
+        "item": "砂糖",
+        "icon": "img/ingredients/sugar.svg",
+        "amount": "小さじ1"
+      },
+      {
+        "item": "しょうゆ",
+        "icon": "img/ingredients/soy-sauce.svg",
+        "amount": "小さじ1"
+      },
+      {
+        "item": "サラダ油",
+        "icon": "img/ingredients/oil.svg",
+        "amount": "大さじ1"
+      },
+      {
+        "item": "ごま油",
+        "icon": "img/ingredients/sesame-oil.svg",
+        "amount": "小さじ1"
+      },
+      {
+        "item": "塩と黒こしょう",
+        "icon": "img/ingredients/salt.svg",
+        "amount": "各少々"
+      }
+    ],
+    "optional": [
+      {
+        "item": "玉ねぎ",
+        "icon": "img/ingredients/onion.svg",
+        "amount": "1/2個",
+        "note": "小さめに切ります。"
+      },
+      {
+        "item": "バター",
+        "icon": "img/ingredients/butter.svg",
+        "amount": "5g"
+      },
+      {
+        "item": "のり",
+        "icon": "img/ingredients/nori.svg",
+        "amount": "1枚",
+        "note": "細く切って上にのせます。"
+      },
+      {
+        "item": "いりごま",
+        "icon": "img/ingredients/sesame-seeds.svg",
+        "amount": "小さじ1"
+      },
+      {
+        "item": "長ねぎ",
+        "icon": "img/ingredients/spring-onion.svg",
+        "amount": "1本"
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "フライパン(24cmほど)",
+      "icon": "img/tools/pan.svg",
+      "required": true
+    },
+    {
+      "name": "小さいフライパン",
+      "icon": "img/tools/pan.svg",
+      "required": false,
+      "note": "卵用です。同じフライパンを拭いて使ってもかまいません。"
+    },
+    {
+      "name": "キッチンばさみ",
+      "icon": "img/tools/scissors.svg",
+      "required": true,
+      "note": "キムチは刻むよりはさみで切るほうが楽です。"
+    },
+    {
+      "name": "包丁",
+      "icon": "img/tools/knife.svg",
+      "required": true
+    },
+    {
+      "name": "まな板",
+      "icon": "img/tools/cutting-board.svg",
+      "required": true
+    },
+    {
+      "name": "フライ返し",
+      "icon": "img/tools/spatula.svg",
+      "required": true
+    },
+    {
+      "name": "ボウル",
+      "icon": "img/tools/bowl.svg",
+      "required": true
+    },
+    {
+      "name": "皿",
+      "icon": "img/tools/plate.svg",
+      "required": true
+    }
+  ],
+  "steps": [
+    {
+      "title": "前日にごはんを炊く",
+      "icons": [
+        "img/ingredients/rice.svg"
+      ],
+      "points": [
+        "前日に炊き、ふたをせずに冷やします。",
+        "作り始める前に、濡らした手でほぐします。",
+        "冷たく乾いた粒であることが、チャーハンと水っぽいごはんの分かれ目です。"
+      ]
+    },
+    {
+      "title": "キムチを切る",
+      "icons": [
+        "img/ingredients/kimchi.svg",
+        "img/tools/scissors.svg",
+        "img/tools/bowl.svg"
+      ],
+      "points": [
+        "ボウルの上で軽く絞り、汁は一滴残らず取っておきます。",
+        "2cmほどに切ります。",
+        "汁はあとで使います。酸味の大半はここにあります。"
+      ]
+    },
+    {
+      "title": "豚肉を切る",
+      "icons": [
+        "img/ingredients/pork.svg",
+        "img/tools/knife.svg",
+        "img/tools/cutting-board.svg"
+      ],
+      "points": [
+        "豚バラ肉を2cmに切ります。",
+        "塩と黒こしょうをふっておきます。"
+      ]
+    },
+    {
+      "title": "豚肉を炒める",
+      "icons": [
+        "img/ingredients/pork.svg",
+        "img/ingredients/oil.svg",
+        "img/tools/pan.svg",
+        "img/tools/spatula.svg"
+      ],
+      "points": [
+        "フライパンに油と豚肉を入れ、中火にかけます。",
+        "脂が出てふちが色づくまで4分ほど炒めます。",
+        "脂はそのまま残します。キムチはこの脂で炒めます。"
+      ]
+    },
+    {
+      "title": "キムチを炒める",
+      "icons": [
+        "img/ingredients/kimchi.svg",
+        "img/ingredients/onion.svg",
+        "img/tools/pan.svg",
+        "img/tools/spatula.svg"
+      ],
+      "points": [
+        "キムチを加えます。玉ねぎを使うならここで一緒に入れます。",
+        "中火で4分、ふちが濃くなり、とがった匂いが甘い香りに変わるまで炒めます。",
+        "生の酸味が味に変わる手順です。ここは短くしません。"
+      ]
+    },
+    {
+      "title": "たれをからめる",
+      "icons": [
+        "img/ingredients/gochujang.svg",
+        "img/ingredients/sugar.svg",
+        "img/ingredients/soy-sauce.svg",
+        "img/ingredients/kimchi.svg",
+        "img/tools/pan.svg"
+      ],
+      "points": [
+        "コチュジャン、砂糖、しょうゆを入れて混ぜます。",
+        "取っておいたキムチの汁を加え、30秒煮詰めます。",
+        "水っぽくではなく、つやのある状態になります。"
+      ]
+    },
+    {
+      "title": "ごはんを入れる",
+      "icons": [
+        "img/ingredients/rice.svg",
+        "img/ingredients/butter.svg",
+        "img/tools/pan.svg",
+        "img/tools/spatula.svg"
+      ],
+      "points": [
+        "ごはんを入れ、フライ返しの背でたれに押し付けます。",
+        "3分ほど押しては返し、粒が赤く染まるまで炒めます。",
+        "角を丸くしたいときは、ここでバターを入れます。"
+      ]
+    },
+    {
+      "title": "目玉焼きを作る",
+      "icons": [
+        "img/ingredients/egg.svg",
+        "img/ingredients/oil.svg",
+        "img/tools/pan.svg"
+      ],
+      "points": [
+        "もう一つのフライパンに油を少し引き、中強火で卵を焼きます。",
+        "白身が固まり、ふちが茶色く縮れるまで触りません。",
+        "黄身は半熟のままにします。これがソースになります。"
+      ]
+    },
+    {
+      "title": "盛りつける",
+      "icons": [
+        "img/ingredients/sesame-oil.svg",
+        "img/ingredients/nori.svg",
+        "img/ingredients/sesame-seeds.svg",
+        "img/ingredients/spring-onion.svg",
+        "img/tools/plate.svg",
+        "img/tools/bowl.svg"
+      ],
+      "points": [
+        "茶碗に詰めて皿に返し、丸く盛ります。",
+        "ごま油を回しかけ、のり、ごま、長ねぎを散らします。",
+        "目玉焼きをのせ、食卓で崩します。"
+      ]
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "べちゃっとした",
+      "solution": "炊きたてのごはんに汁を入れたか、汁を一度に入れています。前日のごはんを使い、汁は30秒煮詰めてからごはんを入れます。"
+    },
+    {
+      "problem": "とがった生の味がする",
+      "solution": "キムチの炒めが足りません。中火で4分炒めると酸味が甘みに変わります。香りが変わるところが合図です。"
+    },
+    {
+      "problem": "酸っぱすぎる",
+      "solution": "発酵が進んだキムチです。砂糖を小さじ1足すか、バターを少し落とします。どちらも甘くせずに角を取ります。"
+    },
+    {
+      "problem": "ごはんがかたまる",
+      "solution": "冷たいままほぐさずに入れています。濡らした手でほぐし、混ぜるのではなく押し付けるように炒めます。"
+    },
+    {
+      "problem": "味がぼやける",
+      "solution": "浅いキムチか、量が足りません。ごはん350gにキムチ200gです。コチュジャンは色とこくを足すもので、酸味は足しません。"
+    },
+    {
+      "problem": "豚バラ肉がない",
+      "solution": "ベーコンなら油を足さずに使えます。ツナ缶は汁気を切り、最初ではなくごはんと一緒に入れます。どちらもないときは、仕上げのごま油を小さじ1増やします。"
+    },
+    {
+      "problem": "コチュジャンがない",
+      "solution": "入れずに、しょうゆを小さじ1足します。辛みはキムチが持っています。色は落ちますが、辛さは変わりません。"
+    }
+  ]
+}

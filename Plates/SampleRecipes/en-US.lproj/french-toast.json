@@ -1,0 +1,220 @@
+{
+  "id": "french-toast",
+  "title": "French Toast",
+  "time": "45 min",
+  "serves": "2",
+  "tried": true,
+  "ingredients": {
+    "supermarket": [
+      {
+        "item": "Thick-cut white bread",
+        "icon": "img/ingredients/bread.svg",
+        "amount": "2 slices",
+        "note": "About 3 cm. Day-old bread drinks more custard than fresh."
+      },
+      {
+        "item": "Eggs",
+        "icon": "img/ingredients/egg.svg",
+        "amount": "2"
+      },
+      {
+        "item": "Milk",
+        "icon": "img/ingredients/milk.svg",
+        "amount": "200 ml"
+      },
+      {
+        "item": "Butter",
+        "icon": "img/ingredients/butter.svg",
+        "amount": "15 g"
+      }
+    ],
+    "general": [
+      {
+        "item": "Sugar",
+        "icon": "img/ingredients/sugar.svg",
+        "amount": "2 tbsp"
+      },
+      {
+        "item": "Salt",
+        "icon": "img/ingredients/salt.svg",
+        "amount": "a pinch"
+      }
+    ],
+    "optional": [
+      {
+        "item": "Vanilla",
+        "icon": "img/ingredients/vanilla.svg",
+        "amount": "a few drops"
+      },
+      {
+        "item": "Cream",
+        "icon": "img/ingredients/cream.svg",
+        "amount": "2 tbsp",
+        "note": "In place of the same amount of milk, for a richer middle."
+      },
+      {
+        "item": "Cinnamon",
+        "icon": "img/ingredients/cinnamon.svg",
+        "amount": "a pinch"
+      },
+      {
+        "item": "Maple syrup",
+        "icon": "img/ingredients/maple-syrup.svg",
+        "amount": "to taste"
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "Shallow dish or bowl",
+      "icon": "img/tools/bowl.svg",
+      "required": true,
+      "note": "Wide enough that a slice lies flat."
+    },
+    {
+      "name": "Whisk",
+      "icon": "img/tools/whisk.svg",
+      "required": true
+    },
+    {
+      "name": "Sieve",
+      "icon": "img/tools/sieve.svg",
+      "required": false,
+      "note": "For straining the custard smooth."
+    },
+    {
+      "name": "Frying pan (about 24 cm)",
+      "icon": "img/tools/pan.svg",
+      "required": true
+    },
+    {
+      "name": "Lid",
+      "icon": "img/tools/lid.svg",
+      "required": true,
+      "note": "The first side cooks covered."
+    },
+    {
+      "name": "Spatula",
+      "icon": "img/tools/spatula.svg",
+      "required": true
+    },
+    {
+      "name": "Plate",
+      "icon": "img/tools/plate.svg",
+      "required": true
+    }
+  ],
+  "steps": [
+    {
+      "title": "Make the custard",
+      "icons": [
+        "img/ingredients/egg.svg",
+        "img/ingredients/sugar.svg",
+        "img/ingredients/salt.svg",
+        "img/ingredients/milk.svg",
+        "img/ingredients/vanilla.svg",
+        "img/tools/bowl.svg",
+        "img/tools/whisk.svg"
+      ],
+      "points": [
+        "Whisk the eggs with the sugar and salt until no streaks of white are left.",
+        "Add the milk and the vanilla and whisk again.",
+        "Strain it through a sieve into the shallow dish. This is what keeps the finished toast smooth."
+      ]
+    },
+    {
+      "title": "Soak the bread",
+      "icons": [
+        "img/ingredients/bread.svg",
+        "img/tools/bowl.svg"
+      ],
+      "points": [
+        "Lay the slices in and leave them 15 minutes.",
+        "Turn them over and give them 15 minutes more.",
+        "They are ready when a slice is heavy and the middle has gone from white to pale yellow."
+      ]
+    },
+    {
+      "title": "Melt the butter",
+      "icons": [
+        "img/ingredients/butter.svg",
+        "img/tools/pan.svg"
+      ],
+      "points": [
+        "Set the pan over low heat and add two thirds of the butter.",
+        "Swirl it as it melts and stop when the foam settles.",
+        "Low heat from here to the end. Custard browns long before it sets."
+      ]
+    },
+    {
+      "title": "Cook the first side",
+      "icons": [
+        "img/ingredients/bread.svg",
+        "img/tools/pan.svg",
+        "img/tools/lid.svg",
+        "img/tools/spatula.svg"
+      ],
+      "points": [
+        "Lift the slices in, letting the extra custard run off first.",
+        "Put the lid on and cook for 5 minutes.",
+        "The trapped steam sets the middle while the underside colors."
+      ]
+    },
+    {
+      "title": "Cook the second side",
+      "icons": [
+        "img/ingredients/bread.svg",
+        "img/ingredients/butter.svg",
+        "img/tools/pan.svg",
+        "img/tools/spatula.svg"
+      ],
+      "points": [
+        "Turn them over and add the rest of the butter around the edge.",
+        "Cook uncovered for 4 minutes.",
+        "Stand each slice on its crust for 20 seconds at the end to set the sides."
+      ]
+    },
+    {
+      "title": "Rest and serve",
+      "icons": [
+        "img/ingredients/maple-syrup.svg",
+        "img/tools/plate.svg"
+      ],
+      "points": [
+        "Move them to plates and leave them a minute.",
+        "The middle firms as it rests, so cutting straight away makes it look wetter than it is.",
+        "Pour the syrup over at the table."
+      ]
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "The middle was still raw custard",
+      "solution": "The first side was cooked uncovered, or the heat was high enough to color the outside before the inside caught up. The lid is doing the work here. Give it the full 5 minutes on low."
+    },
+    {
+      "problem": "The outside burned",
+      "solution": "Too much sugar meets too much heat. Keep the pan on low the whole time, and wipe out any butter that has gone brown before the second slice."
+    },
+    {
+      "problem": "The bread fell apart in the custard",
+      "solution": "Fresh soft bread has nothing to hold it together. Leave slices out overnight, or dry them in a low oven for 10 minutes before soaking."
+    },
+    {
+      "problem": "It came out dry inside",
+      "solution": "The soak was too short for the thickness. A 3 cm slice wants 30 minutes, and it is better overnight in the fridge. The custard should reach the center, not just the edges."
+    },
+    {
+      "problem": "There are white streaks through it",
+      "solution": "The egg was not whisked enough and the custard was not strained. Both take a minute and both show in the finished slice."
+    },
+    {
+      "problem": "No time to soak",
+      "solution": "Warm the milk to about body heat before whisking it in. Warm custard goes through the crumb in about 10 minutes a side instead of 15."
+    },
+    {
+      "problem": "Want it richer",
+      "solution": "Swap 2 tbsp of the milk for cream, or use one extra yolk. Do not add more sugar for richness. It burns before it sweetens."
+    }
+  ]
+}

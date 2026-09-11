@@ -1,0 +1,246 @@
+{
+  "id": "garlic-fried-rice",
+  "title": "Garlic Fried Rice",
+  "time": "25 min",
+  "serves": "1",
+  "tried": true,
+  "ingredients": {
+    "supermarket": [
+      {
+        "item": "Garlic",
+        "icon": "img/ingredients/garlic.svg",
+        "amount": "5 cloves",
+        "note": "Two sliced thin for chips, three chopped fine."
+      },
+      {
+        "item": "Butter",
+        "icon": "img/ingredients/butter.svg",
+        "amount": "10 g"
+      }
+    ],
+    "general": [
+      {
+        "item": "Cooked short-grain rice",
+        "icon": "img/ingredients/rice.svg",
+        "amount": "250 g",
+        "note": "Freshly cooked and still hot. This one wants hot rice, not cold."
+      },
+      {
+        "item": "Cooking oil",
+        "icon": "img/ingredients/oil.svg",
+        "amount": "3 tbsp"
+      },
+      {
+        "item": "Soy sauce",
+        "icon": "img/ingredients/soy-sauce.svg",
+        "amount": "2 tsp"
+      },
+      {
+        "item": "Salt",
+        "icon": "img/ingredients/salt.svg",
+        "amount": "a pinch"
+      },
+      {
+        "item": "Black pepper",
+        "icon": "img/ingredients/pepper.svg",
+        "amount": "to taste"
+      }
+    ],
+    "optional": [
+      {
+        "item": "Spring onion",
+        "icon": "img/ingredients/spring-onion.svg",
+        "amount": "1 stalk"
+      },
+      {
+        "item": "Parsley",
+        "icon": "img/ingredients/parsley.svg",
+        "amount": "a little",
+        "note": "Chopped fine, for the top."
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "Frying pan (about 24 cm)",
+      "icon": "img/tools/pan.svg",
+      "required": true
+    },
+    {
+      "name": "Rice cooker",
+      "icon": "img/tools/rice-cooker.svg",
+      "required": false
+    },
+    {
+      "name": "Knife",
+      "icon": "img/tools/knife.svg",
+      "required": true
+    },
+    {
+      "name": "Cutting board",
+      "icon": "img/tools/cutting-board.svg",
+      "required": true
+    },
+    {
+      "name": "Slotted spoon",
+      "icon": "img/tools/slotted-spoon.svg",
+      "required": true,
+      "note": "For lifting the chips out of the oil."
+    },
+    {
+      "name": "Paper towel",
+      "icon": "img/tools/paper-towel.svg",
+      "required": true
+    },
+    {
+      "name": "Spatula",
+      "icon": "img/tools/spatula.svg",
+      "required": true
+    },
+    {
+      "name": "Plate",
+      "icon": "img/tools/plate.svg",
+      "required": true
+    }
+  ],
+  "steps": [
+    {
+      "title": "Cook the rice",
+      "icons": [
+        "img/ingredients/rice.svg",
+        "img/tools/rice-cooker.svg"
+      ],
+      "points": [
+        "Start the rice first so it is hot when the garlic is ready.",
+        "Hot rice takes the fat and separates. Cold rice turns to lumps in butter.",
+        "Leave the lid on until the moment it goes in the pan."
+      ]
+    },
+    {
+      "title": "Prepare the garlic",
+      "icons": [
+        "img/ingredients/garlic.svg",
+        "img/tools/knife.svg",
+        "img/tools/cutting-board.svg"
+      ],
+      "points": [
+        "Slice two cloves as thin as you can manage.",
+        "Chop the other three fine.",
+        "Keep the two piles apart. They go in at different times and cook for different lengths."
+      ]
+    },
+    {
+      "title": "Fry the chips",
+      "icons": [
+        "img/ingredients/garlic.svg",
+        "img/ingredients/oil.svg",
+        "img/tools/pan.svg",
+        "img/tools/slotted-spoon.svg"
+      ],
+      "points": [
+        "Put the slices in the cold pan with the oil, then turn the heat to low.",
+        "Let them bubble gently for 4 to 5 minutes.",
+        "Starting cold is what cooks them through before the edges color."
+      ]
+    },
+    {
+      "title": "Lift out the chips",
+      "icons": [
+        "img/ingredients/garlic.svg",
+        "img/ingredients/salt.svg",
+        "img/tools/slotted-spoon.svg",
+        "img/tools/paper-towel.svg"
+      ],
+      "points": [
+        "Take them out the moment they turn pale gold, not deep gold.",
+        "Drain them on paper towel and salt them.",
+        "They darken and crisp as they cool. Waiting for color in the pan means bitter chips."
+      ]
+    },
+    {
+      "title": "Cook the chopped garlic",
+      "icons": [
+        "img/ingredients/garlic.svg",
+        "img/tools/pan.svg",
+        "img/tools/spatula.svg"
+      ],
+      "points": [
+        "Add the chopped garlic to the same oil, still on low.",
+        "Stir for about 30 seconds, until it smells sweet.",
+        "Do not let it brown. This lot is for flavor through the rice, not crunch."
+      ]
+    },
+    {
+      "title": "Fry the rice",
+      "icons": [
+        "img/ingredients/rice.svg",
+        "img/tools/pan.svg",
+        "img/tools/spatula.svg"
+      ],
+      "points": [
+        "Turn the heat to medium-high and add the hot rice.",
+        "Press it flat, count to five, then turn it over. Repeat for about 3 minutes.",
+        "The grains should end up glossy and separate, not browned."
+      ]
+    },
+    {
+      "title": "Butter and season",
+      "icons": [
+        "img/ingredients/butter.svg",
+        "img/ingredients/soy-sauce.svg",
+        "img/ingredients/salt.svg",
+        "img/ingredients/pepper.svg",
+        "img/tools/pan.svg"
+      ],
+      "points": [
+        "Drop the butter in and toss until it has just melted through.",
+        "Pour the soy sauce down the side of the pan.",
+        "Season with salt and plenty of black pepper."
+      ]
+    },
+    {
+      "title": "Plate and top",
+      "icons": [
+        "img/ingredients/garlic.svg",
+        "img/ingredients/spring-onion.svg",
+        "img/ingredients/parsley.svg",
+        "img/tools/plate.svg"
+      ],
+      "points": [
+        "Mound the rice on a warm plate.",
+        "Scatter the garlic chips over the top so they stay crisp.",
+        "Finish with spring onion or parsley."
+      ]
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "The garlic tastes bitter",
+      "solution": "It browned. Garlic goes from sweet to bitter in seconds at the end. Start the slices in cold oil on low, and lift them out at pale gold."
+    },
+    {
+      "problem": "The chips went soft",
+      "solution": "They were drained onto a plate instead of paper towel, or piled up while hot. Spread them in one layer and leave them until the rice is done."
+    },
+    {
+      "problem": "The rice is heavy and greasy",
+      "solution": "Most of the frying oil stayed in the pan. Pour off all but a tablespoon after the chips come out. The butter at the end supplies the rest."
+    },
+    {
+      "problem": "It does not taste garlicky enough",
+      "solution": "The chopped garlic browned and lost its edge, or there was not enough of it. Five cloves for one portion is right. Cook the chopped lot for 30 seconds, no more."
+    },
+    {
+      "problem": "The rice clumped in the pan",
+      "solution": "It came out of the fridge. This recipe wants rice straight from the cooker. If you only have cold rice, break it up with wet hands and add a splash of water as it heats."
+    },
+    {
+      "problem": "The butter burned",
+      "solution": "It went in over high heat. Butter is the last thing in and only needs to melt. Take the pan off the heat for a few seconds if it starts to foam hard."
+    },
+    {
+      "problem": "Want it as a side for steak",
+      "solution": "Cook the rice in the pan you cooked the steak in, without wiping it, and skip half the oil. The browned bits at the bottom do the rest."
+    }
+  ]
+}

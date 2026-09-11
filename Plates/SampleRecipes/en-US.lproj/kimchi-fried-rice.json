@@ -1,0 +1,294 @@
+{
+  "id": "kimchi-fried-rice",
+  "title": "Kimchi Fried Rice",
+  "time": "20 min",
+  "serves": "2",
+  "tried": true,
+  "ingredients": {
+    "supermarket": [
+      {
+        "item": "Napa cabbage kimchi",
+        "icon": "img/ingredients/kimchi.svg",
+        "amount": "200 g",
+        "note": "Well fermented and sour. Fresh kimchi has no depth to give up."
+      },
+      {
+        "item": "Pork belly",
+        "icon": "img/ingredients/pork.svg",
+        "amount": "120 g",
+        "note": "Thin sliced."
+      },
+      {
+        "item": "Eggs",
+        "icon": "img/ingredients/egg.svg",
+        "amount": "2",
+        "note": "One fried egg per plate."
+      }
+    ],
+    "general": [
+      {
+        "item": "Cooked short-grain rice",
+        "icon": "img/ingredients/rice.svg",
+        "amount": "350 g",
+        "note": "Cooked the day before and chilled."
+      },
+      {
+        "item": "Gochujang",
+        "icon": "img/ingredients/gochujang.svg",
+        "amount": "1 tsp"
+      },
+      {
+        "item": "Sugar",
+        "icon": "img/ingredients/sugar.svg",
+        "amount": "1 tsp"
+      },
+      {
+        "item": "Soy sauce",
+        "icon": "img/ingredients/soy-sauce.svg",
+        "amount": "1 tsp"
+      },
+      {
+        "item": "Cooking oil",
+        "icon": "img/ingredients/oil.svg",
+        "amount": "1 tbsp"
+      },
+      {
+        "item": "Sesame oil",
+        "icon": "img/ingredients/sesame-oil.svg",
+        "amount": "1 tsp"
+      },
+      {
+        "item": "Salt and black pepper",
+        "icon": "img/ingredients/salt.svg",
+        "amount": "a pinch of each"
+      }
+    ],
+    "optional": [
+      {
+        "item": "Onion",
+        "icon": "img/ingredients/onion.svg",
+        "amount": "1/2",
+        "note": "Diced small."
+      },
+      {
+        "item": "Butter",
+        "icon": "img/ingredients/butter.svg",
+        "amount": "5 g"
+      },
+      {
+        "item": "Nori",
+        "icon": "img/ingredients/nori.svg",
+        "amount": "1 sheet",
+        "note": "Snipped into strips for the top."
+      },
+      {
+        "item": "Sesame seeds",
+        "icon": "img/ingredients/sesame-seeds.svg",
+        "amount": "1 tsp"
+      },
+      {
+        "item": "Spring onion",
+        "icon": "img/ingredients/spring-onion.svg",
+        "amount": "1 stalk"
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "Frying pan (about 24 cm)",
+      "icon": "img/tools/pan.svg",
+      "required": true
+    },
+    {
+      "name": "Small frying pan",
+      "icon": "img/tools/pan.svg",
+      "required": false,
+      "note": "For the eggs. The main pan, wiped out, does the job too."
+    },
+    {
+      "name": "Kitchen scissors",
+      "icon": "img/tools/scissors.svg",
+      "required": true,
+      "note": "Kimchi is easier to snip than to chop."
+    },
+    {
+      "name": "Knife",
+      "icon": "img/tools/knife.svg",
+      "required": true
+    },
+    {
+      "name": "Cutting board",
+      "icon": "img/tools/cutting-board.svg",
+      "required": true
+    },
+    {
+      "name": "Spatula",
+      "icon": "img/tools/spatula.svg",
+      "required": true
+    },
+    {
+      "name": "Bowl",
+      "icon": "img/tools/bowl.svg",
+      "required": true
+    },
+    {
+      "name": "Plate",
+      "icon": "img/tools/plate.svg",
+      "required": true
+    }
+  ],
+  "steps": [
+    {
+      "title": "Cook the rice ahead",
+      "icons": [
+        "img/ingredients/rice.svg"
+      ],
+      "points": [
+        "Cook the rice the day before and chill it uncovered.",
+        "Break it up with wet hands before you start.",
+        "Cold dry grains are the whole difference between fried rice and wet rice."
+      ]
+    },
+    {
+      "title": "Snip the kimchi",
+      "icons": [
+        "img/ingredients/kimchi.svg",
+        "img/tools/scissors.svg",
+        "img/tools/bowl.svg"
+      ],
+      "points": [
+        "Squeeze the kimchi over a bowl and keep every drop of the juice.",
+        "Snip it into pieces about 2 cm.",
+        "The juice goes in later. It carries most of the sourness."
+      ]
+    },
+    {
+      "title": "Cut the pork",
+      "icons": [
+        "img/ingredients/pork.svg",
+        "img/tools/knife.svg",
+        "img/tools/cutting-board.svg"
+      ],
+      "points": [
+        "Cut the pork belly into 2 cm pieces.",
+        "Season it with the pinch of salt and pepper."
+      ]
+    },
+    {
+      "title": "Render the pork",
+      "icons": [
+        "img/ingredients/pork.svg",
+        "img/ingredients/oil.svg",
+        "img/tools/pan.svg",
+        "img/tools/spatula.svg"
+      ],
+      "points": [
+        "Put the pork in the pan with the oil over medium heat.",
+        "Cook for 4 minutes, until the fat has run and the edges are browned.",
+        "Leave the fat in the pan. The kimchi cooks in it."
+      ]
+    },
+    {
+      "title": "Fry the kimchi",
+      "icons": [
+        "img/ingredients/kimchi.svg",
+        "img/ingredients/onion.svg",
+        "img/tools/pan.svg",
+        "img/tools/spatula.svg"
+      ],
+      "points": [
+        "Add the kimchi, and the onion if you are using it.",
+        "Fry for 4 minutes over medium heat, until the edges darken and it smells sweet rather than sharp.",
+        "This step is where raw sourness turns into flavor. Do not cut it short."
+      ]
+    },
+    {
+      "title": "Build the paste",
+      "icons": [
+        "img/ingredients/gochujang.svg",
+        "img/ingredients/sugar.svg",
+        "img/ingredients/soy-sauce.svg",
+        "img/ingredients/kimchi.svg",
+        "img/tools/pan.svg"
+      ],
+      "points": [
+        "Stir in the gochujang, sugar and soy sauce.",
+        "Pour in the kimchi juice and let it cook down for 30 seconds.",
+        "The pan should look glossy, not wet."
+      ]
+    },
+    {
+      "title": "Add the rice",
+      "icons": [
+        "img/ingredients/rice.svg",
+        "img/ingredients/butter.svg",
+        "img/tools/pan.svg",
+        "img/tools/spatula.svg"
+      ],
+      "points": [
+        "Tip the rice in and press it into the paste with the back of the spatula.",
+        "Toss and press for 3 minutes, until every grain has gone red.",
+        "Add the butter now if you want the edges softer."
+      ]
+    },
+    {
+      "title": "Fry the eggs",
+      "icons": [
+        "img/ingredients/egg.svg",
+        "img/ingredients/oil.svg",
+        "img/tools/pan.svg"
+      ],
+      "points": [
+        "In the second pan, fry the eggs in a little oil over medium-high heat.",
+        "Leave them alone until the whites are set and the edges are lacy and brown.",
+        "The yolk stays runny. It is the sauce."
+      ]
+    },
+    {
+      "title": "Plate and top",
+      "icons": [
+        "img/ingredients/sesame-oil.svg",
+        "img/ingredients/nori.svg",
+        "img/ingredients/sesame-seeds.svg",
+        "img/ingredients/spring-onion.svg",
+        "img/tools/plate.svg",
+        "img/tools/bowl.svg"
+      ],
+      "points": [
+        "Pack the rice into a bowl and turn it out onto each plate as a dome.",
+        "Trickle the sesame oil over and scatter the nori, sesame and spring onion.",
+        "Sit the fried egg on top and break it at the table."
+      ]
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "It came out soggy",
+      "solution": "The kimchi juice went in with fresh rice, or all at once. Use day-old rice, and let the juice cook down for 30 seconds before the rice goes in."
+    },
+    {
+      "problem": "It tastes sharp and raw",
+      "solution": "The kimchi was not fried long enough. Four minutes over medium heat is what turns the sourness sweet. The smell tells you when it has turned."
+    },
+    {
+      "problem": "It is too sour",
+      "solution": "Very old kimchi. Add another teaspoon of sugar, or a small knob of butter. Both round the edge off without making it sweet."
+    },
+    {
+      "problem": "The rice clumped",
+      "solution": "It went in cold and unbroken. Loosen it with wet hands first, and press it into the pan rather than stirring it."
+    },
+    {
+      "problem": "It tastes flat",
+      "solution": "Fresh kimchi, or not enough of it. This dish is 200 g of kimchi to 350 g of rice. Gochujang adds color and body, not sourness, so it will not rescue mild kimchi."
+    },
+    {
+      "problem": "No pork belly",
+      "solution": "Bacon works and needs no extra oil. Canned tuna, drained, goes in with the rice instead of at the start. Without any of it, add a teaspoon more sesame oil at the end."
+    },
+    {
+      "problem": "No gochujang",
+      "solution": "Leave it out and add a teaspoon of soy sauce. The kimchi is already carrying the chili. The dish loses some color and none of its heat."
+    }
+  ]
+}

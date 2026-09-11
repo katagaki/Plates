@@ -40,7 +40,10 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
 - `PlatesActivity` is the widget extension holding the Live Activity, bundle identifier
   `com.tsubuzaki.Plates.Seasoning`. The app embeds it and declares `NSSupportsLiveActivities`.
 - `Plates/SampleRecipes` holds the recipes bundled with the app for the "Add Sample Recipes"
-  menu item.
+  menu item. Recipe text is not looked up in the string catalog, so each sample is written out
+  once per language in its own `.lproj` folder, `en-US.lproj` and `ja.lproj`, under the same
+  file name and the same `id`. `addSampleRecipes` copies the reader's language only, and the
+  shared `id` means switching languages does not add a second copy of a recipe already saved.
 - `Plates` also holds `Info.plist` and `Plates.entitlements`. They sit in the synchronized
   group, so the target lists them as membership exceptions to keep them out of the bundle's
   resources.

@@ -1,0 +1,246 @@
+{
+  "id": "garlic-fried-rice",
+  "title": "ガーリックライス",
+  "time": "25分",
+  "serves": "1",
+  "tried": true,
+  "ingredients": {
+    "supermarket": [
+      {
+        "item": "にんにく",
+        "icon": "img/ingredients/garlic.svg",
+        "amount": "5かけ",
+        "note": "2かけは薄切りにしてチップに、3かけはみじん切りにします。"
+      },
+      {
+        "item": "バター",
+        "icon": "img/ingredients/butter.svg",
+        "amount": "10g"
+      }
+    ],
+    "general": [
+      {
+        "item": "ごはん",
+        "icon": "img/ingredients/rice.svg",
+        "amount": "250g",
+        "note": "炊きたての熱いもの。これは冷やごはんではなく熱いごはんで作ります。"
+      },
+      {
+        "item": "サラダ油",
+        "icon": "img/ingredients/oil.svg",
+        "amount": "大さじ3"
+      },
+      {
+        "item": "しょうゆ",
+        "icon": "img/ingredients/soy-sauce.svg",
+        "amount": "小さじ2"
+      },
+      {
+        "item": "塩",
+        "icon": "img/ingredients/salt.svg",
+        "amount": "ひとつまみ"
+      },
+      {
+        "item": "黒こしょう",
+        "icon": "img/ingredients/pepper.svg",
+        "amount": "適量"
+      }
+    ],
+    "optional": [
+      {
+        "item": "長ねぎ",
+        "icon": "img/ingredients/spring-onion.svg",
+        "amount": "1本"
+      },
+      {
+        "item": "パセリ",
+        "icon": "img/ingredients/parsley.svg",
+        "amount": "少々",
+        "note": "細かく刻んで仕上げにのせます。"
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "フライパン(24cmほど)",
+      "icon": "img/tools/pan.svg",
+      "required": true
+    },
+    {
+      "name": "炊飯器",
+      "icon": "img/tools/rice-cooker.svg",
+      "required": false
+    },
+    {
+      "name": "包丁",
+      "icon": "img/tools/knife.svg",
+      "required": true
+    },
+    {
+      "name": "まな板",
+      "icon": "img/tools/cutting-board.svg",
+      "required": true
+    },
+    {
+      "name": "穴あきお玉",
+      "icon": "img/tools/slotted-spoon.svg",
+      "required": true,
+      "note": "チップを油から引き上げる分です。"
+    },
+    {
+      "name": "キッチンペーパー",
+      "icon": "img/tools/paper-towel.svg",
+      "required": true
+    },
+    {
+      "name": "フライ返し",
+      "icon": "img/tools/spatula.svg",
+      "required": true
+    },
+    {
+      "name": "皿",
+      "icon": "img/tools/plate.svg",
+      "required": true
+    }
+  ],
+  "steps": [
+    {
+      "title": "ごはんを炊く",
+      "icons": [
+        "img/ingredients/rice.svg",
+        "img/tools/rice-cooker.svg"
+      ],
+      "points": [
+        "にんにくの支度が終わる頃に炊き上がるよう、先に炊き始めます。",
+        "熱いごはんは脂を吸ってほぐれます。冷たいごはんはバターの中でかたまります。",
+        "フライパンに入れる直前までふたを開けません。"
+      ]
+    },
+    {
+      "title": "にんにくを切る",
+      "icons": [
+        "img/ingredients/garlic.svg",
+        "img/tools/knife.svg",
+        "img/tools/cutting-board.svg"
+      ],
+      "points": [
+        "2かけをできるだけ薄く切ります。",
+        "残りの3かけはみじん切りにします。",
+        "入れる時期も火を通す時間も違うので、二つは分けておきます。"
+      ]
+    },
+    {
+      "title": "チップを揚げる",
+      "icons": [
+        "img/ingredients/garlic.svg",
+        "img/ingredients/oil.svg",
+        "img/tools/pan.svg",
+        "img/tools/slotted-spoon.svg"
+      ],
+      "points": [
+        "冷たいフライパンに薄切りと油を入れ、それから弱火にかけます。",
+        "静かに泡が立つ状態で4分から5分。",
+        "冷たいところから始めるので、ふちが色づく前に中まで火が通ります。"
+      ]
+    },
+    {
+      "title": "チップを引き上げる",
+      "icons": [
+        "img/ingredients/garlic.svg",
+        "img/ingredients/salt.svg",
+        "img/tools/slotted-spoon.svg",
+        "img/tools/paper-towel.svg"
+      ],
+      "points": [
+        "濃い狐色ではなく、薄い狐色になった時点で取り出します。",
+        "キッチンペーパーに広げ、塩をふります。",
+        "冷めながら色が濃くなり、かりっとします。鍋の中で色を待つと苦くなります。"
+      ]
+    },
+    {
+      "title": "みじん切りを炒める",
+      "icons": [
+        "img/ingredients/garlic.svg",
+        "img/tools/pan.svg",
+        "img/tools/spatula.svg"
+      ],
+      "points": [
+        "同じ油に、弱火のままみじん切りを入れます。",
+        "甘い香りが立つまで30秒ほど混ぜます。",
+        "色をつけません。こちらは食感ではなく、ごはん全体の香りのためです。"
+      ]
+    },
+    {
+      "title": "ごはんを炒める",
+      "icons": [
+        "img/ingredients/rice.svg",
+        "img/tools/pan.svg",
+        "img/tools/spatula.svg"
+      ],
+      "points": [
+        "中強火にし、熱いごはんを入れます。",
+        "押し付けて5つ数え、返します。3分ほど繰り返します。",
+        "焦がすのではなく、粒につやが出てほぐれた状態を目指します。"
+      ]
+    },
+    {
+      "title": "バターと調味料を入れる",
+      "icons": [
+        "img/ingredients/butter.svg",
+        "img/ingredients/soy-sauce.svg",
+        "img/ingredients/salt.svg",
+        "img/ingredients/pepper.svg",
+        "img/tools/pan.svg"
+      ],
+      "points": [
+        "バターを落とし、溶けきるまで混ぜ合わせます。",
+        "しょうゆはフライパンのふちに沿わせて回し入れます。",
+        "塩と黒こしょうをしっかりきかせます。"
+      ]
+    },
+    {
+      "title": "盛って仕上げる",
+      "icons": [
+        "img/ingredients/garlic.svg",
+        "img/ingredients/spring-onion.svg",
+        "img/ingredients/parsley.svg",
+        "img/tools/plate.svg"
+      ],
+      "points": [
+        "温めた皿に山の形に盛ります。",
+        "にんにくチップは最後に上から散らし、かりっとした状態を保ちます。",
+        "長ねぎかパセリをのせて仕上げます。"
+      ]
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "にんにくが苦い",
+      "solution": "色をつけすぎています。にんにくは最後の数秒で甘みから苦みに変わります。薄切りは冷たい油から弱火で始め、薄い狐色で引き上げます。"
+    },
+    {
+      "problem": "チップがしんなりした",
+      "solution": "皿に直接上げたか、熱いうちに重なっていました。キッチンペーパーの上に一枚ずつ広げ、ごはんができるまで触らずに置きます。"
+    },
+    {
+      "problem": "ごはんが重くて脂っこい",
+      "solution": "揚げ油がほとんど残ったままです。チップを引き上げたら、大さじ1を残して油を捨てます。残りは最後のバターで足ります。"
+    },
+    {
+      "problem": "にんにくの香りが弱い",
+      "solution": "みじん切りに色がついて香りが飛んだか、量が足りません。一人分に5かけが適量です。みじん切りは30秒までにします。"
+    },
+    {
+      "problem": "ごはんがかたまる",
+      "solution": "冷蔵庫から出したごはんです。これは炊きたてで作ります。冷やごはんしかないときは、濡らした手でほぐし、温めるときに水を少し足します。"
+    },
+    {
+      "problem": "バターが焦げた",
+      "solution": "強火のまま入れています。バターは最後に入れて溶かすだけです。勢いよく泡立ったら、数秒フライパンを火から外します。"
+    },
+    {
+      "problem": "ステーキの付け合わせにしたい",
+      "solution": "肉を焼いたフライパンを洗わずにそのまま使い、油を半分にします。底に残った焼き目が味を補います。"
+    }
+  ]
+}

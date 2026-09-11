@@ -1,0 +1,268 @@
+{
+  "id": "spaghetti-carbonara",
+  "title": "スパゲッティ・カルボナーラ",
+  "time": "25分",
+  "serves": "2",
+  "tried": true,
+  "ingredients": {
+    "supermarket": [
+      {
+        "item": "グアンチャーレ",
+        "icon": "img/ingredients/guanciale.svg",
+        "amount": "100g",
+        "note": "豚ほほ肉の塩漬けです。いちばん近い代わりはパンチェッタです。"
+      },
+      {
+        "item": "卵",
+        "icon": "img/ingredients/egg.svg",
+        "amount": "卵黄4個と全卵1個"
+      },
+      {
+        "item": "ペコリーノ・ロマーノ",
+        "icon": "img/ingredients/pecorino.svg",
+        "amount": "60g",
+        "note": "細かくおろします。"
+      }
+    ],
+    "general": [
+      {
+        "item": "スパゲッティ",
+        "icon": "img/ingredients/spaghetti.svg",
+        "amount": "200g"
+      },
+      {
+        "item": "水",
+        "icon": "img/ingredients/water.svg",
+        "amount": "2リットル"
+      },
+      {
+        "item": "塩",
+        "icon": "img/ingredients/salt.svg",
+        "amount": "大さじ1",
+        "note": "他のパスタより控えめです。豚肉もチーズも塩気を持っています。"
+      },
+      {
+        "item": "黒こしょう",
+        "icon": "img/ingredients/pepper.svg",
+        "amount": "たっぷり",
+        "note": "粗びき。食卓でも足します。"
+      }
+    ],
+    "optional": [
+      {
+        "item": "パンチェッタ",
+        "icon": "img/ingredients/pancetta.svg",
+        "amount": "100g",
+        "note": "グアンチャーレの代わりに。"
+      },
+      {
+        "item": "パルメザン",
+        "icon": "img/ingredients/parmesan.svg",
+        "amount": "30g",
+        "note": "ペコリーノの半量と置き換えると、やわらかい味になります。"
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "大きい鍋",
+      "icon": "img/tools/pot.svg",
+      "required": true,
+      "note": "2リットルをしっかり沸かせる大きさ。"
+    },
+    {
+      "name": "フライパン(24cmほど)",
+      "icon": "img/tools/pan.svg",
+      "required": true
+    },
+    {
+      "name": "おろし器",
+      "icon": "img/tools/grater.svg",
+      "required": true,
+      "note": "細かい面を使います。"
+    },
+    {
+      "name": "ボウル",
+      "icon": "img/tools/bowl.svg",
+      "required": true,
+      "note": "広口のもの。温めておけるとなおよいです。"
+    },
+    {
+      "name": "泡立て器",
+      "icon": "img/tools/whisk.svg",
+      "required": true
+    },
+    {
+      "name": "トング",
+      "icon": "img/tools/tongs.svg",
+      "required": true
+    },
+    {
+      "name": "お玉",
+      "icon": "img/tools/ladle.svg",
+      "required": true,
+      "note": "ゆで汁用です。ゆで汁もソースの一部です。"
+    },
+    {
+      "name": "包丁",
+      "icon": "img/tools/knife.svg",
+      "required": true
+    },
+    {
+      "name": "まな板",
+      "icon": "img/tools/cutting-board.svg",
+      "required": true
+    },
+    {
+      "name": "皿",
+      "icon": "img/tools/plate.svg",
+      "required": true
+    }
+  ],
+  "steps": [
+    {
+      "title": "チーズをおろす",
+      "icons": [
+        "img/ingredients/pecorino.svg",
+        "img/tools/grater.svg",
+        "img/tools/bowl.svg"
+      ],
+      "points": [
+        "ペコリーノをできるだけ細かくおろします。",
+        "粗いと溶けきらず、ソースがざらつきます。",
+        "仕上げ用に少し取り分けておきます。"
+      ]
+    },
+    {
+      "title": "グアンチャーレを切る",
+      "icons": [
+        "img/ingredients/guanciale.svg",
+        "img/tools/knife.svg",
+        "img/tools/cutting-board.svg"
+      ],
+      "points": [
+        "皮の部分を切り落とします。スープに使えるので取っておきます。",
+        "残りを1cmほどの拍子木に切ります。",
+        "厚いと中がやわらかく、ふちがかりっとします。それが狙いです。"
+      ]
+    },
+    {
+      "title": "湯を沸かす",
+      "icons": [
+        "img/ingredients/water.svg",
+        "img/ingredients/salt.svg",
+        "img/tools/pot.svg"
+      ],
+      "points": [
+        "2リットルの水をしっかり沸かし、塩を入れます。",
+        "味をみます。海水よりはっきり薄いくらいです。",
+        "この料理は他のすべてに塩気があります。"
+      ]
+    },
+    {
+      "title": "グアンチャーレを焼く",
+      "icons": [
+        "img/ingredients/guanciale.svg",
+        "img/tools/pan.svg"
+      ],
+      "points": [
+        "冷たいフライパンに入れ、弱めの中火にかけます。",
+        "脂が透明になり、身が色づくまで6分から8分。",
+        "トングで身だけを取り出し、脂は一滴残らず残します。"
+      ]
+    },
+    {
+      "title": "ソースを作る",
+      "icons": [
+        "img/ingredients/egg.svg",
+        "img/ingredients/pecorino.svg",
+        "img/ingredients/pepper.svg",
+        "img/tools/bowl.svg",
+        "img/tools/whisk.svg",
+        "img/tools/ladle.svg"
+      ],
+      "points": [
+        "卵黄と全卵、ペコリーノ、黒こしょうをたっぷり入れ、もったりするまで混ぜます。",
+        "沸いたゆで汁をお玉1杯、混ぜながら少しずつ注いでのばします。",
+        "ここで温めておくので、あとで固まりません。"
+      ]
+    },
+    {
+      "title": "スパゲッティをゆでる",
+      "icons": [
+        "img/ingredients/spaghetti.svg",
+        "img/tools/pot.svg",
+        "img/tools/tongs.svg"
+      ],
+      "points": [
+        "スパゲッティを入れ、最初の1分は混ぜます。",
+        "袋の表示より1分短くゆでます。",
+        "ゆで汁をマグカップ1杯分、先に取り分けておきます。"
+      ]
+    },
+    {
+      "title": "あえる",
+      "icons": [
+        "img/ingredients/spaghetti.svg",
+        "img/ingredients/egg.svg",
+        "img/tools/pan.svg",
+        "img/tools/tongs.svg",
+        "img/tools/ladle.svg"
+      ],
+      "points": [
+        "火を止めた脂のフライパンに、パスタを直接移してあえます。",
+        "卵のソースを注ぎ、あえ続けます。30秒ほどでとろみがつきます。",
+        "取り分けたゆで汁を少しずつ足し、麺にからんでゆっくり流れる濃さにします。"
+      ]
+    },
+    {
+      "title": "盛りつける",
+      "icons": [
+        "img/ingredients/guanciale.svg",
+        "img/ingredients/pecorino.svg",
+        "img/ingredients/pepper.svg",
+        "img/tools/plate.svg",
+        "img/tools/tongs.svg"
+      ],
+      "points": [
+        "温めた皿に巻いて盛ります。",
+        "グアンチャーレを散らし、残しておいたペコリーノと黒こしょうで仕上げます。",
+        "すぐに出します。カルボナーラは置くほど締まります。"
+      ]
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "卵が固まってぼろぼろになった",
+      "solution": "フライパンが火にかかったままだったか、卵が冷たいまま入りました。火から外し、卵液は熱いゆで汁でのばしておきます。余熱だけでとろみはつきます。"
+    },
+    {
+      "problem": "ソースがゆるい",
+      "solution": "ゆで汁が多いか、チーズが足りません。いちばん弱い火に10秒から15秒だけ戻し、あえ続けるとまとまります。"
+    },
+    {
+      "problem": "ソースがざらつく",
+      "solution": "チーズが粗いか、でんぷんの入った粉チーズです。自分で細かくおろし、熱いゆで汁でペースト状にのばしてからパスタに合わせます。"
+    },
+    {
+      "problem": "盛ったあとに固まった",
+      "solution": "ペコリーノは置くあいだも水分を吸い続けます。熱い湯を大さじ1ほど足してあえ直します。皿を温めておくと進みが遅くなります。"
+    },
+    {
+      "problem": "塩辛い",
+      "solution": "ゆで汁の塩がいつもどおりの量です。ここでは2リットルに大さじ1で足ります。できてしまったら、湯を少し足して黒こしょうを挽くと角が取れます。"
+    },
+    {
+      "problem": "グアンチャーレがない",
+      "solution": "パンチェッタがいちばん近く、厚切りベーコンでも作れます。燻製の香りは付きます。どちらも脂が少ないので、油を小さじ1加えて焼き始めます。"
+    },
+    {
+      "problem": "ペコリーノがない",
+      "solution": "パルメザンだと、とがりの少ないやわらかい味になります。半々にするのが落としどころです。モッツァレラのように糸を引くチーズは向きません。"
+    },
+    {
+      "problem": "一人分で作りたい",
+      "solution": "湯以外をすべて半分にし、卵は卵黄2個だけにします。量が少ないと冷めやすいので、皿を温めておきます。"
+    }
+  ]
+}

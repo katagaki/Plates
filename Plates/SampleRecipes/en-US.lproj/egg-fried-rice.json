@@ -1,0 +1,232 @@
+{
+  "id": "egg-fried-rice",
+  "title": "Egg Fried Rice",
+  "time": "15 min",
+  "serves": "1",
+  "tried": true,
+  "ingredients": {
+    "supermarket": [
+      {
+        "item": "Eggs",
+        "icon": "img/ingredients/egg.svg",
+        "amount": "2"
+      },
+      {
+        "item": "Spring onion",
+        "icon": "img/ingredients/spring-onion.svg",
+        "amount": "2 stalks"
+      }
+    ],
+    "general": [
+      {
+        "item": "Cooked short-grain rice",
+        "icon": "img/ingredients/rice.svg",
+        "amount": "250 g",
+        "note": "Cooked the day before and chilled. Cold rice is what lets the grains separate."
+      },
+      {
+        "item": "Cooking oil",
+        "icon": "img/ingredients/oil.svg",
+        "amount": "2 tbsp"
+      },
+      {
+        "item": "Soy sauce",
+        "icon": "img/ingredients/soy-sauce.svg",
+        "amount": "2 tsp"
+      },
+      {
+        "item": "Salt",
+        "icon": "img/ingredients/salt.svg",
+        "amount": "1/3 tsp"
+      },
+      {
+        "item": "White pepper",
+        "icon": "img/ingredients/pepper.svg",
+        "amount": "to taste"
+      }
+    ],
+    "optional": [
+      {
+        "item": "Sesame oil",
+        "icon": "img/ingredients/sesame-oil.svg",
+        "amount": "1/2 tsp"
+      },
+      {
+        "item": "Shaoxing wine",
+        "icon": "img/ingredients/shaoxing-wine.svg",
+        "amount": "1 tsp"
+      },
+      {
+        "item": "Ham or char siu",
+        "icon": "img/ingredients/ham.svg",
+        "amount": "40 g",
+        "note": "Diced small, added with the rice."
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "Wok",
+      "icon": "img/tools/wok.svg",
+      "required": true,
+      "note": "A 24 cm frying pan works. It holds less heat, so cook one portion at a time and stir less."
+    },
+    {
+      "name": "Rice cooker",
+      "icon": "img/tools/rice-cooker.svg",
+      "required": false,
+      "note": "For the rice the day before. A pot with a lid does the same."
+    },
+    {
+      "name": "Wok spatula or ladle",
+      "icon": "img/tools/spatula.svg",
+      "required": true
+    },
+    {
+      "name": "Bowl",
+      "icon": "img/tools/bowl.svg",
+      "required": true
+    },
+    {
+      "name": "Knife",
+      "icon": "img/tools/knife.svg",
+      "required": true
+    },
+    {
+      "name": "Cutting board",
+      "icon": "img/tools/cutting-board.svg",
+      "required": true
+    },
+    {
+      "name": "Plate",
+      "icon": "img/tools/plate.svg",
+      "required": true
+    }
+  ],
+  "steps": [
+    {
+      "title": "Cook the rice ahead",
+      "icons": [
+        "img/ingredients/rice.svg",
+        "img/tools/rice-cooker.svg"
+      ],
+      "points": [
+        "Cook the rice the day before and spread it on a plate to cool.",
+        "Keep it uncovered in the fridge overnight so the surface dries.",
+        "In a hurry, spread hot rice thin and give it 20 minutes in the freezer."
+      ]
+    },
+    {
+      "title": "Prep everything",
+      "icons": [
+        "img/ingredients/egg.svg",
+        "img/ingredients/spring-onion.svg",
+        "img/ingredients/rice.svg",
+        "img/tools/knife.svg",
+        "img/tools/bowl.svg"
+      ],
+      "points": [
+        "Slice the spring onion thin, keeping the white and green apart.",
+        "Beat the eggs with a pinch of the salt.",
+        "Break the cold rice up with wet hands until no lumps are left."
+      ]
+    },
+    {
+      "title": "Heat the wok",
+      "icons": [
+        "img/ingredients/oil.svg",
+        "img/tools/wok.svg"
+      ],
+      "points": [
+        "Set the wok over the highest heat until a drop of water skates and vanishes.",
+        "Pour in the oil and swirl it up the sides.",
+        "This takes longer than you think, usually 2 minutes."
+      ]
+    },
+    {
+      "title": "Scramble the eggs",
+      "icons": [
+        "img/ingredients/egg.svg",
+        "img/tools/wok.svg",
+        "img/tools/spatula.svg"
+      ],
+      "points": [
+        "Pour the eggs into the center and leave them for 3 seconds.",
+        "Break them into large soft curds with the spatula.",
+        "Stop while they still look wet. They finish cooking in the rice."
+      ]
+    },
+    {
+      "title": "Add the rice",
+      "icons": [
+        "img/ingredients/rice.svg",
+        "img/tools/wok.svg",
+        "img/tools/spatula.svg"
+      ],
+      "points": [
+        "Tip the rice straight onto the half-set egg.",
+        "Press it flat with the back of the spatula, count to five, then flip and press again.",
+        "Repeat until every grain is coated and loose, about 3 minutes."
+      ]
+    },
+    {
+      "title": "Season the rice",
+      "icons": [
+        "img/ingredients/salt.svg",
+        "img/ingredients/pepper.svg",
+        "img/ingredients/soy-sauce.svg",
+        "img/ingredients/shaoxing-wine.svg",
+        "img/tools/wok.svg"
+      ],
+      "points": [
+        "Scatter the rest of the salt and the white pepper from a height so it lands evenly.",
+        "Pour the soy sauce down the hot side of the wok, not onto the rice.",
+        "It hisses and goes in as smoke and smell rather than as a wet patch."
+      ]
+    },
+    {
+      "title": "Finish and plate",
+      "icons": [
+        "img/ingredients/spring-onion.svg",
+        "img/ingredients/sesame-oil.svg",
+        "img/tools/wok.svg",
+        "img/tools/plate.svg"
+      ],
+      "points": [
+        "Toss the spring onion through and take the wok off the heat.",
+        "Add the sesame oil now, off the heat, so it keeps its smell.",
+        "Pack it into a bowl and turn it out onto a plate as a mound."
+      ]
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "The rice is sticky and clumped",
+      "solution": "It was too fresh or too wet. Day-old chilled rice has a dry surface and comes apart under the spatula. Fresh rice steams in the wok and glues itself together."
+    },
+    {
+      "problem": "The egg is rubbery",
+      "solution": "It was cooked through before the rice went in. Take it to soft curds only, and remember the rice keeps cooking it for another 3 minutes."
+    },
+    {
+      "problem": "There are dark soggy patches",
+      "solution": "The soy sauce went straight onto the rice. Pour it down the side of the hot wok so most of it flashes off as steam."
+    },
+    {
+      "problem": "It tastes flat",
+      "solution": "Usually salt, not soy sauce. Salt seasons the grains, soy sauce seasons the smell. Add a pinch of salt and a pinch of white pepper and toss again."
+    },
+    {
+      "problem": "The wok never gets hot enough",
+      "solution": "Home stoves lose their heat the moment food lands. Cook one portion at a time, let the wok recover for 10 seconds between additions, and resist stirring constantly."
+    },
+    {
+      "problem": "The rice sticks to the wok",
+      "solution": "The wok was not hot enough when the oil went in, or there was too little of it. Two tablespoons for one portion sounds like a lot and is the right amount."
+    },
+    {
+      "problem": "Want it more filling",
+      "solution": "Dice 40 g of ham or char siu and add it with the rice. Anything wetter than that, such as fresh vegetables, waters the rice down."
+    }
+  ]
+}
