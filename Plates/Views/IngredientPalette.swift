@@ -3,7 +3,9 @@ import UIKit
 
 /// The colours a recipe is drawn in, taken from the ingredient icons themselves. Each icon is
 /// read down to the one colour it reads as, so a tomato is red and spinach is green without a
-/// colour ever being written down by hand.
+/// colour ever being written down by hand. The cache below is shared, and the cards that read
+/// it are drawn on the main actor, so the whole of it is held there.
+@MainActor
 enum IngredientPalette {
     /// Icon colours, kept for as long as the app runs so a scrolling grid measures each icon
     /// once.
