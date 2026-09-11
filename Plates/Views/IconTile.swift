@@ -75,7 +75,8 @@ nonisolated struct TileInfo: Identifiable, Hashable {
         note = tool.note
     }
 
-    /// What the card has no room for, shown in an alert when the card is tapped.
+    /// What the card has no room for, shown in an alert when the card is tapped. The card cuts
+    /// a long name and a long amount short, so the alert is where both are read in full.
     var message: String {
         [detail, note].compactMap { $0 }.filter { !$0.isEmpty }.joined(separator: "\n\n")
     }
@@ -101,8 +102,9 @@ struct IconTile: View {
             }
             Spacer(minLength: 0)
         }
-        .padding(8)
-        .frame(maxWidth: .infinity, minHeight: 80, maxHeight: 80, alignment: .leading)
+        .padding(.horizontal, 8)
+        .padding(.vertical, 4)
+        .frame(maxWidth: .infinity, minHeight: 68, maxHeight: 68, alignment: .leading)
         .cardBackground()
     }
 }

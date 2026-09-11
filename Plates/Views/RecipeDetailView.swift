@@ -51,7 +51,10 @@ struct RecipeDetailView: View {
         ) { _ in
             Button("Shared.Done", role: .cancel) {}
         } message: { info in
-            Text(verbatim: info.message)
+            // A tool with no note has nothing beyond its name, which the alert already titles.
+            if !info.message.isEmpty {
+                Text(verbatim: info.message)
+            }
         }
     }
 
@@ -100,7 +103,7 @@ struct RecipeDetailView: View {
                     LazyHStack(spacing: 12) {
                         ForEach(items) { item in
                             Button {
-                                if item.message.isEmpty == false { tapped = item }
+                                tapped = item
                             } label: {
                                 IconTile(item: item)
                             }
