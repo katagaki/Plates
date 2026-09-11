@@ -11,7 +11,7 @@ struct CatalogPickerView: View {
         let icons: [String]
     }
 
-    let title: LocalizedStringResource
+    var title: LocalizedStringResource
     let searchPrompt: LocalizedStringResource
     /// What the picked bar says while nothing is picked.
     let emptyLabel: LocalizedStringResource
@@ -214,6 +214,36 @@ extension CatalogPickerView {
             path: IconCatalog.ingredientPath,
             selection: selection
         )
+    }
+
+    /// The whole ingredient catalog in one picker, both shelves together, for editing the list
+    /// a recipe carries. The title says which of a recipe's lists is being picked into.
+    static func recipeIngredients(
+        title: LocalizedStringResource,
+        selection: Binding<[String]>
+    ) -> CatalogPickerView {
+        CatalogPickerView(
+            title: title,
+            searchPrompt: "Generate.Ingredients.Search",
+            emptyLabel: "Generate.Ingredients.Empty",
+            groups: { query in
+                IconCatalog.allCategories(matching: query).map {
+                    IconGroup(id: $0.category.rawValue, title: $0.category.title, icons: $0.icons)
+                }
+            },
+            path: IconCatalog.ingredientPath,
+            selection: selection
+        )
+    }
+
+    /// The tool catalog under a title of the caller's choosing, for the same reason.
+    static func recipeTools(
+        title: LocalizedStringResource,
+        selection: Binding<[String]>
+    ) -> CatalogPickerView {
+        var picker = tools(selection: selection)
+        picker.title = title
+        return picker
     }
 
     /// The tool catalog, in the groups a kitchen is laid out in.

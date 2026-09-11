@@ -33,7 +33,13 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
   pass works from a list that already exists. A pass runs on device first, and only a pass the
   on-device model rejects with `contextSizeExceeded` is run again on
   `PrivateCloudComputeLanguageModel`. Keep passes small enough that the cloud stays a fallback.
-- `Plates/Views` holds the list, detail, and generation views.
+- `Plates/Views` holds the list, detail, generation, editing, and sharing views. The detail
+  view turns into the editor in place, so a recipe is read and written on the one screen, and
+  every edit is written straight to the file rather than kept until the editor is left. The
+  catalog picker the generation view browses is the same one the editor picks into, pointed at
+  one of the recipe's own lists. Sharing writes the recipe to the temporary folder as a
+  `.plate` file, which is its JSON, as a picture, or as letter sized pages whose text stays
+  text: the pages are packed block by block, each measured first, so nothing is cut in half.
 - `Shared` holds `GenerationActivityAttributes`, the one file both the app and the widget
   extension compile. The app localizes every string before it goes into the activity state, so
   the extension never looks a key up and carries no strings of its own.

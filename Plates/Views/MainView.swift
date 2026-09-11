@@ -27,7 +27,7 @@ struct MainView: View {
         NavigationStack {
             RecipesGridView(recipes: visibleRecipes, delete: store.delete)
                 .navigationTitle("Recipe.List.Title")
-                .navigationDestination(for: Recipe.self) { RecipeDetailView(recipe: $0) }
+                .navigationDestination(for: Recipe.self) { RecipeDetailView(recipe: $0, store: store) }
                 .searchable(text: $search, prompt: Text("Recipe.List.Search.Prompt"))
                 .overlay {
                     if store.recipes.isEmpty {

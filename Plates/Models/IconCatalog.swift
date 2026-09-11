@@ -595,6 +595,12 @@ nonisolated enum IconCatalog {
         }
     }
 
+    /// The same search across both shelves, for a picker that browses the whole ingredient
+    /// catalog at once rather than one half of it.
+    static func allCategories(matching query: String) -> [(category: IngredientCategory, icons: [String])] {
+        IngredientShelf.allCases.flatMap { categories(matching: query, on: $0) }
+    }
+
     /// The shelf an ingredient asset is picked from, so a selection can be split the way the
     /// pickers are.
     static func shelf(of asset: String) -> IngredientShelf {

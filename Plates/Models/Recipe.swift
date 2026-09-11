@@ -176,3 +176,111 @@ extension Step {
             .filter { $0.count > 2 && !ignored.contains($0) }
     }
 }
+
+extension Recipe {
+    /// The serving count written in `serves`, read the way a time is read: a range keeps its
+    /// later figure, so "1 to 2" serves two.
+    static func servings(in serves: String) -> Double? {
+        let characters = Array(serves)
+        var last: Double?
+        var index = 0
+        while index < characters.count {
+            guard characters[index].isNumber else {
+                index += 1
+                continue
+            }
+            let figure = number(in: characters, from: index)
+            last = figure.value
+            index = figure.end
+        }
+        return last.flatMap { $0 > 0 ? $0 : nil }
+    }
+
+    /// Every ingredient amount multiplied, for when a recipe is written up or down a size.
+    mutating func scaleAmounts(by factor: Double) {
+        func scale(_ list: [Ingredient]?) -> [Ingredient]? {
+            list?.map { entry in
+                var entry = entry
+                entry.amount = Recipe.scaled(entry.amount, by: factor)
+                return entry
+            }
+        }
+        ingredients.supermarket = scale(ingredients.supermarket)
+        ingredients.general = scale(ingredients.general)
+        ingredients.optional = scale(ingredients.optional)
+    }
+
+    /// One written amount multiplied: "200 g" doubles to "400 g", "1/2 tsp" to "1 tsp". Every
+    /// figure in the text is scaled, so "2 to 3 tbsp" keeps both ends of its range, and the
+    /// units it is written with are left as they stand.
+    static func scaled(_ amount: String, by factor: Double) -> String {
+        guard factor > 0, abs(factor - 1) > 0.0001 else { return amount }
+        let characters = Array(amount)
+        var result = ""
+        var index = 0
+        while index < characters.count {
+            guard characters[index].isNumber else {
+                result.append(characters[index])
+                index += 1
+                continue
+            }
+            let figure = number(in: characters, from: index)
+            result.append(format(figure.value * factor))
+            index = figure.end
+        }
+        return result
+    }
+
+    /// The figure written at `start` and where it ends. A figure is a whole number or a
+    /// decimal, a fraction such as "1/2", or the two together as "1 1/2".
+    private static func number(in characters: [Character], from start: Int) -> (value: Double, end: Int) {
+        var index = start
+
+        func digits() -> Double? {
+            let begin = index
+            while index < characters.count, characters[index].isNumber { index += 1 }
+            if index + 1 < characters.count, characters[index] == ".", characters[index + 1].isNumber {
+                index += 1
+                while index < characters.count, characters[index].isNumber { index += 1 }
+            }
+            guard index > begin else { return nil }
+            return Double(String(characters[begin..<index]))
+        }
+
+        guard var value = digits() else { return (0, start + 1) }
+        if index < characters.count, characters[index] == "/" {
+            let slash = index
+            index += 1
+            if let denominator = digits(), denominator != 0 {
+                value /= denominator
+            } else {
+                index = slash
+            }
+        } else if index + 1 < characters.count, characters[index] == " ", characters[index + 1].isNumber {
+            let space = index
+            let whole = value
+            index += 1
+            if let numerator = digits(), index < characters.count, characters[index] == "/" {
+                index += 1
+                if let denominator = digits(), denominator != 0 {
+                    value = whole + numerator / denominator
+                } else {
+                    index = space
+                }
+            } else {
+                index = space
+            }
+        }
+        return (value, index)
+    }
+
+    /// A scaled figure written back out: whole where it lands on one, and cut to two places
+    /// where it does not, so a third of a teaspoon does not run to six decimals.
+    private static func format(_ value: Double) -> String {
+        let rounded = (value * 100).rounded() / 100
+        if abs(rounded.rounded() - rounded) < 0.001 {
+            return String(Int(rounded.rounded()))
+        }
+        return rounded.formatted(.number.precision(.fractionLength(0...2)))
+    }
+}
