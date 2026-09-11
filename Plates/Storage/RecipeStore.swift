@@ -19,11 +19,6 @@ final class RecipeStore {
     private static let locationKey = "storageLocation"
 
     private let decoder = JSONDecoder()
-    private let encoder: JSONEncoder = {
-        let encoder = JSONEncoder()
-        encoder.outputFormatting = [.prettyPrinted, .withoutEscapingSlashes]
-        return encoder
-    }()
 
     init() {
         let stored = UserDefaults.standard.string(forKey: Self.locationKey)
@@ -72,8 +67,7 @@ final class RecipeStore {
         }
         do {
             try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
-            let data = try encoder.encode(recipe)
-            try data.write(to: url(for: recipe.id, in: directory), options: .atomic)
+            try recipe.fileContents().write(to: url(for: recipe.id, in: directory), options: .atomic)
             load()
             return true
         } catch {

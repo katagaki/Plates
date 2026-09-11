@@ -54,10 +54,8 @@ enum RecipeExport {
     /// The recipe as the app stores it. A `.plate` file is the recipe's JSON under a name the
     /// app recognises.
     static func plate(_ recipe: Recipe) throws -> URL {
-        let encoder = JSONEncoder()
-        encoder.outputFormatting = [.prettyPrinted, .withoutEscapingSlashes]
         let url = destination(for: recipe, extension: "plate")
-        try encoder.encode(recipe).write(to: url, options: .atomic)
+        try recipe.fileContents().write(to: url, options: .atomic)
         return url
     }
 

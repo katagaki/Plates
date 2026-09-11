@@ -22,9 +22,11 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
 
 ## Layout
 
-- `Plates/Models` holds `Recipe` and the icon catalog. Property order in the `Codable` types
-  is the key order written back to disk, so keep it matching the schema. A step carries a
-  title, the icons it works with, and its points. It has no hint or image, which is where the
+- `Plates/Models` holds `Recipe` and the icon catalog. Files are read through `Decodable` and
+  written by hand in `RecipeJSON`, because `JSONEncoder` hands its keys back in whatever order
+  its own storage holds them. Property order is the key order written back to disk, so keep the
+  properties and `Recipe.json` matching the schema and each other. A step carries a title, the
+  icons it works with, and its points. It has no hint or image, which is where the
   file shape parts from the site's.
 - `Plates/Storage` holds the storage location and the file-backed `RecipeStore`.
 - `Plates/Intelligence` holds the Apple Intelligence `@Generable` types and the generator. The

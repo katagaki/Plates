@@ -1,8 +1,9 @@
 import Foundation
 
 /// One recipe, shaped exactly like the JSON files in the One-Pan Food site's `recipes` folder.
-/// Property order matters: it is the key order written back out to disk.
-nonisolated struct Recipe: Codable, Identifiable, Hashable {
+/// Property order matters: it is the key order written back out to disk, which `Recipe.json`
+/// follows. Files are read here and written there, so nothing else has to agree on the order.
+nonisolated struct Recipe: Decodable, Identifiable, Hashable {
     var id: String
     var title: String
     var time: String
@@ -66,7 +67,7 @@ nonisolated struct Recipe: Codable, Identifiable, Hashable {
 }
 
 /// The three ingredient sections. A section is written only when it holds entries.
-nonisolated struct IngredientSections: Codable, Hashable {
+nonisolated struct IngredientSections: Decodable, Hashable {
     var supermarket: [Ingredient]?
     var general: [Ingredient]?
     var optional: [Ingredient]?
@@ -76,7 +77,7 @@ nonisolated struct IngredientSections: Codable, Hashable {
     }
 }
 
-nonisolated struct Ingredient: Codable, Hashable, Identifiable {
+nonisolated struct Ingredient: Decodable, Hashable, Identifiable {
     var item: String
     var icon: String
     var amount: String
@@ -85,7 +86,7 @@ nonisolated struct Ingredient: Codable, Hashable, Identifiable {
     var id: String { item + amount }
 }
 
-nonisolated struct Tool: Codable, Hashable, Identifiable {
+nonisolated struct Tool: Decodable, Hashable, Identifiable {
     var name: String
     var icon: String
     var required: Bool
@@ -94,7 +95,7 @@ nonisolated struct Tool: Codable, Hashable, Identifiable {
     var id: String { name }
 }
 
-nonisolated struct Step: Codable, Hashable, Identifiable {
+nonisolated struct Step: Decodable, Hashable, Identifiable {
     var title: String
     /// The ingredient and tool icon paths this step works with, shown as a strip above its points.
     var icons: [String]?
@@ -103,7 +104,7 @@ nonisolated struct Step: Codable, Hashable, Identifiable {
     var id: String { title }
 }
 
-nonisolated struct Troubleshooting: Codable, Hashable, Identifiable {
+nonisolated struct Troubleshooting: Decodable, Hashable, Identifiable {
     var problem: String
     var solution: String
 
