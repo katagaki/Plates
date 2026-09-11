@@ -7,9 +7,10 @@
   "ingredients": {
     "supermarket": [
       {
-        "item": "Frozen seafood mix",
+        "item": "Seafood",
         "icon": "img/ingredients/seafood.svg",
-        "amount": "200 g"
+        "amount": "200 g",
+        "note": "A frozen seafood mix."
       },
       {
         "item": "Onion",
@@ -45,14 +46,16 @@
         "amount": "500 ml"
       },
       {
-        "item": "Cooked rice",
+        "item": "Rice",
         "icon": "img/ingredients/rice.svg",
-        "amount": "1 bowl per person"
+        "amount": "1 bowl per person",
+        "note": "Freshly cooked and hot."
       },
       {
-        "item": "Cooking oil",
+        "item": "Oil",
         "icon": "img/ingredients/oil.svg",
-        "amount": "1 tbsp"
+        "amount": "1 tbsp",
+        "note": "Any neutral cooking oil."
       },
       {
         "item": "Salt",
@@ -95,9 +98,10 @@
   },
   "tools": [
     {
-      "name": "Pot (about 20 cm)",
+      "name": "Pot",
       "icon": "img/tools/pot.svg",
-      "required": true
+      "required": true,
+      "note": "About 20 cm."
     },
     {
       "name": "Lid",
@@ -105,7 +109,7 @@
       "required": true
     },
     {
-      "name": "Frying pan",
+      "name": "Pan",
       "icon": "img/tools/pan.svg",
       "required": true,
       "note": "For the seafood, which is cooked apart from the curry."

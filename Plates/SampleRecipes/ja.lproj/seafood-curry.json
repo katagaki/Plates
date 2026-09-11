@@ -7,9 +7,10 @@
   "ingredients": {
     "supermarket": [
       {
-        "item": "シーフードミックス",
+        "item": "シーフード",
         "icon": "img/ingredients/seafood.svg",
-        "amount": "200g"
+        "amount": "200g",
+        "note": "冷凍のシーフードミックスです。"
       },
       {
         "item": "玉ねぎ",
@@ -45,14 +46,16 @@
         "amount": "500ml"
       },
       {
-        "item": "ごはん",
+        "item": "米",
         "icon": "img/ingredients/rice.svg",
-        "amount": "1人1杯"
+        "amount": "1人1杯",
+        "note": "炊きたてのごはんです。"
       },
       {
-        "item": "サラダ油",
+        "item": "油",
         "icon": "img/ingredients/oil.svg",
-        "amount": "大さじ1"
+        "amount": "大さじ1",
+        "note": "くせのないサラダ油です。"
       },
       {
         "item": "塩",
@@ -95,9 +98,10 @@
   },
   "tools": [
     {
-      "name": "鍋(20cmほど)",
+      "name": "鍋",
       "icon": "img/tools/pot.svg",
-      "required": true
+      "required": true,
+      "note": "20cmほど。"
     },
     {
       "name": "ふた",
@@ -142,7 +146,7 @@
       "required": true
     },
     {
-      "name": "お玉",
+      "name": "おたま",
       "icon": "img/tools/ladle.svg",
       "required": true
     },

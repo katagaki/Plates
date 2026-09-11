@@ -20,15 +20,16 @@
     ],
     "general": [
       {
-        "item": "ごはん",
+        "item": "米",
         "icon": "img/ingredients/rice.svg",
         "amount": "250g",
-        "note": "炊きたての熱いもの。これは冷やごはんではなく熱いごはんで作ります。"
+        "note": "炊きたてで熱い短粒米です。これは冷やごはんではなく熱いごはんで作ります。"
       },
       {
-        "item": "サラダ油",
+        "item": "油",
         "icon": "img/ingredients/oil.svg",
-        "amount": "大さじ3"
+        "amount": "大さじ3",
+        "note": "くせのないサラダ油です。"
       },
       {
         "item": "しょうゆ",
@@ -41,16 +42,18 @@
         "amount": "ひとつまみ"
       },
       {
-        "item": "黒こしょう",
+        "item": "こしょう",
         "icon": "img/ingredients/pepper.svg",
-        "amount": "適量"
+        "amount": "適量",
+        "note": "黒こしょうを使います。"
       }
     ],
     "optional": [
       {
-        "item": "長ねぎ",
+        "item": "ねぎ",
         "icon": "img/ingredients/spring-onion.svg",
-        "amount": "1本"
+        "amount": "1本",
+        "note": "長ねぎを使います。"
       },
       {
         "item": "パセリ",
@@ -62,9 +65,10 @@
   },
   "tools": [
     {
-      "name": "フライパン(24cmほど)",
+      "name": "フライパン",
       "icon": "img/tools/pan.svg",
-      "required": true
+      "required": true,
+      "note": "24cmほど。"
     },
     {
       "name": "炊飯器",
@@ -82,7 +86,7 @@
       "required": true
     },
     {
-      "name": "穴あきお玉",
+      "name": "穴あきおたま",
       "icon": "img/tools/slotted-spoon.svg",
       "required": true,
       "note": "チップを油から引き上げる分です。"

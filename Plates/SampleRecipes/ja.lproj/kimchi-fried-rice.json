@@ -7,16 +7,16 @@
   "ingredients": {
     "supermarket": [
       {
-        "item": "白菜キムチ",
+        "item": "キムチ",
         "icon": "img/ingredients/kimchi.svg",
         "amount": "200g",
-        "note": "よく発酵した酸っぱいもの。浅いキムチには出せる深みがありません。"
+        "note": "よく発酵した酸っぱい白菜キムチです。浅いキムチには出せる深みがありません。"
       },
       {
-        "item": "豚バラ肉",
+        "item": "豚肉",
         "icon": "img/ingredients/pork.svg",
         "amount": "120g",
-        "note": "薄切り。"
+        "note": "薄切りの豚バラ肉を使います。"
       },
       {
         "item": "卵",
@@ -27,10 +27,10 @@
     ],
     "general": [
       {
-        "item": "ごはん",
+        "item": "米",
         "icon": "img/ingredients/rice.svg",
         "amount": "350g",
-        "note": "前日に炊いて冷やしたもの。"
+        "note": "前日に炊いて冷やした短粒米です。"
       },
       {
         "item": "コチュジャン",
@@ -48,9 +48,10 @@
         "amount": "小さじ1"
       },
       {
-        "item": "サラダ油",
+        "item": "油",
         "icon": "img/ingredients/oil.svg",
-        "amount": "大さじ1"
+        "amount": "大さじ1",
+        "note": "くせのないサラダ油です。"
       },
       {
         "item": "ごま油",
@@ -58,9 +59,15 @@
         "amount": "小さじ1"
       },
       {
-        "item": "塩と黒こしょう",
+        "item": "塩",
         "icon": "img/ingredients/salt.svg",
-        "amount": "各少々"
+        "amount": "少々"
+      },
+      {
+        "item": "こしょう",
+        "icon": "img/ingredients/pepper.svg",
+        "amount": "少々",
+        "note": "黒こしょうを使います。"
       }
     ],
     "optional": [
@@ -82,28 +89,25 @@
         "note": "細く切って上にのせます。"
       },
       {
-        "item": "いりごま",
+        "item": "ごま",
         "icon": "img/ingredients/sesame-seeds.svg",
-        "amount": "小さじ1"
+        "amount": "小さじ1",
+        "note": "いりごまを使います。"
       },
       {
-        "item": "長ねぎ",
+        "item": "ねぎ",
         "icon": "img/ingredients/spring-onion.svg",
-        "amount": "1本"
+        "amount": "1本",
+        "note": "長ねぎを使います。"
       }
     ]
   },
   "tools": [
     {
-      "name": "フライパン(24cmほど)",
+      "name": "フライパン",
       "icon": "img/tools/pan.svg",
-      "required": true
-    },
-    {
-      "name": "小さいフライパン",
-      "icon": "img/tools/pan.svg",
-      "required": false,
-      "note": "卵用です。同じフライパンを拭いて使ってもかまいません。"
+      "required": true,
+      "note": "24cmほど。卵用にもう一つ小さいフライパンがあると、こちらを拭かずに済みます。"
     },
     {
       "name": "キッチンばさみ",

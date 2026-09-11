@@ -12,22 +12,24 @@
         "amount": "2個"
       },
       {
-        "item": "長ねぎ",
+        "item": "ねぎ",
         "icon": "img/ingredients/spring-onion.svg",
-        "amount": "2本"
+        "amount": "2本",
+        "note": "長ねぎを使います。"
       }
     ],
     "general": [
       {
-        "item": "ごはん",
+        "item": "米",
         "icon": "img/ingredients/rice.svg",
         "amount": "250g",
-        "note": "前日に炊いて冷やしたもの。冷やごはんだから粒がほぐれます。"
+        "note": "前日に炊いて冷やした短粒米です。冷やごはんだから粒がほぐれます。"
       },
       {
-        "item": "サラダ油",
+        "item": "油",
         "icon": "img/ingredients/oil.svg",
-        "amount": "大さじ2"
+        "amount": "大さじ2",
+        "note": "くせのないサラダ油です。"
       },
       {
         "item": "しょうゆ",
@@ -40,9 +42,10 @@
         "amount": "小さじ1/3"
       },
       {
-        "item": "白こしょう",
+        "item": "こしょう",
         "icon": "img/ingredients/pepper.svg",
-        "amount": "適量"
+        "amount": "適量",
+        "note": "白こしょうを使います。"
       }
     ],
     "optional": [
@@ -57,10 +60,10 @@
         "amount": "小さじ1"
       },
       {
-        "item": "ハムまたはチャーシュー",
+        "item": "ハム",
         "icon": "img/ingredients/ham.svg",
         "amount": "40g",
-        "note": "小さめに切り、ごはんと一緒に入れます。"
+        "note": "小さめに切ったハムかチャーシューです。ごはんと一緒に入れます。"
       }
     ]
   },
@@ -78,9 +81,10 @@
       "note": "前日のごはん用です。鍋で炊いてもかまいません。"
     },
     {
-      "name": "お玉またはフライ返し",
+      "name": "フライ返し",
       "icon": "img/tools/spatula.svg",
-      "required": true
+      "required": true,
+      "note": "中華のおたまでもかまいません。"
     },
     {
       "name": "ボウル",

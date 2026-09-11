@@ -7,13 +7,13 @@
   "ingredients": {
     "supermarket": [
       {
-        "item": "Thick-cut white bread",
+        "item": "Bread",
         "icon": "img/ingredients/bread.svg",
         "amount": "2 slices",
-        "note": "About 3 cm. Day-old bread drinks more custard than fresh."
+        "note": "Thick-cut white bread, about 3 cm. Day-old bread drinks more custard than fresh."
       },
       {
-        "item": "Eggs",
+        "item": "Egg",
         "icon": "img/ingredients/egg.svg",
         "amount": "2"
       },
@@ -66,10 +66,10 @@
   },
   "tools": [
     {
-      "name": "Shallow dish or bowl",
+      "name": "Bowl",
       "icon": "img/tools/bowl.svg",
       "required": true,
-      "note": "Wide enough that a slice lies flat."
+      "note": "Wide enough that a slice lies flat. A shallow dish works best."
     },
     {
       "name": "Whisk",
@@ -83,9 +83,10 @@
       "note": "For straining the custard smooth."
     },
     {
-      "name": "Frying pan (about 24 cm)",
+      "name": "Pan",
       "icon": "img/tools/pan.svg",
-      "required": true
+      "required": true,
+      "note": "About 24 cm."
     },
     {
       "name": "Lid",

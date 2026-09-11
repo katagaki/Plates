@@ -13,15 +13,15 @@
         "note": "Cured pork cheek. Pancetta is the closest substitute."
       },
       {
-        "item": "Egg yolks",
+        "item": "Egg",
         "icon": "img/ingredients/egg.svg",
         "amount": "4 yolks and 1 whole egg"
       },
       {
-        "item": "Pecorino romano",
+        "item": "Pecorino",
         "icon": "img/ingredients/pecorino.svg",
         "amount": "60 g",
-        "note": "Grated fine."
+        "note": "Pecorino romano, grated fine."
       }
     ],
     "general": [
@@ -42,10 +42,10 @@
         "note": "Less than you would use for other sauces. The pork and the cheese are already salty."
       },
       {
-        "item": "Black pepper",
+        "item": "Pepper",
         "icon": "img/ingredients/pepper.svg",
         "amount": "plenty",
-        "note": "Coarsely ground, and more at the table."
+        "note": "Coarsely ground black pepper, and more at the table."
       }
     ],
     "optional": [
@@ -65,15 +65,16 @@
   },
   "tools": [
     {
-      "name": "Large pot",
+      "name": "Pot",
       "icon": "img/tools/pot.svg",
       "required": true,
       "note": "Big enough for 2 litres at a rolling boil."
     },
     {
-      "name": "Frying pan (about 24 cm)",
+      "name": "Pan",
       "icon": "img/tools/pan.svg",
-      "required": true
+      "required": true,
+      "note": "About 24 cm."
     },
     {
       "name": "Grater",

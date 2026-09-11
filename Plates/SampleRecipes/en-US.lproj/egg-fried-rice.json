@@ -7,7 +7,7 @@
   "ingredients": {
     "supermarket": [
       {
-        "item": "Eggs",
+        "item": "Egg",
         "icon": "img/ingredients/egg.svg",
         "amount": "2"
       },
@@ -19,15 +19,16 @@
     ],
     "general": [
       {
-        "item": "Cooked short-grain rice",
+        "item": "Rice",
         "icon": "img/ingredients/rice.svg",
         "amount": "250 g",
-        "note": "Cooked the day before and chilled. Cold rice is what lets the grains separate."
+        "note": "Short-grain rice, cooked the day before and chilled. Cold rice is what lets the grains separate."
       },
       {
-        "item": "Cooking oil",
+        "item": "Oil",
         "icon": "img/ingredients/oil.svg",
-        "amount": "2 tbsp"
+        "amount": "2 tbsp",
+        "note": "Any neutral cooking oil."
       },
       {
         "item": "Soy sauce",
@@ -40,9 +41,10 @@
         "amount": "1/3 tsp"
       },
       {
-        "item": "White pepper",
+        "item": "Pepper",
         "icon": "img/ingredients/pepper.svg",
-        "amount": "to taste"
+        "amount": "to taste",
+        "note": "White pepper."
       }
     ],
     "optional": [
@@ -57,10 +59,10 @@
         "amount": "1 tsp"
       },
       {
-        "item": "Ham or char siu",
+        "item": "Ham",
         "icon": "img/ingredients/ham.svg",
         "amount": "40 g",
-        "note": "Diced small, added with the rice."
+        "note": "Ham or char siu, diced small and added with the rice."
       }
     ]
   },
@@ -78,9 +80,10 @@
       "note": "For the rice the day before. A pot with a lid does the same."
     },
     {
-      "name": "Wok spatula or ladle",
+      "name": "Spatula",
       "icon": "img/tools/spatula.svg",
-      "required": true
+      "required": true,
+      "note": "A wok spatula or a ladle."
     },
     {
       "name": "Bowl",

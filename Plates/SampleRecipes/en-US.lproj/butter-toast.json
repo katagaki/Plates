@@ -7,10 +7,10 @@
   "ingredients": {
     "supermarket": [
       {
-        "item": "Thick-cut white bread",
+        "item": "Bread",
         "icon": "img/ingredients/bread.svg",
         "amount": "1 slice",
-        "note": "A four-slice loaf, about 3 cm. Day-old is better than fresh."
+        "note": "Thick-cut white bread, a four-slice loaf about 3 cm. Day-old is better than fresh."
       },
       {
         "item": "Butter",
@@ -21,9 +21,10 @@
     ],
     "optional": [
       {
-        "item": "Flaky salt",
+        "item": "Salt",
         "icon": "img/ingredients/salt.svg",
-        "amount": "a small pinch"
+        "amount": "a small pinch",
+        "note": "Flaky salt."
       },
       {
         "item": "Honey",

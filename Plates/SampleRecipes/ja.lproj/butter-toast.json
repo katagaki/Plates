@@ -7,10 +7,10 @@
   "ingredients": {
     "supermarket": [
       {
-        "item": "厚切り食パン",
+        "item": "パン",
         "icon": "img/ingredients/bread.svg",
         "amount": "1枚",
-        "note": "4枚切り、3cmほど。焼きたてより前日のものが向きます。"
+        "note": "4枚切りで3cmほどの厚切り食パンです。焼きたてより前日のものが向きます。"
       },
       {
         "item": "バター",
@@ -21,9 +21,10 @@
     ],
     "optional": [
       {
-        "item": "粗塩",
+        "item": "塩",
         "icon": "img/ingredients/salt.svg",
-        "amount": "少々"
+        "amount": "少々",
+        "note": "粗塩を使います。"
       },
       {
         "item": "はちみつ",

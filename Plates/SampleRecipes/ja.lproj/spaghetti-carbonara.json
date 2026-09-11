@@ -18,10 +18,10 @@
         "amount": "卵黄4個と全卵1個"
       },
       {
-        "item": "ペコリーノ・ロマーノ",
+        "item": "ペコリーノ",
         "icon": "img/ingredients/pecorino.svg",
         "amount": "60g",
-        "note": "細かくおろします。"
+        "note": "ペコリーノ・ロマーノです。細かくおろします。"
       }
     ],
     "general": [
@@ -42,10 +42,10 @@
         "note": "他のパスタより控えめです。豚肉もチーズも塩気を持っています。"
       },
       {
-        "item": "黒こしょう",
+        "item": "こしょう",
         "icon": "img/ingredients/pepper.svg",
         "amount": "たっぷり",
-        "note": "粗びき。食卓でも足します。"
+        "note": "粗びきの黒こしょうを使います。食卓でも足します。"
       }
     ],
     "optional": [
@@ -56,7 +56,7 @@
         "note": "グアンチャーレの代わりに。"
       },
       {
-        "item": "パルメザン",
+        "item": "パルメザンチーズ",
         "icon": "img/ingredients/parmesan.svg",
         "amount": "30g",
         "note": "ペコリーノの半量と置き換えると、やわらかい味になります。"
@@ -65,15 +65,16 @@
   },
   "tools": [
     {
-      "name": "大きい鍋",
+      "name": "鍋",
       "icon": "img/tools/pot.svg",
       "required": true,
       "note": "2リットルをしっかり沸かせる大きさ。"
     },
     {
-      "name": "フライパン(24cmほど)",
+      "name": "フライパン",
       "icon": "img/tools/pan.svg",
-      "required": true
+      "required": true,
+      "note": "24cmほど。"
     },
     {
       "name": "おろし器",
@@ -98,7 +99,7 @@
       "required": true
     },
     {
-      "name": "お玉",
+      "name": "おたま",
       "icon": "img/tools/ladle.svg",
       "required": true,
       "note": "ゆで汁用です。ゆで汁もソースの一部です。"

@@ -134,7 +134,7 @@ struct GeneratedIngredient {
 
 @Generable
 struct GeneratedTool {
-    @Guide(description: "The tool name. A pan or pot names its size, for example 'Frying pan (about 24 cm)'.")
+    @Guide(description: "The tool name on its own, such as 'Pan'. A size or a qualifier goes in the note.")
     var name: String
 
     @Guide(description: "The catalog icon for this tool, lowercase and hyphenated, such as 'cutting-board'")
@@ -143,7 +143,7 @@ struct GeneratedTool {
     @Guide(description: "True when the recipe cannot be cooked without it")
     var required: Bool
 
-    @Guide(description: "One sentence, only when the tool can be skipped or swapped. Otherwise leave empty.")
+    @Guide(description: "One sentence, only when the tool needs a size or can be skipped or swapped. Otherwise leave empty.")
     var note: String
 }
 

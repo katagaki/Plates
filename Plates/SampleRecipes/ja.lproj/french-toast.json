@@ -7,10 +7,10 @@
   "ingredients": {
     "supermarket": [
       {
-        "item": "厚切り食パン",
+        "item": "パン",
         "icon": "img/ingredients/bread.svg",
         "amount": "2枚",
-        "note": "3cmほど。前日のパンのほうが卵液をよく吸います。"
+        "note": "3cmほどの厚切り食パンです。前日のパンのほうが卵液をよく吸います。"
       },
       {
         "item": "卵",
@@ -66,10 +66,10 @@
   },
   "tools": [
     {
-      "name": "浅いバットまたはボウル",
+      "name": "ボウル",
       "icon": "img/tools/bowl.svg",
       "required": true,
-      "note": "パンが平らに寝かせられる広さのもの。"
+      "note": "パンが平らに寝かせられる広さのものです。浅いバットでもかまいません。"
     },
     {
       "name": "泡立て器",
@@ -77,15 +77,16 @@
       "required": true
     },
     {
-      "name": "ざる",
+      "name": "こし器",
       "icon": "img/tools/sieve.svg",
       "required": false,
       "note": "卵液をこす分です。"
     },
     {
-      "name": "フライパン(24cmほど)",
+      "name": "フライパン",
       "icon": "img/tools/pan.svg",
-      "required": true
+      "required": true,
+      "note": "24cmほど。"
     },
     {
       "name": "ふた",

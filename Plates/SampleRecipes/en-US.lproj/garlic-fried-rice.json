@@ -20,15 +20,16 @@
     ],
     "general": [
       {
-        "item": "Cooked short-grain rice",
+        "item": "Rice",
         "icon": "img/ingredients/rice.svg",
         "amount": "250 g",
-        "note": "Freshly cooked and still hot. This one wants hot rice, not cold."
+        "note": "Short-grain rice, freshly cooked and still hot. This one wants hot rice, not cold."
       },
       {
-        "item": "Cooking oil",
+        "item": "Oil",
         "icon": "img/ingredients/oil.svg",
-        "amount": "3 tbsp"
+        "amount": "3 tbsp",
+        "note": "Any neutral cooking oil."
       },
       {
         "item": "Soy sauce",
@@ -41,9 +42,10 @@
         "amount": "a pinch"
       },
       {
-        "item": "Black pepper",
+        "item": "Pepper",
         "icon": "img/ingredients/pepper.svg",
-        "amount": "to taste"
+        "amount": "to taste",
+        "note": "Black pepper."
       }
     ],
     "optional": [
@@ -62,9 +64,10 @@
   },
   "tools": [
     {
-      "name": "Frying pan (about 24 cm)",
+      "name": "Pan",
       "icon": "img/tools/pan.svg",
-      "required": true
+      "required": true,
+      "note": "About 24 cm."
     },
     {
       "name": "Rice cooker",

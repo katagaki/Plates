@@ -7,19 +7,19 @@
   "ingredients": {
     "supermarket": [
       {
-        "item": "Napa cabbage kimchi",
+        "item": "Kimchi",
         "icon": "img/ingredients/kimchi.svg",
         "amount": "200 g",
-        "note": "Well fermented and sour. Fresh kimchi has no depth to give up."
+        "note": "Napa cabbage kimchi, well fermented and sour. Fresh kimchi has no depth to give up."
       },
       {
-        "item": "Pork belly",
+        "item": "Pork",
         "icon": "img/ingredients/pork.svg",
         "amount": "120 g",
-        "note": "Thin sliced."
+        "note": "Thin sliced pork belly."
       },
       {
-        "item": "Eggs",
+        "item": "Egg",
         "icon": "img/ingredients/egg.svg",
         "amount": "2",
         "note": "One fried egg per plate."
@@ -27,10 +27,10 @@
     ],
     "general": [
       {
-        "item": "Cooked short-grain rice",
+        "item": "Rice",
         "icon": "img/ingredients/rice.svg",
         "amount": "350 g",
-        "note": "Cooked the day before and chilled."
+        "note": "Short-grain rice, cooked the day before and chilled."
       },
       {
         "item": "Gochujang",
@@ -48,9 +48,10 @@
         "amount": "1 tsp"
       },
       {
-        "item": "Cooking oil",
+        "item": "Oil",
         "icon": "img/ingredients/oil.svg",
-        "amount": "1 tbsp"
+        "amount": "1 tbsp",
+        "note": "Any neutral cooking oil."
       },
       {
         "item": "Sesame oil",
@@ -58,9 +59,15 @@
         "amount": "1 tsp"
       },
       {
-        "item": "Salt and black pepper",
+        "item": "Salt",
         "icon": "img/ingredients/salt.svg",
-        "amount": "a pinch of each"
+        "amount": "a pinch"
+      },
+      {
+        "item": "Pepper",
+        "icon": "img/ingredients/pepper.svg",
+        "amount": "a pinch",
+        "note": "Black pepper."
       }
     ],
     "optional": [
@@ -95,18 +102,13 @@
   },
   "tools": [
     {
-      "name": "Frying pan (about 24 cm)",
+      "name": "Pan",
       "icon": "img/tools/pan.svg",
-      "required": true
+      "required": true,
+      "note": "About 24 cm. A second small pan for the eggs saves wiping this one out."
     },
     {
-      "name": "Small frying pan",
-      "icon": "img/tools/pan.svg",
-      "required": false,
-      "note": "For the eggs. The main pan, wiped out, does the job too."
-    },
-    {
-      "name": "Kitchen scissors",
+      "name": "Scissors",
       "icon": "img/tools/scissors.svg",
       "required": true,
       "note": "Kimchi is easier to snip than to chop."
