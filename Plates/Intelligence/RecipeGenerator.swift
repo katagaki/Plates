@@ -55,13 +55,13 @@ struct IngredientPick: Equatable, Sendable {
 /// about how to cook it. Settling the list on its own means the next pass measures ingredients
 /// that already work together, instead of inventing them and checking them against the catalog
 /// while it writes everything else.
-@Generable(description: "The ingredients a one-pan dish is built from")
+@Generable(description: "The ingredients a dish is built from")
 struct GeneratedIngredientPick {
     @Guide(description: "The dish these ingredients make, in two to four words")
     var dish: String
 
     @Guide(
-        description: "Ingredient names that cook together in one pan, such as 'Spring onion'",
+        description: "Ingredient names the dish is cooked from, such as 'Spring onion'",
         .count(4...10)
     )
     var items: [String]
@@ -69,9 +69,9 @@ struct GeneratedIngredientPick {
 
 /// The second pass: what the dish is called and what each picked ingredient is measured at.
 /// The method comes later, so this stays small enough to generate reliably.
-@Generable(description: "A one-pan recipe's title, timing, measured shopping list, and tools")
+@Generable(description: "A recipe's title, timing, measured shopping list, and tools")
 struct GeneratedRecipeBase {
-    @Guide(description: "Title in title case, two to four words. Do not use the words 'One-Pan'.")
+    @Guide(description: "Title in title case, two to four words. Name the dish and nothing else.")
     var title: String
 
     @Guide(description: "Total time written as a minute count, for example '15 min'")
@@ -95,12 +95,12 @@ struct GeneratedRecipeBase {
     @Guide(description: "Any picked item that can be skipped. Leave empty when nothing is optional.", .maximumCount(3))
     var optional: [GeneratedIngredient]
 
-    @Guide(description: "The pans, knives and bowls needed", .count(2...6))
+    @Guide(description: "The pans, pots, knives and bowls needed", .count(2...6))
     var tools: [GeneratedTool]
 }
 
 /// The third pass: the shape of the method, titles only.
-@Generable(description: "The method for a one-pan recipe, as an ordered list of step titles")
+@Generable(description: "The method for a recipe, as an ordered list of step titles")
 struct GeneratedStepOutline {
     @Guide(description: "Short imperative step titles in order, such as 'Brown pork'", .count(4...8))
     var steps: [String]
@@ -134,7 +134,7 @@ struct GeneratedIngredient {
 
 @Generable
 struct GeneratedTool {
-    @Guide(description: "The tool name. The main pan names its size, for example 'Frying pan (about 24 cm)'.")
+    @Guide(description: "The tool name. A pan or pot names its size, for example 'Frying pan (about 24 cm)'.")
     var name: String
 
     @Guide(description: "The catalog icon for this tool, lowercase and hyphenated, such as 'cutting-board'")
