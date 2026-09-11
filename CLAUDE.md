@@ -35,6 +35,15 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
   pass works from a list that already exists. A pass runs on device first, and only a pass the
   on-device model rejects with `contextSizeExceeded` is run again on
   `PrivateCloudComputeLanguageModel`. Keep passes small enough that the cloud stays a fallback.
+  That fallback, the background time a pass runs in, and whether the model is there at all are
+  written down once in `ModelPasses`, which both the generator and the editor run through.
+- `RecipeAskEditor` rewrites a recipe the cook already has, from a request in their own words.
+  It asks twice over: once for a plan of what to change, then once for each change on that plan,
+  each in its own session and given only the recipe and the one change to make. The plan is what
+  the progress screen lists, so its rows are as many as the work turned out to be rather than
+  fixed the way a generation's are. Changes to the recipe as a whole are made first and step
+  changes from the last step back, so adding or dropping a step never moves one that a later
+  change is counting on.
 - `Plates/Views` holds the list, detail, generation, editing, and sharing views. The detail
   view turns into the editor in place, so a recipe is read and written on the one screen, and
   every edit is written straight to the file rather than kept until the editor is left. The
@@ -101,8 +110,8 @@ without a Japanese value is unfinished. Japanese copy follows the same plain sty
   runtime from the asset name, so the entries are kept in the string catalog by hand with
   `extractionState` set to `manual`, and adding an icon means adding its name in both
   languages.
-- Everything the model is given is a key too, under `Generate.Prompt.` and `Generate.Lookup.`,
-  down to the comma a list is joined with. Only the `@Generable` schema descriptions stay in
+- Everything the model is given is a key too, under `Generate.Prompt.`, `Generate.Lookup.`,
+  and `Edit.Prompt.`, down to the comma a list is joined with. Only the `@Generable` schema descriptions stay in
   English: they are the shape of the answer, not the prompt, and the house style tells the
   model which language to write in.
 - A recipe's `time` is stored as the model wrote it and shown through `Recipe.formattedTime`,
