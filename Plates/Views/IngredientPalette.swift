@@ -166,13 +166,13 @@ private extension Color {
         return (Double(hue), Double(saturation), Double(brightness))
     }
 
-    /// The same colour pulled into the range a card reads well in: pale and light against a
-    /// white card, deeper and darker against a black one, so the title keeps its contrast
-    /// either way and neither a pale flour nor a near black squid ink flattens the blend.
+    /// The same colour pulled into the range a card reads well in: full enough to carry white
+    /// text in either appearance, a little brighter in light mode than in dark, so neither a
+    /// pale flour nor a near black squid ink flattens the blend.
     func tuned(for scheme: ColorScheme) -> Color {
         let hsb = hsb
-        let saturation = scheme == .dark ? (0.62, 0.95) : (0.22, 0.62)
-        let brightness = scheme == .dark ? (0.42, 0.58) : (0.55, 0.92)
+        let saturation = scheme == .dark ? (0.62, 0.95) : (0.55, 0.90)
+        let brightness = scheme == .dark ? (0.42, 0.58) : (0.54, 0.68)
         return Color(
             hue: hsb.hue,
             saturation: min(max(hsb.saturation, saturation.0), saturation.1),
@@ -180,13 +180,15 @@ private extension Color {
         )
     }
 
-    /// The same colour lifted or dropped in brightness, used to fill a short list out.
+    /// The same colour lifted or dropped in brightness, used to fill a short list out. What
+    /// comes back is tuned afterwards, so the clamps here only keep the shading from running
+    /// away.
     func shaded(by amount: Double) -> Color {
         let hsb = hsb
         return Color(
             hue: hsb.hue,
-            saturation: min(max(hsb.saturation + amount * 0.2, 0.18), 0.7),
-            brightness: min(max(hsb.brightness + amount, 0.5), 0.95)
+            saturation: min(max(hsb.saturation + amount * 0.2, 0.18), 0.95),
+            brightness: min(max(hsb.brightness + amount, 0.2), 0.95)
         )
     }
 }

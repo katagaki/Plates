@@ -32,9 +32,9 @@ struct RecipesGridView: View {
     }
 }
 
-/// One recipe at a glance: the title and how long it takes, over a blend of the colours its
-/// ingredients are drawn in. Recipe data is shown as written rather than looked up in the
-/// string catalog.
+/// One recipe at a glance: the title and how long it takes, in white over a blend of the
+/// colours its ingredients are drawn in. Recipe data is shown as written rather than looked up
+/// in the string catalog.
 private struct RecipeCard: View {
     let recipe: Recipe
 
@@ -60,8 +60,9 @@ private struct RecipeCard: View {
                 Spacer(minLength: 0)
             }
             .font(.caption)
-            .foregroundStyle(.secondary)
+            .foregroundStyle(.white.opacity(0.85))
         }
+        .foregroundStyle(.white)
         .multilineTextAlignment(.leading)
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(14)
@@ -69,11 +70,11 @@ private struct RecipeCard: View {
         .cardBackground()
     }
 
-    /// The ingredient colours poured into the four corners of the card. It sits over the card
-    /// background rather than replacing it, so the title keeps its contrast in either
-    /// appearance. The blend is mixed perceptually, so a red corner meeting a green one passes
-    /// through the colours between them instead of dipping through a dark band the way mixing
-    /// the channels straight does.
+    /// The ingredient colours poured into the four corners of the card. It covers the card
+    /// background in either appearance, since the title is white and needs the colour behind it
+    /// at full strength. The blend is mixed perceptually, so a red corner meeting a green one
+    /// passes through the colours between them instead of dipping through a dark band the way
+    /// mixing the channels straight does.
     private var blend: some View {
         MeshGradient(
             width: 2,
@@ -82,7 +83,6 @@ private struct RecipeCard: View {
             colors: IngredientPalette.colors(for: recipe, in: scheme),
             colorSpace: .perceptual
         )
-        .opacity(scheme == .dark ? 1 : 0.5)
-            .clipShape(.rect(cornerRadius: .listRowCornerRadius, style: .continuous))
+        .clipShape(.rect(cornerRadius: .listRowCornerRadius, style: .continuous))
     }
 }
