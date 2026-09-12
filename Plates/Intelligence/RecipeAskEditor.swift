@@ -59,6 +59,21 @@ struct GeneratedEdit {
     var step: Int
 }
 
+/// A recipe read back the way a cook reads one, with anything that does not hold up written as
+/// the change that fixes it. The read through at the end of a generation and the one at the end
+/// of a rewrite both come back in this shape, so both are carried out as a plan.
+@Generable(description: "Problems with a written recipe, as the changes that fix them")
+struct GeneratedRecipeReview {
+    @Guide(description: "True when the recipe holds up as it is and nothing needs changing")
+    var isGood: Bool
+
+    @Guide(
+        description: "The changes the recipe needs. Leave this empty when it is already good.",
+        .maximumCount(3)
+    )
+    var fixes: [GeneratedEdit]
+}
+
 /// A recipe's title, timing, and serving count, rewritten.
 @Generable(description: "A recipe's title, timing, and serving count")
 struct GeneratedRecipeDetails {
@@ -109,7 +124,8 @@ struct GeneratedStep {
 }
 
 /// How far along a rewrite is. The rows are not known until the model has decided what to
-/// change, so unlike a generation they are built as the run goes.
+/// change, so unlike a generation they are built as the run goes, and the read through at the
+/// end adds rows of its own for whatever it asks for.
 struct EditProgress: Equatable, Sendable {
     /// One planned change, as the screen shows it.
     struct Change: Equatable, Sendable, Identifiable {
@@ -128,25 +144,54 @@ struct EditProgress: Equatable, Sendable {
     /// True until the model has settled on what to change.
     var isPlanning = true
     var changes: [Change] = []
+    /// How many changes the plan itself called for. Anything past them came out of the read
+    /// through, so the bar counts it as part of the read through rather than the plan.
+    var plannedCount = 0
+    /// True while the recipe is being read back, which is once the plan has been carried out.
+    var isReviewing = false
     var isFinished = false
+
+    /// The recipe as it stands, so the preview under the checklist reads what the changes have
+    /// done to it. Written by the model, so shown as written.
+    var title = ""
+    var time = ""
+    var serves = ""
+    var steps: [String] = []
+
+    /// Takes the recipe as it now stands, after a change lands on it.
+    mutating func show(_ recipe: Recipe) {
+        title = recipe.title
+        time = recipe.time
+        serves = recipe.serves
+        steps = recipe.steps.map(\.title)
+    }
 
     /// The change being made right now, for the lock screen.
     var currentTitle: String? {
         changes.first { $0.state == .working }?.title
     }
 
-    /// Working out the plan is worth the first sixth; the changes share the rest.
+    /// Working out the plan is worth the first sixth, the planned changes most of the rest, and
+    /// the read through the last fifth. Only the planned changes are counted, so the rows the
+    /// read through adds never send the bar backwards. How long the read through itself takes
+    /// is not known while it runs, so it counts as half done from the moment it starts.
     var fraction: Double {
         guard !isFinished else { return 1 }
-        guard !changes.isEmpty else { return isPlanning ? 0.05 : 0.15 }
-        let done = Double(changes.filter { $0.state == .done }.count)
-        return 0.15 + (done / Double(changes.count)) * 0.85
+        guard !isPlanning else { return 0.05 }
+        let planned = changes.prefix(plannedCount).filter { $0.state == .done }.count
+        let applied = plannedCount == 0 ? 1 : Double(planned) / Double(plannedCount)
+        let review = isReviewing ? 0.5 : 0.0
+        return 0.15 + applied * 0.65 + review * 0.2
     }
 
     var activity: ActivityProgress {
-        let stage: LocalizedStringResource = isPlanning
-            ? "Edit.Progress.Planning"
-            : "Edit.Progress.Applying"
+        let stage: LocalizedStringResource = if isPlanning {
+            "Edit.Progress.Planning"
+        } else if isReviewing {
+            "Edit.Progress.Reviewing"
+        } else {
+            "Edit.Progress.Applying"
+        }
         return ActivityProgress(
             stage: String(localized: stage),
             dish: currentTitle,
@@ -162,6 +207,10 @@ struct EditProgress: Equatable, Sendable {
 /// touches. Nothing carries the whole recipe and the whole request at once, and the plan is
 /// what the screen shows as a checklist, so the cook watches the changes it settled on being
 /// made one at a time.
+///
+/// Once the plan is carried out the recipe is read back against what the cook asked for, and
+/// whatever that finds is made the same way, as rows added to the checklist. The fixed recipe is
+/// read back again, until nothing is left to fix or the loop has been round `reviewLimit` times.
 @MainActor
 @Observable
 final class RecipeAskEditor {
@@ -180,6 +229,9 @@ final class RecipeAskEditor {
     private let passes = ModelPasses()
     private let activity = GenerationActivity()
 
+    /// How many times the recipe is read back before it is handed over as it stands.
+    private static let reviewLimit = 2
+
     var isAvailable: Bool { passes.isAvailable }
 
     var unavailableReason: LocalizedStringResource? { passes.unavailableReason }
@@ -192,9 +244,11 @@ final class RecipeAskEditor {
         passes.beginBackgroundRun(named: "Recipe editing")
         defer { passes.endBackgroundRun() }
         do {
+            progress.show(recipe)
             let plan = try await planEdits(for: recipe, request: request)
             guard !plan.isEmpty else { throw EditError.nothingToChange }
             progress.isPlanning = false
+            progress.plannedCount = plan.count
             progress.changes = plan.enumerated().map {
                 EditProgress.Change(id: $0.offset, title: $0.element.title)
             }
@@ -204,7 +258,9 @@ final class RecipeAskEditor {
                 progress.changes[index].state = .working
                 edited = try await apply(edit, to: edited)
                 progress.changes[index].state = .done
+                progress.show(edited)
             }
+            edited = await review(edited, request: request)
             progress.isFinished = true
             state = .idle
             activity.end(progress.activity, outcome: "Edit.Activity.Done")
@@ -214,6 +270,44 @@ final class RecipeAskEditor {
             activity.end(progress.activity, outcome: "Edit.Activity.Failed")
             return nil
         }
+    }
+
+    // MARK: - Reading it back
+
+    /// Reads the rewritten recipe back against what the cook asked for, and makes whatever that
+    /// asks for the same way the plan was made, as rows added under the ones already there. A
+    /// recipe the cook can cook is worth more than one more read through, so a read that fails
+    /// leaves the recipe as it stands rather than losing the changes already made.
+    private func review(_ edited: Recipe, request: String) async -> Recipe {
+        progress.isReviewing = true
+        defer { progress.isReviewing = false }
+        var recipe = edited
+        for _ in 0..<Self.reviewLimit {
+            do {
+                let found = try await passes.run(instructions: Self.reviewInstructions) { session in
+                    let response = try await session.respond(
+                        to: Self.reviewPrompt(for: recipe, request: request),
+                        generating: GeneratedRecipeReview.self
+                    )
+                    return response.content.isGood ? [] : response.content.fixes
+                }
+                let plan = Self.ordered(found)
+                guard !plan.isEmpty else { break }
+                let first = progress.changes.count
+                progress.changes += plan.enumerated().map {
+                    EditProgress.Change(id: first + $0.offset, title: $0.element.title)
+                }
+                for (index, edit) in plan.enumerated() {
+                    progress.changes[first + index].state = .working
+                    recipe = try await apply(edit, to: recipe)
+                    progress.changes[first + index].state = .done
+                    progress.show(recipe)
+                }
+            } catch {
+                break
+            }
+        }
+        return recipe
     }
 
     /// Carries out a plan somebody else worked out, with no progress or activity of its own.
@@ -437,6 +531,10 @@ final class RecipeAskEditor {
         ModelPasses.houseStyle + "\n\n" + text("Edit.Prompt.Plan")
     }
 
+    private static var reviewInstructions: String {
+        ModelPasses.houseStyle + "\n\n" + text("Edit.Prompt.Review")
+    }
+
     private static func applyInstructions(for target: EditTarget) -> String {
         let key: String.LocalizationValue = switch target {
         case .details: "Edit.Prompt.Apply.Details"
@@ -453,6 +551,16 @@ final class RecipeAskEditor {
             summary(of: recipe),
             "",
             text("Edit.Prompt.Plan.Ask", request),
+        ].joined(separator: "\n")
+    }
+
+    /// The rewritten recipe and the request it was rewritten for, so the read through can say
+    /// whether the recipe answers what was asked and still holds up as a recipe.
+    private static func reviewPrompt(for recipe: Recipe, request: String) -> String {
+        [
+            summary(of: recipe),
+            "",
+            text("Edit.Prompt.Review.Ask", request),
         ].joined(separator: "\n")
     }
 

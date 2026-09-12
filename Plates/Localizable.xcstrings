@@ -188,6 +188,23 @@
         }
       }
     },
+    "Edit.Progress.Reviewing": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reading it back"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レシピを確認しています"
+          }
+        }
+      }
+    },
     "Edit.Prompt.Apply.Details": {
       "extractionState": "manual",
       "localizations": {
@@ -337,6 +354,40 @@
           "stringUnit": {
             "state": "translated",
             "value": "依頼：%1$@\n\n変更内容を考えてください。"
+          }
+        }
+      }
+    },
+    "Edit.Prompt.Review": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You are reading back a recipe that has just been rewritten, the way a cook reads one before shopping. Two things matter: that the recipe does what the cook asked for, and that it still holds up on its own. Say what does not: a change that was asked for and not made, an ingredient the method never uses, a step that calls for something the shopping list does not carry, a time or a serving count that does not match the method, steps in the wrong order, or a step left over from before the change. Write each one as the change that fixes it, with a short imperative title and one sentence saying exactly what to do. When a change is about one step, give that step's number. When the recipe holds up, say so and leave the changes empty. Do not rewrite anything the cook did not ask about."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "書き直したレシピを、買い物に出る前の作り手のつもりで読み返します。見るのは二点です。依頼どおりに直っているか、そしてレシピとして筋が通っているかです。そうなっていないところを挙げてください。依頼されたのに直っていない箇所、手順で一度も使わない材料、買い物リストにないものを使う手順、手順と合っていない時間や人数、順番が入れ替わっている手順、変更前のまま残っている手順などです。見つけたものは、それを直す変更として書きます。短い命令形のタイトルと、何をするかを1文で書いてください。1つの手順に関する変更では、その手順の番号を書きます。問題がなければ、そのように答えて変更は空のままにします。依頼されていないところは書き換えません。"
+          }
+        }
+      }
+    },
+    "Edit.Prompt.Review.Ask": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The cook asked: %1$@\n\nRead this recipe back. What does not hold up?"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "依頼：%1$@\n\nこのレシピを読み返してください。おかしいところはありますか。"
           }
         }
       }

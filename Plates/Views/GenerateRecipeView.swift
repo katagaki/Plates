@@ -244,41 +244,16 @@ private struct GenerationProgressView: View {
         .animation(.default, value: progress)
     }
 
-    /// The recipe as it stands, under the checklist. A step that has been written out is read
-    /// in full black, and one that is still only a title waits in grey.
+    /// The recipe as it stands, under the checklist.
     @ViewBuilder private var preview: some View {
         if let heading = progress.title ?? progress.dish, !heading.isEmpty {
-            VStack(alignment: .leading, spacing: 12) {
-                Divider()
-
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(verbatim: heading)
-                        .font(.title2)
-                        .fontWeight(.semibold)
-                    if let time = progress.time, let serves = progress.serves {
-                        Text(String(
-                            format: String(localized: "Recipe.Row.Subtitle"),
-                            Recipe.formatTime(time),
-                            serves
-                        ))
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
-                    }
-                }
-
-                // Step titles are written by the model, so they are shown as written.
-                ForEach(Array(progress.outline.enumerated()), id: \.offset) { index, title in
-                    HStack(alignment: .firstTextBaseline, spacing: 8) {
-                        Text(index + 1, format: .number)
-                            .font(.subheadline.monospacedDigit())
-                            .foregroundStyle(.secondary)
-                        Text(verbatim: title)
-                            .font(.subheadline)
-                            .foregroundStyle(progress.isWritten(step: index) ? .primary : .secondary)
-                        Spacer(minLength: 0)
-                    }
-                }
-            }
+            RecipePreview(
+                title: heading,
+                time: progress.time ?? "",
+                serves: progress.serves ?? "",
+                steps: progress.outline,
+                isWritten: progress.isWritten(step:)
+            )
         }
     }
 

@@ -47,8 +47,13 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
   the progress screen lists, so its rows are as many as the work turned out to be rather than
   fixed the way a generation's are. Changes to the recipe as a whole are made first and step
   changes from the last step back, so adding or dropping a step never moves one that a later
-  change is counting on.
-- `Plates/Views` holds the list, detail, generation, editing, and sharing views. The detail
+  change is counting on. A rewrite ends the way a generation does, with a read through: the
+  recipe is checked against what the cook asked for and against itself, and whatever that finds
+  is made as more rows on the same checklist. Both read throughs come back as
+  `GeneratedRecipeReview`, which is a plan in the shape the editor already carries out.
+- `Plates/Views` holds the list, detail, generation, editing, and sharing views. Writing a recipe
+  and rewriting one show the same progress screen: a checklist of the work, and under it
+  `RecipePreview`, the recipe as it stands at that moment. The detail
   view turns into the editor in place, so a recipe is read and written on the one screen, and
   every edit is written straight to the file rather than kept until the editor is left. The
   catalog picker the generation view browses is the same one the editor picks into, pointed at

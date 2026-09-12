@@ -134,20 +134,6 @@ struct GeneratedTroubleshootingList {
     var entries: [GeneratedTroubleshooting]
 }
 
-/// The last pass: the recipe read back the way a cook would read it, and anything that does
-/// not hold up written as the change that fixes it.
-@Generable(description: "Problems with a written recipe, as the changes that fix them")
-struct GeneratedRecipeReview {
-    @Guide(description: "True when the recipe holds up as it is and nothing needs changing")
-    var isGood: Bool
-
-    @Guide(
-        description: "The changes the recipe needs. Leave this empty when it is already good.",
-        .maximumCount(3)
-    )
-    var fixes: [GeneratedEdit]
-}
-
 @Generable
 struct GeneratedIngredient {
     @Guide(description: "The picked ingredient's name, written exactly as it was given to you")
