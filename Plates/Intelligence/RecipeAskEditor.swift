@@ -558,10 +558,45 @@ final class RecipeAskEditor {
     /// whether the recipe answers what was asked and still holds up as a recipe.
     private static func reviewPrompt(for recipe: Recipe, request: String) -> String {
         [
-            summary(of: recipe),
+            reviewSummary(of: recipe),
             "",
             text("Edit.Prompt.Review.Ask", request),
         ].joined(separator: "\n")
+    }
+
+    /// The recipe as the read through gets it. Every other pass reads the method as step titles,
+    /// which is enough to work against but not enough to check: whether a recipe makes sense is
+    /// in what the steps actually say, so this is the one pass handed the steps written out, and
+    /// the problems the troubleshooting notes claim to fix. It is the largest prompt the app
+    /// sends, and still a fraction of the on-device window.
+    private static func reviewSummary(of recipe: Recipe) -> String {
+        let ingredients = RecipeList.allCases
+            .filter(\.isIngredients)
+            .flatMap(recipe.ingredientList(in:))
+        var lines = [
+            text("Generate.Prompt.Line.Summary", recipe.title, recipe.time, recipe.serves),
+            text(
+                "Generate.Prompt.Line.Ingredients",
+                ModelPasses.joined(ingredients.map { "\($0.item) (\($0.amount))" })
+            ),
+            text("Generate.Prompt.Line.Tools", ModelPasses.joined(recipe.tools.map(\.name))),
+            text("Edit.Prompt.Review.Method"),
+        ]
+        lines += recipe.steps.enumerated().map { index, step in
+            text(
+                "Edit.Prompt.Review.Step",
+                String(index + 1),
+                step.title,
+                step.points.joined(separator: " ")
+            )
+        }
+        if !recipe.troubleshooting.isEmpty {
+            lines.append(text(
+                "Edit.Prompt.Review.Notes",
+                ModelPasses.joined(recipe.troubleshooting.map(\.problem))
+            ))
+        }
+        return lines.joined(separator: "\n")
     }
 
     private static func applyPrompt(for edit: PlannedEdit, in recipe: Recipe) -> String {

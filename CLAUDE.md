@@ -50,7 +50,11 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
   change is counting on. A rewrite ends the way a generation does, with a read through: the
   recipe is checked against what the cook asked for and against itself, and whatever that finds
   is made as more rows on the same checklist. Both read throughs come back as
-  `GeneratedRecipeReview`, which is a plan in the shape the editor already carries out.
+  `GeneratedRecipeReview`, which is a plan in the shape the editor already carries out. Every
+  other pass reads the method as step titles; the read through after an edit is the one pass
+  handed the steps written out, because whether a recipe makes sense is in what the steps say.
+  It is the largest prompt the app sends, and on the bundled recipes it runs around 600 tokens,
+  so the cloud stays a fallback.
 - `Plates/Views` holds the list, detail, generation, editing, and sharing views. Writing a recipe
   and rewriting one show the same progress screen: a checklist of the work, and under it
   `RecipePreview`, the recipe as it stands at that moment. The detail
