@@ -32,7 +32,10 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
 - `Plates/Intelligence` holds the Apple Intelligence `@Generable` types and the generator. The
   recipe is written in five passes, each in its own session, so no one request carries the whole
   recipe. The first pass picks the ingredients and pins each to a catalog icon, so every later
-  pass works from a list that already exists. A pass runs on device first, and only a pass the
+  pass works from a list that already exists. The outline pass asks for the prep and the cooking
+  as two lists and joins them, so prep landing before heat is the shape of the answer rather than
+  something a prompt has to win each time, and a title the model writes twice is dropped on sight
+  through `Step.comparable`. A pass runs on device first, and only a pass the
   on-device model rejects with `contextSizeExceeded` is run again on
   `PrivateCloudComputeLanguageModel`. Keep passes small enough that the cloud stays a fallback.
   That fallback, the background time a pass runs in, and whether the model is there at all are

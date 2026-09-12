@@ -113,11 +113,26 @@ struct GeneratedRecipeBase {
     var tools: [GeneratedTool]
 }
 
-/// The third pass: the shape of the method, titles only.
-@Generable(description: "The method for a recipe, as an ordered list of step titles")
+/// The third pass: the shape of the method, titles only. The prep and the cooking are asked
+/// for as two lists rather than one, so the order they are written in is the order they are
+/// done in, and a model that would have reached back for the chopping half way through the
+/// cooking has nowhere to put it.
+@Generable(description: "The method for a recipe, as step titles: the prep, then the cooking")
 struct GeneratedStepOutline {
-    @Guide(description: "Short imperative step titles in order, such as 'Brown pork'", .count(4...8))
-    var steps: [String]
+    @Guide(
+        description: "Titles for the work done before any heat: cutting, measuring, mixing, marinating",
+        .count(1...3)
+    )
+    var prep: [String]
+
+    @Guide(
+        description: "Titles for the cooking and the plating, in the order they are done",
+        .count(3...6)
+    )
+    var cooking: [String]
+
+    /// The method as the recipe carries it: the prep first, then the cooking.
+    var steps: [String] { prep + cooking }
 }
 
 /// The fourth pass: one step written out on its own.
@@ -416,15 +431,29 @@ final class RecipeGenerator {
             )
             var latest: GeneratedContent?
             for try await snapshot in stream {
-                progress.stepCount = snapshot.content.steps?.count ?? 0
+                let partial = snapshot.content
+                progress.stepCount = (partial.prep?.count ?? 0) + (partial.cooking?.count ?? 0)
                 latest = snapshot.rawContent
             }
             guard let latest else { throw IntelligenceError.empty }
             return try GeneratedStepOutline(latest).steps
         }
-        progress.stepCount = steps.count
-        progress.outline = steps
-        return steps
+        let method = Self.withoutRepeats(steps)
+        guard !method.isEmpty else { throw IntelligenceError.empty }
+        progress.stepCount = method.count
+        progress.outline = method
+        return method
+    }
+
+    /// Drops a step that says again what a step above it already said. The prompts ask for a
+    /// method with no repeats in it, and this is what holds when the model writes one anyway.
+    private static func withoutRepeats(_ steps: [String]) -> [String] {
+        var seen: Set<String> = []
+        return steps.compactMap { step in
+            let title = step.trimmingCharacters(in: .whitespacesAndNewlines)
+            guard !title.isEmpty, seen.insert(Step.comparable(title)).inserted else { return nil }
+            return title
+        }
     }
 
     /// Each step is written in its own session, given only the shopping list and the outline.

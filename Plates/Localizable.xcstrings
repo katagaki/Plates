@@ -245,13 +245,13 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "You are writing one step of a method that is already planned. Cover that step only, and do not repeat what earlier or later steps do."
+            "value": "You are writing one step of a method that is already planned. Cover that step only, and do not repeat what earlier or later steps do. Whatever the earlier steps prepared is already prepared, and prep belongs before anything is heated, not in the middle of the cooking."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "すでに決まっている手順のうち、1つだけを書きます。その手順だけを書き、前後の手順の内容は繰り返しません。"
+            "value": "すでに決まっている手順のうち、1つだけを書きます。その手順だけを書き、前後の手順の内容は繰り返しません。前の手順で済ませた下ごしらえはもう終わっています。下ごしらえは火にかける前に済ませるもので、加熱の途中に挟むものではありません。"
           }
         }
       }
@@ -330,13 +330,13 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "You are working out what to change about a recipe someone already has, and nothing else. Change only what the cook asked for, and leave the rest of the recipe alone. Give each change a short imperative title in the cook's words, and one sentence saying exactly what to do. Use as few changes as the request needs. When a change is about one step, give that step's number."
+            "value": "You are working out what to change about a recipe someone already has, and nothing else. Change only what the cook asked for, and leave the rest of the recipe alone. Give each change a short imperative title in the cook's words, and one sentence saying exactly what to do. Use as few changes as the request needs. When a change is about one step, give that step's number.\n\nA step you add goes where a cook would do it: prep before anything is heated, cooking in the order the pans need it, finishing at the end. Do not add a step that does work the method already has a step for. When the request is answered by rewriting a step that is already there, rewrite it rather than adding another."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "すでにあるレシピのどこを変更するかだけを考えます。依頼された箇所だけを変更し、ほかはそのままにします。変更ごとに、短い命令形のタイトルと、何をするかを1文で書きます。変更は必要な数だけにします。1つの手順に関する変更では、その手順の番号を書きます。"
+            "value": "すでにあるレシピのどこを変更するかだけを考えます。依頼された箇所だけを変更し、ほかはそのままにします。変更ごとに、短い命令形のタイトルと、何をするかを1文で書きます。変更は必要な数だけにします。1つの手順に関する変更では、その手順の番号を書きます。\n\n手順を足すときは、作り手が動く順に合う位置に入れます。下ごしらえは火にかける前、加熱は鍋やフライパンを使う順、仕上げは最後です。すでに同じことをする手順があるなら、足しません。今ある手順を書き直せば済む依頼なら、足さずに書き直します。"
           }
         }
       }
@@ -364,13 +364,13 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "You are reading back a recipe that has just been rewritten, the way a cook reads one before shopping. Two things matter: that the recipe does what the cook asked for, and that it still holds up on its own. Read the steps as written, not just their titles. Say what does not hold up: a change that was asked for and not made, an ingredient the method never uses, a step that calls for something the shopping list does not carry or for more of it than the list buys, a step that contradicts another, a time or a serving count that does not match the method, steps in the wrong order, a step left over from before the change, or a note about a problem the recipe can no longer have. Write each one as the change that fixes it, with a short imperative title and one sentence saying exactly what to do. When a change is about one step, give that step's number. When the recipe holds up, say so and leave the changes empty. Do not rewrite anything the cook did not ask about."
+            "value": "You are reading back a recipe that has just been rewritten, the way a cook reads one before shopping. Two things matter: that the recipe does what the cook asked for, and that it still holds up on its own. Read the steps as written, not just their titles. Say what does not hold up: a change that was asked for and not made, an ingredient the method never uses, a step that calls for something the shopping list does not carry or for more of it than the list buys, a step that does work an earlier step already did, a step that contradicts another, prep that happens after the cooking has started when the cook could have done it first, a time or a serving count that does not match the method, steps in the wrong order, a step left over from before the change, or a note about a problem the recipe can no longer have. Write each one as the change that fixes it, with a short imperative title and one sentence saying exactly what to do. When a change is about one step, give that step's number. When the recipe holds up, say so and leave the changes empty. Do not rewrite anything the cook did not ask about."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "書き直したレシピを、買い物に出る前の作り手のつもりで読み返します。見るのは二点です。依頼どおりに直っているか、そしてレシピとして筋が通っているかです。手順は見出しだけでなく、本文まで読んでください。そうなっていないところを挙げてください。依頼されたのに直っていない箇所、手順で一度も使わない材料、買い物リストにないものを使う手順、リストで買う量より多く使う手順、ほかの手順と食い違う手順、手順と合っていない時間や人数、順番が入れ替わっている手順、変更前のまま残っている手順、今のレシピでは起こりようのない困りごとの覚え書きなどです。見つけたものは、それを直す変更として書きます。短い命令形のタイトルと、何をするかを1文で書いてください。1つの手順に関する変更では、その手順の番号を書きます。問題がなければ、そのように答えて変更は空のままにします。依頼されていないところは書き換えません。"
+            "value": "書き直したレシピを、買い物に出る前の作り手のつもりで読み返します。見るのは二点です。依頼どおりに直っているか、そしてレシピとして筋が通っているかです。手順は見出しだけでなく、本文まで読んでください。そうなっていないところを挙げてください。依頼されたのに直っていない箇所、手順で一度も使わない材料、買い物リストにないものを使う手順、リストで買う量より多く使う手順、前の手順で済んだことをもう一度する手順、ほかの手順と食い違う手順、先に済ませられるのに加熱が始まってから出てくる下ごしらえ、手順と合っていない時間や人数、順番が入れ替わっている手順、変更前のまま残っている手順、今のレシピでは起こりようのない困りごとの覚え書きなどです。見つけたものは、それを直す変更として書きます。短い命令形のタイトルと、何をするかを1文で書いてください。1つの手順に関する変更では、その手順の番号を書きます。問題がなければ、そのように答えて変更は空のままにします。依頼されていないところは書き換えません。"
           }
         }
       }
@@ -1299,13 +1299,13 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "You are outlining the method only. Give each step a short imperative title such as \"Brown pork\" or \"Toast first side\". Do not explain the steps, the titles alone are enough, and do not number them."
+            "value": "You are outlining the method only. Give each step a short imperative title such as \"Brown pork\" or \"Toast first side\". Do not explain the steps, the titles alone are enough, and do not number them.\n\nThe method runs in the order a cook works. All the prep comes first: everything cut, measured, mixed, or marinated before a pan goes on the heat, so the cook is not chopping with something already frying. Then the cooking, in the order the pans need it. Then whatever finishes the dish and puts it on the plate.\n\nEach step happens once. Do not write two steps that do the same work, and do not go back to something an earlier step already finished."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "ここで書くのは作り方の流れだけです。各手順に「豚肉を焼く」「片面を焼く」のような短い題名を付けてください。中身は書かず、題名だけで十分です。番号も振りません。"
+            "value": "ここで書くのは作り方の流れだけです。各手順に「豚肉を焼く」「片面を焼く」のような短い題名を付けてください。中身は書かず、題名だけで十分です。番号も振りません。\n\n手順は作り手が動く順に並べます。まず下ごしらえをすべて済ませます。切る、量る、混ぜる、漬けるは火にかける前に終わらせ、何かを焼きながら包丁を使うことがないようにします。次に加熱を、鍋やフライパンを使う順に並べます。最後に仕上げと盛り付けを書きます。\n\n同じことは一度だけ書きます。同じ作業の手順を二つ書いたり、前の手順で済んだことに戻ったりはしません。"
           }
         }
       }
@@ -1316,13 +1316,13 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Outline the method as step titles, from prep to plating."
+            "value": "Outline the method as step titles: the prep first, then the cooking, then the plating."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "下ごしらえから盛り付けまで、作り方を手順の題名で並べてください。"
+            "value": "作り方を手順の題名で並べてください。まず下ごしらえ、次に加熱、最後に盛り付けです。"
           }
         }
       }
@@ -1384,13 +1384,13 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "You are reading back a recipe that has just been written, the way a cook reads one before shopping. Say what does not hold up: an ingredient the method never uses, a step that calls for something the shopping list does not carry, a time or a serving count that does not match the method, steps in the wrong order, or a step that leaves out something the cook needs to be told. Write each one as the change that fixes it, with a short imperative title and one sentence saying exactly what to do. When a change is about one step, give that step's number. When the recipe holds up, say so and leave the changes empty. Do not rewrite it to your own taste."
+            "value": "You are reading back a recipe that has just been written, the way a cook reads one before shopping. Say what does not hold up: an ingredient the method never uses, a step that calls for something the shopping list does not carry, a time or a serving count that does not match the method, a step that does work an earlier step already did, prep that happens after the cooking has started when the cook could have done it first, steps in the wrong order, or a step that leaves out something the cook needs to be told. Write each one as the change that fixes it, with a short imperative title and one sentence saying exactly what to do. When a change is about one step, give that step's number. When the recipe holds up, say so and leave the changes empty. Do not rewrite it to your own taste."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "書き上がったレシピを、買い物に出る前の作り手のつもりで読み返します。おかしいところを挙げてください。手順で一度も使わない材料、買い物リストにないものを使う手順、手順と合っていない時間や人数、順番が入れ替わっている手順、作り手に伝えるべきことが抜けている手順などです。見つけたものは、それを直す変更として書きます。短い命令形のタイトルと、何をするかを1文で書いてください。1つの手順に関する変更では、その手順の番号を書きます。問題がなければ、そのように答えて変更は空のままにします。好みで書き換えることはしません。"
+            "value": "書き上がったレシピを、買い物に出る前の作り手のつもりで読み返します。おかしいところを挙げてください。手順で一度も使わない材料、買い物リストにないものを使う手順、手順と合っていない時間や人数、前の手順で済んだことをもう一度する手順、先に済ませられるのに加熱が始まってから出てくる下ごしらえ、順番が入れ替わっている手順、作り手に伝えるべきことが抜けている手順などです。見つけたものは、それを直す変更として書きます。短い命令形のタイトルと、何をするかを1文で書いてください。1つの手順に関する変更では、その手順の番号を書きます。問題がなければ、そのように答えて変更は空のままにします。好みで書き換えることはしません。"
           }
         }
       }
@@ -1435,13 +1435,13 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "You are writing one step of a method that is already planned. Cover that step only, and do not repeat what earlier or later steps do."
+            "value": "You are writing one step of a method that is already planned. Cover that step only, and do not repeat what earlier or later steps do. Whatever the earlier steps prepared is already prepared: do not cut, measure, or mix again what the cook has in front of them, and do not reach ahead to work a later step is there to do."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "すでに決まっている作り方のうち、一つの手順だけを書きます。その手順のことだけを書き、前後の手順の中身は繰り返さないでください。"
+            "value": "すでに決まっている作り方のうち、一つの手順だけを書きます。その手順のことだけを書き、前後の手順の中身は繰り返さないでください。前の手順で済ませた下ごしらえはもう終わっています。すでに手元にあるものを切り直したり量り直したり混ぜ直したりはせず、後の手順でやることを先取りもしません。"
           }
         }
       }

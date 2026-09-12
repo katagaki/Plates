@@ -124,6 +124,19 @@ extension Recipe {
 }
 
 extension Step {
+    /// A step title with its case, spacing, and punctuation dropped, so "Brown the pork" and
+    /// "Brown the pork." are read as the one step. It catches a title written twice, which is
+    /// the repeat worth dropping on sight. A repeat written two different ways is left to the
+    /// prompts and to the read through, since deleting a step on a guess costs more than
+    /// keeping one that reads close to its neighbour.
+    static func comparable(_ title: String) -> String {
+        title.lowercased()
+            .map { $0.isLetter || $0.isNumber ? String($0) : " " }
+            .joined()
+            .split(separator: " ")
+            .joined(separator: " ")
+    }
+
     /// Words that say nothing about which ingredient or tool a step reaches for.
     private static let ignored: Set<String> = [
         "about", "chopped", "cooking", "cut", "diced", "dried", "fine", "finely", "fresh",

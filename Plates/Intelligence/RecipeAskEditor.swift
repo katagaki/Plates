@@ -384,6 +384,13 @@ final class RecipeAskEditor {
             recipe.steps[index] = Step(title: written.title, icons: nil, points: written.points)
         case .addStep:
             let written = try await write(GeneratedStep.self, for: edit, in: recipe)
+            // A step the method already has is not added again. The model is told to put a new
+            // step where a cook would do it, and this is what holds when it writes one that is
+            // already there.
+            let title = Step.comparable(written.title)
+            guard !recipe.steps.contains(where: { Step.comparable($0.title) == title }) else {
+                return recipe
+            }
             let index = edit.step == 0 ? recipe.steps.count : min(edit.step - 1, recipe.steps.count)
             let step = Step(title: written.title, icons: nil, points: written.points)
             recipe.steps.insert(step, at: max(0, index))
