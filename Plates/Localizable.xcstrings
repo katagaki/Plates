@@ -511,6 +511,40 @@
         }
       }
     },
+    "Generate.IgnorePicks.Footer": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leave the picked ingredients and tools out. They stay here for the next recipe."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "選択した材料と道具をレシピに使いません。選択内容は次のレシピのために残ります。"
+          }
+        }
+      }
+    },
+    "Generate.IgnorePicks.Label": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ignore my picks"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "選択を無視"
+          }
+        }
+      }
+    },
     "Generate.Ingredients.Empty": {
       "extractionState": "manual",
       "localizations": {
