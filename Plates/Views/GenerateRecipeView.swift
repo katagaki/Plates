@@ -74,6 +74,13 @@ struct GenerateRecipeView: View {
                 Text("Generate.Description.Footer")
             }
 
+            Section {
+                Toggle("Generate.IgnorePicks.Label", isOn: $request.ignoresPicks)
+                    .disabled(!generator.isAvailable)
+            } footer: {
+                Text("Generate.IgnorePicks.Footer")
+            }
+
             picks(
                 "Generate.Choose.Ingredients",
                 assets: shelf(.fresh),
@@ -81,6 +88,7 @@ struct GenerateRecipeView: View {
             ) {
                 CatalogPickerView.ingredients(selection: shelf(.fresh))
             }
+            .disabled(request.ignoresPicks)
 
             picks(
                 "Generate.Choose.Pantry",
@@ -89,6 +97,7 @@ struct GenerateRecipeView: View {
             ) {
                 CatalogPickerView.pantry(selection: shelf(.pantry))
             }
+            .disabled(request.ignoresPicks)
 
             picks(
                 "Generate.Choose.Tools",
@@ -97,6 +106,7 @@ struct GenerateRecipeView: View {
             ) {
                 CatalogPickerView.tools(selection: $request.tools)
             }
+            .disabled(request.ignoresPicks)
         }
         .safeAreaInset(edge: .bottom) { generateBar }
     }

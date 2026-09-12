@@ -11,10 +11,24 @@ struct GenerationRequest: Equatable, Sendable {
     var ingredients: [String] = []
     /// Tool asset names picked from the catalog.
     var tools: [String] = []
+    /// Set when the cook wants the picks left out, so the model writes from the dish alone.
+    var ignoresPicks = false
 
-    /// Nothing to work from, so there is nothing to ask for.
+    /// Nothing to work from, so there is nothing to ask for. Ignoring the picks is itself an
+    /// ask, so a recipe can be written from nothing else.
     var isEmpty: Bool {
-        trimmedDescription.isEmpty && ingredients.isEmpty && tools.isEmpty
+        !ignoresPicks && trimmedDescription.isEmpty && ingredients.isEmpty && tools.isEmpty
+    }
+
+    /// The request as the model is given it. The picks stay on the form so the next recipe
+    /// starts from the same shelf, but nothing built from them reaches a prompt while they
+    /// are ignored.
+    var asAsked: GenerationRequest {
+        guard ignoresPicks else { return self }
+        var request = self
+        request.ingredients = []
+        request.tools = []
+        return request
     }
 
     var trimmedDescription: String {
@@ -255,7 +269,8 @@ final class RecipeGenerator {
     /// Why the button is disabled, in words a cook can act on.
     var unavailableReason: LocalizedStringResource? { passes.unavailableReason }
 
-    func generate(_ request: GenerationRequest) async -> Recipe? {
+    func generate(_ asked: GenerationRequest) async -> Recipe? {
+        let request = asked.asAsked
         state = .generating
         progress = GenerationProgress()
         activity.start(progress.activity)
