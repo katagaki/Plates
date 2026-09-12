@@ -127,11 +127,25 @@ struct GeneratedStepDetail {
     var points: [String]
 }
 
-/// The last pass: what goes wrong and how to fix it.
+/// The fifth pass: what goes wrong and how to fix it.
 @Generable(description: "Problems a cook runs into with this recipe, and their fixes")
 struct GeneratedTroubleshootingList {
     @Guide(description: "Things that commonly go wrong and how to fix them", .count(2...5))
     var entries: [GeneratedTroubleshooting]
+}
+
+/// The last pass: the recipe read back the way a cook would read it, and anything that does
+/// not hold up written as the change that fixes it.
+@Generable(description: "Problems with a written recipe, as the changes that fix them")
+struct GeneratedRecipeReview {
+    @Guide(description: "True when the recipe holds up as it is and nothing needs changing")
+    var isGood: Bool
+
+    @Guide(
+        description: "The changes the recipe needs. Leave this empty when it is already good.",
+        .maximumCount(3)
+    )
+    var fixes: [GeneratedEdit]
 }
 
 @Generable
@@ -179,6 +193,7 @@ struct GenerationProgress: Equatable, Sendable {
         case outline
         case details
         case troubleshooting
+        case review
 
         var title: LocalizedStringResource {
             switch self {
@@ -187,6 +202,7 @@ struct GenerationProgress: Equatable, Sendable {
             case .outline: "Generate.Progress.Stage.Outline"
             case .details: "Generate.Progress.Stage.Details"
             case .troubleshooting: "Generate.Progress.Stage.Troubleshooting"
+            case .review: "Generate.Progress.Stage.Review"
             }
         }
     }
@@ -203,6 +219,10 @@ struct GenerationProgress: Equatable, Sendable {
     var stepCount = 0
     var writtenStepCount = 0
     var troubleshootingCount = 0
+    /// How many fixes the review asked for and got.
+    var fixCount = 0
+    /// The step titles as they stand, so the preview reads the method as it is written.
+    var outline: [String] = []
     /// The step the model is writing right now.
     var latestStep: String?
     /// Set when the last pass ends, so the bar always lands on full.
@@ -230,7 +250,17 @@ struct GenerationProgress: Equatable, Sendable {
         let outline = min(Double(stepCount) / 5, 1)
         let details = stepCount == 0 ? 0 : Double(writtenStepCount) / Double(stepCount)
         let troubleshooting = min(Double(troubleshootingCount) / 2, 1)
-        return pick * 0.15 + idea * 0.25 + outline * 0.15 + details * 0.3 + troubleshooting * 0.15
+        // How long the read through takes is not known while it runs, so it counts as half
+        // done from the moment it starts and lands on full when the run ends.
+        let review = stage == .review ? 0.5 : 0
+        return pick * 0.15 + idea * 0.2 + outline * 0.1 + details * 0.3
+            + troubleshooting * 0.1 + review * 0.15
+    }
+
+    /// Whether a step has been written out, so the preview can tell a step that is on the page
+    /// from one that is still only a title.
+    func isWritten(step index: Int) -> Bool {
+        stage.rawValue > Stage.details.rawValue || index < writtenStepCount
     }
 }
 
@@ -240,6 +270,11 @@ struct GenerationProgress: Equatable, Sendable {
 /// together, then the title and their amounts, then the step titles, then every step on its
 /// own, then troubleshooting. Nothing carries the whole recipe in its context, so a long
 /// recipe cannot run the window out.
+///
+/// A sixth pass reads the finished recipe back and says what does not hold up, and whatever it
+/// asks for is made by the same passes a cook's own request goes through. The fixed recipe is
+/// read back again, so a fix that breaks something else is caught, until nothing is left to fix
+/// or the loop has been round `reviewLimit` times.
 @MainActor
 @Observable
 final class RecipeGenerator {
@@ -262,6 +297,13 @@ final class RecipeGenerator {
     /// The lock screen face of the run.
     private let activity = GenerationActivity()
 
+    /// Carries out whatever the review asks for. It is the same editor a cook's own request
+    /// runs through, driven here from a plan the review wrote rather than from words.
+    private let reviser = RecipeAskEditor()
+
+    /// How many times the recipe is read back before it is handed over as it stands.
+    private static let reviewLimit = 2
+
     var availability: SystemLanguageModel.Availability { passes.availability }
 
     var isAvailable: Bool { passes.isAvailable }
@@ -282,15 +324,17 @@ final class RecipeGenerator {
             let outline = try await generateOutline(for: base)
             let steps = try await generateSteps(outline: outline, base: base)
             let troubleshooting = try await generateTroubleshooting(base: base, outline: outline)
-            progress.isFinished = true
-            state = .idle
-            activity.end(progress.activity, outcome: "Generate.Activity.Done")
-            return Self.makeRecipe(
+            let written = Self.makeRecipe(
                 base: base,
                 pick: pick,
                 steps: steps,
                 troubleshooting: troubleshooting
             )
+            let reviewed = await review(written)
+            progress.isFinished = true
+            state = .idle
+            activity.end(progress.activity, outcome: "Generate.Activity.Done")
+            return reviewed
         } catch {
             state = .failed(error.localizedDescription)
             activity.end(progress.activity, outcome: "Generate.Activity.Failed")
@@ -393,6 +437,7 @@ final class RecipeGenerator {
             return try GeneratedStepOutline(latest).steps
         }
         progress.stepCount = steps.count
+        progress.outline = steps
         return steps
     }
 
@@ -437,6 +482,38 @@ final class RecipeGenerator {
         }
     }
 
+    /// Reads the finished recipe back and fixes whatever does not hold up, then reads it back
+    /// again. The loop stops as soon as a read through finds nothing, and a recipe that is
+    /// written is worth more than one more read through, so a review that fails leaves the
+    /// recipe as it stands rather than losing it.
+    private func review(_ written: Recipe) async -> Recipe {
+        progress.stage = .review
+        var recipe = written
+        progress.outline = recipe.steps.map(\.title)
+        for _ in 0..<Self.reviewLimit {
+            do {
+                let found = try await passes.run(instructions: Self.reviewInstructions) { session in
+                    let response = try await session.respond(
+                        to: Self.reviewPrompt(for: recipe),
+                        generating: GeneratedRecipeReview.self
+                    )
+                    return response.content.isGood ? [] : response.content.fixes
+                }
+                let plan = RecipeAskEditor.ordered(found)
+                guard !plan.isEmpty else { break }
+                recipe = try await reviser.revise(recipe, with: plan)
+                progress.fixCount += plan.count
+                progress.title = recipe.title
+                progress.time = recipe.time
+                progress.serves = recipe.serves
+                progress.outline = recipe.steps.map(\.title)
+            } catch {
+                break
+            }
+        }
+        return recipe
+    }
+
     // MARK: - Prompts
 
     /// The prompt shorthands, so a prompt below reads as prose rather than as calls.
@@ -478,6 +555,10 @@ final class RecipeGenerator {
 
     private static var troubleshootingInstructions: String {
         houseStyle + "\n\n" + text("Generate.Prompt.Troubleshooting")
+    }
+
+    private static var reviewInstructions: String {
+        houseStyle + "\n\n" + text("Generate.Prompt.Review")
     }
 
     private static func prompt(for request: GenerationRequest) -> String {
@@ -541,6 +622,16 @@ final class RecipeGenerator {
             text("Generate.Prompt.Line.Method", method(outline)),
             "",
             text("Generate.Prompt.Troubleshooting.Ask"),
+        ].joined(separator: "\n")
+    }
+
+    /// The whole recipe as the read through gets it, which is the same shape a cook's own
+    /// request is planned against.
+    private static func reviewPrompt(for recipe: Recipe) -> String {
+        [
+            RecipeAskEditor.summary(of: recipe),
+            "",
+            text("Generate.Prompt.Review.Ask"),
         ].joined(separator: "\n")
     }
 

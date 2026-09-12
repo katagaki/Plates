@@ -36,7 +36,11 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
   on-device model rejects with `contextSizeExceeded` is run again on
   `PrivateCloudComputeLanguageModel`. Keep passes small enough that the cloud stays a fallback.
   That fallback, the background time a pass runs in, and whether the model is there at all are
-  written down once in `ModelPasses`, which both the generator and the editor run through.
+  written down once in `ModelPasses`, which both the generator and the editor run through. A last
+  pass reads the written recipe back and says what does not hold up, as a plan in the shape
+  `RecipeAskEditor` carries out, so a fix is made by the same passes a cook's own request goes
+  through. The fixed recipe is read back again, until nothing is left to fix or the loop has been
+  round twice. A read through that fails leaves the recipe as it stands rather than losing it.
 - `RecipeAskEditor` rewrites a recipe the cook already has, from a request in their own words.
   It asks twice over: once for a plan of what to change, then once for each change on that plan,
   each in its own session and given only the recipe and the one change to make. The plan is what

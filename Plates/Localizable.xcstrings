@@ -783,6 +783,23 @@
         }
       }
     },
+    "Generate.Progress.Row.Review": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reading it back"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レシピを確認中"
+          }
+        }
+      }
+    },
     "Generate.Progress.Row.StepDetails": {
       "extractionState": "manual",
       "localizations": {
@@ -915,6 +932,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "材料を選択しています"
+          }
+        }
+      }
+    },
+    "Generate.Progress.Stage.Review": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reading it back"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レシピを確認しています"
           }
         }
       }
@@ -1238,6 +1272,40 @@
           "stringUnit": {
             "state": "translated",
             "value": "料理名は伝えられていないので、手元の材料でうまく作れる料理を選んでください。"
+          }
+        }
+      }
+    },
+    "Generate.Prompt.Review": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You are reading back a recipe that has just been written, the way a cook reads one before shopping. Say what does not hold up: an ingredient the method never uses, a step that calls for something the shopping list does not carry, a time or a serving count that does not match the method, steps in the wrong order, or a step that leaves out something the cook needs to be told. Write each one as the change that fixes it, with a short imperative title and one sentence saying exactly what to do. When a change is about one step, give that step's number. When the recipe holds up, say so and leave the changes empty. Do not rewrite it to your own taste."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "書き上がったレシピを、買い物に出る前の作り手のつもりで読み返します。おかしいところを挙げてください。手順で一度も使わない材料、買い物リストにないものを使う手順、手順と合っていない時間や人数、順番が入れ替わっている手順、作り手に伝えるべきことが抜けている手順などです。見つけたものは、それを直す変更として書きます。短い命令形のタイトルと、何をするかを1文で書いてください。1つの手順に関する変更では、その手順の番号を書きます。問題がなければ、そのように答えて変更は空のままにします。好みで書き換えることはしません。"
+          }
+        }
+      }
+    },
+    "Generate.Prompt.Review.Ask": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Read this recipe back. What does not hold up?"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "このレシピを読み返してください。おかしいところはありますか。"
           }
         }
       }

@@ -201,11 +201,14 @@ struct GenerateRecipeView: View {
     }
 
     /// While the model works, the form goes away and the passes have the screen to themselves.
+    /// The recipe grows under them, so it scrolls rather than running off the bottom.
     private var progress: some View {
-        GenerationProgressView(progress: generator.progress)
-            .padding(.listRowInset)
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-            .background(Color(uiColor: .systemGroupedBackground))
+        ScrollView {
+            GenerationProgressView(progress: generator.progress)
+                .padding(.listRowInset)
+                .frame(maxWidth: .infinity, alignment: .leading)
+        }
+        .background(Color(uiColor: .systemGroupedBackground))
     }
 
     private var isGenerating: Bool { generator.state == .generating }
@@ -215,22 +218,43 @@ struct GenerateRecipeView: View {
     }
 }
 
-/// The recipe filling in, stage by stage, while the model writes it.
+/// The recipe filling in, stage by stage, while the model writes it. The checklist is on top
+/// and the recipe reads under it, so the cook watches the work and the writing in one place.
 private struct GenerationProgressView: View {
     let progress: GenerationProgress
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Text(progress.stage.title)
-                .font(.subheadline)
+            VStack(alignment: .leading, spacing: 12) {
+                row("Generate.Progress.Row.Picked", count: progress.pickedCount, stage: .pick)
+                row("Generate.Progress.Row.Ingredients", count: progress.ingredientCount, stage: .idea)
+                row("Generate.Progress.Row.Tools", count: progress.toolCount, stage: .idea)
+                row("Generate.Progress.Row.Steps", count: progress.stepCount, stage: .outline)
+                row("Generate.Progress.Row.StepDetails", count: progress.writtenStepCount, stage: .details)
+                row(
+                    "Generate.Progress.Row.Troubleshooting",
+                    count: progress.troubleshootingCount,
+                    stage: .troubleshooting
+                )
+                row("Generate.Progress.Row.Review", count: progress.fixCount, stage: .review)
+            }
 
-            if let heading = progress.title ?? progress.dish, !heading.isEmpty {
+            preview
+        }
+        .animation(.default, value: progress)
+    }
+
+    /// The recipe as it stands, under the checklist. A step that has been written out is read
+    /// in full black, and one that is still only a title waits in grey.
+    @ViewBuilder private var preview: some View {
+        if let heading = progress.title ?? progress.dish, !heading.isEmpty {
+            VStack(alignment: .leading, spacing: 12) {
+                Divider()
+
                 VStack(alignment: .leading, spacing: 2) {
                     Text(verbatim: heading)
                         .font(.title2)
                         .fontWeight(.semibold)
-                        .lineLimit(1)
-                        .truncationMode(.tail)
                     if let time = progress.time, let serves = progress.serves {
                         Text(String(
                             format: String(localized: "Recipe.Row.Subtitle"),
@@ -241,36 +265,29 @@ private struct GenerationProgressView: View {
                             .foregroundStyle(.secondary)
                     }
                 }
-            }
 
-            row("Generate.Progress.Row.Picked", count: progress.pickedCount, stage: .pick)
-            row("Generate.Progress.Row.Ingredients", count: progress.ingredientCount, stage: .idea)
-            row("Generate.Progress.Row.Tools", count: progress.toolCount, stage: .idea)
-            row("Generate.Progress.Row.Steps", count: progress.stepCount, stage: .outline)
-            row("Generate.Progress.Row.StepDetails", count: progress.writtenStepCount, stage: .details)
-            row(
-                "Generate.Progress.Row.Troubleshooting",
-                count: progress.troubleshootingCount,
-                stage: .troubleshooting
-            )
-
-            if progress.stage == .details, let latestStep = progress.latestStep, !latestStep.isEmpty {
-                Text(verbatim: latestStep)
-                    .font(.subheadline)
-                    .foregroundStyle(.tertiary)
+                // Step titles are written by the model, so they are shown as written.
+                ForEach(Array(progress.outline.enumerated()), id: \.offset) { index, title in
+                    HStack(alignment: .firstTextBaseline, spacing: 8) {
+                        Text(index + 1, format: .number)
+                            .font(.subheadline.monospacedDigit())
+                            .foregroundStyle(.secondary)
+                        Text(verbatim: title)
+                            .font(.subheadline)
+                            .foregroundStyle(progress.isWritten(step: index) ? .primary : .secondary)
+                        Spacer(minLength: 0)
+                    }
+                }
             }
         }
-        .animation(.default, value: progress)
     }
 
-    /// Where a line has got to: spinning while its pass is the one running, ticked once it has
-    /// something to show.
-    private func marker(
-        for stage: GenerationProgress.Stage,
-        count: Int
-    ) -> ProgressMarkerState {
-        if progress.stage == stage && !progress.isFinished { return .working }
-        return count > 0 ? .done : .waiting
+    /// Where a line has got to: spinning while its pass is the one running, ticked once that
+    /// pass is behind it.
+    private func marker(for stage: GenerationProgress.Stage) -> ProgressMarkerState {
+        if progress.isFinished { return .done }
+        if progress.stage == stage { return .working }
+        return progress.stage.rawValue > stage.rawValue ? .done : .waiting
     }
 
     /// One line of the checklist, spinning while its pass is the one running.
@@ -280,7 +297,7 @@ private struct GenerationProgressView: View {
         stage: GenerationProgress.Stage
     ) -> some View {
         HStack(spacing: 8) {
-            ProgressMarker(state: marker(for: stage, count: count))
+            ProgressMarker(state: marker(for: stage))
             Text(label)
             Spacer(minLength: 0)
             if count > 0 {
@@ -291,4 +308,3 @@ private struct GenerationProgressView: View {
         }
     }
 }
-
