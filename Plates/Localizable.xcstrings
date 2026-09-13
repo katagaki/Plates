@@ -41,13 +41,13 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Make Changes"
+            "value": "Review Proposed Edits"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "変更する"
+            "value": "変更案を確認"
           }
         }
       }
@@ -58,13 +58,13 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Apple Intelligence works out what to change, then makes the changes one at a time. Nothing is saved until you keep it."
+            "value": "Describe what you want to change. Review the proposed edits before they are applied."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "Apple Intelligenceが変更内容を判断し、1つずつ変更していきます。保存するまでレシピは変わりません。"
+            "value": "変更したい内容を入力してください。変更を適用する前に、変更案を確認できます。"
           }
         }
       }
@@ -8157,6 +8157,70 @@
           "stringUnit": {
             "state": "translated",
             "value": "木べら"
+          }
+        }
+      }
+    },
+    "Edit.Plan.Title": {
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Proposed Edits"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "変更案"
+          }
+        }
+      }
+    },
+    "Edit.Plan.Footer": {
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apply this plan to generate the edits. The recipe will then be checked for consistency. You can review the result before saving."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "この変更案を適用すると、変更内容を生成し、レシピの整合性を確認します。保存する前に結果を確認できます。"
+          }
+        }
+      }
+    },
+    "Edit.Plan.Apply": {
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apply Edits"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "変更を適用"
+          }
+        }
+      }
+    },
+    "Edit.Plan.Revise": {
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Revise Request"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "依頼内容を修正"
           }
         }
       }

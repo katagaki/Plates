@@ -217,6 +217,7 @@ final class RecipeAskEditor {
     enum State: Equatable {
         case idle
         case working
+        case awaitingApproval
         case failed(String)
     }
 
@@ -225,6 +226,10 @@ final class RecipeAskEditor {
     private(set) var progress = EditProgress() {
         didSet { activity.update(progress.activity) }
     }
+
+    private(set) var proposedEdits: [PlannedEdit] = []
+    private var plannedRecipe: Recipe?
+    private var plannedRequest = ""
 
     private let passes = ModelPasses()
     private let activity = GenerationActivity()
@@ -236,23 +241,55 @@ final class RecipeAskEditor {
 
     var unavailableReason: LocalizedStringResource? { passes.unavailableReason }
 
-    /// The recipe as the cook asked for it, or nothing when the model could not do it.
-    func edit(_ recipe: Recipe, request: String) async -> Recipe? {
+    /// Plans changes without generating or saving any rewritten recipe content.
+    func prepare(_ recipe: Recipe, request: String) async {
+        guard state != .working else { return }
+        state = .working
+        proposedEdits = []
+        plannedRecipe = nil
+        progress = EditProgress()
+        progress.show(recipe)
+        passes.beginBackgroundRun(named: "Recipe edit planning")
+        defer { passes.endBackgroundRun() }
+        do {
+            let plan = try await planEdits(for: recipe, request: request)
+            guard !plan.isEmpty else { throw EditError.nothingToChange }
+            proposedEdits = plan
+            plannedRecipe = recipe
+            plannedRequest = request
+            progress.isPlanning = false
+            state = .awaitingApproval
+        } catch {
+            state = .failed(error.localizedDescription)
+        }
+    }
+
+    func discardPlan() {
+        guard state != .working else { return }
+        proposedEdits = []
+        plannedRecipe = nil
+        plannedRequest = ""
+        state = .idle
+    }
+
+    /// Applies exactly the reviewed plan to the recipe it was prepared for.
+    func applyApprovedPlan() async -> Recipe? {
+        guard state == .awaitingApproval, let recipe = plannedRecipe,
+              !proposedEdits.isEmpty else { return nil }
+        let plan = proposedEdits
+        let request = plannedRequest
         state = .working
         progress = EditProgress()
+        progress.show(recipe)
+        progress.isPlanning = false
+        progress.plannedCount = plan.count
+        progress.changes = plan.enumerated().map {
+            EditProgress.Change(id: $0.offset, title: $0.element.title)
+        }
         activity.start(progress.activity)
         passes.beginBackgroundRun(named: "Recipe editing")
         defer { passes.endBackgroundRun() }
         do {
-            progress.show(recipe)
-            let plan = try await planEdits(for: recipe, request: request)
-            guard !plan.isEmpty else { throw EditError.nothingToChange }
-            progress.isPlanning = false
-            progress.plannedCount = plan.count
-            progress.changes = plan.enumerated().map {
-                EditProgress.Change(id: $0.offset, title: $0.element.title)
-            }
-
             var edited = recipe
             for (index, edit) in plan.enumerated() {
                 progress.changes[index].state = .working

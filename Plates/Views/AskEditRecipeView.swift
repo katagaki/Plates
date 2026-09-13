@@ -1,8 +1,7 @@
 import SwiftUI
 
 /// The sheet that rewrites a recipe from a request in the cook's own words. Apple Intelligence
-/// works out what to change, and the screen fills in with the changes it settled on as it makes
-/// them, so the cook sees what is being done rather than a spinner.
+/// proposes changes for review before applying the approved plan.
 struct AskEditRecipeView: View {
     @Environment(\.dismiss) private var dismiss
 
@@ -19,6 +18,8 @@ struct AskEditRecipeView: View {
             Group {
                 if let edited {
                     RecipeDetailView(recipe: edited)
+                } else if editor.state == .awaitingApproval {
+                    planReview
                 } else if isWorking {
                     progress
                 } else {
@@ -106,7 +107,7 @@ struct AskEditRecipeView: View {
             }
 
             Button {
-                Task { edited = await editor.edit(recipe, request: trimmedRequest) }
+                Task { await editor.prepare(recipe, request: trimmedRequest) }
             } label: {
                 HStack(spacing: 8) {
                     Image(systemName: "apple.intelligence")
@@ -124,6 +125,46 @@ struct AskEditRecipeView: View {
         .multilineTextAlignment(.center)
         .padding(.horizontal, 16)
         .padding(.bottom, 8)
+    }
+
+    private var planReview: some View {
+        Form {
+            Section {
+                Text(verbatim: trimmedRequest)
+            } header: {
+                Text("Edit.Ask.Label")
+            }
+            Section {
+                ForEach(Array(editor.proposedEdits.enumerated()), id: \.offset) { _, edit in
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(verbatim: edit.title)
+                            .font(.headline)
+                        Text(verbatim: edit.instruction)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+            } header: {
+                Text("Edit.Plan.Title")
+            } footer: {
+                Text("Edit.Plan.Footer")
+            }
+            Section {
+                Button("Edit.Plan.Revise") { editor.discardPlan() }
+            }
+        }
+        .safeAreaInset(edge: .bottom) {
+            Button {
+                Task { edited = await editor.applyApprovedPlan() }
+            } label: {
+                Text("Edit.Plan.Apply")
+                    .font(.body.weight(.semibold))
+                    .frame(maxWidth: .infinity)
+            }
+            .buttonStyle(.glassProminent)
+            .controlSize(.large)
+            .padding(.horizontal, 16)
+            .padding(.bottom, 8)
+        }
     }
 
     /// While the model works, the form goes away and the changes have the screen to themselves.
@@ -206,7 +247,7 @@ private struct EditProgressView: View {
         state: ProgressMarkerState,
         @ViewBuilder label: () -> some View
     ) -> some View {
-        HStack(alignment: .firstTextBaseline, spacing: 8) {
+        HStack(alignment: .center, spacing: 8) {
             ProgressMarker(state: state)
             label()
             Spacer(minLength: 0)
