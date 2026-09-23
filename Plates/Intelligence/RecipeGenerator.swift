@@ -292,7 +292,7 @@ final class RecipeGenerator {
         didSet { activity.update(progress.activity) }
     }
 
-    /// The model, the cloud it falls back to, and the background time a pass runs in.
+    /// The on-device model and the background time a pass runs in.
     private let passes = ModelPasses()
 
     /// The lock screen face of the run.
