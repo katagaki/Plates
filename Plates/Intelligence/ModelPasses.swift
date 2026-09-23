@@ -16,11 +16,16 @@ enum IntelligenceError: LocalizedError {
     }
 }
 
-/// The on-device model and the time the app asks for to finish a pass once it is off screen.
-/// Writing a recipe and rewriting one both run their passes through one of these.
+/// The model, the cloud a pass falls back to, and the time the app asks for to finish a pass
+/// once it is off screen. Writing a recipe and rewriting one both run their passes through one
+/// of these, so availability, the fallback, and the background time are written down once.
 @MainActor
 final class ModelPasses {
     private let model = SystemLanguageModel.default
+
+    /// Where a pass goes when it does not fit on device. Held rather than made per pass so
+    /// availability and quota are read from one place.
+    private let cloud = PrivateCloudComputeLanguageModel()
 
     /// Held while the model works, so walking away from the app does not suspend a pass part
     /// way through. iOS grants around half a minute, which is enough for the pass in flight to
@@ -47,7 +52,10 @@ final class ModelPasses {
         }
     }
 
-    /// Runs one pass on device and reports when the request exceeds its context window.
+    /// Runs one pass on device, and runs it again on Private Cloud Compute when the request
+    /// does not fit the on-device window. Nothing leaves the device until the on-device model
+    /// has turned the pass down, and a pass small enough to run at home never reaches the
+    /// cloud at all.
     func run<Value>(
         tools: [any FoundationModels.Tool] = [],
         instructions: String,
@@ -57,7 +65,14 @@ final class ModelPasses {
             return try await body(LanguageModelSession(tools: tools, instructions: instructions))
         } catch let error as LanguageModelError {
             guard case .contextSizeExceeded = error else { throw error }
-            throw IntelligenceError.tooLarge
+            guard cloud.isAvailable else { throw IntelligenceError.tooLarge }
+            return try await body(
+                LanguageModelSession(
+                    model: cloud,
+                    tools: cloud.capabilities.contains(.toolCalling) ? tools : [],
+                    instructions: instructions
+                )
+            )
         }
     }
 
