@@ -39,6 +39,23 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
   site's. The public types carry hand written `public` initializers, since Swift does not make
   a memberwise one public.
 - `Plates/Storage` holds the storage location and the file-backed `RecipeStore`.
+- The cook picks who writes the recipes, in onboarding and again from "Choose Model" in the
+  menu: Granite, Apple Foundation Models, Claude, or OpenAI. `ModelSettings` in `Models` holds
+  the pick in the app's defaults and the API keys in the Keychain, readable after first unlock
+  so a run in the background can still send its requests. Claude and OpenAI each take two
+  models: a generation model, which writes recipes, translates the cook's request, and plans and
+  makes edits, and a verification model, which runs the sorting passes and the editor's read
+  through. The verification model is asked for low effort where the model takes it, since a
+  recipe is sorted in dozens of small passes. The model lists are Claude Haiku 4.5, Sonnet 5,
+  and Opus 5.5, and GPT-6 Astra, Sol, and Luna, by the identifiers their APIs take.
+- `RemoteLanguageModel` in `Intelligence` is Claude or OpenAI as a Foundation Models
+  `LanguageModel`, so every pass runs through the same `LanguageModelSession` code whoever
+  answers. Its executor turns the transcript into a Messages API or Responses API request,
+  streams the reply back as text, and sends a `@Generable` schema as the API's JSON schema
+  format. `GenerationSchema` encodes as JSON Schema already, but carries `x-order`, `title`, and
+  count and length limits that the APIs turn down, so those keywords are taken out, leaving
+  property names alone. Tools are not passed on. `ModelCheck` says hello to the picked model,
+  to both remote models when they differ, and is what onboarding's connection step runs.
 - `CulinaryIntelligence/Sources/CulinaryIntelligence/Writer` holds the writer model and its
   runner. `WriterModel` is IBM's Granite 4.0 1B at Q4_K_M, the build the Plates Kitchen evals in
   `../PlatesKitchen` ran, downloaded from a pinned Hugging Face revision into Application
@@ -87,10 +104,14 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
     sometimes runs past a Japanese string into `」} ```json{` or a `<ctrl46>` token, and then
     through `Measures.tidied`, which puts a spoon measure written back as "2大さじ" right and
     writes every range with "to", or から in Japanese.
-  An Apple pass runs on device first, and only a pass the on-device model rejects with
-  `contextSizeExceeded` is run again on `PrivateCloudComputeLanguageModel`. That fallback, the
-  background time a pass runs in, and whether the model is there at all are written down once in
-  `ModelPasses`, which both the generator and the editor run through. A generation has no read
+  With Apple Foundation Models, Claude, or OpenAI picked, that model writes in Granite's place,
+  from Granite's own English prompt, since the reading below is of English text; the rest of
+  the run is the same. An Apple pass runs on device first, and only a pass the on-device model
+  rejects with `contextSizeExceeded` is run again on `PrivateCloudComputeLanguageModel`. That
+  fallback, the background time a pass runs in, whether the model is there at all, and which
+  model a pass goes to are written down once in `ModelPasses`, which both the generator and the
+  editor run through. A `ModelPasses` is made for a role, generation or verification, and sends
+  every pass to the cook's remote model for that role when one is picked. A generation has no read
   through at the end. It had one, and once the sorting was faithful line for line, the read
   through was what made recipes wrong: it rewrote whole lists, dropping and duplicating lines
   and adding ones Granite never wrote. Rewriting a recipe stays on Apple Intelligence alone,
@@ -113,10 +134,15 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
   It is the largest prompt the app sends, and on the bundled recipes it runs around 600 tokens,
   so the cloud stays a fallback.
 - `Plates/Views` holds the list, detail, generation, editing, and sharing views, and
-  `ModelDownloadView`. The writer model is downloaded before anything else: on launch, while it
-  is not on disk, `MainView` shows that sheet, which cannot be dismissed and closes by itself
-  once the file lands. It shows the download as a ring with the percentage in the middle, and
-  offers to try again when the download fails. Writing a recipe
+  `ModelDownloadView`. `Plates/Views/Onboarding` holds `OnboardingView`, laid out the way
+  SakuraRSS's is: one file per step. A new install is shown it until `Onboarding.Completed` is
+  set: what Plates does, the model to use, then either Granite's download or a hello to the
+  picked model, and last a dish to write the first recipe from, which opens the recipe sheet
+  with it filled in, or a skip straight into the app. "Choose Model" opens it at the model step
+  and closes it once the model has answered. While Granite is picked and not on disk after
+  onboarding, `MainView` shows `ModelDownloadView`, which cannot be dismissed and closes by
+  itself once the file lands. Both show the download as a ring with the percentage in the
+  middle, and offer to try again when the download fails. Writing a recipe
   and rewriting one show the same progress screen: a checklist of the work, and under it
   `RecipePreview`, the recipe as it stands at that moment. While Granite writes, the preview is
   its text as it streams in. The detail

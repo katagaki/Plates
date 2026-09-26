@@ -24,6 +24,11 @@ struct MainView: View {
     @State private var search = ""
     @State private var isGenerating = false
     @State private var writerModel = WriterModelDownload.shared
+    @State private var modelSettings = ModelSettings.shared
+    @AppStorage("Onboarding.Completed") private var onboardingCompleted = false
+    @State private var onboardingStart: OnboardingView.Step?
+    /// The dish named at the end of onboarding, written in once the recipe sheet opens.
+    @State private var firstDish = ""
 
     var body: some View {
         NavigationStack {
@@ -56,16 +61,38 @@ struct MainView: View {
                         }
                     }
                 }
-                .sheet(isPresented: $isGenerating) {
-                    GenerateRecipeView(store: store)
+                .sheet(isPresented: $isGenerating, onDismiss: { firstDish = "" }) {
+                    GenerateRecipeView(store: store, dish: firstDish)
+                }
+                // Nothing is written with Granite until it is on disk, so while it is picked
+                // the sheet stays up until the file lands, and closes by itself when it does.
+                .sheet(isPresented: Binding(get: { needsWriterModel }, set: { _ in })) {
+                    ModelDownloadView(download: writerModel)
                 }
         }
-        // Nothing is written without the recipe model, so the sheet stays up until it is on
-        // disk and closes by itself when it lands.
-        .sheet(isPresented: Binding(get: { !writerModel.isReady }, set: { _ in })) {
-            ModelDownloadView(download: writerModel)
+        .sheet(item: $onboardingStart, onDismiss: openFirstRecipe) { start in
+            OnboardingView(start: start) { dish in
+                onboardingCompleted = true
+                firstDish = dish ?? ""
+                onboardingStart = nil
+            }
         }
-        .task { writerModel.start() }
+        .onAppear {
+            if !onboardingCompleted { onboardingStart = .welcome }
+        }
+        .task(id: needsWriterModel) {
+            if needsWriterModel { writerModel.start() }
+        }
+    }
+
+    private var needsWriterModel: Bool {
+        onboardingCompleted && modelSettings.provider == .granite && !writerModel.isReady
+    }
+
+    /// The recipe sheet waits for onboarding to be gone, since one sheet cannot open over
+    /// another that is closing.
+    private func openFirstRecipe() {
+        if !firstDish.isEmpty { isGenerating = true }
     }
 
     private var menu: some View {
@@ -85,6 +112,14 @@ struct MainView: View {
                     }
                 }
                 .pickerStyle(.inline)
+            }
+
+            Section {
+                Button {
+                    onboardingStart = .model
+                } label: {
+                    Label("Menu.ChooseModel", systemImage: "cpu")
+                }
             }
 
             Section {

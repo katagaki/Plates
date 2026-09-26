@@ -1,9 +1,10 @@
 import CulinaryIntelligence
 import SwiftUI
 
-/// What a new install shows first: the recipe model coming down, with nothing else to do until
-/// it has. Every recipe the app writes starts with that model, so the sheet cannot be swiped
-/// away, and it goes by itself once the download lands.
+/// Granite coming down, when it was picked and is not on disk yet. Onboarding downloads it
+/// first, so this is for a download that was cut short or a file that went missing. Every recipe
+/// starts with that model while it is picked, so the sheet cannot be swiped away, and it goes by
+/// itself once the download lands.
 struct ModelDownloadView: View {
     let download: WriterModelDownload
 
@@ -31,7 +32,7 @@ struct ModelDownloadView: View {
 }
 
 /// A ring that fills as the file arrives, with how much has arrived written in the middle.
-private struct DownloadDonut: View {
+struct DownloadDonut: View {
     let fraction: Double
 
     var body: some View {

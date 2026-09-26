@@ -9,11 +9,19 @@ struct GenerateRecipeView: View {
     let store: RecipeStore
 
     @State private var generator = RecipeGenerator(observer: GenerationActivity.generation)
-    @State private var request = GenerationRequest(
-        ingredients: Pantry.ingredients,
-        tools: Pantry.tools
-    )
+    @State private var request: GenerationRequest
     @State private var draft: Recipe?
+
+    /// Opens with the dish already written in when the cook named one before the sheet came
+    /// up, as they do at the end of onboarding.
+    init(store: RecipeStore, dish: String = "") {
+        self.store = store
+        _request = State(initialValue: GenerationRequest(
+            description: dish,
+            ingredients: Pantry.ingredients,
+            tools: Pantry.tools
+        ))
+    }
 
     var body: some View {
         NavigationStack {

@@ -864,6 +864,23 @@
         }
       }
     },
+    "Menu.ChooseModel": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose Model"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "モデルを選択"
+          }
+        }
+      }
+    },
     "Menu.Delete": {
       "extractionState": "manual",
       "localizations": {
@@ -983,6 +1000,108 @@
         }
       }
     },
+    "Onboarding.Back": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Back"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "戻る"
+          }
+        }
+      }
+    },
+    "Onboarding.Connect.Description": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plates says hello to the model to check that it can be reached."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "モデルにあいさつを送り、接続できることを確認します。"
+          }
+        }
+      }
+    },
+    "Onboarding.Connect.Title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Test the Connection"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "接続を確認"
+          }
+        }
+      }
+    },
+    "Onboarding.Connect.Waiting": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waiting for a reply"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "返事を待っています"
+          }
+        }
+      }
+    },
+    "Onboarding.Continue": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Continue"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "続ける"
+          }
+        }
+      }
+    },
+    "Onboarding.Download.Description": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Granite is downloaded once and kept on your iPhone. The download carries on if you leave the app."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Graniteは一度だけダウンロードされ、iPhoneに保存されます。アプリを離れてもダウンロードは続きます。"
+          }
+        }
+      }
+    },
     "Onboarding.Download.Label": {
       "extractionState": "manual",
       "localizations": {
@@ -996,6 +1115,584 @@
           "stringUnit": {
             "state": "translated",
             "value": "モデルをダウンロード中"
+          }
+        }
+      }
+    },
+    "Onboarding.Download.Title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Download Granite"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Graniteをダウンロード"
+          }
+        }
+      }
+    },
+    "Onboarding.Feature.Edit": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Change Recipes"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レシピを変える"
+          }
+        }
+      }
+    },
+    "Onboarding.Feature.Edit.Description": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ask for a change in your own words, such as less salt or no oven."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "塩を控えめに、オーブンを使わずに、など自分の言葉で変更を頼めます。"
+          }
+        }
+      }
+    },
+    "Onboarding.Feature.Files": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kept as Files"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ファイルで保存"
+          }
+        }
+      }
+    },
+    "Onboarding.Feature.Files.Description": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recipes are saved as files on your iPhone or in iCloud Drive."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レシピはiPhoneまたはiCloud Driveにファイルとして保存されます。"
+          }
+        }
+      }
+    },
+    "Onboarding.Feature.Shopping": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shop and Cook"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "買い物と調理"
+          }
+        }
+      }
+    },
+    "Onboarding.Feature.Shopping.Description": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Each recipe lists what to buy, the tools you need, and the steps in order."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レシピごとに、買うもの、使う道具、手順を順番に示します。"
+          }
+        }
+      }
+    },
+    "Onboarding.Feature.Write": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Write Recipes"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レシピを書く"
+          }
+        }
+      }
+    },
+    "Onboarding.Feature.Write.Description": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Name a dish or pick what is in your kitchen, and Plates writes the recipe."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "料理の名前を入れるか、台所にあるものを選ぶと、Platesがレシピを書きます。"
+          }
+        }
+      }
+    },
+    "Onboarding.FirstRecipe.Create": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Create Recipe"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レシピを作成"
+          }
+        }
+      }
+    },
+    "Onboarding.FirstRecipe.Description": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Name a dish to write your first recipe. On the next screen you can add the ingredients and tools you have."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "料理の名前を入れて、最初のレシピを書きましょう。次の画面で、手元にある材料や道具を追加できます。"
+          }
+        }
+      }
+    },
+    "Onboarding.FirstRecipe.Prompt": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "What would you like to cook?"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "何を作りますか？"
+          }
+        }
+      }
+    },
+    "Onboarding.FirstRecipe.Suggestion.Curry": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chicken curry"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "チキンカレー"
+          }
+        }
+      }
+    },
+    "Onboarding.FirstRecipe.Suggestion.FriedRice": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Egg fried rice"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "卵チャーハン"
+          }
+        }
+      }
+    },
+    "Onboarding.FirstRecipe.Suggestion.Pasta": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tomato pasta"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "トマトパスタ"
+          }
+        }
+      }
+    },
+    "Onboarding.FirstRecipe.Suggestions": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Or start with one of these"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "または、次から選ぶ"
+          }
+        }
+      }
+    },
+    "Onboarding.FirstRecipe.Title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Create a Recipe"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レシピを作成"
+          }
+        }
+      }
+    },
+    "Onboarding.Model.APIKey.Prompt": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "API Key"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "APIキー"
+          }
+        }
+      }
+    },
+    "Onboarding.Model.Apple": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Foundation Models"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Foundation Models"
+          }
+        }
+      }
+    },
+    "Onboarding.Model.Apple.Description": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uses Apple Intelligence on your iPhone. Nothing to download."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iPhoneのApple Intelligenceを使います。ダウンロードは不要です。"
+          }
+        }
+      }
+    },
+    "Onboarding.Model.Claude": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Claude"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Claude"
+          }
+        }
+      }
+    },
+    "Onboarding.Model.Claude.Description": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anthropic's models, used with your own API key."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自分のAPIキーでAnthropicのモデルを使います。"
+          }
+        }
+      }
+    },
+    "Onboarding.Model.Description": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plates uses artificial intelligence to write recipes and to change them when you ask. Choose the model it uses. You can change it later from the menu."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Platesは人工知能を使ってレシピを書き、頼まれた変更をします。使うモデルを選んでください。あとからメニューで変更できます。"
+          }
+        }
+      }
+    },
+    "Onboarding.Model.Generation": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Generation"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "生成"
+          }
+        }
+      }
+    },
+    "Onboarding.Model.Granite": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Granite"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Granite"
+          }
+        }
+      }
+    },
+    "Onboarding.Model.Granite.Description": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Writes on your iPhone, with Apple Intelligence sorting what it writes. Needs a 1 GB download."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iPhone上で書き、書いた内容はApple Intelligenceが整理します。1 GBのダウンロードが必要です。"
+          }
+        }
+      }
+    },
+    "Onboarding.Model.OpenAI": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OpenAI"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OpenAI"
+          }
+        }
+      }
+    },
+    "Onboarding.Model.OpenAI.Description": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OpenAI's models, used with your own API key."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自分のAPIキーでOpenAIのモデルを使います。"
+          }
+        }
+      }
+    },
+    "Onboarding.Model.Privacy": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "What you ask for and the recipes you write or change are sent to %1$@ with your key. Your key is kept in the Keychain on this iPhone."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "頼んだ内容と、書いたり変更したりするレシピは、あなたのキーで%1$@に送信されます。キーはこのiPhoneのキーチェーンに保存されます。"
+          }
+        }
+      }
+    },
+    "Onboarding.Model.Roles": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The generation model writes recipes and makes the changes you ask for. The verification model sorts each recipe into its lists and checks changed recipes."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "生成モデルはレシピを書き、頼まれた変更をします。検証モデルはレシピを各項目に整理し、変更したレシピを確認します。"
+          }
+        }
+      }
+    },
+    "Onboarding.Model.Title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Select a Model"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "モデルを選択"
+          }
+        }
+      }
+    },
+    "Onboarding.Model.Verification": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verification"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "検証"
+          }
+        }
+      }
+    },
+    "Onboarding.Skip": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skip for Now"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "今はスキップ"
+          }
+        }
+      }
+    },
+    "Onboarding.Welcome.Title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Welcome to Plates"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Platesへようこそ"
           }
         }
       }
