@@ -268,8 +268,14 @@ public final class RecipeGenerator {
         didSet { observer?.runUpdated(progress.activity) }
     }
 
-    /// The Apple model, the cloud it falls back to, and the background time a pass runs in.
-    private let passes = ModelPasses()
+    /// The sorting passes, which check what was written against the schema line by line.
+    private let passes = ModelPasses(role: .verification)
+
+    /// The passes that write: the recipe itself, when Granite is not the one writing it, and
+    /// the cook's request put into English.
+    private let writer = ModelPasses(role: .generation)
+
+    private let settings = ModelSettings.shared
 
     /// Where the run reports how far along it is.
     private let observer: (any RunObserver)?
@@ -278,14 +284,17 @@ public final class RecipeGenerator {
         self.observer = observer
     }
 
-    /// Both models have to be there: Granite to write and Apple Intelligence to sort.
-    public var isAvailable: Bool { passes.isAvailable && WriterModel.isInstalled }
+    /// Every model the run needs has to be there. With Granite picked, that is Granite to write
+    /// and Apple Intelligence to sort.
+    public var isAvailable: Bool { passes.isAvailable && hasWriter }
 
     /// Why the button is disabled, in words a cook can act on.
     public var unavailableReason: LocalizedStringResource? {
         passes.unavailableReason
-            ?? (WriterModel.isInstalled ? nil : LocalizedStringResource(culinary: "Generate.Unavailable.WriterMissing"))
+            ?? (hasWriter ? nil : LocalizedStringResource(culinary: "Generate.Unavailable.WriterMissing"))
     }
+
+    private var hasWriter: Bool { settings.provider != .granite || WriterModel.isInstalled }
 
     public func generate(_ asked: GenerationRequest) async -> Recipe? {
         let request = asked.asAsked
@@ -320,7 +329,7 @@ public final class RecipeGenerator {
         let words = request.trimmedDescription
         guard !words.allSatisfy(\.isASCII) else { return request }
         do {
-            let english = try await passes.run(instructions: Self.english("Generate.Prompt.Translate")) { session in
+            let english = try await writer.run(instructions: Self.english("Generate.Prompt.Translate")) { session in
                 try await session.respond(
                     to: words,
                     options: GenerationOptions(maximumResponseTokens: Self.lineTokenLimit)
@@ -340,6 +349,7 @@ public final class RecipeGenerator {
     /// comes.
     private func write(_ request: GenerationRequest) async throws -> String {
         progress.stage = .write
+        guard settings.provider == .granite else { return try await writeWithModel(request) }
         var written = ""
         let stream = RecipeWriter.write(
             instructions: Self.writeInstructions(for: request),
@@ -355,6 +365,31 @@ public final class RecipeGenerator {
         guard !text.isEmpty else { throw WriterError.empty }
         return text
     }
+
+    /// The recipe written by the model the cook picked in place of Granite, given what Granite
+    /// is given. It is written in English too, since the reading of it below is. A remote model
+    /// streams in pieces rather than tokens, so the count shown is worked out from the length.
+    private func writeWithModel(_ request: GenerationRequest) async throws -> String {
+        let written = try await writer.run(instructions: Self.writeInstructions(for: request)) { session in
+            var written = ""
+            let stream = session.streamResponse(
+                to: Self.prompt(for: request),
+                options: GenerationOptions(maximumResponseTokens: Self.writeTokenLimit)
+            )
+            for try await snapshot in stream {
+                written = snapshot.content
+                progress.draft = written
+                progress.writtenTokens = written.count / 4
+            }
+            return written
+        }
+        let text = written.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !text.isEmpty else { throw WriterError.empty }
+        return text
+    }
+
+    /// As long as the evals let Granite run.
+    private static let writeTokenLimit = 1400
 
     // MARK: - Sorting
 

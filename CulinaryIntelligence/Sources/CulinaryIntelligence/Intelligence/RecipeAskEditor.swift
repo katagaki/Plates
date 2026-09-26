@@ -231,7 +231,11 @@ public final class RecipeAskEditor {
     private var plannedRecipe: Recipe?
     private var plannedRequest = ""
 
-    private let passes = ModelPasses()
+    /// The plan and the changes on it.
+    private let passes = ModelPasses(role: .generation)
+
+    /// The read through after the changes are made.
+    private let checks = ModelPasses(role: .verification)
 
     /// Where the run reports how far along it is.
     private let observer: (any RunObserver)?
@@ -327,7 +331,7 @@ public final class RecipeAskEditor {
         var recipe = edited
         for _ in 0..<Self.reviewLimit {
             do {
-                let found = try await passes.run(instructions: Self.reviewInstructions) { session in
+                let found = try await checks.run(instructions: Self.reviewInstructions) { session in
                     let response = try await session.respond(
                         to: Self.reviewPrompt(for: recipe, request: request),
                         generating: GeneratedRecipeReview.self

@@ -1,6 +1,40 @@
 {
   "sourceLanguage": "en-US",
   "strings": {
+    "Check.Prompt.Hello": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hello"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "こんにちは"
+          }
+        }
+      }
+    },
+    "Check.Prompt.Instructions": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Answer the greeting in one short sentence."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "あいさつに短い一文で返事をしてください。"
+          }
+        }
+      }
+    },
     "Download.Error.Incomplete": {
       "extractionState": "manual",
       "localizations": {
@@ -1077,6 +1111,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "このデバイスはApple Intelligenceに対応していません。"
+          }
+        }
+      }
+    },
+    "Generate.Unavailable.KeyMissing": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add an API key in Choose Model, in the menu, to write recipes."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レシピを書くには、メニューの「モデルを選択」でAPIキーを追加してください。"
           }
         }
       }
@@ -5616,6 +5667,40 @@
           "stringUnit": {
             "state": "translated",
             "value": "ズッキーニ"
+          }
+        }
+      }
+    },
+    "Remote.Error.NoResponse": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The model did not answer. Try again."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "モデルから応答がありませんでした。もう一度お試しください。"
+          }
+        }
+      }
+    },
+    "Remote.Error.Server": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The model could not be reached: %1$@"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "モデルに接続できませんでした: %1$@"
           }
         }
       }
