@@ -1,3 +1,4 @@
+import CulinaryIntelligence
 import SwiftUI
 
 /// A grid of catalog icons to tick off, grouped into native list sections, so a cook can pick
@@ -260,5 +261,34 @@ extension CatalogPickerView {
             path: IconCatalog.toolPath,
             selection: selection
         )
+    }
+}
+
+extension IngredientCategory {
+    /// How the group is headed in a picker.
+    var title: LocalizedStringResource {
+        switch self {
+        case .vegetables: "Ingredient.Category.Vegetables"
+        case .fruits: "Ingredient.Category.Fruits"
+        case .meat: "Ingredient.Category.Meat"
+        case .seafood: "Ingredient.Category.Seafood"
+        case .dairy: "Ingredient.Category.Dairy"
+        case .grains: "Ingredient.Category.Grains"
+        case .seasonings: "Ingredient.Category.Seasonings"
+        case .sauces: "Ingredient.Category.Sauces"
+        case .baking: "Ingredient.Category.Baking"
+        case .preserved: "Ingredient.Category.Preserved"
+        }
+    }
+}
+
+extension ToolCategory {
+    /// How the group is headed in a picker.
+    var title: LocalizedStringResource {
+        switch self {
+        case .utensils: "Tool.Category.Utensils"
+        case .stovetop: "Tool.Category.Stovetop"
+        case .other: "Tool.Category.Other"
+        }
     }
 }

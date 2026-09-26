@@ -2,13 +2,13 @@ import Foundation
 
 /// The two halves the ingredient catalog is picked in: what is bought for the week, and what
 /// sits on the shelf between recipes. Each half has a picker of its own.
-nonisolated enum IngredientShelf: String, CaseIterable, Identifiable, Sendable {
+public nonisolated enum IngredientShelf: String, CaseIterable, Identifiable, Sendable {
     case fresh, pantry
 
-    var id: String { rawValue }
+    public var id: String { rawValue }
 
     /// The browsing groups on this shelf, in the order the picker shows them.
-    var categories: [IngredientCategory] {
+    public var categories: [IngredientCategory] {
         switch self {
         case .fresh: [.vegetables, .fruits, .meat, .seafood, .dairy, .grains]
         case .pantry: [.seasonings, .sauces, .baking, .preserved]
@@ -18,35 +18,20 @@ nonisolated enum IngredientShelf: String, CaseIterable, Identifiable, Sendable {
 
 /// The groups the ingredient catalog is browsed in. Every ingredient icon sits in exactly one,
 /// and the flat list `IconCatalog.ingredients` is built from them.
-nonisolated enum IngredientCategory: String, CaseIterable, Identifiable, Sendable {
+public nonisolated enum IngredientCategory: String, CaseIterable, Identifiable, Sendable {
     case vegetables, fruits, meat, seafood, dairy, grains, seasonings, sauces, baking, preserved
 
-    var id: String { rawValue }
-
-    var title: LocalizedStringResource {
-        switch self {
-        case .vegetables: "Ingredient.Category.Vegetables"
-        case .fruits: "Ingredient.Category.Fruits"
-        case .meat: "Ingredient.Category.Meat"
-        case .seafood: "Ingredient.Category.Seafood"
-        case .dairy: "Ingredient.Category.Dairy"
-        case .grains: "Ingredient.Category.Grains"
-        case .seasonings: "Ingredient.Category.Seasonings"
-        case .sauces: "Ingredient.Category.Sauces"
-        case .baking: "Ingredient.Category.Baking"
-        case .preserved: "Ingredient.Category.Preserved"
-        }
-    }
+    public var id: String { rawValue }
 
     /// The shelf this group is picked from.
-    var shelf: IngredientShelf {
+    public var shelf: IngredientShelf {
         IngredientShelf.allCases.first { $0.categories.contains(self) } ?? .fresh
     }
 
     /// The ingredient assets in this group, in the order the picker shows them. Groups run
     /// alphabetically, except the sauces, which run by cuisine so a shelf of them reads the
     /// way a cook reaches for them.
-    var icons: [String] {
+    public var icons: [String] {
         switch self {
         case .vegetables:
             [
@@ -354,21 +339,13 @@ nonisolated enum IngredientCategory: String, CaseIterable, Identifiable, Sendabl
 
 /// The groups the tool catalog is browsed in. Every tool icon sits in exactly one, and the
 /// flat list `IconCatalog.tools` is built from them.
-nonisolated enum ToolCategory: String, CaseIterable, Identifiable, Sendable {
+public nonisolated enum ToolCategory: String, CaseIterable, Identifiable, Sendable {
     case utensils, stovetop, other
 
-    var id: String { rawValue }
-
-    var title: LocalizedStringResource {
-        switch self {
-        case .utensils: "Tool.Category.Utensils"
-        case .stovetop: "Tool.Category.Stovetop"
-        case .other: "Tool.Category.Other"
-        }
-    }
+    public var id: String { rawValue }
 
     /// The tool assets in this group, in the order the picker shows them.
-    var icons: [String] {
+    public var icons: [String] {
         switch self {
         case .utensils:
             [
@@ -432,12 +409,12 @@ nonisolated enum ToolCategory: String, CaseIterable, Identifiable, Sendable {
 }
 
 /// The SVG icon sets shipped in the asset catalog, mirroring the folders in the recipe site's `img` directory.
-nonisolated enum IconCatalog {
+public nonisolated enum IconCatalog {
     /// Asset names for every icon in `img/ingredients`, gathered from the browsing groups.
-    static let ingredients: [String] = IngredientCategory.allCases.flatMap(\.icons).sorted()
+    public static let ingredients: [String] = IngredientCategory.allCases.flatMap(\.icons).sorted()
 
     /// Asset names for every icon in `img/tools`, gathered from the browsing groups.
-    static let tools: [String] = ToolCategory.allCases.flatMap(\.icons).sorted()
+    public static let tools: [String] = ToolCategory.allCases.flatMap(\.icons).sorted()
 
     /// Other words cooks use for an ingredient, mapped onto the asset that covers it.
     /// Looked up through `normalized`, so plurals and spacing do not need their own entries.
@@ -500,14 +477,14 @@ nonisolated enum IconCatalog {
 
     /// Turns a schema icon path such as `img/ingredients/spring-onion.svg` into the catalog
     /// name `spring-onion`. Paths are kebab cased because that is how recipe files are written.
-    static func iconName(for path: String) -> String? {
+    public static func iconName(for path: String) -> String? {
         let stem = (path as NSString).lastPathComponent.replacingOccurrences(of: ".svg", with: "")
         return stem.isEmpty ? nil : stem
     }
 
     /// The asset catalog entry a path draws from, such as `SpringOnion`. The catalog is Pascal
     /// cased throughout, so the kebab cased name is converted on the way in.
-    static func assetName(for path: String) -> String? {
+    public static func assetName(for path: String) -> String? {
         iconName(for: path).map(pascalCased)
     }
 
@@ -518,21 +495,21 @@ nonisolated enum IconCatalog {
     }
 
     /// The icon path a recipe file should carry for an ingredient asset.
-    static func ingredientPath(for name: String) -> String {
+    public static func ingredientPath(for name: String) -> String {
         "img/ingredients/\(name).svg"
     }
 
     /// The icon path a recipe file should carry for a tool asset.
-    static func toolPath(for name: String) -> String {
+    public static func toolPath(for name: String) -> String {
         "img/tools/\(name).svg"
     }
 
     /// How an asset name reads in a list, in the reader's language: `spring-onion` is "Spring
     /// onion" in English and "ねぎ" in Japanese. Every asset has a key of its own in the
     /// string catalog, and an asset with no entry falls back to its own name.
-    static func displayName(for asset: String) -> String {
+    public static func displayName(for asset: String) -> String {
         let key = nameKey(for: asset)
-        let localized = String(localized: String.LocalizationValue(key))
+        let localized = String(culinary: String.LocalizationValue(key))
         guard localized != key else {
             let words = asset.replacingOccurrences(of: "-", with: " ")
             return words.prefix(1).uppercased() + words.dropFirst()
@@ -560,12 +537,12 @@ nonisolated enum IconCatalog {
         .reduce(into: [:]) { table, asset in table[searchNames[asset] ?? ""] = asset }
 
     /// Maps a model guess back onto an icon that actually exists, falling back to a sensible default.
-    static func resolveIngredient(_ guess: String, itemName: String) -> String {
+    public static func resolveIngredient(_ guess: String, itemName: String) -> String {
         resolve(guess, itemName: itemName, in: ingredients) ?? "salt"
     }
 
     /// Maps a model guess back onto a tool icon that actually exists.
-    static func resolveTool(_ guess: String, itemName: String) -> String {
+    public static func resolveTool(_ guess: String, itemName: String) -> String {
         resolve(guess, itemName: itemName, in: tools) ?? "pan"
     }
 
@@ -573,18 +550,18 @@ nonisolated enum IconCatalog {
 
     /// The ingredients a cook's search text turns up, closest match first. An empty search
     /// returns the whole catalog.
-    static func ingredients(matching query: String) -> [String] {
+    public static func ingredients(matching query: String) -> [String] {
         search(query, in: ingredients)
     }
 
     /// The tools a cook's search text turns up, closest match first.
-    static func tools(matching query: String) -> [String] {
+    public static func tools(matching query: String) -> [String] {
         search(query, in: tools)
     }
 
     /// The same search, kept in the browsing groups of one shelf. Groups with nothing left in
     /// them are dropped.
-    static func categories(
+    public static func categories(
         matching query: String,
         on shelf: IngredientShelf
     ) -> [(category: IngredientCategory, icons: [String])] {
@@ -597,13 +574,13 @@ nonisolated enum IconCatalog {
 
     /// The same search across both shelves, for a picker that browses the whole ingredient
     /// catalog at once rather than one half of it.
-    static func allCategories(matching query: String) -> [(category: IngredientCategory, icons: [String])] {
+    public static func allCategories(matching query: String) -> [(category: IngredientCategory, icons: [String])] {
         IngredientShelf.allCases.flatMap { categories(matching: query, on: $0) }
     }
 
     /// The shelf an ingredient asset is picked from, so a selection can be split the way the
     /// pickers are.
-    static func shelf(of asset: String) -> IngredientShelf {
+    public static func shelf(of asset: String) -> IngredientShelf {
         shelves[asset] ?? .fresh
     }
 
@@ -614,7 +591,7 @@ nonisolated enum IconCatalog {
 
     /// The tools a search turns up, kept in browsing groups. Groups with nothing left in
     /// them are dropped.
-    static func toolCategories(matching query: String) -> [(category: ToolCategory, icons: [String])] {
+    public static func toolCategories(matching query: String) -> [(category: ToolCategory, icons: [String])] {
         let matches = Set(tools(matching: query))
         return ToolCategory.allCases.compactMap { category in
             let icons = category.icons.filter(matches.contains)
@@ -623,7 +600,7 @@ nonisolated enum IconCatalog {
     }
 
     /// The asset covering an ingredient name, when the catalog has one.
-    static func ingredient(named name: String) -> String? {
+    public static func ingredient(named name: String) -> String? {
         let cleaned = normalized(name)
         guard !cleaned.isEmpty else { return nil }
         if let alias = aliases[cleaned] { return alias }
@@ -632,7 +609,7 @@ nonisolated enum IconCatalog {
     }
 
     /// The nearest ingredients to a name the catalog does not carry, for suggesting a swap.
-    static func ingredientSuggestions(for name: String, limit: Int = 4) -> [String] {
+    public static func ingredientSuggestions(for name: String, limit: Int = 4) -> [String] {
         Array(search(name, in: ingredients).prefix(limit))
     }
 

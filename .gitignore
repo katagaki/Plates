@@ -4,3 +4,5 @@ DerivedData/
 xcuserdata/
 *.xcuserstate
 Plates.xcodeproj/xcshareddata/xcodecloud/
+.build/
+.swiftpm/

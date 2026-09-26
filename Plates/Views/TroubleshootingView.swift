@@ -1,3 +1,4 @@
+import CulinaryIntelligence
 import SwiftUI
 
 /// The troubleshooting entries, kept off the recipe page and opened from the bottom bar.

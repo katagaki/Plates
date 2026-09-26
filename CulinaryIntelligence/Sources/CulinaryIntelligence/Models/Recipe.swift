@@ -3,32 +3,54 @@ import Foundation
 /// One recipe, shaped exactly like the JSON files in the One-Pan Food site's `recipes` folder.
 /// Property order matters: it is the key order written back out to disk, which `Recipe.json`
 /// follows. Files are read here and written there, so nothing else has to agree on the order.
-nonisolated struct Recipe: Decodable, Identifiable, Hashable {
-    var id: String
-    var title: String
-    var time: String
-    var serves: String
+public nonisolated struct Recipe: Decodable, Identifiable, Hashable {
+    public var id: String
+    public var title: String
+    public var time: String
+    public var serves: String
     /// Written only when the recipe has been cooked, always as `true`.
-    var tried: Bool?
-    var ingredients: IngredientSections
-    var tools: [Tool]
-    var steps: [Step]
-    var troubleshooting: [Troubleshooting]
+    public var tried: Bool?
+    public var ingredients: IngredientSections
+    public var tools: [Tool]
+    public var steps: [Step]
+    public var troubleshooting: [Troubleshooting]
+
+    public init(
+        id: String,
+        title: String,
+        time: String,
+        serves: String,
+        tried: Bool? = nil,
+        ingredients: IngredientSections,
+        tools: [Tool],
+        steps: [Step],
+        troubleshooting: [Troubleshooting]
+    ) {
+        self.id = id
+        self.title = title
+        self.time = time
+        self.serves = serves
+        self.tried = tried
+        self.ingredients = ingredients
+        self.tools = tools
+        self.steps = steps
+        self.troubleshooting = troubleshooting
+    }
 
     /// The minute count behind `time`, used for sorting. Unreadable values sort last.
-    var minutes: Int {
+    public var minutes: Int {
         Recipe.minutes(in: time) ?? Int.max
     }
 
     /// `time` as the reader's language writes a duration: "25 min" in English, "25分" in
     /// Japanese. Recipe files carry whatever the recipe was written with, so a time nothing
     /// can be read out of is shown as it stands.
-    var formattedTime: String {
+    public var formattedTime: String {
         Recipe.formatTime(time)
     }
 
     /// The same formatting for a time that has not been saved to a recipe yet.
-    static func formatTime(_ time: String) -> String {
+    public static func formatTime(_ time: String) -> String {
         guard let minutes = minutes(in: time) else { return time }
         return Duration.seconds(minutes * 60).formatted(
             .units(allowed: [.hours, .minutes], width: .abbreviated)
@@ -37,7 +59,7 @@ nonisolated struct Recipe: Decodable, Identifiable, Hashable {
 
     /// The minutes a written time comes to, read out of text such as "25 min", "1 h 30 min",
     /// or "25分". A range keeps its later figure, so "10 to 15 min" is a quarter of an hour.
-    static func minutes(in time: String) -> Int? {
+    public static func minutes(in time: String) -> Int? {
         var counts: [(value: Int, unit: String)] = []
         let text = time.lowercased()
         var index = text.startIndex
@@ -67,53 +89,84 @@ nonisolated struct Recipe: Decodable, Identifiable, Hashable {
 }
 
 /// The three ingredient sections. A section is written only when it holds entries.
-nonisolated struct IngredientSections: Decodable, Hashable {
-    var supermarket: [Ingredient]?
-    var general: [Ingredient]?
-    var optional: [Ingredient]?
+public nonisolated struct IngredientSections: Decodable, Hashable {
+    public var supermarket: [Ingredient]?
+    public var general: [Ingredient]?
+    public var optional: [Ingredient]?
 
-    var isEmpty: Bool {
+    public init(supermarket: [Ingredient]? = nil, general: [Ingredient]? = nil, optional: [Ingredient]? = nil) {
+        self.supermarket = supermarket
+        self.general = general
+        self.optional = optional
+    }
+
+    public var isEmpty: Bool {
         (supermarket?.isEmpty ?? true) && (general?.isEmpty ?? true) && (optional?.isEmpty ?? true)
     }
 }
 
-nonisolated struct Ingredient: Decodable, Hashable, Identifiable {
-    var item: String
-    var icon: String
-    var amount: String
-    var note: String?
+public nonisolated struct Ingredient: Decodable, Hashable, Identifiable {
+    public var item: String
+    public var icon: String
+    public var amount: String
+    public var note: String?
 
-    var id: String { item + amount }
+    public init(item: String, icon: String, amount: String, note: String? = nil) {
+        self.item = item
+        self.icon = icon
+        self.amount = amount
+        self.note = note
+    }
+
+    public var id: String { item + amount }
 }
 
-nonisolated struct Tool: Decodable, Hashable, Identifiable {
-    var name: String
-    var icon: String
-    var required: Bool
-    var note: String?
+public nonisolated struct Tool: Decodable, Hashable, Identifiable {
+    public var name: String
+    public var icon: String
+    public var required: Bool
+    public var note: String?
 
-    var id: String { name }
+    public init(name: String, icon: String, required: Bool, note: String? = nil) {
+        self.name = name
+        self.icon = icon
+        self.required = required
+        self.note = note
+    }
+
+    public var id: String { name }
 }
 
-nonisolated struct Step: Decodable, Hashable, Identifiable {
-    var title: String
+public nonisolated struct Step: Decodable, Hashable, Identifiable {
+    public var title: String
     /// The ingredient and tool icon paths this step works with, shown as a strip above its points.
-    var icons: [String]?
-    var points: [String]
+    public var icons: [String]?
+    public var points: [String]
 
-    var id: String { title }
+    public init(title: String, icons: [String]? = nil, points: [String]) {
+        self.title = title
+        self.icons = icons
+        self.points = points
+    }
+
+    public var id: String { title }
 }
 
-nonisolated struct Troubleshooting: Decodable, Hashable, Identifiable {
-    var problem: String
-    var solution: String
+public nonisolated struct Troubleshooting: Decodable, Hashable, Identifiable {
+    public var problem: String
+    public var solution: String
 
-    var id: String { problem }
+    public init(problem: String, solution: String) {
+        self.problem = problem
+        self.solution = solution
+    }
+
+    public var id: String { problem }
 }
 
 extension Recipe {
     /// Turns a title into the kebab-case id the schema uses for file names and image paths.
-    static func makeID(from title: String) -> String {
+    public static func makeID(from title: String) -> String {
         let slug = title.lowercased()
             .map { $0.isLetter || $0.isNumber ? String($0) : " " }
             .joined()
@@ -129,7 +182,7 @@ extension Step {
     /// the repeat worth dropping on sight. A repeat written two different ways is left to the
     /// prompts and to the read through, since deleting a step on a guess costs more than
     /// keeping one that reads close to its neighbour.
-    static func comparable(_ title: String) -> String {
+    public static func comparable(_ title: String) -> String {
         title.lowercased()
             .map { $0.isLetter || $0.isNumber ? String($0) : " " }
             .joined()
@@ -146,7 +199,7 @@ extension Step {
 
     /// The icons a step's words point at, taken from the recipe's own lists so a step never
     /// shows something the recipe does not carry. Ingredients come first, then tools.
-    static func icons(
+    public static func icons(
         forText text: String,
         ingredients: [Ingredient],
         tools: [Tool],
@@ -194,7 +247,7 @@ extension Step {
 extension Recipe {
     /// The serving count written in `serves`, read the way a time is read: a range keeps its
     /// later figure, so "1 to 2" serves two.
-    static func servings(in serves: String) -> Double? {
+    public static func servings(in serves: String) -> Double? {
         let characters = Array(serves)
         var last: Double?
         var index = 0
@@ -211,7 +264,7 @@ extension Recipe {
     }
 
     /// Every ingredient amount multiplied, for when a recipe is written up or down a size.
-    mutating func scaleAmounts(by factor: Double) {
+    public mutating func scaleAmounts(by factor: Double) {
         func scale(_ list: [Ingredient]?) -> [Ingredient]? {
             list?.map { entry in
                 var entry = entry
@@ -227,7 +280,7 @@ extension Recipe {
     /// One written amount multiplied: "200 g" doubles to "400 g", "1/2 tsp" to "1 tsp". Every
     /// figure in the text is scaled, so "2 to 3 tbsp" keeps both ends of its range, and the
     /// units it is written with are left as they stand.
-    static func scaled(_ amount: String, by factor: Double) -> String {
+    public static func scaled(_ amount: String, by factor: Double) -> String {
         guard factor > 0, abs(factor - 1) > 0.0001 else { return amount }
         let characters = Array(amount)
         var result = ""

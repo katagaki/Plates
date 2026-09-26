@@ -1,3 +1,4 @@
+import CulinaryIntelligence
 import SwiftUI
 
 /// The recipe as it stands, read under the checklist while the model works on it. Writing one
@@ -9,9 +10,6 @@ struct RecipePreview: View {
     let serves: String
     /// The step titles, in order.
     let steps: [String]
-    /// Whether a step is on the page yet. A generation writes them one at a time, so the ones
-    /// still to come wait in grey; a rewrite starts from a recipe that is already written.
-    var isWritten: (Int) -> Bool = { _ in true }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -39,7 +37,6 @@ struct RecipePreview: View {
                         .foregroundStyle(.secondary)
                     Text(verbatim: step)
                         .font(.subheadline)
-                        .foregroundStyle(isWritten(index) ? .primary : .secondary)
                     Spacer(minLength: 0)
                 }
             }

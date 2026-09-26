@@ -19,12 +19,12 @@ enum EditTarget: String, CaseIterable, Sendable {
 }
 
 /// One change from the plan, ready to carry out.
-struct PlannedEdit: Equatable, Sendable {
+public struct PlannedEdit: Equatable, Sendable {
     var target: EditTarget
     /// What to call this change on screen. The model writes it, in the cook's language.
-    var title: String
+    public var title: String
     /// What to change, in the model's own words, handed to the pass that carries it out.
-    var instruction: String
+    public var instruction: String
     /// The step it is about, counting from 1, or 0 when it is not about one step.
     var step: Int
 }
@@ -126,37 +126,37 @@ struct GeneratedStep {
 /// How far along a rewrite is. The rows are not known until the model has decided what to
 /// change, so unlike a generation they are built as the run goes, and the read through at the
 /// end adds rows of its own for whatever it asks for.
-struct EditProgress: Equatable, Sendable {
+public struct EditProgress: Equatable, Sendable {
     /// One planned change, as the screen shows it.
-    struct Change: Equatable, Sendable, Identifiable {
-        enum State: Equatable, Sendable {
+    public struct Change: Equatable, Sendable, Identifiable {
+        public enum State: Equatable, Sendable {
             case waiting
             case working
             case done
         }
 
-        let id: Int
+        public let id: Int
         /// Written by the model, so shown as written rather than looked up.
-        var title: String
-        var state: State = .waiting
+        public var title: String
+        public var state: State = .waiting
     }
 
     /// True until the model has settled on what to change.
-    var isPlanning = true
-    var changes: [Change] = []
+    public var isPlanning = true
+    public var changes: [Change] = []
     /// How many changes the plan itself called for. Anything past them came out of the read
     /// through, so the bar counts it as part of the read through rather than the plan.
     var plannedCount = 0
     /// True while the recipe is being read back, which is once the plan has been carried out.
-    var isReviewing = false
-    var isFinished = false
+    public var isReviewing = false
+    public var isFinished = false
 
     /// The recipe as it stands, so the preview under the checklist reads what the changes have
     /// done to it. Written by the model, so shown as written.
-    var title = ""
-    var time = ""
-    var serves = ""
-    var steps: [String] = []
+    public var title = ""
+    public var time = ""
+    public var serves = ""
+    public var steps: [String] = []
 
     /// Takes the recipe as it now stands, after a change lands on it.
     mutating func show(_ recipe: Recipe) {
@@ -186,11 +186,11 @@ struct EditProgress: Equatable, Sendable {
 
     var activity: ActivityProgress {
         let stage: LocalizedStringResource = if isPlanning {
-            "Edit.Progress.Planning"
+            LocalizedStringResource(culinary: "Edit.Progress.Planning")
         } else if isReviewing {
-            "Edit.Progress.Reviewing"
+            LocalizedStringResource(culinary: "Edit.Progress.Reviewing")
         } else {
-            "Edit.Progress.Applying"
+            LocalizedStringResource(culinary: "Edit.Progress.Applying")
         }
         return ActivityProgress(
             stage: String(localized: stage),
@@ -213,36 +213,42 @@ struct EditProgress: Equatable, Sendable {
 /// read back again, until nothing is left to fix or the loop has been round `reviewLimit` times.
 @MainActor
 @Observable
-final class RecipeAskEditor {
-    enum State: Equatable {
+public final class RecipeAskEditor {
+    public enum State: Equatable {
         case idle
         case working
         case awaitingApproval
         case failed(String)
     }
 
-    private(set) var state: State = .idle
+    public private(set) var state: State = .idle
 
-    private(set) var progress = EditProgress() {
-        didSet { activity.update(progress.activity) }
+    public private(set) var progress = EditProgress() {
+        didSet { observer?.runUpdated(progress.activity) }
     }
 
-    private(set) var proposedEdits: [PlannedEdit] = []
+    public private(set) var proposedEdits: [PlannedEdit] = []
     private var plannedRecipe: Recipe?
     private var plannedRequest = ""
 
     private let passes = ModelPasses()
-    private let activity = GenerationActivity()
+
+    /// Where the run reports how far along it is.
+    private let observer: (any RunObserver)?
 
     /// How many times the recipe is read back before it is handed over as it stands.
     private static let reviewLimit = 2
 
-    var isAvailable: Bool { passes.isAvailable }
+    public init(observer: (any RunObserver)? = nil) {
+        self.observer = observer
+    }
 
-    var unavailableReason: LocalizedStringResource? { passes.unavailableReason }
+    public var isAvailable: Bool { passes.isAvailable }
+
+    public var unavailableReason: LocalizedStringResource? { passes.unavailableReason }
 
     /// Plans changes without generating or saving any rewritten recipe content.
-    func prepare(_ recipe: Recipe, request: String) async {
+    public func prepare(_ recipe: Recipe, request: String) async {
         guard state != .working else { return }
         state = .working
         proposedEdits = []
@@ -264,7 +270,7 @@ final class RecipeAskEditor {
         }
     }
 
-    func discardPlan() {
+    public func discardPlan() {
         guard state != .working else { return }
         proposedEdits = []
         plannedRecipe = nil
@@ -273,7 +279,7 @@ final class RecipeAskEditor {
     }
 
     /// Applies exactly the reviewed plan to the recipe it was prepared for.
-    func applyApprovedPlan() async -> Recipe? {
+    public func applyApprovedPlan() async -> Recipe? {
         guard state == .awaitingApproval, let recipe = plannedRecipe,
               !proposedEdits.isEmpty else { return nil }
         let plan = proposedEdits
@@ -286,7 +292,7 @@ final class RecipeAskEditor {
         progress.changes = plan.enumerated().map {
             EditProgress.Change(id: $0.offset, title: $0.element.title)
         }
-        activity.start(progress.activity)
+        observer?.runStarted(progress.activity)
         passes.beginBackgroundRun(named: "Recipe editing")
         defer { passes.endBackgroundRun() }
         do {
@@ -300,11 +306,11 @@ final class RecipeAskEditor {
             edited = await review(edited, request: request)
             progress.isFinished = true
             state = .idle
-            activity.end(progress.activity, outcome: "Edit.Activity.Done")
+            observer?.runEnded(progress.activity, succeeded: true)
             return Self.tidied(edited, against: recipe)
         } catch {
             state = .failed(error.localizedDescription)
-            activity.end(progress.activity, outcome: "Edit.Activity.Failed")
+            observer?.runEnded(progress.activity, succeeded: false)
             return nil
         }
     }
@@ -560,14 +566,14 @@ final class RecipeAskEditor {
         case nothingToChange
 
         var errorDescription: String? {
-            String(localized: "Edit.Error.NoChanges")
+            String(culinary: "Edit.Error.NoChanges")
         }
     }
 
     // MARK: - Prompts
 
     private static func text(_ key: String.LocalizationValue, _ arguments: CVarArg...) -> String {
-        let format = String(localized: key)
+        let format = String(culinary: key)
         return arguments.isEmpty ? format : String(format: format, arguments: arguments)
     }
 

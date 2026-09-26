@@ -1,3 +1,4 @@
+import CulinaryIntelligence
 import SwiftUI
 import UIKit
 

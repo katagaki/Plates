@@ -4,14 +4,14 @@ import Foundation
 /// its own storage holds them, which loses the key order the schema is read and written in, so
 /// a recipe is written here instead: key by key, in the order the properties are declared, and
 /// in the shape the site's own files are kept in.
-nonisolated enum JSONValue {
+public nonisolated enum JSONValue {
     case string(String)
     case bool(Bool)
     case object([(key: String, value: JSONValue)])
     case array([JSONValue])
 
     /// The value written out, indented two spaces a level the way the recipe files are.
-    func text(indent level: Int = 0) -> String {
+    public func text(indent level: Int = 0) -> String {
         let pad = String(repeating: "  ", count: level)
         let inner = String(repeating: "  ", count: level + 1)
         switch self {
@@ -54,7 +54,7 @@ nonisolated enum JSONValue {
 
     /// An entry written only when it is there, for the keys the schema leaves out rather than
     /// writing empty.
-    static func entry(_ key: String, _ value: String?) -> [(key: String, value: JSONValue)] {
+    public static func entry(_ key: String, _ value: String?) -> [(key: String, value: JSONValue)] {
         value.map { [(key, JSONValue.string($0))] } ?? []
     }
 }
@@ -62,11 +62,11 @@ nonisolated enum JSONValue {
 extension Recipe {
     /// The recipe as a file: the same keys, in the same order, with a newline at the end the
     /// way the site's own files are written.
-    func fileContents() -> Data {
+    public func fileContents() -> Data {
         Data((json.text() + "\n").utf8)
     }
 
-    var json: JSONValue {
+    public var json: JSONValue {
         .object(
             [
                 ("id", .string(id)),
@@ -88,7 +88,7 @@ extension Recipe {
 
 extension IngredientSections {
     /// A section is written only when it holds entries.
-    var json: JSONValue {
+    public var json: JSONValue {
         .object(
             [
                 ("supermarket", supermarket),
@@ -103,7 +103,7 @@ extension IngredientSections {
 }
 
 extension Ingredient {
-    var json: JSONValue {
+    public var json: JSONValue {
         .object([
             ("item", .string(item)),
             ("icon", .string(icon)),
@@ -113,7 +113,7 @@ extension Ingredient {
 }
 
 extension Tool {
-    var json: JSONValue {
+    public var json: JSONValue {
         .object([
             ("name", .string(name)),
             ("icon", .string(icon)),
@@ -123,7 +123,7 @@ extension Tool {
 }
 
 extension Step {
-    var json: JSONValue {
+    public var json: JSONValue {
         .object(
             [("title", JSONValue.string(title))]
                 + ((icons?.isEmpty ?? true)
@@ -135,7 +135,7 @@ extension Step {
 }
 
 extension Troubleshooting {
-    var json: JSONValue {
+    public var json: JSONValue {
         .object([
             ("problem", .string(problem)),
             ("solution", .string(solution)),

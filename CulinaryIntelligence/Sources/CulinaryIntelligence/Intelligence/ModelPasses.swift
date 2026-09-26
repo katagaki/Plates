@@ -10,8 +10,8 @@ enum IntelligenceError: LocalizedError {
 
     var errorDescription: String? {
         switch self {
-        case .empty: String(localized: "Generate.Error.Empty")
-        case .tooLarge: String(localized: "Generate.Error.TooLarge")
+        case .empty: String(culinary: "Generate.Error.Empty")
+        case .tooLarge: String(culinary: "Generate.Error.TooLarge")
         }
     }
 }
@@ -42,13 +42,13 @@ final class ModelPasses {
         case .available:
             nil
         case .unavailable(.deviceNotEligible):
-            "Generate.Unavailable.DeviceNotEligible"
+            LocalizedStringResource(culinary: "Generate.Unavailable.DeviceNotEligible")
         case .unavailable(.appleIntelligenceNotEnabled):
-            "Generate.Unavailable.AppleIntelligenceNotEnabled"
+            LocalizedStringResource(culinary: "Generate.Unavailable.AppleIntelligenceNotEnabled")
         case .unavailable(.modelNotReady):
-            "Generate.Unavailable.ModelNotReady"
+            LocalizedStringResource(culinary: "Generate.Unavailable.ModelNotReady")
         case .unavailable:
-            "Generate.Unavailable.Unknown"
+            LocalizedStringResource(culinary: "Generate.Unavailable.Unknown")
         }
     }
 
@@ -98,7 +98,7 @@ final class ModelPasses {
     /// Every word the model is given is written in the reader's language, so what comes back
     /// is in the language the app is being read in.
     static func text(_ key: String.LocalizationValue, _ arguments: CVarArg...) -> String {
-        let format = String(localized: key)
+        let format = String(culinary: key)
         return arguments.isEmpty ? format : String(format: format, arguments: arguments)
     }
 

@@ -1,3 +1,4 @@
+import CulinaryIntelligence
 import SwiftUI
 
 /// The app's one screen: the recipes, what is sorted and searched out of them, and the menus
@@ -22,6 +23,7 @@ struct MainView: View {
     @State private var showTriedOnly = false
     @State private var search = ""
     @State private var isGenerating = false
+    @State private var writerModel = WriterModelDownload.shared
 
     var body: some View {
         NavigationStack {
@@ -58,6 +60,12 @@ struct MainView: View {
                     GenerateRecipeView(store: store)
                 }
         }
+        // Nothing is written without the recipe model, so the sheet stays up until it is on
+        // disk and closes by itself when it lands.
+        .sheet(isPresented: Binding(get: { !writerModel.isReady }, set: { _ in })) {
+            ModelDownloadView(download: writerModel)
+        }
+        .task { writerModel.start() }
     }
 
     private var menu: some View {

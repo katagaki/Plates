@@ -1,12 +1,14 @@
+import CulinaryIntelligence
 import SwiftUI
 
-/// The sheet that asks Apple Intelligence for a new recipe and shows it before it is saved.
+/// The sheet that asks for a new recipe and shows it before it is saved. Granite writes it and
+/// Apple Intelligence sorts it, so the sheet waits on both.
 struct GenerateRecipeView: View {
     @Environment(\.dismiss) private var dismiss
 
     let store: RecipeStore
 
-    @State private var generator = RecipeGenerator()
+    @State private var generator = RecipeGenerator(observer: GenerationActivity.generation)
     @State private var request = GenerationRequest(
         ingredients: Pantry.ingredients,
         tools: Pantry.tools
@@ -226,15 +228,14 @@ private struct GenerationProgressView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             VStack(alignment: .leading, spacing: 12) {
-                row("Generate.Progress.Row.Picked", count: progress.pickedCount, stage: .pick)
-                row("Generate.Progress.Row.Ingredients", count: progress.ingredientCount, stage: .idea)
-                row("Generate.Progress.Row.Tools", count: progress.toolCount, stage: .idea)
-                row("Generate.Progress.Row.Steps", count: progress.stepCount, stage: .outline)
-                row("Generate.Progress.Row.StepDetails", count: progress.writtenStepCount, stage: .details)
+                row("Generate.Progress.Row.Write", count: 0, stage: .write)
+                row("Generate.Progress.Row.Ingredients", count: progress.ingredientCount, stage: .shopping)
+                row("Generate.Progress.Row.Tools", count: progress.toolCount, stage: .shopping)
+                row("Generate.Progress.Row.Steps", count: progress.stepCount, stage: .method)
                 row(
                     "Generate.Progress.Row.Troubleshooting",
                     count: progress.troubleshootingCount,
-                    stage: .troubleshooting
+                    stage: .method
                 )
                 row("Generate.Progress.Row.Review", count: progress.fixCount, stage: .review)
             }
@@ -244,15 +245,24 @@ private struct GenerationProgressView: View {
         .animation(.default, value: progress)
     }
 
-    /// The recipe as it stands, under the checklist.
+    /// The recipe as it stands, under the checklist. While Granite writes, that is its text as
+    /// it comes; once Apple Intelligence starts sorting it, it is the recipe the sorting has made.
     @ViewBuilder private var preview: some View {
-        if let heading = progress.title ?? progress.dish, !heading.isEmpty {
+        if progress.stage == .write {
+            if !progress.draft.isEmpty {
+                VStack(alignment: .leading, spacing: 12) {
+                    Divider()
+                    Text(verbatim: progress.draft)
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                }
+            }
+        } else if let heading = progress.title, !heading.isEmpty {
             RecipePreview(
                 title: heading,
                 time: progress.time ?? "",
                 serves: progress.serves ?? "",
-                steps: progress.outline,
-                isWritten: progress.isWritten(step:)
+                steps: progress.outline
             )
         }
     }

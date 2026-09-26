@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E47FE81A3047956D0038302E /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = E47FE8193047956D0038302E /* AppIcon.icon */; };
 		E4B00000000000000000000C /* PlatesActivity.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E4B000000000000000000004 /* PlatesActivity.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E4C000000000000000000003 /* CulinaryIntelligence in Frameworks */ = {isa = PBXBuildFile; productRef = E4C000000000000000000002 /* CulinaryIntelligence */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		E47FE75630478FED0038302E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
+				E4C000000000000000000003 /* CulinaryIntelligence in Frameworks */,
 			);
 		};
 		E4B000000000000000000006 /* Frameworks */ = {
@@ -136,6 +138,9 @@
 				E4B000000000000000000001 /* Shared */,
 			);
 			name = Plates;
+			packageProductDependencies = (
+				E4C000000000000000000002 /* CulinaryIntelligence */,
+			);
 			productName = Plates;
 			productReference = E47FE75930478FED0038302E /* Plates.app */;
 			productType = "com.apple.product-type.application";
@@ -187,6 +192,9 @@
 			);
 			mainGroup = E47FE75030478FED0038302E;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E4C000000000000000000001 /* XCLocalSwiftPackageReference "CulinaryIntelligence" */,
+			);
 			preferredProjectObjectVersion = 100;
 			productRefGroup = E47FE75A30478FED0038302E /* Products */;
 			projectDirPath = "";
@@ -519,6 +527,21 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		E4C000000000000000000001 /* XCLocalSwiftPackageReference "CulinaryIntelligence" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = CulinaryIntelligence;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E4C000000000000000000002 /* CulinaryIntelligence */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4C000000000000000000001 /* XCLocalSwiftPackageReference "CulinaryIntelligence" */;
+			productName = CulinaryIntelligence;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E47FE75130478FED0038302E /* Project object */;
 	validationLevel = 1;

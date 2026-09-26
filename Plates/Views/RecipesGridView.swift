@@ -1,3 +1,4 @@
+import CulinaryIntelligence
 import SwiftUI
 
 /// The recipes as a two column grid of cards. What is in it, and in which order, is worked

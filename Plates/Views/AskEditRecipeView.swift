@@ -1,3 +1,4 @@
+import CulinaryIntelligence
 import SwiftUI
 
 /// The sheet that rewrites a recipe from a request in the cook's own words. Apple Intelligence
@@ -9,7 +10,7 @@ struct AskEditRecipeView: View {
     /// Handed the rewritten recipe when the cook keeps it.
     let apply: (Recipe) -> Void
 
-    @State private var editor = RecipeAskEditor()
+    @State private var editor = RecipeAskEditor(observer: GenerationActivity.edit)
     @State private var request = ""
     @State private var edited: Recipe?
 

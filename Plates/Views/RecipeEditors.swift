@@ -1,17 +1,8 @@
+import CulinaryIntelligence
 import SwiftUI
 
-/// Which of a recipe's four card lists something sits in, so an edit knows where to write back.
-enum RecipeList: String, Identifiable, CaseIterable {
-    case ingredients
-    case optionalIngredients
-    case tools
-    case optionalTools
-
-    var id: String { rawValue }
-
-    /// Whether the list holds ingredients rather than tools.
-    var isIngredients: Bool { self == .ingredients || self == .optionalIngredients }
-
+extension RecipeList {
+    /// How the list is headed on screen.
     var title: LocalizedStringResource {
         switch self {
         case .ingredients: "Recipe.Detail.Ingredients"
@@ -316,18 +307,6 @@ extension Recipe {
         list.isIngredients
             ? ingredientList(in: list).map(TileInfo.init)
             : toolList(in: list).map(TileInfo.init)
-    }
-
-    func ingredientList(in list: RecipeList) -> [Ingredient] {
-        switch list {
-        case .ingredients: (ingredients.supermarket ?? []) + (ingredients.general ?? [])
-        case .optionalIngredients: ingredients.optional ?? []
-        default: []
-        }
-    }
-
-    func toolList(in list: RecipeList) -> [Tool] {
-        tools.filter { $0.required == (list == .tools) }
     }
 
     /// Writes a list of ingredients back. The required list is split into the two sections the

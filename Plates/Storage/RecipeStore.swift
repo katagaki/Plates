@@ -1,3 +1,4 @@
+import CulinaryIntelligence
 import Foundation
 import Observation
 

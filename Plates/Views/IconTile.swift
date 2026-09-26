@@ -1,3 +1,4 @@
+import CulinaryIntelligence
 import SwiftUI
 
 /// One of the shared 48 pt SVG icons, drawn at 44 pt the way the site does. An outline colour

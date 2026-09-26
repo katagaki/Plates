@@ -11,7 +11,7 @@ struct IngredientLookupTool: FoundationModels.Tool {
     let available: [String]
 
     let name = "checkIngredient"
-    var description: String { String(localized: "Generate.Lookup.Description") }
+    var description: String { String(culinary: "Generate.Lookup.Description") }
 
     @Generable
     struct Arguments {
@@ -39,6 +39,6 @@ struct IngredientLookupTool: FoundationModels.Tool {
     }
 
     private func text(_ key: String.LocalizationValue, _ arguments: CVarArg...) -> String {
-        String(format: String(localized: key), arguments: arguments)
+        String(format: String(culinary: key), arguments: arguments)
     }
 }
