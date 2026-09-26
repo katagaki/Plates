@@ -541,23 +541,6 @@
         }
       }
     },
-    "Generate.Progress.Row.Review": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Reading it back"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "レシピを確認中"
-          }
-        }
-      }
-    },
     "Generate.Progress.Row.Steps": {
       "extractionState": "manual",
       "localizations": {

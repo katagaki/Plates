@@ -237,7 +237,6 @@ private struct GenerationProgressView: View {
                     count: progress.troubleshootingCount,
                     stage: .method
                 )
-                row("Generate.Progress.Row.Review", count: progress.fixCount, stage: .review)
             }
 
             preview

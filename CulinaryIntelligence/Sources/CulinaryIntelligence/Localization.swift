@@ -14,3 +14,20 @@ extension LocalizedStringResource {
         self.init(key, bundle: .atURL(Bundle.module.bundleURL))
     }
 }
+
+extension String {
+    /// A string from this package's catalog in US English, whatever language the app is read
+    /// in. Granite reasons about cooking far better in English than in Japanese, so everything
+    /// it is given is read through here.
+    nonisolated init(culinaryEnglish key: String.LocalizationValue) {
+        self.init(localized: key, bundle: .englishModule)
+    }
+}
+
+extension Bundle {
+    /// The package's English strings on their own, so a lookup never falls through to the
+    /// reader's language.
+    nonisolated static let englishModule: Bundle = Bundle.module
+        .path(forResource: "en-US", ofType: "lproj")
+        .flatMap(Bundle.init(path:)) ?? .module
+}

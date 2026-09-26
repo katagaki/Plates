@@ -1,5 +1,6 @@
 import FoundationModels
 import Foundation
+import NaturalLanguage
 
 /// What a new recipe is built from: a dish in the cook's words, what they have in the
 /// kitchen, or both.
@@ -46,57 +47,57 @@ public struct GenerationRequest: Equatable, Sendable {
         description.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 
-    /// The picked ingredients as a cook would read them. A cook can tap the whole catalog,
-    /// which is more than a prompt should carry, so only the first `listLimit` are named.
-    /// Narrowing the choice is safe: what is left is still only things they have.
+    /// The picked ingredients in English, the language Granite is asked in. A cook can tap the
+    /// whole catalog, which is more than a prompt should carry, so only the first `listLimit`
+    /// are named. Narrowing the choice is safe: what is left is still only things they have.
     var ingredientNames: [String] {
-        ingredients.prefix(Self.listLimit).map(IconCatalog.displayName)
+        ingredients.prefix(Self.listLimit).map(IconCatalog.englishName)
     }
 
-    /// The picked tools as a cook would read them, capped the same way.
-    var toolNames: [String] { tools.prefix(Self.listLimit).map(IconCatalog.displayName) }
+    /// The picked tools in English, capped the same way.
+    var toolNames: [String] { tools.prefix(Self.listLimit).map(IconCatalog.englishName) }
 
     /// How many picked items a prompt names before it stops listing.
     static let listLimit = 40
 }
 
-/// The first Apple pass over the written recipe: what it is called, what it takes, and what it
-/// is cooked in. The recipe is already written, so this sorts what is there rather than
-/// deciding anything.
-@Generable(description: "A recipe's title, timing, shopping list, and tools, taken from a written recipe")
-struct StructuredShopping {
-    @Guide(description: "The recipe's title in title case, two to four words. Name the dish and nothing else.")
+/// The recipe as the sorting passes leave it, before it is put in the schema's shape.
+struct SortedRecipe {
     var title: String
-
-    @Guide(description: "Total time written as a minute count, for example '15 min'")
     var time: String
-
-    @Guide(description: "How many people it serves, as a plain count such as '1' or '1 to 2'")
     var serves: String
-
-    @Guide(
-        description: "The recipe's fresh and chilled items: vegetables, meat, seafood, dairy, bread, eggs",
-        .maximumCount(8)
-    )
-    var supermarket: [StructuredIngredient]
-
-    @Guide(
-        description: "The recipe's shelf-stable items: oil, soy sauce, salt, sugar, packed rice, pasta",
-        .maximumCount(8)
-    )
-    var general: [StructuredIngredient]
-
-    @Guide(description: "Items the recipe says can be skipped. Leave empty when nothing is optional.", .maximumCount(3))
-    var optional: [StructuredIngredient]
-
-    @Guide(description: "The pans, pots, knives and bowls the recipe uses", .count(1...8))
+    /// Each ingredient with the line Granite wrote for it, which is what its icon is read from.
+    var ingredients: [(entry: StructuredIngredient, line: String)]
     var tools: [GeneratedTool]
+    var steps: [(title: String, points: [String])]
+    var troubleshooting: [GeneratedTroubleshooting]
 }
 
-@Generable
+/// The recipe's title, put into the reader's language.
+@Generable(description: "A recipe's title")
+struct GeneratedTitle {
+    @Guide(description: "The recipe's title in title case, two to four words. Name the dish and nothing else.")
+    var title: String
+}
+
+/// The total time, worked out from the method when Granite did not give one.
+@Generable(description: "How long a recipe takes")
+struct GeneratedTime {
+    @Guide(description: "Total time written as a minute count, for example '15 min'")
+    var time: String
+}
+
+/// One ingredient line, sorted.
+@Generable(description: "One ingredient of a recipe")
 struct StructuredIngredient {
-    @Guide(description: "The ingredient's name as the recipe writes it, without the amount or the prep")
+    @Guide(description: "The ingredient's name, without the amount or the prep")
     var item: String
+
+    @Guide(
+        description: "Where it is bought: 'fresh' for vegetables, meat, seafood, dairy, bread, and eggs, 'pantry' for shelf-stable items such as oil, soy sauce, salt, sugar, rice, and pasta, or 'optional' when the recipe says it can be skipped",
+        .anyOf(["fresh", "pantry", "optional"])
+    )
+    var section: String
 
     @Guide(description: "The catalog icon for this ingredient in English, lowercase and hyphenated, such as 'spring-onion'")
     var icon: String
@@ -108,24 +109,15 @@ struct StructuredIngredient {
     var note: String
 }
 
-/// The second Apple pass: the method and the troubleshooting, in the order the recipe gives
-/// them.
-@Generable(description: "A recipe's method and troubleshooting, taken from a written recipe")
-struct StructuredMethod {
-    @Guide(description: "The recipe's steps in the order it gives them", .count(1...10))
-    var steps: [StructuredStep]
-
-    @Guide(description: "The problems the recipe warns about and their fixes", .maximumCount(5))
-    var troubleshooting: [GeneratedTroubleshooting]
-}
-
-@Generable
+/// One step, sorted. What it says is written out as one piece of text and cut into sentences
+/// afterwards, so the model has no slots to fill and nothing to pad them with.
+@Generable(description: "One step of a recipe")
 struct StructuredStep {
     @Guide(description: "A short imperative step title, such as 'Brown pork'")
     var title: String
 
-    @Guide(description: "What the recipe says to do in this step, as one to three plain sentences", .count(1...3))
-    var points: [String]
+    @Guide(description: "Everything the step says to do, written out in plain sentences")
+    var text: String
 }
 
 /// What goes wrong and how to fix it. The editor rewrites the notes in this shape.
@@ -147,7 +139,7 @@ struct GeneratedIngredient {
     var note: String
 }
 
-@Generable
+@Generable(description: "One tool a recipe uses")
 struct GeneratedTool {
     @Guide(description: "The tool name on its own, such as 'Pan'. A size or a qualifier goes in the note.")
     var name: String
@@ -162,7 +154,7 @@ struct GeneratedTool {
     var note: String
 }
 
-@Generable
+@Generable(description: "One problem a cook runs into, and its fix")
 struct GeneratedTroubleshooting {
     @Guide(description: "A short symptom with no closing period, such as 'The rice turned mushy'")
     var problem: String
@@ -178,14 +170,12 @@ public struct GenerationProgress: Equatable, Sendable {
         case write
         case shopping
         case method
-        case review
 
         public var title: LocalizedStringResource {
             switch self {
             case .write: LocalizedStringResource(culinary: "Generate.Progress.Stage.Write")
             case .shopping: LocalizedStringResource(culinary: "Generate.Progress.Stage.Shopping")
             case .method: LocalizedStringResource(culinary: "Generate.Progress.Stage.Method")
-            case .review: LocalizedStringResource(culinary: "Generate.Progress.Stage.Review")
             }
         }
     }
@@ -202,8 +192,6 @@ public struct GenerationProgress: Equatable, Sendable {
     public var toolCount = 0
     public var stepCount = 0
     public var troubleshootingCount = 0
-    /// How many fixes the review asked for and got.
-    public var fixCount = 0
     /// The step titles as they stand, so the preview reads the method as it is sorted.
     public var outline: [String] = []
     /// Set when the last pass ends, so the bar always lands on full.
@@ -234,14 +222,11 @@ public struct GenerationProgress: Equatable, Sendable {
             min(Double(ingredientCount) / 6, 1),
             min(Double(toolCount) / 3, 1),
         ].reduce(0, +) / 3
-        let method = stage.rawValue > Stage.method.rawValue ? 1 : [
+        let method = [
             min(Double(stepCount) / 5, 1),
             min(Double(troubleshootingCount) / 2, 1),
         ].reduce(0, +) / 2
-        // How long the read through takes is not known while it runs, so it counts as half
-        // done from the moment it starts and lands on full when the run ends.
-        let review = stage == .review ? 0.5 : 0
-        return write * 0.45 + shopping * 0.15 + method * 0.2 + review * 0.2
+        return write * 0.5 + shopping * 0.2 + method * 0.3
     }
 
     /// About how many tokens a Granite recipe runs to, read off the Plates Kitchen evals.
@@ -251,15 +236,22 @@ public struct GenerationProgress: Equatable, Sendable {
 /// Writes a new recipe with two models, each doing what it is good at.
 ///
 /// Granite, running through llama.cpp on device, writes the whole recipe as plain cookbook
-/// text in one go. Apple Intelligence then sorts that text into the schema in two passes, each
-/// in its own session: the title, the shopping list and the tools first, then the method and
-/// the troubleshooting. Neither pass is asked to cook anything, only to put what is written
-/// where it goes.
+/// text in one go, always in English, since a model its size gets the cooking right far more
+/// often in English than in Japanese. A request the cook wrote in another language is put into
+/// English for it first.
 ///
-/// A last pass reads the sorted recipe back and says what does not hold up, and whatever it asks
-/// for is made by the same passes a cook's own request goes through. The fixed recipe is read
-/// back again, so a fix that breaks something else is caught, until nothing is left to fix or
-/// the loop has been round `reviewLimit` times.
+/// What Granite wrote is then cut into its sections in code, and the time and the serving count
+/// are read out of it there. Apple Intelligence sorts the rest one line at a time, each line in
+/// a session of its own: the title, every ingredient, every tool, every step, and every problem.
+/// Handed a whole list at once, it drops lines, merges them, and fills the gaps from elsewhere
+/// in the recipe; handed one line, it has nothing to do but put that line where it goes. The
+/// sorting passes are asked in the reader's language, so they are where a recipe read in
+/// Japanese is put into Japanese. When a section is not in a shape the reading can split, it is
+/// sorted from the whole text instead.
+///
+/// There is no read through at the end. One was tried, and with the sorting faithful line for
+/// line it did more harm than good: it rewrote whole lists, dropping and duplicating lines and
+/// adding ones Granite never wrote. What is handed over is Granite's recipe, sorted.
 @MainActor
 @Observable
 public final class RecipeGenerator {
@@ -282,13 +274,6 @@ public final class RecipeGenerator {
     /// Where the run reports how far along it is.
     private let observer: (any RunObserver)?
 
-    /// Carries out whatever the review asks for. It is the same editor a cook's own request
-    /// runs through, driven here from a plan the review wrote rather than from words.
-    private let reviser = RecipeAskEditor()
-
-    /// How many times the recipe is read back before it is handed over as it stands.
-    private static let reviewLimit = 2
-
     public init(observer: (any RunObserver)? = nil) {
         self.observer = observer
     }
@@ -310,15 +295,13 @@ public final class RecipeGenerator {
         passes.beginBackgroundRun(named: "Recipe generation")
         defer { passes.endBackgroundRun() }
         do {
-            let written = try await write(request)
-            let shopping = try await structureShopping(written)
-            let method = try await structureMethod(written, shopping: shopping)
-            let sorted = Self.makeRecipe(shopping: shopping, method: method)
-            let reviewed = await review(sorted)
+            let text = try await write(await inEnglish(request))
+            let sorted = try await sort(WrittenRecipe(parsing: text), text: text, request: request)
+            let recipe = Self.makeRecipe(sorted)
             progress.isFinished = true
             state = .idle
             observer?.runEnded(progress.activity, succeeded: true)
-            return reviewed
+            return recipe
         } catch {
             state = .failed(error.localizedDescription)
             observer?.runEnded(progress.activity, succeeded: false)
@@ -326,7 +309,32 @@ public final class RecipeGenerator {
         }
     }
 
-    // MARK: - Passes
+    // MARK: - Writing
+
+    /// The cook's words put into English before Granite reads them. Granite misreads a dish
+    /// named in Japanese, so a request that is not already English is translated by Apple
+    /// Intelligence first. A translation that fails passes the words through as they were
+    /// written, which is no worse than not trying.
+    private func inEnglish(_ request: GenerationRequest) async -> GenerationRequest {
+        progress.stage = .write
+        let words = request.trimmedDescription
+        guard !words.allSatisfy(\.isASCII) else { return request }
+        do {
+            let english = try await passes.run(instructions: Self.english("Generate.Prompt.Translate")) { session in
+                try await session.respond(
+                    to: words,
+                    options: GenerationOptions(maximumResponseTokens: Self.lineTokenLimit)
+                ).content
+            }
+            let translated = english.trimmingCharacters(in: .whitespacesAndNewlines)
+            guard !translated.isEmpty else { return request }
+            var asked = request
+            asked.description = translated
+            return asked
+        } catch {
+            return request
+        }
+    }
 
     /// Granite writes the recipe as a cookbook would print it, streamed onto the screen as it
     /// comes.
@@ -348,98 +356,303 @@ public final class RecipeGenerator {
         return text
     }
 
-    private func structureShopping(_ written: String) async throws -> StructuredShopping {
+    // MARK: - Sorting
+
+    /// Sorts what Granite wrote into the recipe, a line at a time.
+    private func sort(
+        _ written: WrittenRecipe,
+        text: String,
+        request: GenerationRequest
+    ) async throws -> SortedRecipe {
         progress.stage = .shopping
-        return try await passes.run(instructions: Self.structureInstructions) { session in
-            let stream = session.streamResponse(
-                to: Self.structurePrompt(written, ask: Self.text("Generate.Prompt.Structure.Shopping.Ask")),
-                generating: StructuredShopping.self
-            )
-            var latest: GeneratedContent?
-            for try await snapshot in stream {
-                let partial = snapshot.content
-                progress.title = partial.title
-                progress.time = partial.time
-                progress.serves = partial.serves
-                progress.ingredientCount = (partial.supermarket?.count ?? 0)
-                    + (partial.general?.count ?? 0)
-                    + (partial.optional?.count ?? 0)
-                progress.toolCount = partial.tools?.count ?? 0
-                latest = snapshot.rawContent
-            }
-            guard let latest else { throw IntelligenceError.empty }
-            let shopping = try StructuredShopping(latest)
-            guard !(shopping.supermarket + shopping.general + shopping.optional).isEmpty else {
-                throw IntelligenceError.empty
-            }
-            return shopping
-        }
-    }
+        progress.time = Self.time(from: written.time)
+        progress.serves = Self.serves(from: written.serves)
+        let title = try await sortTitle(written, text: text, request: request)
+        progress.title = title
 
-    /// The method is sorted with the shopping list beside it, so a step names an ingredient the
-    /// way the list does.
-    private func structureMethod(
-        _ written: String,
-        shopping: StructuredShopping
-    ) async throws -> StructuredMethod {
-        progress.stage = .method
-        let method = try await passes.run(instructions: Self.structureInstructions) { session in
-            let stream = session.streamResponse(
-                to: Self.structurePrompt(
-                    written,
-                    ask: Self.text(
-                        "Generate.Prompt.Structure.Method.Ask",
-                        Self.joined((shopping.supermarket + shopping.general + shopping.optional).map(\.item))
-                    )
-                ),
-                generating: StructuredMethod.self
-            )
-            var latest: GeneratedContent?
-            for try await snapshot in stream {
-                let partial = snapshot.content
-                progress.outline = partial.steps?.compactMap(\.title) ?? []
-                progress.stepCount = progress.outline.count
-                progress.troubleshootingCount = partial.troubleshooting?.count ?? 0
-                latest = snapshot.rawContent
-            }
-            guard let latest else { throw IntelligenceError.empty }
-            return try StructuredMethod(latest)
-        }
-        guard !method.steps.isEmpty else { throw IntelligenceError.empty }
-        return method
-    }
-
-    /// Reads the sorted recipe back and fixes whatever does not hold up, then reads it back
-    /// again. The loop stops as soon as a read through finds nothing, and a recipe that is
-    /// written is worth more than one more read through, so a review that fails leaves the
-    /// recipe as it stands rather than losing it.
-    private func review(_ written: Recipe) async -> Recipe {
-        progress.stage = .review
-        var recipe = written
-        progress.title = recipe.title
-        progress.outline = recipe.steps.map(\.title)
-        for _ in 0..<Self.reviewLimit {
-            do {
-                let found = try await passes.run(instructions: Self.reviewInstructions) { session in
-                    let response = try await session.respond(
-                        to: Self.reviewPrompt(for: recipe),
-                        generating: GeneratedRecipeReview.self
-                    )
-                    return response.content.isGood ? [] : response.content.fixes
+        var ingredients: [(entry: StructuredIngredient, line: String)] = []
+        var tools: [GeneratedTool] = []
+        if written.ingredients.isEmpty || written.tools.isEmpty {
+            let whole = try await sortWholeShopping(text: text)
+            ingredients = whole.0.map { ($0, "") }
+            tools = whole.1
+        } else {
+            for line in written.ingredients {
+                let measured = Measures.forReader(line)
+                var prompt = Self.text("Generate.Prompt.Structure.Ingredient.Ask", measured)
+                // The catalog's own name for what the line names, so the pass translates
+                // "frozen peas" with the word for peas rather than one it half remembers.
+                if let asset = Self.namedIngredient(in: line) {
+                    prompt += "\n" + Self.text("Generate.Prompt.Structure.Ingredient.Known", IconCatalog.displayName(for: asset))
                 }
-                let plan = RecipeAskEditor.ordered(found)
-                guard !plan.isEmpty else { break }
-                recipe = try await reviser.revise(recipe, with: plan)
-                progress.fixCount += plan.count
-                progress.title = recipe.title
-                progress.time = recipe.time
-                progress.serves = recipe.serves
-                progress.outline = recipe.steps.map(\.title)
-            } catch {
-                break
+                var entry = try await sortLine(StructuredIngredient.self, prompt)
+                entry.amount = Self.amount(entry.amount, from: measured)
+                entry.section = Self.section(for: entry, line: line)
+                ingredients.append((entry, line))
+                progress.ingredientCount = ingredients.count
+            }
+            for line in written.tools {
+                var tool = try await sortLine(
+                    GeneratedTool.self,
+                    Self.text("Generate.Prompt.Structure.Tool.Ask", Measures.forReader(line))
+                )
+                // Granite says when a tool can be done without. The pass has marked the only pan
+                // in a recipe as optional, so its guess is not asked for.
+                tool.required = !Self.isOptional(line)
+                tools.append(tool)
+                progress.toolCount = tools.count
             }
         }
-        return recipe
+
+        progress.stage = .method
+        progress.outline = []
+        var steps: [(title: String, points: [String])] = []
+        var notes: [GeneratedTroubleshooting] = []
+        if written.steps.isEmpty {
+            (steps, notes) = try await sortWholeMethod(text: text)
+        } else {
+            for line in written.steps {
+                let step = try await sortLine(StructuredStep.self, Self.text("Generate.Prompt.Structure.Step.Ask", Measures.forReader(line)))
+                steps.append((step.title.withoutLeakedSyntax, Self.sentences(in: step.text.withoutLeakedSyntax)))
+                progress.outline.append(step.title)
+                progress.stepCount = steps.count
+            }
+            for line in written.problems {
+                notes.append(try await sortLine(
+                    GeneratedTroubleshooting.self,
+                    Self.text("Generate.Prompt.Structure.Problem.Ask", Measures.forReader(line))
+                ))
+                progress.troubleshootingCount = notes.count
+            }
+        }
+        guard !ingredients.isEmpty, !steps.isEmpty else { throw IntelligenceError.empty }
+        if progress.time?.isEmpty ?? true {
+            progress.time = try await estimateTime(written, text: text)
+        }
+        return SortedRecipe(
+            title: title,
+            time: progress.time ?? "",
+            serves: progress.serves ?? "",
+            ingredients: ingredients,
+            tools: tools,
+            steps: steps,
+            troubleshooting: notes
+        )
+    }
+
+    /// The title in the reader's language. The cook's own words for the dish go with it, so it
+    /// reads the way they asked for it rather than as a translation of Granite's.
+    private func sortTitle(_ written: WrittenRecipe, text: String, request: GenerationRequest) async throws -> String {
+        var lines = [
+            written.title.isEmpty
+                ? Self.text("Generate.Prompt.Structure.Source", text)
+                : Self.text("Generate.Prompt.Structure.Title", written.title),
+        ]
+        if !request.trimmedDescription.isEmpty {
+            lines.append(Self.text("Generate.Prompt.Structure.Request", request.trimmedDescription))
+        }
+        lines.append(Self.text("Generate.Prompt.Structure.Title.Ask"))
+        return try await sortLine(GeneratedTitle.self, lines.joined(separator: "\n")).title.withoutLeakedSyntax
+    }
+
+    /// The total time from the method, for a recipe Granite gave none for. The answer is read
+    /// back through `time(from:)`, so what is kept is a minute count however it was written.
+    private func estimateTime(_ written: WrittenRecipe, text: String) async throws -> String {
+        let method = written.steps.isEmpty ? text : written.steps.enumerated()
+            .map { "\($0.offset + 1). \($0.element)" }
+            .joined(separator: "\n")
+        let estimate = try await sortLine(GeneratedTime.self, Self.text("Generate.Prompt.Structure.Time.Ask", method))
+        return Self.time(from: estimate.time)
+    }
+
+    /// One line sorted in a session of its own. A line cannot be left out without the recipe
+    /// being wrong, so a pass that fails is tried again, waiting longer each time. The usual
+    /// failure is the system holding back a run that has gone on in the background, which
+    /// clears after a short wait.
+    private func sortLine<Content: Generable>(_ type: Content.Type, _ prompt: String) async throws -> Content {
+        var waits: [Duration] = [.seconds(1), .seconds(4), .seconds(10)]
+        while true {
+            do {
+                return try await passes.run(instructions: Self.structureInstructions) { session in
+                    try await session.respond(
+                        to: prompt,
+                        generating: Content.self,
+                        options: GenerationOptions(maximumResponseTokens: Self.lineTokenLimit)
+                    ).content
+                }
+            } catch is CancellationError {
+                throw CancellationError()
+            } catch {
+                guard !waits.isEmpty else { throw error }
+                try await Task.sleep(for: waits.removeFirst())
+            }
+        }
+    }
+
+    /// The most a pass sorting one line may write. A line of Granite's runs to a few dozen
+    /// tokens, and its sorted form, translated, to a few hundred at most. A pass has been seen to
+    /// run on past seven thousand without stopping, and without a limit that overruns the
+    /// window and is taken for a request too large for the device. With one, it fails like any
+    /// other pass and is tried again.
+    private static let lineTokenLimit = 600
+
+    /// The same limit for a section sorted from the whole text, which writes every line of it.
+    private static let wholeTokenLimit = 2400
+
+    /// The shopping list sorted from the whole text in one pass, for when Granite wrote it in a
+    /// shape the reading could not split into lines.
+    private func sortWholeShopping(text: String) async throws -> ([StructuredIngredient], [GeneratedTool]) {
+        let schema = try Self.wholeSchema(
+            name: "SortedShopping",
+            description: "A recipe's shopping list and tools, taken from a written recipe",
+            lists: [
+                ("ingredients", "The recipe's ingredients in the order it gives them", DynamicGenerationSchema(type: StructuredIngredient.self), 1...16),
+                ("tools", "The pans, pots, knives and bowls the recipe uses", DynamicGenerationSchema(type: GeneratedTool.self), 1...8),
+            ]
+        )
+        let prompt = [
+            Self.text("Generate.Prompt.Structure.Source", Measures.forReader(text)),
+            "",
+            Self.text("Generate.Prompt.Structure.Shopping.Ask"),
+        ].joined(separator: "\n")
+        let content = try await passes.run(instructions: Self.structureInstructions) { session in
+            try await session.respond(
+                to: prompt,
+                schema: schema,
+                options: GenerationOptions(maximumResponseTokens: Self.wholeTokenLimit)
+            ).content
+        }
+        return (
+            try content.value([GeneratedContent].self, forProperty: "ingredients").map(StructuredIngredient.init),
+            try content.value([GeneratedContent].self, forProperty: "tools").map(GeneratedTool.init)
+        )
+    }
+
+    /// The method sorted from the whole text in one pass, for when Granite wrote it in a shape
+    /// the reading could not split into steps.
+    private func sortWholeMethod(
+        text: String
+    ) async throws -> ([(title: String, points: [String])], [GeneratedTroubleshooting]) {
+        let schema = try Self.wholeSchema(
+            name: "SortedMethod",
+            description: "A recipe's method and troubleshooting, taken from a written recipe",
+            lists: [
+                ("steps", "The recipe's steps in the order it gives them", DynamicGenerationSchema(type: StructuredStep.self), 1...10),
+                ("troubleshooting", "The problems the recipe warns about and their fixes", DynamicGenerationSchema(type: GeneratedTroubleshooting.self), 0...5),
+            ]
+        )
+        let prompt = [
+            Self.text("Generate.Prompt.Structure.Source", Measures.forReader(text)),
+            "",
+            Self.text("Generate.Prompt.Structure.Method.Ask"),
+        ].joined(separator: "\n")
+        let content = try await passes.run(instructions: Self.structureInstructions) { session in
+            try await session.respond(
+                to: prompt,
+                schema: schema,
+                options: GenerationOptions(maximumResponseTokens: Self.wholeTokenLimit)
+            ).content
+        }
+        let steps = try content.value([GeneratedContent].self, forProperty: "steps")
+            .map(StructuredStep.init)
+            .map { (title: $0.title.withoutLeakedSyntax, points: Self.sentences(in: $0.text.withoutLeakedSyntax)) }
+        progress.outline = steps.map(\.title)
+        progress.stepCount = steps.count
+        let notes = try content.value([GeneratedContent].self, forProperty: "troubleshooting")
+            .map(GeneratedTroubleshooting.init)
+        progress.troubleshootingCount = notes.count
+        return (steps, notes)
+    }
+
+    // MARK: - Reading what Granite wrote
+
+    /// An amount with its metric unit put back when the pass wrote the figure alone. "1 lb
+    /// (450g)" has come back as "450" from a pass that was told to keep the unit.
+    static func amount(_ amount: String, from line: String) -> String {
+        let figure = amount.trimmingCharacters(in: .whitespaces)
+        guard !figure.isEmpty, figure.allSatisfy({ $0.isNumber || $0 == "." || $0 == "/" }),
+              let match = line.firstMatch(of: #/(\d+(?:\.\d+)?)\s*(kg|g|ml|l)\b/#),
+              String(match.output.1) == figure
+        else { return amount }
+        return "\(figure) \(match.output.2)"
+    }
+
+    /// Whether a line Granite wrote says the recipe can do without it.
+    static func isOptional(_ line: String) -> Bool {
+        line.lowercased().contains("optional")
+    }
+
+    /// The section an ingredient goes in. Whether it is optional is what Granite's line says,
+    /// and an ingredient the pass called optional that the line does not is put on the shelf
+    /// its icon sits on.
+    static func section(for entry: StructuredIngredient, line: String) -> String {
+        if isOptional(line) { return "optional" }
+        guard entry.section == "optional" else { return entry.section }
+        let asset = ingredientIcon(line: line, guess: entry.icon, item: entry.item)
+        return IconCatalog.shelf(of: asset) == .pantry ? "pantry" : "fresh"
+    }
+
+    /// Words that count an ingredient rather than name one, so "2 cloves garlic" is not read as
+    /// the spice.
+    private static let measureWords: Set<String> = [
+        "can", "cans", "clove", "cloves", "stalk", "stalks", "slice", "slices", "piece", "pieces",
+        "head", "heads", "bunch", "sprig", "sprigs", "pinch", "dash", "handful", "sheet", "sheets",
+    ]
+
+    /// The catalog ingredient the line Granite wrote names outright: the longest run of its
+    /// words the catalog knows, aliases included, so "chopped green onions" is a spring onion
+    /// and "1 onion, diced" an onion. The sorting pass names an icon too, but it guesses from a
+    /// translated name and has put a spring onion on an onion, so the English is read first.
+    static func ingredientIcon(line: String, guess: String, item: String) -> String {
+        namedIngredient(in: line) ?? IconCatalog.resolveIngredient(guess, itemName: item)
+    }
+
+    /// The catalog ingredient a line names outright, when it names one.
+    static func namedIngredient(in line: String) -> String? {
+        let words = line.lowercased()
+            .map { $0.isLetter ? String($0) : " " }
+            .joined()
+            .split(separator: " ")
+            .map(String.init)
+            .filter { !measureWords.contains($0) }
+        // The longest run wins, and among runs of one length the first: "Salt and pepper" is
+        // salt, and "grated Parmesan cheese" is Parmesan rather than cheese.
+        for length in stride(from: min(3, words.count), through: 1, by: -1) {
+            for start in 0...(words.count - length) {
+                let phrase = words[start..<(start + length)].joined(separator: " ")
+                if let asset = IconCatalog.ingredient(named: phrase) { return asset }
+            }
+        }
+        return nil
+    }
+
+    /// The total time as a minute count, read the way the app reads every time, so "1 hour 20
+    /// minutes" is "80 min" rather than whatever a model makes of it.
+    static func time(from written: String) -> String {
+        Recipe.minutes(in: written).map { "\($0) min" } ?? ""
+    }
+
+    /// The serving count as the figures in it: "Makes 4 servings" is "4", and "Serves 4 to 6" is
+    /// "4 to 6".
+    static func serves(from written: String) -> String {
+        let figures = written.matches(of: #/\d+/#).map { String(written[$0.range]) }
+        switch figures.count {
+        case 0: return ""
+        case 1: return figures[0]
+        default: return figures[0] + " to " + figures[1]
+        }
+    }
+
+    /// A step's text cut into its sentences, with any sentence said twice kept once.
+    static func sentences(in text: String) -> [String] {
+        let tokenizer = NLTokenizer(unit: .sentence)
+        tokenizer.string = text
+        var seen: Set<String> = []
+        return tokenizer.tokens(for: text.startIndex..<text.endIndex).compactMap { range in
+            let sentence = text[range].trimmingCharacters(in: .whitespacesAndNewlines)
+            guard !sentence.isEmpty, seen.insert(sentence).inserted else { return nil }
+            return sentence
+        }
     }
 
     // MARK: - Prompts
@@ -454,92 +667,111 @@ public final class RecipeGenerator {
 
     private static var houseStyle: String { ModelPasses.houseStyle }
 
+    /// The prompt shorthand for Granite, which is always asked in English.
+    private static func english(_ key: String.LocalizationValue, _ arguments: CVarArg...) -> String {
+        let format = String(culinaryEnglish: key)
+        return arguments.isEmpty ? format : String(format: format, arguments: arguments)
+    }
+
     /// What Granite is told before the cook's request. The cook's kitchen and tools, when they
     /// listed them, are limits on the whole recipe, so they are set here rather than asked for.
     private static func writeInstructions(for request: GenerationRequest) -> String {
-        var instructions = houseStyle + "\n\n" + text("Generate.Prompt.Write")
+        var instructions = english("Generate.Prompt.HouseStyle") + "\n\n" + english("Generate.Prompt.Write")
         if !request.ingredients.isEmpty {
-            instructions += "\n\n" + text("Generate.Prompt.Write.Kitchen")
+            instructions += "\n\n" + english("Generate.Prompt.Write.Kitchen")
         }
         if !request.tools.isEmpty {
-            instructions += "\n\n" + text("Generate.Prompt.Write.Tools")
+            instructions += "\n\n" + english("Generate.Prompt.Write.Tools")
         }
         return instructions
     }
 
+    /// The sorting passes are not given the house style. Its rules are about how to cook, and a
+    /// pass handed them sorts them into the method as steps. The few that are about wording,
+    /// and the language to write in, are in the sorting instructions themselves.
     private static var structureInstructions: String {
-        houseStyle + "\n\n" + text("Generate.Prompt.Structure")
-    }
-
-    private static var reviewInstructions: String {
-        houseStyle + "\n\n" + text("Generate.Prompt.Review")
+        text("Generate.Prompt.Structure")
     }
 
     private static func prompt(for request: GenerationRequest) -> String {
+        let separator = english("Generate.Prompt.Separator")
         var lines: [String] = []
         if request.trimmedDescription.isEmpty {
-            lines.append(text(request.ingredients.isEmpty ? "Generate.Prompt.Ask.Any" : "Generate.Prompt.Ask.FromKitchen"))
+            lines.append(english(request.ingredients.isEmpty ? "Generate.Prompt.Ask.Any" : "Generate.Prompt.Ask.FromKitchen"))
         } else {
-            lines.append(text("Generate.Prompt.Ask.Dish", request.trimmedDescription))
+            lines.append(english("Generate.Prompt.Ask.Dish", request.trimmedDescription))
         }
         if !request.ingredients.isEmpty {
-            lines.append(text("Generate.Prompt.Have.Ingredients", joined(request.ingredientNames)))
+            lines.append(english("Generate.Prompt.Have.Ingredients", request.ingredientNames.joined(separator: separator)))
         }
         if !request.tools.isEmpty {
-            lines.append(text("Generate.Prompt.Have.Tools", joined(request.toolNames)))
+            lines.append(english("Generate.Prompt.Have.Tools", request.toolNames.joined(separator: separator)))
         }
         return lines.joined(separator: "\n")
     }
 
-    /// The written recipe handed to a sorting pass, fenced off so the model reads it as the
-    /// thing to sort rather than as something it is being told.
-    private static func structurePrompt(_ written: String, ask: String) -> String {
-        [
-            text("Generate.Prompt.Structure.Source", written),
-            "",
-            ask,
-        ].joined(separator: "\n")
-    }
-
-    /// The whole recipe as the read through gets it, which is the same shape a cook's own
-    /// request is planned against.
-    private static func reviewPrompt(for recipe: Recipe) -> String {
-        [
-            RecipeAskEditor.summary(of: recipe),
-            "",
-            text("Generate.Prompt.Review.Ask"),
-        ].joined(separator: "\n")
+    /// The answer for a section sorted from the whole text, where nothing could be counted.
+    private static func wholeSchema(
+        name: String,
+        description: String,
+        lists: [(name: String, description: String, element: DynamicGenerationSchema, range: ClosedRange<Int>)]
+    ) throws -> GenerationSchema {
+        let root = DynamicGenerationSchema(
+            name: name,
+            description: description,
+            properties: lists.map { list in
+                .init(
+                    name: list.name,
+                    description: list.description,
+                    schema: DynamicGenerationSchema(
+                        arrayOf: list.element,
+                        minimumElements: list.range.lowerBound,
+                        maximumElements: list.range.upperBound
+                    )
+                )
+            }
+        )
+        return try GenerationSchema(root: root, dependencies: [])
     }
 
     // MARK: - Assembly
 
     /// Maps the sorted recipe onto the on-disk schema, pinning every icon to one that exists.
-    static func makeRecipe(shopping: StructuredShopping, method: StructuredMethod) -> Recipe {
+    static func makeRecipe(_ sorted: SortedRecipe) -> Recipe {
+        func entries(in section: String) -> [(entry: StructuredIngredient, line: String)] {
+            sorted.ingredients.filter { $0.entry.section == section }
+        }
+        // Anything the pass did not mark as pantry or optional is bought fresh, so no line is
+        // lost to a section name it wrote some other way.
         let sections = IngredientSections(
-            supermarket: section(shopping.supermarket),
-            general: section(shopping.general),
-            optional: section(shopping.optional)
+            supermarket: section(sorted.ingredients.filter { !["pantry", "optional"].contains($0.entry.section) }),
+            general: section(entries(in: "pantry")),
+            optional: section(entries(in: "optional"))
         )
-        let tools = shopping.tools.map { tool in
+        // Two lines Granite wrote for the same tool, such as a wooden spoon and a spatula that
+        // both come back as 木べら, are listed once.
+        var named: Set<String> = []
+        let unique = sorted.tools.filter { named.insert($0.name.withoutLeakedSyntax.lowercased()).inserted }
+        let tools = unique.map { tool in
             Tool(
-                name: tool.name,
+                name: tool.name.withoutLeakedSyntax,
                 icon: IconCatalog.toolPath(for: IconCatalog.resolveTool(tool.icon, itemName: tool.name)),
                 required: tool.required,
-                note: trimmed(tool.note)
+                note: trimmed(tool.note.withoutLeakedSyntax)
             )
         }
         let ingredients = [sections.supermarket, sections.general, sections.optional]
             .compactMap { $0 }
             .flatMap { $0 }
         return Recipe(
-            id: Recipe.makeID(from: shopping.title),
-            title: shopping.title,
-            time: shopping.time,
-            serves: shopping.serves,
+            id: Recipe.makeID(from: sorted.title),
+            title: sorted.title,
+            time: sorted.time,
+            serves: sorted.serves,
             tried: nil,
             ingredients: sections,
             tools: tools,
-            steps: withoutRepeats(method.steps).map { step in
+            steps: withoutRepeats(sorted.steps).map { step in
                 Step(
                     title: step.title,
                     icons: Step.icons(
@@ -550,42 +782,47 @@ public final class RecipeGenerator {
                     points: step.points
                 )
             },
-            troubleshooting: method.troubleshooting.map {
-                Troubleshooting(problem: $0.problem, solution: $0.solution)
+            troubleshooting: sorted.troubleshooting.map {
+                Troubleshooting(problem: $0.problem.withoutLeakedSyntax, solution: $0.solution.withoutLeakedSyntax)
             }
         )
     }
 
-    /// Drops a step that is the step above it written out again, which is how a sorting pass
-    /// most often goes wrong. A step that only shares a title keeps its place, since what it
-    /// says is still part of the method, and the read through is left to sort it out.
-    private static func withoutRepeats(_ steps: [StructuredStep]) -> [StructuredStep] {
+    /// Drops a step that is the step above it written out again. A step that only shares a
+    /// title keeps its place, since what it says is still part of the method, and the read
+    /// through is left to sort it out.
+    private static func withoutRepeats(
+        _ steps: [(title: String, points: [String])]
+    ) -> [(title: String, points: [String])] {
         var seen: Set<String> = []
         return steps.compactMap { step in
             let title = step.title.trimmingCharacters(in: .whitespacesAndNewlines)
-            let points = step.points
-                .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
-                .filter { !$0.isEmpty }
-            guard !title.isEmpty, !points.isEmpty,
-                  seen.insert(Step.comparable(([title] + points).joined(separator: " "))).inserted
+            guard !title.isEmpty, !step.points.isEmpty,
+                  seen.insert(Step.comparable(([title] + step.points).joined(separator: " "))).inserted
             else { return nil }
-            return StructuredStep(title: title, points: points)
+            return (title, step.points)
         }
     }
 
-    /// A section is written only when it holds entries. Each entry is pinned to the icon the
-    /// sorting pass named, and falls back to a search on its name when that icon does not
-    /// exist.
-    private static func section(_ entries: [StructuredIngredient]) -> [Ingredient]? {
+    /// A section is written only when it holds entries. Each entry is pinned to the icon its
+    /// English line names, then to the one the sorting pass guessed, then to a search on its
+    /// name.
+    private static func section(_ entries: [(entry: StructuredIngredient, line: String)]) -> [Ingredient]? {
         guard !entries.isEmpty else { return nil }
-        return entries.map { entry in
+        return entries.map { entry, line in
             Ingredient(
-                item: entry.item,
+                item: entry.item.withoutLeakedSyntax,
                 icon: IconCatalog.ingredientPath(
-                    for: IconCatalog.resolveIngredient(entry.icon, itemName: entry.item)
+                    for: ingredientIcon(line: line, guess: entry.icon, item: entry.item)
                 ),
-                amount: entry.amount,
-                note: trimmed(entry.note)
+                // The measure words are put right once more here, in case the pass wrote an
+                // amount back the way Granite had it.
+                amount: Measures.tidied(
+                    Measures.readsJapanese
+                        ? Measures.japanese(entry.amount.withoutLeakedSyntax)
+                        : entry.amount.withoutLeakedSyntax
+                ),
+                note: trimmed(entry.note.withoutLeakedSyntax)
             )
         }
     }

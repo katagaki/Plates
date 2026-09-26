@@ -420,10 +420,14 @@ public nonisolated enum IconCatalog {
     /// Looked up through `normalized`, so plurals and spacing do not need their own entries.
     private static let aliases: [String: String] = [
         "aubergine": "eggplant",
+        "beef broth": "bouillon",
         "beni shoga": "pickled-ginger",
         "bicarbonate of soda": "baking-soda",
         "bonito flakes": "katsuobushi",
+        "broth": "bouillon",
         "capsicum": "bell-pepper",
+        "chicken broth": "bouillon",
+        "chicken stock": "bouillon",
         "chilli": "chili",
         "chinese black vinegar": "black-vinegar",
         "chinese cabbage": "napa-cabbage",
@@ -466,11 +470,14 @@ public nonisolated enum IconCatalog {
         "sesame paste": "tahini",
         "sha cha": "shacha-sauce",
         "shiitake": "dried-shiitake",
+        "stock": "bouillon",
         "stock cube": "bouillon",
         "sweet bean sauce": "tianmianjiang",
         "takenoko": "bamboo-shoots",
         "tako": "octopus",
         "togarashi": "shichimi",
+        "vegetable broth": "bouillon",
+        "vegetable stock": "bouillon",
         "white radish": "daikon",
         "yoghurt": "yogurt",
     ].reduce(into: [:]) { table, entry in table[normalized(entry.key)] = entry.value }
@@ -508,8 +515,18 @@ public nonisolated enum IconCatalog {
     /// onion" in English and "ねぎ" in Japanese. Every asset has a key of its own in the
     /// string catalog, and an asset with no entry falls back to its own name.
     public static func displayName(for asset: String) -> String {
+        name(for: asset, String(culinary: String.LocalizationValue(nameKey(for: asset))))
+    }
+
+    /// The same name in English, whatever the reader's language, for the model that writes in
+    /// English.
+    static func englishName(for asset: String) -> String {
+        name(for: asset, String(culinaryEnglish: String.LocalizationValue(nameKey(for: asset))))
+    }
+
+    /// A looked up name, or the asset's own name when the catalog has no entry for it.
+    private static func name(for asset: String, _ localized: String) -> String {
         let key = nameKey(for: asset)
-        let localized = String(culinary: String.LocalizationValue(key))
         guard localized != key else {
             let words = asset.replacingOccurrences(of: "-", with: " ")
             return words.prefix(1).uppercased() + words.dropFirst()

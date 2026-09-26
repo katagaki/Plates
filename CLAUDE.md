@@ -47,23 +47,54 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
   `backgroundTask(.urlSession(_:))`. `RecipeWriter` runs it through llama.cpp with the evals'
   settings: a 4,096 token window, up to 1,400 tokens, temperature 0.7. It loads the model for one
   recipe and frees it before Apple Intelligence runs, and runs on the CPU in Simulator.
+  `WrittenRecipe` and `Measures` sit beside it: they read what Granite wrote before any model
+  sorts it.
 - `CulinaryIntelligence/Sources/CulinaryIntelligence/Intelligence` holds the Apple Intelligence
   `@Generable` types, the generator, and the editor. A recipe is written by two models, the way
-  the evals ran them. Granite writes the whole recipe as plain cookbook text in one go, then
-  Apple Intelligence sorts that text into the schema in two passes, each in its own session:
-  the title, the shopping list, and the tools first, then the method and the troubleshooting.
-  The sorting passes are told to take everything from the text and add nothing, and each names
-  a catalog icon for what it lists, which `IconCatalog` resolves. A step the sorting pass writes
-  out twice is dropped through `Step.comparable`. An Apple pass runs on device first, and only a
-  pass the on-device model rejects with `contextSizeExceeded` is run again on
-  `PrivateCloudComputeLanguageModel`. Keep passes small enough that the cloud stays a fallback.
-  That fallback, the background time a pass runs in, and whether the model is there at all are
-  written down once in `ModelPasses`, which both the generator and the editor run through. A last
-  pass reads the sorted recipe back and says what does not hold up, as a plan in the shape
-  `RecipeAskEditor` carries out, so a fix is made by the same passes a cook's own request goes
-  through. The fixed recipe is read back again, until nothing is left to fix or the loop has been
-  round twice. A read through that fails leaves the recipe as it stands rather than losing it.
-  Rewriting a recipe stays on Apple Intelligence alone.
+  the evals ran them, and every step of it is shaped by what the Mac runs of it showed:
+  - Granite writes in English, always. A 1B model gets the cooking right in English and badly
+    wrong in Japanese, so its instructions, the house style it is given, and the names of the
+    cook's picks are read from the English catalog through `String(culinaryEnglish:)` in every
+    locale. Those keys still carry Japanese values, marked in their comments as never sent.
+  - A request the cook typed in anything but plain ASCII is put into English by Apple
+    Intelligence first. Granite read "卵チャーハン" as egg curry.
+  - `WrittenRecipe` cuts Granite's text into its sections in code. The time and the serving
+    count are read out of it there, through `Recipe.minutes(in:)` and the figures in the line,
+    because a model read "1 hour 20 minutes" as two hours.
+  - `Measures` converts cups, ounces, pounds, inches, and Fahrenheit to metric for a reader
+    outside the US, and writes spoon measures and "to taste" the Japanese way for a Japanese
+    reader, before any model sees the line. A model asked to convert got half a cup wrong.
+  - Apple Intelligence then sorts one line at a time, each in its own session: the title, every
+    ingredient, every tool, every step, every problem. Given a whole list, it dropped lines,
+    merged steps, and filled the gaps from the troubleshooting, even with the count fixed by a
+    `DynamicGenerationSchema`; given one line, it has nothing else to draw on. A step comes back
+    as one piece of text and is cut into sentences with `NLTokenizer`, so there are no slots to
+    pad. Every sorting pass has a response token limit: one ran on past seven thousand tokens,
+    overran the window, and was taken for a request too large for the device. A line that
+    fails is retried with a growing wait, since the usual failure is the system rate limiting a
+    run in the background. When a section cannot be split into lines, it is
+    sorted from the whole text with a ranged `DynamicGenerationSchema` instead.
+  - The sorting passes are not given the house style: they sorted its cooking rules into the
+    method as steps. `Generate.Prompt.Structure` carries the wording rules and the language
+    instead, and in Japanese, how to translate.
+  - What code can read off Granite's English line, code decides rather than the pass: an
+    ingredient's icon is the longest run of the line's words the catalog knows (measure words
+    such as "cloves" skipped), whether an ingredient or a tool is optional is whether the line
+    says so, and a figure the pass wrote without its metric unit gets the unit back. When the
+    line names a catalog ingredient, the pass is handed the catalog's name for it, so "frozen
+    peas" is not translated as green peppers.
+  - Text a sorting pass returns goes through `withoutLeakedSyntax`, because the on-device model
+    sometimes runs past a Japanese string into `」} ```json{` or a `<ctrl46>` token, and then
+    through `Measures.tidied`, which puts a spoon measure written back as "2大さじ" right and
+    writes every range with "to", or から in Japanese.
+  An Apple pass runs on device first, and only a pass the on-device model rejects with
+  `contextSizeExceeded` is run again on `PrivateCloudComputeLanguageModel`. That fallback, the
+  background time a pass runs in, and whether the model is there at all are written down once in
+  `ModelPasses`, which both the generator and the editor run through. A generation has no read
+  through at the end. It had one, and once the sorting was faithful line for line, the read
+  through was what made recipes wrong: it rewrote whole lists, dropping and duplicating lines
+  and adding ones Granite never wrote. Rewriting a recipe stays on Apple Intelligence alone,
+  and keeps its read through, since there it checks the result against what the cook asked.
 - The generator and the editor report their progress to a `RunObserver` the app hands in, so the
   package never imports ActivityKit. `Plates/Activity/GenerationActivity` is that observer, and
   runs the Live Activity.
@@ -73,10 +104,10 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
   the progress screen lists, so its rows are as many as the work turned out to be rather than
   fixed the way a generation's are. Changes to the recipe as a whole are made first and step
   changes from the last step back, so adding or dropping a step never moves one that a later
-  change is counting on. A rewrite ends the way a generation does, with a read through: the
-  recipe is checked against what the cook asked for and against itself, and whatever that finds
-  is made as more rows on the same checklist. Both read throughs come back as
-  `GeneratedRecipeReview`, which is a plan in the shape the editor already carries out. Every
+  change is counting on. A rewrite ends with a read through: the recipe is checked against what
+  the cook asked for and against itself, and whatever that finds is made as more rows on the
+  same checklist. It comes back as `GeneratedRecipeReview`, which is a plan in the shape the
+  editor already carries out. Every
   other pass reads the method as step titles; the read through after an edit is the one pass
   handed the steps written out, because whether a recipe makes sense is in what the steps say.
   It is the largest prompt the app sends, and on the bundled recipes it runs around 600 tokens,

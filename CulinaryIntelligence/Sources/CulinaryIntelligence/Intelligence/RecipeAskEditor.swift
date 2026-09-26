@@ -60,8 +60,8 @@ struct GeneratedEdit {
 }
 
 /// A recipe read back the way a cook reads one, with anything that does not hold up written as
-/// the change that fixes it. The read through at the end of a generation and the one at the end
-/// of a rewrite both come back in this shape, so both are carried out as a plan.
+/// the change that fixes it. The read through at the end of a rewrite comes back in this shape,
+/// so what it finds is carried out as a plan.
 @Generable(description: "Problems with a written recipe, as the changes that fix them")
 struct GeneratedRecipeReview {
     @Guide(description: "True when the recipe holds up as it is and nothing needs changing")
@@ -353,17 +353,6 @@ public final class RecipeAskEditor {
         return recipe
     }
 
-    /// Carries out a plan somebody else worked out, with no progress or activity of its own.
-    /// The read through at the end of a generation comes back with a plan in this shape, so a
-    /// fix it asks for is made by the same passes a cook's own request goes through.
-    func revise(_ recipe: Recipe, with plan: [PlannedEdit]) async throws -> Recipe {
-        var edited = recipe
-        for edit in plan {
-            edited = try await apply(edit, to: edited)
-        }
-        return Self.tidied(edited, against: recipe)
-    }
-
     // MARK: - Working out what to change
 
     /// Asks what to change, and puts the answer in an order that can be carried out.
@@ -387,7 +376,7 @@ public final class RecipeAskEditor {
     /// left in an order that can be. Changes to the recipe as a whole come first, and step
     /// changes run from the last step back, so adding or dropping one never moves a step a
     /// later change was counting on.
-    static func ordered(_ planned: [GeneratedEdit]) -> [PlannedEdit] {
+    private static func ordered(_ planned: [GeneratedEdit]) -> [PlannedEdit] {
         let edits = planned.compactMap { edit -> PlannedEdit? in
             let token = edit.target.trimmingCharacters(in: .whitespaces).lowercased()
             let title = edit.title.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -665,9 +654,8 @@ public final class RecipeAskEditor {
     }
 
     /// The recipe as a pass reads it: what it is, what goes in it, what it is cooked with, and
-    /// the method as numbered titles. Short enough that a pass carries the whole recipe, and
-    /// the same shape the read through at the end of a generation is given.
-    static func summary(of recipe: Recipe) -> String {
+    /// the method as numbered titles. Short enough that a pass carries the whole recipe.
+    private static func summary(of recipe: Recipe) -> String {
         let ingredients = RecipeList.allCases
             .filter(\.isIngredients)
             .flatMap(recipe.ingredientList(in:))
