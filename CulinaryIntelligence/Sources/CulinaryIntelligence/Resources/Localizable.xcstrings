@@ -1200,6 +1200,23 @@
         }
       }
     },
+    "Ingredient.Name.Agar": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agar"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "寒天"
+          }
+        }
+      }
+    },
     "Ingredient.Name.AlmondFlour": {
       "extractionState": "manual",
       "localizations": {
@@ -1217,6 +1234,23 @@
         }
       }
     },
+    "Ingredient.Name.Almonds": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Almonds"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アーモンド"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Anchovies": {
       "extractionState": "manual",
       "localizations": {
@@ -1230,6 +1264,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "アンチョビ"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.Anko": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Red bean paste"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "あんこ"
           }
         }
       }
@@ -1264,6 +1315,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "りんご"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.AppleCiderVinegar": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple cider vinegar"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "りんご酢"
           }
         }
       }
@@ -1349,6 +1417,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "アボカド"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.Azuki": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Azuki beans"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "小豆"
           }
         }
       }
@@ -1506,6 +1591,23 @@
         }
       }
     },
+    "Ingredient.Name.BbqSauce": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Barbecue sauce"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "バーベキューソース"
+          }
+        }
+      }
+    },
     "Ingredient.Name.BeanSprouts": {
       "extractionState": "manual",
       "localizations": {
@@ -1557,6 +1659,40 @@
         }
       }
     },
+    "Ingredient.Name.Beer": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beer"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ビール"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.Beetroot": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beetroot"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ビーツ"
+          }
+        }
+      }
+    },
     "Ingredient.Name.BellPepper": {
       "extractionState": "manual",
       "localizations": {
@@ -1570,6 +1706,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "パプリカ"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.BitterMelon": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bitter melon"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ゴーヤ"
           }
         }
       }
@@ -1604,6 +1757,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "黒酢"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.BlueCheese": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blue cheese"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ブルーチーズ"
           }
         }
       }
@@ -1672,6 +1842,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "パン"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.BreadFlour": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bread flour"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "強力粉"
           }
         }
       }
@@ -1761,6 +1948,23 @@
         }
       }
     },
+    "Ingredient.Name.Burrata": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Burrata"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ブッラータ"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Butter": {
       "extractionState": "manual",
       "localizations": {
@@ -1778,6 +1982,40 @@
         }
       }
     },
+    "Ingredient.Name.Buttermilk": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buttermilk"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "バターミルク"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.ButternutSquash": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Butternut squash"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "バターナッツかぼちゃ"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Cabbage": {
       "extractionState": "manual",
       "localizations": {
@@ -1791,6 +2029,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "キャベツ"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.CakeFlour": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cake flour"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "薄力粉"
           }
         }
       }
@@ -1880,6 +2135,23 @@
         }
       }
     },
+    "Ingredient.Name.Cayenne": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cayenne"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "カイエンペッパー"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Celery": {
       "extractionState": "manual",
       "localizations": {
@@ -1965,6 +2237,23 @@
         }
       }
     },
+    "Ingredient.Name.CherryTomato": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cherry tomato"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ミニトマト"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Chicken": {
       "extractionState": "manual",
       "localizations": {
@@ -1995,6 +2284,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "ひよこ豆"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.Chikuwa": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chikuwa"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ちくわ"
           }
         }
       }
@@ -2169,6 +2475,40 @@
         }
       }
     },
+    "Ingredient.Name.Coconut": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Coconut"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ココナッツ"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.CoconutFlakes": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Coconut flakes"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ココナッツフレーク"
+          }
+        }
+      }
+    },
     "Ingredient.Name.CoconutMilk": {
       "extractionState": "manual",
       "localizations": {
@@ -2271,6 +2611,40 @@
         }
       }
     },
+    "Ingredient.Name.CornedBeef": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Corned beef"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "コンビーフ"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.Cornmeal": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cornmeal"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "コーンミール"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Cornstarch": {
       "extractionState": "manual",
       "localizations": {
@@ -2322,6 +2696,23 @@
         }
       }
     },
+    "Ingredient.Name.CrabSticks": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Crab sticks"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "カニカマ"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Cream": {
       "extractionState": "manual",
       "localizations": {
@@ -2352,6 +2743,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "クリームチーズ"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.CremeFraiche": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Crème fraîche"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "クレームフレッシュ"
           }
         }
       }
@@ -2475,6 +2883,23 @@
         }
       }
     },
+    "Ingredient.Name.Dates": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dates"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "デーツ"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Dill": {
       "extractionState": "manual",
       "localizations": {
@@ -2492,6 +2917,23 @@
         }
       }
     },
+    "Ingredient.Name.Doenjang": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Doenjang"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "テンジャン"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Doubanjiang": {
       "extractionState": "manual",
       "localizations": {
@@ -2505,6 +2947,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "豆板醤"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.Douchi": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fermented black beans"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "豆豉"
           }
         }
       }
@@ -2560,6 +3019,23 @@
         }
       }
     },
+    "Ingredient.Name.Eel": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eel"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "うなぎ"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Egg": {
       "extractionState": "manual",
       "localizations": {
@@ -2573,6 +3049,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "卵"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.EggNoodles": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Egg noodles"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "中華麺"
           }
         }
       }
@@ -2628,6 +3121,23 @@
         }
       }
     },
+    "Ingredient.Name.FennelSeeds": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fennel seeds"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "フェンネルシード"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Feta": {
       "extractionState": "manual",
       "localizations": {
@@ -2658,6 +3168,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "フェットチーネ"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.Fig": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fig"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "いちじく"
           }
         }
       }
@@ -2764,6 +3291,40 @@
         }
       }
     },
+    "Ingredient.Name.GaiLan": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gai lan"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "カイラン"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.GaramMasala": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Garam masala"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ガラムマサラ"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Garlic": {
       "extractionState": "manual",
       "localizations": {
@@ -2777,6 +3338,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "にんにく"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.GarlicPowder": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Garlic powder"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ガーリックパウダー"
           }
         }
       }
@@ -2798,6 +3376,23 @@
         }
       }
     },
+    "Ingredient.Name.Ghee": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ghee"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ギー"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Ginger": {
       "extractionState": "manual",
       "localizations": {
@@ -2811,6 +3406,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "しょうが"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.GlutinousRice": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Glutinous rice"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "もち米"
           }
         }
       }
@@ -2832,6 +3444,40 @@
         }
       }
     },
+    "Ingredient.Name.GoatCheese": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Goat cheese"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "シェーブルチーズ"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.Gochugaru": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gochugaru"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "粉唐辛子"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Gochujang": {
       "extractionState": "manual",
       "localizations": {
@@ -2845,6 +3491,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "コチュジャン"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.GoldenSyrup": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Golden syrup"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ゴールデンシロップ"
           }
         }
       }
@@ -2866,6 +3529,23 @@
         }
       }
     },
+    "Ingredient.Name.Grapefruit": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Grapefruit"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "グレープフルーツ"
+          }
+        }
+      }
+    },
     "Ingredient.Name.GreenBeans": {
       "extractionState": "manual",
       "localizations": {
@@ -2879,6 +3559,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "いんげん"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.Gruyere": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gruyère"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "グリュイエールチーズ"
           }
         }
       }
@@ -2900,6 +3597,40 @@
         }
       }
     },
+    "Ingredient.Name.GyozaWrappers": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gyoza wrappers"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "餃子の皮"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.Halloumi": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Halloumi"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ハルーミチーズ"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Ham": {
       "extractionState": "manual",
       "localizations": {
@@ -2913,6 +3644,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "ハム"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.Harusame": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Glass noodles"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "春雨"
           }
         }
       }
@@ -3002,6 +3750,23 @@
         }
       }
     },
+    "Ingredient.Name.Jalapeno": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jalapeño"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ハラペーニョ"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Jam": {
       "extractionState": "manual",
       "localizations": {
@@ -3015,6 +3780,40 @@
           "stringUnit": {
             "state": "translated",
             "value": "ジャム"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.Kabocha": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kabocha"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "かぼちゃ"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.KaffirLimeLeaves": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Makrut lime leaves"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "こぶみかんの葉"
           }
         }
       }
@@ -3070,6 +3869,23 @@
         }
       }
     },
+    "Ingredient.Name.KecapManis": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kecap manis"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ケチャップマニス"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Ketchup": {
       "extractionState": "manual",
       "localizations": {
@@ -3121,6 +3937,23 @@
         }
       }
     },
+    "Ingredient.Name.Kinako": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kinako"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "きな粉"
+          }
+        }
+      }
+    },
     "Ingredient.Name.KingOyster": {
       "extractionState": "manual",
       "localizations": {
@@ -3134,6 +3967,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "エリンギ"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.KiriboshiDaikon": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dried daikon"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "切り干し大根"
           }
         }
       }
@@ -3155,6 +4005,23 @@
         }
       }
     },
+    "Ingredient.Name.Komatsuna": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Komatsuna"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "小松菜"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Kombu": {
       "extractionState": "manual",
       "localizations": {
@@ -3168,6 +4035,40 @@
           "stringUnit": {
             "state": "translated",
             "value": "昆布"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.Konnyaku": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Konnyaku"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "こんにゃく"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.KoyaDofu": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Koya-dofu"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "高野豆腐"
           }
         }
       }
@@ -3240,6 +4141,23 @@
         }
       }
     },
+    "Ingredient.Name.Lemongrass": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lemongrass"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レモングラス"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Lentils": {
       "extractionState": "manual",
       "localizations": {
@@ -3291,6 +4209,23 @@
         }
       }
     },
+    "Ingredient.Name.Liver": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liver"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レバー"
+          }
+        }
+      }
+    },
     "Ingredient.Name.LotusRoot": {
       "extractionState": "manual",
       "localizations": {
@@ -3304,6 +4239,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "れんこん"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.LuncheonMeat": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luncheon meat"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ランチョンミート"
           }
         }
       }
@@ -3444,6 +4396,40 @@
         }
       }
     },
+    "Ingredient.Name.Menma": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Menma"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "メンマ"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.Mentaiko": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mentaiko"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "明太子"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Mentsuyu": {
       "extractionState": "manual",
       "localizations": {
@@ -3546,6 +4532,23 @@
         }
       }
     },
+    "Ingredient.Name.Mizuna": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mizuna"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "水菜"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Mochi": {
       "extractionState": "manual",
       "localizations": {
@@ -3593,6 +4596,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "モッツァレラ"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.Msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MSG"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "うま味調味料"
           }
         }
       }
@@ -3648,6 +4668,40 @@
         }
       }
     },
+    "Ingredient.Name.MustardSeeds": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mustard seeds"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マスタードシード"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.Myoga": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Myoga"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "みょうが"
+          }
+        }
+      }
+    },
     "Ingredient.Name.NapaCabbage": {
       "extractionState": "manual",
       "localizations": {
@@ -3678,6 +4732,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "納豆"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.Nira": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Garlic chives"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "にら"
           }
         }
       }
@@ -3801,6 +4872,23 @@
         }
       }
     },
+    "Ingredient.Name.OkonomiyakiSauce": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Okonomiyaki sauce"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "お好み焼きソース"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Okra": {
       "extractionState": "manual",
       "localizations": {
@@ -3865,6 +4953,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "玉ねぎ"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.OnionPowder": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Onion powder"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "オニオンパウダー"
           }
         }
       }
@@ -3971,6 +5076,23 @@
         }
       }
     },
+    "Ingredient.Name.Paneer": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paneer"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "パニール"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Panko": {
       "extractionState": "manual",
       "localizations": {
@@ -4039,6 +5161,23 @@
         }
       }
     },
+    "Ingredient.Name.Parsnip": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parsnip"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "パースニップ"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Passata": {
       "extractionState": "manual",
       "localizations": {
@@ -4086,6 +5225,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "ピーナッツバター"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.Peanuts": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Peanuts"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ピーナッツ"
           }
         }
       }
@@ -4277,6 +5433,23 @@
         }
       }
     },
+    "Ingredient.Name.Plum": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plum"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "プラム"
+          }
+        }
+      }
+    },
     "Ingredient.Name.PlumSauce": {
       "extractionState": "manual",
       "localizations": {
@@ -4307,6 +5480,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "ポレンタ"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.Pomegranate": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pomegranate"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ざくろ"
           }
         }
       }
@@ -4379,6 +5569,23 @@
         }
       }
     },
+    "Ingredient.Name.PuffPastry": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Puff pastry"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "パイシート"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Pumpkin": {
       "extractionState": "manual",
       "localizations": {
@@ -4391,7 +5598,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "かぼちゃ"
+            "value": "パンプキン"
           }
         }
       }
@@ -4430,6 +5637,23 @@
         }
       }
     },
+    "Ingredient.Name.Raisins": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Raisins"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レーズン"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Ramen": {
       "extractionState": "manual",
       "localizations": {
@@ -4447,6 +5671,23 @@
         }
       }
     },
+    "Ingredient.Name.Raspberry": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Raspberry"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ラズベリー"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Ravioli": {
       "extractionState": "manual",
       "localizations": {
@@ -4460,6 +5701,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "ラビオリ"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.RedOnion": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Red onion"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "紫玉ねぎ"
           }
         }
       }
@@ -4498,6 +5756,23 @@
         }
       }
     },
+    "Ingredient.Name.RiceFlour": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rice flour"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "米粉"
+          }
+        }
+      }
+    },
     "Ingredient.Name.RiceNoodles": {
       "extractionState": "manual",
       "localizations": {
@@ -4511,6 +5786,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "ライスヌードル"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.RicePaper": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rice paper"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ライスペーパー"
           }
         }
       }
@@ -4668,6 +5960,23 @@
         }
       }
     },
+    "Ingredient.Name.SalmonRoe": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salmon roe"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "いくら"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Salt": {
       "extractionState": "manual",
       "localizations": {
@@ -4685,6 +5994,23 @@
         }
       }
     },
+    "Ingredient.Name.Sambal": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sambal"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "サンバル"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Sansho": {
       "extractionState": "manual",
       "localizations": {
@@ -4698,6 +6024,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "山椒"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.Sardines": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sardines"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "いわし"
           }
         }
       }
@@ -4749,6 +6092,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "シーフード"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.SesameDressing": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sesame dressing"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ごまドレッシング"
           }
         }
       }
@@ -4855,6 +6215,23 @@
         }
       }
     },
+    "Ingredient.Name.Shiitake": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiitake"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "しいたけ"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Shimeji": {
       "extractionState": "manual",
       "localizations": {
@@ -4872,6 +6249,23 @@
         }
       }
     },
+    "Ingredient.Name.Shirasu": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shirasu"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "しらす"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Shirataki": {
       "extractionState": "manual",
       "localizations": {
@@ -4885,6 +6279,40 @@
           "stringUnit": {
             "state": "translated",
             "value": "しらたき"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.Shiratamako": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiratamako"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "白玉粉"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.ShiroDashi": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiro dashi"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "白だし"
           }
         }
       }
@@ -4923,6 +6351,57 @@
         }
       }
     },
+    "Ingredient.Name.Shungiku": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shungiku"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "春菊"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.SichuanPeppercorns": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sichuan peppercorns"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "花椒"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.SnowPeas": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Snow peas"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "さやえんどう"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Soba": {
       "extractionState": "manual",
       "localizations": {
@@ -4936,6 +6415,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "そば"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.Somen": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Somen"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "そうめん"
           }
         }
       }
@@ -5144,6 +6640,23 @@
         }
       }
     },
+    "Ingredient.Name.SweetChiliSauce": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sweet chili sauce"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "スイートチリソース"
+          }
+        }
+      }
+    },
     "Ingredient.Name.SweetPotato": {
       "extractionState": "manual",
       "localizations": {
@@ -5157,6 +6670,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "さつまいも"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.SwissChard": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Swiss chard"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "スイスチャード"
           }
         }
       }
@@ -5178,6 +6708,74 @@
         }
       }
     },
+    "Ingredient.Name.Takuan": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Takuan"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "たくあん"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.Tamarind": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tamarind"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "タマリンド"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.Taro": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Taro"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "里いも"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.Tarragon": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tarragon"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "タラゴン"
+          }
+        }
+      }
+    },
     "Ingredient.Name.TeriyakiSauce": {
       "extractionState": "manual",
       "localizations": {
@@ -5191,6 +6789,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "照り焼きのたれ"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.ThaiBasil": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thai basil"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "タイバジル"
           }
         }
       }
@@ -5331,6 +6946,23 @@
         }
       }
     },
+    "Ingredient.Name.Turkey": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turkey"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "七面鳥"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Turmeric": {
       "extractionState": "manual",
       "localizations": {
@@ -5416,6 +7048,23 @@
         }
       }
     },
+    "Ingredient.Name.Veal": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Veal"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "仔牛肉"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Vinegar": {
       "extractionState": "manual",
       "localizations": {
@@ -5446,6 +7095,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "わかめ"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.Walnuts": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Walnuts"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "くるみ"
           }
         }
       }
@@ -5484,6 +7150,23 @@
         }
       }
     },
+    "Ingredient.Name.WaterChestnut": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Water chestnut"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "くわい"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Watercress": {
       "extractionState": "manual",
       "localizations": {
@@ -5501,6 +7184,40 @@
         }
       }
     },
+    "Ingredient.Name.Watermelon": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Watermelon"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すいか"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.WheatGluten": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wheat gluten"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "麩"
+          }
+        }
+      }
+    },
     "Ingredient.Name.WhiteWine": {
       "extractionState": "manual",
       "localizations": {
@@ -5514,6 +7231,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "白ワイン"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.WontonWrappers": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wonton wrappers"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ワンタンの皮"
           }
         }
       }
@@ -5548,6 +7282,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "XO醤"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.YakinikuSauce": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yakiniku sauce"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "焼肉のたれ"
           }
         }
       }
@@ -5603,6 +7354,23 @@
         }
       }
     },
+    "Ingredient.Name.Yellowtail": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yellowtail"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ぶり"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Yogurt": {
       "extractionState": "manual",
       "localizations": {
@@ -5650,6 +7418,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "ゆず胡椒"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.ZhaCai": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zha cai"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ザーサイ"
           }
         }
       }

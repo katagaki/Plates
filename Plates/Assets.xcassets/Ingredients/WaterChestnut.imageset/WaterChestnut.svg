@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Water chestnut">
+  <path d="M20 11C11 13 6 20 6 27s6 10 14 10 14-3 14-10-5-14-14-16Z" fill="#4b2e2a"/>
+  <path d="M18 12c0-3 1-6 3-8 0 3 0 5 1 7Z" fill="#8a6a4a"/>
+  <g stroke="#7a5446" stroke-width="1.5" fill="none" stroke-linecap="round"><path d="M8 23c7 2 16 2 24 0"/><path d="M7 30c8 2 18 2 26 0"/></g>
+  <ellipse cx="34" cy="36" rx="9" ry="5.5" fill="#dcd0b8"/>
+  <ellipse cx="34" cy="35" rx="9" ry="5.5" fill="#f8f4e8"/>
+</svg>

@@ -1,0 +1,11 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Paneer">
+  <path d="M6 22l9 -4.5 9 4.5 -9 4.5Z" fill="#fbf6ea"/>
+  <path d="M6 22v9l9 4.5v-9Z" fill="#f2e4c2"/>
+  <path d="M24 22v9l-9 4.5v-9Z" fill="#e3cc96"/>
+  <path d="M22 26l9 -4.5 9 4.5 -9 4.5Z" fill="#fbf6ea"/>
+  <path d="M22 26v9l9 4.5v-9Z" fill="#f2e4c2"/>
+  <path d="M40 26v9l-9 4.5v-9Z" fill="#e3cc96"/>
+  <path d="M14 12l9 -4.5 9 4.5 -9 4.5Z" fill="#fbf6ea"/>
+  <path d="M14 12v9l9 4.5v-9Z" fill="#f2e4c2"/>
+  <path d="M32 12v9l-9 4.5v-9Z" fill="#e3cc96"/>
+</svg>

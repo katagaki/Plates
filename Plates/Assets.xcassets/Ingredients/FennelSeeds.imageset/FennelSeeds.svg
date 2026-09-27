@@ -1,0 +1,28 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fennel seeds">
+<g transform="translate(24 30) scale(1.45) translate(-24 -30)">
+  <ellipse cx="16" cy="33" rx="3.2" ry="1.4" transform="rotate(-30 16 33)" fill="#a3a25a"/>
+  <ellipse cx="21" cy="31" rx="3.2" ry="1.4" transform="rotate(15 21 31)" fill="#a3a25a"/>
+  <ellipse cx="27" cy="32" rx="3.2" ry="1.4" transform="rotate(-10 27 32)" fill="#a3a25a"/>
+  <ellipse cx="32" cy="33" rx="3.2" ry="1.4" transform="rotate(30 32 33)" fill="#a3a25a"/>
+  <ellipse cx="19" cy="27" rx="3.2" ry="1.4" transform="rotate(40 19 27)" fill="#a3a25a"/>
+  <ellipse cx="25" cy="26" rx="3.2" ry="1.4" transform="rotate(-35 25 26)" fill="#a3a25a"/>
+  <ellipse cx="30" cy="28" rx="3.2" ry="1.4" transform="rotate(10 30 28)" fill="#a3a25a"/>
+  <ellipse cx="23" cy="22" rx="3.2" ry="1.4" transform="rotate(20 23 22)" fill="#a3a25a"/>
+  <ellipse cx="14" cy="37" rx="3.2" ry="1.4" transform="rotate(5 14 37)" fill="#a3a25a"/>
+  <ellipse cx="21" cy="36" rx="3.2" ry="1.4" transform="rotate(-20 21 36)" fill="#a3a25a"/>
+  <ellipse cx="28" cy="37" rx="3.2" ry="1.4" transform="rotate(35 28 37)" fill="#a3a25a"/>
+  <ellipse cx="34" cy="38" rx="3.2" ry="1.4" transform="rotate(-15 34 38)" fill="#a3a25a"/>
+  <path d="M13.8 33h4.4" transform="rotate(-30 16 33)" stroke="#cfcd8a" stroke-width=".6"/>
+  <path d="M18.8 31h4.4" transform="rotate(15 21 31)" stroke="#cfcd8a" stroke-width=".6"/>
+  <path d="M24.8 32h4.4" transform="rotate(-10 27 32)" stroke="#cfcd8a" stroke-width=".6"/>
+  <path d="M29.8 33h4.4" transform="rotate(30 32 33)" stroke="#cfcd8a" stroke-width=".6"/>
+  <path d="M16.8 27h4.4" transform="rotate(40 19 27)" stroke="#cfcd8a" stroke-width=".6"/>
+  <path d="M22.8 26h4.4" transform="rotate(-35 25 26)" stroke="#cfcd8a" stroke-width=".6"/>
+  <path d="M27.8 28h4.4" transform="rotate(10 30 28)" stroke="#cfcd8a" stroke-width=".6"/>
+  <path d="M20.8 22h4.4" transform="rotate(20 23 22)" stroke="#cfcd8a" stroke-width=".6"/>
+  <path d="M11.8 37h4.4" transform="rotate(5 14 37)" stroke="#cfcd8a" stroke-width=".6"/>
+  <path d="M18.8 36h4.4" transform="rotate(-20 21 36)" stroke="#cfcd8a" stroke-width=".6"/>
+  <path d="M25.8 37h4.4" transform="rotate(35 28 37)" stroke="#cfcd8a" stroke-width=".6"/>
+  <path d="M31.8 38h4.4" transform="rotate(-15 34 38)" stroke="#cfcd8a" stroke-width=".6"/>
+</g>
+</svg>

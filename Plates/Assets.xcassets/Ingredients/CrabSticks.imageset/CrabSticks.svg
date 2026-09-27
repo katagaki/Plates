@@ -1,0 +1,9 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Crab sticks">
+  <g transform="rotate(-18 24 24)">
+    <rect x="5" y="14" width="32" height="8" rx="2" fill="#f6f1ea"/>
+    <path d="M7 14h28a2 2 0 0 1 2 2v1.5H5V16a2 2 0 0 1 2-2Z" fill="#e2472f"/>
+    <rect x="9" y="26" width="32" height="8" rx="2" fill="#f6f1ea"/>
+    <path d="M11 26h28a2 2 0 0 1 2 2v1.5H9V28a2 2 0 0 1 2-2Z" fill="#e2472f"/>
+    <g stroke="#e6ddd0" stroke-width="1" stroke-linecap="round"><path d="M7 20h28M11 32h28"/></g>
+  </g>
+</svg>

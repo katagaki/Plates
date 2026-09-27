@@ -1,0 +1,8 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Makrut lime leaves">
+  <path d="M24 44c0-6-1-10-3-13" stroke="#5a7d34" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M21 31c-8-3-11-9-8-16 6 2 10 8 8 16Z" fill="#2f6b30"/>
+  <path d="M13 15c-4-7 0-12 6-13 3 6 0 11-6 13Z" fill="#3a7d38"/>
+  <path d="M21 31c2-8 7-11 13-10 0 7-5 11-13 10Z" fill="#3a7d38"/>
+  <path d="M34 21c2-7 7-9 11-8-1 6-5 9-11 8Z" fill="#2f6b30"/>
+  <g stroke="#7fb068" stroke-width="1.2" fill="none" stroke-linecap="round"><path d="M21 31 14 16"/><path d="M13 15l5-12"/><path d="M21 31l12-9"/><path d="M34 21l10-7"/></g>
+</svg>

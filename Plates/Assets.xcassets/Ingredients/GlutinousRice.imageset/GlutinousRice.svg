@@ -1,0 +1,17 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Glutinous rice">
+  <path d="M5 35C9 22 22 14 43 14 39 28 26 38 5 35Z" fill="#6f9e4f"/>
+  <path d="M8 34c10-5 20-11 33-19" stroke="#8fbd6c" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <ellipse cx="16" cy="26" rx="2.6" ry="1.6" transform="rotate(-30 16 26)" fill="#fbfaf5" stroke="#d9d3c4" stroke-width=".6"/>
+  <ellipse cx="21" cy="23" rx="2.6" ry="1.6" transform="rotate(20 21 23)" fill="#fbfaf5" stroke="#d9d3c4" stroke-width=".6"/>
+  <ellipse cx="26" cy="26" rx="2.6" ry="1.6" transform="rotate(-10 26 26)" fill="#fbfaf5" stroke="#d9d3c4" stroke-width=".6"/>
+  <ellipse cx="31" cy="23" rx="2.6" ry="1.6" transform="rotate(35 31 23)" fill="#fbfaf5" stroke="#d9d3c4" stroke-width=".6"/>
+  <ellipse cx="19" cy="30" rx="2.6" ry="1.6" transform="rotate(15 19 30)" fill="#fbfaf5" stroke="#d9d3c4" stroke-width=".6"/>
+  <ellipse cx="24" cy="31" rx="2.6" ry="1.6" transform="rotate(-25 24 31)" fill="#fbfaf5" stroke="#d9d3c4" stroke-width=".6"/>
+  <ellipse cx="29" cy="30" rx="2.6" ry="1.6" transform="rotate(10 29 30)" fill="#fbfaf5" stroke="#d9d3c4" stroke-width=".6"/>
+  <ellipse cx="34" cy="28" rx="2.6" ry="1.6" transform="rotate(-20 34 28)" fill="#fbfaf5" stroke="#d9d3c4" stroke-width=".6"/>
+  <ellipse cx="13" cy="30" rx="2.6" ry="1.6" transform="rotate(40 13 30)" fill="#fbfaf5" stroke="#d9d3c4" stroke-width=".6"/>
+  <ellipse cx="27" cy="20" rx="2.6" ry="1.6" transform="rotate(-40 27 20)" fill="#fbfaf5" stroke="#d9d3c4" stroke-width=".6"/>
+  <ellipse cx="22" cy="19" rx="2.6" ry="1.6" transform="rotate(10 22 19)" fill="#fbfaf5" stroke="#d9d3c4" stroke-width=".6"/>
+  <ellipse cx="18" cy="34" rx="2.6" ry="1.6" transform="rotate(-10 18 34)" fill="#fbfaf5" stroke="#d9d3c4" stroke-width=".6"/>
+  <ellipse cx="30" cy="34" rx="2.6" ry="1.6" transform="rotate(25 30 34)" fill="#fbfaf5" stroke="#d9d3c4" stroke-width=".6"/>
+</svg>

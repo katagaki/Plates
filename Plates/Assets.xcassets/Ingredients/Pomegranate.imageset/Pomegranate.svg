@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pomegranate">
+  <circle cx="24" cy="27" r="14" fill="#c62c3a"/>
+  <path d="M18.5 15l.5-7 2.5 3.5L24 7l2.5 4.5L29 8l.5 7Z" fill="#a52030"/>
+  <ellipse cx="17" cy="22" rx="4.2" ry="2.6" transform="rotate(-35 17 22)" fill="#e0606b"/>
+  <path d="M24 38c5 0 9-3 11-7" stroke="#a52030" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+</svg>

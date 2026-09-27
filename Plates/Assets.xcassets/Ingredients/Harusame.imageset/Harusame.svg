@@ -1,0 +1,10 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Glass noodles">
+  <g stroke="#cfdde3" stroke-width="1.5" fill="none" stroke-linecap="round">
+    <path d="M14 8c-3 8 3 12 0 18s3 10 2 16"/><path d="M18 7c-3 8 3 12 0 19s3 10 2 16"/><path d="M22 7c-3 8 3 12 0 19s3 10 2 16"/>
+    <path d="M26 7c-3 8 3 12 0 19s3 10 2 16"/><path d="M30 7c-3 8 3 12 0 19s3 10 2 16"/><path d="M34 8c-3 8 3 12 0 18s3 10 2 16"/>
+  </g>
+  <g stroke="#e9f1f4" stroke-width="1.1" fill="none" stroke-linecap="round">
+    <path d="M16 8c-3 8 3 12 0 18s3 10 2 16"/><path d="M20 7c-3 8 3 12 0 19s3 10 2 16"/><path d="M24 7c-3 8 3 12 0 19s3 10 2 16"/><path d="M28 7c-3 8 3 12 0 19s3 10 2 16"/><path d="M32 7c-3 8 3 12 0 19s3 10 2 16"/>
+  </g>
+  <rect x="11" y="22" width="26" height="6" rx="1.5" fill="#d86b3b"/>
+</svg>

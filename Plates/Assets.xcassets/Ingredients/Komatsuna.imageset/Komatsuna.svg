@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Komatsuna">
+  <g stroke="#b9d88e" stroke-width="2.8" stroke-linecap="round" fill="none"><path d="M24 43V24"/><path d="M23 43 15 24"/><path d="M25 43 33 24"/></g>
+  <ellipse cx="13" cy="17" rx="6.5" ry="9" transform="rotate(-22 13 17)" fill="#2f6e2e"/>
+  <ellipse cx="35" cy="17" rx="6.5" ry="9" transform="rotate(22 35 17)" fill="#2f6e2e"/>
+  <ellipse cx="24" cy="14" rx="7" ry="10.5" fill="#3d8a38"/>
+  <g stroke="#86bf66" stroke-width="1.4" fill="none" stroke-linecap="round"><path d="M24 23V7"/><path d="M15 24 11 11"/><path d="M33 24 37 11"/></g>
+</svg>

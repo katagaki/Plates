@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Puff pastry">
+  <path d="M6 24 20 16h22L28 24Z" fill="#f3d9a0"/>
+  <path d="M6 24h22v12H6Z" fill="#e7b865"/>
+  <path d="M28 24l14-8v12l-14 8Z" fill="#d9a44f"/>
+  <g stroke="#f7e3b6" stroke-width="1.2"><path d="M6 27h22M6 30h22M6 33h22"/><path d="M28 27l14-8M28 30l14-8M28 33l14-8"/></g>
+  <g fill="#e2bd78"><circle cx="16" cy="20" r=".8"/><circle cx="24" cy="21" r=".8"/><circle cx="31" cy="19" r=".8"/></g>
+</svg>

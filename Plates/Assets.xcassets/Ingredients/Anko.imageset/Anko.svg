@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Red bean paste">
+  <path d="M7 27h34c-1 8-8 13-17 13S8 35 7 27Z" fill="#e8e2d6"/>
+  <path d="M9 27c2-6 8-10 15-10s13 4 15 10Z" fill="#5a1f22"/>
+  <path d="M7 27h34" stroke="#f4efe6" stroke-width="2" stroke-linecap="round"/>
+  <g fill="#7e3236"><ellipse cx="17" cy="23" rx="1.8" ry="1.2"/><ellipse cx="24" cy="21" rx="1.8" ry="1.2"/><ellipse cx="30" cy="24" rx="1.8" ry="1.2"/><ellipse cx="21" cy="25" rx="1.6" ry="1.1"/></g>
+</svg>

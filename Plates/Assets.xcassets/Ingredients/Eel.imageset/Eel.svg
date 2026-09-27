@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Eel">
+  <path d="M4 25h40" stroke="#e3cfa5" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M7 19c10-4 24-4 34 0v11c-10 4-24 4-34 0Z" fill="#8a4a1f"/>
+  <path d="M7 19c10-4 24-4 34 0v3c-10-4-24-4-34 0Z" fill="#c07a36"/>
+  <g stroke="#5a2e12" stroke-width="1.8" stroke-linecap="round"><path d="M14 22v8"/><path d="M21 21v10"/><path d="M28 21v10"/><path d="M35 22v8"/></g>
+</svg>

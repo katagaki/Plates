@@ -1,0 +1,11 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Agar">
+  <g transform="rotate(-15 24 24)">
+    <rect x="9" y="12" width="12" height="28" rx="1.5" fill="#eef2f3"/>
+    <rect x="25" y="10" width="12" height="28" rx="1.5" fill="#e3eaec"/>
+    <g stroke="#c3cfd4" stroke-width="1.1" fill="none" stroke-linecap="round">
+      <path d="M11 16l2 2 2-2 2 2 2-2M11 24l2 2 2-2 2 2 2-2M11 32l2 2 2-2 2 2 2-2"/>
+      <path d="M27 14l2 2 2-2 2 2 2-2M27 22l2 2 2-2 2 2 2-2M27 30l2 2 2-2 2 2 2-2"/>
+    </g>
+    <path d="M9 12h12v28H9ZM25 10h12v28H25Z" fill="none" stroke="#b9c7cd" stroke-width="1.2"/>
+  </g>
+</svg>

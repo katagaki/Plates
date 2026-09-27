@@ -1,0 +1,30 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Azuki beans">
+  <ellipse cx="14" cy="32" rx="3" ry="2.3" fill="#7a1f2a"/>
+  <ellipse cx="19" cy="29" rx="3" ry="2.3" fill="#7a1f2a"/>
+  <ellipse cx="24" cy="28" rx="3" ry="2.3" fill="#7a1f2a"/>
+  <ellipse cx="29" cy="29" rx="3" ry="2.3" fill="#7a1f2a"/>
+  <ellipse cx="34" cy="32" rx="3" ry="2.3" fill="#7a1f2a"/>
+  <ellipse cx="16" cy="36" rx="3" ry="2.3" fill="#7a1f2a"/>
+  <ellipse cx="21" cy="34" rx="3" ry="2.3" fill="#7a1f2a"/>
+  <ellipse cx="26" cy="33" rx="3" ry="2.3" fill="#7a1f2a"/>
+  <ellipse cx="31" cy="35" rx="3" ry="2.3" fill="#7a1f2a"/>
+  <ellipse cx="19" cy="24" rx="3" ry="2.3" fill="#7a1f2a"/>
+  <ellipse cx="24" cy="23" rx="3" ry="2.3" fill="#7a1f2a"/>
+  <ellipse cx="29" cy="25" rx="3" ry="2.3" fill="#7a1f2a"/>
+  <ellipse cx="22" cy="19" rx="3" ry="2.3" fill="#7a1f2a"/>
+  <ellipse cx="27" cy="20" rx="3" ry="2.3" fill="#7a1f2a"/>
+  <path d="M12.8 31.1h2.4" stroke="#f1e3d0" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M17.8 28.1h2.4" stroke="#f1e3d0" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M22.8 27.1h2.4" stroke="#f1e3d0" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M27.8 28.1h2.4" stroke="#f1e3d0" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M32.8 31.1h2.4" stroke="#f1e3d0" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M14.8 35.1h2.4" stroke="#f1e3d0" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M19.8 33.1h2.4" stroke="#f1e3d0" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M24.8 32.1h2.4" stroke="#f1e3d0" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M29.8 34.1h2.4" stroke="#f1e3d0" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M17.8 23.1h2.4" stroke="#f1e3d0" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M22.8 22.1h2.4" stroke="#f1e3d0" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M27.8 24.1h2.4" stroke="#f1e3d0" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M20.8 18.1h2.4" stroke="#f1e3d0" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M25.8 19.1h2.4" stroke="#f1e3d0" stroke-width=".8" stroke-linecap="round"/>
+</svg>

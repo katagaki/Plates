@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Watermelon">
+  <path d="M5 16h38a19 19 0 0 1-38 0Z" fill="#3d8b3d"/>
+  <path d="M7.5 16h33a16.5 16.5 0 0 1-33 0Z" fill="#dff0c8"/>
+  <path d="M9.5 16h29a14.5 14.5 0 0 1-29 0Z" fill="#e8434f"/>
+  <g fill="#2b1d1d"><ellipse cx="16" cy="21" rx="1.1" ry="1.8"/><ellipse cx="24" cy="25" rx="1.1" ry="1.8"/><ellipse cx="32" cy="21" rx="1.1" ry="1.8"/><ellipse cx="20" cy="29" rx="1.1" ry="1.8"/><ellipse cx="28" cy="29" rx="1.1" ry="1.8"/></g>
+</svg>

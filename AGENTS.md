@@ -101,7 +101,7 @@ has a picker of its own. Both write into the one ingredient list the model is ha
 split is in the browsing, not in the request.
 
 The catalog is never inlined into a `@Generable` schema: the on-device model has a 4,096 token
-window, and an `.anyOf` over 264 ingredient names overruns it before the prompt is even added.
+window, and an `.anyOf` over 369 ingredient names overruns it before the prompt is even added.
 
 ## Localization
 

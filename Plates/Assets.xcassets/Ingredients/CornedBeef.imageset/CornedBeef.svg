@@ -1,0 +1,8 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Corned beef">
+  <path d="M15 17h18l3.5 22h-25Z" fill="#b8c2cc"/>
+  <path d="M15 17h18l.5 3h-19Z" fill="#8f9aa6"/>
+  <path d="M13 26h22l1 8H12Z" fill="#c0392b"/>
+  <path d="M19 30h10" stroke="#f3d6a0" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M16 17c2-6 14-6 16 0Z" fill="#c9636a"/>
+  <path d="M20 14.5c2-1 5-1.5 8-.5" stroke="#e08d93" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+</svg>

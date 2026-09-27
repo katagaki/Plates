@@ -1,0 +1,9 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rice paper">
+  <circle cx="24" cy="24" r="18" fill="#e3dac6"/>
+  <circle cx="24" cy="24" r="16.5" fill="#f5f0e4"/>
+  <g stroke="#dfd4bd" stroke-width="1.1" stroke-linecap="round">
+    <path d="M12 16 32 36"/><path d="M16 12l20 20"/><path d="M9 22l17 17"/><path d="M22 9l17 17"/>
+    <path d="M36 16 16 36"/><path d="M32 12 12 32"/><path d="M39 22 22 39"/><path d="M26 9 9 26"/>
+  </g>
+  <path d="M13 17c2-3 5-5 8-6" stroke="#ffffff" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+</svg>

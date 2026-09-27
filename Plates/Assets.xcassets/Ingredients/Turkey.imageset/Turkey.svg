@@ -1,0 +1,8 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Turkey">
+  <path d="M5 39h38" stroke="#cfd6dd" stroke-width="3.4" stroke-linecap="round"/>
+  <ellipse cx="22" cy="28" rx="16" ry="10.5" fill="#b8692f"/>
+  <path d="M12 24c3-4.5 8.5-6.5 14-6.5" stroke="#dc9458" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M28 26c3-5 7-8 10-7s1 6-3 9c-3 2-6 1-7-2Z" fill="#c97a3c"/>
+  <path d="M36 21l4-5" stroke="#f3ead8" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="41" cy="15" r="2" fill="#f3ead8"/><circle cx="39" cy="14" r="1.8" fill="#f3ead8"/>
+</svg>

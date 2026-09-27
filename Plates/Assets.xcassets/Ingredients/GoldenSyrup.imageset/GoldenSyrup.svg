@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Golden syrup">
+  <rect x="11" y="16" width="26" height="25" rx="3" fill="#2f6e3a"/>
+  <rect x="11" y="23" width="26" height="11" fill="#d9a53a"/>
+  <rect x="10" y="13" width="28" height="5" rx="2" fill="#c9952a"/>
+  <path d="M22 13c0 5 .5 9 2 12 1.5-3 2-7 2-12Z" fill="#f2b33a"/>
+  <path d="M18 28.5h12" stroke="#2f6e3a" stroke-width="1.8" stroke-linecap="round"/>
+</svg>

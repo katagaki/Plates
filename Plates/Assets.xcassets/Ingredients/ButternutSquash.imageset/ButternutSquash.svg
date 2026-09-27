@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Butternut squash">
+  <path d="M19 9h10c1 8 2 12 5 17 4.5 7 3 17-10 17s-14.5-10-10-17c3-5 4-9 5-17Z" fill="#e9b46b"/>
+  <path d="M15 32c1 6 5 9 11 9" stroke="#d4964c" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M21 13v10" stroke="#f3cf92" stroke-width="2" stroke-linecap="round"/>
+  <path d="M24 9V4" stroke="#7a5a33" stroke-width="3.4" stroke-linecap="round"/>
+</svg>

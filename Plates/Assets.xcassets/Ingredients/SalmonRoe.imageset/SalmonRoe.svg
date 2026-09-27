@@ -1,0 +1,28 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Salmon roe">
+  <path d="M7 30h34c-1 6-8 10-17 10S8 36 7 30Z" fill="#2f3a4a"/>
+  <path d="M7 30h34" stroke="#45556b" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="15" cy="26" r="3.3" fill="#f07a24"/>
+  <circle cx="21" cy="24" r="3.3" fill="#f07a24"/>
+  <circle cx="27" cy="24" r="3.3" fill="#f07a24"/>
+  <circle cx="33" cy="26" r="3.3" fill="#f07a24"/>
+  <circle cx="18" cy="21" r="3.3" fill="#f07a24"/>
+  <circle cx="24" cy="20" r="3.3" fill="#f07a24"/>
+  <circle cx="30" cy="21" r="3.3" fill="#f07a24"/>
+  <circle cx="12" cy="28.5" r="3.3" fill="#f07a24"/>
+  <circle cx="36" cy="28.5" r="3.3" fill="#f07a24"/>
+  <circle cx="21" cy="27.5" r="3.3" fill="#f07a24"/>
+  <circle cx="27" cy="27.5" r="3.3" fill="#f07a24"/>
+  <circle cx="24" cy="24.5" r="3.3" fill="#f07a24"/>
+  <circle cx="14" cy="24.9" r="1" fill="#ffc28a"/>
+  <circle cx="20" cy="22.9" r="1" fill="#ffc28a"/>
+  <circle cx="26" cy="22.9" r="1" fill="#ffc28a"/>
+  <circle cx="32" cy="24.9" r="1" fill="#ffc28a"/>
+  <circle cx="17" cy="19.9" r="1" fill="#ffc28a"/>
+  <circle cx="23" cy="18.9" r="1" fill="#ffc28a"/>
+  <circle cx="29" cy="19.9" r="1" fill="#ffc28a"/>
+  <circle cx="11" cy="27.4" r="1" fill="#ffc28a"/>
+  <circle cx="35" cy="27.4" r="1" fill="#ffc28a"/>
+  <circle cx="20" cy="26.4" r="1" fill="#ffc28a"/>
+  <circle cx="26" cy="26.4" r="1" fill="#ffc28a"/>
+  <circle cx="23" cy="23.4" r="1" fill="#ffc28a"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chikuwa">
+  <g transform="rotate(-20 24 24)">
+    <rect x="6" y="17" width="34" height="14" rx="7" fill="#c98a45"/>
+    <g fill="#a86a2e"><ellipse cx="14" cy="21" rx="2.4" ry="1.4"/><ellipse cx="22" cy="23" rx="2.6" ry="1.5"/><ellipse cx="30" cy="20" rx="2.2" ry="1.3"/><ellipse cx="18" cy="27" rx="2" ry="1.2"/><ellipse cx="28" cy="27" rx="2.4" ry="1.4"/></g>
+    <ellipse cx="38" cy="24" rx="4.2" ry="7" fill="#f6ecd6"/>
+    <ellipse cx="38" cy="24" rx="2" ry="3.4" fill="#8a6a45"/>
+  </g>
+</svg>

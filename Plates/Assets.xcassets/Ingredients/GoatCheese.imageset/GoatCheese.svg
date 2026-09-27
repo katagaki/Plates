@@ -1,0 +1,8 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Goat cheese">
+  <rect x="5" y="17" width="30" height="15" rx="7.5" fill="#e6e1d3"/>
+  <rect x="5" y="16" width="30" height="15" rx="7.5" fill="#f8f6ef"/>
+  <ellipse cx="35" cy="24" rx="5.5" ry="7.5" fill="#ece6d6"/>
+  <g fill="#d9d2c0"><circle cx="12" cy="21" r="1"/><circle cx="19" cy="26" r="1"/><circle cx="25" cy="20" r="1"/><circle cx="34" cy="22" r=".9"/><circle cx="36" cy="27" r=".9"/></g>
+  <path d="M36 34c2 3 5 4 8 3-2-3-5-4-8-3Z" fill="#6aa84f"/>
+  <path d="M30 36c1 3 4 5 7 5 0-3-3-5-7-5Z" fill="#4f8a3a"/>
+</svg>

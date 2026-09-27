@@ -1,0 +1,8 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Luncheon meat">
+  <path d="M19 12l4-3h19l-4 3Z" fill="#f4c2bc"/>
+  <path d="M38 12l4-3v13l-4 3Z" fill="#d68383"/>
+  <path d="M19 12h19v13H19Z" fill="#e89a9a"/>
+  <rect x="6" y="21" width="24" height="18" rx="3" fill="#2d4f8f"/>
+  <rect x="6" y="21" width="24" height="4" rx="2" fill="#f2c230"/>
+  <rect x="10" y="29" width="16" height="5" rx="1.5" fill="#e89a9a"/>
+</svg>

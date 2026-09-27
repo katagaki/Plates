@@ -1,0 +1,11 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mizuna">
+  <g stroke="#dfe9c8" stroke-width="3" stroke-linecap="round" fill="none"><path d="M24 44 15 14"/><path d="M24 44V10"/><path d="M24 44 33 14"/></g>
+  <g stroke="#f6f9ee" stroke-width="1.6" stroke-linecap="round" fill="none"><path d="M24 44 15 14"/><path d="M24 44V10"/><path d="M24 44 33 14"/></g>
+  <g fill="#5a9a3c">
+    <path d="M15 14c-4-1-7-4-7-8 2 1 3 0 4-2 1 2 2 2 3 1 1 2 2 2 3 1 1 3 0 6-3 8Z"/>
+    <path d="M24 10c-3-2-5-5-4-8 1 1 2 1 3-1 1 2 1 2 2 0 1 2 2 2 3 1 1 3-1 6-4 8Z"/>
+    <path d="M33 14c3-2 3-5 3-8 1 1 2 1 3-1 1 2 2 2 4 1 0 4-3 7-7 8Z"/>
+    <path d="M19 30c-4 0-7-3-8-6 2 0 3-1 3-2 1 1 3 1 3 0 1 1 2 2 2 1 1 2 1 5 0 7Z"/>
+    <path d="M29 30c4 0 7-3 8-6-2 0-3-1-3-2-1 1-3 1-3 0-1 1-2 2-2 1-1 2-1 5 0 7Z"/>
+  </g>
+</svg>
