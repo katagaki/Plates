@@ -63,7 +63,11 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
   so the download carries on when the app is left, and the app hands the session identifier to
   `backgroundTask(.urlSession(_:))`. `RecipeWriter` runs it through llama.cpp with the evals'
   settings: a 4,096 token window, up to 1,400 tokens, temperature 0.7. It loads the model for one
-  recipe and frees it before Apple Intelligence runs, and runs on the CPU in Simulator.
+  recipe and frees it before Apple Intelligence runs. It runs on the GPU only where the GPU is
+  Metal family Apple10 (A19, M5, and later) and on the CPU everywhere else, Simulator included:
+  without Metal's tensor API, b10456's kernels write nothing but "@" for Granite. Reproduce it
+  on a Mac with `GGML_METAL_TENSOR_DISABLE=1`. Newer builds fix it, so this can go when the pin
+  moves.
   `WrittenRecipe` and `Measures` sit beside it: they read what Granite wrote before any model
   sorts it.
 - `CulinaryIntelligence/Sources/CulinaryIntelligence/Intelligence` holds the Apple Intelligence

@@ -1,4 +1,5 @@
 import Foundation
+import Metal
 import llama
 
 /// What can go wrong while Granite writes, in words a cook can act on.
@@ -48,6 +49,20 @@ nonisolated enum RecipeWriter {
         }
     }
 
+    /// Whether Granite runs on the GPU. Simulator's Metal cannot run llama.cpp's kernels. A GPU
+    /// older than the A19 and M5 has no Metal tensor API, and on the kernels llama.cpp uses
+    /// without it, the pinned build writes nothing but "@" for Granite, though Qwen3 runs
+    /// correctly on them and later builds write Granite correctly too. The family is the test
+    /// llama.cpp itself uses to turn the tensor API off. Everything else runs on the CPU, which
+    /// writes the same recipe more slowly.
+    private static let runsOnGPU: Bool = {
+        #if targetEnvironment(simulator)
+        false
+        #else
+        MTLCreateSystemDefaultDevice()?.supportsFamily(.apple10) ?? false
+        #endif
+    }()
+
     /// Set up once per process, the first time a recipe is written.
     private static let backend: Void = llama_backend_init()
 
@@ -59,12 +74,7 @@ nonisolated enum RecipeWriter {
     ) throws {
         _ = backend
         var modelParameters = llama_model_default_params()
-        #if targetEnvironment(simulator)
-        // Simulator's Metal cannot run llama.cpp's kernels, so the model runs on the CPU there.
-        modelParameters.n_gpu_layers = 0
-        #else
-        modelParameters.n_gpu_layers = 99
-        #endif
+        modelParameters.n_gpu_layers = runsOnGPU ? 99 : 0
         guard let model = llama_model_load_from_file(url.path, modelParameters) else {
             throw WriterError.load
         }
