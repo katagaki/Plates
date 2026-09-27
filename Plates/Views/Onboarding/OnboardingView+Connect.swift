@@ -44,6 +44,7 @@ extension OnboardingView {
                 .disabled(!download.isReady)
         }
         .onAppear { download.start() }
+        .keepsScreenAwake(while: download.state == .downloading)
     }
 
     // MARK: - Hello

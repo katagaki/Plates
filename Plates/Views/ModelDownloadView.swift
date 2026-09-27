@@ -28,6 +28,16 @@ struct ModelDownloadView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .presentationDetents([.medium])
         .interactiveDismissDisabled()
+        .keepsScreenAwake(while: download.state == .downloading)
+    }
+}
+
+extension View {
+    /// Holds the screen awake while the model downloads, so the ring is still there to read
+    /// when the cook looks back. A gigabyte takes a while.
+    func keepsScreenAwake(while isOn: Bool) -> some View {
+        onChange(of: isOn, initial: true) { UIApplication.shared.isIdleTimerDisabled = isOn }
+            .onDisappear { UIApplication.shared.isIdleTimerDisabled = false }
     }
 }
 
