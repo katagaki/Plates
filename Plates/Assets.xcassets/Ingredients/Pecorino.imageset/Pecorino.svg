@@ -1,6 +1,8 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pecorino">
-  <path d="M8 32 36 15v13H8Z" fill="#f2e2b8"/>
-  <path d="M8 32h28v6H8Z" fill="#e2cd93"/>
-  <path d="M36 15h4v23h-4Z" fill="#3c2a1c"/>
-  <g fill="#e6d3a2"><circle cx="20" cy="27" r="1.8"/><circle cx="28" cy="23" r="1.4"/></g>
+  <g transform="translate(-3 -3.31) scale(1.125)">
+    <path d="M8 32 36 15v13H8Z" fill="#f2e2b8"/>
+    <path d="M8 32h28v6H8Z" fill="#e2cd93"/>
+    <path d="M36 15h4v23h-4Z" fill="#3c2a1c"/>
+    <g fill="#e6d3a2"><circle cx="20" cy="27" r="1.8"/><circle cx="28" cy="23" r="1.4"/></g>
+  </g>
 </svg>

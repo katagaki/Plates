@@ -1,8 +1,10 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mochi">
-  <ellipse cx="24" cy="30" rx="14" ry="10" fill="#e0d9c6"/>
-  <ellipse cx="24" cy="27" rx="14" ry="10" fill="#f8f6f1"/>
-  <ellipse cx="24" cy="16" rx="9" ry="6.5" fill="#e0d9c6"/>
-  <ellipse cx="24" cy="14" rx="9" ry="6.5" fill="#f8f6f1"/>
-  <ellipse cx="24" cy="7" rx="4" ry="3.4" fill="#e8873d"/>
-  <path d="M24 4c1-2 3-2 4-2-1 1-1 2 0 3Z" fill="#7a9e4e"/>
+  <g transform="translate(-3 -1.25) scale(1.125)">
+    <ellipse cx="24" cy="30" rx="14" ry="10" fill="#e0d9c6"/>
+    <ellipse cx="24" cy="27" rx="14" ry="10" fill="#f8f6f1"/>
+    <ellipse cx="24" cy="16" rx="9" ry="6.5" fill="#e0d9c6"/>
+    <ellipse cx="24" cy="14" rx="9" ry="6.5" fill="#f8f6f1"/>
+    <ellipse cx="24" cy="7" rx="4" ry="3.4" fill="#e8873d"/>
+    <path d="M24 4c1-2 3-2 4-2-1 1-1 2 0 3Z" fill="#7a9e4e"/>
+  </g>
 </svg>
