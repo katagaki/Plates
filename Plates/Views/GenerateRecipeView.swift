@@ -1,8 +1,10 @@
 import CulinaryIntelligence
 import SwiftUI
 
-/// The sheet that asks for a new recipe and shows it before it is saved. Granite writes it and
-/// Apple Intelligence sorts it, so the sheet waits on both.
+/// The sheet that asks for a new recipe and shows it before it is saved. A named dish the
+/// kitchen can make is written straight away. Anything else is offered as five ideas first, and
+/// the cook picks one or lets Jev pick it. Granite writes the recipe and Apple Intelligence sorts
+/// it, so the sheet waits on both.
 struct GenerateRecipeView: View {
     @Environment(\.dismiss) private var dismiss
 
@@ -11,6 +13,14 @@ struct GenerateRecipeView: View {
     @State private var generator = RecipeGenerator(observer: GenerationActivity.generation)
     @State private var request: GenerationRequest
     @State private var draft: Recipe?
+    /// The dishes offered for a request that did not name one the kitchen can make.
+    @State private var ideas: [RecipeIdea] = []
+    /// The ID a Decide for me pick of these ideas is sent with.
+    @State private var requestID = ""
+    /// How many Decide for me picks are left today, once the Worker has said.
+    @State private var decisionsRemaining: Int?
+    @State private var isDeciding = false
+    @State private var decideError: String?
 
     /// Opens with the dish already written in when the cook named one before the sheet came
     /// up, as they do at the end of onboarding.
@@ -30,6 +40,10 @@ struct GenerateRecipeView: View {
                     RecipeDetailView(recipe: draft)
                 } else if isGenerating {
                     progress
+                } else if isPlanning {
+                    planning
+                } else if !ideas.isEmpty {
+                    ideaList
                 } else {
                     form
                 }
@@ -39,7 +53,7 @@ struct GenerateRecipeView: View {
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button(role: .cancel) { dismiss() }
-                        .disabled(isGenerating)
+                        .disabled(isBusy)
                 }
                 ToolbarItem(placement: .confirmationAction) {
                     if let draft {
@@ -47,14 +61,16 @@ struct GenerateRecipeView: View {
                             store.save(draft, isNew: true)
                             dismiss()
                         }
+                    } else if !ideas.isEmpty, !isBusy {
+                        Button("Generate.Ideas.Edit") { ideas = [] }
                     }
                 }
             }
         }
-        .interactiveDismissDisabled(isGenerating)
+        .interactiveDismissDisabled(isBusy)
         // A pass can take a while, and the sheet is not touched while it runs, so the screen
         // is held awake rather than locking part way through a recipe.
-        .onChange(of: isGenerating) { UIApplication.shared.isIdleTimerDisabled = isGenerating }
+        .onChange(of: isBusy) { UIApplication.shared.isIdleTimerDisabled = isBusy }
         .onDisappear { UIApplication.shared.isIdleTimerDisabled = false }
         .onChange(of: request.ingredients) { Pantry.ingredients = request.ingredients }
         .onChange(of: request.tools) { Pantry.tools = request.tools }
@@ -136,7 +152,7 @@ struct GenerateRecipeView: View {
             }
 
             Button {
-                Task { draft = await generator.generate(request) }
+                Task { await start() }
             } label: {
                 HStack(spacing: 8) {
                     Image(systemName: "apple.intelligence")
@@ -223,8 +239,147 @@ struct GenerateRecipeView: View {
 
     private var isGenerating: Bool { generator.state == .generating }
 
+    private var isPlanning: Bool { generator.state == .planning }
+
+    private var isBusy: Bool { isGenerating || isPlanning || isDeciding }
+
     private var canGenerate: Bool {
-        generator.isAvailable && !isGenerating && !request.isEmpty
+        generator.isAvailable && !isBusy && !request.isEmpty
+    }
+
+    // MARK: - Ideas
+
+    /// Writes the request as asked, or brings up the ideas for it.
+    private func start() async {
+        decideError = nil
+        guard let plan = await generator.plan(request) else { return }
+        switch plan {
+        case .write:
+            draft = await generator.generate(request)
+        case let .ideas(offered, id):
+            ideas = offered
+            requestID = id
+            decisionsRemaining = await generator.decisionsRemaining()
+        }
+    }
+
+    private func write(_ idea: RecipeIdea) {
+        decideError = nil
+        Task { draft = await generator.generate(request, idea: idea) }
+    }
+
+    /// Jev picks for the cook. A pick that fails leaves the list as it was, and the cook can
+    /// still pick one themselves.
+    private func decide() {
+        decideError = nil
+        isDeciding = true
+        Task {
+            defer { isDeciding = false }
+            do {
+                let pick = try await generator.decide(request, ideas: ideas, requestID: requestID)
+                decisionsRemaining = pick.remaining
+                guard ideas.indices.contains(pick.index) else { return }
+                write(ideas[pick.index])
+            } catch CloudError.limitReached {
+                decisionsRemaining = 0
+            } catch {
+                decideError = error.localizedDescription
+            }
+        }
+    }
+
+    private var planning: some View {
+        VStack(spacing: 12) {
+            ProgressView()
+            Text("Generate.Planning")
+                .foregroundStyle(.secondary)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color(uiColor: .systemGroupedBackground))
+    }
+
+    private var ideaList: some View {
+        List {
+            Section {
+                ForEach(ideas) { idea in
+                    Button {
+                        write(idea)
+                    } label: {
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text(verbatim: idea.title)
+                                .font(.headline)
+                            if !idea.summary.isEmpty {
+                                Text(verbatim: idea.summary)
+                                    .font(.subheadline)
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
+                        .padding(.vertical, 4)
+                    }
+                    .tint(.primary)
+                    .disabled(isBusy)
+                }
+            } header: {
+                Text("Generate.Ideas.Header")
+            } footer: {
+                Text("Generate.Ideas.Footer")
+            }
+        }
+        .safeAreaInset(edge: .bottom) { decideBar }
+    }
+
+    /// Decide for me, with what is left of today's picks. The line above it says where the
+    /// request goes, or why the button is out for the day.
+    private var decideBar: some View {
+        VStack(spacing: 8) {
+            if let message = decideError ?? failedMessage {
+                Text(verbatim: message)
+                    .font(.footnote)
+                    .foregroundStyle(.red)
+            } else if decisionsRemaining == 0 {
+                Text("Generate.Ideas.Decide.LimitReached")
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+            } else {
+                Text("Generate.Ideas.Decide.Privacy")
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+            }
+
+            Button {
+                decide()
+            } label: {
+                HStack(spacing: 8) {
+                    if isDeciding {
+                        ProgressView()
+                    } else {
+                        Image(systemName: "dice")
+                    }
+                    Text("Generate.Ideas.Decide")
+                    if let decisionsRemaining, decisionsRemaining > 0 {
+                        Text(verbatim: String(
+                            format: String(localized: "Generate.Ideas.Decide.Remaining"),
+                            decisionsRemaining
+                        ))
+                        .fontWeight(.regular)
+                    }
+                }
+                .font(.body.weight(.semibold))
+                .foregroundStyle(.white)
+                .frame(maxWidth: .infinity)
+            }
+            .buttonStyle(.glassProminent)
+            .controlSize(.large)
+            .tint(.accentColor)
+            .disabled(isBusy || decisionsRemaining == 0)
+        }
+        .multilineTextAlignment(.center)
+        .padding(.horizontal, 16)
+        .padding(.bottom, 8)
+    }
+
+    private var failedMessage: String? {
+        if case let .failed(message) = generator.state { message } else { nil }
     }
 }
 

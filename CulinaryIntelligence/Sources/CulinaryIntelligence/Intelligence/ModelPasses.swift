@@ -19,22 +19,9 @@ enum IntelligenceError: LocalizedError {
 /// The model, the cloud a pass falls back to, and the time the app asks for to finish a pass
 /// once it is off screen. Writing a recipe and rewriting one both run their passes through one
 /// of these, so availability, the fallback, and the background time are written down once.
-///
-/// When the cook picked Claude or OpenAI, every pass goes to the model they picked for its
-/// role instead, and Apple Intelligence is not used at all.
 @MainActor
 final class ModelPasses {
     private let model = SystemLanguageModel.default
-
-    /// Which of the cook's remote models this runs on. Apple Intelligence has one model for
-    /// both.
-    private let role: ModelRole
-
-    private let settings = ModelSettings.shared
-
-    init(role: ModelRole) {
-        self.role = role
-    }
 
     /// Where a pass goes when it does not fit on device. Held rather than made per pass so
     /// availability and quota are read from one place.
@@ -45,19 +32,11 @@ final class ModelPasses {
     /// land.
     private var backgroundTask: UIBackgroundTaskIdentifier = .invalid
 
-    var isAvailable: Bool {
-        settings.provider.isRemote ? settings.hasKey : model.availability == .available
-    }
+    var isAvailable: Bool { model.availability == .available }
 
-    /// Why the button is disabled, in words a cook can act on.
+    /// Why Apple Intelligence cannot run here, in words a cook can act on, or nil when it can.
     var unavailableReason: LocalizedStringResource? {
-        guard settings.provider.isRemote else { return Self.appleUnavailableReason }
-        return settings.hasKey ? nil : LocalizedStringResource(culinary: "Generate.Unavailable.KeyMissing")
-    }
-
-    /// Why Apple Intelligence cannot run here, or nil when it can.
-    static var appleUnavailableReason: LocalizedStringResource? {
-        switch SystemLanguageModel.default.availability {
+        switch model.availability {
         case .available:
             nil
         case .unavailable(.deviceNotEligible):
@@ -80,9 +59,6 @@ final class ModelPasses {
         instructions: String,
         _ body: (LanguageModelSession) async throws -> Value
     ) async throws -> Value {
-        if let remote = settings.remoteModel(for: role) {
-            return try await body(LanguageModelSession(model: remote, instructions: instructions))
-        }
         do {
             return try await body(LanguageModelSession(tools: tools, instructions: instructions))
         } catch let error as LanguageModelError {

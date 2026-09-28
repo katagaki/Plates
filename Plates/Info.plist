@@ -16,5 +16,7 @@
 			<string>Any</string>
 		</dict>
 	</dict>
+	<key>PlatesCloudURL</key>
+	<string></string>
 </dict>
 </plist>

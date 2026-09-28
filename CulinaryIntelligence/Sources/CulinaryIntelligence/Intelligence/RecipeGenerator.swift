@@ -235,7 +235,7 @@ public struct GenerationProgress: Equatable, Sendable {
 
 /// Writes a new recipe with two models, each doing what it is good at.
 ///
-/// Granite, running through llama.cpp on device, writes the whole recipe as plain cookbook
+/// Granite, running on Workers AI behind PlatesCloud, writes the whole recipe as plain cookbook
 /// text in one go, always in English, since a model its size gets the cooking right far more
 /// often in English than in Japanese. A request the cook wrote in another language is put into
 /// English for it first.
@@ -257,11 +257,13 @@ public struct GenerationProgress: Equatable, Sendable {
 public final class RecipeGenerator {
     public enum State: Equatable {
         case idle
+        /// Working out whether to write the request as asked or offer ideas first.
+        case planning
         case generating
         case failed(String)
     }
 
-    public private(set) var state: State = .idle
+    public internal(set) var state: State = .idle
 
     /// Every change is passed on to the observer, so the lock screen keeps up with the sheet.
     public private(set) var progress = GenerationProgress() {
@@ -269,13 +271,14 @@ public final class RecipeGenerator {
     }
 
     /// The sorting passes, which check what was written against the schema line by line.
-    private let passes = ModelPasses(role: .verification)
+    let passes = ModelPasses()
 
-    /// The passes that write: the recipe itself, when Granite is not the one writing it, and
-    /// the cook's request put into English.
-    private let writer = ModelPasses(role: .generation)
+    /// The passes that plan and translate: what kind of request the cook typed, and the words
+    /// of it put into English for Granite.
+    let writer = ModelPasses()
 
-    private let settings = ModelSettings.shared
+    /// Where Granite writes, and where Jev picks an idea.
+    let cloud = PlatesCloud.shared
 
     /// Where the run reports how far along it is.
     private let observer: (any RunObserver)?
@@ -284,27 +287,37 @@ public final class RecipeGenerator {
         self.observer = observer
     }
 
-    /// Every model the run needs has to be there. With Granite picked, that is Granite to write
-    /// and Apple Intelligence to sort.
-    public var isAvailable: Bool { passes.isAvailable && hasWriter }
+    /// Every model the run needs has to be there: Granite to write and Apple Intelligence to
+    /// sort.
+    public var isAvailable: Bool { passes.isAvailable && cloud.isConfigured }
 
     /// Why the button is disabled, in words a cook can act on.
     public var unavailableReason: LocalizedStringResource? {
         passes.unavailableReason
-            ?? (hasWriter ? nil : LocalizedStringResource(culinary: "Generate.Unavailable.WriterMissing"))
+            ?? (cloud.isConfigured ? nil : LocalizedStringResource(culinary: "Generate.Unavailable.CloudMissing"))
     }
 
-    private var hasWriter: Bool { settings.provider != .granite || WriterModel.isInstalled }
-
-    public func generate(_ asked: GenerationRequest) async -> Recipe? {
-        let request = asked.asAsked
+    /// Writes the recipe the cook asked for, or the idea they picked for it. An idea is written
+    /// from Granite's own English for it, and its title in the reader's language stands in for
+    /// the cook's words when the title is sorted.
+    public func generate(_ asked: GenerationRequest, idea: RecipeIdea? = nil) async -> Recipe? {
+        var request = asked.asAsked
         state = .generating
         progress = GenerationProgress()
         observer?.runStarted(progress.activity)
         passes.beginBackgroundRun(named: "Recipe generation")
         defer { passes.endBackgroundRun() }
         do {
-            let text = try await write(await inEnglish(request))
+            var english = request
+            if let idea {
+                english.description = idea.englishSummary.isEmpty
+                    ? idea.englishTitle
+                    : "\(idea.englishTitle): \(idea.englishSummary)"
+                request.description = idea.title
+            } else {
+                english = await inEnglish(request)
+            }
+            let text = try await write(english)
             let sorted = try await sort(WrittenRecipe(parsing: text), text: text, request: request)
             let recipe = Self.makeRecipe(sorted)
             progress.isFinished = true
@@ -324,7 +337,7 @@ public final class RecipeGenerator {
     /// named in Japanese, so a request that is not already English is translated by Apple
     /// Intelligence first. A translation that fails passes the words through as they were
     /// written, which is no worse than not trying.
-    private func inEnglish(_ request: GenerationRequest) async -> GenerationRequest {
+    func inEnglish(_ request: GenerationRequest) async -> GenerationRequest {
         progress.stage = .write
         let words = request.trimmedDescription
         guard !words.allSatisfy(\.isASCII) else { return request }
@@ -346,50 +359,21 @@ public final class RecipeGenerator {
     }
 
     /// Granite writes the recipe as a cookbook would print it, streamed onto the screen as it
-    /// comes.
+    /// comes. It arrives in pieces rather than tokens, so the count shown is worked out from the
+    /// length.
     private func write(_ request: GenerationRequest) async throws -> String {
         progress.stage = .write
-        guard settings.provider == .granite else { return try await writeWithModel(request) }
         var written = ""
-        let stream = RecipeWriter.write(
-            instructions: Self.writeInstructions(for: request),
-            prompt: Self.prompt(for: request),
-            model: WriterModel.fileURL
-        )
+        let stream = cloud.write(instructions: Self.writeInstructions(for: request), prompt: Self.prompt(for: request))
         for try await piece in stream {
             written += piece
             progress.draft = written
-            progress.writtenTokens += 1
+            progress.writtenTokens = written.count / 4
         }
         let text = written.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !text.isEmpty else { throw WriterError.empty }
+        guard !text.isEmpty else { throw CloudError.noResponse }
         return text
     }
-
-    /// The recipe written by the model the cook picked in place of Granite, given what Granite
-    /// is given. It is written in English too, since the reading of it below is. A remote model
-    /// streams in pieces rather than tokens, so the count shown is worked out from the length.
-    private func writeWithModel(_ request: GenerationRequest) async throws -> String {
-        let written = try await writer.run(instructions: Self.writeInstructions(for: request)) { session in
-            var written = ""
-            let stream = session.streamResponse(
-                to: Self.prompt(for: request),
-                options: GenerationOptions(maximumResponseTokens: Self.writeTokenLimit)
-            )
-            for try await snapshot in stream {
-                written = snapshot.content
-                progress.draft = written
-                progress.writtenTokens = written.count / 4
-            }
-            return written
-        }
-        let text = written.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !text.isEmpty else { throw WriterError.empty }
-        return text
-    }
-
-    /// As long as the evals let Granite run.
-    private static let writeTokenLimit = 1400
 
     // MARK: - Sorting
 
@@ -504,7 +488,7 @@ public final class RecipeGenerator {
     /// being wrong, so a pass that fails is tried again, waiting longer each time. The usual
     /// failure is the system holding back a run that has gone on in the background, which
     /// clears after a short wait.
-    private func sortLine<Content: Generable>(_ type: Content.Type, _ prompt: String) async throws -> Content {
+    func sortLine<Content: Generable>(_ type: Content.Type, _ prompt: String) async throws -> Content {
         var waits: [Duration] = [.seconds(1), .seconds(4), .seconds(10)]
         while true {
             do {
@@ -529,7 +513,7 @@ public final class RecipeGenerator {
     /// run on past seven thousand without stopping, and without a limit that overruns the
     /// window and is taken for a request too large for the device. With one, it fails like any
     /// other pass and is tried again.
-    private static let lineTokenLimit = 600
+    static let lineTokenLimit = 600
 
     /// The same limit for a section sorted from the whole text, which writes every line of it.
     private static let wholeTokenLimit = 2400
@@ -693,7 +677,7 @@ public final class RecipeGenerator {
     // MARK: - Prompts
 
     /// The prompt shorthands, so a prompt below reads as prose rather than as calls.
-    private static func text(_ key: String.LocalizationValue, _ arguments: CVarArg...) -> String {
+    static func text(_ key: String.LocalizationValue, _ arguments: CVarArg...) -> String {
         let format = String(culinary: key)
         return arguments.isEmpty ? format : String(format: format, arguments: arguments)
     }
@@ -703,14 +687,14 @@ public final class RecipeGenerator {
     private static var houseStyle: String { ModelPasses.houseStyle }
 
     /// The prompt shorthand for Granite, which is always asked in English.
-    private static func english(_ key: String.LocalizationValue, _ arguments: CVarArg...) -> String {
+    static func english(_ key: String.LocalizationValue, _ arguments: CVarArg...) -> String {
         let format = String(culinaryEnglish: key)
         return arguments.isEmpty ? format : String(format: format, arguments: arguments)
     }
 
     /// What Granite is told before the cook's request. The cook's kitchen and tools, when they
     /// listed them, are limits on the whole recipe, so they are set here rather than asked for.
-    private static func writeInstructions(for request: GenerationRequest) -> String {
+    static func writeInstructions(for request: GenerationRequest) -> String {
         var instructions = english("Generate.Prompt.HouseStyle") + "\n\n" + english("Generate.Prompt.Write")
         if !request.ingredients.isEmpty {
             instructions += "\n\n" + english("Generate.Prompt.Write.Kitchen")
@@ -724,7 +708,7 @@ public final class RecipeGenerator {
     /// The sorting passes are not given the house style. Its rules are about how to cook, and a
     /// pass handed them sorts them into the method as steps. The few that are about wording,
     /// and the language to write in, are in the sorting instructions themselves.
-    private static var structureInstructions: String {
+    static var structureInstructions: String {
         text("Generate.Prompt.Structure")
     }
 

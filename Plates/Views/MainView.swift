@@ -23,10 +23,8 @@ struct MainView: View {
     @State private var showTriedOnly = false
     @State private var search = ""
     @State private var isGenerating = false
-    @State private var writerModel = WriterModelDownload.shared
-    @State private var modelSettings = ModelSettings.shared
     @AppStorage("Onboarding.Completed") private var onboardingCompleted = false
-    @State private var onboardingStart: OnboardingView.Step?
+    @State private var isOnboarding = false
     /// The dish named at the end of onboarding, written in once the recipe sheet opens.
     @State private var firstDish = ""
 
@@ -64,29 +62,17 @@ struct MainView: View {
                 .sheet(isPresented: $isGenerating, onDismiss: { firstDish = "" }) {
                     GenerateRecipeView(store: store, dish: firstDish)
                 }
-                // Nothing is written with Granite until it is on disk, so while it is picked
-                // the sheet stays up until the file lands, and closes by itself when it does.
-                .sheet(isPresented: Binding(get: { needsWriterModel }, set: { _ in })) {
-                    ModelDownloadView(download: writerModel)
-                }
         }
-        .sheet(item: $onboardingStart, onDismiss: openFirstRecipe) { start in
-            OnboardingView(start: start) { dish in
+        .sheet(isPresented: $isOnboarding, onDismiss: openFirstRecipe) {
+            OnboardingView { dish in
                 onboardingCompleted = true
                 firstDish = dish ?? ""
-                onboardingStart = nil
+                isOnboarding = false
             }
         }
         .onAppear {
-            if !onboardingCompleted { onboardingStart = .welcome }
+            if !onboardingCompleted { isOnboarding = true }
         }
-        .task(id: needsWriterModel) {
-            if needsWriterModel { writerModel.start() }
-        }
-    }
-
-    private var needsWriterModel: Bool {
-        onboardingCompleted && modelSettings.provider == .granite && !writerModel.isReady
     }
 
     /// The recipe sheet waits for onboarding to be gone, since one sheet cannot open over
@@ -112,14 +98,6 @@ struct MainView: View {
                     }
                 }
                 .pickerStyle(.inline)
-            }
-
-            Section {
-                Button {
-                    onboardingStart = .model
-                } label: {
-                    Label("Menu.ChooseModel", systemImage: "cpu")
-                }
             }
 
             Section {

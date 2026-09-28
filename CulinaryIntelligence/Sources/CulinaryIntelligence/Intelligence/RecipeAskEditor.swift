@@ -232,10 +232,10 @@ public final class RecipeAskEditor {
     private var plannedRequest = ""
 
     /// The plan and the changes on it.
-    private let passes = ModelPasses(role: .generation)
+    private let passes = ModelPasses()
 
     /// The read through after the changes are made.
-    private let checks = ModelPasses(role: .verification)
+    private let checks = ModelPasses()
 
     /// Where the run reports how far along it is.
     private let observer: (any RunObserver)?
