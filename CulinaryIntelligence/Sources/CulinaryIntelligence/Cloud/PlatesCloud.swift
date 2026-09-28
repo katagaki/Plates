@@ -43,12 +43,10 @@ public final class PlatesCloud {
     private var attesting: Task<String, Error>?
 
     private static let keyAccount = "AppAttestKeyID"
-    private static let infoKey = "PlatesCloudURL"
 
-    /// The Worker's address, read from the app's Info.plist. Empty until it is set there.
+    /// The Worker's address, written in when Xcode Cloud builds the app. Empty otherwise.
     private var baseURL: URL? {
-        guard let value = Bundle.main.object(forInfoDictionaryKey: Self.infoKey) as? String else { return nil }
-        let trimmed = value.trimmingCharacters(in: .whitespacesAndNewlines)
+        let trimmed = PlatesCloudAddress.url.trimmingCharacters(in: .whitespacesAndNewlines)
         return trimmed.isEmpty ? nil : URL(string: trimmed)
     }
 

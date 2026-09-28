@@ -40,9 +40,11 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
 - `CulinaryIntelligence/Sources/CulinaryIntelligence/Cloud` holds `PlatesCloud`, the client for
   the Worker in `../PlatesCloud` (github.com/katagaki/PlatesCloud). The Worker runs IBM's Granite
   4.0 H-Micro on Workers AI behind an OpenAI Chat Completions endpoint, capped at 1,400 tokens,
-  and asks TypeSafe's Jev to pick an idea when the cook taps Decide for Me. Its address is the
-  `PlatesCloudURL` key in `Info.plist`, empty until it is set, and the app says it has no
-  recipe writer while it is. Every request is signed with App Attest: the first request makes a
+  and asks TypeSafe's Jev to pick an idea when the cook taps Decide for Me. Its address is
+  `PlatesCloudAddress.url`, empty in the repository. `ci_scripts/ci_pre_xcodebuild.sh` writes
+  Xcode Cloud's `PLATES_CLOUD_URL` environment variable into it before the build, and a build
+  without it says it has no recipe writer. For a local build against the Worker, run the script
+  with `PLATES_CLOUD_URL` and `CI_PRIMARY_REPOSITORY_PATH` set, and do not commit the result. Every request is signed with App Attest: the first request makes a
   key, attests it against a challenge from the Worker, and keeps its ID in the Keychain, and
   each request after that carries an assertion over the SHA-256 of its body. A key the Worker
   no longer knows is dropped and made again once. App Attest does not run in Simulator, so
