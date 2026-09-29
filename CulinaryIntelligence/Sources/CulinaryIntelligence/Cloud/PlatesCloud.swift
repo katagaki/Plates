@@ -182,8 +182,11 @@ public final class PlatesCloud {
         guard service.isSupported else { throw CloudError.unsupported }
         let keyID = try await service.generateKey()
         let (challengeData, challengeResponse) = try await URLSession.shared.data(for: try post("/v1/challenge", body: Data()))
-        guard (challengeResponse as? HTTPURLResponse)?.statusCode == 200,
-              let challenge = try? JSONDecoder().decode(Challenge.self, from: challengeData).challenge
+        let challengeStatus = (challengeResponse as? HTTPURLResponse)?.statusCode ?? 0
+        guard challengeStatus == 200 else {
+            throw CloudError.server(challengeStatus, try? JSONDecoder().decode(Failure.self, from: challengeData).error)
+        }
+        guard let challenge = try? JSONDecoder().decode(Challenge.self, from: challengeData).challenge
         else { throw CloudError.noResponse }
         let attestation = try await service.attestKey(keyID, clientDataHash: Data(SHA256.hash(data: Data(challenge.utf8))))
         let body = try JSONSerialization.data(withJSONObject: [
