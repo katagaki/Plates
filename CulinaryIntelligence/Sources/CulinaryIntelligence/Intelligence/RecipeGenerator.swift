@@ -318,7 +318,8 @@ public final class RecipeGenerator {
                 english = await inEnglish(request)
             }
             let text = try await write(english)
-            let sorted = try await sort(WrittenRecipe(parsing: text), text: text, request: request)
+            let written = Self.withoutUnusedPicks(WrittenRecipe(parsing: text), request: request)
+            let sorted = try await sort(written, text: text, request: request)
             let recipe = Self.makeRecipe(sorted)
             progress.isFinished = true
             state = .idle
@@ -643,6 +644,62 @@ public final class RecipeGenerator {
             }
         }
         return nil
+    }
+
+    /// Granite's lists without the picks its method never uses. A cook's picks are what they
+    /// have, not what the dish needs, and a model this size tends to list every one of them. A
+    /// line is dropped only when it names something the cook picked and no step mentions it, so
+    /// what Granite added on its own, and anything seasoned "to taste", stays. Of the tools,
+    /// only pans, pots, and appliances are checked: a method names the pan it cooks in, but
+    /// seldom the knife or the board.
+    static func withoutUnusedPicks(_ written: WrittenRecipe, request: GenerationRequest) -> WrittenRecipe {
+        guard !written.steps.isEmpty else { return written }
+        let method = Set(words(in: written.steps.joined(separator: " ")).map(stem))
+        // The line's own word for the thing, which is the last word before any comma or
+        // bracket, and the catalog's name for it, first word or last: the step may say
+        // "scallions" where the catalog says spring onion, or "Parmesan" for Parmesan cheese.
+        // Words such as "large" are left out of it, since "large skillet" says nothing of a pot.
+        func mentioned(line: String, name: String) -> Bool {
+            let head = line.split(whereSeparator: { $0 == "," || $0 == "(" }).first.map(String.init) ?? line
+            let named = words(in: name).map(stem)
+            let candidates = [words(in: head).last.map(stem), named.first, named.last].compactMap { $0 }
+            return candidates.contains(where: method.contains)
+        }
+        var trimmed = written
+        let picked = Set(request.ingredients)
+        trimmed.ingredients = written.ingredients.filter { line in
+            guard let asset = namedIngredient(in: line), picked.contains(asset),
+                  !line.lowercased().contains("to taste") else { return true }
+            return mentioned(line: line, name: IconCatalog.englishName(for: asset))
+        }
+        let cookware = request.tools
+            .filter { !ToolCategory.utensils.icons.contains($0) }
+            .sorted { $0.count > $1.count }
+        trimmed.tools = written.tools.filter { line in
+            let lineWords = Set(words(in: line))
+            guard let asset = cookware.first(where: { Set(words(in: IconCatalog.englishName(for: $0))).isSubset(of: lineWords) })
+            else { return true }
+            return mentioned(line: line, name: IconCatalog.englishName(for: asset))
+        }
+        return trimmed
+    }
+
+    /// A line's words, lowercased, letters only.
+    private static func words(in text: String) -> [String] {
+        text.lowercased()
+            .map { $0.isLetter ? String($0) : " " }
+            .joined()
+            .split(separator: " ")
+            .map(String.init)
+    }
+
+    /// A word without its plural, so "tomatoes" in a step matches "tomato" in the list.
+    private static func stem(_ word: String) -> String {
+        var word = word
+        if word.hasSuffix("ies") { return String(word.dropLast(3)) + "y" }
+        if word.hasSuffix("s"), !word.hasSuffix("ss") { word.removeLast() }
+        if word.hasSuffix("e") { word.removeLast() }
+        return word
     }
 
     /// The total time as a minute count, read the way the app reads every time, so "1 hour 20

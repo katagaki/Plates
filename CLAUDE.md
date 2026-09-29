@@ -86,6 +86,11 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
     says so, and a figure the pass wrote without its metric unit gets the unit back. When the
     line names a catalog ingredient, the pass is handed the catalog's name for it, so "frozen
     peas" is not translated as green peppers.
+  - A cook's picks are what they have, not what the dish needs. Granite is told to choose only
+    what the dish needs and to list only what its method uses, and `withoutUnusedPicks` drops
+    any ingredient line naming a pick, or any pan, pot, or appliance line naming a picked tool,
+    that no step mentions. What Granite added on its own, anything "to taste", and utensils such
+    as knives and boards, which a method seldom names, are kept.
   - Text a sorting pass returns goes through `withoutLeakedSyntax`, because the on-device model
     sometimes runs past a Japanese string into `」} ```json{` or a `<ctrl46>` token, and then
     through `Measures.tidied`, which puts a spoon measure written back as "2大さじ" right and

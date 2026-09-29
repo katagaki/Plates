@@ -657,13 +657,13 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "All I have to cook with: %1$@."
+            "value": "What I have to cook with: %1$@."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "手元にある材料は%1$@だけです。"
+            "value": "手元にある材料: %1$@。"
           }
         }
       }
@@ -675,13 +675,13 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "All I have to cook in: %1$@."
+            "value": "What I have to cook in: %1$@."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "使える道具は%1$@だけです。"
+            "value": "手元にある道具: %1$@。"
           }
         }
       }
@@ -1232,13 +1232,13 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "The cook has listed everything they have in the kitchen. Cook only from that list, and it is fine to leave some of it unused. If the list cannot make the dish they named, write the closest dish it can make."
+            "value": "The cook has listed what they have in the kitchen. Cook only from that list, and choose only what this dish needs: most dishes use a few of the things listed, not all of them. List only the ingredients the method uses. If the list cannot make the dish they named, write the closest dish it can make."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "作る人はキッチンにあるものをすべて挙げています。その一覧にあるものだけで作り、使わないものが残ってもかまいません。その一覧では挙げられた料理が作れないときは、いちばん近い作れる料理を書いてください。"
+            "value": "料理をする人が、台所にあるものを挙げています。その中のものだけで作り、この料理に必要なものだけを選んでください。ほとんどの料理は、挙げられたものの一部しか使いません。材料には、手順で使うものだけを書いてください。挙げられたもので指定の料理が作れない場合は、作れる中でいちばん近い料理を書いてください。"
           }
         }
       }
@@ -1250,13 +1250,13 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "The cook has listed the tools they own, so the recipe can only use those. Do not ask for a tool they did not list."
+            "value": "The cook has listed the tools they own. Use only tools from that list, and only the ones this dish needs. List only the tools the method uses."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "作る人は持っている道具を挙げているので、レシピはその範囲で書きます。挙げられていない道具は使わないでください。"
+            "value": "料理をする人が、持っている道具を挙げています。その中の道具だけを使い、この料理に必要なものだけを選んでください。道具には、手順で使うものだけを書いてください。"
           }
         }
       }
