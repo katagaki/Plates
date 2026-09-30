@@ -4,6 +4,8 @@ import SwiftUI
 /// The app's one screen: the recipes, what is sorted and searched out of them, and the menus
 /// that act on the store.
 struct MainView: View {
+    @Environment(\.scenePhase) private var scenePhase
+
     enum SortOrder: String, CaseIterable, Identifiable {
         case alphabetical
         case quickest
@@ -80,7 +82,11 @@ struct MainView: View {
             }
         }
         .onAppear {
+            store.importSharedRecipes()
             if !onboardingCompleted { isOnboarding = true }
+        }
+        .onChange(of: scenePhase) {
+            if scenePhase == .active { store.importSharedRecipes() }
         }
         #if DEBUG
         .onOpenURL(perform: openDebugLink)

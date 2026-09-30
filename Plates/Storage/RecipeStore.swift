@@ -57,6 +57,19 @@ final class RecipeStore {
         }
     }
 
+    /// Moves complete recipes from the App Group inbox into the selected storage location.
+    /// A file stays in the inbox if saving fails, so the next app launch can retry it.
+    func importSharedRecipes() {
+        do {
+            for pending in try SharedRecipeInbox.pendingRecipes() {
+                guard save(pending.recipe, isNew: true) else { return }
+                try SharedRecipeInbox.remove(pending.url)
+            }
+        } catch {
+            loadError = error.localizedDescription
+        }
+    }
+
     /// Writes a recipe out. New recipes get a unique id so a second "Tomato Egg" does not
     /// overwrite the first; existing ones keep the file they came from.
     @discardableResult
