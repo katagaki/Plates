@@ -44,10 +44,21 @@ public final class PlatesCloud {
 
     private static let keyAccount = "AppAttestKeyID"
 
+    /// A debug build in Simulator, where App Attest does not run, talks to `npm run dev` in
+    /// ../PlatesCloud unsigned. The Worker only allows that on localhost with `SKIP_APP_ATTEST`.
+    #if DEBUG && targetEnvironment(simulator)
+    private static let skipsAppAttest = true
+    private static let fallbackURL = "http://localhost:8787"
+    #else
+    private static let skipsAppAttest = false
+    private static let fallbackURL = ""
+    #endif
+
     /// The Worker's address, written in when Xcode Cloud builds the app. Empty otherwise.
     private var baseURL: URL? {
         let trimmed = PlatesCloudAddress.url.trimmingCharacters(in: .whitespacesAndNewlines)
-        return trimmed.isEmpty ? nil : URL(string: trimmed)
+        let address = trimmed.isEmpty ? Self.fallbackURL : trimmed
+        return address.isEmpty ? nil : URL(string: address)
     }
 
     public var isConfigured: Bool { baseURL != nil }
@@ -136,11 +147,13 @@ public final class PlatesCloud {
     }
 
     private func sendOnce(_ path: String, body: Data) async throws -> (URLSession.AsyncBytes, HTTPURLResponse) {
-        let keyID = try await keyID()
-        let assertion = try await service.generateAssertion(keyID, clientDataHash: Data(SHA256.hash(data: body)))
         var request = try post(path, body: body)
-        request.setValue(keyID, forHTTPHeaderField: "X-Plates-Key-Id")
-        request.setValue(assertion.base64EncodedString(), forHTTPHeaderField: "X-Plates-Assertion")
+        if !Self.skipsAppAttest {
+            let keyID = try await keyID()
+            let assertion = try await service.generateAssertion(keyID, clientDataHash: Data(SHA256.hash(data: body)))
+            request.setValue(keyID, forHTTPHeaderField: "X-Plates-Key-Id")
+            request.setValue(assertion.base64EncodedString(), forHTTPHeaderField: "X-Plates-Assertion")
+        }
         request.setValue(String(TimeZone.current.secondsFromGMT() / 60), forHTTPHeaderField: "X-Plates-UTC-Offset")
         let (bytes, response) = try await URLSession.shared.bytes(for: request)
         guard let http = response as? HTTPURLResponse else { throw CloudError.noResponse }
