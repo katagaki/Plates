@@ -141,7 +141,7 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
   the request and the progress screen, with Decide for Me under them. Writing a recipe
   and rewriting one show the same progress screen: a checklist of the work, and under it
   `RecipePreview`, the recipe as it stands at that moment. While Granite writes, the preview is
-  its text as it streams in. The detail
+  its text as it streams in, a finished line at a time and one `Text` a paragraph. The detail
   view turns into the editor in place, so a recipe is read and written on the one screen, and
   every edit is written straight to the file rather than kept until the editor is left. The
   catalog picker the generation view browses is the same one the editor picks into, pointed at

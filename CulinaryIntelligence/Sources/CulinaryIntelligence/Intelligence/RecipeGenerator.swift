@@ -359,21 +359,31 @@ public final class RecipeGenerator {
         }
     }
 
-    /// Granite writes the recipe as a cookbook would print it, streamed onto the screen as it
-    /// comes. It arrives in pieces rather than tokens, so the count shown is worked out from the
-    /// length.
+    /// Granite writes the recipe as a cookbook would print it, put on screen a line at a time as
+    /// it comes. It arrives in pieces rather than tokens, so the count shown is worked out from
+    /// the length. The screen is handed only finished lines, since laying the whole text out
+    /// again for every piece made the sheet stutter as it grew.
     private func write(_ request: GenerationRequest) async throws -> String {
         progress.stage = .write
         var written = ""
         let stream = cloud.write(instructions: Self.writeInstructions(for: request), prompt: Self.prompt(for: request))
         for try await piece in stream {
             written += piece
-            progress.draft = written
-            progress.writtenTokens = written.count / 4
+            guard piece.contains("\n"), let end = written.lastIndex(of: "\n") else { continue }
+            show(String(written[..<end]), of: written)
         }
+        show(written, of: written)
         let text = written.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !text.isEmpty else { throw CloudError.noResponse }
         return text
+    }
+
+    /// Puts the finished lines on screen, in one change to the progress.
+    private func show(_ lines: String, of written: String) {
+        var shown = progress
+        shown.draft = lines
+        shown.writtenTokens = written.count / 4
+        progress = shown
     }
 
     // MARK: - Sorting

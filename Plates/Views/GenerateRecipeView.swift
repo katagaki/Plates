@@ -409,10 +409,13 @@ private struct GenerationProgressView: View {
                     stage: .method
                 )
             }
+            .animation(.default, value: progress)
 
             preview
+                .animation(.default, value: progress.stage)
+                .animation(.default, value: progress.title)
+                .animation(.default, value: progress.outline)
         }
-        .animation(.default, value: progress)
     }
 
     /// The recipe as it stands, under the checklist. While Granite writes, that is its text as
@@ -422,9 +425,11 @@ private struct GenerationProgressView: View {
             if !progress.draft.isEmpty {
                 VStack(alignment: .leading, spacing: 12) {
                     Divider()
-                    Text(verbatim: progress.draft)
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
+                    ForEach(Array(paragraphs.enumerated()), id: \.offset) { _, paragraph in
+                        Text(verbatim: paragraph)
+                    }
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
                 }
             }
         } else if let heading = progress.title, !heading.isEmpty {
@@ -435,6 +440,15 @@ private struct GenerationProgressView: View {
                 steps: progress.outline
             )
         }
+    }
+
+    /// Granite's text split where it leaves a blank line, each drawn on its own so a finished
+    /// paragraph is not laid out again when the next line comes in.
+    private var paragraphs: [String] {
+        progress.draft
+            .components(separatedBy: "\n\n")
+            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+            .filter { !$0.isEmpty }
     }
 
     /// Where a line has got to: spinning while its pass is the one running, ticked once that
