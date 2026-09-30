@@ -192,12 +192,23 @@ public struct GenerationProgress: Equatable, Sendable {
     public var toolCount = 0
     public var stepCount = 0
     public var troubleshootingCount = 0
+    /// The ingredients and tools as they are sorted, each a name with its amount or note.
+    public var ingredients: [Line] = []
+    public var tools: [Line] = []
     /// The step titles as they stand, so the preview reads the method as it is sorted.
     public var outline: [String] = []
+    /// The problems as they are sorted, without their fixes.
+    public var problems: [String] = []
     /// Set when the last pass ends, so the bar always lands on full.
     public var isFinished = false
 
     public init() {}
+
+    /// One sorted ingredient or tool, as the preview lists it.
+    public struct Line: Equatable, Sendable {
+        public let name: String
+        public let detail: String
+    }
 
     /// What the lock screen is told, which is the pass in words and the dish once it has a
     /// name of its own.
@@ -404,6 +415,8 @@ public final class RecipeGenerator {
             let whole = try await sortWholeShopping(text: text)
             ingredients = whole.0.map { ($0, "") }
             tools = whole.1
+            progress.ingredients = ingredients.map { .init(name: $0.entry.item.withoutLeakedSyntax, detail: $0.entry.amount.withoutLeakedSyntax) }
+            progress.tools = tools.map { .init(name: $0.name.withoutLeakedSyntax, detail: "") }
         } else {
             for line in written.ingredients {
                 let measured = Measures.forReader(line)
@@ -417,6 +430,7 @@ public final class RecipeGenerator {
                 entry.amount = Self.amount(entry.amount, from: measured)
                 entry.section = Self.section(for: entry, line: line)
                 ingredients.append((entry, line))
+                progress.ingredients.append(.init(name: entry.item.withoutLeakedSyntax, detail: entry.amount.withoutLeakedSyntax))
                 progress.ingredientCount = ingredients.count
             }
             for line in written.tools {
@@ -428,6 +442,7 @@ public final class RecipeGenerator {
                 // in a recipe as optional, so its guess is not asked for.
                 tool.required = !Self.isOptional(line)
                 tools.append(tool)
+                progress.tools.append(.init(name: tool.name.withoutLeakedSyntax, detail: ""))
                 progress.toolCount = tools.count
             }
         }
@@ -442,14 +457,16 @@ public final class RecipeGenerator {
             for line in written.steps {
                 let step = try await sortLine(StructuredStep.self, Self.text("Generate.Prompt.Structure.Step.Ask", Measures.forReader(line)))
                 steps.append((step.title.withoutLeakedSyntax, Self.sentences(in: step.text.withoutLeakedSyntax)))
-                progress.outline.append(step.title)
+                progress.outline.append(step.title.withoutLeakedSyntax)
                 progress.stepCount = steps.count
             }
             for line in written.problems {
-                notes.append(try await sortLine(
+                let note = try await sortLine(
                     GeneratedTroubleshooting.self,
                     Self.text("Generate.Prompt.Structure.Problem.Ask", Measures.forReader(line))
-                ))
+                )
+                notes.append(note)
+                progress.problems.append(note.problem.withoutLeakedSyntax)
                 progress.troubleshootingCount = notes.count
             }
         }
@@ -588,6 +605,7 @@ public final class RecipeGenerator {
         progress.stepCount = steps.count
         let notes = try content.value([GeneratedContent].self, forProperty: "troubleshooting")
             .map(GeneratedTroubleshooting.init)
+        progress.problems = notes.map(\.problem.withoutLeakedSyntax)
         progress.troubleshootingCount = notes.count
         return (steps, notes)
     }

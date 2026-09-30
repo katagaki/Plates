@@ -415,6 +415,9 @@ private struct GenerationProgressView: View {
                 .animation(.default, value: progress.stage)
                 .animation(.default, value: progress.title)
                 .animation(.default, value: progress.outline)
+                .animation(.default, value: progress.ingredients)
+                .animation(.default, value: progress.tools)
+                .animation(.default, value: progress.problems)
         }
     }
 
@@ -437,7 +440,10 @@ private struct GenerationProgressView: View {
                 title: heading,
                 time: progress.time ?? "",
                 serves: progress.serves ?? "",
-                steps: progress.outline
+                ingredients: progress.ingredients,
+                tools: progress.tools,
+                steps: progress.outline,
+                problems: progress.problems
             )
         }
     }
