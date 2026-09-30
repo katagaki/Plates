@@ -110,10 +110,11 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
 - Before a recipe is written, `RecipeGenerator.plan` sorts the request on device into a named
   dish, goals ("high protein with noodles"), or an open request ("something easy tonight"). A
   dish the cook's picks can make, or a dish with nothing picked, is written straight away.
-  Anything else gets five ideas from Gemma, one a line, read by `ideaLines` and put into the
-  reader's language by a sorting pass each. Open requests ask for the easiest dishes first. The
+  Anything else gets five ideas from Gemma through the Worker's `/v1/ideate`, which counts them
+  against their own daily limit rather than the recipes', one a line, read by `ideaLines` and put
+  into the reader's language by a sorting pass each. Open requests ask for the easiest dishes first. The
   cook picks an idea, or taps Decide for Me, which sends the request, the picks, and Gemma's
-  English for the ideas to Jev through the Worker, ten times a day per device. A set of ideas
+  English for the ideas to Jev through the Worker, a hundred times a day per device. A set of ideas
   carries a request ID, so a retried pick is answered from the first one and not counted
   again. The picked idea is written from Gemma's own English for it.
 - The generator and the editor report their progress to a `RunObserver` the app hands in, so the

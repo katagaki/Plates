@@ -134,7 +134,7 @@ extension RecipeGenerator {
     /// Five dishes from Gemma, in English, one a line, then put into the reader's language.
     private func ideas(for request: GenerationRequest, kind: RequestKind) async throws -> [RecipeIdea] {
         let english = await inEnglish(request)
-        let written = try await cloud.complete(
+        let written = try await cloud.ideate(
             instructions: Self.ideaInstructions(for: english),
             prompt: Self.ideaPrompt(for: english, kind: kind),
             maximumTokens: Self.ideaTokenLimit

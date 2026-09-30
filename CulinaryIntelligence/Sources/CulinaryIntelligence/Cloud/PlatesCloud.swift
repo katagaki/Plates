@@ -91,10 +91,11 @@ public final class PlatesCloud {
         }
     }
 
-    /// Gemma's whole answer at once, for text that is read only once it is finished.
-    func complete(instructions: String, prompt: String, maximumTokens: Int) async throws -> String {
+    /// Gemma's dish ideas, whole. They are counted against their own daily limit, apart from
+    /// the recipes.
+    func ideate(instructions: String, prompt: String, maximumTokens: Int) async throws -> String {
         let body = Self.chat(instructions: instructions, prompt: prompt, maximumTokens: maximumTokens, stream: false)
-        let data = try await Self.collect(try await send("/v1/chat/completions", body: body).0)
+        let data = try await Self.collect(try await send("/v1/ideate", body: body).0)
         guard let answer = try? JSONDecoder().decode(Completion.self, from: data),
               let text = answer.choices.first?.message.content else { throw CloudError.noResponse }
         return text
