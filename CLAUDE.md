@@ -49,7 +49,10 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
   each request after that carries an assertion over the SHA-256 of its body. A key the Worker
   no longer knows is dropped and made again once. App Attest does not run in Simulator, so
   a debug build there sends its requests unsigned to `http://localhost:8787`, where `npm run dev` in
-  ../PlatesCloud answers them when its `.dev.vars` sets `SKIP_APP_ATTEST=true`. The Worker keeps the daily limits, Decide for Me
+  ../PlatesCloud answers them when its `.dev.vars` sets `SKIP_APP_ATTEST=true`. Debug builds also register
+  `plates-debug://generate?request=...&decide=true`, which opens the recipe sheet and writes the
+  request at once, with `decide` letting Jev pick from the ideas. Release builds do not list the
+  scheme: `Info.plist` is preprocessed, and only Debug defines `DEBUG`. The Worker keeps the daily limits, Decide for Me
   included, so the app only shows what it is told is left.
   `WrittenRecipe` and `Measures` sit in `Writer`: they read what Granite wrote before any model
   sorts it.

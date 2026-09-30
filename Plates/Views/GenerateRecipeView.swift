@@ -22,10 +22,16 @@ struct GenerateRecipeView: View {
     @State private var isDeciding = false
     @State private var decideError: String?
 
+    /// Set by a `plates-debug://` link, so a debug run can go from launch to Jev's pick untouched.
+    private let startsAtOnce: Bool
+    private let decidesAtOnce: Bool
+
     /// Opens with the dish already written in when the cook named one before the sheet came
     /// up, as they do at the end of onboarding.
-    init(store: RecipeStore, dish: String = "") {
+    init(store: RecipeStore, dish: String = "", startsAtOnce: Bool = false, decidesAtOnce: Bool = false) {
         self.store = store
+        self.startsAtOnce = startsAtOnce
+        self.decidesAtOnce = decidesAtOnce
         _request = State(initialValue: GenerationRequest(
             description: dish,
             ingredients: Pantry.ingredients,
@@ -74,6 +80,7 @@ struct GenerateRecipeView: View {
         .onDisappear { UIApplication.shared.isIdleTimerDisabled = false }
         .onChange(of: request.ingredients) { Pantry.ingredients = request.ingredients }
         .onChange(of: request.tools) { Pantry.tools = request.tools }
+        .task { if startsAtOnce, canGenerate { await start() } }
     }
 
     /// A generated recipe titles itself, so its title is shown as written.
@@ -260,6 +267,7 @@ struct GenerateRecipeView: View {
             ideas = offered
             requestID = id
             decisionsRemaining = await generator.decisionsRemaining()
+            if decidesAtOnce { decide() }
         }
     }
 

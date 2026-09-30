@@ -22,7 +22,7 @@ struct MainView: View {
     @State private var sortOrder: SortOrder = .alphabetical
     @State private var showTriedOnly = false
     @State private var search = ""
-    @State private var isGenerating = false
+    @State private var generation: Generation?
     @AppStorage("Onboarding.Completed") private var onboardingCompleted = false
     @State private var isOnboarding = false
     /// The dish named at the end of onboarding, written in once the recipe sheet opens.
@@ -53,14 +53,19 @@ struct MainView: View {
                     ToolbarSpacer(.fixed, placement: .bottomBar)
                     ToolbarItem(placement: .bottomBar) {
                         Button {
-                            isGenerating = true
+                            generation = Generation()
                         } label: {
                             Label("Menu.Generate", systemImage: "plus")
                         }
                     }
                 }
-                .sheet(isPresented: $isGenerating, onDismiss: { firstDish = "" }) {
-                    GenerateRecipeView(store: store, dish: firstDish)
+                .sheet(item: $generation) { generation in
+                    GenerateRecipeView(
+                        store: store,
+                        dish: generation.dish,
+                        startsAtOnce: generation.startsAtOnce,
+                        decidesAtOnce: generation.decidesAtOnce
+                    )
                 }
         }
         .sheet(isPresented: $isOnboarding, onDismiss: openFirstRecipe) {
@@ -73,13 +78,44 @@ struct MainView: View {
         .onAppear {
             if !onboardingCompleted { isOnboarding = true }
         }
+        #if DEBUG
+        .onOpenURL(perform: openDebugLink)
+        #endif
+    }
+
+    /// What the recipe sheet opens with. It is handed over whole, since a sheet shown from a
+    /// flag can be built before the values set beside the flag reach it.
+    struct Generation: Identifiable {
+        let id = UUID()
+        var dish = ""
+        var startsAtOnce = false
+        var decidesAtOnce = false
     }
 
     /// The recipe sheet waits for onboarding to be gone, since one sheet cannot open over
     /// another that is closing.
     private func openFirstRecipe() {
-        if !firstDish.isEmpty { isGenerating = true }
+        if !firstDish.isEmpty { generation = Generation(dish: firstDish) }
+        firstDish = ""
     }
+
+    #if DEBUG
+    /// `plates-debug://generate?request=...&decide=true` writes a recipe on launch, and with
+    /// `decide` lets Jev pick from the ideas. Debug builds only register the scheme.
+    private func openDebugLink(_ url: URL) {
+        guard url.host() == "generate", generation == nil,
+              let items = URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems,
+              let request = items.first(where: { $0.name == "request" })?.value, !request.isEmpty
+        else { return }
+        onboardingCompleted = true
+        isOnboarding = false
+        generation = Generation(
+            dish: request,
+            startsAtOnce: true,
+            decidesAtOnce: items.contains { $0.name == "decide" && $0.value == "true" }
+        )
+    }
+    #endif
 
     private var menu: some View {
         Menu {
@@ -141,7 +177,7 @@ struct MainView: View {
                 Text("Recipe.List.Empty.Description")
             }
         } actions: {
-            Button("Menu.Generate") { isGenerating = true }
+            Button("Menu.Generate") { generation = Generation() }
                 .buttonStyle(.borderedProminent)
             Button("Menu.AddSamples") { store.addSampleRecipes() }
         }
