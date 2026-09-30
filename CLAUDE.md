@@ -53,7 +53,8 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
   `plates-debug://generate?request=...&decide=true`, which opens the recipe sheet and writes the
   request at once, with `decide` letting Jev pick from the ideas. Release builds do not list the
   scheme: `Info.plist` is preprocessed, and only Debug defines `DEBUG`. The Worker keeps the daily limits, Decide for Me
-  included, so the app only shows what it is told is left.
+  included, so the app only shows what it is told is left. `LimitsView`, opened from the ellipsis
+  menu, reads all of them from the Worker's `/v1/limits`.
   `WrittenRecipe` and `Measures` sit in `Writer`: they read what Gemma wrote before any model
   sorts it.
 - `CulinaryIntelligence/Sources/CulinaryIntelligence/Intelligence` holds the Apple Intelligence

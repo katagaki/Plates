@@ -26,6 +26,18 @@ public enum CloudError: LocalizedError, Equatable {
     }
 }
 
+/// Today's daily limits, as the Worker counts them for this device.
+public struct CloudLimits: Decodable, Equatable, Sendable {
+    public struct Allowance: Decodable, Equatable, Sendable {
+        public let limit: Int
+        public let remaining: Int
+    }
+
+    public let write: Allowance
+    public let ideate: Allowance
+    public let decide: Allowance
+}
+
 /// The idea Jev picked, and how many more picks are left today.
 public struct CloudPick: Equatable, Sendable {
     public let index: Int
@@ -124,11 +136,11 @@ public final class PlatesCloud {
         return CloudPick(index: answer.index, remaining: answer.remaining)
     }
 
-    /// How many picks are left today.
-    public func decisionsRemaining() async throws -> Int {
-        let data = try await Self.collect(try await send("/v1/decide/remaining", body: Data("{}".utf8)).0)
-        guard let answer = try? JSONDecoder().decode(Remaining.self, from: data) else { throw CloudError.noResponse }
-        return answer.remaining
+    /// Today's limits and what is left of each. Asking does not count against any of them.
+    public func limits() async throws -> CloudLimits {
+        let data = try await Self.collect(try await send("/v1/limits", body: Data("{}".utf8)).0)
+        guard let limits = try? JSONDecoder().decode(CloudLimits.self, from: data) else { throw CloudError.noResponse }
+        return limits
     }
 
     // MARK: - Requests
@@ -255,7 +267,6 @@ public final class PlatesCloud {
         let remaining: Int
     }
 
-    private struct Remaining: Decodable { let remaining: Int }
     private struct Challenge: Decodable { let challenge: String }
     private struct Failure: Decodable { let error: String }
 }

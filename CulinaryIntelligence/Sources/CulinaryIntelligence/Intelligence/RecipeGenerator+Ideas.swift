@@ -91,7 +91,7 @@ extension RecipeGenerator {
 
     /// How many Decide for me picks are left today, or nil when that cannot be found out.
     public func decisionsRemaining() async -> Int? {
-        try? await cloud.decisionsRemaining()
+        try? await cloud.limits().decide.remaining
     }
 
     // MARK: - Planning

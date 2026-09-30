@@ -983,6 +983,108 @@
         }
       }
     },
+    "Limits.Decide": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Decide for Me"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "おまかせ"
+          }
+        }
+      }
+    },
+    "Limits.Footer": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Each set of five ideas counts once. The limits reset at midnight."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "5つのアイデアは1回として数えます。上限は午前0時にリセットされます。"
+          }
+        }
+      }
+    },
+    "Limits.Ideate": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ideas"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アイデア"
+          }
+        }
+      }
+    },
+    "Limits.Remaining": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld of %2$lld left"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%2$lld回中、残り%1$lld回"
+          }
+        }
+      }
+    },
+    "Limits.Title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Today's Limits"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "今日の上限"
+          }
+        }
+      }
+    },
+    "Limits.Write": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recipes"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レシピ"
+          }
+        }
+      }
+    },
     "Menu.AddSamples": {
       "extractionState": "manual",
       "localizations": {
@@ -1047,6 +1149,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "メニュー"
+          }
+        }
+      }
+    },
+    "Menu.Limits": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Today's Limits"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "今日の上限"
           }
         }
       }

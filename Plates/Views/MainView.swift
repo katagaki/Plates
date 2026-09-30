@@ -23,6 +23,7 @@ struct MainView: View {
     @State private var showTriedOnly = false
     @State private var search = ""
     @State private var generation: Generation?
+    @State private var isShowingLimits = false
     @AppStorage("Onboarding.Completed") private var onboardingCompleted = false
     @State private var isOnboarding = false
     /// The dish named at the end of onboarding, written in once the recipe sheet opens.
@@ -67,6 +68,9 @@ struct MainView: View {
                         decidesAtOnce: generation.decidesAtOnce
                     )
                 }
+        }
+        .sheet(isPresented: $isShowingLimits) {
+            LimitsView()
         }
         .sheet(isPresented: $isOnboarding, onDismiss: openFirstRecipe) {
             OnboardingView { dish in
@@ -146,6 +150,14 @@ struct MainView: View {
                     store.load()
                 } label: {
                     Label("Menu.Refresh", systemImage: "arrow.clockwise")
+                }
+            }
+
+            if PlatesCloud.shared.isConfigured {
+                Button {
+                    isShowingLimits = true
+                } label: {
+                    Label("Menu.Limits", systemImage: "gauge.with.dots.needle.33percent")
                 }
             }
         } label: {
