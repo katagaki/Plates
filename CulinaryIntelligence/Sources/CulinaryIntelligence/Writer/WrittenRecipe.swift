@@ -1,7 +1,7 @@
 import Foundation
 
-/// A recipe as Granite wrote it, cut into its sections by reading the text, before any model
-/// sorts it. Granite writes in a regular cookbook shape, headed sections of bulleted or numbered
+/// A recipe as Gemma wrote it, cut into its sections by reading the text, before any model
+/// sorts it. Gemma writes in a regular cookbook shape, headed sections of bulleted or numbered
 /// lines, so the lines can be counted here. The sorting passes are then asked for exactly that
 /// many ingredients, steps, and fixes, which keeps them from dropping a line or making one up.
 nonisolated struct WrittenRecipe: Equatable {

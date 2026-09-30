@@ -3,7 +3,7 @@ import SwiftUI
 
 /// The sheet that asks for a new recipe and shows it before it is saved. A named dish the
 /// kitchen can make is written straight away. Anything else is offered as five ideas first, and
-/// the cook picks one or lets Jev pick it. Granite writes the recipe and Apple Intelligence sorts
+/// the cook picks one or lets Jev pick it. Gemma writes the recipe and Apple Intelligence sorts
 /// it, so the sheet waits on both.
 struct GenerateRecipeView: View {
     @Environment(\.dismiss) private var dismiss
@@ -418,7 +418,7 @@ private struct GenerationProgressView: View {
         }
     }
 
-    /// The recipe as it stands, under the checklist. While Granite writes, that is its text as
+    /// The recipe as it stands, under the checklist. While Gemma writes, that is its text as
     /// it comes; once Apple Intelligence starts sorting it, it is the recipe the sorting has made.
     @ViewBuilder private var preview: some View {
         if progress.stage == .write {
@@ -442,8 +442,7 @@ private struct GenerationProgressView: View {
         }
     }
 
-    /// Granite's text split where it leaves a blank line, each drawn on its own so a finished
-    /// paragraph is not laid out again when the next line comes in.
+    /// Gemma's text split at its blank lines, so a finished paragraph is not laid out again.
     private var paragraphs: [String] {
         progress.draft
             .components(separatedBy: "\n\n")

@@ -597,7 +597,7 @@
       }
     },
     "Generate.Prompt.Ask.Any": {
-      "comment": "Given to Granite, which is always asked in English whatever language the app is read in. The Japanese value is kept for completeness and is not sent.",
+      "comment": "Given to Gemma, which is always asked in English whatever language the app is read in. The Japanese value is kept for completeness and is not sent.",
       "extractionState": "manual",
       "localizations": {
         "en-US": {
@@ -615,7 +615,7 @@
       }
     },
     "Generate.Prompt.Ask.Dish": {
-      "comment": "Given to Granite, which is always asked in English whatever language the app is read in. The Japanese value is kept for completeness and is not sent.",
+      "comment": "Given to Gemma, which is always asked in English whatever language the app is read in. The Japanese value is kept for completeness and is not sent.",
       "extractionState": "manual",
       "localizations": {
         "en-US": {
@@ -633,7 +633,7 @@
       }
     },
     "Generate.Prompt.Ask.FromKitchen": {
-      "comment": "Given to Granite, which is always asked in English whatever language the app is read in. The Japanese value is kept for completeness and is not sent.",
+      "comment": "Given to Gemma, which is always asked in English whatever language the app is read in. The Japanese value is kept for completeness and is not sent.",
       "extractionState": "manual",
       "localizations": {
         "en-US": {
@@ -651,7 +651,7 @@
       }
     },
     "Generate.Prompt.Have.Ingredients": {
-      "comment": "Given to Granite, which is always asked in English whatever language the app is read in. The Japanese value is kept for completeness and is not sent.",
+      "comment": "Given to Gemma, which is always asked in English whatever language the app is read in. The Japanese value is kept for completeness and is not sent.",
       "extractionState": "manual",
       "localizations": {
         "en-US": {
@@ -669,7 +669,7 @@
       }
     },
     "Generate.Prompt.Have.Tools": {
-      "comment": "Given to Granite, which is always asked in English whatever language the app is read in. The Japanese value is kept for completeness and is not sent.",
+      "comment": "Given to Gemma, which is always asked in English whatever language the app is read in. The Japanese value is kept for completeness and is not sent.",
       "extractionState": "manual",
       "localizations": {
         "en-US": {
@@ -704,7 +704,7 @@
       }
     },
     "Generate.Prompt.Ideas": {
-      "comment": "Given to Granite, which is always asked in English whatever language the app is read in. The Japanese value is kept for completeness and is not sent.",
+      "comment": "Given to Gemma, which is always asked in English whatever language the app is read in. The Japanese value is kept for completeness and is not sent.",
       "extractionState": "manual",
       "localizations": {
         "en-US": {
@@ -722,7 +722,7 @@
       }
     },
     "Generate.Prompt.Ideas.Any": {
-      "comment": "Given to Granite, which is always asked in English whatever language the app is read in. The Japanese value is kept for completeness and is not sent.",
+      "comment": "Given to Gemma, which is always asked in English whatever language the app is read in. The Japanese value is kept for completeness and is not sent.",
       "extractionState": "manual",
       "localizations": {
         "en-US": {
@@ -740,7 +740,7 @@
       }
     },
     "Generate.Prompt.Ideas.Goals": {
-      "comment": "Given to Granite, which is always asked in English whatever language the app is read in. The Japanese value is kept for completeness and is not sent.",
+      "comment": "Given to Gemma, which is always asked in English whatever language the app is read in. The Japanese value is kept for completeness and is not sent.",
       "extractionState": "manual",
       "localizations": {
         "en-US": {
@@ -758,7 +758,7 @@
       }
     },
     "Generate.Prompt.Ideas.Near": {
-      "comment": "Given to Granite, which is always asked in English whatever language the app is read in. The Japanese value is kept for completeness and is not sent.",
+      "comment": "Given to Gemma, which is always asked in English whatever language the app is read in. The Japanese value is kept for completeness and is not sent.",
       "extractionState": "manual",
       "localizations": {
         "en-US": {
@@ -776,7 +776,7 @@
       }
     },
     "Generate.Prompt.Ideas.Open": {
-      "comment": "Given to Granite, which is always asked in English whatever language the app is read in. The Japanese value is kept for completeness and is not sent.",
+      "comment": "Given to Gemma, which is always asked in English whatever language the app is read in. The Japanese value is kept for completeness and is not sent.",
       "extractionState": "manual",
       "localizations": {
         "en-US": {
@@ -968,7 +968,7 @@
       }
     },
     "Generate.Prompt.Structure.Idea.Ask": {
-      "comment": "Given to Apple Intelligence to put one of Granite's dish ideas into the reader's language.",
+      "comment": "Given to Apple Intelligence to put one of Gemma's dish ideas into the reader's language.",
       "extractionState": "manual",
       "localizations": {
         "en-US": {
@@ -1190,7 +1190,7 @@
       }
     },
     "Generate.Prompt.Translate": {
-      "comment": "Given to Apple Intelligence before Granite writes, and always read in English. The Japanese value is kept for completeness and is not sent.",
+      "comment": "Given to Apple Intelligence before Gemma writes, and always read in English. The Japanese value is kept for completeness and is not sent.",
       "extractionState": "manual",
       "localizations": {
         "en-US": {
@@ -1208,7 +1208,7 @@
       }
     },
     "Generate.Prompt.Write": {
-      "comment": "Given to Granite, which is always asked in English whatever language the app is read in. The Japanese value is kept for completeness and is not sent.",
+      "comment": "Given to Gemma, which is always asked in English whatever language the app is read in. The Japanese value is kept for completeness and is not sent.",
       "extractionState": "manual",
       "localizations": {
         "en-US": {
@@ -1226,7 +1226,7 @@
       }
     },
     "Generate.Prompt.Write.Kitchen": {
-      "comment": "Given to Granite, which is always asked in English whatever language the app is read in. The Japanese value is kept for completeness and is not sent.",
+      "comment": "Given to Gemma, which is always asked in English whatever language the app is read in. The Japanese value is kept for completeness and is not sent.",
       "extractionState": "manual",
       "localizations": {
         "en-US": {
@@ -1244,7 +1244,7 @@
       }
     },
     "Generate.Prompt.Write.Tools": {
-      "comment": "Given to Granite, which is always asked in English whatever language the app is read in. The Japanese value is kept for completeness and is not sent.",
+      "comment": "Given to Gemma, which is always asked in English whatever language the app is read in. The Japanese value is kept for completeness and is not sent.",
       "extractionState": "manual",
       "localizations": {
         "en-US": {

@@ -35,11 +35,11 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
   site's. The public types carry hand written `public` initializers, since Swift does not make
   a memberwise one public.
 - `Plates/Storage` holds the storage location and the file-backed `RecipeStore`.
-- There is no model to choose. Granite writes on Cloudflare and Apple Intelligence sorts on the
+- There is no model to choose. Gemma writes on Cloudflare and Apple Intelligence sorts on the
   device, falling back to Private Cloud Compute.
 - `CulinaryIntelligence/Sources/CulinaryIntelligence/Cloud` holds `PlatesCloud`, the client for
-  the Worker in `../PlatesCloud` (github.com/katagaki/PlatesCloud). The Worker runs IBM's Granite
-  4.0 H-Micro on Workers AI behind an OpenAI Chat Completions endpoint, capped at 1,400 tokens,
+  the Worker in `../PlatesCloud` (github.com/katagaki/PlatesCloud). The Worker runs Google's Gemma
+  4 26B A4B on Workers AI behind an OpenAI Chat Completions endpoint, capped at 1,400 tokens,
   and asks TypeSafe's Jev to pick an idea when the cook taps Decide for Me. Its address is
   `PlatesCloudAddress.url`, empty in the repository. `ci_scripts/ci_pre_xcodebuild.sh` writes
   Xcode Cloud's `PLATES_CLOUD_URL` environment variable into it before the build, and a build
@@ -54,18 +54,18 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
   request at once, with `decide` letting Jev pick from the ideas. Release builds do not list the
   scheme: `Info.plist` is preprocessed, and only Debug defines `DEBUG`. The Worker keeps the daily limits, Decide for Me
   included, so the app only shows what it is told is left.
-  `WrittenRecipe` and `Measures` sit in `Writer`: they read what Granite wrote before any model
+  `WrittenRecipe` and `Measures` sit in `Writer`: they read what Gemma wrote before any model
   sorts it.
 - `CulinaryIntelligence/Sources/CulinaryIntelligence/Intelligence` holds the Apple Intelligence
   `@Generable` types, the generator, and the editor. A recipe is written by two models, the way
   the evals ran them, and every step of it is shaped by what the Mac runs of it showed:
-  - Granite writes in English, always. The 1B model the evals ran got the cooking right in English and badly
-    wrong in Japanese, so its instructions, the house style it is given, and the names of the
-    cook's picks are read from the English catalog through `String(culinaryEnglish:)` in every
-    locale. Those keys still carry Japanese values, marked in their comments as never sent.
+  - Gemma writes in English, always. Granite, the model the evals ran before it, got the
+    cooking right in English and badly wrong in Japanese, so its instructions, the house style
+    it is given, and the names of the cook's picks are read from the English catalog through
+    `String(culinaryEnglish:)` in every locale. Those keys still carry Japanese values, marked in their comments as never sent.
   - A request the cook typed in anything but plain ASCII is put into English by Apple
     Intelligence first. Granite read "卵チャーハン" as egg curry.
-  - `WrittenRecipe` cuts Granite's text into its sections in code. The time and the serving
+  - `WrittenRecipe` cuts Gemma's text into its sections in code. The time and the serving
     count are read out of it there, through `Recipe.minutes(in:)` and the figures in the line,
     because a model read "1 hour 20 minutes" as two hours.
   - `Measures` converts cups, ounces, pounds, inches, and Fahrenheit to metric for a reader
@@ -84,16 +84,16 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
   - The sorting passes are not given the house style: they sorted its cooking rules into the
     method as steps. `Generate.Prompt.Structure` carries the wording rules and the language
     instead, and in Japanese, how to translate.
-  - What code can read off Granite's English line, code decides rather than the pass: an
+  - What code can read off Gemma's English line, code decides rather than the pass: an
     ingredient's icon is the longest run of the line's words the catalog knows (measure words
     such as "cloves" skipped), whether an ingredient or a tool is optional is whether the line
     says so, and a figure the pass wrote without its metric unit gets the unit back. When the
     line names a catalog ingredient, the pass is handed the catalog's name for it, so "frozen
     peas" is not translated as green peppers.
-  - A cook's picks are what they have, not what the dish needs. Granite is told to choose only
+  - A cook's picks are what they have, not what the dish needs. Gemma is told to choose only
     what the dish needs and to list only what its method uses, and `withoutUnusedPicks` drops
     any ingredient line naming a pick, or any pan, pot, or appliance line naming a picked tool,
-    that no step mentions. What Granite added on its own, anything "to taste", and utensils such
+    that no step mentions. What Gemma added on its own, anything "to taste", and utensils such
     as knives and boards, which a method seldom names, are kept.
   - Text a sorting pass returns goes through `withoutLeakedSyntax`, because the on-device model
     sometimes runs past a Japanese string into `」} ```json{` or a `<ctrl46>` token, and then
@@ -105,17 +105,17 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
   in `ModelPasses`, which both the generator and the editor run through. A generation has no
   read through at the end. It had one, and once the sorting was faithful line for line, the read
   through was what made recipes wrong: it rewrote whole lists, dropping and duplicating lines
-  and adding ones Granite never wrote. Rewriting a recipe keeps its read through, since there it
+  and adding ones Gemma never wrote. Rewriting a recipe keeps its read through, since there it
   checks the result against what the cook asked.
 - Before a recipe is written, `RecipeGenerator.plan` sorts the request on device into a named
   dish, goals ("high protein with noodles"), or an open request ("something easy tonight"). A
   dish the cook's picks can make, or a dish with nothing picked, is written straight away.
-  Anything else gets five ideas from Granite, one a line, read by `ideaLines` and put into the
+  Anything else gets five ideas from Gemma, one a line, read by `ideaLines` and put into the
   reader's language by a sorting pass each. Open requests ask for the easiest dishes first. The
-  cook picks an idea, or taps Decide for Me, which sends the request, the picks, and Granite's
+  cook picks an idea, or taps Decide for Me, which sends the request, the picks, and Gemma's
   English for the ideas to Jev through the Worker, ten times a day per device. A set of ideas
   carries a request ID, so a retried pick is answered from the first one and not counted
-  again. The picked idea is written from Granite's own English for it.
+  again. The picked idea is written from Gemma's own English for it.
 - The generator and the editor report their progress to a `RunObserver` the app hands in, so the
   package never imports ActivityKit. `Plates/Activity/GenerationActivity` is that observer, and
   runs the Live Activity.
@@ -140,7 +140,7 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
   a skip straight into the app. The recipe sheet shows the ideas, when there are some, between
   the request and the progress screen, with Decide for Me under them. Writing a recipe
   and rewriting one show the same progress screen: a checklist of the work, and under it
-  `RecipePreview`, the recipe as it stands at that moment. While Granite writes, the preview is
+  `RecipePreview`, the recipe as it stands at that moment. While Gemma writes, the preview is
   its text as it streams in, a finished line at a time and one `Text` a paragraph. The detail
   view turns into the editor in place, so a recipe is read and written on the one screen, and
   every edit is written straight to the file rather than kept until the editor is left. The
@@ -212,7 +212,7 @@ without a Japanese value is unfinished. Japanese copy follows the same plain sty
   runtime from the asset name, so the entries are kept in the package's string catalog by hand with
   `extractionState` set to `manual`, and adding an icon means adding its name in both
   languages.
-- Everything a model is given is a key too, Granite's prompt included, under
+- Everything a model is given is a key too, Gemma's prompt included, under
   `Generate.Prompt.`, `Generate.Lookup.`, and `Edit.Prompt.`, down to the comma a list is joined
   with. Only the `@Generable` schema descriptions stay in
   English: they are the shape of the answer, not the prompt, and the house style tells the

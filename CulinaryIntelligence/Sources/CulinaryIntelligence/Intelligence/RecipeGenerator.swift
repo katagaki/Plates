@@ -47,7 +47,7 @@ public struct GenerationRequest: Equatable, Sendable {
         description.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 
-    /// The picked ingredients in English, the language Granite is asked in. A cook can tap the
+    /// The picked ingredients in English, the language Gemma is asked in. A cook can tap the
     /// whole catalog, which is more than a prompt should carry, so only the first `listLimit`
     /// are named. Narrowing the choice is safe: what is left is still only things they have.
     var ingredientNames: [String] {
@@ -66,7 +66,7 @@ struct SortedRecipe {
     var title: String
     var time: String
     var serves: String
-    /// Each ingredient with the line Granite wrote for it, which is what its icon is read from.
+    /// Each ingredient with the line Gemma wrote for it, which is what its icon is read from.
     var ingredients: [(entry: StructuredIngredient, line: String)]
     var tools: [GeneratedTool]
     var steps: [(title: String, points: [String])]
@@ -80,7 +80,7 @@ struct GeneratedTitle {
     var title: String
 }
 
-/// The total time, worked out from the method when Granite did not give one.
+/// The total time, worked out from the method when Gemma did not give one.
 @Generable(description: "How long a recipe takes")
 struct GeneratedTime {
     @Guide(description: "Total time written as a minute count, for example '15 min'")
@@ -181,9 +181,9 @@ public struct GenerationProgress: Equatable, Sendable {
     }
 
     public var stage: Stage = .write
-    /// The recipe as Granite has written it so far, shown while it is the only thing there is.
+    /// The recipe as Gemma has written it so far, shown while it is the only thing there is.
     public var draft = ""
-    /// How many tokens Granite has written, which is what the bar reads during the first pass.
+    /// How many tokens Gemma has written, which is what the bar reads during the first pass.
     public var writtenTokens = 0
     public var title: String?
     public var time: String?
@@ -210,7 +210,7 @@ public struct GenerationProgress: Equatable, Sendable {
     }
 
     /// How far along the model is. Each pass carries the share of the work it does. How long
-    /// Granite writes for is not known ahead, so the first pass is measured against the length
+    /// Gemma writes for is not known ahead, so the first pass is measured against the length
     /// a recipe usually runs to and held short of full until it stops.
     public var fraction: Double {
         guard !isFinished else { return 1 }
@@ -229,18 +229,18 @@ public struct GenerationProgress: Equatable, Sendable {
         return write * 0.5 + shopping * 0.2 + method * 0.3
     }
 
-    /// About how many tokens a Granite recipe runs to, read off the Plates Kitchen evals.
+    /// About how many tokens a recipe runs to, read off the Plates Kitchen evals.
     private static let typicalTokens = 550.0
 }
 
 /// Writes a new recipe with two models, each doing what it is good at.
 ///
-/// Granite, running on Workers AI behind PlatesCloud, writes the whole recipe as plain cookbook
+/// Gemma, running on Workers AI behind PlatesCloud, writes the whole recipe as plain cookbook
 /// text in one go, always in English, since a model its size gets the cooking right far more
 /// often in English than in Japanese. A request the cook wrote in another language is put into
 /// English for it first.
 ///
-/// What Granite wrote is then cut into its sections in code, and the time and the serving count
+/// What Gemma wrote is then cut into its sections in code, and the time and the serving count
 /// are read out of it there. Apple Intelligence sorts the rest one line at a time, each line in
 /// a session of its own: the title, every ingredient, every tool, every step, and every problem.
 /// Handed a whole list at once, it drops lines, merges them, and fills the gaps from elsewhere
@@ -251,7 +251,7 @@ public struct GenerationProgress: Equatable, Sendable {
 ///
 /// There is no read through at the end. One was tried, and with the sorting faithful line for
 /// line it did more harm than good: it rewrote whole lists, dropping and duplicating lines and
-/// adding ones Granite never wrote. What is handed over is Granite's recipe, sorted.
+/// adding ones Gemma never wrote. What is handed over is Gemma's recipe, sorted.
 @MainActor
 @Observable
 public final class RecipeGenerator {
@@ -274,10 +274,10 @@ public final class RecipeGenerator {
     let passes = ModelPasses()
 
     /// The passes that plan and translate: what kind of request the cook typed, and the words
-    /// of it put into English for Granite.
+    /// of it put into English for Gemma.
     let writer = ModelPasses()
 
-    /// Where Granite writes, and where Jev picks an idea.
+    /// Where Gemma writes, and where Jev picks an idea.
     let cloud = PlatesCloud.shared
 
     /// Where the run reports how far along it is.
@@ -287,7 +287,7 @@ public final class RecipeGenerator {
         self.observer = observer
     }
 
-    /// Every model the run needs has to be there: Granite to write and Apple Intelligence to
+    /// Every model the run needs has to be there: Gemma to write and Apple Intelligence to
     /// sort.
     public var isAvailable: Bool { passes.isAvailable && cloud.isConfigured }
 
@@ -298,7 +298,7 @@ public final class RecipeGenerator {
     }
 
     /// Writes the recipe the cook asked for, or the idea they picked for it. An idea is written
-    /// from Granite's own English for it, and its title in the reader's language stands in for
+    /// from Gemma's own English for it, and its title in the reader's language stands in for
     /// the cook's words when the title is sorted.
     public func generate(_ asked: GenerationRequest, idea: RecipeIdea? = nil) async -> Recipe? {
         var request = asked.asAsked
@@ -334,9 +334,8 @@ public final class RecipeGenerator {
 
     // MARK: - Writing
 
-    /// The cook's words put into English before Granite reads them. Granite misreads a dish
-    /// named in Japanese, so a request that is not already English is translated by Apple
-    /// Intelligence first. A translation that fails passes the words through as they were
+    /// The cook's words put into English before Gemma reads them. A request that is not
+    /// already English is translated by Apple Intelligence first. A translation that fails passes the words through as they were
     /// written, which is no worse than not trying.
     func inEnglish(_ request: GenerationRequest) async -> GenerationRequest {
         progress.stage = .write
@@ -359,10 +358,9 @@ public final class RecipeGenerator {
         }
     }
 
-    /// Granite writes the recipe as a cookbook would print it, put on screen a line at a time as
-    /// it comes. It arrives in pieces rather than tokens, so the count shown is worked out from
-    /// the length. The screen is handed only finished lines, since laying the whole text out
-    /// again for every piece made the sheet stutter as it grew.
+    /// Gemma writes the recipe as a cookbook would print it, put on screen a finished line at a
+    /// time. It arrives in pieces rather than tokens, so the count shown is worked out from the
+    /// length.
     private func write(_ request: GenerationRequest) async throws -> String {
         progress.stage = .write
         var written = ""
@@ -378,7 +376,7 @@ public final class RecipeGenerator {
         return text
     }
 
-    /// Puts the finished lines on screen, in one change to the progress.
+    /// Puts the finished lines on screen.
     private func show(_ lines: String, of written: String) {
         var shown = progress
         shown.draft = lines
@@ -388,7 +386,7 @@ public final class RecipeGenerator {
 
     // MARK: - Sorting
 
-    /// Sorts what Granite wrote into the recipe, a line at a time.
+    /// Sorts what Gemma wrote into the recipe, a line at a time.
     private func sort(
         _ written: WrittenRecipe,
         text: String,
@@ -426,7 +424,7 @@ public final class RecipeGenerator {
                     GeneratedTool.self,
                     Self.text("Generate.Prompt.Structure.Tool.Ask", Measures.forReader(line))
                 )
-                // Granite says when a tool can be done without. The pass has marked the only pan
+                // Gemma says when a tool can be done without. The pass has marked the only pan
                 // in a recipe as optional, so its guess is not asked for.
                 tool.required = !Self.isOptional(line)
                 tools.append(tool)
@@ -471,7 +469,7 @@ public final class RecipeGenerator {
     }
 
     /// The title in the reader's language. The cook's own words for the dish go with it, so it
-    /// reads the way they asked for it rather than as a translation of Granite's.
+    /// reads the way they asked for it rather than as a translation of Gemma's.
     private func sortTitle(_ written: WrittenRecipe, text: String, request: GenerationRequest) async throws -> String {
         var lines = [
             written.title.isEmpty
@@ -485,7 +483,7 @@ public final class RecipeGenerator {
         return try await sortLine(GeneratedTitle.self, lines.joined(separator: "\n")).title.withoutLeakedSyntax
     }
 
-    /// The total time from the method, for a recipe Granite gave none for. The answer is read
+    /// The total time from the method, for a recipe Gemma gave none for. The answer is read
     /// back through `time(from:)`, so what is kept is a minute count however it was written.
     private func estimateTime(_ written: WrittenRecipe, text: String) async throws -> String {
         let method = written.steps.isEmpty ? text : written.steps.enumerated()
@@ -519,7 +517,7 @@ public final class RecipeGenerator {
         }
     }
 
-    /// The most a pass sorting one line may write. A line of Granite's runs to a few dozen
+    /// The most a pass sorting one line may write. A line of Gemma's runs to a few dozen
     /// tokens, and its sorted form, translated, to a few hundred at most. A pass has been seen to
     /// run on past seven thousand without stopping, and without a limit that overruns the
     /// window and is taken for a request too large for the device. With one, it fails like any
@@ -529,7 +527,7 @@ public final class RecipeGenerator {
     /// The same limit for a section sorted from the whole text, which writes every line of it.
     private static let wholeTokenLimit = 2400
 
-    /// The shopping list sorted from the whole text in one pass, for when Granite wrote it in a
+    /// The shopping list sorted from the whole text in one pass, for when Gemma wrote it in a
     /// shape the reading could not split into lines.
     private func sortWholeShopping(text: String) async throws -> ([StructuredIngredient], [GeneratedTool]) {
         let schema = try Self.wholeSchema(
@@ -558,7 +556,7 @@ public final class RecipeGenerator {
         )
     }
 
-    /// The method sorted from the whole text in one pass, for when Granite wrote it in a shape
+    /// The method sorted from the whole text in one pass, for when Gemma wrote it in a shape
     /// the reading could not split into steps.
     private func sortWholeMethod(
         text: String
@@ -594,7 +592,7 @@ public final class RecipeGenerator {
         return (steps, notes)
     }
 
-    // MARK: - Reading what Granite wrote
+    // MARK: - Reading what Gemma wrote
 
     /// An amount with its metric unit put back when the pass wrote the figure alone. "1 lb
     /// (450g)" has come back as "450" from a pass that was told to keep the unit.
@@ -607,12 +605,12 @@ public final class RecipeGenerator {
         return "\(figure) \(match.output.2)"
     }
 
-    /// Whether a line Granite wrote says the recipe can do without it.
+    /// Whether a line Gemma wrote says the recipe can do without it.
     static func isOptional(_ line: String) -> Bool {
         line.lowercased().contains("optional")
     }
 
-    /// The section an ingredient goes in. Whether it is optional is what Granite's line says,
+    /// The section an ingredient goes in. Whether it is optional is what Gemma's line says,
     /// and an ingredient the pass called optional that the line does not is put on the shelf
     /// its icon sits on.
     static func section(for entry: StructuredIngredient, line: String) -> String {
@@ -629,7 +627,7 @@ public final class RecipeGenerator {
         "head", "heads", "bunch", "sprig", "sprigs", "pinch", "dash", "handful", "sheet", "sheets",
     ]
 
-    /// The catalog ingredient the line Granite wrote names outright: the longest run of its
+    /// The catalog ingredient the line Gemma wrote names outright: the longest run of its
     /// words the catalog knows, aliases included, so "chopped green onions" is a spring onion
     /// and "1 onion, diced" an onion. The sorting pass names an icon too, but it guesses from a
     /// translated name and has put a spring onion on an onion, so the English is read first.
@@ -656,10 +654,10 @@ public final class RecipeGenerator {
         return nil
     }
 
-    /// Granite's lists without the picks its method never uses. A cook's picks are what they
+    /// Gemma's lists without the picks its method never uses. A cook's picks are what they
     /// have, not what the dish needs, and a model this size tends to list every one of them. A
     /// line is dropped only when it names something the cook picked and no step mentions it, so
-    /// what Granite added on its own, and anything seasoned "to taste", stays. Of the tools,
+    /// what Gemma added on its own, and anything seasoned "to taste", stays. Of the tools,
     /// only pans, pots, and appliances are checked: a method names the pan it cooks in, but
     /// seldom the knife or the board.
     static func withoutUnusedPicks(_ written: WrittenRecipe, request: GenerationRequest) -> WrittenRecipe {
@@ -753,13 +751,13 @@ public final class RecipeGenerator {
 
     private static var houseStyle: String { ModelPasses.houseStyle }
 
-    /// The prompt shorthand for Granite, which is always asked in English.
+    /// The prompt shorthand for Gemma, which is always asked in English.
     static func english(_ key: String.LocalizationValue, _ arguments: CVarArg...) -> String {
         let format = String(culinaryEnglish: key)
         return arguments.isEmpty ? format : String(format: format, arguments: arguments)
     }
 
-    /// What Granite is told before the cook's request. The cook's kitchen and tools, when they
+    /// What Gemma is told before the cook's request. The cook's kitchen and tools, when they
     /// listed them, are limits on the whole recipe, so they are set here rather than asked for.
     static func writeInstructions(for request: GenerationRequest) -> String {
         var instructions = english("Generate.Prompt.HouseStyle") + "\n\n" + english("Generate.Prompt.Write")
@@ -834,7 +832,7 @@ public final class RecipeGenerator {
             general: section(entries(in: "pantry")),
             optional: section(entries(in: "optional"))
         )
-        // Two lines Granite wrote for the same tool, such as a wooden spoon and a spatula that
+        // Two lines Gemma wrote for the same tool, such as a wooden spoon and a spatula that
         // both come back as 木べら, are listed once.
         var named: Set<String> = []
         let unique = sorted.tools.filter { named.insert($0.name.withoutLeakedSyntax.lowercased()).inserted }
@@ -902,7 +900,7 @@ public final class RecipeGenerator {
                     for: ingredientIcon(line: line, guess: entry.icon, item: entry.item)
                 ),
                 // The measure words are put right once more here, in case the pass wrote an
-                // amount back the way Granite had it.
+                // amount back the way Gemma had it.
                 amount: Measures.tidied(
                     Measures.readsJapanese
                         ? Measures.japanese(entry.amount.withoutLeakedSyntax)

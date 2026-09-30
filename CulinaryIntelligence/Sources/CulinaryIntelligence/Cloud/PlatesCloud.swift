@@ -32,7 +32,7 @@ public struct CloudPick: Equatable, Sendable {
     public let remaining: Int
 }
 
-/// The Worker the app talks to: Granite on Workers AI writes, and Jev picks an idea when the cook
+/// The Worker the app talks to: Gemma on Workers AI writes, and Jev picks an idea when the cook
 /// asks it to. Every request is signed with an App Attest key, made and registered the first
 /// time the app needs one, so the Worker only answers Plates on a real device.
 @MainActor
@@ -65,7 +65,7 @@ public final class PlatesCloud {
 
     // MARK: - Writing
 
-    /// Granite's answer streamed back a piece at a time.
+    /// Gemma's answer streamed back a piece at a time.
     func write(instructions: String, prompt: String, maximumTokens: Int = 1400) -> AsyncThrowingStream<String, Error> {
         let body = Self.chat(instructions: instructions, prompt: prompt, maximumTokens: maximumTokens, stream: true)
         return AsyncThrowingStream { continuation in
@@ -91,7 +91,7 @@ public final class PlatesCloud {
         }
     }
 
-    /// Granite's whole answer at once, for text that is read only once it is finished.
+    /// Gemma's whole answer at once, for text that is read only once it is finished.
     func complete(instructions: String, prompt: String, maximumTokens: Int) async throws -> String {
         let body = Self.chat(instructions: instructions, prompt: prompt, maximumTokens: maximumTokens, stream: false)
         let data = try await Self.collect(try await send("/v1/chat/completions", body: body).0)

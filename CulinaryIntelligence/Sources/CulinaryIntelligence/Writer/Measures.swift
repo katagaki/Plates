@@ -1,6 +1,6 @@
 import Foundation
 
-/// Granite's measures put the way the reader cooks, before any model sees them. Granite writes
+/// Gemma's measures put the way the reader cooks, before any model sees them. Gemma writes
 /// in US cups, ounces, pounds, and Fahrenheit, and a model asked to convert them does the
 /// arithmetic wrong about as often as right, so the arithmetic is done here and the sorting
 /// passes only have words to translate.
@@ -13,7 +13,7 @@ nonisolated enum Measures {
     /// its figure and "to taste" has a word of its own.
     static var readsJapanese: Bool { Bundle.module.preferredLocalizations.first == "ja" }
 
-    /// A line of Granite's with its measures put the reader's way.
+    /// A line of Gemma's with its measures put the reader's way.
     static func forReader(_ line: String) -> String {
         var text = line
         if readsMetric { text = metric(text) }
@@ -38,7 +38,7 @@ nonisolated enum Measures {
 
     static func metric(_ line: String) -> String {
         var text = line
-        // When Granite gives the metric beside a US measure, as in "1 lb (450g)" or
+        // When Gemma gives the metric beside a US measure, as in "1 lb (450g)" or
         // "28 oz/800g", its figure is kept and the US one dropped rather than converted, since
         // it is usually the size the packet is sold in.
         let us = conversions.map(\.pattern).joined(separator: "|")
@@ -60,7 +60,7 @@ nonisolated enum Measures {
             let celsius = ((fahrenheit - 32) * 5 / 9 / 5).rounded() * 5
             return "\(Int(celsius))°C"
         }
-        // Granite often gives the metric beside the US measure, which now says it twice.
+        // Gemma often gives the metric beside the US measure, which now says it twice.
         text = replacing(#"(\d+(?:\.\d+)? (?:g|ml)) \(\s*(?:about\s+)?\d+(?:\.\d+)?\s*(?:g|ml|grams|milliliters)\s*\)"#, in: text) {
             $0[0]
         }

@@ -1,8 +1,8 @@
 import FoundationModels
 import Foundation
 
-/// A dish Granite suggested for a request that named goals or nothing in particular. The list
-/// shows it in the reader's language, and Granite writes it from its own English.
+/// A dish Gemma suggested for a request that named goals or nothing in particular. The list
+/// shows it in the reader's language, and Gemma writes it from its own English.
 public struct RecipeIdea: Identifiable, Equatable, Sendable {
     public let id: Int
     public let title: String
@@ -55,7 +55,7 @@ struct GeneratedIdea {
 extension RecipeGenerator {
     /// Works out whether a request is written as asked or offered as ideas first. A named dish
     /// the cook's kitchen can make is written straight away. Goals, an open request, or a dish
-    /// the kitchen cannot make get five ideas from Granite, put into the reader's language.
+    /// the kitchen cannot make get five ideas from Gemma, put into the reader's language.
     public func plan(_ asked: GenerationRequest) async -> RecipePlan? {
         let request = asked.asAsked
         state = .planning
@@ -76,7 +76,7 @@ extension RecipeGenerator {
         }
     }
 
-    /// Asks Jev to pick one of the ideas for the cook. It reads Granite's English for them, the
+    /// Asks Jev to pick one of the ideas for the cook. It reads Gemma's English for them, the
     /// cook's own words for the request, and what they picked in the catalog.
     public func decide(_ asked: GenerationRequest, ideas: [RecipeIdea], requestID: String) async throws -> CloudPick {
         let request = asked.asAsked
@@ -131,7 +131,7 @@ extension RecipeGenerator {
         return answer.makeable
     }
 
-    /// Five dishes from Granite, in English, one a line, then put into the reader's language.
+    /// Five dishes from Gemma, in English, one a line, then put into the reader's language.
     private func ideas(for request: GenerationRequest, kind: RequestKind) async throws -> [RecipeIdea] {
         let english = await inEnglish(request)
         let written = try await cloud.complete(
@@ -164,7 +164,7 @@ extension RecipeGenerator {
     /// How many ideas are offered.
     static let ideaCount = 5
 
-    /// Whether the app is read in English, in which case Granite's ideas are shown as written.
+    /// Whether the app is read in English, in which case Gemma's ideas are shown as written.
     private static var readsInEnglish: Bool {
         Bundle.module.preferredLocalizations.first?.hasPrefix("en") ?? true
     }
@@ -199,7 +199,7 @@ extension RecipeGenerator {
         return lines.joined(separator: "\n")
     }
 
-    /// Granite's ideas, a title and a summary each, read off lines such as "1. **Egg Fried
+    /// Gemma's ideas, a title and a summary each, read off lines such as "1. **Egg Fried
     /// Rice**: One pan, 15 minutes." A line with no title, or a heading such as "Here are five
     /// ideas:", is skipped.
     static func ideaLines(in text: String) -> [(title: String, summary: String)] {
