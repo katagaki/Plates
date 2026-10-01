@@ -37,13 +37,21 @@ struct ConfirmationRecipe {
 }
 
 /// The finished recipe layout used to confirm a generated or shared recipe.
-struct RecipeConfirmationView: View {
+struct RecipeConfirmationView<Header: View>: View {
     let recipe: ConfirmationRecipe
+    let header: Header
     @State private var selectedItem: ConfirmationRecipe.Item?
+
+    init(recipe: ConfirmationRecipe, @ViewBuilder header: () -> Header) {
+        self.recipe = recipe
+        self.header = header()
+    }
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 24) {
+                header
+
                 summary
                     .padding(.horizontal, .listRowInset)
 
@@ -179,5 +187,11 @@ struct RecipeConfirmationView: View {
         .padding(.vertical, 4)
         .frame(maxWidth: .infinity, minHeight: 68, maxHeight: 68, alignment: .leading)
         .cardBackground()
+    }
+}
+
+extension RecipeConfirmationView where Header == EmptyView {
+    init(recipe: ConfirmationRecipe) {
+        self.init(recipe: recipe) { EmptyView() }
     }
 }

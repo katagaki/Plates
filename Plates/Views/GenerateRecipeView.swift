@@ -45,7 +45,11 @@ struct GenerateRecipeView: View {
         NavigationStack {
             Group {
                 if let draft {
-                    RecipeConfirmationView(recipe: ConfirmationRecipe(draft))
+                    RecipeConfirmationView(recipe: ConfirmationRecipe(draft)) {
+                        DishIcon(recipe: draft, size: 168)
+                            .shadow(color: .black.opacity(0.15), radius: 10, y: 5)
+                            .frame(maxWidth: .infinity)
+                    }
                 } else if isGenerating {
                     progress
                 } else if isPlanning {
