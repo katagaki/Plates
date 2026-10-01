@@ -17,7 +17,6 @@ struct RecipesGridView: View {
                         RecipeCard(recipe: recipe)
                     }
                     .buttonStyle(.plain)
-                    .simultaneousGesture(DragGesture(minimumDistance: 10))
                     .contextMenu {
                         Button(role: .destructive) {
                             delete(recipe)
