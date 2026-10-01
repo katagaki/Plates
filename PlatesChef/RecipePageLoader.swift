@@ -104,10 +104,16 @@ enum RecipePageLoader {
         var request = URLRequest(url: url)
         request.timeoutInterval = 15
         request.setValue("text/html, application/json", forHTTPHeaderField: "Accept")
-        let (data, response) = try await URLSession.shared.data(for: request)
+        let (bytes, response) = try await URLSession.shared.bytes(for: request)
         guard let response = response as? HTTPURLResponse,
-              (200..<300).contains(response.statusCode), data.count <= 3_000_000
+              (200..<300).contains(response.statusCode),
+              response.expectedContentLength <= 3_000_000
         else { throw LoadError.downloadFailed }
+        var data = Data()
+        for try await byte in bytes {
+            guard data.count < 3_000_000 else { throw LoadError.downloadFailed }
+            data.append(byte)
+        }
         return data
     }
 }

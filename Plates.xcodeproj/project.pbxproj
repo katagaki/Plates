@@ -51,6 +51,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E4D000000000000000000011 /* Exceptions for "Shared" folder in "PlatesChef" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				GenerationActivityAttributes.swift,
+			);
+			target = E4D000000000000000000003 /* PlatesChef */;
+		};
+		E4D000000000000000000010 /* Exceptions for "Shared" folder in "PlatesActivity" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				CardStyle.swift,
+				RecipeConfirmationView.swift,
+			);
+			target = E4B000000000000000000003 /* PlatesActivity */;
+		};
 		E47FE90030479ABC0038302E /* Exceptions for "Plates" folder in "Plates" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -86,6 +101,10 @@
 		};
 		E4B000000000000000000001 /* Shared */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E4D000000000000000000010 /* Exceptions for "Shared" folder in "PlatesActivity" target */,
+				E4D000000000000000000011 /* Exceptions for "Shared" folder in "PlatesChef" target */,
+			);
 			path = Shared;
 			sourceTree = "<group>";
 		};
@@ -211,6 +230,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				E4B000000000000000000001 /* Shared */,
 				E4D000000000000000000002 /* PlatesChef */,
 			);
 			name = PlatesChef;

@@ -9,6 +9,7 @@ struct ChefImportView: View {
     @State private var isLoading = true
     @State private var failure: Failure?
     @State private var saveFailed = false
+    @State private var isEditing = false
 
     private enum Failure {
         case noURL, unsupportedURL, downloadFailed, noRecipe
@@ -20,25 +21,38 @@ struct ChefImportView: View {
                 if isLoading {
                     ProgressView("Chef.Loading")
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
-                } else if recipe != nil {
-                    ChefReviewView(recipe: Binding(
-                        get: { recipe! },
-                        set: { recipe = $0 }
-                    ))
+                } else if let recipe {
+                    if isEditing {
+                        ChefReviewView(recipe: Binding(
+                            get: { self.recipe! },
+                            set: { self.recipe = $0 }
+                        ))
+                    } else {
+                        RecipeConfirmationView(recipe: ConfirmationRecipe(recipe))
+                    }
                 } else {
                     errorView
                 }
             }
-            .navigationTitle("Chef.Title")
+            .navigationTitle(isEditing ? String(localized: "Chef.Title") : recipe?.title ?? String(localized: "Chef.Title"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("Chef.Cancel", action: cancel)
+                    Button(role: .cancel, action: cancel)
                 }
                 ToolbarItem(placement: .confirmationAction) {
                     if recipe != nil {
                         Button("Chef.Add", action: save)
                             .disabled(recipe?.canSave != true)
+                    }
+                }
+                ToolbarItem(placement: .bottomBar) {
+                    if recipe != nil {
+                        if isEditing {
+                            Button("Chef.Review") { isEditing = false }
+                        } else {
+                            Button("Chef.Edit") { isEditing = true }
+                        }
                     }
                 }
             }
@@ -66,6 +80,7 @@ struct ChefImportView: View {
 
     private func load() async {
         isLoading = true
+        isEditing = false
         do {
             recipe = try await RecipePageLoader.load(from: items)
             failure = nil
@@ -184,5 +199,31 @@ private struct ChefReviewView: View {
                 list.wrappedValue.append(.init(item: "", icon: "", amount: ""))
             }
         }
+    }
+}
+
+private extension ConfirmationRecipe {
+    init(_ recipe: ChefRecipe) {
+        func ingredients(_ entries: [ChefRecipe.Ingredient]?) -> [ConfirmationRecipe.Item] {
+            (entries ?? []).map { .init(name: $0.item, detail: $0.amount, note: $0.note ?? "", assetName: nil) }
+        }
+        func tools(_ required: Bool) -> [ConfirmationRecipe.Item] {
+            recipe.tools.filter { $0.required == required }
+                .map { .init(name: $0.name, detail: "", note: $0.note ?? "", assetName: nil) }
+        }
+        self.init(
+            title: recipe.title,
+            time: recipe.time,
+            serves: recipe.serves,
+            tried: recipe.tried == true,
+            sections: [
+                .init(title: "Recipe.Detail.Ingredients", items: ingredients(recipe.ingredients.supermarket) + ingredients(recipe.ingredients.general)),
+                .init(title: "Recipe.Detail.Ingredients.Optional", items: ingredients(recipe.ingredients.optional)),
+                .init(title: "Recipe.Detail.Tools", items: tools(true)),
+                .init(title: "Recipe.Detail.Tools.Optional", items: tools(false)),
+            ],
+            steps: recipe.steps.map { .init(title: $0.title, points: $0.points) },
+            problems: recipe.troubleshooting.map { .init(question: $0.problem, answer: $0.solution) }
+        )
     }
 }

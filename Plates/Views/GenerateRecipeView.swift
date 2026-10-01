@@ -21,6 +21,8 @@ struct GenerateRecipeView: View {
     @State private var decisionsRemaining: Int?
     @State private var isDeciding = false
     @State private var decideError: String?
+    @State private var shared: SharedFile?
+    @State private var shareFailed = false
 
     /// Set by a `plates-debug://` link, so a debug run can go from launch to Jev's pick untouched.
     private let startsAtOnce: Bool
@@ -43,7 +45,7 @@ struct GenerateRecipeView: View {
         NavigationStack {
             Group {
                 if let draft {
-                    RecipeDetailView(recipe: draft)
+                    RecipeConfirmationView(recipe: ConfirmationRecipe(draft))
                 } else if isGenerating {
                     progress
                 } else if isPlanning {
@@ -71,7 +73,30 @@ struct GenerateRecipeView: View {
                         Button("Generate.Ideas.Edit") { ideas = [] }
                     }
                 }
+                if let draft {
+                    ToolbarItem(placement: .bottomBar) {
+                        Menu {
+                            ForEach(ShareFormat.allCases) { format in
+                                Button {
+                                    do {
+                                        shared = SharedFile(url: try RecipeExport.file(format, for: draft))
+                                    } catch {
+                                        shareFailed = true
+                                    }
+                                } label: {
+                                    Label(format.title, systemImage: format.symbol)
+                                }
+                            }
+                        } label: {
+                            Label("Recipe.Share.Title", systemImage: "square.and.arrow.up")
+                        }
+                    }
+                }
             }
+        }
+        .sheet(item: $shared) { file in ShareSheet(url: file.url) }
+        .alert("Recipe.Share.Error", isPresented: $shareFailed) {
+            Button("Shared.Done", role: .cancel) {}
         }
         .interactiveDismissDisabled(isBusy)
         // A pass can take a while, and the sheet is not touched while it runs, so the screen
@@ -480,5 +505,31 @@ private struct GenerationProgressView: View {
                     .contentTransition(.numericText())
             }
         }
+    }
+}
+
+private extension ConfirmationRecipe {
+    init(_ recipe: Recipe) {
+        let sections = RecipeList.allCases.map { list in
+            ConfirmationRecipe.Section(
+                title: list.title,
+                items: list.isIngredients
+                    ? recipe.ingredientList(in: list).map {
+                        .init(name: $0.item, detail: $0.amount, note: $0.note ?? "", assetName: IconCatalog.assetName(for: $0.icon))
+                    }
+                    : recipe.toolList(in: list).map {
+                        .init(name: $0.name, detail: "", note: $0.note ?? "", assetName: IconCatalog.assetName(for: $0.icon))
+                    }
+            )
+        }
+        self.init(
+            title: recipe.title,
+            time: recipe.formattedTime,
+            serves: recipe.serves,
+            tried: recipe.tried == true,
+            sections: sections,
+            steps: recipe.steps.map { .init(title: $0.title, points: $0.points) },
+            problems: recipe.troubleshooting.map { .init(question: $0.problem, answer: $0.solution) }
+        )
     }
 }
