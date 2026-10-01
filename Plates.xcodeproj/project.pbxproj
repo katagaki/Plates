@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E47FE81A3047956D0038302E /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = E47FE8193047956D0038302E /* AppIcon.icon */; };
 		E4B00000000000000000000C /* PlatesActivity.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E4B000000000000000000004 /* PlatesActivity.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E4D00000000000000000000C /* PlatesChef.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E4D000000000000000000004 /* PlatesChef.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E4C000000000000000000003 /* CulinaryIntelligence in Frameworks */ = {isa = PBXBuildFile; productRef = E4C000000000000000000002 /* CulinaryIntelligence */; };
 /* End PBXBuildFile section */
 
@@ -20,6 +21,13 @@
 			remoteGlobalIDString = E4B000000000000000000003;
 			remoteInfo = PlatesActivity;
 		};
+		E4D00000000000000000000E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E47FE75130478FED0038302E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E4D000000000000000000003;
+			remoteInfo = PlatesChef;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +37,7 @@
 			dstSubfolder = PlugIns;
 			files = (
 				E4B00000000000000000000C /* PlatesActivity.appex in Embed Foundation Extensions */,
+				E4D00000000000000000000C /* PlatesChef.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 		};
@@ -38,6 +47,7 @@
 		E47FE75930478FED0038302E /* Plates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E47FE8193047956D0038302E /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
 		E4B000000000000000000004 /* PlatesActivity.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PlatesActivity.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4D000000000000000000004 /* PlatesChef.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PlatesChef.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -54,6 +64,14 @@
 				Info.plist,
 			);
 			target = E4B000000000000000000003 /* PlatesActivity */;
+		};
+		E4D00000000000000000000F /* Exceptions for "PlatesChef" folder in "PlatesChef" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+				PlatesChef.entitlements,
+			);
+			target = E4D000000000000000000003 /* PlatesChef */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -79,6 +97,14 @@
 			path = PlatesActivity;
 			sourceTree = "<group>";
 		};
+		E4D000000000000000000002 /* PlatesChef */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E4D00000000000000000000F /* Exceptions for "PlatesChef" folder in "PlatesChef" target */,
+			);
+			path = PlatesChef;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +119,11 @@
 			files = (
 			);
 		};
+		E4D000000000000000000006 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -102,6 +133,7 @@
 				E47FE8193047956D0038302E /* AppIcon.icon */,
 				E47FE75B30478FED0038302E /* Plates */,
 				E4B000000000000000000002 /* PlatesActivity */,
+				E4D000000000000000000002 /* PlatesChef */,
 				E4B000000000000000000001 /* Shared */,
 				E47FE75A30478FED0038302E /* Products */,
 			);
@@ -112,6 +144,7 @@
 			children = (
 				E47FE75930478FED0038302E /* Plates.app */,
 				E4B000000000000000000004 /* PlatesActivity.appex */,
+				E4D000000000000000000004 /* PlatesChef.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,6 +165,7 @@
 			);
 			dependencies = (
 				E4B00000000000000000000D /* PBXTargetDependency */,
+				E4D00000000000000000000D /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				E47FE75B30478FED0038302E /* Plates */,
@@ -164,6 +198,26 @@
 			productReference = E4B000000000000000000004 /* PlatesActivity.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		E4D000000000000000000003 /* PlatesChef */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4D000000000000000000008 /* Build configuration list for PBXNativeTarget "PlatesChef" */;
+			buildPhases = (
+				E4D000000000000000000005 /* Sources */,
+				E4D000000000000000000006 /* Frameworks */,
+				E4D000000000000000000007 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				E4D000000000000000000002 /* PlatesChef */,
+			);
+			name = PlatesChef;
+			productName = PlatesChef;
+			productReference = E4D000000000000000000004 /* PlatesChef.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -178,6 +232,9 @@
 						CreatedOnToolsVersion = 27.0;
 					};
 					E4B000000000000000000003 = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					E4D000000000000000000003 = {
 						CreatedOnToolsVersion = 27.0;
 					};
 				};
@@ -202,6 +259,7 @@
 			targets = (
 				E47FE75830478FED0038302E /* Plates */,
 				E4B000000000000000000003 /* PlatesActivity */,
+				E4D000000000000000000003 /* PlatesChef */,
 			);
 		};
 /* End PBXProject section */
@@ -214,6 +272,11 @@
 			);
 		};
 		E4B000000000000000000007 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		E4D000000000000000000007 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
 			);
@@ -231,6 +294,11 @@
 			files = (
 			);
 		};
+		E4D000000000000000000005 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -238,6 +306,11 @@
 			isa = PBXTargetDependency;
 			target = E4B000000000000000000003 /* PlatesActivity */;
 			targetProxy = E4B00000000000000000000E /* PBXContainerItemProxy */;
+		};
+		E4D00000000000000000000D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E4D000000000000000000003 /* PlatesChef */;
+			targetProxy = E4D00000000000000000000E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -502,6 +575,66 @@
 			};
 			name = Release;
 		};
+		E4D000000000000000000009 /* Debug configuration for PBXNativeTarget "PlatesChef" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = PlatesChef/PlatesChef.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YYM4Z6MU8F;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlatesChef/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Plates;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tsubuzaki.Plates.Chef;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E4D00000000000000000000A /* Release configuration for PBXNativeTarget "PlatesChef" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = PlatesChef/PlatesChef.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YYM4Z6MU8F;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlatesChef/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Plates;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tsubuzaki.Plates.Chef;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -526,6 +659,14 @@
 			buildConfigurations = (
 				E4B000000000000000000009 /* Debug configuration for PBXNativeTarget "PlatesActivity" */,
 				E4B00000000000000000000A /* Release configuration for PBXNativeTarget "PlatesActivity" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		E4D000000000000000000008 /* Build configuration list for PBXNativeTarget "PlatesChef" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4D000000000000000000009 /* Debug configuration for PBXNativeTarget "PlatesChef" */,
+				E4D00000000000000000000A /* Release configuration for PBXNativeTarget "PlatesChef" */,
 			);
 			defaultConfigurationName = Release;
 		};

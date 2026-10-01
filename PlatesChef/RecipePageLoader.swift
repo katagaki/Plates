@@ -1,0 +1,113 @@
+import Foundation
+import UniformTypeIdentifiers
+
+enum RecipePageLoader {
+    enum LoadError: Error {
+        case noURL
+        case unsupportedURL
+        case downloadFailed
+        case noRecipe
+    }
+
+    static func load(from items: [NSExtensionItem]) async throws -> ChefRecipe {
+        let page = try await sharedPage(from: items)
+        guard let url = page.url else { throw LoadError.noURL }
+        guard ["http", "https"].contains(url.scheme?.lowercased() ?? "") else {
+            throw LoadError.unsupportedURL
+        }
+
+        if url.pathExtension.lowercased() == "json",
+           let recipe = RecipePageParser.onePanRecipe(try await download(url)) {
+            return recipe
+        }
+        if let recipe = try await onePanRecipe(at: url) { return recipe }
+        if let recipe = RecipePageParser.structuredRecipe(in: page.jsonLD) { return recipe }
+
+        let html = String(data: try await download(url), encoding: .utf8) ?? ""
+        guard let recipe = RecipePageParser.structuredRecipe(in: html) else {
+            throw LoadError.noRecipe
+        }
+        return recipe
+    }
+
+    private struct SharedPage {
+        var url: URL?
+        var jsonLD: [String] = []
+    }
+
+    private static func sharedPage(from items: [NSExtensionItem]) async throws -> SharedPage {
+        let providers = items.flatMap { $0.attachments ?? [] }
+        var page = SharedPage()
+        for provider in providers where provider.hasItemConformingToTypeIdentifier("com.apple.property-list") {
+            guard let data = try? await data(from: provider, type: "com.apple.property-list"),
+                  let dictionary = try? PropertyListSerialization.propertyList(
+                    from: data, options: [], format: nil
+                  ) as? [String: Any],
+                  let result = dictionary[NSExtensionJavaScriptPreprocessingResultsKey] as? [String: Any]
+            else { continue }
+            page.url = (result["url"] as? String).flatMap(URL.init(string:))
+            page.jsonLD = result["jsonLD"] as? [String] ?? []
+            break
+        }
+        for provider in providers where provider.hasItemConformingToTypeIdentifier(UTType.url.identifier) {
+            guard let url = try? await url(from: provider) else { continue }
+            page.url = url
+            break
+        }
+        return page
+    }
+
+    private static func data(from provider: NSItemProvider, type: String) async throws -> Data {
+        try await withCheckedThrowingContinuation { continuation in
+            provider.loadDataRepresentation(forTypeIdentifier: type) { value, error in
+                if let error { continuation.resume(throwing: error) }
+                else if let value { continuation.resume(returning: value) }
+                else { continuation.resume(throwing: LoadError.noURL) }
+            }
+        }
+    }
+
+    private static func url(from provider: NSItemProvider) async throws -> URL {
+        try await withCheckedThrowingContinuation { continuation in
+            _ = provider.loadObject(ofClass: URL.self) { value, error in
+                if let error { continuation.resume(throwing: error) }
+                else if let value { continuation.resume(returning: value) }
+                else { continuation.resume(throwing: LoadError.noURL) }
+            }
+        }
+    }
+
+    private static func onePanRecipe(at url: URL) async throws -> ChefRecipe? {
+        guard let fragment = url.fragment,
+              fragment.hasPrefix("/"),
+              let id = fragment.dropFirst().split(separator: "/").first,
+              !id.isEmpty else { return nil }
+
+        var base = URLComponents(url: url, resolvingAgainstBaseURL: false)
+        base?.fragment = nil
+        guard let pageURL = base?.url,
+              let manifestURL = URL(string: "recipes/index.json", relativeTo: pageURL)?.absoluteURL,
+              let data = try? await download(manifestURL),
+              let manifest = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
+              let entries = manifest["recipes"] as? [[String: Any]],
+              let entry = entries.first(where: { $0["id"] as? String == String(id) }),
+              let path = entry["file"] as? String,
+              path.hasPrefix("recipes/"), path.hasSuffix(".json"), !path.contains(".."),
+              let recipeURL = URL(string: path, relativeTo: pageURL)?.absoluteURL,
+              recipeURL.host == pageURL.host,
+              let recipeData = try? await download(recipeURL)
+        else { return nil }
+        return RecipePageParser.onePanRecipe(recipeData)
+    }
+
+    private static func download(_ url: URL) async throws -> Data {
+        var request = URLRequest(url: url)
+        request.timeoutInterval = 15
+        request.setValue("text/html, application/json", forHTTPHeaderField: "Accept")
+        let (data, response) = try await URLSession.shared.data(for: request)
+        guard let response = response as? HTTPURLResponse,
+              (200..<300).contains(response.statusCode), data.count <= 3_000_000
+        else { throw LoadError.downloadFailed }
+        return data
+    }
+}

@@ -62,11 +62,26 @@ final class RecipeStore {
     func importSharedRecipes() {
         do {
             for pending in try SharedRecipeInbox.pendingRecipes() {
-                guard save(pending.recipe, isNew: true) else { return }
+                var recipe = pending.recipe
+                recipe.ingredients.supermarket = importedIcons(in: recipe.ingredients.supermarket)
+                recipe.ingredients.general = importedIcons(in: recipe.ingredients.general)
+                recipe.ingredients.optional = importedIcons(in: recipe.ingredients.optional)
+                guard save(recipe, isNew: true) else { return }
                 try SharedRecipeInbox.remove(pending.url)
             }
         } catch {
             loadError = error.localizedDescription
+        }
+    }
+
+    private func importedIcons(in ingredients: [Ingredient]?) -> [Ingredient]? {
+        ingredients?.map { ingredient in
+            var ingredient = ingredient
+            if ingredient.icon.isEmpty,
+               let name = IconCatalog.ingredient(named: ingredient.item) {
+                ingredient.icon = IconCatalog.ingredientPath(for: name)
+            }
+            return ingredient
         }
     }
 
