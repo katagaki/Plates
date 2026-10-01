@@ -38,11 +38,8 @@ enum RecipePageLoader {
     private static func sharedPage(from items: [NSExtensionItem]) async throws -> SharedPage {
         let providers = items.flatMap { $0.attachments ?? [] }
         var page = SharedPage()
-        for provider in providers where provider.hasItemConformingToTypeIdentifier("com.apple.property-list") {
-            guard let data = try? await data(from: provider, type: "com.apple.property-list"),
-                  let dictionary = try? PropertyListSerialization.propertyList(
-                    from: data, options: [], format: nil
-                  ) as? [String: Any],
+        for provider in providers where provider.hasItemConformingToTypeIdentifier(UTType.propertyList.identifier) {
+            guard let dictionary = try? await propertyList(from: provider),
                   let result = dictionary[NSExtensionJavaScriptPreprocessingResultsKey] as? [String: Any]
             else { continue }
             page.url = (result["url"] as? String).flatMap(URL.init(string:))
@@ -57,12 +54,23 @@ enum RecipePageLoader {
         return page
     }
 
-    private static func data(from provider: NSItemProvider, type: String) async throws -> Data {
+    // Safari registers the preprocessing results as a dictionary, not as data, so
+    // loadDataRepresentation fails on them and the item has to be loaded as it was registered.
+    private static func propertyList(from provider: NSItemProvider) async throws -> [String: Any] {
         try await withCheckedThrowingContinuation { continuation in
-            provider.loadDataRepresentation(forTypeIdentifier: type) { value, error in
-                if let error { continuation.resume(throwing: error) }
-                else if let value { continuation.resume(returning: value) }
-                else { continuation.resume(throwing: LoadError.noURL) }
+            provider.loadItem(forTypeIdentifier: UTType.propertyList.identifier) { value, error in
+                if let error {
+                    continuation.resume(throwing: error)
+                } else if let dictionary = value as? [String: Any] {
+                    continuation.resume(returning: dictionary)
+                } else if let data = value as? Data,
+                          let dictionary = try? PropertyListSerialization.propertyList(
+                            from: data, options: [], format: nil
+                          ) as? [String: Any] {
+                    continuation.resume(returning: dictionary)
+                } else {
+                    continuation.resume(throwing: LoadError.noURL)
+                }
             }
         }
     }
