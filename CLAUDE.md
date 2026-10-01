@@ -193,9 +193,10 @@ catalog ingredient that can be seen once a dish is served has one or more varian
 it is cut or cooked, and the rest are listed as hidden with the reason. What the layout knows
 about each part, its kind, the vessels a fill goes in, a piece's size, count, and tier, and the
 colours it reads as, is in the package's `Resources/DishParts.json`. The parts, the image sets,
-and that file are all written together by the scripts in `Docs/DishIcons`, which also build the
-review sheets every part is checked on; change a part there and export again rather than editing
-an SVG by hand.
+and that file are all written together from `Assets/DishIcons/Parts`. Run `swift sync.swift`
+from `Assets/DishIcons` after changing a prepared part. `swift contrast.swift` checks piece
+colours against the test surfaces. The Python drawing catalog in that folder still generates
+the prepared SVGs and review sheets; run `python3 export.py` after changing a drawn shape.
 
 `Dish.planned(for:)` works out the dish from the recipe: the grain or the sauce is the food it
 is built on, the vessel follows from that and from the tools, and what is seen on top is read off

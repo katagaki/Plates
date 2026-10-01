@@ -1,0 +1,6060 @@
+{
+  "vessels": {
+    "plate": {
+      "file": "Vessels/Plate.svg",
+      "kind": "plate",
+      "tones": [
+        "#e8e0d8"
+      ]
+    },
+    "plate-rim": {
+      "file": "Vessels/PlateRim.svg",
+      "kind": "plate",
+      "tones": [
+        "#e8e0d8"
+      ]
+    },
+    "plate-sage": {
+      "file": "Vessels/PlateSage.svg",
+      "kind": "plate",
+      "tones": [
+        "#b0c8b0"
+      ]
+    },
+    "plate-terracotta": {
+      "file": "Vessels/PlateTerracotta.svg",
+      "kind": "plate",
+      "tones": [
+        "#d89878"
+      ]
+    },
+    "bowl": {
+      "file": "Vessels/Bowl.svg",
+      "kind": "bowl",
+      "tones": [
+        "#d8d0c0"
+      ]
+    },
+    "bowl-indigo": {
+      "file": "Vessels/BowlIndigo.svg",
+      "kind": "bowl",
+      "tones": [
+        "#284060"
+      ]
+    },
+    "bowl-sage": {
+      "file": "Vessels/BowlSage.svg",
+      "kind": "bowl",
+      "tones": [
+        "#688068"
+      ]
+    },
+    "pan": {
+      "file": "Vessels/Pan.svg",
+      "kind": "pan",
+      "tones": [
+        "#484850"
+      ]
+    },
+    "pot": {
+      "file": "Vessels/Pot.svg",
+      "kind": "pot",
+      "tones": [
+        "#586068"
+      ]
+    },
+    "board": {
+      "file": "Vessels/Board.svg",
+      "kind": "board",
+      "tones": [
+        "#c89860"
+      ]
+    }
+  },
+  "regions": {
+    "plate": {
+      "full": [
+        48,
+        48,
+        32
+      ],
+      "left": [
+        36,
+        50,
+        24
+      ],
+      "right": [
+        61,
+        45,
+        25
+      ]
+    },
+    "bowl": {
+      "full": [
+        48,
+        48,
+        38
+      ],
+      "left": [
+        37,
+        48,
+        26
+      ],
+      "right": [
+        60,
+        48,
+        26
+      ]
+    },
+    "pan": {
+      "full": [
+        44,
+        48,
+        34
+      ],
+      "left": [
+        33,
+        50,
+        23
+      ],
+      "right": [
+        56,
+        45,
+        23
+      ]
+    },
+    "pot": {
+      "full": [
+        48,
+        48,
+        35
+      ],
+      "left": [
+        37,
+        48,
+        24
+      ],
+      "right": [
+        60,
+        48,
+        24
+      ]
+    },
+    "board": {
+      "full": [
+        48,
+        48,
+        34
+      ],
+      "left": [
+        32,
+        48,
+        22
+      ],
+      "right": [
+        64,
+        48,
+        22
+      ]
+    }
+  },
+  "ingredients": {
+    "aburaage": {
+      "strips": {
+        "kind": "piece",
+        "file": "Pieces/AburaageStrips.svg",
+        "size": 16,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#c88838"
+        ]
+      },
+      "triangles": {
+        "kind": "piece",
+        "file": "Pieces/AburaageTriangles.svg",
+        "size": 18,
+        "count": 4,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#c88838"
+        ]
+      }
+    },
+    "almonds": {
+      "slivered": {
+        "kind": "piece",
+        "file": "Pieces/AlmondsSlivered.svg",
+        "size": 9,
+        "count": 7,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#e8d0a0"
+        ]
+      },
+      "whole": {
+        "kind": "piece",
+        "file": "Pieces/AlmondsWhole.svg",
+        "size": 11,
+        "count": 6,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#a86838"
+        ]
+      }
+    },
+    "anchovies": {
+      "fillets": {
+        "kind": "piece",
+        "file": "Pieces/AnchoviesFillets.svg",
+        "size": 16,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#886858",
+          "#b8a090"
+        ]
+      }
+    },
+    "anko": {
+      "dollop": {
+        "kind": "piece",
+        "file": "Pieces/AnkoDollop.svg",
+        "size": 24,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#582828"
+        ]
+      }
+    },
+    "aonori": {
+      "sprinkle": {
+        "kind": "piece",
+        "file": "Pieces/AonoriSprinkle.svg",
+        "size": 15,
+        "count": 4,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#387828",
+          "#589840"
+        ]
+      }
+    },
+    "apple": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/AppleSlices.svg",
+        "size": 18,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0e8c8",
+          "#c83038"
+        ]
+      },
+      "diced": {
+        "kind": "piece",
+        "file": "Pieces/AppleDiced.svg",
+        "size": 11,
+        "count": 7,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#f0e8c8",
+          "#c83038"
+        ]
+      }
+    },
+    "arborio-rice": {
+      "risotto": {
+        "kind": "fill",
+        "file": "Fills/ArborioRiceRisotto.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pot",
+          "pan"
+        ],
+        "rank": 0,
+        "tones": [
+          "#f0e0c0"
+        ]
+      }
+    },
+    "artichoke": {
+      "quartered": {
+        "kind": "piece",
+        "file": "Pieces/ArtichokeQuartered.svg",
+        "size": 18,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#789858",
+          "#e8e0b8"
+        ]
+      }
+    },
+    "arugula": {
+      "leaves": {
+        "kind": "piece",
+        "file": "Pieces/ArugulaLeaves.svg",
+        "size": 14,
+        "count": 6,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#488838"
+        ]
+      },
+      "bed": {
+        "kind": "fill",
+        "file": "Fills/ArugulaBed.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pot"
+        ],
+        "rank": 1,
+        "tones": [
+          "#488838"
+        ]
+      }
+    },
+    "asparagus": {
+      "spears": {
+        "kind": "piece",
+        "file": "Pieces/AsparagusSpears.svg",
+        "size": 22,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#78b068",
+          "#588840"
+        ]
+      },
+      "cut": {
+        "kind": "piece",
+        "file": "Pieces/AsparagusCut.svg",
+        "size": 12,
+        "count": 7,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#78b068"
+        ]
+      }
+    },
+    "avocado": {
+      "half": {
+        "kind": "piece",
+        "file": "Pieces/AvocadoHalf.svg",
+        "size": 30,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#c8d888",
+          "#385828",
+          "#885838"
+        ]
+      },
+      "sliced": {
+        "kind": "piece",
+        "file": "Pieces/AvocadoSliced.svg",
+        "size": 19,
+        "count": 4,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#c8d888",
+          "#385828"
+        ]
+      },
+      "diced": {
+        "kind": "piece",
+        "file": "Pieces/AvocadoDiced.svg",
+        "size": 11,
+        "count": 7,
+        "tier": 0,
+        "rank": 2,
+        "tones": [
+          "#c8d888",
+          "#688838"
+        ]
+      }
+    },
+    "azuki": {
+      "beans": {
+        "kind": "piece",
+        "file": "Pieces/AzukiBeans.svg",
+        "size": 11,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#782828"
+        ]
+      }
+    },
+    "bacon": {
+      "rashers": {
+        "kind": "piece",
+        "file": "Pieces/BaconRashers.svg",
+        "size": 21,
+        "count": 3,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#b85038",
+          "#f0d0c0"
+        ]
+      },
+      "lardons": {
+        "kind": "piece",
+        "file": "Pieces/BaconLardons.svg",
+        "size": 11,
+        "count": 7,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#c86048",
+          "#f0e0d0"
+        ]
+      },
+      "bits": {
+        "kind": "piece",
+        "file": "Pieces/BaconBits.svg",
+        "size": 8,
+        "count": 8,
+        "tier": 2,
+        "rank": 2,
+        "tones": [
+          "#a84028"
+        ]
+      }
+    },
+    "balsamic-vinegar": {
+      "drizzle": {
+        "kind": "piece",
+        "file": "Pieces/BalsamicVinegarDrizzle.svg",
+        "size": 24,
+        "count": 2,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#381818"
+        ]
+      }
+    },
+    "bamboo-shoots": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/BambooShootsSlices.svg",
+        "size": 16,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#e8e0b0",
+          "#c8b068"
+        ]
+      }
+    },
+    "banana": {
+      "coins": {
+        "kind": "piece",
+        "file": "Pieces/BananaCoins.svg",
+        "size": 14,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f8f0c8",
+          "#f0e0a0"
+        ]
+      }
+    },
+    "barley": {
+      "mound": {
+        "kind": "fill",
+        "file": "Fills/BarleyMound.svg",
+        "vessels": [
+          "plate",
+          "pan"
+        ],
+        "rank": 0,
+        "tones": [
+          "#e0c8a0"
+        ]
+      },
+      "bowl": {
+        "kind": "fill",
+        "file": "Fills/BarleyBowl.svg",
+        "vessels": [
+          "bowl",
+          "pot"
+        ],
+        "rank": 1,
+        "tones": [
+          "#e0c8a0"
+        ]
+      }
+    },
+    "basil": {
+      "leaves": {
+        "kind": "piece",
+        "file": "Pieces/BasilLeaves.svg",
+        "size": 14,
+        "count": 4,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#488838"
+        ]
+      }
+    },
+    "bbq-sauce": {
+      "drizzle": {
+        "kind": "piece",
+        "file": "Pieces/BbqSauceDrizzle.svg",
+        "size": 24,
+        "count": 2,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#682818"
+        ]
+      }
+    },
+    "bean-sprouts": {
+      "sprouts": {
+        "kind": "piece",
+        "file": "Pieces/BeanSproutsSprouts.svg",
+        "size": 16,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#e8e0c0",
+          "#e0c860"
+        ]
+      }
+    },
+    "beans": {
+      "beans": {
+        "kind": "piece",
+        "file": "Pieces/BeansBeans.svg",
+        "size": 11,
+        "count": 7,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#d8c090"
+        ]
+      },
+      "stewed": {
+        "kind": "fill",
+        "file": "Fills/BeansStewed.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 1,
+        "tones": [
+          "#b85028"
+        ]
+      }
+    },
+    "beef": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/BeefSlices.svg",
+        "size": 19,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#884838",
+          "#c08068"
+        ]
+      },
+      "steak": {
+        "kind": "piece",
+        "file": "Pieces/BeefSteak.svg",
+        "size": 46,
+        "count": 1,
+        "tier": 1,
+        "rank": 1,
+        "tones": [
+          "#683020"
+        ]
+      },
+      "cubes": {
+        "kind": "piece",
+        "file": "Pieces/BeefCubes.svg",
+        "size": 15,
+        "count": 5,
+        "tier": 0,
+        "rank": 2,
+        "tones": [
+          "#683828"
+        ]
+      }
+    },
+    "beetroot": {
+      "diced": {
+        "kind": "piece",
+        "file": "Pieces/BeetrootDiced.svg",
+        "size": 12,
+        "count": 7,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#982848",
+          "#c04068"
+        ]
+      },
+      "sliced": {
+        "kind": "piece",
+        "file": "Pieces/BeetrootSliced.svg",
+        "size": 18,
+        "count": 4,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#b83058",
+          "#781838"
+        ]
+      },
+      "wedges": {
+        "kind": "piece",
+        "file": "Pieces/BeetrootWedges.svg",
+        "size": 16,
+        "count": 5,
+        "tier": 0,
+        "rank": 2,
+        "tones": [
+          "#781838",
+          "#b83058"
+        ]
+      }
+    },
+    "bell-pepper": {
+      "strips": {
+        "kind": "piece",
+        "file": "Pieces/BellPepperStrips.svg",
+        "size": 16,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#d84840"
+        ]
+      },
+      "diced": {
+        "kind": "piece",
+        "file": "Pieces/BellPepperDiced.svg",
+        "size": 11,
+        "count": 8,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#d84840",
+          "#e87868"
+        ]
+      }
+    },
+    "bitter-melon": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/BitterMelonSlices.svg",
+        "size": 14,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#589840",
+          "#e8e8c8"
+        ]
+      }
+    },
+    "black-beans": {
+      "beans": {
+        "kind": "piece",
+        "file": "Pieces/BlackBeansBeans.svg",
+        "size": 9,
+        "count": 9,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#282028"
+        ]
+      }
+    },
+    "blue-cheese": {
+      "crumbled": {
+        "kind": "piece",
+        "file": "Pieces/BlueCheeseCrumbled.svg",
+        "size": 14,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#e8e0c8"
+        ]
+      }
+    },
+    "blueberry": {
+      "berries": {
+        "kind": "piece",
+        "file": "Pieces/BlueberryBerries.svg",
+        "size": 9,
+        "count": 8,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#485898"
+        ]
+      }
+    },
+    "bok-choy": {
+      "halves": {
+        "kind": "piece",
+        "file": "Pieces/BokChoyHalves.svg",
+        "size": 20,
+        "count": 3,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#589840",
+          "#e8f0d0"
+        ]
+      }
+    },
+    "bread": {
+      "toast": {
+        "kind": "fill",
+        "file": "Fills/BreadToast.svg",
+        "vessels": [
+          "plate",
+          "board"
+        ],
+        "rank": 0,
+        "tones": [
+          "#b88048"
+        ]
+      },
+      "french-toast": {
+        "kind": "fill",
+        "file": "Fills/BreadFrenchToast.svg",
+        "vessels": [
+          "plate",
+          "board"
+        ],
+        "rank": 1,
+        "tones": [
+          "#d89848"
+        ]
+      },
+      "slice": {
+        "kind": "fill",
+        "file": "Fills/BreadSlice.svg",
+        "vessels": [
+          "plate",
+          "board"
+        ],
+        "rank": 2,
+        "tones": [
+          "#f0d8a8"
+        ]
+      },
+      "croutons": {
+        "kind": "piece",
+        "file": "Pieces/BreadCroutons.svg",
+        "size": 11,
+        "count": 7,
+        "tier": 0,
+        "rank": 3,
+        "tones": [
+          "#e8b860",
+          "#c88838"
+        ]
+      }
+    },
+    "breadcrumbs": {
+      "toasted": {
+        "kind": "piece",
+        "file": "Pieces/BreadcrumbsToasted.svg",
+        "size": 12,
+        "count": 4,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#c88838",
+          "#e8b860"
+        ]
+      }
+    },
+    "broccoli": {
+      "florets": {
+        "kind": "piece",
+        "file": "Pieces/BroccoliFlorets.svg",
+        "size": 18,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#589840"
+        ]
+      }
+    },
+    "brussels-sprouts": {
+      "halves": {
+        "kind": "piece",
+        "file": "Pieces/BrusselsSproutsHalves.svg",
+        "size": 15,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#68a048",
+          "#c0d8a8"
+        ]
+      }
+    },
+    "burdock": {
+      "julienne": {
+        "kind": "piece",
+        "file": "Pieces/BurdockJulienne.svg",
+        "size": 14,
+        "count": 8,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#987850",
+          "#c0a078"
+        ]
+      }
+    },
+    "burrata": {
+      "whole": {
+        "kind": "piece",
+        "file": "Pieces/BurrataWhole.svg",
+        "size": 34,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f8f0e8",
+          "#f8f0d8"
+        ]
+      }
+    },
+    "butter": {
+      "pat": {
+        "kind": "piece",
+        "file": "Pieces/ButterPat.svg",
+        "size": 24,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f8e878",
+          "#f0c018"
+        ]
+      }
+    },
+    "butternut-squash": {
+      "cubes": {
+        "kind": "piece",
+        "file": "Pieces/ButternutSquashCubes.svg",
+        "size": 14,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0a040",
+          "#f0c078"
+        ]
+      },
+      "mash": {
+        "kind": "fill",
+        "file": "Fills/ButternutSquashMash.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pot"
+        ],
+        "rank": 1,
+        "tones": [
+          "#f0a040"
+        ]
+      },
+      "soup": {
+        "kind": "fill",
+        "file": "Fills/ButternutSquashSoup.svg",
+        "vessels": [
+          "bowl",
+          "pot"
+        ],
+        "rank": 2,
+        "tones": [
+          "#f0a040"
+        ]
+      }
+    },
+    "cabbage": {
+      "shredded": {
+        "kind": "fill",
+        "file": "Fills/CabbageShredded.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pot"
+        ],
+        "rank": 0,
+        "tones": [
+          "#d8e8c8"
+        ]
+      },
+      "chopped": {
+        "kind": "piece",
+        "file": "Pieces/CabbageChopped.svg",
+        "size": 16,
+        "count": 5,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#c0d8a8"
+        ]
+      }
+    },
+    "canned-tomatoes": {
+      "sauce": {
+        "kind": "fill",
+        "file": "Fills/CannedTomatoesSauce.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 0,
+        "tones": [
+          "#c84028"
+        ]
+      },
+      "chunks": {
+        "kind": "piece",
+        "file": "Pieces/CannedTomatoesChunks.svg",
+        "size": 12,
+        "count": 6,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#c84028"
+        ]
+      }
+    },
+    "capers": {
+      "capers": {
+        "kind": "piece",
+        "file": "Pieces/CapersCapers.svg",
+        "size": 6,
+        "count": 8,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#687838"
+        ]
+      }
+    },
+    "carrot": {
+      "coins": {
+        "kind": "piece",
+        "file": "Pieces/CarrotCoins.svg",
+        "size": 14,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f8a058",
+          "#f88028"
+        ]
+      },
+      "diced": {
+        "kind": "piece",
+        "file": "Pieces/CarrotDiced.svg",
+        "size": 11,
+        "count": 7,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#f88028",
+          "#f8a058"
+        ]
+      },
+      "julienne": {
+        "kind": "piece",
+        "file": "Pieces/CarrotJulienne.svg",
+        "size": 14,
+        "count": 7,
+        "tier": 0,
+        "rank": 2,
+        "tones": [
+          "#f88028",
+          "#f8a058"
+        ]
+      },
+      "chunks": {
+        "kind": "piece",
+        "file": "Pieces/CarrotChunks.svg",
+        "size": 14,
+        "count": 4,
+        "tier": 0,
+        "rank": 3,
+        "tones": [
+          "#f88028"
+        ]
+      }
+    },
+    "cauliflower": {
+      "florets": {
+        "kind": "piece",
+        "file": "Pieces/CauliflowerFlorets.svg",
+        "size": 18,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0e8d8"
+        ]
+      }
+    },
+    "cayenne": {
+      "dusting": {
+        "kind": "piece",
+        "file": "Pieces/CayenneDusting.svg",
+        "size": 12,
+        "count": 2,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#d85038"
+        ]
+      }
+    },
+    "celery": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/CelerySlices.svg",
+        "size": 12,
+        "count": 7,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#c0d8a8",
+          "#78b068"
+        ]
+      }
+    },
+    "cheddar": {
+      "grated": {
+        "kind": "piece",
+        "file": "Pieces/CheddarGrated.svg",
+        "size": 10,
+        "count": 6,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#f0a038",
+          "#f8c068"
+        ]
+      },
+      "melted": {
+        "kind": "fill",
+        "file": "Fills/CheddarMelted.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 1,
+        "covers": true,
+        "tones": [
+          "#f0b848"
+        ]
+      }
+    },
+    "cheese": {
+      "grated": {
+        "kind": "piece",
+        "file": "Pieces/CheeseGrated.svg",
+        "size": 10,
+        "count": 6,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#f0d878",
+          "#f8e8a8"
+        ]
+      },
+      "melted": {
+        "kind": "fill",
+        "file": "Fills/CheeseMelted.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 1,
+        "covers": true,
+        "tones": [
+          "#f8d868"
+        ]
+      },
+      "slice": {
+        "kind": "piece",
+        "file": "Pieces/CheeseSlice.svg",
+        "size": 26,
+        "count": 1,
+        "tier": 1,
+        "rank": 2,
+        "tones": [
+          "#f0d058"
+        ]
+      }
+    },
+    "cherry": {
+      "whole": {
+        "kind": "piece",
+        "file": "Pieces/CherryWhole.svg",
+        "size": 15,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#a02038"
+        ]
+      }
+    },
+    "cherry-tomato": {
+      "halves": {
+        "kind": "piece",
+        "file": "Pieces/CherryTomatoHalves.svg",
+        "size": 14,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#e86858",
+          "#d84840"
+        ]
+      },
+      "whole": {
+        "kind": "piece",
+        "file": "Pieces/CherryTomatoWhole.svg",
+        "size": 14,
+        "count": 5,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#d84840"
+        ]
+      }
+    },
+    "chicken": {
+      "pieces": {
+        "kind": "piece",
+        "file": "Pieces/ChickenPieces.svg",
+        "size": 15,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#d09058"
+        ]
+      },
+      "cutlet": {
+        "kind": "piece",
+        "file": "Pieces/ChickenCutlet.svg",
+        "size": 40,
+        "count": 1,
+        "tier": 1,
+        "rank": 1,
+        "tones": [
+          "#f0e0c8",
+          "#d89038"
+        ]
+      },
+      "grilled": {
+        "kind": "piece",
+        "file": "Pieces/ChickenGrilled.svg",
+        "size": 50,
+        "count": 1,
+        "tier": 1,
+        "rank": 2,
+        "tones": [
+          "#d8a068",
+          "#c88848"
+        ]
+      }
+    },
+    "chickpeas": {
+      "chickpeas": {
+        "kind": "piece",
+        "file": "Pieces/ChickpeasChickpeas.svg",
+        "size": 12,
+        "count": 7,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#d8a060"
+        ]
+      }
+    },
+    "chikuwa": {
+      "rings": {
+        "kind": "piece",
+        "file": "Pieces/ChikuwaRings.svg",
+        "size": 14,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#c88848",
+          "#f0e8d0"
+        ]
+      }
+    },
+    "chili": {
+      "rings": {
+        "kind": "piece",
+        "file": "Pieces/ChiliRings.svg",
+        "size": 10,
+        "count": 7,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#d03830",
+          "#f0c078"
+        ]
+      }
+    },
+    "chili-flakes": {
+      "flakes": {
+        "kind": "piece",
+        "file": "Pieces/ChiliFlakesFlakes.svg",
+        "size": 12,
+        "count": 3,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#c84028",
+          "#f0c068"
+        ]
+      }
+    },
+    "chili-oil": {
+      "drizzle": {
+        "kind": "piece",
+        "file": "Pieces/ChiliOilDrizzle.svg",
+        "size": 24,
+        "count": 2,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#c83018"
+        ]
+      }
+    },
+    "chives": {
+      "snipped": {
+        "kind": "piece",
+        "file": "Pieces/ChivesSnipped.svg",
+        "size": 7,
+        "count": 12,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#488838"
+        ]
+      }
+    },
+    "chocolate": {
+      "shavings": {
+        "kind": "piece",
+        "file": "Pieces/ChocolateShavings.svg",
+        "size": 9,
+        "count": 5,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#583020"
+        ]
+      },
+      "sauce": {
+        "kind": "piece",
+        "file": "Pieces/ChocolateSauce.svg",
+        "size": 24,
+        "count": 2,
+        "tier": 1,
+        "rank": 1,
+        "tones": [
+          "#482818"
+        ]
+      }
+    },
+    "chorizo": {
+      "coins": {
+        "kind": "piece",
+        "file": "Pieces/ChorizoCoins.svg",
+        "size": 14,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#c84838",
+          "#a83028"
+        ]
+      },
+      "diced": {
+        "kind": "piece",
+        "file": "Pieces/ChorizoDiced.svg",
+        "size": 10,
+        "count": 8,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#a83028",
+          "#d86048"
+        ]
+      }
+    },
+    "cinnamon": {
+      "dusting": {
+        "kind": "piece",
+        "file": "Pieces/CinnamonDusting.svg",
+        "size": 12,
+        "count": 3,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#885830"
+        ]
+      }
+    },
+    "clams": {
+      "shells": {
+        "kind": "piece",
+        "file": "Pieces/ClamsShells.svg",
+        "size": 16,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#d8c8b0",
+          "#f0d0b0"
+        ]
+      }
+    },
+    "cocoa-powder": {
+      "dusting": {
+        "kind": "piece",
+        "file": "Pieces/CocoaPowderDusting.svg",
+        "size": 12,
+        "count": 3,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#684030"
+        ]
+      }
+    },
+    "coconut": {
+      "flakes": {
+        "kind": "piece",
+        "file": "Pieces/CoconutFlakes.svg",
+        "size": 10,
+        "count": 6,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#f8f8f0"
+        ]
+      }
+    },
+    "coconut-flakes": {
+      "flakes": {
+        "kind": "piece",
+        "file": "Pieces/CoconutFlakesFlakes.svg",
+        "size": 10,
+        "count": 6,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#f8f8f0"
+        ]
+      }
+    },
+    "coconut-milk": {
+      "curry": {
+        "kind": "fill",
+        "file": "Fills/CoconutMilkCurry.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 0,
+        "tones": [
+          "#f0e0b0"
+        ]
+      },
+      "drizzle": {
+        "kind": "piece",
+        "file": "Pieces/CoconutMilkDrizzle.svg",
+        "size": 24,
+        "count": 2,
+        "tier": 1,
+        "rank": 1,
+        "tones": [
+          "#f8f8e8"
+        ]
+      }
+    },
+    "cod": {
+      "fillet": {
+        "kind": "piece",
+        "file": "Pieces/CodFillet.svg",
+        "size": 50,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f8f0e8",
+          "#c8c0b8"
+        ]
+      }
+    },
+    "condensed-milk": {
+      "drizzle": {
+        "kind": "piece",
+        "file": "Pieces/CondensedMilkDrizzle.svg",
+        "size": 24,
+        "count": 2,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f0e8d0"
+        ]
+      }
+    },
+    "coriander": {
+      "leaves": {
+        "kind": "piece",
+        "file": "Pieces/CorianderLeaves.svg",
+        "size": 8,
+        "count": 7,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#589840"
+        ]
+      }
+    },
+    "corn": {
+      "kernels": {
+        "kind": "piece",
+        "file": "Pieces/CornKernels.svg",
+        "size": 12,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0c848"
+        ]
+      }
+    },
+    "corned-beef": {
+      "chunks": {
+        "kind": "piece",
+        "file": "Pieces/CornedBeefChunks.svg",
+        "size": 12,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#b86058"
+        ]
+      }
+    },
+    "couscous": {
+      "mound": {
+        "kind": "fill",
+        "file": "Fills/CouscousMound.svg",
+        "vessels": [
+          "plate",
+          "pan"
+        ],
+        "rank": 0,
+        "tones": [
+          "#f0d898"
+        ]
+      },
+      "bowl": {
+        "kind": "fill",
+        "file": "Fills/CouscousBowl.svg",
+        "vessels": [
+          "bowl",
+          "pot"
+        ],
+        "rank": 1,
+        "tones": [
+          "#f0d898"
+        ]
+      }
+    },
+    "crab": {
+      "flaked": {
+        "kind": "piece",
+        "file": "Pieces/CrabFlaked.svg",
+        "size": 14,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0e0d8",
+          "#e87058"
+        ]
+      }
+    },
+    "crab-sticks": {
+      "sticks": {
+        "kind": "piece",
+        "file": "Pieces/CrabSticksSticks.svg",
+        "size": 18,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f8f0e8",
+          "#e04838"
+        ]
+      },
+      "shredded": {
+        "kind": "piece",
+        "file": "Pieces/CrabSticksShredded.svg",
+        "size": 14,
+        "count": 6,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#f8f0e8",
+          "#e04838"
+        ]
+      }
+    },
+    "cream": {
+      "swirl": {
+        "kind": "piece",
+        "file": "Pieces/CreamSwirl.svg",
+        "size": 22,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f8f8f0"
+        ]
+      },
+      "sauce": {
+        "kind": "fill",
+        "file": "Fills/CreamSauce.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 1,
+        "tones": [
+          "#f0e8d8"
+        ]
+      }
+    },
+    "cream-cheese": {
+      "dollop": {
+        "kind": "piece",
+        "file": "Pieces/CreamCheeseDollop.svg",
+        "size": 22,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f8f0e8"
+        ]
+      }
+    },
+    "creme-fraiche": {
+      "dollop": {
+        "kind": "piece",
+        "file": "Pieces/CremeFraicheDollop.svg",
+        "size": 22,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f8f8e8"
+        ]
+      }
+    },
+    "cucumber": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/CucumberSlices.svg",
+        "size": 16,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#d8e8c0",
+          "#488838"
+        ]
+      },
+      "half-moons": {
+        "kind": "piece",
+        "file": "Pieces/CucumberHalfMoons.svg",
+        "size": 15,
+        "count": 6,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#d8e8c0",
+          "#488838"
+        ]
+      },
+      "julienne": {
+        "kind": "piece",
+        "file": "Pieces/CucumberJulienne.svg",
+        "size": 14,
+        "count": 7,
+        "tier": 0,
+        "rank": 2,
+        "tones": [
+          "#c0d8a8",
+          "#488838"
+        ]
+      }
+    },
+    "curry-roux": {
+      "sauce": {
+        "kind": "fill",
+        "file": "Fills/CurryRouxSauce.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 0,
+        "tones": [
+          "#a06838"
+        ]
+      }
+    },
+    "daikon": {
+      "grated": {
+        "kind": "piece",
+        "file": "Pieces/DaikonGrated.svg",
+        "size": 22,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f8f0e8"
+        ]
+      },
+      "simmered": {
+        "kind": "piece",
+        "file": "Pieces/DaikonSimmered.svg",
+        "size": 19,
+        "count": 3,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#e8e0b8",
+          "#e0c8a0"
+        ]
+      },
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/DaikonSlices.svg",
+        "size": 16,
+        "count": 4,
+        "tier": 0,
+        "rank": 2,
+        "tones": [
+          "#f8f8f0",
+          "#f0f0e8"
+        ]
+      }
+    },
+    "dashi": {
+      "broth": {
+        "kind": "fill",
+        "file": "Fills/DashiBroth.svg",
+        "vessels": [
+          "bowl",
+          "pot"
+        ],
+        "rank": 0,
+        "tones": [
+          "#e8d0a0"
+        ]
+      }
+    },
+    "dates": {
+      "chopped": {
+        "kind": "piece",
+        "file": "Pieces/DatesChopped.svg",
+        "size": 10,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#784828"
+        ]
+      }
+    },
+    "dill": {
+      "fronds": {
+        "kind": "piece",
+        "file": "Pieces/DillFronds.svg",
+        "size": 10,
+        "count": 5,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#68a048"
+        ]
+      }
+    },
+    "doenjang": {
+      "stew": {
+        "kind": "fill",
+        "file": "Fills/DoenjangStew.svg",
+        "vessels": [
+          "bowl",
+          "pot"
+        ],
+        "rank": 0,
+        "tones": [
+          "#b88048"
+        ]
+      }
+    },
+    "douchi": {
+      "beans": {
+        "kind": "piece",
+        "file": "Pieces/DouchiBeans.svg",
+        "size": 8,
+        "count": 4,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#282020"
+        ]
+      }
+    },
+    "dried-shiitake": {
+      "caps": {
+        "kind": "piece",
+        "file": "Pieces/DriedShiitakeCaps.svg",
+        "size": 15,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#684828",
+          "#583820",
+          "#c8a078"
+        ]
+      }
+    },
+    "duck": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/DuckSlices.svg",
+        "size": 19,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#c07068",
+          "#683820"
+        ]
+      }
+    },
+    "edamame": {
+      "pods": {
+        "kind": "piece",
+        "file": "Pieces/EdamamePods.svg",
+        "size": 16,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#68a048",
+          "#a8c888"
+        ]
+      },
+      "beans": {
+        "kind": "piece",
+        "file": "Pieces/EdamameBeans.svg",
+        "size": 9,
+        "count": 9,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#78b068"
+        ]
+      }
+    },
+    "eel": {
+      "glazed": {
+        "kind": "piece",
+        "file": "Pieces/EelGlazed.svg",
+        "size": 44,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#985828",
+          "#683818"
+        ]
+      }
+    },
+    "egg": {
+      "fried": {
+        "kind": "piece",
+        "file": "Pieces/EggFried.svg",
+        "size": 42,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f8f8f0",
+          "#f0c018"
+        ]
+      },
+      "scrambled": {
+        "kind": "piece",
+        "file": "Pieces/EggScrambled.svg",
+        "size": 19,
+        "count": 6,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#f0d058",
+          "#f8e878"
+        ]
+      },
+      "boiled": {
+        "kind": "piece",
+        "file": "Pieces/EggBoiled.svg",
+        "size": 24,
+        "count": 2,
+        "tier": 1,
+        "rank": 2,
+        "tones": [
+          "#f8f8f0",
+          "#f0c018"
+        ]
+      },
+      "yolk": {
+        "kind": "piece",
+        "file": "Pieces/EggYolk.svg",
+        "size": 22,
+        "count": 1,
+        "tier": 1,
+        "rank": 3,
+        "tones": [
+          "#f0b018"
+        ]
+      },
+      "omelette": {
+        "kind": "fill",
+        "file": "Fills/EggOmelette.svg",
+        "vessels": [
+          "plate"
+        ],
+        "rank": 4,
+        "tones": [
+          "#f0d058"
+        ]
+      }
+    },
+    "egg-noodles": {
+      "swirl": {
+        "kind": "fill",
+        "file": "Fills/EggNoodlesSwirl.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 0,
+        "tones": [
+          "#e8b848"
+        ]
+      },
+      "broth": {
+        "kind": "fill",
+        "file": "Fills/EggNoodlesBroth.svg",
+        "vessels": [
+          "bowl",
+          "pot"
+        ],
+        "rank": 1,
+        "tones": [
+          "#e8c088"
+        ]
+      }
+    },
+    "eggplant": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/EggplantSlices.svg",
+        "size": 18,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#e8d8b8",
+          "#583868"
+        ]
+      },
+      "chunks": {
+        "kind": "piece",
+        "file": "Pieces/EggplantChunks.svg",
+        "size": 15,
+        "count": 5,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#d8c088",
+          "#583868"
+        ]
+      }
+    },
+    "enoki": {
+      "clusters": {
+        "kind": "piece",
+        "file": "Pieces/EnokiClusters.svg",
+        "size": 18,
+        "count": 3,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0e8d0",
+          "#e8d8b0"
+        ]
+      }
+    },
+    "fennel": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/FennelSlices.svg",
+        "size": 16,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#e8f0d0",
+          "#c8e0a8"
+        ]
+      }
+    },
+    "feta": {
+      "crumbled": {
+        "kind": "piece",
+        "file": "Pieces/FetaCrumbled.svg",
+        "size": 10,
+        "count": 8,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f8f8f0",
+          "#e0e0d0"
+        ]
+      }
+    },
+    "fettuccine": {
+      "swirl": {
+        "kind": "fill",
+        "file": "Fills/FettuccineSwirl.svg",
+        "vessels": [
+          "plate",
+          "pan"
+        ],
+        "rank": 0,
+        "tones": [
+          "#e8c068"
+        ]
+      }
+    },
+    "fig": {
+      "quarters": {
+        "kind": "piece",
+        "file": "Pieces/FigQuarters.svg",
+        "size": 16,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#683858",
+          "#e88888"
+        ]
+      }
+    },
+    "fish": {
+      "fillet": {
+        "kind": "piece",
+        "file": "Pieces/FishFillet.svg",
+        "size": 50,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f0e8e0",
+          "#b8b0a0"
+        ]
+      }
+    },
+    "furikake": {
+      "sprinkle": {
+        "kind": "piece",
+        "file": "Pieces/FurikakeSprinkle.svg",
+        "size": 12,
+        "count": 4,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#284838",
+          "#e8d0a0"
+        ]
+      }
+    },
+    "fusilli": {
+      "pasta": {
+        "kind": "fill",
+        "file": "Fills/FusilliPasta.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pot",
+          "pan"
+        ],
+        "rank": 0,
+        "tones": [
+          "#e0b858"
+        ]
+      }
+    },
+    "gai-lan": {
+      "stalks": {
+        "kind": "piece",
+        "file": "Pieces/GaiLanStalks.svg",
+        "size": 22,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#488838",
+          "#386838"
+        ]
+      }
+    },
+    "garlic": {
+      "chips": {
+        "kind": "piece",
+        "file": "Pieces/GarlicChips.svg",
+        "size": 15,
+        "count": 7,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0d8a8",
+          "#b88040"
+        ]
+      },
+      "minced": {
+        "kind": "piece",
+        "file": "Pieces/GarlicMinced.svg",
+        "size": 13,
+        "count": 3,
+        "tier": 2,
+        "rank": 1,
+        "tones": [
+          "#e8d098",
+          "#f0e8d0"
+        ]
+      },
+      "roasted": {
+        "kind": "piece",
+        "file": "Pieces/GarlicRoasted.svg",
+        "size": 12,
+        "count": 5,
+        "tier": 0,
+        "rank": 2,
+        "tones": [
+          "#d8a858"
+        ]
+      }
+    },
+    "ginger": {
+      "julienne": {
+        "kind": "piece",
+        "file": "Pieces/GingerJulienne.svg",
+        "size": 12,
+        "count": 6,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#e8c888",
+          "#f0d8a8"
+        ]
+      },
+      "grated": {
+        "kind": "piece",
+        "file": "Pieces/GingerGrated.svg",
+        "size": 22,
+        "count": 1,
+        "tier": 1,
+        "rank": 1,
+        "tones": [
+          "#e8d0a0"
+        ]
+      }
+    },
+    "glutinous-rice": {
+      "mound": {
+        "kind": "fill",
+        "file": "Fills/GlutinousRiceMound.svg",
+        "vessels": [
+          "plate",
+          "pan"
+        ],
+        "rank": 0,
+        "tones": [
+          "#f8f8f0"
+        ]
+      },
+      "bowl": {
+        "kind": "fill",
+        "file": "Fills/GlutinousRiceBowl.svg",
+        "vessels": [
+          "bowl",
+          "pot"
+        ],
+        "rank": 1,
+        "tones": [
+          "#f8f8f0"
+        ]
+      }
+    },
+    "gnocchi": {
+      "pasta": {
+        "kind": "fill",
+        "file": "Fills/GnocchiPasta.svg",
+        "vessels": [
+          "plate",
+          "pan"
+        ],
+        "rank": 0,
+        "tones": [
+          "#e0c078"
+        ]
+      },
+      "pieces": {
+        "kind": "piece",
+        "file": "Pieces/GnocchiPieces.svg",
+        "size": 15,
+        "count": 6,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#f0d8a0",
+          "#e0c078",
+          "#e8d098"
+        ]
+      }
+    },
+    "goat-cheese": {
+      "crumbled": {
+        "kind": "piece",
+        "file": "Pieces/GoatCheeseCrumbled.svg",
+        "size": 11,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f8f8f0"
+        ]
+      }
+    },
+    "gochugaru": {
+      "flakes": {
+        "kind": "piece",
+        "file": "Pieces/GochugaruFlakes.svg",
+        "size": 12,
+        "count": 3,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#d84028",
+          "#e87048"
+        ]
+      }
+    },
+    "gochujang": {
+      "dollop": {
+        "kind": "piece",
+        "file": "Pieces/GochujangDollop.svg",
+        "size": 22,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#c83028"
+        ]
+      },
+      "sauce": {
+        "kind": "fill",
+        "file": "Fills/GochujangSauce.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 1,
+        "tones": [
+          "#c84028"
+        ]
+      }
+    },
+    "golden-syrup": {
+      "drizzle": {
+        "kind": "piece",
+        "file": "Pieces/GoldenSyrupDrizzle.svg",
+        "size": 24,
+        "count": 2,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#e8a828"
+        ]
+      }
+    },
+    "grape": {
+      "halves": {
+        "kind": "piece",
+        "file": "Pieces/GrapeHalves.svg",
+        "size": 11,
+        "count": 7,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#c8e098",
+          "#88b858"
+        ]
+      },
+      "whole": {
+        "kind": "piece",
+        "file": "Pieces/GrapeWhole.svg",
+        "size": 11,
+        "count": 6,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#683878"
+        ]
+      }
+    },
+    "grapefruit": {
+      "segments": {
+        "kind": "piece",
+        "file": "Pieces/GrapefruitSegments.svg",
+        "size": 21,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#e86858",
+          "#f0a078",
+          "#f8e0d0"
+        ]
+      }
+    },
+    "green-beans": {
+      "cut": {
+        "kind": "piece",
+        "file": "Pieces/GreenBeansCut.svg",
+        "size": 15,
+        "count": 7,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#589840",
+          "#488838"
+        ]
+      }
+    },
+    "gruyere": {
+      "grated": {
+        "kind": "piece",
+        "file": "Pieces/GruyereGrated.svg",
+        "size": 10,
+        "count": 6,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#f0d898",
+          "#f8e8c0"
+        ]
+      },
+      "melted": {
+        "kind": "fill",
+        "file": "Fills/GruyereMelted.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 1,
+        "covers": true,
+        "tones": [
+          "#f0d088"
+        ]
+      }
+    },
+    "guanciale": {
+      "cubes": {
+        "kind": "piece",
+        "file": "Pieces/GuancialeCubes.svg",
+        "size": 14,
+        "count": 7,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#d88878",
+          "#f0e8d8"
+        ]
+      }
+    },
+    "gyoza-wrappers": {
+      "dumplings": {
+        "kind": "fill",
+        "file": "Fills/GyozaWrappersDumplings.svg",
+        "vessels": [
+          "plate",
+          "pan"
+        ],
+        "rank": 0,
+        "tones": [
+          "#f0e8d0"
+        ]
+      },
+      "pieces": {
+        "kind": "piece",
+        "file": "Pieces/GyozaWrappersPieces.svg",
+        "size": 20,
+        "count": 4,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#f0e8d0"
+        ]
+      }
+    },
+    "halloumi": {
+      "grilled": {
+        "kind": "piece",
+        "file": "Pieces/HalloumiGrilled.svg",
+        "size": 19,
+        "count": 3,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0e8d0",
+          "#a87038"
+        ]
+      }
+    },
+    "ham": {
+      "diced": {
+        "kind": "piece",
+        "file": "Pieces/HamDiced.svg",
+        "size": 11,
+        "count": 7,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#e89898",
+          "#f0c0c0"
+        ]
+      },
+      "strips": {
+        "kind": "piece",
+        "file": "Pieces/HamStrips.svg",
+        "size": 16,
+        "count": 5,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#e89898",
+          "#f0c0c0"
+        ]
+      },
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/HamSlices.svg",
+        "size": 19,
+        "count": 3,
+        "tier": 0,
+        "rank": 2,
+        "tones": [
+          "#f0b0a8",
+          "#e09088"
+        ]
+      }
+    },
+    "harusame": {
+      "noodles": {
+        "kind": "fill",
+        "file": "Fills/HarusameNoodles.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 0,
+        "tones": [
+          "#d8e0e0"
+        ]
+      }
+    },
+    "hijiki": {
+      "strands": {
+        "kind": "piece",
+        "file": "Pieces/HijikiStrands.svg",
+        "size": 12,
+        "count": 4,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#181818"
+        ]
+      }
+    },
+    "hoisin": {
+      "drizzle": {
+        "kind": "piece",
+        "file": "Pieces/HoisinDrizzle.svg",
+        "size": 24,
+        "count": 2,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#582818"
+        ]
+      }
+    },
+    "honey": {
+      "drizzle": {
+        "kind": "piece",
+        "file": "Pieces/HoneyDrizzle.svg",
+        "size": 24,
+        "count": 2,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#e8a020"
+        ]
+      }
+    },
+    "hot-sauce": {
+      "drizzle": {
+        "kind": "piece",
+        "file": "Pieces/HotSauceDrizzle.svg",
+        "size": 22,
+        "count": 2,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#d83018"
+        ]
+      }
+    },
+    "icing-sugar": {
+      "dusting": {
+        "kind": "piece",
+        "file": "Pieces/IcingSugarDusting.svg",
+        "size": 12,
+        "count": 4,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#f8f8f8"
+        ]
+      }
+    },
+    "jalapeno": {
+      "rings": {
+        "kind": "piece",
+        "file": "Pieces/JalapenoRings.svg",
+        "size": 14,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#488838",
+          "#e8e8c8"
+        ]
+      }
+    },
+    "jam": {
+      "dollop": {
+        "kind": "piece",
+        "file": "Pieces/JamDollop.svg",
+        "size": 22,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#b82038"
+        ]
+      }
+    },
+    "kabocha": {
+      "wedges": {
+        "kind": "piece",
+        "file": "Pieces/KabochaWedges.svg",
+        "size": 18,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#386838",
+          "#f0a040"
+        ]
+      },
+      "cubes": {
+        "kind": "piece",
+        "file": "Pieces/KabochaCubes.svg",
+        "size": 15,
+        "count": 5,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#f0a040",
+          "#386838"
+        ]
+      }
+    },
+    "kaffir-lime-leaves": {
+      "slivers": {
+        "kind": "piece",
+        "file": "Pieces/KaffirLimeLeavesSlivers.svg",
+        "size": 12,
+        "count": 5,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#386838"
+        ]
+      }
+    },
+    "kale": {
+      "torn": {
+        "kind": "piece",
+        "file": "Pieces/KaleTorn.svg",
+        "size": 18,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#386838"
+        ]
+      },
+      "bed": {
+        "kind": "fill",
+        "file": "Fills/KaleBed.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pot"
+        ],
+        "rank": 1,
+        "tones": [
+          "#386838"
+        ]
+      }
+    },
+    "kamaboko": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/KamabokoSlices.svg",
+        "size": 16,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f8f8f0",
+          "#f088a0"
+        ]
+      }
+    },
+    "katsuobushi": {
+      "flakes": {
+        "kind": "piece",
+        "file": "Pieces/KatsuobushiFlakes.svg",
+        "size": 14,
+        "count": 6,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#d8a088"
+        ]
+      }
+    },
+    "kecap-manis": {
+      "drizzle": {
+        "kind": "piece",
+        "file": "Pieces/KecapManisDrizzle.svg",
+        "size": 24,
+        "count": 2,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#281810"
+        ]
+      }
+    },
+    "ketchup": {
+      "drizzle": {
+        "kind": "piece",
+        "file": "Pieces/KetchupDrizzle.svg",
+        "size": 22,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#c82018",
+          "#c81818"
+        ]
+      }
+    },
+    "kidney-beans": {
+      "beans": {
+        "kind": "piece",
+        "file": "Pieces/KidneyBeansBeans.svg",
+        "size": 10,
+        "count": 8,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#882828"
+        ]
+      }
+    },
+    "kimchi": {
+      "pieces": {
+        "kind": "piece",
+        "file": "Pieces/KimchiPieces.svg",
+        "size": 16,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#d84840",
+          "#f07848"
+        ]
+      }
+    },
+    "kinako": {
+      "dusting": {
+        "kind": "piece",
+        "file": "Pieces/KinakoDusting.svg",
+        "size": 12,
+        "count": 4,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#d8b878",
+          "#e8c898"
+        ]
+      }
+    },
+    "king-oyster": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/KingOysterSlices.svg",
+        "size": 18,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#d8c098",
+          "#f0e8c8"
+        ]
+      },
+      "coins": {
+        "kind": "piece",
+        "file": "Pieces/KingOysterCoins.svg",
+        "size": 15,
+        "count": 5,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#f0e8c8",
+          "#d8b888"
+        ]
+      }
+    },
+    "kiriboshi-daikon": {
+      "strands": {
+        "kind": "piece",
+        "file": "Pieces/KiriboshiDaikonStrands.svg",
+        "size": 14,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#d8c098",
+          "#e8d0b0"
+        ]
+      }
+    },
+    "kiwi": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/KiwiSlices.svg",
+        "size": 16,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#78b038",
+          "#886838"
+        ]
+      }
+    },
+    "komatsuna": {
+      "chopped": {
+        "kind": "piece",
+        "file": "Pieces/KomatsunaChopped.svg",
+        "size": 16,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#488838"
+        ]
+      }
+    },
+    "kombu": {
+      "strips": {
+        "kind": "piece",
+        "file": "Pieces/KombuStrips.svg",
+        "size": 14,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#283828",
+          "#485838"
+        ]
+      }
+    },
+    "konnyaku": {
+      "cubes": {
+        "kind": "piece",
+        "file": "Pieces/KonnyakuCubes.svg",
+        "size": 12,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#888080",
+          "#686860"
+        ]
+      }
+    },
+    "koya-dofu": {
+      "cubes": {
+        "kind": "piece",
+        "file": "Pieces/KoyaDofuCubes.svg",
+        "size": 14,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#e8d8b8",
+          "#d8c098"
+        ]
+      }
+    },
+    "lamb": {
+      "chunks": {
+        "kind": "piece",
+        "file": "Pieces/LambChunks.svg",
+        "size": 15,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#884830"
+        ]
+      },
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/LambSlices.svg",
+        "size": 19,
+        "count": 4,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#a85848",
+          "#f0d0c0"
+        ]
+      }
+    },
+    "lasagna": {
+      "square": {
+        "kind": "fill",
+        "file": "Fills/LasagnaSquare.svg",
+        "vessels": [
+          "plate",
+          "pan"
+        ],
+        "rank": 0,
+        "tones": [
+          "#f0d888"
+        ]
+      }
+    },
+    "leek": {
+      "rings": {
+        "kind": "piece",
+        "file": "Pieces/LeekRings.svg",
+        "size": 12,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#c0d8a8",
+          "#e8f0d0"
+        ]
+      }
+    },
+    "lemon": {
+      "wedges": {
+        "kind": "piece",
+        "file": "Pieces/LemonWedges.svg",
+        "size": 21,
+        "count": 3,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0d858",
+          "#f0c018",
+          "#f8f0c8"
+        ]
+      },
+      "wheels": {
+        "kind": "piece",
+        "file": "Pieces/LemonWheels.svg",
+        "size": 16,
+        "count": 3,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#f0d858",
+          "#f8f0c8",
+          "#f0c018"
+        ]
+      },
+      "zest": {
+        "kind": "piece",
+        "file": "Pieces/LemonZest.svg",
+        "size": 9,
+        "count": 4,
+        "tier": 2,
+        "rank": 2,
+        "tones": [
+          "#f0c018"
+        ]
+      }
+    },
+    "lentils": {
+      "dal": {
+        "kind": "fill",
+        "file": "Fills/LentilsDal.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 0,
+        "tones": [
+          "#e0a838"
+        ]
+      },
+      "lentils": {
+        "kind": "piece",
+        "file": "Pieces/LentilsLentils.svg",
+        "size": 10,
+        "count": 5,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#a86838"
+        ]
+      }
+    },
+    "lettuce": {
+      "torn": {
+        "kind": "piece",
+        "file": "Pieces/LettuceTorn.svg",
+        "size": 19,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#a8c888"
+        ]
+      },
+      "bed": {
+        "kind": "fill",
+        "file": "Fills/LettuceBed.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pot"
+        ],
+        "rank": 1,
+        "tones": [
+          "#a8c888"
+        ]
+      }
+    },
+    "lime": {
+      "wedges": {
+        "kind": "piece",
+        "file": "Pieces/LimeWedges.svg",
+        "size": 21,
+        "count": 3,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#a8c868",
+          "#589840",
+          "#e8e8c8"
+        ]
+      },
+      "wheels": {
+        "kind": "piece",
+        "file": "Pieces/LimeWheels.svg",
+        "size": 16,
+        "count": 3,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#a8c868",
+          "#e8e8c8",
+          "#589840"
+        ]
+      }
+    },
+    "liver": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/LiverSlices.svg",
+        "size": 15,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#682828"
+        ]
+      }
+    },
+    "lotus-root": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/LotusRootSlices.svg",
+        "size": 18,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0e8c8",
+          "#e0d0a8",
+          "#d0c098"
+        ]
+      }
+    },
+    "luncheon-meat": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/LuncheonMeatSlices.svg",
+        "size": 19,
+        "count": 3,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#e8a898",
+          "#d88878"
+        ]
+      },
+      "cubes": {
+        "kind": "piece",
+        "file": "Pieces/LuncheonMeatCubes.svg",
+        "size": 12,
+        "count": 6,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#d88878",
+          "#e8a898"
+        ]
+      }
+    },
+    "macaroni": {
+      "pasta": {
+        "kind": "fill",
+        "file": "Fills/MacaroniPasta.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pot",
+          "pan"
+        ],
+        "rank": 0,
+        "tones": [
+          "#e8b848"
+        ]
+      }
+    },
+    "mackerel": {
+      "fillet": {
+        "kind": "piece",
+        "file": "Pieces/MackerelFillet.svg",
+        "size": 50,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#e0c8b0",
+          "#687888"
+        ]
+      }
+    },
+    "mango": {
+      "cubes": {
+        "kind": "piece",
+        "file": "Pieces/MangoCubes.svg",
+        "size": 12,
+        "count": 7,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0a038",
+          "#f8c068"
+        ]
+      },
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/MangoSlices.svg",
+        "size": 18,
+        "count": 4,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#f8c068",
+          "#e88828"
+        ]
+      }
+    },
+    "maple-syrup": {
+      "drizzle": {
+        "kind": "piece",
+        "file": "Pieces/MapleSyrupDrizzle.svg",
+        "size": 26,
+        "count": 2,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#a05018"
+        ]
+      }
+    },
+    "mascarpone": {
+      "dollop": {
+        "kind": "piece",
+        "file": "Pieces/MascarponeDollop.svg",
+        "size": 22,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f8f0e0"
+        ]
+      }
+    },
+    "matcha": {
+      "dusting": {
+        "kind": "piece",
+        "file": "Pieces/MatchaDusting.svg",
+        "size": 12,
+        "count": 3,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#78a838"
+        ]
+      }
+    },
+    "mayonnaise": {
+      "drizzle": {
+        "kind": "piece",
+        "file": "Pieces/MayonnaiseDrizzle.svg",
+        "size": 24,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f8f0d8"
+        ]
+      },
+      "dollop": {
+        "kind": "piece",
+        "file": "Pieces/MayonnaiseDollop.svg",
+        "size": 22,
+        "count": 1,
+        "tier": 1,
+        "rank": 1,
+        "tones": [
+          "#f8f0c8"
+        ]
+      }
+    },
+    "melon": {
+      "cubes": {
+        "kind": "piece",
+        "file": "Pieces/MelonCubes.svg",
+        "size": 14,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#c8d888",
+          "#e0e8b8"
+        ]
+      }
+    },
+    "menma": {
+      "strips": {
+        "kind": "piece",
+        "file": "Pieces/MenmaStrips.svg",
+        "size": 16,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#c89858",
+          "#e0b878"
+        ]
+      }
+    },
+    "mentaiko": {
+      "dollop": {
+        "kind": "piece",
+        "file": "Pieces/MentaikoDollop.svg",
+        "size": 18,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f08088"
+        ]
+      }
+    },
+    "minced-meat": {
+      "crumbled": {
+        "kind": "piece",
+        "file": "Pieces/MincedMeatCrumbled.svg",
+        "size": 12,
+        "count": 7,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#885040"
+        ]
+      },
+      "sauce": {
+        "kind": "fill",
+        "file": "Fills/MincedMeatSauce.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 1,
+        "tones": [
+          "#984830"
+        ]
+      }
+    },
+    "mint": {
+      "leaves": {
+        "kind": "piece",
+        "file": "Pieces/MintLeaves.svg",
+        "size": 13,
+        "count": 4,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#58a058"
+        ]
+      }
+    },
+    "miso": {
+      "soup": {
+        "kind": "fill",
+        "file": "Fills/MisoSoup.svg",
+        "vessels": [
+          "bowl",
+          "pot"
+        ],
+        "rank": 0,
+        "tones": [
+          "#d8b068"
+        ]
+      },
+      "glaze": {
+        "kind": "piece",
+        "file": "Pieces/MisoGlaze.svg",
+        "size": 22,
+        "count": 1,
+        "tier": 1,
+        "rank": 1,
+        "tones": [
+          "#c89038"
+        ]
+      }
+    },
+    "mizuna": {
+      "leaves": {
+        "kind": "piece",
+        "file": "Pieces/MizunaLeaves.svg",
+        "size": 16,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#68a048"
+        ]
+      },
+      "bed": {
+        "kind": "fill",
+        "file": "Fills/MizunaBed.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pot"
+        ],
+        "rank": 1,
+        "tones": [
+          "#68a048"
+        ]
+      }
+    },
+    "mochi": {
+      "pieces": {
+        "kind": "piece",
+        "file": "Pieces/MochiPieces.svg",
+        "size": 16,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f8f8f0"
+        ]
+      }
+    },
+    "mozzarella": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/MozzarellaSlices.svg",
+        "size": 18,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f8f8f0",
+          "#f0f0e0"
+        ]
+      },
+      "torn": {
+        "kind": "piece",
+        "file": "Pieces/MozzarellaTorn.svg",
+        "size": 15,
+        "count": 5,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#f8f8f0"
+        ]
+      },
+      "melted": {
+        "kind": "fill",
+        "file": "Fills/MozzarellaMelted.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 2,
+        "covers": true,
+        "tones": [
+          "#f8f0e0"
+        ]
+      }
+    },
+    "mushroom": {
+      "sliced": {
+        "kind": "piece",
+        "file": "Pieces/MushroomSliced.svg",
+        "size": 16,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#a87858",
+          "#e8d8b8"
+        ]
+      },
+      "quartered": {
+        "kind": "piece",
+        "file": "Pieces/MushroomQuartered.svg",
+        "size": 14,
+        "count": 5,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#a87858"
+        ]
+      }
+    },
+    "mussels": {
+      "shells": {
+        "kind": "piece",
+        "file": "Pieces/MusselsShells.svg",
+        "size": 18,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#283040",
+          "#f0a058"
+        ]
+      }
+    },
+    "mustard": {
+      "drizzle": {
+        "kind": "piece",
+        "file": "Pieces/MustardDrizzle.svg",
+        "size": 22,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#e8b818"
+        ]
+      },
+      "dollop": {
+        "kind": "piece",
+        "file": "Pieces/MustardDollop.svg",
+        "size": 22,
+        "count": 1,
+        "tier": 1,
+        "rank": 1,
+        "tones": [
+          "#d8a818"
+        ]
+      }
+    },
+    "mustard-seeds": {
+      "seeds": {
+        "kind": "piece",
+        "file": "Pieces/MustardSeedsSeeds.svg",
+        "size": 10,
+        "count": 3,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#c8a038",
+          "#886828"
+        ]
+      }
+    },
+    "myoga": {
+      "shredded": {
+        "kind": "piece",
+        "file": "Pieces/MyogaShredded.svg",
+        "size": 9,
+        "count": 6,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#e8a0a8"
+        ]
+      }
+    },
+    "napa-cabbage": {
+      "chopped": {
+        "kind": "piece",
+        "file": "Pieces/NapaCabbageChopped.svg",
+        "size": 18,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#c8e0b0",
+          "#f0f8e8"
+        ]
+      }
+    },
+    "natto": {
+      "dollop": {
+        "kind": "piece",
+        "file": "Pieces/NattoDollop.svg",
+        "size": 26,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#b88048"
+        ]
+      }
+    },
+    "nira": {
+      "cut": {
+        "kind": "piece",
+        "file": "Pieces/NiraCut.svg",
+        "size": 14,
+        "count": 7,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#386838",
+          "#588840"
+        ]
+      }
+    },
+    "noodles": {
+      "swirl": {
+        "kind": "fill",
+        "file": "Fills/NoodlesSwirl.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 0,
+        "tones": [
+          "#e8c068"
+        ]
+      },
+      "broth": {
+        "kind": "fill",
+        "file": "Fills/NoodlesBroth.svg",
+        "vessels": [
+          "bowl",
+          "pot"
+        ],
+        "rank": 1,
+        "tones": [
+          "#d8a868"
+        ]
+      }
+    },
+    "nori": {
+      "strips": {
+        "kind": "piece",
+        "file": "Pieces/NoriStrips.svg",
+        "size": 13,
+        "count": 6,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#183830"
+        ]
+      },
+      "sheet": {
+        "kind": "piece",
+        "file": "Pieces/NoriSheet.svg",
+        "size": 30,
+        "count": 1,
+        "tier": 1,
+        "rank": 1,
+        "tones": [
+          "#183830"
+        ]
+      }
+    },
+    "nuts": {
+      "chopped": {
+        "kind": "piece",
+        "file": "Pieces/NutsChopped.svg",
+        "size": 10,
+        "count": 7,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#a87038"
+        ]
+      }
+    },
+    "oats": {
+      "porridge": {
+        "kind": "fill",
+        "file": "Fills/OatsPorridge.svg",
+        "vessels": [
+          "bowl",
+          "pot"
+        ],
+        "rank": 0,
+        "tones": [
+          "#e8e0c0"
+        ]
+      }
+    },
+    "octopus": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/OctopusSlices.svg",
+        "size": 15,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#c05868",
+          "#f0e0e0"
+        ]
+      }
+    },
+    "okonomiyaki-sauce": {
+      "drizzle": {
+        "kind": "piece",
+        "file": "Pieces/OkonomiyakiSauceDrizzle.svg",
+        "size": 26,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#482818"
+        ]
+      }
+    },
+    "okra": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/OkraSlices.svg",
+        "size": 12,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#589840",
+          "#e8e8c8"
+        ]
+      }
+    },
+    "olive-oil": {
+      "drizzle": {
+        "kind": "piece",
+        "file": "Pieces/OliveOilDrizzle.svg",
+        "size": 24,
+        "count": 2,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#c8b038"
+        ]
+      }
+    },
+    "olives": {
+      "rings": {
+        "kind": "piece",
+        "file": "Pieces/OlivesRings.svg",
+        "size": 11,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#383828"
+        ]
+      },
+      "whole": {
+        "kind": "piece",
+        "file": "Pieces/OlivesWhole.svg",
+        "size": 12,
+        "count": 5,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#586828"
+        ]
+      }
+    },
+    "onion": {
+      "rings": {
+        "kind": "piece",
+        "file": "Pieces/OnionRings.svg",
+        "size": 14,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#e8e0c0",
+          "#f8f0e0"
+        ]
+      },
+      "diced": {
+        "kind": "piece",
+        "file": "Pieces/OnionDiced.svg",
+        "size": 9,
+        "count": 9,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#f0e8d0",
+          "#f8f0e8"
+        ]
+      },
+      "caramelized": {
+        "kind": "piece",
+        "file": "Pieces/OnionCaramelized.svg",
+        "size": 15,
+        "count": 5,
+        "tier": 0,
+        "rank": 2,
+        "tones": [
+          "#b87038",
+          "#d09858"
+        ]
+      }
+    },
+    "orange": {
+      "segments": {
+        "kind": "piece",
+        "file": "Pieces/OrangeSegments.svg",
+        "size": 21,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0a048",
+          "#f08828",
+          "#f8e0c8"
+        ]
+      },
+      "wheels": {
+        "kind": "piece",
+        "file": "Pieces/OrangeWheels.svg",
+        "size": 16,
+        "count": 3,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#f0a048",
+          "#f8e0c8",
+          "#f08828"
+        ]
+      }
+    },
+    "oregano": {
+      "flecks": {
+        "kind": "piece",
+        "file": "Pieces/OreganoFlecks.svg",
+        "size": 5,
+        "count": 12,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#587838"
+        ]
+      }
+    },
+    "orzo": {
+      "pasta": {
+        "kind": "fill",
+        "file": "Fills/OrzoPasta.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pot",
+          "pan"
+        ],
+        "rank": 0,
+        "tones": [
+          "#f0d898"
+        ]
+      }
+    },
+    "oyster": {
+      "shells": {
+        "kind": "piece",
+        "file": "Pieces/OysterShells.svg",
+        "size": 19,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#b8b0a8",
+          "#e8e0d0"
+        ]
+      }
+    },
+    "pancetta": {
+      "cubes": {
+        "kind": "piece",
+        "file": "Pieces/PancettaCubes.svg",
+        "size": 12,
+        "count": 7,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#d88878",
+          "#f0e8d8"
+        ]
+      }
+    },
+    "paneer": {
+      "cubes": {
+        "kind": "piece",
+        "file": "Pieces/PaneerCubes.svg",
+        "size": 12,
+        "count": 7,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f8f0e0",
+          "#d8a858"
+        ]
+      }
+    },
+    "panko": {
+      "crumbs": {
+        "kind": "piece",
+        "file": "Pieces/PankoCrumbs.svg",
+        "size": 12,
+        "count": 4,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#e8c078",
+          "#f0d8a0"
+        ]
+      }
+    },
+    "paprika": {
+      "dusting": {
+        "kind": "piece",
+        "file": "Pieces/PaprikaDusting.svg",
+        "size": 12,
+        "count": 3,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#d86038"
+        ]
+      }
+    },
+    "parmesan": {
+      "grated": {
+        "kind": "piece",
+        "file": "Pieces/ParmesanGrated.svg",
+        "size": 9,
+        "count": 8,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#f8f0d0"
+        ]
+      },
+      "shaved": {
+        "kind": "piece",
+        "file": "Pieces/ParmesanShaved.svg",
+        "size": 14,
+        "count": 5,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#f0e0b0"
+        ]
+      }
+    },
+    "parsley": {
+      "chopped": {
+        "kind": "piece",
+        "file": "Pieces/ParsleyChopped.svg",
+        "size": 6,
+        "count": 12,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#589840"
+        ]
+      },
+      "sprig": {
+        "kind": "piece",
+        "file": "Pieces/ParsleySprig.svg",
+        "size": 14,
+        "count": 2,
+        "tier": 2,
+        "rank": 1,
+        "tones": [
+          "#488838"
+        ]
+      }
+    },
+    "parsnip": {
+      "coins": {
+        "kind": "piece",
+        "file": "Pieces/ParsnipCoins.svg",
+        "size": 14,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0e0c0",
+          "#e0c8a0"
+        ]
+      },
+      "roasted": {
+        "kind": "piece",
+        "file": "Pieces/ParsnipRoasted.svg",
+        "size": 15,
+        "count": 4,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#d8a858"
+        ]
+      }
+    },
+    "passata": {
+      "sauce": {
+        "kind": "fill",
+        "file": "Fills/PassataSauce.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 0,
+        "tones": [
+          "#d03830"
+        ]
+      }
+    },
+    "peach": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/PeachSlices.svg",
+        "size": 18,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f8c078",
+          "#e86848"
+        ]
+      }
+    },
+    "peanut-butter": {
+      "dollop": {
+        "kind": "piece",
+        "file": "Pieces/PeanutButterDollop.svg",
+        "size": 22,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#c88848"
+        ]
+      },
+      "drizzle": {
+        "kind": "piece",
+        "file": "Pieces/PeanutButterDrizzle.svg",
+        "size": 24,
+        "count": 2,
+        "tier": 1,
+        "rank": 1,
+        "tones": [
+          "#c88848"
+        ]
+      }
+    },
+    "peanuts": {
+      "crushed": {
+        "kind": "piece",
+        "file": "Pieces/PeanutsCrushed.svg",
+        "size": 10,
+        "count": 7,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#c88848"
+        ]
+      }
+    },
+    "pear": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/PearSlices.svg",
+        "size": 18,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0f0d0",
+          "#b8c058"
+        ]
+      }
+    },
+    "peas": {
+      "peas": {
+        "kind": "piece",
+        "file": "Pieces/PeasPeas.svg",
+        "size": 8,
+        "count": 10,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#68a048"
+        ]
+      }
+    },
+    "pecorino": {
+      "grated": {
+        "kind": "piece",
+        "file": "Pieces/PecorinoGrated.svg",
+        "size": 10,
+        "count": 8,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#f8f0d8"
+        ]
+      },
+      "shaved": {
+        "kind": "piece",
+        "file": "Pieces/PecorinoShaved.svg",
+        "size": 14,
+        "count": 5,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#f8e8c0"
+        ]
+      }
+    },
+    "penne": {
+      "pasta": {
+        "kind": "fill",
+        "file": "Fills/PennePasta.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pot",
+          "pan"
+        ],
+        "rank": 0,
+        "tones": [
+          "#e0b858"
+        ]
+      }
+    },
+    "pepper": {
+      "cracked": {
+        "kind": "piece",
+        "file": "Pieces/PepperCracked.svg",
+        "size": 5,
+        "count": 14,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#383030"
+        ]
+      }
+    },
+    "persimmon": {
+      "wedges": {
+        "kind": "piece",
+        "file": "Pieces/PersimmonWedges.svg",
+        "size": 16,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#e87028",
+          "#f0a048"
+        ]
+      }
+    },
+    "pesto": {
+      "dollop": {
+        "kind": "piece",
+        "file": "Pieces/PestoDollop.svg",
+        "size": 22,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#588838"
+        ]
+      },
+      "sauce": {
+        "kind": "fill",
+        "file": "Fills/PestoSauce.svg",
+        "vessels": [
+          "plate",
+          "pan"
+        ],
+        "rank": 1,
+        "tones": [
+          "#689838"
+        ]
+      }
+    },
+    "pickled-ginger": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/PickledGingerSlices.svg",
+        "size": 14,
+        "count": 3,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0a8a8",
+          "#f8c8c8"
+        ]
+      }
+    },
+    "pine-nuts": {
+      "toasted": {
+        "kind": "piece",
+        "file": "Pieces/PineNutsToasted.svg",
+        "size": 6,
+        "count": 8,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#f0d8a0"
+        ]
+      }
+    },
+    "pineapple": {
+      "chunks": {
+        "kind": "piece",
+        "file": "Pieces/PineappleChunks.svg",
+        "size": 14,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#e8b848",
+          "#f8d878"
+        ]
+      },
+      "rings": {
+        "kind": "piece",
+        "file": "Pieces/PineappleRings.svg",
+        "size": 19,
+        "count": 3,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#f0c848"
+        ]
+      }
+    },
+    "pita": {
+      "bread": {
+        "kind": "fill",
+        "file": "Fills/PitaBread.svg",
+        "vessels": [
+          "plate",
+          "board"
+        ],
+        "rank": 0,
+        "tones": [
+          "#f0d8a0"
+        ]
+      },
+      "wedges": {
+        "kind": "piece",
+        "file": "Pieces/PitaWedges.svg",
+        "size": 18,
+        "count": 4,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#e8c078"
+        ]
+      }
+    },
+    "plum": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/PlumSlices.svg",
+        "size": 16,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#e8a058",
+          "#682848"
+        ]
+      }
+    },
+    "plum-sauce": {
+      "dollop": {
+        "kind": "piece",
+        "file": "Pieces/PlumSauceDollop.svg",
+        "size": 22,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#c86038"
+        ]
+      }
+    },
+    "polenta": {
+      "soft": {
+        "kind": "fill",
+        "file": "Fills/PolentaSoft.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pot"
+        ],
+        "rank": 0,
+        "tones": [
+          "#f0c858"
+        ]
+      }
+    },
+    "pomegranate": {
+      "seeds": {
+        "kind": "piece",
+        "file": "Pieces/PomegranateSeeds.svg",
+        "size": 10,
+        "count": 4,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#b82038"
+        ]
+      }
+    },
+    "pork": {
+      "strips": {
+        "kind": "piece",
+        "file": "Pieces/PorkStrips.svg",
+        "size": 18,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#c88058",
+          "#f0e8e0"
+        ]
+      },
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/PorkSlices.svg",
+        "size": 19,
+        "count": 5,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#c88058",
+          "#f0e0d0"
+        ]
+      },
+      "cutlet": {
+        "kind": "piece",
+        "file": "Pieces/PorkCutlet.svg",
+        "size": 40,
+        "count": 1,
+        "tier": 1,
+        "rank": 2,
+        "tones": [
+          "#f0e8d8",
+          "#c88838"
+        ]
+      },
+      "simmered": {
+        "kind": "fill",
+        "file": "Fills/PorkSimmered.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 3,
+        "covers": true,
+        "tones": [
+          "#b87050"
+        ]
+      }
+    },
+    "potato": {
+      "chunks": {
+        "kind": "piece",
+        "file": "Pieces/PotatoChunks.svg",
+        "size": 15,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#e8d088"
+        ]
+      },
+      "wedges": {
+        "kind": "piece",
+        "file": "Pieces/PotatoWedges.svg",
+        "size": 18,
+        "count": 4,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#c89858",
+          "#f0d088"
+        ]
+      },
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/PotatoSlices.svg",
+        "size": 16,
+        "count": 4,
+        "tier": 0,
+        "rank": 2,
+        "tones": [
+          "#f0d898",
+          "#e0c068"
+        ]
+      },
+      "mash": {
+        "kind": "fill",
+        "file": "Fills/PotatoMash.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pot"
+        ],
+        "rank": 3,
+        "tones": [
+          "#f0e0b0"
+        ]
+      }
+    },
+    "prosciutto": {
+      "ribbons": {
+        "kind": "piece",
+        "file": "Pieces/ProsciuttoRibbons.svg",
+        "size": 19,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#d87078",
+          "#f0e0e0"
+        ]
+      }
+    },
+    "puff-pastry": {
+      "square": {
+        "kind": "fill",
+        "file": "Fills/PuffPastrySquare.svg",
+        "vessels": [
+          "plate",
+          "board"
+        ],
+        "rank": 0,
+        "tones": [
+          "#e8b050"
+        ]
+      },
+      "pieces": {
+        "kind": "piece",
+        "file": "Pieces/PuffPastryPieces.svg",
+        "size": 20,
+        "count": 3,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#e8b050",
+          "#d89838"
+        ]
+      }
+    },
+    "pumpkin": {
+      "cubes": {
+        "kind": "piece",
+        "file": "Pieces/PumpkinCubes.svg",
+        "size": 14,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f08828",
+          "#f0a858"
+        ]
+      },
+      "soup": {
+        "kind": "fill",
+        "file": "Fills/PumpkinSoup.svg",
+        "vessels": [
+          "bowl",
+          "pot"
+        ],
+        "rank": 1,
+        "tones": [
+          "#f08828"
+        ]
+      }
+    },
+    "quinoa": {
+      "mound": {
+        "kind": "fill",
+        "file": "Fills/QuinoaMound.svg",
+        "vessels": [
+          "plate",
+          "pan"
+        ],
+        "rank": 0,
+        "tones": [
+          "#e8e0c0"
+        ]
+      },
+      "bowl": {
+        "kind": "fill",
+        "file": "Fills/QuinoaBowl.svg",
+        "vessels": [
+          "bowl",
+          "pot"
+        ],
+        "rank": 1,
+        "tones": [
+          "#e8e0c0"
+        ]
+      }
+    },
+    "radish": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/RadishSlices.svg",
+        "size": 12,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f8f0f0",
+          "#d84860"
+        ]
+      }
+    },
+    "raisins": {
+      "raisins": {
+        "kind": "piece",
+        "file": "Pieces/RaisinsRaisins.svg",
+        "size": 9,
+        "count": 4,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#482828"
+        ]
+      }
+    },
+    "ramen": {
+      "broth": {
+        "kind": "fill",
+        "file": "Fills/RamenBroth.svg",
+        "vessels": [
+          "bowl",
+          "pot"
+        ],
+        "rank": 0,
+        "tones": [
+          "#e0b878"
+        ]
+      },
+      "swirl": {
+        "kind": "fill",
+        "file": "Fills/RamenSwirl.svg",
+        "vessels": [
+          "plate",
+          "pan"
+        ],
+        "rank": 1,
+        "tones": [
+          "#f0d078"
+        ]
+      }
+    },
+    "raspberry": {
+      "berries": {
+        "kind": "piece",
+        "file": "Pieces/RaspberryBerries.svg",
+        "size": 11,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#d84058"
+        ]
+      }
+    },
+    "ravioli": {
+      "pasta": {
+        "kind": "fill",
+        "file": "Fills/RavioliPasta.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pot",
+          "pan"
+        ],
+        "rank": 0,
+        "tones": [
+          "#e8c068"
+        ]
+      },
+      "pieces": {
+        "kind": "piece",
+        "file": "Pieces/RavioliPieces.svg",
+        "size": 18,
+        "count": 4,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#e8c068",
+          "#f0d888"
+        ]
+      }
+    },
+    "red-onion": {
+      "rings": {
+        "kind": "piece",
+        "file": "Pieces/RedOnionRings.svg",
+        "size": 14,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#984878",
+          "#e8c0d8"
+        ]
+      },
+      "diced": {
+        "kind": "piece",
+        "file": "Pieces/RedOnionDiced.svg",
+        "size": 9,
+        "count": 9,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#b06088",
+          "#e8c0d8"
+        ]
+      }
+    },
+    "rice": {
+      "mound": {
+        "kind": "fill",
+        "file": "Fills/RiceMound.svg",
+        "vessels": [
+          "plate",
+          "pan"
+        ],
+        "rank": 0,
+        "tones": [
+          "#f8f8f0"
+        ]
+      },
+      "bowl": {
+        "kind": "fill",
+        "file": "Fills/RiceBowl.svg",
+        "vessels": [
+          "bowl",
+          "pot"
+        ],
+        "rank": 1,
+        "tones": [
+          "#f8f8f0"
+        ]
+      },
+      "fried": {
+        "kind": "fill",
+        "file": "Fills/RiceFried.svg",
+        "vessels": [
+          "plate",
+          "pan",
+          "bowl",
+          "pot"
+        ],
+        "rank": 2,
+        "tones": [
+          "#f0d090"
+        ]
+      },
+      "red-fried": {
+        "kind": "fill",
+        "file": "Fills/RiceRedFried.svg",
+        "vessels": [
+          "plate",
+          "pan",
+          "bowl",
+          "pot"
+        ],
+        "rank": 3,
+        "tones": [
+          "#e89068"
+        ]
+      }
+    },
+    "rice-noodles": {
+      "swirl": {
+        "kind": "fill",
+        "file": "Fills/RiceNoodlesSwirl.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 0,
+        "tones": [
+          "#f0f0e0"
+        ]
+      },
+      "broth": {
+        "kind": "fill",
+        "file": "Fills/RiceNoodlesBroth.svg",
+        "vessels": [
+          "bowl",
+          "pot"
+        ],
+        "rank": 1,
+        "tones": [
+          "#e8d8b0"
+        ]
+      }
+    },
+    "rice-paper": {
+      "rolls": {
+        "kind": "fill",
+        "file": "Fills/RicePaperRolls.svg",
+        "vessels": [
+          "plate",
+          "board"
+        ],
+        "rank": 0,
+        "tones": [
+          "#f0e8e0"
+        ]
+      }
+    },
+    "ricotta": {
+      "dollop": {
+        "kind": "piece",
+        "file": "Pieces/RicottaDollop.svg",
+        "size": 22,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f8f8f0"
+        ]
+      }
+    },
+    "rigatoni": {
+      "pasta": {
+        "kind": "fill",
+        "file": "Fills/RigatoniPasta.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pot",
+          "pan"
+        ],
+        "rank": 0,
+        "tones": [
+          "#e0b858"
+        ]
+      }
+    },
+    "rosemary": {
+      "sprig": {
+        "kind": "piece",
+        "file": "Pieces/RosemarySprig.svg",
+        "size": 16,
+        "count": 2,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#486840"
+        ]
+      }
+    },
+    "sage": {
+      "leaves": {
+        "kind": "piece",
+        "file": "Pieces/SageLeaves.svg",
+        "size": 14,
+        "count": 3,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#789878"
+        ]
+      }
+    },
+    "salami": {
+      "coins": {
+        "kind": "piece",
+        "file": "Pieces/SalamiCoins.svg",
+        "size": 15,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#c85058",
+          "#a83840"
+        ]
+      }
+    },
+    "salmon": {
+      "fillet": {
+        "kind": "piece",
+        "file": "Pieces/SalmonFillet.svg",
+        "size": 50,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f09068",
+          "#b8b0a8"
+        ]
+      },
+      "sashimi": {
+        "kind": "piece",
+        "file": "Pieces/SalmonSashimi.svg",
+        "size": 19,
+        "count": 4,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#f09068"
+        ]
+      },
+      "flaked": {
+        "kind": "piece",
+        "file": "Pieces/SalmonFlaked.svg",
+        "size": 11,
+        "count": 7,
+        "tier": 0,
+        "rank": 2,
+        "tones": [
+          "#f0a080"
+        ]
+      }
+    },
+    "salmon-roe": {
+      "roe": {
+        "kind": "piece",
+        "file": "Pieces/SalmonRoeRoe.svg",
+        "size": 12,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f07028"
+        ]
+      }
+    },
+    "sambal": {
+      "dollop": {
+        "kind": "piece",
+        "file": "Pieces/SambalDollop.svg",
+        "size": 22,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#c83018"
+        ]
+      }
+    },
+    "sardines": {
+      "fillets": {
+        "kind": "piece",
+        "file": "Pieces/SardinesFillets.svg",
+        "size": 19,
+        "count": 3,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#98a0b0",
+          "#d8c0b0"
+        ]
+      }
+    },
+    "sausage": {
+      "links": {
+        "kind": "piece",
+        "file": "Pieces/SausageLinks.svg",
+        "size": 19,
+        "count": 3,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#a86038"
+        ]
+      },
+      "coins": {
+        "kind": "piece",
+        "file": "Pieces/SausageCoins.svg",
+        "size": 14,
+        "count": 6,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#d0a088",
+          "#985838"
+        ]
+      }
+    },
+    "scallops": {
+      "seared": {
+        "kind": "piece",
+        "file": "Pieces/ScallopsSeared.svg",
+        "size": 16,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0e8d8",
+          "#d8a058"
+        ]
+      }
+    },
+    "seafood": {
+      "shrimp": {
+        "kind": "piece",
+        "file": "Pieces/SeafoodShrimp.svg",
+        "size": 19,
+        "count": 3,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f87068"
+        ]
+      },
+      "squid": {
+        "kind": "piece",
+        "file": "Pieces/SeafoodSquid.svg",
+        "size": 14,
+        "count": 3,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#f0e8d8",
+          "#f8f0f0"
+        ]
+      }
+    },
+    "sesame-dressing": {
+      "drizzle": {
+        "kind": "piece",
+        "file": "Pieces/SesameDressingDrizzle.svg",
+        "size": 24,
+        "count": 2,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#e8d0a8"
+        ]
+      }
+    },
+    "sesame-seeds": {
+      "sprinkle": {
+        "kind": "piece",
+        "file": "Pieces/SesameSeedsSprinkle.svg",
+        "size": 7,
+        "count": 10,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#e8d0a0"
+        ]
+      },
+      "black": {
+        "kind": "piece",
+        "file": "Pieces/SesameSeedsBlack.svg",
+        "size": 7,
+        "count": 10,
+        "tier": 2,
+        "rank": 1,
+        "tones": [
+          "#282828"
+        ]
+      }
+    },
+    "shallot": {
+      "crispy": {
+        "kind": "piece",
+        "file": "Pieces/ShallotCrispy.svg",
+        "size": 10,
+        "count": 5,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#a86828",
+          "#c88848"
+        ]
+      },
+      "rings": {
+        "kind": "piece",
+        "file": "Pieces/ShallotRings.svg",
+        "size": 10,
+        "count": 6,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#b87888",
+          "#e8d0d8"
+        ]
+      }
+    },
+    "shichimi": {
+      "sprinkle": {
+        "kind": "piece",
+        "file": "Pieces/ShichimiSprinkle.svg",
+        "size": 12,
+        "count": 2,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#d85038",
+          "#282828"
+        ]
+      }
+    },
+    "shiitake": {
+      "caps": {
+        "kind": "piece",
+        "file": "Pieces/ShiitakeCaps.svg",
+        "size": 16,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#885838",
+          "#684828",
+          "#d8b088"
+        ]
+      },
+      "sliced": {
+        "kind": "piece",
+        "file": "Pieces/ShiitakeSliced.svg",
+        "size": 15,
+        "count": 5,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#885838",
+          "#e0d0b0"
+        ]
+      }
+    },
+    "shimeji": {
+      "clusters": {
+        "kind": "piece",
+        "file": "Pieces/ShimejiClusters.svg",
+        "size": 16,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#b89870"
+        ]
+      }
+    },
+    "shirasu": {
+      "sprinkle": {
+        "kind": "piece",
+        "file": "Pieces/ShirasuSprinkle.svg",
+        "size": 17,
+        "count": 3,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#f0e8d8"
+        ]
+      }
+    },
+    "shirataki": {
+      "noodles": {
+        "kind": "fill",
+        "file": "Fills/ShiratakiNoodles.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 0,
+        "tones": [
+          "#d0d0c0"
+        ]
+      }
+    },
+    "shiratamako": {
+      "dumplings": {
+        "kind": "piece",
+        "file": "Pieces/ShiratamakoDumplings.svg",
+        "size": 14,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f8f8f0"
+        ]
+      }
+    },
+    "shiso": {
+      "shredded": {
+        "kind": "piece",
+        "file": "Pieces/ShisoShredded.svg",
+        "size": 9,
+        "count": 7,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#488838"
+        ]
+      },
+      "leaf": {
+        "kind": "piece",
+        "file": "Pieces/ShisoLeaf.svg",
+        "size": 28,
+        "count": 1,
+        "tier": 1,
+        "rank": 1,
+        "tones": [
+          "#488838"
+        ]
+      }
+    },
+    "shrimp": {
+      "whole": {
+        "kind": "piece",
+        "file": "Pieces/ShrimpWhole.svg",
+        "size": 19,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f87068"
+        ]
+      }
+    },
+    "shungiku": {
+      "leaves": {
+        "kind": "piece",
+        "file": "Pieces/ShungikuLeaves.svg",
+        "size": 16,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#589840"
+        ]
+      }
+    },
+    "sichuan-peppercorns": {
+      "cracked": {
+        "kind": "piece",
+        "file": "Pieces/SichuanPeppercornsCracked.svg",
+        "size": 10,
+        "count": 3,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#883828",
+          "#c86048"
+        ]
+      }
+    },
+    "snow-peas": {
+      "pods": {
+        "kind": "piece",
+        "file": "Pieces/SnowPeasPods.svg",
+        "size": 18,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#78b068"
+        ]
+      }
+    },
+    "soba": {
+      "swirl": {
+        "kind": "fill",
+        "file": "Fills/SobaSwirl.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pot"
+        ],
+        "rank": 0,
+        "tones": [
+          "#988870"
+        ]
+      },
+      "broth": {
+        "kind": "fill",
+        "file": "Fills/SobaBroth.svg",
+        "vessels": [
+          "bowl",
+          "pot"
+        ],
+        "rank": 1,
+        "tones": [
+          "#986838"
+        ]
+      }
+    },
+    "somen": {
+      "swirl": {
+        "kind": "fill",
+        "file": "Fills/SomenSwirl.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pot"
+        ],
+        "rank": 0,
+        "tones": [
+          "#e8e8d8"
+        ]
+      }
+    },
+    "sour-cream": {
+      "dollop": {
+        "kind": "piece",
+        "file": "Pieces/SourCreamDollop.svg",
+        "size": 22,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f8f8f0"
+        ]
+      }
+    },
+    "spaghetti": {
+      "plain": {
+        "kind": "fill",
+        "file": "Fills/SpaghettiPlain.svg",
+        "vessels": [
+          "plate",
+          "pan"
+        ],
+        "rank": 0,
+        "tones": [
+          "#e8c068"
+        ]
+      },
+      "creamy": {
+        "kind": "fill",
+        "file": "Fills/SpaghettiCreamy.svg",
+        "vessels": [
+          "plate",
+          "pan"
+        ],
+        "rank": 1,
+        "tones": [
+          "#e8d080"
+        ]
+      },
+      "tomato": {
+        "kind": "fill",
+        "file": "Fills/SpaghettiTomato.svg",
+        "vessels": [
+          "plate",
+          "pan"
+        ],
+        "rank": 2,
+        "tones": [
+          "#d85038"
+        ]
+      }
+    },
+    "spinach": {
+      "wilted": {
+        "kind": "piece",
+        "file": "Pieces/SpinachWilted.svg",
+        "size": 16,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#386838"
+        ]
+      },
+      "bed": {
+        "kind": "fill",
+        "file": "Fills/SpinachBed.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pot"
+        ],
+        "rank": 1,
+        "tones": [
+          "#386838"
+        ]
+      }
+    },
+    "spring-onion": {
+      "rings": {
+        "kind": "piece",
+        "file": "Pieces/SpringOnionRings.svg",
+        "size": 9,
+        "count": 7,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#a8c888",
+          "#78b068"
+        ]
+      },
+      "sliced": {
+        "kind": "piece",
+        "file": "Pieces/SpringOnionSliced.svg",
+        "size": 14,
+        "count": 6,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#78b068",
+          "#d8e8c8"
+        ]
+      }
+    },
+    "squid": {
+      "rings": {
+        "kind": "piece",
+        "file": "Pieces/SquidRings.svg",
+        "size": 14,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0e8d8",
+          "#f8f0f0"
+        ]
+      }
+    },
+    "sriracha": {
+      "drizzle": {
+        "kind": "piece",
+        "file": "Pieces/SrirachaDrizzle.svg",
+        "size": 22,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#d83018",
+          "#d82818"
+        ]
+      }
+    },
+    "star-anise": {
+      "whole": {
+        "kind": "piece",
+        "file": "Pieces/StarAniseWhole.svg",
+        "size": 15,
+        "count": 2,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#783820"
+        ]
+      }
+    },
+    "strawberry": {
+      "halves": {
+        "kind": "piece",
+        "file": "Pieces/StrawberryHalves.svg",
+        "size": 16,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#d83048"
+        ]
+      }
+    },
+    "sugar": {
+      "dusting": {
+        "kind": "piece",
+        "file": "Pieces/SugarDusting.svg",
+        "size": 5,
+        "count": 14,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#f8f8f8"
+        ]
+      }
+    },
+    "sun-dried-tomatoes": {
+      "strips": {
+        "kind": "piece",
+        "file": "Pieces/SunDriedTomatoesStrips.svg",
+        "size": 15,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#982828"
+        ]
+      }
+    },
+    "sweet-chili-sauce": {
+      "drizzle": {
+        "kind": "piece",
+        "file": "Pieces/SweetChiliSauceDrizzle.svg",
+        "size": 24,
+        "count": 2,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#e86038"
+        ]
+      }
+    },
+    "sweet-potato": {
+      "coins": {
+        "kind": "piece",
+        "file": "Pieces/SweetPotatoCoins.svg",
+        "size": 16,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0c068",
+          "#883858"
+        ]
+      },
+      "cubes": {
+        "kind": "piece",
+        "file": "Pieces/SweetPotatoCubes.svg",
+        "size": 14,
+        "count": 6,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#f0c068",
+          "#883858"
+        ]
+      },
+      "mash": {
+        "kind": "fill",
+        "file": "Fills/SweetPotatoMash.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pot"
+        ],
+        "rank": 2,
+        "tones": [
+          "#f0b058"
+        ]
+      }
+    },
+    "swiss-chard": {
+      "torn": {
+        "kind": "piece",
+        "file": "Pieces/SwissChardTorn.svg",
+        "size": 18,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#386838"
+        ]
+      }
+    },
+    "tahini": {
+      "drizzle": {
+        "kind": "piece",
+        "file": "Pieces/TahiniDrizzle.svg",
+        "size": 24,
+        "count": 2,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#d8c088"
+        ]
+      }
+    },
+    "takuan": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/TakuanSlices.svg",
+        "size": 15,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f8e058",
+          "#f0c818"
+        ]
+      }
+    },
+    "taro": {
+      "chunks": {
+        "kind": "piece",
+        "file": "Pieces/TaroChunks.svg",
+        "size": 15,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#e8d8c8"
+        ]
+      }
+    },
+    "tarragon": {
+      "leaves": {
+        "kind": "piece",
+        "file": "Pieces/TarragonLeaves.svg",
+        "size": 8,
+        "count": 8,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#689848"
+        ]
+      }
+    },
+    "teriyaki-sauce": {
+      "glaze": {
+        "kind": "piece",
+        "file": "Pieces/TeriyakiSauceGlaze.svg",
+        "size": 24,
+        "count": 2,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#683818"
+        ]
+      }
+    },
+    "thai-basil": {
+      "leaves": {
+        "kind": "piece",
+        "file": "Pieces/ThaiBasilLeaves.svg",
+        "size": 14,
+        "count": 4,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#387838"
+        ]
+      }
+    },
+    "thyme": {
+      "sprigs": {
+        "kind": "piece",
+        "file": "Pieces/ThymeSprigs.svg",
+        "size": 15,
+        "count": 3,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#587848",
+          "#887858"
+        ]
+      }
+    },
+    "tianmianjiang": {
+      "sauce": {
+        "kind": "fill",
+        "file": "Fills/TianmianjiangSauce.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 0,
+        "tones": [
+          "#482818"
+        ]
+      }
+    },
+    "tofu": {
+      "cubes": {
+        "kind": "piece",
+        "file": "Pieces/TofuCubes.svg",
+        "size": 14,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f8f8e8",
+          "#e8e0d0"
+        ]
+      },
+      "fried": {
+        "kind": "piece",
+        "file": "Pieces/TofuFried.svg",
+        "size": 14,
+        "count": 6,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#f0d8b0",
+          "#d89848"
+        ]
+      },
+      "block": {
+        "kind": "fill",
+        "file": "Fills/TofuBlock.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pot"
+        ],
+        "rank": 2,
+        "tones": [
+          "#f8f8e8"
+        ]
+      }
+    },
+    "tomato": {
+      "diced": {
+        "kind": "piece",
+        "file": "Pieces/TomatoDiced.svg",
+        "size": 12,
+        "count": 8,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#d84840",
+          "#f08868"
+        ]
+      },
+      "sliced": {
+        "kind": "piece",
+        "file": "Pieces/TomatoSliced.svg",
+        "size": 22,
+        "count": 4,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#d84840",
+          "#e86858"
+        ]
+      },
+      "wedges": {
+        "kind": "piece",
+        "file": "Pieces/TomatoWedges.svg",
+        "size": 18,
+        "count": 5,
+        "tier": 0,
+        "rank": 2,
+        "tones": [
+          "#d84840",
+          "#f08868"
+        ]
+      },
+      "sauce": {
+        "kind": "fill",
+        "file": "Fills/TomatoSauce.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 3,
+        "tones": [
+          "#d84840"
+        ]
+      }
+    },
+    "tonkatsu-sauce": {
+      "drizzle": {
+        "kind": "piece",
+        "file": "Pieces/TonkatsuSauceDrizzle.svg",
+        "size": 24,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#381810"
+        ]
+      }
+    },
+    "tortilla": {
+      "flat": {
+        "kind": "fill",
+        "file": "Fills/TortillaFlat.svg",
+        "vessels": [
+          "plate",
+          "board"
+        ],
+        "rank": 0,
+        "tones": [
+          "#f0d8a8"
+        ]
+      },
+      "chips": {
+        "kind": "piece",
+        "file": "Pieces/TortillaChips.svg",
+        "size": 16,
+        "count": 6,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#f0c858"
+        ]
+      }
+    },
+    "tuna": {
+      "sashimi": {
+        "kind": "piece",
+        "file": "Pieces/TunaSashimi.svg",
+        "size": 19,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#c83048"
+        ]
+      },
+      "cubes": {
+        "kind": "piece",
+        "file": "Pieces/TunaCubes.svg",
+        "size": 12,
+        "count": 7,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#c83048",
+          "#e06068"
+        ]
+      },
+      "flaked": {
+        "kind": "piece",
+        "file": "Pieces/TunaFlaked.svg",
+        "size": 11,
+        "count": 7,
+        "tier": 0,
+        "rank": 2,
+        "tones": [
+          "#e8c0b0"
+        ]
+      }
+    },
+    "turkey": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/TurkeySlices.svg",
+        "size": 19,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#e8d8b8",
+          "#c8a078"
+        ]
+      }
+    },
+    "turnip": {
+      "wedges": {
+        "kind": "piece",
+        "file": "Pieces/TurnipWedges.svg",
+        "size": 16,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#a86088",
+          "#f8f0e8"
+        ]
+      },
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/TurnipSlices.svg",
+        "size": 15,
+        "count": 5,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#f8f8f0",
+          "#f0e8f0"
+        ]
+      }
+    },
+    "udon": {
+      "broth": {
+        "kind": "fill",
+        "file": "Fills/UdonBroth.svg",
+        "vessels": [
+          "bowl",
+          "pot"
+        ],
+        "rank": 0,
+        "tones": [
+          "#c89858"
+        ]
+      },
+      "swirl": {
+        "kind": "fill",
+        "file": "Fills/UdonSwirl.svg",
+        "vessels": [
+          "plate",
+          "pan"
+        ],
+        "rank": 1,
+        "tones": [
+          "#f8f0e0"
+        ]
+      }
+    },
+    "umeboshi": {
+      "whole": {
+        "kind": "piece",
+        "file": "Pieces/UmeboshiWhole.svg",
+        "size": 18,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#c03048"
+        ]
+      }
+    },
+    "veal": {
+      "cutlet": {
+        "kind": "piece",
+        "file": "Pieces/VealCutlet.svg",
+        "size": 40,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f0e0d0",
+          "#d8a048"
+        ]
+      }
+    },
+    "wakame": {
+      "pieces": {
+        "kind": "piece",
+        "file": "Pieces/WakamePieces.svg",
+        "size": 15,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#285838"
+        ]
+      }
+    },
+    "walnuts": {
+      "halves": {
+        "kind": "piece",
+        "file": "Pieces/WalnutsHalves.svg",
+        "size": 14,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#b88048"
+        ]
+      }
+    },
+    "wasabi": {
+      "dollop": {
+        "kind": "piece",
+        "file": "Pieces/WasabiDollop.svg",
+        "size": 22,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#98c058"
+        ]
+      }
+    },
+    "water-chestnut": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/WaterChestnutSlices.svg",
+        "size": 12,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f8f0e8",
+          "#d8c8a8"
+        ]
+      }
+    },
+    "watercress": {
+      "sprigs": {
+        "kind": "piece",
+        "file": "Pieces/WatercressSprigs.svg",
+        "size": 16,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#386838",
+          "#588840"
+        ]
+      }
+    },
+    "watermelon": {
+      "cubes": {
+        "kind": "piece",
+        "file": "Pieces/WatermelonCubes.svg",
+        "size": 14,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#e85058",
+          "#f08088"
+        ]
+      }
+    },
+    "wheat-gluten": {
+      "fu": {
+        "kind": "piece",
+        "file": "Pieces/WheatGlutenFu.svg",
+        "size": 15,
+        "count": 3,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0d8b0",
+          "#f8e8d0"
+        ]
+      }
+    },
+    "wonton-wrappers": {
+      "wontons": {
+        "kind": "piece",
+        "file": "Pieces/WontonWrappersWontons.svg",
+        "size": 19,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0f0e0"
+        ]
+      }
+    },
+    "xo-sauce": {
+      "dollop": {
+        "kind": "piece",
+        "file": "Pieces/XoSauceDollop.svg",
+        "size": 22,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#a84028"
+        ]
+      }
+    },
+    "yakisoba-sauce": {
+      "noodles": {
+        "kind": "fill",
+        "file": "Fills/YakisobaSauceNoodles.svg",
+        "vessels": [
+          "plate",
+          "pan"
+        ],
+        "rank": 0,
+        "tones": [
+          "#b87038"
+        ]
+      }
+    },
+    "yam": {
+      "grated": {
+        "kind": "piece",
+        "file": "Pieces/YamGrated.svg",
+        "size": 22,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f0f0e0"
+        ]
+      },
+      "cubes": {
+        "kind": "piece",
+        "file": "Pieces/YamCubes.svg",
+        "size": 12,
+        "count": 6,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#f0f0e0",
+          "#c8b088"
+        ]
+      }
+    },
+    "yellowtail": {
+      "sashimi": {
+        "kind": "piece",
+        "file": "Pieces/YellowtailSashimi.svg",
+        "size": 19,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0c0b0"
+        ]
+      }
+    },
+    "yogurt": {
+      "dollop": {
+        "kind": "piece",
+        "file": "Pieces/YogurtDollop.svg",
+        "size": 22,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f8f8f0"
+        ]
+      },
+      "bowl": {
+        "kind": "fill",
+        "file": "Fills/YogurtBowl.svg",
+        "vessels": [
+          "bowl",
+          "pot"
+        ],
+        "rank": 1,
+        "tones": [
+          "#f8f8f0"
+        ]
+      }
+    },
+    "yuzu": {
+      "zest": {
+        "kind": "piece",
+        "file": "Pieces/YuzuZest.svg",
+        "size": 9,
+        "count": 4,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#f0c018",
+          "#f0d858"
+        ]
+      },
+      "wheels": {
+        "kind": "piece",
+        "file": "Pieces/YuzuWheels.svg",
+        "size": 15,
+        "count": 3,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#f0d858",
+          "#f8f0c8",
+          "#e8b818"
+        ]
+      }
+    },
+    "yuzu-kosho": {
+      "dollop": {
+        "kind": "piece",
+        "file": "Pieces/YuzuKoshoDollop.svg",
+        "size": 22,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#b8c848"
+        ]
+      }
+    },
+    "zha-cai": {
+      "strips": {
+        "kind": "piece",
+        "file": "Pieces/ZhaCaiStrips.svg",
+        "size": 14,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#b8b060"
+        ]
+      }
+    },
+    "zucchini": {
+      "coins": {
+        "kind": "piece",
+        "file": "Pieces/ZucchiniCoins.svg",
+        "size": 15,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#e0e8c0",
+          "#488838"
+        ]
+      },
+      "half-moons": {
+        "kind": "piece",
+        "file": "Pieces/ZucchiniHalfMoons.svg",
+        "size": 15,
+        "count": 6,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#e0e8c0",
+          "#488838"
+        ]
+      }
+    }
+  },
+  "hidden": {
+    "bay-leaf": "taken out before serving",
+    "cardamom": "taken out before serving",
+    "cloves": "taken out before serving",
+    "lemongrass": "taken out before serving",
+    "cumin": "ground into the dish",
+    "curry-powder": "ground into the dish",
+    "fennel-seeds": "ground into the dish",
+    "five-spice": "ground into the dish",
+    "garam-masala": "ground into the dish",
+    "garlic-powder": "ground into the dish",
+    "msg": "dissolved",
+    "nutmeg": "ground into the dish",
+    "onion-powder": "ground into the dish",
+    "saffron": "colours the rice",
+    "salt": "dissolved",
+    "sansho": "ground into the dish",
+    "turmeric": "colours the dish",
+    "red-wine": "cooked off",
+    "white-wine": "cooked off",
+    "black-vinegar": "absorbed",
+    "char-siu-sauce": "absorbed",
+    "dark-soy-sauce": "absorbed",
+    "doubanjiang": "colours the sauce",
+    "oyster-sauce": "absorbed",
+    "sesame-oil": "absorbed",
+    "shacha-sauce": "absorbed",
+    "shaoxing-wine": "cooked off",
+    "mentsuyu": "absorbed",
+    "mirin": "absorbed",
+    "ponzu": "absorbed",
+    "rice-vinegar": "absorbed",
+    "sake": "cooked off",
+    "shiro-dashi": "absorbed",
+    "soy-sauce": "absorbed",
+    "yakiniku-sauce": "absorbed",
+    "coconut-oil": "cooking fat",
+    "fish-sauce": "absorbed",
+    "tamarind": "absorbed",
+    "apple-cider-vinegar": "absorbed",
+    "beer": "cooked off",
+    "oil": "cooking fat",
+    "soy-milk": "absorbed",
+    "vinegar": "absorbed",
+    "water": "absorbed",
+    "worcestershire": "absorbed",
+    "buttermilk": "absorbed",
+    "ghee": "cooking fat",
+    "milk": "absorbed",
+    "bouillon": "dissolved",
+    "tomato-paste": "colours the sauce",
+    "molasses": "absorbed",
+    "vanilla": "absorbed",
+    "agar": "sets the dish",
+    "almond-flour": "baked in",
+    "baking-powder": "baked in",
+    "baking-soda": "baked in",
+    "bread-flour": "baked in",
+    "brown-sugar": "dissolved",
+    "cake-flour": "baked in",
+    "cornmeal": "baked in",
+    "cornstarch": "thickens the sauce",
+    "flour": "baked in",
+    "gelatin": "sets the dish",
+    "rice-flour": "baked in",
+    "yeast": "baked in"
+  }
+}
