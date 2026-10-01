@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recipe generation and editing in Plates</title>
+<style>
+@page { size: A4 landscape; margin: 10mm; }
+body { margin: 0; padding: 16px; background: #fff; }
+svg { width: 100%; height: auto; max-height: calc(100vh - 32px); display: block; margin: 0 auto; }
+</style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1040" font-family="-apple-system, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title description">
+<title id="title">Recipe generation and editing in Plates</title>
+<desc id="description">Implemented generation uses Gemma through PlatesCloud to write recipe text, then Apple Intelligence structures it one line at a time, with Private Cloud Compute only as a context size fallback. Editing plans changes for cook approval, applies them, and checks the recipe up to twice.</desc>
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#344054"/></marker>
+  <style>
+    .lane { stroke:#c8ced8; stroke-width:1; }
+    .laneTitle { font-size:16px; font-weight:700; fill:#344054; }
+    .laneNote { font-size:12px; fill:#667085; }
+    .box { fill:#fff; stroke:#475467; stroke-width:1.4; rx:10; }
+    .local { fill:#edf4ff; stroke:#4674bb; }
+    .cloud { fill:#fff4e5; stroke:#c47a19; }
+    .pcc { fill:#f4edff; stroke:#8056b3; }
+    .edit { fill:#eaf7ef; stroke:#43835a; }
+    .label { font-size:14px; font-weight:600; text-anchor:middle; fill:#202939; }
+    .small { font-size:12px; font-weight:400; text-anchor:middle; fill:#475467; }
+    .arrow { fill:none; stroke:#344054; stroke-width:1.5; marker-end:url(#arrow); }
+    .fallback { fill:none; stroke:#8056b3; stroke-width:1.5; stroke-dasharray:6 5; marker-end:url(#arrow); }
+    .section { font-size:19px; font-weight:700; fill:#1d2939; }
+  </style>
+</defs>
+<rect width="1600" height="1040" fill="#fff"/>
+<text x="28" y="38" font-size="24" font-weight="700" fill="#101828">Recipe generation and editing in Plates</text>
+<text x="28" y="62" font-size="13" fill="#667085">Implemented flow. Gemma writes recipe text; Apple Intelligence structures it and powers recipe edits.</text>
+
+<!-- Generation lanes -->
+<text class="section" x="28" y="108">Write a recipe</text>
+<rect class="lane" x="20" y="125" width="1560" height="250" fill="#f8fafc"/>
+<rect class="lane" x="20" y="375" width="1560" height="145" fill="#fffaf2"/>
+<rect class="lane" x="20" y="520" width="1560" height="160" fill="#f7f3fc"/>
+<text class="laneTitle" x="38" y="157">Cook</text><text class="laneNote" x="38" y="177">iPhone</text>
+<text class="laneTitle" x="38" y="407">PlatesCloud</text><text class="laneNote" x="38" y="427">Gemma through the Plates Worker</text>
+<text class="laneTitle" x="38" y="552">Apple Intelligence</text><text class="laneNote" x="38" y="572">On device, with PCC fallback</text>
+
+<rect class="box" x="190" y="180" width="195" height="76"/>
+<text class="label" x="287" y="207"><tspan x="287">Enter a request</tspan><tspan class="small" x="287" dy="19">Pick ingredients and tools</tspan><tspan class="small" x="287" dy="17">or ignore those picks</tspan></text>
+<rect class="box local" x="430" y="180" width="220" height="76"/>
+<text class="label" x="540" y="205"><tspan x="540">Classify the request</tspan><tspan class="small" x="540" dy="19">Named dish, goals, or open</tspan><tspan class="small" x="540" dy="17">Check if picks can make it</tspan></text>
+<path class="arrow" d="M385 218 H428"/>
+<polygon points="720,169 790,218 720,267 650,218" fill="#fff" stroke="#475467" stroke-width="1.4"/>
+<text class="label" x="720" y="214"><tspan x="720">Write as asked?</tspan><tspan class="small" x="720" dy="18">Named and makeable</tspan></text>
+<path class="arrow" d="M650 218 H648"/>
+<rect class="box" x="835" y="180" width="205" height="76"/>
+<text class="label" x="937" y="207"><tspan x="937">Show five ideas</tspan><tspan class="small" x="937" dy="19">Cook chooses one</tspan><tspan class="small" x="937" dy="17">or asks Jev to choose</tspan></text>
+<path class="arrow" d="M790 218 H833"/>
+<text class="small" x="810" y="207">No</text>
+<rect class="box cloud" x="1100" y="180" width="210" height="76"/>
+<text class="label" x="1205" y="205"><tspan x="1205">Jev picks an idea</tspan><tspan class="small" x="1205" dy="19">Cloud request, daily limit</tspan><tspan class="small" x="1205" dy="17">Worker tracks usage</tspan></text>
+<path class="arrow" d="M1040 218 H1098"/>
+<text class="small" x="1068" y="207">Optional</text>
+<rect class="box cloud" x="1345" y="180" width="200" height="76"/>
+<text class="label" x="1445" y="205"><tspan x="1445">Gemma writes</tspan><tspan class="small" x="1445" dy="19">Recipe in English</tspan><tspan class="small" x="1445" dy="17">From request or selected idea</tspan></text>
+<path class="arrow" d="M720 267 V300 H1445 V258"/>
+<text class="small" x="790" y="294">Yes</text>
+<path class="arrow" d="M937 256 V300 H1445"/>
+<path class="arrow" d="M1310 218 H1343"/>
+
+<rect class="box cloud" x="510" y="405" width="270" height="78"/>
+<text class="label" x="645" y="431"><tspan x="645">Stream plain cookbook text</tspan><tspan class="small" x="645" dy="20">Gemma writes the whole draft</tspan><tspan class="small" x="645" dy="17">Progress preview updates as it arrives</tspan></text>
+<path class="arrow" d="M1445 256 V365 H645 V403"/>
+<rect class="box local" x="875" y="405" width="245" height="78"/>
+<text class="label" x="997" y="431"><tspan x="997">Read the draft in code</tspan><tspan class="small" x="997" dy="20">Split sections and lines</tspan><tspan class="small" x="997" dy="17">Read time and serving count</tspan></text>
+<path class="arrow" d="M780 444 H873"/>
+<rect class="box local" x="1190" y="405" width="300" height="78"/>
+<text class="label" x="1340" y="430"><tspan x="1340">Build the recipe file</tspan><tspan class="small" x="1340" dy="20">Resolve catalog icons and sections</tspan><tspan class="small" x="1340" dy="17">Keep generated text in reader's language</tspan></text>
+<path class="arrow" d="M1120 444 H1188"/>
+
+<rect class="box local" x="510" y="558" width="270" height="82"/>
+<text class="label" x="645" y="584"><tspan x="645">Translate request if needed</tspan><tspan class="small" x="645" dy="20">Apple Intelligence puts cook's words</tspan><tspan class="small" x="645" dy="17">into English for Gemma</tspan></text>
+<path class="arrow" d="M287 256 V337 H480 V599 H508"/>
+<rect class="box local" x="875" y="558" width="290" height="82"/>
+<text class="label" x="1020" y="582"><tspan x="1020">Structure one line per session</tspan><tspan class="small" x="1020" dy="20">Title, ingredients, tools, steps, notes</tspan><tspan class="small" x="1020" dy="17">Translate into the reader's language</tspan></text>
+<path class="arrow" d="M997 483 V525 H1020 V556"/>
+<rect class="box pcc" x="1235" y="558" width="265" height="82"/>
+<text class="label" x="1367" y="584"><tspan x="1367">Retry that pass on PCC</tspan><tspan class="small" x="1367" dy="20">Only after on-device</tspan><tspan class="small" x="1367" dy="17">contextSizeExceeded</tspan></text>
+<path class="fallback" d="M1165 599 H1233"/>
+<text class="small" x="1200" y="588">Fallback</text>
+<path class="arrow" d="M1340 483 V525 H1020 V556"/>
+<path class="fallback" d="M1367 558 V535 H1090 V520"/>
+<text class="laneNote" x="35" y="663">Non-English requests are translated for Gemma. Generation has no final model review; the recipe is structured from Gemma's draft.</text>
+
+<!-- Editing -->
+<text class="section" x="28" y="728">Edit an existing recipe</text>
+<rect class="lane" x="20" y="745" width="1560" height="220" fill="#f8fafc"/>
+<text class="laneTitle" x="38" y="779">Cook and app</text><text class="laneNote" x="38" y="799">Same recipe screen</text>
+<rect class="box" x="190" y="815" width="195" height="78"/>
+<text class="label" x="287" y="842"><tspan x="287">Describe a change</tspan><tspan class="small" x="287" dy="20">Cook's own words</tspan></text>
+<rect class="box edit" x="440" y="815" width="220" height="78"/>
+<text class="label" x="550" y="840"><tspan x="550">Plan changes</tspan><tspan class="small" x="550" dy="20">One to five checklist rows</tspan><tspan class="small" x="550" dy="17">No recipe text changed yet</tspan></text>
+<path class="arrow" d="M385 854 H438"/>
+<rect class="box" x="715" y="815" width="200" height="78"/>
+<text class="label" x="815" y="842"><tspan x="815">Review the plan</tspan><tspan class="small" x="815" dy="20">Apply edits or revise request</tspan></text>
+<path class="arrow" d="M660 854 H713"/>
+<rect class="box edit" x="970" y="815" width="245" height="78"/>
+<text class="label" x="1092" y="840"><tspan x="1092">Apply approved changes</tspan><tspan class="small" x="1092" dy="20">One pass per change</tspan><tspan class="small" x="1092" dy="17">Recipe preview updates</tspan></text>
+<path class="arrow" d="M915 854 H968"/>
+<rect class="box edit" x="1270" y="815" width="260" height="78"/>
+<text class="label" x="1400" y="840"><tspan x="1400">Read recipe back</tspan><tspan class="small" x="1400" dy="20">Fix issues as more checklist rows</tspan><tspan class="small" x="1400" dy="17">At most two review rounds</tspan></text>
+<path class="arrow" d="M1215 854 H1268"/>
+<path class="fallback" d="M550 893 V930 H1092 V895"/>
+<text class="small" x="820" y="925">Planning, edits, and review use on-device Apple Intelligence; PCC is only a context size fallback.</text>
+<text x="28" y="1008" font-size="12" fill="#667085">Every edit is written through to the recipe file as it is applied. A failed read through leaves the recipe as it stands.</text>
+</svg>
+</body>
+</html>

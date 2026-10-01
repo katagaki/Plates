@@ -1,33 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-#if DEBUG
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleURLName</key>
-			<string>com.tsubuzaki.Plates.Debug</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>plates-debug</string>
-			</array>
-		</dict>
-	</array>
-#endif
-	<key>NSSupportsLiveActivities</key>
-	<true/>
-	<key>NSUbiquitousContainers</key>
-	<dict>
-		<key>iCloud.com.tsubuzaki.Plates</key>
-		<dict>
-			<key>NSUbiquitousContainerIsDocumentScopePublic</key>
-			<true/>
-			<key>NSUbiquitousContainerName</key>
-			<string>Plates</string>
-			<key>NSUbiquitousContainerSupportedFolderLevels</key>
-			<string>Any</string>
-		</dict>
-	</dict>
-</dict>
+<dict/>
 </plist>

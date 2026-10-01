@@ -35,6 +35,7 @@ struct MainView: View {
         NavigationStack {
             RecipesGridView(recipes: visibleRecipes, delete: store.delete)
                 .navigationTitle("Recipe.List.Title")
+                .toolbarTitleDisplayMode(.inlineLarge)
                 .navigationDestination(for: Recipe.self) { RecipeDetailView(recipe: $0, store: store) }
                 .searchable(text: $search, prompt: Text("Recipe.List.Search.Prompt"))
                 .overlay {

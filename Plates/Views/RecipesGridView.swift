@@ -7,16 +7,17 @@ struct RecipesGridView: View {
     let recipes: [Recipe]
     let delete: (Recipe) -> Void
 
-    private let columns = [GridItem(.flexible(), spacing: 12), GridItem(.flexible(), spacing: 12)]
+    private let columns = [GridItem(.flexible(), spacing: 16), GridItem(.flexible(), spacing: 16)]
 
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: columns, spacing: 12) {
+            LazyVGrid(columns: columns, spacing: 16) {
                 ForEach(recipes) { recipe in
                     NavigationLink(value: recipe) {
                         RecipeCard(recipe: recipe)
                     }
                     .buttonStyle(.plain)
+                    .simultaneousGesture(DragGesture(minimumDistance: 10))
                     .contextMenu {
                         Button(role: .destructive) {
                             delete(recipe)
@@ -27,7 +28,6 @@ struct RecipesGridView: View {
                 }
             }
             .padding(.horizontal, .listRowInset)
-            .padding(.vertical, 16)
         }
         .background(Color(uiColor: .systemGroupedBackground))
     }
@@ -40,11 +40,11 @@ private struct RecipeCard: View {
     let recipe: Recipe
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 2) {
+        VStack(alignment: .leading, spacing: 6) {
             DishIcon(recipe: recipe, size: 112)
                 .shadow(color: .black.opacity(0.12), radius: 6, y: 3)
                 .frame(maxWidth: .infinity)
-                .padding(.bottom, 10)
+                .padding(.bottom, 6)
             Text(verbatim: recipe.title)
                 .font(.headline)
                 .lineLimit(2, reservesSpace: true)

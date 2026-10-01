@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		E47FE81A3047956D0038302E /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = E47FE8193047956D0038302E /* AppIcon.icon */; };
 		E4B00000000000000000000C /* PlatesActivity.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E4B000000000000000000004 /* PlatesActivity.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		E4D00000000000000000000C /* PlatesChef.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E4D000000000000000000004 /* PlatesChef.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E4C000000000000000000003 /* CulinaryIntelligence in Frameworks */ = {isa = PBXBuildFile; productRef = E4C000000000000000000002 /* CulinaryIntelligence */; };
+		E4D00000000000000000000C /* PlatesChef.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E4D000000000000000000004 /* PlatesChef.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,21 +51,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		E4D000000000000000000011 /* Exceptions for "Shared" folder in "PlatesChef" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				GenerationActivityAttributes.swift,
-			);
-			target = E4D000000000000000000003 /* PlatesChef */;
-		};
-		E4D000000000000000000010 /* Exceptions for "Shared" folder in "PlatesActivity" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				CardStyle.swift,
-				RecipeConfirmationView.swift,
-			);
-			target = E4B000000000000000000003 /* PlatesActivity */;
-		};
 		E47FE90030479ABC0038302E /* Exceptions for "Plates" folder in "Plates" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -84,7 +69,21 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
-				PlatesChef.entitlements,
+			);
+			target = E4D000000000000000000003 /* PlatesChef */;
+		};
+		E4D000000000000000000010 /* Exceptions for "Shared" folder in "PlatesActivity" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				CardStyle.swift,
+				RecipeConfirmationView.swift,
+			);
+			target = E4B000000000000000000003 /* PlatesActivity */;
+		};
+		E4D000000000000000000011 /* Exceptions for "Shared" folder in "PlatesChef" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				GenerationActivityAttributes.swift,
 			);
 			target = E4D000000000000000000003 /* PlatesChef */;
 		};
@@ -226,8 +225,6 @@
 				E4D000000000000000000007 /* Resources */,
 			);
 			buildRules = (
-			);
-			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
 				E4B000000000000000000001 /* Shared */,
@@ -468,8 +465,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Plates/Info.plist;
-				INFOPLIST_PREPROCESS = YES;
-				INFOPLIST_PREPROCESSOR_DEFINITIONS = DEBUG;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -478,6 +473,8 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_PREPROCESS = YES;
+				INFOPLIST_PREPROCESSOR_DEFINITIONS = DEBUG;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -507,7 +504,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Plates/Info.plist;
-				INFOPLIST_PREPROCESS = YES;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -516,6 +512,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_PREPROCESS = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
