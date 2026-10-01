@@ -39,6 +39,10 @@ struct RecipeDetailView: View {
                         .padding(.horizontal, .listRowInset)
                 }
 
+                DishIcon(recipe: recipe, size: 168)
+                    .shadow(color: .black.opacity(0.15), radius: 10, y: 5)
+                    .frame(maxWidth: .infinity)
+
                 summary
                     .padding(.horizontal, .listRowInset)
 

@@ -33,8 +33,8 @@ struct RecipesGridView: View {
     }
 }
 
-/// One recipe at a glance: the title and how long it takes, in white over a blend of the
-/// colours its ingredients are drawn in. Recipe data is shown as written rather than looked up
+/// One recipe at a glance: the dish from above, then the title and how long it takes, in white
+/// over a blend of the colours its ingredients are drawn in. Recipe data is shown as written rather than looked up
 /// in the string catalog.
 private struct RecipeCard: View {
     let recipe: Recipe
@@ -48,6 +48,10 @@ private struct RecipeCard: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 2) {
+            DishIcon(recipe: recipe, size: 76)
+                .shadow(color: .black.opacity(0.18), radius: 6, y: 3)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.bottom, 8)
             Text(verbatim: recipe.title)
                 .font(.headline)
                 .lineLimit(2, reservesSpace: true)

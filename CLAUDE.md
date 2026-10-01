@@ -183,6 +183,28 @@ that exists. The ingredient groups sit on one of two shelves, fresh and pantry, 
 has a picker of its own. Both write into the one ingredient list the model is handed, so the
 split is in the browsing, not in the request.
 
+### Dish icons
+
+A recipe card and the top of the detail view show the finished dish from above, put together
+from drawn parts rather than drawn whole. The parts are vector image sets in
+`Plates/Assets.xcassets/Dishes`: vessels (`DishVesselBowlIndigo`), fills that cover a region of
+the vessel (`DishFillRiceBowl`), and pieces scattered on top (`DishPieceTomatoDiced`). Every
+catalog ingredient that can be seen once a dish is served has one or more variants, named by how
+it is cut or cooked, and the rest are listed as hidden with the reason. What the layout knows
+about each part, its kind, the vessels a fill goes in, a piece's size, count, and tier, and the
+colours it reads as, is in the package's `Resources/DishParts.json`. The parts, the image sets,
+and that file are all written together by the scripts in `Docs/DishIcons`, which also build the
+review sheets every part is checked on; change a part there and export again rather than editing
+an SVG by hand.
+
+`Dish.planned(for:)` works out the dish from the recipe: the grain or the sauce is the food it
+is built on, the vessel follows from that and from the tools, and what is seen on top is read off
+the ingredient icons, the title, and the last step, with the cut read from the recipe's own words
+in English or Japanese. `DishLayout` places the parts on a 96 point canvas, seeded from the
+recipe's `id` so an icon is the same on every launch, and gives a piece an outline when its
+colours sit too close to what it lands on. `DishIcon` draws the placements in a `Canvas`. The
+dish is not written to the recipe file.
+
 The catalog is never inlined into a `@Generable` schema: the on-device model has a 4,096 token
 window, and an `.anyOf` over 369 ingredient names overruns it before the prompt is even added.
 
