@@ -60,15 +60,16 @@ struct DishIcon: View {
     }
 }
 
-/// Dish layouts worked out once a recipe, so a scrolling grid does not plan every dish again on
-/// every frame. A recipe that is edited is a different value and is laid out afresh.
+/// Dish layouts worked out once a recipe, so a scrolling grid does not lay every dish out again on
+/// every frame. A recipe that is edited is a different value and is laid out afresh. A recipe
+/// saved before dishes were written down has its dish worked out here instead.
 @MainActor
 private enum DishIconCache {
     private static var cache: [Recipe: [DishPlacement]] = [:]
 
     static func placements(for recipe: Recipe) -> [DishPlacement] {
         if let cached = cache[recipe] { return cached }
-        let placements = DishLayout.placements(for: Dish.planned(for: recipe), seed: recipe.id)
+        let placements = DishLayout.placements(for: recipe.dish ?? Dish.planned(for: recipe))
         cache[recipe] = placements
         return placements
     }

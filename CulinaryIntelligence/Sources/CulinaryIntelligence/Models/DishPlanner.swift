@@ -6,8 +6,11 @@ extension Dish {
     /// steps, read in English and Japanese. The grain or the sauce becomes the food the dish is
     /// built on, the vessel follows from that and from the tools, and the ingredients that can
     /// still be seen once the dish is served are laid on top, each cut the way the recipe cuts it.
-    public static func planned(for recipe: Recipe) -> Dish {
-        DishPlanner(recipe).dish
+    ///
+    /// The seed picks between the vessels that suit the food and scatters the pieces. It is the
+    /// recipe's `id` the first time, and a fresh one when the cook asks for the icon again.
+    public static func planned(for recipe: Recipe, seed: String? = nil) -> Dish {
+        DishPlanner(recipe, seed: seed ?? recipe.id).dish
     }
 }
 
@@ -25,6 +28,7 @@ private nonisolated struct DishPlanner {
     }
 
     private let recipe: Recipe
+    private let seed: String
     private let entries: [Entry]
     private let assets: Set<String>
     private let tools: Set<String>
@@ -32,8 +36,9 @@ private nonisolated struct DishPlanner {
     private let method: String
     private let finish: String
 
-    init(_ recipe: Recipe) {
+    init(_ recipe: Recipe, seed: String) {
         self.recipe = recipe
+        self.seed = seed
         title = recipe.title.lowercased()
         method = recipe.steps.flatMap { [$0.title] + $0.points }.joined(separator: "\n").lowercased()
         finish = recipe.steps.last.map { ([$0.title] + $0.points).joined(separator: "\n") }?.lowercased() ?? ""
@@ -122,7 +127,7 @@ private nonisolated struct DishPlanner {
     // MARK: Planning
 
     var dish: Dish {
-        var random = SeededRandom(recipe.id)
+        var random = SeededRandom(seed)
         var consumed = Set<String>()
         var fills: [DishLayer] = []
         let soupy = says(Self.soupWords, in: title)
@@ -186,7 +191,7 @@ private nonisolated struct DishPlanner {
         let base = fills.first.map { $0.ingredient }
         let pieces = toppings(on: base, kind: kind, visible: visible, consumed: consumed)
         let vessel = pickVessel(kind: kind, under: fills.first, random: &random)
-        return Dish(vessel: vessel, layers: fills + pieces)
+        return Dish(vessel: vessel, seed: seed, layers: fills + pieces)
     }
 
     /// Sauces that fill a region of their own, most telling first.

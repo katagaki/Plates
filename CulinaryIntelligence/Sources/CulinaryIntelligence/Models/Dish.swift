@@ -2,18 +2,22 @@ import Foundation
 
 /// A finished dish as its icon draws it, seen from above: a vessel, then the ingredients on it
 /// in the order they are laid down. Every layer names one of the drawn variants of a catalog
-/// ingredient, such as `tomato` `diced` or `rice` `bowl`.
-public nonisolated struct Dish: Hashable, Sendable {
+/// ingredient, such as `tomato` `diced` or `rice` `bowl`. The seed is what the pieces are
+/// scattered from, so the icon is drawn the same way every time and redrawing it can give a
+/// fresh arrangement of the same dish.
+public nonisolated struct Dish: Decodable, Hashable, Sendable {
     public var vessel: String
+    public var seed: String
     public var layers: [DishLayer]
 
-    public init(vessel: String, layers: [DishLayer]) {
+    public init(vessel: String, seed: String, layers: [DishLayer]) {
         self.vessel = vessel
+        self.seed = seed
         self.layers = layers
     }
 }
 
-public nonisolated struct DishLayer: Hashable, Sendable {
+public nonisolated struct DishLayer: Decodable, Hashable, Sendable {
     public var ingredient: String
     public var variant: String
     /// How many pieces to scatter, when the part's own count is not wanted.
@@ -141,7 +145,28 @@ extension Dish {
     nonisolated public var drawable: Dish {
         Dish(
             vessel: DishParts.vessels[vessel] == nil ? "plate" : vessel,
+            seed: seed,
             layers: layers.filter { DishParts.part($0.ingredient, $0.variant) != nil }
+        )
+    }
+
+    /// The dish as the recipe file keeps it.
+    public var json: JSONValue {
+        .object([
+            ("vessel", .string(vessel)),
+            ("seed", .string(seed)),
+            ("layers", .array(layers.map(\.json))),
+        ])
+    }
+}
+
+extension DishLayer {
+    public var json: JSONValue {
+        .object(
+            [
+                ("ingredient", JSONValue.string(ingredient)),
+                ("variant", JSONValue.string(variant)),
+            ] + (count.map { [(key: "count", value: JSONValue.number($0))] } ?? [])
         )
     }
 }

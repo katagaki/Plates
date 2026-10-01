@@ -10,6 +10,10 @@ public nonisolated struct Recipe: Decodable, Identifiable, Hashable {
     public var serves: String
     /// Written only when the recipe has been cooked, always as `true`.
     public var tried: Bool?
+    /// The dish the recipe's icon draws, worked out when the recipe is written and again when
+    /// the cook asks for it. The site's schema has no such key; a recipe without one is drawn
+    /// from a dish worked out on the spot.
+    public var dish: Dish?
     public var ingredients: IngredientSections
     public var tools: [Tool]
     public var steps: [Step]
@@ -21,6 +25,7 @@ public nonisolated struct Recipe: Decodable, Identifiable, Hashable {
         time: String,
         serves: String,
         tried: Bool? = nil,
+        dish: Dish? = nil,
         ingredients: IngredientSections,
         tools: [Tool],
         steps: [Step],
@@ -31,6 +36,7 @@ public nonisolated struct Recipe: Decodable, Identifiable, Hashable {
         self.time = time
         self.serves = serves
         self.tried = tried
+        self.dish = dish
         self.ingredients = ingredients
         self.tools = tools
         self.steps = steps

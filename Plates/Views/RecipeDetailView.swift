@@ -39,9 +39,7 @@ struct RecipeDetailView: View {
                         .padding(.horizontal, .listRowInset)
                 }
 
-                DishIcon(recipe: recipe, size: 168)
-                    .shadow(color: .black.opacity(0.15), radius: 10, y: 5)
-                    .frame(maxWidth: .infinity)
+                dishHeader
 
                 summary
                     .padding(.horizontal, .listRowInset)
@@ -176,6 +174,23 @@ struct RecipeDetailView: View {
             .cardBackground()
         }
         .buttonStyle(.plain)
+    }
+
+    /// The dish from above. While the recipe is edited, the dish can be worked out again from
+    /// the recipe as it now stands, which also lays it out afresh.
+    private var dishHeader: some View {
+        VStack(spacing: 12) {
+            DishIcon(recipe: recipe, size: 168)
+                .shadow(color: .black.opacity(0.15), radius: 10, y: 5)
+            if isEditing {
+                Button("Recipe.Edit.RedrawDish", systemImage: "arrow.clockwise") {
+                    recipe.dish = Dish.planned(for: recipe, seed: UUID().uuidString)
+                    save()
+                }
+                .buttonStyle(.bordered)
+            }
+        }
+        .frame(maxWidth: .infinity)
     }
 
     /// Time, servings, and whether it has been cooked, side by side. The cooked mark turns over

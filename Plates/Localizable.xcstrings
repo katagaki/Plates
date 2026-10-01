@@ -1901,6 +1901,24 @@
         }
       }
     },
+    "Recipe.Edit.RedrawDish": {
+      "comment": "Button under the dish icon while a recipe is edited. Works the dish out again from the recipe as it now stands.",
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Redraw Dish"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "料理の絵を描き直す"
+          }
+        }
+      }
+    },
     "Recipe.Edit.Serves.Message": {
       "extractionState": "manual",
       "localizations": {

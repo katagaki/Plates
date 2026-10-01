@@ -21,7 +21,7 @@ public nonisolated struct DishPlacement: Hashable, Sendable {
 /// vessel, two sit side by side, and a cover is laid over the base before it. Pieces are
 /// scattered across the region of the fill they follow without landing on one another, and
 /// garnish is scattered last over everything but what is set in the middle. The scatter is
-/// seeded from the recipe, so an icon comes out the same every time it is drawn.
+/// seeded from the dish, so an icon comes out the same every time it is drawn.
 public nonisolated enum DishLayout {
     public static let canvas: Double = 96
 
@@ -33,10 +33,10 @@ public nonisolated enum DishLayout {
     /// Pieces whose colours all sit closer than this to the surface under them get an outline.
     private static let clash: Double = 18
 
-    public static func placements(for dish: Dish, seed: String) -> [DishPlacement] {
+    public static func placements(for dish: Dish) -> [DishPlacement] {
         let dish = dish.drawable
         guard let vessel = DishParts.vessels[dish.vessel] else { return [] }
-        var random = SeededRandom(seed)
+        var random = SeededRandom(dish.seed)
         var placements = [
             DishPlacement(
                 asset: DishParts.assetName(vessel: dish.vessel), x: canvas / 2, y: canvas / 2,

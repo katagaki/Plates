@@ -33,25 +33,18 @@ struct RecipesGridView: View {
     }
 }
 
-/// One recipe at a glance: the dish from above, then the title and how long it takes, in white
-/// over a blend of the colours its ingredients are drawn in. Recipe data is shown as written rather than looked up
-/// in the string catalog.
+/// One recipe at a glance: the dish from above, then the title and how long it takes, on the
+/// plain card colour so the dish is what carries the colour. Recipe data is shown as written
+/// rather than looked up in the string catalog.
 private struct RecipeCard: View {
     let recipe: Recipe
 
-    @Environment(\.colorScheme) private var scheme
-
-    private static let points: [SIMD2<Float>] = [
-        SIMD2(0, 0), SIMD2(1, 0),
-        SIMD2(0, 1), SIMD2(1, 1),
-    ]
-
     var body: some View {
         VStack(alignment: .leading, spacing: 2) {
-            DishIcon(recipe: recipe, size: 76)
-                .shadow(color: .black.opacity(0.18), radius: 6, y: 3)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.bottom, 8)
+            DishIcon(recipe: recipe, size: 112)
+                .shadow(color: .black.opacity(0.12), radius: 6, y: 3)
+                .frame(maxWidth: .infinity)
+                .padding(.bottom, 10)
             Text(verbatim: recipe.title)
                 .font(.headline)
                 .lineLimit(2, reservesSpace: true)
@@ -65,29 +58,12 @@ private struct RecipeCard: View {
                 Spacer(minLength: 0)
             }
             .font(.caption)
-            .foregroundStyle(.white.opacity(0.85))
+            .foregroundStyle(.secondary)
         }
-        .foregroundStyle(.white)
+        .foregroundStyle(.primary)
         .multilineTextAlignment(.leading)
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(14)
-        .background { blend }
         .cardBackground()
-    }
-
-    /// The ingredient colours poured into the four corners of the card. It covers the card
-    /// background in either appearance, since the title is white and needs the colour behind it
-    /// at full strength. The blend is mixed perceptually, so a red corner meeting a green one
-    /// passes through the colours between them instead of dipping through a dark band the way
-    /// mixing the channels straight does.
-    private var blend: some View {
-        MeshGradient(
-            width: 2,
-            height: 2,
-            points: Self.points,
-            colors: IngredientPalette.colors(for: recipe, in: scheme),
-            colorSpace: .perceptual
-        )
-        .clipShape(.rect(cornerRadius: .listRowCornerRadius, style: .continuous))
     }
 }

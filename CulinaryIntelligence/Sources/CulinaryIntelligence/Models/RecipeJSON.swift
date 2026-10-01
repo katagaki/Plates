@@ -6,6 +6,7 @@ import Foundation
 /// in the shape the site's own files are kept in.
 public nonisolated enum JSONValue {
     case string(String)
+    case number(Int)
     case bool(Bool)
     case object([(key: String, value: JSONValue)])
     case array([JSONValue])
@@ -17,6 +18,8 @@ public nonisolated enum JSONValue {
         switch self {
         case let .string(value):
             return "\"\(JSONValue.escaped(value))\""
+        case let .number(value):
+            return String(value)
         case let .bool(value):
             return value ? "true" : "false"
         case let .object(entries):
@@ -76,6 +79,7 @@ extension Recipe {
             ]
                 // Written only when the recipe has been cooked, always as `true`.
                 + (tried == true ? [(key: "tried", value: JSONValue.bool(true))] : [])
+                + (dish.map { [(key: "dish", value: $0.json)] } ?? [])
                 + [
                     ("ingredients", ingredients.json),
                     ("tools", .array(tools.map(\.json))),

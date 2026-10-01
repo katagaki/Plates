@@ -865,7 +865,7 @@ public final class RecipeGenerator {
         let ingredients = [sections.supermarket, sections.general, sections.optional]
             .compactMap { $0 }
             .flatMap { $0 }
-        return Recipe(
+        var recipe = Recipe(
             id: Recipe.makeID(from: sorted.title),
             title: sorted.title,
             time: sorted.time,
@@ -888,6 +888,8 @@ public final class RecipeGenerator {
                 Troubleshooting(problem: $0.problem.withoutLeakedSyntax, solution: $0.solution.withoutLeakedSyntax)
             }
         )
+        recipe.dish = Dish.planned(for: recipe)
+        return recipe
     }
 
     /// Drops a step that is the step above it written out again. A step that only shares a
