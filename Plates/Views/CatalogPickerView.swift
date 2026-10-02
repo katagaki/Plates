@@ -1,7 +1,7 @@
 import CulinaryIntelligence
 import SwiftUI
 
-/// A grid of catalog icons to tick off, grouped into native list sections, so a cook can pick
+/// A two column grid of catalog cards to tick off, grouped into native list sections, so a cook can pick
 /// what they have instead of typing it. Icon names come back from the catalog already in the
 /// reader's language, so they are shown as they are handed over.
 struct CatalogPickerView: View {
@@ -26,7 +26,7 @@ struct CatalogPickerView: View {
     @State private var query = ""
     @State private var collapsed: Set<String> = []
 
-    private let columns = Array(repeating: GridItem(.flexible(), spacing: 4), count: 3)
+    private let columns = Array(repeating: GridItem(.flexible(), spacing: 8), count: 2)
 
     var body: some View {
         List {
@@ -125,12 +125,14 @@ struct CatalogPickerView: View {
         }
     }
 
+    /// The cards carry their own background, so the row under them is cleared and the cards
+    /// sit on the grouped background like cells of their own.
     private func grid(_ icons: [String]) -> some View {
-        LazyVGrid(columns: columns, spacing: 4) {
+        LazyVGrid(columns: columns, spacing: 8) {
             ForEach(icons, id: \.self) { cell($0) }
         }
-        .padding(.vertical, 2)
-        .listRowInsets(EdgeInsets(top: 2, leading: 4, bottom: 2, trailing: 4))
+        .listRowInsets(EdgeInsets(top: 4, leading: 0, bottom: 4, trailing: 0))
+        .listRowBackground(Color.clear)
     }
 
     private func toggle(_ asset: String) {
@@ -143,32 +145,34 @@ struct CatalogPickerView: View {
 
     private func cell(_ asset: String) -> some View {
         let isPicked = selection.contains(asset)
+        let shape = RoundedRectangle(cornerRadius: 14, style: .continuous)
         return Button {
             toggle(asset)
         } label: {
-            VStack(spacing: 4) {
-                RecipeIcon(path: path(asset), size: 52, outline: isPicked ? .accentColor : nil)
-                    .padding(4)
-                    .overlay(alignment: .topTrailing) {
-                        if isPicked {
-                            Image(systemName: "checkmark.circle.fill")
-                                .font(.title3)
-                                .symbolRenderingMode(.palette)
-                                .foregroundStyle(.white, Color.accentColor)
-                        }
-                    }
+            HStack(spacing: 10) {
+                RecipeIcon(path: path(asset), size: 40)
                 Text(verbatim: IconCatalog.displayName(for: asset))
                     .font(.subheadline)
                     .fontWeight(isPicked ? .semibold : .regular)
                     .lineLimit(2, reservesSpace: true)
-                    .multilineTextAlignment(.center)
+                    .multilineTextAlignment(.leading)
                     .foregroundStyle(isPicked ? Color.accentColor : .primary)
+                    .frame(maxWidth: .infinity, alignment: .leading)
             }
-            .padding(.vertical, 6)
-            .padding(.horizontal, 2)
-            .frame(maxWidth: .infinity, alignment: .top)
+            .padding(.vertical, 8)
+            .padding(.horizontal, 10)
+            .background(
+                isPicked ? AnyShapeStyle(Color.accentColor.opacity(0.15))
+                    : AnyShapeStyle(Color(.secondarySystemGroupedBackground)),
+                in: shape
+            )
+            .overlay {
+                shape.strokeBorder(isPicked ? Color.accentColor : .clear, lineWidth: 2)
+            }
+            .contentShape(shape)
         }
         .buttonStyle(.plain)
+        .accessibilityAddTraits(isPicked ? .isSelected : [])
     }
 }
 
