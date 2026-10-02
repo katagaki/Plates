@@ -195,7 +195,7 @@ struct AskEditRecipeView: View {
 /// first line is the model deciding what to change, the lines under it are what it decided, and
 /// the last is the read through, which adds a line of its own for anything it asks for. The
 /// checklist is only as long as the work turned out to be.
-private struct EditProgressView: View {
+struct EditProgressView: View {
     let progress: EditProgress
 
     var body: some View {

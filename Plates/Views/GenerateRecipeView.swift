@@ -21,6 +21,10 @@ struct GenerateRecipeView: View {
     @State private var decisionsRemaining: Int?
     @State private var isDeciding = false
     @State private var decideError: String?
+    /// Changes the cook asks for once the recipe is written, made before it is saved.
+    @State private var editor = RecipeAskEditor(observer: GenerationActivity.edit)
+    @State private var revision = ""
+    @State private var revisionError: String?
 
     /// Set by a `plates-debug://` link, so a debug run can go from launch to Jev's pick untouched.
     private let startsAtOnce: Bool
@@ -42,7 +46,9 @@ struct GenerateRecipeView: View {
     var body: some View {
         NavigationStack {
             Group {
-                if let draft {
+                if isRevising {
+                    revisionProgress
+                } else if let draft {
                     RecipeConfirmationView(recipe: ConfirmationRecipe(draft)) {
                         DishIcon(recipe: draft, size: 168)
                             .shadow(color: .black.opacity(0.15), radius: 10, y: 5)
@@ -71,11 +77,26 @@ struct GenerateRecipeView: View {
                             store.save(draft, isNew: true)
                             dismiss()
                         }
+                        .disabled(isBusy)
                     } else if !ideas.isEmpty, !isBusy {
                         Button("Generate.Ideas.Edit") { ideas = [] }
                     }
                 }
+                if draft != nil {
+                    ToolbarItem(placement: .bottomBar) { revisionBar }
+                }
             }
+        }
+        .alert(
+            "Edit.Ask.Title",
+            isPresented: Binding(
+                get: { revisionError != nil },
+                set: { if !$0 { revisionError = nil } }
+            )
+        ) {
+            Button("Shared.Done", role: .cancel) {}
+        } message: {
+            Text(verbatim: revisionError ?? "")
         }
         .interactiveDismissDisabled(isBusy)
         // A pass can take a while, and the sheet is not touched while it runs, so the screen
@@ -252,10 +273,67 @@ struct GenerateRecipeView: View {
 
     private var isPlanning: Bool { generator.state == .planning }
 
-    private var isBusy: Bool { isGenerating || isPlanning || isDeciding }
+    private var isRevising: Bool { editor.state == .working }
+
+    private var isBusy: Bool { isGenerating || isPlanning || isDeciding || isRevising }
 
     private var canGenerate: Bool {
         generator.isAvailable && !isBusy && !request.isEmpty
+    }
+
+    // MARK: - Revision
+
+    /// Where the cook asks for changes to the written recipe, in their own words.
+    private var revisionBar: some View {
+        HStack(spacing: 8) {
+            TextField("Edit.Ask.Label", text: $revision, prompt: Text("Edit.Ask.Prompt"))
+                .submitLabel(.send)
+                .onSubmit(revise)
+                .padding(.leading, 12)
+            Button(action: revise) {
+                Label("Edit.Ask.Title", systemImage: "arrow.up")
+                    .labelStyle(.iconOnly)
+            }
+            .buttonStyle(.borderedProminent)
+            .buttonBorderShape(.circle)
+            .disabled(!canRevise)
+        }
+        .frame(maxWidth: .infinity)
+        .disabled(!editor.isAvailable || isBusy)
+    }
+
+    private var revisionProgress: some View {
+        ScrollView {
+            EditProgressView(progress: editor.progress)
+                .padding(.listRowInset)
+                .frame(maxWidth: .infinity, alignment: .leading)
+        }
+        .background(Color(uiColor: .systemGroupedBackground))
+    }
+
+    private var trimmedRevision: String {
+        revision.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+
+    private var canRevise: Bool {
+        editor.isAvailable && !isBusy && !trimmedRevision.isEmpty
+    }
+
+    /// The recipe is not saved yet and comes back to this screen to be read, so the changes the
+    /// editor plans are made without a separate review. A failed change leaves the draft as it was.
+    private func revise() {
+        guard let draft, canRevise else { return }
+        let ask = trimmedRevision
+        Task {
+            await editor.prepare(draft, request: ask)
+            if let revised = await editor.applyApprovedPlan() {
+                self.draft = revised
+                revision = ""
+            } else if case let .failed(message) = editor.state {
+                revisionError = message
+                editor.discardPlan()
+            }
+        }
     }
 
     // MARK: - Ideas
