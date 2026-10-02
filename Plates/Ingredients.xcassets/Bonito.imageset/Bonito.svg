@@ -3,9 +3,9 @@
   <path d="M26 16l3-6 3 5.5Z" fill="#2f3f66"/>
   <path d="M44 25c-4-8-14-11-22-9-5 1-9 4-11 7v2c2 3 6 6 11 7 8 2 18-1 22-7Z" fill="#cdd3da"/>
   <path d="M44 25c-4-8-14-11-22-9-5 1-9 4-11 7v1c10 0 22 0 33 1Z" fill="#2f3f66"/>
-  <g stroke="#55627a" stroke-width="1.5" fill="none" stroke-linecap="round"><path d="M16 26.5c6 .5 12 .5 18 0"/><path d="M17 29c5 .8 10 1 15 .5"/><path d="M20 31.2c4 .5 7 .6 10 .2"/></g>
+  <g stroke="#55627a" stroke-width="1.5" fill="none" stroke-linecap="round"><path d="M19 27c6 .5 12 .5 19 0"/><path d="M21 29.3c5 .6 10 .6 15 0"/><path d="M24 31.2c3 .4 6 .4 9 0"/></g>
   <g fill="#e3c35a"><path d="M14 21.5l1.5-1 .5 1.5Z"/><path d="M17 20l1.5-1 .5 1.5Z"/><path d="M14 26.5l1.5 1 .5-1.5Z"/><path d="M17 28l1.5 1 .5-1.5Z"/></g>
   <path d="M36 20c-2 3-2 7 0 10" stroke="#55627a" stroke-width="1.1" fill="none"/>
-  <path d="M33 26c-3 1-5 3-6 5 3-1 5-2 6-5Z" fill="#2f3f66"/>
+  <path d="M34 25c-3 .5-5 2-6 3.5 3-.3 5-1.5 6-3.5Z" fill="#2f3f66"/>
   <circle cx="39.5" cy="23" r="1.7" fill="#121a26"/>
 </svg>

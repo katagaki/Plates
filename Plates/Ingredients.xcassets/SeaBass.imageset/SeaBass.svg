@@ -6,7 +6,7 @@
   <path d="M44 24c-3-6-11-8-19-7.5-6 .5-11 3-14 6v1c11-.5 22-.5 33 .5Z" fill="#6b7782"/>
   <path d="M13 24c9-1.5 18-2.5 24-2.5" stroke="#9aa4ad" stroke-width="1.1" fill="none" stroke-linecap="round"/>
   <path d="M35 18.5c-2.5 3.5-2.5 8 0 11.5l-2 1" stroke="#8a949d" stroke-width="1.1" fill="none" stroke-linejoin="round"/>
-  <path d="M44 24.5l-5 1.5" stroke="#4d5760" stroke-width="1.1" stroke-linecap="round"/>
+  <path d="M43.3 24.7l-3.3 1" stroke="#4d5760" stroke-width="1.1" stroke-linecap="round"/>
   <path d="M30 26c-3 1-4.5 3-5 5 2.5-1 4-2.5 5-5Z" fill="#a3adb6"/>
   <circle cx="39.5" cy="21.5" r="1.8" fill="#2b3238"/>
 </svg>
