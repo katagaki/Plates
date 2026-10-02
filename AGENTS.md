@@ -20,72 +20,230 @@ folder or in iCloud Drive depending on what the user picks in the ellipsis menu.
   constructions, no rule-of-three padding.
 - Write ranges with the word "to", never a dash.
 
-## Layout
+## Targets
 
-- `Plates/Models` holds `Recipe` and the icon catalog. Files are read through `Decodable` and
-  written by hand in `RecipeJSON`, because `JSONEncoder` hands its keys back in whatever order
-  its own storage holds them. Property order is the key order written back to disk, so keep the
-  properties and `Recipe.json` matching the schema and each other. A step carries a title, the
-  icons it works with, and its points. It has no hint or image, which is where the
-  file shape parts from the site's.
-- `Plates/Storage` holds the storage location and the file-backed `RecipeStore`.
-- `Plates/Intelligence` holds the Apple Intelligence `@Generable` types and the generator. The
-  recipe is written in five passes, each in its own session, so no one request carries the whole
-  recipe. The first pass picks the ingredients and pins each to a catalog icon, so every later
-  pass works from a list that already exists. The outline pass asks for the prep and the cooking
-  as two lists and joins them, so prep landing before heat is the shape of the answer rather than
-  something a prompt has to win each time, and a title the model writes twice is dropped on sight
-  through `Step.comparable`. A pass runs on device first, and only a pass the
-  on-device model rejects with `contextSizeExceeded` is run again on
-  `PrivateCloudComputeLanguageModel`. Keep passes small enough that the cloud stays a fallback.
-  That fallback, the background time a pass runs in, and whether the model is there at all are
-  written down once in `ModelPasses`, which both the generator and the editor run through. A last
-  pass reads the written recipe back and says what does not hold up, as a plan in the shape
-  `RecipeAskEditor` carries out, so a fix is made by the same passes a cook's own request goes
-  through. The fixed recipe is read back again, until nothing is left to fix or the loop has been
-  round twice. A read through that fails leaves the recipe as it stands rather than losing it.
-- `RecipeAskEditor` rewrites a recipe the cook already has, from a request in their own words.
-  It asks twice over: once for a plan of what to change, then once for each change on that plan,
-  each in its own session and given only the recipe and the one change to make. The plan is what
-  the progress screen lists, so its rows are as many as the work turned out to be rather than
-  fixed the way a generation's are. Changes to the recipe as a whole are made first and step
-  changes from the last step back, so adding or dropping a step never moves one that a later
-  change is counting on. A rewrite ends the way a generation does, with a read through: the
-  recipe is checked against what the cook asked for and against itself, and whatever that finds
-  is made as more rows on the same checklist. Both read throughs come back as
-  `GeneratedRecipeReview`, which is a plan in the shape the editor already carries out. Every
-  other pass reads the method as step titles; the read through after an edit is the one pass
-  handed the steps written out, because whether a recipe makes sense is in what the steps say.
-  It is the largest prompt the app sends, and on the bundled recipes it runs around 600 tokens,
-  so the cloud stays a fallback.
-- `Plates/Views` holds the list, detail, generation, editing, and sharing views. Writing a recipe
-  and rewriting one show the same progress screen: a checklist of the work, and under it
-  `RecipePreview`, the recipe as it stands at that moment. The detail
-  view turns into the editor in place, so a recipe is read and written on the one screen, and
-  every edit is written straight to the file rather than kept until the editor is left. The
-  catalog picker the generation view browses is the same one the editor picks into, pointed at
-  one of the recipe's own lists. Sharing writes the recipe to the temporary folder as a
-  `.plate` file, which is its JSON, as a picture, or as letter sized pages whose text stays
-  text: the pages are packed block by block, each measured first, so nothing is cut in half.
-- `Shared` holds `GenerationActivityAttributes`, the one file both the app and the widget
-  extension compile. The app localizes every string before it goes into the activity state, so
-  the extension never looks a key up and carries no strings of its own.
+- `Plates` is the app, bundle identifier `com.tsubuzaki.Plates`.
+- `CulinaryIntelligence` is a local Swift package holding everything that is not a view: the
+  models, the writer, the generator and the editor, and the PlatesCloud client. The app links it
+  as its one package product and imports it wherever it touches a recipe. The package's code
+  runs on the main actor by default in Swift 5 mode, as the app's does, and what the app uses
+  is `public`.
 - `PlatesActivity` is the widget extension holding the Live Activity, bundle identifier
   `com.tsubuzaki.Plates.Seasoning`. The app embeds it and declares `NSSupportsLiveActivities`.
+- `PlatesChef` is the share extension, bundle identifier `com.tsubuzaki.Plates.Chef`, that
+  imports a recipe from a web page. See [Importing from the web](#importing-from-the-web).
+- `Shared` holds the files more than one target compiles: `GenerationActivityAttributes`,
+  `RecipeConfirmationView`, and `CardStyle`. The app localizes every string before it goes into
+  the activity state, so the widget extension never looks a key up and carries no strings of
+  its own.
+- `Plates` also holds `Info.plist` and `Plates.entitlements`. They sit in the synchronized
+  group, so the target lists them as membership exceptions to keep them out of the bundle's
+  resources.
+
+## Layout
+
+Package paths below are under `CulinaryIntelligence/Sources/CulinaryIntelligence`.
+
+- `Models` holds `Recipe`, `RecipeList`, the icon catalog, and the dish icon planner and layout.
+  Files are read through `Decodable` and written by hand in `RecipeJSON`, because `JSONEncoder`
+  hands its keys back in whatever order its own storage holds them. Property order is the key
+  order written back to disk, so keep the properties and `Recipe.json` matching the schema and
+  each other. A step carries a title, the icons it works with, and its points. It has no hint or
+  image, and a recipe may carry a `dish`, which is where the file shape parts from the site's.
+  The public types carry hand written `public` initializers, since Swift does not make a
+  memberwise one public.
+- `Writer` holds `WrittenRecipe` and `Measures`, which read what Gemma wrote before any model
+  sorts it.
+- `Intelligence` holds the Apple Intelligence `@Generable` types, `ModelPasses`, the generator,
+  and the editor. The generator and the editor report their progress to a `RunObserver` the app
+  hands in, so the package never imports ActivityKit.
+- `Cloud` holds `PlatesCloud`, the client for the Worker.
+- `Plates/Storage` holds the storage location, the file-backed `RecipeStore`, and
+  `SharedRecipeInbox`.
+- `Plates/Activity/GenerationActivity` is the app's `RunObserver`, and runs the Live Activity.
+- `Plates/Views` holds the list, detail, generation, editing, limits, and sharing views.
+  `Plates/Views/Onboarding` holds `OnboardingView`, laid out the way SakuraRSS's is: one file
+  per step.
 - `Plates/SampleRecipes` holds the recipes bundled with the app for the "Add Sample Recipes"
   menu item. Recipe text is not looked up in the string catalog, so each sample is written out
   once per language in its own `.lproj` folder, `en-US.lproj` and `ja.lproj`, under the same
   file name and the same `id`. `addSampleRecipes` copies the reader's language only, and the
   shared `id` means switching languages does not add a second copy of a recipe already saved.
-- `Plates` also holds `Info.plist` and `Plates.entitlements`. They sit in the synchronized
-  group, so the target lists them as membership exceptions to keep them out of the bundle's
-  resources.
+- `Docs/recipe-flow.html` lays out how a recipe is written and rewritten, end to end.
+
+## PlatesCloud
+
+`PlatesCloud` talks to the Worker in `../PlatesCloud` (github.com/katagaki/PlatesCloud). The
+Worker runs Google's Gemma 4 26B A4B on Workers AI behind an OpenAI Chat Completions endpoint,
+capped at 1,400 tokens, and asks TypeSafe's Jev to pick an idea when the cook taps Decide for
+Me.
+
+- Its address is `PlatesCloudAddress.url`, empty in the repository.
+  `ci_scripts/ci_pre_xcodebuild.sh` writes Xcode Cloud's `PLATES_CLOUD_URL` environment
+  variable into it before the build, and a build without it says it has no recipe writer. For a
+  local build against the Worker, run the script with `PLATES_CLOUD_URL` and
+  `CI_PRIMARY_REPOSITORY_PATH` set, and do not commit the result.
+- Every request is signed with App Attest. The first request makes a key, attests it against a
+  challenge from the Worker, and keeps its ID in the Keychain, and each request after that
+  carries an assertion over the SHA-256 of its body. A key the Worker no longer knows is dropped
+  and made again once.
+- App Attest does not run in Simulator, so a debug build there sends its requests unsigned to
+  `http://localhost:8787`, where `npm run dev` in `../PlatesCloud` answers them when its
+  `.dev.vars` sets `SKIP_APP_ATTEST=true`.
+- Debug builds register `plates-debug://generate?request=...&decide=true`, which opens the
+  recipe sheet and writes the request at once, with `decide` letting Jev pick from the ideas.
+  Release builds do not list the scheme: `Info.plist` is preprocessed, and only Debug defines
+  `DEBUG`.
+- The Worker keeps the daily limits, Decide for Me included, so the app only shows what it is
+  told is left. `LimitsView`, opened from the ellipsis menu, reads all of them from the
+  Worker's `/v1/limits`.
+
+## Writing a recipe
+
+There is no model to choose. Gemma writes on Cloudflare and Apple Intelligence sorts on the
+device, falling back to Private Cloud Compute. Every step below is shaped by what the evals on
+the Mac showed.
+
+### Planning
+
+Before a recipe is written, `RecipeGenerator.plan` sorts the request on device into a named
+dish, goals ("high protein with noodles"), or an open request ("something easy tonight").
+
+- A dish with nothing picked is written straight away. So is a dish the cook's picks can make,
+  but a dish built on a starch (pasta, rice, noodles, bread) the picks do not have cannot be:
+  asked whether the picks can make it, the model said yes to a tomato pasta with no pasta in
+  them, so the starch is read on its own and checked against the picks in code.
+- Anything else gets five ideas from Gemma through the Worker's `/v1/ideate`, which counts them
+  against their own daily limit rather than the recipes'. They come one a line, read by
+  `ideaLines` and put into the reader's language by a sorting pass each. Open requests ask for
+  the easiest dishes first.
+- The cook picks an idea, or taps Decide for Me, which sends the request, the picks, and
+  Gemma's English for the ideas to Jev through the Worker, a hundred times a day per device. A
+  set of ideas carries a request ID, so a retried pick is answered from the first one and not
+  counted again. The picked idea is written from Gemma's own English for it.
+
+### Gemma writes
+
+- Gemma writes in English, always. Granite, the model the evals ran before it, got the cooking
+  right in English and badly wrong in Japanese, so its instructions, the house style it is
+  given, and the names of the cook's picks are read from the English catalog through
+  `String(culinaryEnglish:)` in every locale. Those keys still carry Japanese values, marked in
+  their comments as never sent.
+- A request the cook typed in anything but plain ASCII is put into English by Apple
+  Intelligence first. Granite read "卵チャーハン" as egg curry.
+- A cook's picks are what they have, not what the dish needs. Gemma is told to choose only
+  what the dish needs and to list only what its method uses, and `withoutUnusedPicks` drops any
+  ingredient line naming a pick, or any pan, pot, or appliance line naming a picked tool, that
+  no step mentions. What Gemma added on its own, anything "to taste", and utensils such as
+  knives and boards, which a method seldom names, are kept.
+
+### Code reads
+
+- `WrittenRecipe` cuts Gemma's text into its sections in code. The time and the serving count
+  are read out of it there, through `Recipe.minutes(in:)` and the figures in the line, because
+  a model read "1 hour 20 minutes" as two hours.
+- `Measures` converts cups, ounces, pounds, inches, and Fahrenheit to metric for a reader
+  outside the US, and writes spoon measures and "to taste" the Japanese way for a Japanese
+  reader, before any model sees the line. A model asked to convert got half a cup wrong.
+
+### Apple Intelligence sorts
+
+- Apple Intelligence sorts one line at a time, each in its own session: the title, every
+  ingredient, every tool, every step, every problem. Given a whole list, it dropped lines,
+  merged steps, and filled the gaps from the troubleshooting, even with the count fixed by a
+  `DynamicGenerationSchema`; given one line, it has nothing else to draw on. When a section
+  cannot be split into lines, it is sorted from the whole text with a ranged
+  `DynamicGenerationSchema` instead.
+- A step comes back as one piece of text and is cut into sentences with `NLTokenizer`, so there
+  are no slots to pad.
+- Every sorting pass has a response token limit: one ran on past seven thousand tokens,
+  overran the window, and was taken for a request too large for the device. A line that fails
+  is retried with a growing wait, since the usual failure is the system rate limiting a run in
+  the background.
+- The sorting passes are not given the house style: they sorted its cooking rules into the
+  method as steps. `Generate.Prompt.Structure` carries the wording rules and the language
+  instead, and in Japanese, how to translate.
+- What code can read off Gemma's English line, code decides rather than the pass. An
+  ingredient's icon is the longest run of the line's words the catalog knows (measure words
+  such as "cloves" skipped), whether an ingredient or a tool is optional is whether the line
+  says so, and a figure the pass wrote without its metric unit gets the unit back. When the
+  line names a catalog ingredient, the pass is handed the catalog's name for it, so "frozen
+  peas" is not translated as green peppers.
+- Text a sorting pass returns goes through `withoutLeakedSyntax`, because the on-device model
+  sometimes runs past a Japanese string into `」} ```json{` or a `<ctrl46>` token, and then
+  through `Measures.tidied`, which puts a spoon measure written back as "2大さじ" right and
+  writes every range with "to", or から in Japanese.
+- A generation has no read through at the end. It had one, and once the sorting was faithful
+  line for line, the read through was what made recipes wrong: it rewrote whole lists, dropping
+  and duplicating lines and adding ones Gemma never wrote.
+
+### Model passes
+
+An Apple pass runs on device first, and only a pass the on-device model rejects with
+`contextSizeExceeded` is run again on `PrivateCloudComputeLanguageModel`. That fallback, the
+background time a pass runs in, and whether the model is there at all are written down once in
+`ModelPasses`, which both the generator and the editor run through.
+
+## Rewriting a recipe
+
+`RecipeAskEditor` rewrites a recipe the cook already has, from a request in their own words.
+
+- It asks twice over: once for a plan of what to change, then once for each change on that
+  plan, each in its own session and given only the recipe and the one change to make. The plan
+  is what the progress screen lists, so its rows are as many as the work turned out to be
+  rather than fixed the way a generation's are.
+- Changes to the recipe as a whole are made first and step changes from the last step back, so
+  adding or dropping a step never moves one that a later change is counting on.
+- A rewrite ends with a read through: the recipe is checked against what the cook asked for
+  and against itself, and whatever that finds is made as more rows on the same checklist. It
+  comes back as `GeneratedRecipeReview`, which is a plan in the shape the editor already
+  carries out.
+- Every other pass reads the method as step titles; the read through is the one pass handed the
+  steps written out, because whether a recipe makes sense is in what the steps say. It is the
+  largest prompt the app sends, and on the bundled recipes it runs around 600 tokens, so the
+  cloud stays a fallback.
+
+## Views
+
+- A new install is shown `OnboardingView` until `Onboarding.Completed` is set: what Plates
+  does, then a dish to write the first recipe from, which opens the recipe sheet with it filled
+  in, or a skip straight into the app.
+- The recipe sheet shows the ideas, when there are some, between the request and the progress
+  screen, with Decide for Me under them.
+- Writing a recipe and rewriting one show the same progress screen: a checklist of the work,
+  and under it `RecipePreview`, the recipe as it stands at that moment. While Gemma writes, the
+  preview is its text as it streams in, a finished line at a time and one `Text` a paragraph.
+- The detail view turns into the editor in place, so a recipe is read and written on the one
+  screen, and every edit is written straight to the file rather than kept until the editor is
+  left.
+- The catalog picker the generation view browses is the same one the editor picks into,
+  pointed at one of the recipe's own lists.
+- Sharing writes the recipe to the temporary folder as a `.plate` file, which is its JSON, as a
+  picture, or as letter sized pages whose text stays text: the pages are packed block by block,
+  each measured first, so nothing is cut in half.
+
+## Importing from the web
+
+`PlatesChef` is a share extension for Safari and any app that shares a URL.
+
+- `PagePreprocessing.js` hands over the page's URL and its `application/ld+json` scripts.
+- `RecipePageLoader` tries, in order: a One-Pan Food recipe file or page (found through the
+  site's `recipes/index.json`), the shared JSON-LD, the page downloaded plainly, and last,
+  `RecipeWebPage`, which loads the page in a hidden web view for sites that only write their
+  recipe data once their scripts run or that turn away a plain download.
+  `RecipePageParser` reads a schema.org `Recipe` into a `ChefRecipe`.
+- The cook confirms it in `RecipeConfirmationView`, shared with the app, and can correct it
+  before adding it. The extension cannot reach the recipe folder, so it writes the recipe into
+  `PendingRecipes` in the `group.com.tsubuzaki.Plates` app group, and
+  `RecipeStore.importSharedRecipes` moves it into the chosen storage location through
+  `SharedRecipeInbox`, matching its ingredients to catalog icons. A file that fails to save
+  stays in the inbox for the next launch.
 
 ## Icons
 
-Every SVG lives in `Plates/Assets.xcassets`: ingredient icons in `Ingredients` and tool icons
-in `Tools`. The site's step illustrations are not shipped. They are asset catalog vector images
-with `preserves-vector-representation`.
+Ingredient icons live in `Plates/Ingredients.xcassets` and tool icons in
+`Plates/Tools.xcassets`. The site's step illustrations are not shipped. They are asset catalog
+vector images with `preserves-vector-representation`.
 
 Asset catalog items are always Pascal cased, including the SVG file inside the image set:
 `SpringOnion.imageset/SpringOnion.svg`. Recipe files stay kebab cased because that is the
@@ -103,13 +261,56 @@ split is in the browsing, not in the request.
 The catalog is never inlined into a `@Generable` schema: the on-device model has a 4,096 token
 window, and an `.anyOf` over 369 ingredient names overruns it before the prompt is even added.
 
+### Dish icons
+
+A recipe card and the top of the detail view show the finished dish from above, put together
+from drawn parts rather than drawn whole.
+
+- The parts are vector image sets in `Plates/Dishes.xcassets`: vessels
+  (`DishVesselBowlIndigo`), fills that cover a region of the vessel (`DishFillRiceBowl`), and
+  pieces scattered on top (`DishPieceTomatoDiced`). Every catalog ingredient that can be seen
+  once a dish is served has one or more variants, named by how it is cut or cooked, and the
+  rest are listed as hidden with the reason.
+- What the layout knows about each part, its kind, the vessels a fill goes in, a piece's size,
+  count, and tier, and the colours it reads as, is in the package's `Resources/DishParts.json`.
+- The parts, the image sets, and that file are all written together from
+  `Assets/DishIcons/Parts`. Run `swift sync.swift` from `Assets/DishIcons` after changing a
+  prepared part. `swift contrast.swift` checks piece colours against the test surfaces. The
+  Python drawing catalog in that folder still generates the prepared SVGs and review sheets;
+  run `python3 export.py` after changing a drawn shape.
+- `Dish.planned(for:)` works out the dish from the recipe: the grain or the sauce is the food
+  it is built on, the vessel follows from that and from the tools, and what is seen on top is
+  read off the ingredient icons, the title, and the last step, with the cut read from the
+  recipe's own words in English or Japanese. A piece that is one whole thing, such as a fried
+  egg or a sausage, carries the most the dish has room for, and is drawn as many times as the
+  ingredient's amount says, so one egg is one egg; when the amount gives no number, it is drawn
+  its usual count.
+- The dish is worked out when the recipe is written and again when the cook asks for it, and
+  saved in the recipe's `dish` key. A recipe without one is drawn from a dish worked out on the
+  spot.
+- `DishLayout` places the parts on a 96 point canvas, seeded from the recipe's `id` so an icon
+  is the same on every launch, and gives a piece an outline when its colours sit too close to
+  what it lands on. `DishIcon` draws the placements in a `Canvas`.
+
 ## Localization
 
-All user-facing text goes through `Plates/Localizable.xcstrings`, with English (US) as the
-source language and the project's development region set to `en-US`. Japanese is the second
-language, listed in the project's `knownRegions` as `ja`. Every key carries both, so a key added
-without a Japanese value is unfinished. Japanese copy follows the same plain style, written in
-です・ます.
+All user-facing text goes through a string catalog, with English (US) as the source language
+and the project's development region set to `en-US`. Japanese is the second language, listed
+in the project's `knownRegions` as `ja`. Every key carries both, so a key added without a
+Japanese value is unfinished. Japanese copy follows the same plain style, written in です・ます.
+
+There are three catalogs:
+
+- `Plates/Localizable.xcstrings` holds what the app's views say.
+- `PlatesChef/Localizable.xcstrings` holds what the share extension says.
+- `CulinaryIntelligence/Sources/CulinaryIntelligence/Resources/Localizable.xcstrings` holds what
+  the package says: every prompt, the pass titles the Live Activity shows, the errors, and the
+  icon names. Package code reads its own catalog through `String(culinary:)` and
+  `LocalizedStringResource(culinary:)`, never `String(localized:)`, which would look in the
+  app's. A key both a view and the package use, such as `Edit.Progress.Planning`, is kept in
+  both.
+
+Rules:
 
 - Keys are dot notated and Pascal cased by segment, from broad to narrow:
   `Recipe.Detail.Ingredients.Supermarket`, `Menu.Sort.TriedOnly`, `Shared.Cancel`. Never write
@@ -119,17 +320,17 @@ without a Japanese value is unfinished. Japanese copy follows the same plain sty
   `String(format: String(localized: "Key"), ...)` with positional specifiers such as `%1$@`.
 - Recipe data is not localized. Titles, amounts, steps, and error text from the system are
   shown with `Text(verbatim:)` so they are never looked up as keys. A generated recipe is
-  written in the reader's language because the prompts are, not because it is translated after
-  the fact.
+  written in the reader's language because the sorting prompts are, not because it is
+  translated after the fact.
 - Every catalog icon carries its own name key, `Ingredient.Name.SpringOnion` and
   `Tool.Name.CuttingBoard`, read through `IconCatalog.displayName(for:)`. The key is built at
-  runtime from the asset name, so the entries are kept in the string catalog by hand with
-  `extractionState` set to `manual`, and adding an icon means adding its name in both
+  runtime from the asset name, so the entries are kept in the package's string catalog by hand
+  with `extractionState` set to `manual`, and adding an icon means adding its name in both
   languages.
-- Everything the model is given is a key too, under `Generate.Prompt.`, `Generate.Lookup.`,
-  and `Edit.Prompt.`, down to the comma a list is joined with. Only the `@Generable` schema descriptions stay in
-  English: they are the shape of the answer, not the prompt, and the house style tells the
-  model which language to write in.
+- Everything a model is given is a key too, Gemma's prompt included, under
+  `Generate.Prompt.`, `Generate.Lookup.`, and `Edit.Prompt.`, down to the comma a list is
+  joined with. Only the `@Generable` schema descriptions stay in English: they are the shape of
+  the answer, not the prompt, and the house style tells the model which language to write in.
 - A recipe's `time` is stored as the model wrote it and shown through `Recipe.formattedTime`,
   which reads the minute count out of it and formats it with `Duration.UnitsFormatStyle`, so
   "25 min" is read as "25分" in Japanese.
