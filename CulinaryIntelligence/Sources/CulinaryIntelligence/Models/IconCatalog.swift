@@ -29,8 +29,7 @@ public nonisolated enum IngredientCategory: String, CaseIterable, Identifiable, 
     }
 
     /// The ingredient assets in this group. The picker shows them alphabetically by the name the
-    /// reader sees, except the sauces, which keep this order and run by cuisine so a shelf of
-    /// them reads the way a cook reaches for them.
+    /// reader sees.
     public var icons: [String] {
         switch self {
         case .vegetables:
@@ -1218,12 +1217,9 @@ public nonisolated enum IconCatalog {
 
     // MARK: - Ordering
 
-    /// Each ingredient group in the order its picker shows it, worked out once. The sauces
-    /// keep their cuisine order.
+    /// Each ingredient group in the order its picker shows it, worked out once.
     private static let ingredientOrder: [IngredientCategory: [String]] = IngredientCategory.allCases
-        .reduce(into: [:]) { table, category in
-            table[category] = category == .sauces ? category.icons : sortedByName(category.icons)
-        }
+        .reduce(into: [:]) { table, category in table[category] = sortedByName(category.icons) }
 
     /// Each tool group in the order its picker shows it, worked out once.
     private static let toolOrder: [ToolCategory: [String]] = ToolCategory.allCases
