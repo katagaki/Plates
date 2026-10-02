@@ -73,6 +73,9 @@ of the evals, so do not undo one without running them again.
   and an `.anyOf` over every ingredient name overruns it on its own.
 - Keep passes small enough that Private Cloud Compute stays a fallback for
   `contextSizeExceeded`, not the usual path.
+- Jev says whether a seasoning, aromatic, or optional line can be seen on the served dish, one
+  question per line, and a line under 0.6 is left off the icon. The title and the last step
+  only decide when the Worker cannot be reached.
 
 ## Icons
 

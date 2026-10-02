@@ -12,6 +12,25 @@ extension Dish {
     public static func planned(for recipe: Recipe, seed: String? = nil) -> Dish {
         DishPlanner(recipe, seed: seed ?? recipe.id).dish
     }
+
+    /// The dish, with Jev asked which of the seasonings, aromatics, and optional lines can be
+    /// seen once it is served. The words of the title and the last step only say so when the
+    /// recipe happens to name the line there. When the Worker cannot be reached, they decide.
+    @MainActor
+    public static func asked(for recipe: Recipe, seed: String? = nil) async -> Dish {
+        let planner = DishPlanner(recipe, seed: seed ?? recipe.id)
+        let questions = planner.questions
+        guard !questions.isEmpty,
+              let answers = try? await PlatesCloud.shared.toppings(
+                  dish: recipe.title,
+                  steps: recipe.steps.map { (title: $0.title, points: $0.points) },
+                  ingredients: questions.map { String($0.line.prefix(300)) }
+              ),
+              answers.count == questions.count
+        else { return planner.dish }
+        let seen = Dictionary(zip(questions.map(\.asset), answers.map { $0 >= DishPlanner.seenAbove }), uniquingKeysWith: { $0 || $1 })
+        return DishPlanner(recipe, seed: seed ?? recipe.id, seen: seen).dish
+    }
 }
 
 private nonisolated struct DishPlanner {
@@ -19,6 +38,8 @@ private nonisolated struct DishPlanner {
         let asset: String
         let section: Section
         let amount: String
+        /// The line as the recipe writes it, with its note, for asking whether it can be seen.
+        let line: String
         /// The entry's own words and every step point that names it, lowercased, for reading
         /// how it is cut.
         let text: String
@@ -36,10 +57,18 @@ private nonisolated struct DishPlanner {
     private let title: String
     private let method: String
     private let finish: String
+    /// Whether an ingredient the words cannot settle can be seen on the served dish, as Jev
+    /// answered it, by catalog name.
+    private let seen: [String: Bool]
 
-    init(_ recipe: Recipe, seed: String) {
+    /// How sure Jev has to be that an ingredient can be seen before it is drawn. Pepper on
+    /// carbonara comes back near 0.9 and pepper seasoned into fried rice near 0.3.
+    static let seenAbove = 0.6
+
+    init(_ recipe: Recipe, seed: String, seen: [String: Bool] = [:]) {
         self.recipe = recipe
         self.seed = seed
+        self.seen = seen
         title = recipe.title.lowercased()
         method = recipe.steps.flatMap { [$0.title] + $0.points }.joined(separator: "\n").lowercased()
         finish = recipe.steps.last.map { ([$0.title] + $0.points).joined(separator: "\n") }?.lowercased() ?? ""
@@ -59,7 +88,8 @@ private nonisolated struct DishPlanner {
                 let mentions = points.filter { !item.isEmpty && $0.contains(item) }
                 let text = ([ingredient.item, ingredient.amount, ingredient.note ?? ""].map { $0.lowercased() } + mentions)
                     .joined(separator: "\n")
-                entries.append(Entry(asset: asset, section: section, amount: ingredient.amount, text: text))
+                let line = [ingredient.item, ingredient.note].compactMap { $0?.isEmpty == false ? $0 : nil }.joined(separator: ", ")
+                entries.append(Entry(asset: asset, section: section, amount: ingredient.amount, line: line, text: text))
             }
         }
         self.entries = entries
@@ -127,12 +157,27 @@ private nonisolated struct DishPlanner {
 
     // MARK: Planning
 
+    /// The lines that are drawn only when they can be seen on the dish as it is served, which
+    /// the words of the recipe can only guess at.
+    var questions: [(asset: String, line: String)] {
+        entries.filter { isDrawable($0) && isUnsettled($0) }.map { ($0.asset, $0.line) }
+    }
+
+    private func isDrawable(_ entry: Entry) -> Bool {
+        !DishParts.isHidden(entry.asset) && !DishParts.variants(of: entry.asset).isEmpty
+    }
+
+    /// Seasonings, aromatics, and optional lines, which go into most dishes unseen.
+    private func isUnsettled(_ entry: Entry) -> Bool {
+        entry.section == .optional || IconCatalog.shelf(of: entry.asset) == .pantry || Self.aromatics.contains(entry.asset)
+    }
+
     var dish: Dish {
         var random = SeededRandom(seed)
         var consumed = Set<String>()
         var fills: [DishLayer] = []
         let soupy = says(Self.soupWords, in: title)
-        let visible = entries.filter { !DishParts.isHidden($0.asset) && !DishParts.variants(of: $0.asset).isEmpty }
+        let visible = entries.filter(isDrawable)
 
         // The food the dish is built on.
         let grain = visible.first { $0.section == .main && isGrain($0.asset) && hasFill($0.asset) }
@@ -279,11 +324,10 @@ private nonisolated struct DishPlanner {
         let onBread = ["bread", "egg", "tofu", "yogurt", "tortilla", "pita"].contains(base ?? "")
 
         for entry in visible where !consumed.contains(entry.asset) {
-            let shown = named(entry.asset, in: title) || named(entry.asset, in: finish)
-            let pantry = IconCatalog.shelf(of: entry.asset) == .pantry
-            if entry.section == .optional || pantry || Self.aromatics.contains(entry.asset) {
+            if isUnsettled(entry) {
+                let shown = named(entry.asset, in: title) || named(entry.asset, in: finish)
                 let butterOnBread = entry.asset == "butter" && onBread
-                guard shown || butterOnBread else { continue }
+                guard seen[entry.asset] ?? (shown || butterOnBread) else { continue }
             }
             guard let (variant, part) = pieceVariant(entry) else { continue }
             let whole = part.most.flatMap { most in Self.number(in: entry.amount).map { min(max($0, 1), most) } }

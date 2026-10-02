@@ -45,7 +45,7 @@ public struct CloudPick: Equatable, Sendable {
 }
 
 /// The Worker the app talks to: Gemma on Workers AI writes, and Jev picks an idea when the cook
-/// asks it to. Every request is signed with an App Attest key, made and registered the first
+/// asks it to and says what can be seen on a dish for its icon. Every request is signed with an App Attest key, made and registered the first
 /// time the app needs one, so the Worker only answers Plates on a real device.
 @MainActor
 public final class PlatesCloud {
@@ -134,6 +134,21 @@ public final class PlatesCloud {
         let data = try await Self.collect(try await send("/v1/decide", body: body).0)
         guard let answer = try? JSONDecoder().decode(DecideAnswer.self, from: data) else { throw CloudError.noResponse }
         return CloudPick(index: answer.index, remaining: answer.remaining)
+    }
+
+    // MARK: - Dish icons
+
+    /// Asks Jev, line by line, how likely each ingredient is to be seen on the dish as it is
+    /// served. The answers come back in the order the lines went out.
+    func toppings(dish: String, steps: [(title: String, points: [String])], ingredients: [String]) async throws -> [Double] {
+        let body = try JSONSerialization.data(withJSONObject: [
+            "dish": dish,
+            "steps": steps.map { ["title": $0.title, "points": $0.points] },
+            "ingredients": ingredients,
+        ])
+        let data = try await Self.collect(try await send("/v1/toppings", body: body).0)
+        guard let answer = try? JSONDecoder().decode(ToppingsAnswer.self, from: data) else { throw CloudError.noResponse }
+        return answer.visible
     }
 
     /// Today's limits and what is left of each. Asking does not count against any of them.
@@ -265,6 +280,10 @@ public final class PlatesCloud {
     private struct DecideAnswer: Decodable {
         let index: Int
         let remaining: Int
+    }
+
+    private struct ToppingsAnswer: Decodable {
+        let visible: [Double]
     }
 
     private struct Challenge: Decodable { let challenge: String }

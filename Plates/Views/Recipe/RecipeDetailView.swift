@@ -184,8 +184,10 @@ struct RecipeDetailView: View {
                 .shadow(color: .black.opacity(0.15), radius: 10, y: 5)
             if isEditing {
                 Button("Recipe.Edit.RedrawDish", systemImage: "arrow.clockwise") {
-                    recipe.dish = Dish.planned(for: recipe, seed: UUID().uuidString)
-                    save()
+                    Task {
+                        recipe.dish = await Dish.asked(for: recipe, seed: UUID().uuidString)
+                        save()
+                    }
                 }
                 .buttonStyle(.bordered)
             }

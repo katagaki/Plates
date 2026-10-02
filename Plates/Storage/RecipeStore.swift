@@ -88,16 +88,18 @@ final class RecipeStore {
     /// Writes a recipe out. New recipes get a unique id so a second "Tomato Egg" does not
     /// overwrite the first; existing ones keep the file they came from. A new recipe that came
     /// without a dish, from the share extension or the samples, has one worked out before it is
-    /// written, the way a generated recipe does.
+    /// written, and Jev's answer replaces it once it comes back, the way a generated recipe's
+    /// dish is asked.
     @discardableResult
     func save(_ recipe: Recipe, isNew: Bool = false) -> Bool {
         guard let directory else { return false }
         var recipe = recipe
         if isNew {
+            recipe.id = uniqueID(for: recipe)
             if recipe.dish == nil {
                 recipe.dish = Dish.planned(for: recipe)
+                askDish(for: recipe)
             }
-            recipe.id = uniqueID(for: recipe)
         }
         do {
             try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
@@ -107,6 +109,18 @@ final class RecipeStore {
         } catch {
             loadError = error.localizedDescription
             return false
+        }
+    }
+
+    /// Asks for a new recipe's dish and writes it in, unless its dish was redrawn while Jev
+    /// was being asked.
+    private func askDish(for recipe: Recipe) {
+        Task {
+            let dish = await Dish.asked(for: recipe)
+            guard dish != recipe.dish, var current = recipes.first(where: { $0.id == recipe.id }),
+                  current.dish == recipe.dish else { return }
+            current.dish = dish
+            save(current)
         }
     }
 

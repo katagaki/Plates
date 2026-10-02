@@ -331,7 +331,8 @@ public final class RecipeGenerator {
             let text = try await write(english)
             let written = Self.withoutUnusedPicks(WrittenRecipe(parsing: text), request: request)
             let sorted = try await sort(written, text: text, request: request)
-            let recipe = Self.makeRecipe(sorted)
+            var recipe = Self.makeRecipe(sorted)
+            recipe.dish = await Dish.asked(for: recipe)
             progress.isFinished = true
             state = .idle
             observer?.runEnded(progress.activity, succeeded: true)
@@ -865,7 +866,7 @@ public final class RecipeGenerator {
         let ingredients = [sections.supermarket, sections.general, sections.optional]
             .compactMap { $0 }
             .flatMap { $0 }
-        var recipe = Recipe(
+        return Recipe(
             id: Recipe.makeID(from: sorted.title),
             title: sorted.title,
             time: sorted.time,
@@ -888,8 +889,6 @@ public final class RecipeGenerator {
                 Troubleshooting(problem: $0.problem.withoutLeakedSyntax, solution: $0.solution.withoutLeakedSyntax)
             }
         )
-        recipe.dish = Dish.planned(for: recipe)
-        return recipe
     }
 
     /// Drops a step that is the step above it written out again. A step that only shares a
