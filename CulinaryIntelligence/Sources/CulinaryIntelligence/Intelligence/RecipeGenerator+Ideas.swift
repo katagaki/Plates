@@ -43,6 +43,18 @@ struct MakeableAnswer {
     var makeable: Bool
 }
 
+/// The starch a dish is built on, read without the cook's list in view. Asked whether the picks
+/// can make the dish, the model says yes to a tomato pasta with no pasta in them, so whether the
+/// starch is among the picks is checked in code.
+@Generable(description: "The starch a dish is built on")
+struct StapleAnswer {
+    @Guide(
+        description: "The starch the dish is built on: 'pasta' for a pasta dish such as a tomato pasta or a carbonara, 'rice' for a dish such as a fried rice, a risotto, or a rice bowl, 'noodles' for a noodle dish such as a ramen or a yakisoba, 'bread' for a sandwich or a toast, or 'none' when it is not built on one of these",
+        .anyOf(["pasta", "rice", "noodles", "bread", "none"])
+    )
+    var staple: String
+}
+
 @Generable(description: "A dish idea put into the reader's language")
 struct GeneratedIdea {
     @Guide(description: "The dish's name, two to five words")
@@ -110,9 +122,14 @@ extension RecipeGenerator {
         return RequestKind(rawValue: answer.kind) ?? .dish
     }
 
-    /// A dish with no picks to hold it to can always be written.
+    /// A dish with no picks to hold it to can always be written. A dish built on a starch the
+    /// picks do not have cannot, since Gemma, held to the list, writes it without one.
     private func canMake(_ request: GenerationRequest) async throws -> Bool {
         guard !request.ingredients.isEmpty || !request.tools.isEmpty else { return true }
+        if !request.ingredients.isEmpty, let staples = try await staples(of: request),
+           staples.isDisjoint(with: request.ingredients) {
+            return false
+        }
         let none = Self.text("Generate.Prompt.Plan.None")
         let ingredients = request.ingredients.prefix(GenerationRequest.listLimit).map(IconCatalog.displayName)
         let tools = request.tools.prefix(GenerationRequest.listLimit).map(IconCatalog.displayName)
@@ -130,6 +147,29 @@ extension RecipeGenerator {
         }
         return answer.makeable
     }
+
+    /// The catalog ingredients that would stand for the starch the dish is built on, or nil
+    /// when it is built on none. Asked in English, so the answer names the same starch in any
+    /// language the cook typed in.
+    private func staples(of request: GenerationRequest) async throws -> Set<String>? {
+        let answer = try await writer.run(instructions: Self.english("Generate.Prompt.Plan")) { session in
+            try await session.respond(
+                to: Self.english("Generate.Prompt.Plan.Staple", request.trimmedDescription),
+                generating: StapleAnswer.self,
+                options: GenerationOptions(maximumResponseTokens: Self.lineTokenLimit)
+            ).content
+        }
+        return Self.staples[answer.staple]
+    }
+
+    /// Each starch with the catalog ingredients that make it, so a tomato pasta is made with
+    /// penne as well as spaghetti.
+    static let staples: [String: Set<String>] = [
+        "pasta": ["spaghetti", "penne", "fusilli", "fettuccine", "rigatoni", "macaroni", "lasagna", "orzo", "ravioli", "gnocchi"],
+        "rice": ["rice", "arborio-rice", "glutinous-rice"],
+        "noodles": ["noodles", "egg-noodles", "ramen", "udon", "soba", "somen", "rice-noodles", "harusame"],
+        "bread": ["bread", "pita"],
+    ]
 
     /// Five dishes from Gemma, in English, one a line, then put into the reader's language.
     private func ideas(for request: GenerationRequest, kind: RequestKind) async throws -> [RecipeIdea] {

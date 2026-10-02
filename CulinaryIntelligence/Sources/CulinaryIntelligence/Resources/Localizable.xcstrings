@@ -933,6 +933,24 @@
         }
       }
     },
+    "Generate.Prompt.Plan.Staple": {
+      "comment": "Given to Apple Intelligence in English whatever language the app is read in, so its answer can be matched to the catalog. The Japanese value is kept for completeness and is not sent.",
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dish: %1$@\nWhat starch is this dish built on?"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "料理: %1$@\nこの料理は、どの主食を土台にしていますか。"
+          }
+        }
+      }
+    },
     "Generate.Prompt.Separator": {
       "extractionState": "manual",
       "localizations": {
