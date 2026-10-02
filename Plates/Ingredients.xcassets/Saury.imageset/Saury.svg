@@ -1,10 +1,11 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pacific saury">
-  <path d="M8 24 3 19l1.5 5L3 29Z" fill="#2c3f63"/>
-  <g fill="#2c3f63"><path d="M13 20.5l2-2 1 1.8Z"/><path d="M16 20l2-2 1 1.8Z"/><path d="M19 19.5l2-2.5 1.5 2Z"/></g>
-  <path d="M7 24c8-6 18-7 29-6 3 0 5 2 8 6-3 4-5 5-8 6-11 1-21 0-29-6Z" fill="#d4d9df"/>
-  <path d="M7 24c8-6 18-7 29-6 3 0 5 2 8 6Z" fill="#2c3f63"/>
-  <path d="M44 24.5l3-.5-3 1.5Z" fill="#e3b23c"/>
-  <path d="M35 20c-1.5 2-1.5 6 0 8" stroke="#9aa6b2" stroke-width="1" fill="none"/>
-  <circle cx="38.5" cy="22.5" r="1.6" fill="#121a26"/>
-  <path d="M12 26.5c8 1 16 1 25 0" stroke="#eef1f4" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <path d="M9.5 24L1 18L4 24L1 30Z" fill="#2c3f63"/>
+  <g fill="#2c3f63"><path d="M11 21.6l1.6-2 .8 1.6Z"/><path d="M13.6 21.2l1.6-2 .8 1.6Z"/><path d="M16.2 20.8l1.6-2.2.9 1.7Z"/><path d="M11 26.4l1.6 2 .8-1.6Z"/><path d="M13.6 26.8l1.6 2 .8-1.6Z"/></g>
+  <path d="M43 24C42 20.62 35 18.8 27 18.8C17.5 18.8 11 22.3 8 22.9L8 25.1C11 25.7 17.5 29 27 29C35 29 42 27.25 43 24Z" fill="#d9dee4"/>
+  <path d="M43 24C42 20.62 35 18.8 27 18.8C17.5 18.8 11 22.3 8 22.9L8 24.3C20 24.3 33 24.3 43 24Z" fill="#2c3f63"/>
+  <path d="M42 23.2 47 24.6l-5 .8Z" fill="#2c3f63"/>
+  <path d="M45 24.1l2 .5-2 .3Z" fill="#e8b23a"/>
+  <path d="M12 25.6c8 .6 17 .6 25 0" stroke="#ffffff" stroke-width="1" fill="none" stroke-linecap="round"/>
+  <path d="M35.5 20.9C33 23 33 26 35.5 27.2" stroke="#9aa6b2" stroke-width="1" fill="none" stroke-linecap="round"/>
+  <circle cx="39.5" cy="23" r="1.5" fill="#121a26"/>
 </svg>

@@ -1,11 +1,12 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bonito">
-  <path d="M12 24C9 19 6 14 3 11c2 6 3 10 3 13s-1 7-3 13c3-3 6-8 9-13Z" fill="#2f3f66"/>
-  <path d="M26 16l3-6 3 5.5Z" fill="#2f3f66"/>
-  <path d="M44 25c-4-8-14-11-22-9-5 1-9 4-11 7v2c2 3 6 6 11 7 8 2 18-1 22-7Z" fill="#cdd3da"/>
-  <path d="M44 25c-4-8-14-11-22-9-5 1-9 4-11 7v1c10 0 22 0 33 1Z" fill="#2f3f66"/>
-  <g stroke="#55627a" stroke-width="1.5" fill="none" stroke-linecap="round"><path d="M19 27c6 .5 12 .5 19 0"/><path d="M21 29.3c5 .6 10 .6 15 0"/><path d="M24 31.2c3 .4 6 .4 9 0"/></g>
-  <g fill="#e3c35a"><path d="M14 21.5l1.5-1 .5 1.5Z"/><path d="M17 20l1.5-1 .5 1.5Z"/><path d="M14 26.5l1.5 1 .5-1.5Z"/><path d="M17 28l1.5 1 .5-1.5Z"/></g>
-  <path d="M36 20c-2 3-2 7 0 10" stroke="#55627a" stroke-width="1.1" fill="none"/>
-  <path d="M34 25c-3 .5-5 2-6 3.5 3-.3 5-1.5 6-3.5Z" fill="#2f3f66"/>
-  <circle cx="39.5" cy="23" r="1.7" fill="#121a26"/>
+  <path d="M12.5 24C9 20 6 16 2 12C4.5 19 5 22 5 24C5 26 4.5 29 2 36C6 32 9 28 12.5 24Z" fill="#2f3f66"/>
+  <path d="M33 17.5 31 14l-9 2.5-1 1.5Z" fill="#2f3f66"/>
+  <path d="M20 18.5l2-3 2 2.5Z" fill="#2f3f66"/>
+  <g fill="#2f3f66"><path d="M13 22l1.2-2 1.2 1.6Z"/><path d="M16 21l1.2-2 1.2 1.6Z"/><path d="M13 26l1.2 2 1.2-1.6Z"/><path d="M16 27l1.2 2 1.2-1.6Z"/></g>
+  <path d="M46 24C45 18.8 37 16 28 16C19.5 16 14 21.8 11 22.4L11 25.6C14 26.2 19.5 31.5 28 31.5C37 31.5 45 28.88 46 24Z" fill="#d3d8de"/>
+  <path d="M46 24C45 18.8 37 16 28 16C19.5 16 14 21.8 11 22.4L11 24.3C23 24.6 36 24.6 46 24Z" fill="#2f3f66"/>
+  <g stroke="#2f3f66" stroke-width="1.6" fill="none" stroke-linecap="round"><path d="M16 26.3c7 .5 14 .6 22 0"/><path d="M18 28.6c6 .6 12 .6 17 0"/><path d="M21 30.6c4 .4 8 .4 11 0"/></g>
+  <path d="M39 19C36.5 23 36.5 26 39 28.8" stroke="#55627a" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <path d="M37 25.5c-3 .5-5 2-6.5 3.5 3 0 5-1 6.5-3.5Z" fill="#2f3f66"/>
+  <circle cx="41.5" cy="22.6" r="1.7" fill="#121a26"/>
 </svg>

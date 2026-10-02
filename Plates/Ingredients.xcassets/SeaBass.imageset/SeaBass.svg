@@ -1,12 +1,11 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sea bass">
-  <path d="M12 24 4 16.5l2 7.5-2 7.5Z" fill="#6b7782"/>
-  <path d="M33 17l-1-6-2 5-1-5.5-2 5-1-5-2 5-1-4.5L22 17Z" fill="#6b7782"/>
-  <path d="M21 17.5c0-3 2-5 4-4l-1 4Z" fill="#6b7782" transform="translate(-5 1)"/>
-  <path d="M44 24c-3-6-11-8-19-7.5-6 .5-11 3-14 6v2c3 3 8 5 14 6 8 1 16-1 19-6.5Z" fill="#d3d8dc"/>
-  <path d="M44 24c-3-6-11-8-19-7.5-6 .5-11 3-14 6v1c11-.5 22-.5 33 .5Z" fill="#6b7782"/>
-  <path d="M13 24c9-1.5 18-2.5 24-2.5" stroke="#9aa4ad" stroke-width="1.1" fill="none" stroke-linecap="round"/>
-  <path d="M35 18.5c-2.5 3.5-2.5 8 0 11.5l-2 1" stroke="#8a949d" stroke-width="1.1" fill="none" stroke-linejoin="round"/>
-  <path d="M43.3 24.7l-3.3 1" stroke="#4d5760" stroke-width="1.1" stroke-linecap="round"/>
-  <path d="M30 26c-3 1-4.5 3-5 5 2.5-1 4-2.5 5-5Z" fill="#a3adb6"/>
-  <circle cx="39.5" cy="21.5" r="1.8" fill="#2b3238"/>
+  <path d="M11.5 24L2 15L4.5 24L2 33Z" fill="#66727d"/>
+  <path d="M34 18l-1-5-1.5 4-1.2-4.5-1.5 4-1.2-4.5-1.5 4-1.2-4-1.5 4.5Z" fill="#66727d"/>
+  <path d="M21.5 18.2C21 15.2 18 14.4 15.5 19.6Z" fill="#66727d"/>
+  <path d="M46 24C45 19.32 37 16.8 28 16.8C19 16.8 13 21.8 10 22.4L10 25.6C13 26.2 19 30.8 28 30.8C37 30.8 45 28.42 46 24Z" fill="#d6dbdf"/>
+  <path d="M46 24C45 19.32 37 16.8 28 16.8C19 16.8 13 21.8 10 22.4L10 24.3C22 24.6 36 24.6 46 24Z" fill="#66727d"/>
+  <path d="M13 23.2c9-.8 18-1.4 25-1.4" stroke="#9aa4ad" stroke-width="1" fill="none" stroke-linecap="round"/>
+  <path d="M38 18.4c-2.5 3.5-2.5 8 0 11.2l-2.2.8" stroke="#8a949d" stroke-width="1.2" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M45.5 24.6l-4 1.2" stroke="#3f474f" stroke-width="1.2" stroke-linecap="round"/>
+  <circle cx="41.8" cy="21.8" r="1.8" fill="#2b3238"/>
 </svg>
