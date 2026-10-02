@@ -1,8 +1,11 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bonito">
-  <path d="M5 24c6-7 15-10 24-10 7 0 12 4 14 10-2 6-7 10-14 10-9 0-18-3-24-10Z" fill="#c9cfd6"/>
-  <path d="M5 24c6-7 15-10 24-10 7 0 12 4 14 10Z" fill="#2f4a6b"/>
-  <g stroke="#7d8a99" stroke-width="1.6" stroke-linecap="round"><path d="M14 27h10"/><path d="M17 30h11"/><path d="M26 27h8"/></g>
-  <circle cx="37" cy="21" r="1.8" fill="#1c2733"/>
-  <path d="M5 24 1 16v16Z" fill="#2f4a6b"/>
-  <path d="M22 15l3-5 4 4Z" fill="#2f4a6b"/>
+  <path d="M12 24C9 19 6 14 3 11c2 6 3 10 3 13s-1 7-3 13c3-3 6-8 9-13Z" fill="#2f3f66"/>
+  <path d="M26 16l3-6 3 5.5Z" fill="#2f3f66"/>
+  <path d="M44 25c-4-8-14-11-22-9-5 1-9 4-11 7v2c2 3 6 6 11 7 8 2 18-1 22-7Z" fill="#cdd3da"/>
+  <path d="M44 25c-4-8-14-11-22-9-5 1-9 4-11 7v1c10 0 22 0 33 1Z" fill="#2f3f66"/>
+  <g stroke="#55627a" stroke-width="1.5" fill="none" stroke-linecap="round"><path d="M16 26.5c6 .5 12 .5 18 0"/><path d="M17 29c5 .8 10 1 15 .5"/><path d="M20 31.2c4 .5 7 .6 10 .2"/></g>
+  <g fill="#e3c35a"><path d="M14 21.5l1.5-1 .5 1.5Z"/><path d="M17 20l1.5-1 .5 1.5Z"/><path d="M14 26.5l1.5 1 .5-1.5Z"/><path d="M17 28l1.5 1 .5-1.5Z"/></g>
+  <path d="M36 20c-2 3-2 7 0 10" stroke="#55627a" stroke-width="1.1" fill="none"/>
+  <path d="M33 26c-3 1-5 3-6 5 3-1 5-2 6-5Z" fill="#2f3f66"/>
+  <circle cx="39.5" cy="23" r="1.7" fill="#121a26"/>
 </svg>

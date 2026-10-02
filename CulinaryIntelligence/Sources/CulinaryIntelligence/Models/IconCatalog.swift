@@ -28,9 +28,9 @@ public nonisolated enum IngredientCategory: String, CaseIterable, Identifiable, 
         IngredientShelf.allCases.first { $0.categories.contains(self) } ?? .fresh
     }
 
-    /// The ingredient assets in this group, in the order the picker shows them. Groups run
-    /// alphabetically, except the sauces, which run by cuisine so a shelf of them reads the
-    /// way a cook reaches for them.
+    /// The ingredient assets in this group. The picker shows them alphabetically by the name the
+    /// reader sees, except the sauces, which keep this order and run by cuisine so a shelf of
+    /// them reads the way a cook reaches for them.
     public var icons: [String] {
         switch self {
         case .vegetables:
@@ -478,7 +478,8 @@ public nonisolated enum ToolCategory: String, CaseIterable, Identifiable, Sendab
 
     public var id: String { rawValue }
 
-    /// The tool assets in this group, in the order the picker shows them.
+    /// The tool assets in this group. The picker shows them alphabetically by the name the
+    /// reader sees.
     public var icons: [String] {
         switch self {
         case .utensils:
@@ -1139,7 +1140,7 @@ public nonisolated enum IconCatalog {
     ) -> [(category: IngredientCategory, icons: [String])] {
         let matches = Set(ingredients(matching: query))
         return shelf.categories.compactMap { category in
-            let icons = category.icons.filter(matches.contains)
+            let icons = (ingredientOrder[category] ?? category.icons).filter(matches.contains)
             return icons.isEmpty ? nil : (category, icons)
         }
     }
@@ -1166,9 +1167,76 @@ public nonisolated enum IconCatalog {
     public static func toolCategories(matching query: String) -> [(category: ToolCategory, icons: [String])] {
         let matches = Set(tools(matching: query))
         return ToolCategory.allCases.compactMap { category in
-            let icons = category.icons.filter(matches.contains)
+            let icons = (toolOrder[category] ?? category.icons).filter(matches.contains)
             return icons.isEmpty ? nil : (category, icons)
         }
+    }
+
+    // MARK: - Ordering
+
+    /// Each ingredient group in the order its picker shows it, worked out once. The sauces
+    /// keep their cuisine order.
+    private static let ingredientOrder: [IngredientCategory: [String]] = IngredientCategory.allCases
+        .reduce(into: [:]) { table, category in
+            table[category] = category == .sauces ? category.icons : sortedByName(category.icons)
+        }
+
+    /// Each tool group in the order its picker shows it, worked out once.
+    private static let toolOrder: [ToolCategory: [String]] = ToolCategory.allCases
+        .reduce(into: [:]) { table, category in table[category] = sortedByName(category.icons) }
+
+    /// The language the catalog names are read in, which is not always the device's.
+    private static let nameLocale = Locale(identifier: Bundle.module.preferredLocalizations.first ?? "en-US")
+
+    /// Assets in the alphabetical order of the names the reader sees, compared the way the
+    /// reader's language orders words.
+    private static func sortedByName(_ assets: [String]) -> [String] {
+        let keys = assets.reduce(into: [String: String]()) { table, asset in
+            table[asset] = sortKey(for: displayName(for: asset))
+        }
+        return assets.sorted { lhs, rhs in
+            let left = keys[lhs] ?? lhs
+            let right = keys[rhs] ?? rhs
+            return left.compare(
+                right,
+                options: [.caseInsensitive, .numeric, .widthInsensitive],
+                range: nil,
+                locale: nameLocale
+            ) == .orderedAscending
+        }
+    }
+
+    /// A name as it is ordered. Japanese is ordered by reading, so kanji are swapped for their
+    /// hiragana and 牛乳 sits among the ぎ names rather than after every name in kana.
+    private static func sortKey(for name: String) -> String {
+        guard nameLocale.language.languageCode == .japanese else { return name }
+        let text = name as NSString
+        let tokenizer = CFStringTokenizerCreate(
+            nil,
+            text,
+            CFRange(location: 0, length: text.length),
+            kCFStringTokenizerUnitWord,
+            nameLocale as CFLocale
+        )
+        var key = ""
+        var cursor = 0
+        while CFStringTokenizerAdvanceToNextToken(tokenizer) != [] {
+            let range = CFStringTokenizerGetCurrentTokenRange(tokenizer)
+            key += text.substring(with: NSRange(location: cursor, length: range.location - cursor))
+            let token = text.substring(with: NSRange(location: range.location, length: range.length))
+            if token.unicodeScalars.contains(where: \.properties.isIdeographic),
+               let latin = CFStringTokenizerCopyCurrentTokenAttribute(
+                   tokenizer,
+                   kCFStringTokenizerAttributeLatinTranscription
+               ) as? String,
+               let reading = latin.applyingTransform(.latinToHiragana, reverse: false) {
+                key += reading
+            } else {
+                key += token
+            }
+            cursor = range.location + range.length
+        }
+        return key + text.substring(from: cursor)
     }
 
     /// The asset covering an ingredient name, when the catalog has one.

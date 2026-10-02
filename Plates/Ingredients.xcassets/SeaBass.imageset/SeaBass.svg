@@ -1,9 +1,12 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sea bass">
-  <path d="M5 25c6-8 14-12 23-12 7 0 12 5 14 12-2 6-7 10-14 10-9 0-17-3-23-10Z" fill="#cdd3d8"/>
-  <path d="M5 25c6-8 14-12 23-12 7 0 12 5 14 12Z" fill="#6b7782"/>
-  <path d="M14 17l1-6 3 4 1-5 3 4 1-5 3 5 1-4 2 5Z" fill="#6b7782"/>
-  <path d="M8 26c9-1 20-2 31-2" stroke="#9aa4ad" stroke-width="1.2" fill="none"/>
-  <path d="M33 16c2 4 2 11 0 15" stroke="#9aa4ad" stroke-width="1.2" fill="none"/>
-  <circle cx="37" cy="22" r="2" fill="#2b3238"/>
-  <path d="M5 25 1 17v16Z" fill="#6b7782"/>
+  <path d="M12 24 4 16.5l2 7.5-2 7.5Z" fill="#6b7782"/>
+  <path d="M33 17l-1-6-2 5-1-5.5-2 5-1-5-2 5-1-4.5L22 17Z" fill="#6b7782"/>
+  <path d="M21 17.5c0-3 2-5 4-4l-1 4Z" fill="#6b7782" transform="translate(-5 1)"/>
+  <path d="M44 24c-3-6-11-8-19-7.5-6 .5-11 3-14 6v2c3 3 8 5 14 6 8 1 16-1 19-6.5Z" fill="#d3d8dc"/>
+  <path d="M44 24c-3-6-11-8-19-7.5-6 .5-11 3-14 6v1c11-.5 22-.5 33 .5Z" fill="#6b7782"/>
+  <path d="M13 24c9-1.5 18-2.5 24-2.5" stroke="#9aa4ad" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+  <path d="M35 18.5c-2.5 3.5-2.5 8 0 11.5l-2 1" stroke="#8a949d" stroke-width="1.1" fill="none" stroke-linejoin="round"/>
+  <path d="M44 24.5l-5 1.5" stroke="#4d5760" stroke-width="1.1" stroke-linecap="round"/>
+  <path d="M30 26c-3 1-4.5 3-5 5 2.5-1 4-2.5 5-5Z" fill="#a3adb6"/>
+  <circle cx="39.5" cy="21.5" r="1.8" fill="#2b3238"/>
 </svg>
