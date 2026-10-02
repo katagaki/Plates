@@ -23,11 +23,20 @@ enum RecipePageLoader {
         if let recipe = try await onePanRecipe(at: url) { return recipe }
         if let recipe = RecipePageParser.structuredRecipe(in: page.jsonLD) { return recipe }
 
-        let html = String(data: try await download(url), encoding: .utf8) ?? ""
-        guard let recipe = RecipePageParser.structuredRecipe(in: html) else {
-            throw LoadError.noRecipe
+        let downloaded = try? await download(url)
+        if let downloaded,
+           let recipe = RecipePageParser.structuredRecipe(in: String(decoding: downloaded, as: UTF8.self)) {
+            return recipe
         }
-        return recipe
+
+        guard let contents = await RecipeWebPage.load(url) else {
+            throw downloaded == nil ? LoadError.downloadFailed : LoadError.noRecipe
+        }
+        if let recipe = RecipePageParser.structuredRecipe(in: contents.jsonLD)
+            ?? RecipePageParser.structuredRecipe(in: contents.html) {
+            return recipe
+        }
+        throw LoadError.noRecipe
     }
 
     private struct SharedPage {
