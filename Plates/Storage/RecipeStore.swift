@@ -122,10 +122,11 @@ final class RecipeStore {
         }
     }
 
-    /// Copies the recipes bundled with the app into the current folder, skipping ones already there.
-    /// The samples ship in every language the app is written in, so the reader's language is the
-    /// one that gets copied over.
+    /// Copies the recipes bundled with the app into the current folder, but only into an empty
+    /// one. The samples ship in every language the app is written in, so the reader's language is
+    /// the one that gets copied over.
     func addSampleRecipes() {
+        guard recipes.isEmpty else { return }
         let language = Bundle.main.preferredLocalizations.first ?? "en-US"
         let urls = Bundle.main.urls(
             forResourcesWithExtension: "json",
@@ -134,8 +135,7 @@ final class RecipeStore {
         ) ?? []
         for url in urls {
             guard let data = try? Data(contentsOf: url),
-                  let recipe = try? decoder.decode(Recipe.self, from: data),
-                  !recipes.contains(where: { $0.id == recipe.id }) else { continue }
+                  let recipe = try? decoder.decode(Recipe.self, from: data) else { continue }
             save(recipe, isNew: true)
         }
     }

@@ -148,10 +148,12 @@ struct MainView: View {
             }
 
             Section {
-                Button {
-                    store.addSampleRecipes()
-                } label: {
-                    Label("Menu.AddSamples", systemImage: "tray.and.arrow.down")
+                if store.recipes.isEmpty {
+                    Button {
+                        store.addSampleRecipes()
+                    } label: {
+                        Label("Menu.AddSamples", systemImage: "tray.and.arrow.down")
+                    }
                 }
                 Button {
                     store.load()
