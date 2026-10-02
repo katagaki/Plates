@@ -1077,13 +1077,13 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "The cook asked for: %1$@. When the recipe is that dish, title it the way the cook named it."
+            "value": "The cook asked for: %1$@. Title the recipe the way the cook named it only when it is that dish, made with what the dish is built on, such as the pasta in a pasta or the rice in a fried rice. When the recipe is a different dish, keep its own title."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "作る人の頼み: %1$@。レシピがその料理なら、題名は作る人の呼び方に合わせてください。"
+            "value": "作る人の頼み: %1$@。題名を作る人の呼び方に合わせるのは、レシピがその料理で、パスタ料理のパスタやチャーハンのご飯のように、その料理の土台になるものを使っているときだけです。違う料理なら、レシピの題名のままにしてください。"
           }
         }
       }
@@ -1250,13 +1250,13 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "The cook has listed what they have in the kitchen. Cook only from that list, and choose only what this dish needs: most dishes use a few of the things listed, not all of them. List only the ingredients the method uses. If the list cannot make the dish they named, write the closest dish it can make."
+            "value": "The cook has listed what they have in the kitchen. Cook only from that list, and choose only what this dish needs: most dishes use a few of the things listed, not all of them. List only the ingredients the method uses. Never leave out what a dish is built on: a pasta dish needs pasta, and a fried rice needs rice. If the list cannot make the dish they named, write the closest dish it can make, under that dish's own name, rather than the named dish without what it is built on."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "料理をする人が、台所にあるものを挙げています。その中のものだけで作り、この料理に必要なものだけを選んでください。ほとんどの料理は、挙げられたものの一部しか使いません。材料には、手順で使うものだけを書いてください。挙げられたもので指定の料理が作れない場合は、作れる中でいちばん近い料理を書いてください。"
+            "value": "料理をする人が、台所にあるものを挙げています。その中のものだけで作り、この料理に必要なものだけを選んでください。ほとんどの料理は、挙げられたものの一部しか使いません。材料には、手順で使うものだけを書いてください。パスタ料理にはパスタ、チャーハンにはご飯というように、料理の土台になるものは省きません。挙げられたもので指定の料理が作れない場合は、土台を抜いたその料理ではなく、作れる中でいちばん近い料理を、その料理の名前で書いてください。"
           }
         }
       }
