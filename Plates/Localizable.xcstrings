@@ -885,6 +885,23 @@
         }
       }
     },
+    "Limits.Decide.Detail": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Picking one of the suggested dishes for you."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "提案された料理から1つを選びます。"
+          }
+        }
+      }
+    },
     "Limits.DishIcon": {
       "extractionState": "manual",
       "localizations": {
@@ -902,19 +919,36 @@
         }
       }
     },
+    "Limits.DishIcon.Detail": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deciding which seasonings and garnishes show on a recipe's icon."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レシピのアイコンに、どの調味料や薬味を描くかを決めます。"
+          }
+        }
+      }
+    },
     "Limits.Footer": {
       "extractionState": "manual",
       "localizations": {
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Each set of five ideas counts once. The limits reset at midnight."
+            "value": "The limits reset at midnight."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "5つのアイディアは1回として数えます。上限は午前0時にリセットされます。"
+            "value": "上限は午前0時にリセットされます。"
           }
         }
       }
@@ -932,6 +966,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "アイディア生成"
+          }
+        }
+      }
+    },
+    "Limits.Ideate.Detail": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suggesting five dishes to choose from. Each set of five counts once."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "選べる料理を5つ提案します。5つで1回と数えます。"
           }
         }
       }
@@ -983,6 +1034,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "レシピ生成"
+          }
+        }
+      }
+    },
+    "Limits.Write.Detail": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Writing a new recipe from what you asked for."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "頼んだ内容から新しいレシピを書きます。"
           }
         }
       }

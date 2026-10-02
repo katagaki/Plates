@@ -13,10 +13,10 @@ struct LimitsView: View {
             List {
                 if let limits {
                     Section {
-                        row("Limits.Write", limits.write)
-                        row("Limits.Ideate", limits.ideate)
-                        row("Limits.Decide", limits.decide)
-                        row("Limits.DishIcon", limits.toppings)
+                        row("Limits.Write", "Limits.Write.Detail", limits.write)
+                        row("Limits.Ideate", "Limits.Ideate.Detail", limits.ideate)
+                        row("Limits.Decide", "Limits.Decide.Detail", limits.decide)
+                        row("Limits.DishIcon", "Limits.DishIcon.Detail", limits.toppings)
                     } footer: {
                         Text("Limits.Footer")
                     }
@@ -40,8 +40,13 @@ struct LimitsView: View {
         }
     }
 
-    /// What is left of one limit, as a count and a bar that empties as the day's calls are used.
-    private func row(_ label: LocalizedStringResource, _ allowance: CloudLimits.Allowance) -> some View {
+    /// What is left of one limit, as a count and a bar that empties as the day's calls are used,
+    /// under a line saying what the limit counts.
+    private func row(
+        _ label: LocalizedStringResource,
+        _ detail: LocalizedStringResource,
+        _ allowance: CloudLimits.Allowance
+    ) -> some View {
         VStack(alignment: .leading, spacing: 8) {
             LabeledContent {
                 Text(verbatim: String(
@@ -52,6 +57,7 @@ struct LimitsView: View {
                 .monospacedDigit()
             } label: {
                 Text(label)
+                Text(detail)
             }
             ProgressView(value: Double(allowance.remaining), total: Double(max(allowance.limit, 1)))
         }
