@@ -2061,6 +2061,23 @@
         }
       }
     },
+    "Ingredient.Name.BonitoFillet": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bonito fillet"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "かつおの切り身"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Bouillon": {
       "extractionState": "manual",
       "localizations": {
@@ -2312,6 +2329,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "トマト缶"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.CannedTuna": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Canned tuna"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ツナ缶"
           }
         }
       }
@@ -2805,6 +2839,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "たら"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.CodFillet": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cod fillet"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "たらの切り身"
           }
         }
       }
@@ -3557,6 +3608,23 @@
         }
       }
     },
+    "Ingredient.Name.FlounderFillet": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Flounder fillet"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "かれいの切り身"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Flour": {
       "extractionState": "manual",
       "localizations": {
@@ -3876,6 +3944,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "いんげん"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.GrilledEel": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Grilled eel"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "うなぎの蒲焼き"
           }
         }
       }
@@ -4726,6 +4811,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "さば"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.MackerelFillet": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mackerel fillet"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "さばの切り身"
           }
         }
       }
@@ -6498,6 +6600,23 @@
         }
       }
     },
+    "Ingredient.Name.SalmonFillet": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salmon fillet"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "鮭の切り身"
+          }
+        }
+      }
+    },
     "Ingredient.Name.SalmonRoe": {
       "extractionState": "manual",
       "localizations": {
@@ -6651,6 +6770,23 @@
         }
       }
     },
+    "Ingredient.Name.SeaBassFillet": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sea bass fillet"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すずきの切り身"
+          }
+        }
+      }
+    },
     "Ingredient.Name.SeaBream": {
       "extractionState": "manual",
       "localizations": {
@@ -6664,6 +6800,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "鯛"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.SeaBreamFillet": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sea bream fillet"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "鯛の切り身"
           }
         }
       }
@@ -7348,6 +7501,23 @@
         }
       }
     },
+    "Ingredient.Name.SwordfishSteak": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Swordfish steak"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "めかじきの切り身"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Tahini": {
       "extractionState": "manual",
       "localizations": {
@@ -7603,6 +7773,23 @@
         }
       }
     },
+    "Ingredient.Name.TroutFillet": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trout fillet"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ますの切り身"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Tuna": {
       "extractionState": "manual",
       "localizations": {
@@ -7616,6 +7803,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "まぐろ"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.TunaSteak": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tuna steak"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "まぐろの切り身"
           }
         }
       }
@@ -8041,6 +8245,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "ぶり"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.YellowtailFillet": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yellowtail fillet"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ぶりの切り身"
           }
         }
       }

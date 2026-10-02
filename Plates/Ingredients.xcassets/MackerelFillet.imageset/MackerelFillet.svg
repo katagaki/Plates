@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mackerel fillet">
+  <path d="M5 30c2-9 11-16 23-16 9 0 15 4 15 10 0 7-9 12-21 12-9 0-18-1-17-6Z" fill="#dfe5ea"/>
+  <path d="M5 30c2-9 11-16 23-16 9 0 15 4 15 10C33 22 18 23 5 30Z" fill="#3f8a8a"/>
+  <g stroke="#1f3d55" stroke-width="1.7" fill="none" stroke-linecap="round"><path d="M10 25.5c1-2 2-1 2.6-3.4"/><path d="M15 23c1-2 2-1 2.6-3.6s2-1 2.6-2.4"/><path d="M21 21.6c1-2 2-1 2.6-3.6s2-1 2.6-2.4"/><path d="M27.4 21c1-2 2-1 2.6-3.6s2-1 2.6-2"/><path d="M34 21c1-2 2-1 2.6-3.6"/></g>
+  <path d="M9 32c8-4 19-6 31-5" stroke="#f4f6f8" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <path d="M6 32.2c5 2.8 12 3.6 19 3.4" stroke="#e8c8b0" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+</svg>

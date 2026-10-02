@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tuna steak">
+  <path d="M6 22 14 14h29l-7 8Z" fill="#e0606e"/>
+  <path d="M6 22h30v12H6Z" fill="#c8374a"/>
+  <path d="M36 22l7-8v12l-7 8Z" fill="#a82a3c"/>
+  <g stroke="#e8818b" stroke-width="1.2" fill="none" stroke-linecap="round"><path d="M10 26c3-1 6 1 9 0"/><path d="M20 30c3-1 6 1 9 0"/><path d="M38.5 21.5l2.5-3"/><path d="M38.5 27.5l2.5-3"/></g>
+</svg>

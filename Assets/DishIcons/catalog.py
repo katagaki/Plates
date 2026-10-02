@@ -203,6 +203,30 @@ V["squid"] = {"rings": p(ring("#f6ecdf", "#fbf7f0", 2.6), 11, 6)}
 V["tuna"] = {"sashimi": p(strip("#c8374a", "#e0606e"), 15, 4), "cubes": p(dice("#c8374a", "#e0606e"), 10, 7), "flaked": p(crumble("#e8c4b0", "#f6dccf"), 9, 7)}
 V["yellowtail"] = {"sashimi": p(strip("#f0c0b0", "#f8dcd2"), 15, 4)}
 
+# A fish is drawn the way it is served, so the whole fish and its cut share their parts.
+V["bonito"] = {"sashimi": p(strip("#a8303c", "#c85a64"), 15, 4)}
+V["bonito-fillet"] = V["bonito"]
+V["canned-tuna"] = {"flaked": V["tuna"]["flaked"]}
+V["cod-fillet"] = V["cod"]
+V["flounder"] = {"fillet": center(fillet("#f8f4ec", "#e8e0d0", "#8a6b47"), 50)}
+V["flounder-fillet"] = V["flounder"]
+V["grilled-eel"] = V["eel"]
+V["herring"] = {"fillets": whole(p(stick("#7f9ea6", "#d9dfe2"), 15, 3), 4)}
+V["horse-mackerel"] = {"fillets": whole(p(stick("#8a9aa8", "#e6dcc0"), 15, 3), 4)}
+V["mackerel-fillet"] = V["mackerel"]
+V["salmon-fillet"] = V["salmon"]
+V["saury"] = {"grilled": whole(p(stick("#3f4a63", "#c9b48a"), 18, 2), 3)}
+V["sea-bass"] = {"fillet": center(fillet("#f6f1e8", "#e6ddcd", "#6b7782"), 50)}
+V["sea-bass-fillet"] = V["sea-bass"]
+V["sea-bream"] = {"fillet": center(fillet("#f6efe4", "#e8dccb", "#e06872"), 50), "sashimi": p(strip("#f6efe4", "#f2c4c4"), 15, 4)}
+V["sea-bream-fillet"] = V["sea-bream"]
+V["swordfish"] = {"steak": center(fillet("#f0d4c6", "#dcb8a6", "#4a4a5a"), 50)}
+V["swordfish-steak"] = V["swordfish"]
+V["trout"] = {"fillet": center(fillet("#f4a088", "#fbd2c2", "#7d8a52"), 50)}
+V["trout-fillet"] = V["trout"]
+V["tuna-steak"] = {"sashimi": V["tuna"]["sashimi"], "cubes": V["tuna"]["cubes"]}
+V["yellowtail-fillet"] = V["yellowtail"]
+
 # Dairy and eggs ----------------------------------------------------------------------------
 
 V["blue-cheese"] = {"crumbled": p(crumble("#ece4cc", "#5a7a98") + '<circle cx="9" cy="9" r="1" fill="#5a7a98"/><circle cx="6" cy="10" r="0.8" fill="#5a7a98"/>', 11, 6)}

@@ -1,0 +1,9 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bonito fillet">
+  <path d="M5 26 13 16h30l-7 10Z" fill="#c9d0d8"/>
+  <g stroke="#3f4a66" stroke-width="1.6" stroke-linecap="round"><path d="M12 22.6h23"/><path d="M15.6 19.4h23.4"/></g>
+  <path d="M13 16h30l-1.6 1.8h-29.8Z" fill="#2f3f66"/>
+  <path d="M5 26h31v8H5Z" fill="#9e2a36"/>
+  <path d="M36 26l7-10v8l-7 10Z" fill="#7e1f2a"/>
+  <path d="M5 26h31" stroke="#6e5a52" stroke-width="1.4"/>
+  <g stroke="#bf4a56" stroke-width="1.1" fill="none" stroke-linecap="round"><path d="M9 29.6c3-.8 6 .8 9 0"/><path d="M21 31c3-.8 6 .8 9 0"/></g>
+</svg>

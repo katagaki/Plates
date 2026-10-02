@@ -745,6 +745,32 @@
         ]
       }
     },
+    "bonito": {
+      "sashimi": {
+        "kind": "piece",
+        "file": "Pieces/BonitoSashimi.svg",
+        "size": 19,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#a83038"
+        ]
+      }
+    },
+    "bonito-fillet": {
+      "sashimi": {
+        "kind": "piece",
+        "file": "Pieces/BonitoFilletSashimi.svg",
+        "size": 19,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#a83038"
+        ]
+      }
+    },
     "bread": {
       "toast": {
         "kind": "fill",
@@ -967,6 +993,19 @@
         "rank": 1,
         "tones": [
           "#c84028"
+        ]
+      }
+    },
+    "canned-tuna": {
+      "flaked": {
+        "kind": "piece",
+        "file": "Pieces/CannedTunaFlaked.svg",
+        "size": 11,
+        "count": 7,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#e8c0b0"
         ]
       }
     },
@@ -1444,6 +1483,20 @@
       "fillet": {
         "kind": "piece",
         "file": "Pieces/CodFillet.svg",
+        "size": 50,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f8f0e8",
+          "#c8c0b8"
+        ]
+      }
+    },
+    "cod-fillet": {
+      "fillet": {
+        "kind": "piece",
+        "file": "Pieces/CodFilletFillet.svg",
         "size": 50,
         "count": 1,
         "tier": 1,
@@ -2052,6 +2105,36 @@
         ]
       }
     },
+    "flounder": {
+      "fillet": {
+        "kind": "piece",
+        "file": "Pieces/FlounderFillet.svg",
+        "size": 50,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f8f0e8",
+          "#886840",
+          "#e8e0d0"
+        ]
+      }
+    },
+    "flounder-fillet": {
+      "fillet": {
+        "kind": "piece",
+        "file": "Pieces/FlounderFilletFillet.svg",
+        "size": 50,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f8f0e8",
+          "#886840",
+          "#e8e0d0"
+        ]
+      }
+    },
     "furikake": {
       "sprinkle": {
         "kind": "piece",
@@ -2332,6 +2415,20 @@
         ]
       }
     },
+    "grilled-eel": {
+      "glazed": {
+        "kind": "piece",
+        "file": "Pieces/GrilledEelGlazed.svg",
+        "size": 44,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#985828",
+          "#683818"
+        ]
+      }
+    },
     "gruyere": {
       "grated": {
         "kind": "piece",
@@ -2468,6 +2565,21 @@
         ]
       }
     },
+    "herring": {
+      "fillets": {
+        "kind": "piece",
+        "file": "Pieces/HerringFillets.svg",
+        "size": 19,
+        "count": 3,
+        "tier": 0,
+        "rank": 0,
+        "most": 4,
+        "tones": [
+          "#7898a0",
+          "#d8d8e0"
+        ]
+      }
+    },
     "hijiki": {
       "strands": {
         "kind": "piece",
@@ -2504,6 +2616,21 @@
         "rank": 0,
         "tones": [
           "#e8a020"
+        ]
+      }
+    },
+    "horse-mackerel": {
+      "fillets": {
+        "kind": "piece",
+        "file": "Pieces/HorseMackerelFillets.svg",
+        "size": 19,
+        "count": 3,
+        "tier": 0,
+        "rank": 0,
+        "most": 4,
+        "tones": [
+          "#8898a8",
+          "#e0d8c0"
         ]
       }
     },
@@ -3076,6 +3203,20 @@
       "fillet": {
         "kind": "piece",
         "file": "Pieces/MackerelFillet.svg",
+        "size": 50,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#e0c8b0",
+          "#687888"
+        ]
+      }
+    },
+    "mackerel-fillet": {
+      "fillet": {
+        "kind": "piece",
+        "file": "Pieces/MackerelFilletFillet.svg",
         "size": 50,
         "count": 1,
         "tier": 1,
@@ -4719,6 +4860,42 @@
         ]
       }
     },
+    "salmon-fillet": {
+      "fillet": {
+        "kind": "piece",
+        "file": "Pieces/SalmonFilletFillet.svg",
+        "size": 50,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f09068",
+          "#b8b0a8"
+        ]
+      },
+      "sashimi": {
+        "kind": "piece",
+        "file": "Pieces/SalmonFilletSashimi.svg",
+        "size": 19,
+        "count": 4,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#f09068"
+        ]
+      },
+      "flaked": {
+        "kind": "piece",
+        "file": "Pieces/SalmonFilletFlaked.svg",
+        "size": 11,
+        "count": 7,
+        "tier": 0,
+        "rank": 2,
+        "tones": [
+          "#f0a080"
+        ]
+      }
+    },
     "salmon-roe": {
       "roe": {
         "kind": "piece",
@@ -4760,6 +4937,21 @@
         ]
       }
     },
+    "saury": {
+      "grilled": {
+        "kind": "piece",
+        "file": "Pieces/SauryGrilled.svg",
+        "size": 22,
+        "count": 2,
+        "tier": 0,
+        "rank": 0,
+        "most": 3,
+        "tones": [
+          "#384860",
+          "#c8b088"
+        ]
+      }
+    },
     "sausage": {
       "links": {
         "kind": "piece",
@@ -4797,6 +4989,86 @@
         "tones": [
           "#f0e8d8",
           "#d8a058"
+        ]
+      }
+    },
+    "sea-bass": {
+      "fillet": {
+        "kind": "piece",
+        "file": "Pieces/SeaBassFillet.svg",
+        "size": 50,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f0f0e8",
+          "#687080"
+        ]
+      }
+    },
+    "sea-bass-fillet": {
+      "fillet": {
+        "kind": "piece",
+        "file": "Pieces/SeaBassFilletFillet.svg",
+        "size": 50,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f0f0e8",
+          "#687080"
+        ]
+      }
+    },
+    "sea-bream": {
+      "fillet": {
+        "kind": "piece",
+        "file": "Pieces/SeaBreamFillet.svg",
+        "size": 50,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f0e8e0",
+          "#e06870"
+        ]
+      },
+      "sashimi": {
+        "kind": "piece",
+        "file": "Pieces/SeaBreamSashimi.svg",
+        "size": 19,
+        "count": 4,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#f0e8e0",
+          "#f0c0c0"
+        ]
+      }
+    },
+    "sea-bream-fillet": {
+      "fillet": {
+        "kind": "piece",
+        "file": "Pieces/SeaBreamFilletFillet.svg",
+        "size": 50,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f0e8e0",
+          "#e06870"
+        ]
+      },
+      "sashimi": {
+        "kind": "piece",
+        "file": "Pieces/SeaBreamFilletSashimi.svg",
+        "size": 19,
+        "count": 4,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#f0e8e0",
+          "#f0c0c0"
         ]
       }
     },
@@ -5352,6 +5624,34 @@
         ]
       }
     },
+    "swordfish": {
+      "steak": {
+        "kind": "piece",
+        "file": "Pieces/SwordfishSteak.svg",
+        "size": 50,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f0d0c0",
+          "#484858"
+        ]
+      }
+    },
+    "swordfish-steak": {
+      "steak": {
+        "kind": "piece",
+        "file": "Pieces/SwordfishSteakSteak.svg",
+        "size": 50,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f0d0c0",
+          "#484858"
+        ]
+      }
+    },
     "tahini": {
       "drizzle": {
         "kind": "piece",
@@ -5590,6 +5890,34 @@
         ]
       }
     },
+    "trout": {
+      "fillet": {
+        "kind": "piece",
+        "file": "Pieces/TroutFillet.svg",
+        "size": 50,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f0a088",
+          "#788850"
+        ]
+      }
+    },
+    "trout-fillet": {
+      "fillet": {
+        "kind": "piece",
+        "file": "Pieces/TroutFilletFillet.svg",
+        "size": 50,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f0a088",
+          "#788850"
+        ]
+      }
+    },
     "tuna": {
       "sashimi": {
         "kind": "piece",
@@ -5623,6 +5951,31 @@
         "rank": 2,
         "tones": [
           "#e8c0b0"
+        ]
+      }
+    },
+    "tuna-steak": {
+      "sashimi": {
+        "kind": "piece",
+        "file": "Pieces/TunaSteakSashimi.svg",
+        "size": 19,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#c83048"
+        ]
+      },
+      "cubes": {
+        "kind": "piece",
+        "file": "Pieces/TunaSteakCubes.svg",
+        "size": 12,
+        "count": 7,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#c83048",
+          "#e06068"
         ]
       }
     },
@@ -5884,6 +6237,19 @@
       "sashimi": {
         "kind": "piece",
         "file": "Pieces/YellowtailSashimi.svg",
+        "size": 19,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0c0b0"
+        ]
+      }
+    },
+    "yellowtail-fillet": {
+      "sashimi": {
+        "kind": "piece",
+        "file": "Pieces/YellowtailFilletSashimi.svg",
         "size": 19,
         "count": 4,
         "tier": 0,

@@ -1,8 +1,13 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Can of tuna">
-  <g transform="translate(-3 -3) scale(1.125)">
-    <ellipse cx="24" cy="20" rx="16" ry="6" fill="#cfd6dd"/>
-    <path d="M8 20v8a16 6 0 0 0 32 0v-8Z" fill="#a8b0b8"/>
-    <ellipse cx="24" cy="20" rx="12" ry="4.2" fill="#d9a877"/>
-    <path d="M18 19c3-1 8-1 11 0" stroke="#c08f5c" stroke-width="1.6" fill="none" stroke-linecap="round"/>
-  </g>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tuna">
+  <path d="M12.5 24C9 20 6 16 1.5 11C4 19 4.5 22 4.5 24C4.5 26 4 29 1.5 37C6 32 9 28 12.5 24Z" fill="#1f2e52"/>
+  <path d="M32 15.6 30 11.6l-7 3.4-.5 1.4Z" fill="#1f2e52"/>
+  <path d="M20 16.6l2-4 2.5 3Z" fill="#e3b93a"/>
+  <path d="M20 31.4l2 4 2.5-3Z" fill="#e3b93a"/>
+  <g fill="#e8c23a"><path d="M13 21.6l1.4-2.2 1.2 1.8Z"/><path d="M15.8 20.6l1.4-2.2 1.2 1.8Z"/><path d="M18.4 19.4l1.2-2 1 1.6Z"/><path d="M13 26.4l1.4 2.2 1.2-1.8Z"/><path d="M15.8 27.4l1.4 2.2 1.2-1.8Z"/><path d="M18.4 28.6l1.2 2 1-1.6Z"/></g>
+  <path d="M46 24C45 17.89 36.5 14.6 27 14.6C19 14.6 14 21.8 11 22.4L11 25.6C14 26.2 19 32.6 27 32.6C36.5 32.6 45 29.59 46 24Z" fill="#cfd6de"/>
+  <path d="M46 24C45 17.89 36.5 14.6 27 14.6C19 14.6 14 21.8 11 22.4L11 24.3C23 24.6 36 24.6 46 24Z" fill="#1f2e52"/>
+  <path d="M14 24.8c9 .2 18 0 26-.6" stroke="#8fa6c4" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <path d="M39 17.5C36.5 23 36.5 26 39 30.2" stroke="#55627a" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+  <path d="M36.5 25.5c-3 .5-5.5 2.2-7 4 3.2 0 5.5-1.4 7-4Z" fill="#1f2e52"/>
+  <circle cx="41.8" cy="22.2" r="2.5" fill="#e3e8ef"/><circle cx="41.8" cy="22.2" r="1.8" fill="#0f1626"/>
 </svg>
