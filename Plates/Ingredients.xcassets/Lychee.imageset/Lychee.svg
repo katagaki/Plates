@@ -1,0 +1,12 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lychee">
+  <circle cx="18" cy="26" r="13" fill="#cf3a4a"/>
+  <g fill="#a82636">
+    <path d="M12 18l2 2-2 2-2-2Z"/><path d="M18 15l2 2-2 2-2-2Z"/><path d="M24 18l2 2-2 2-2-2Z"/>
+    <path d="M9 25l2 2-2 2-2-2Z"/><path d="M15 23l2 2-2 2-2-2Z"/><path d="M21 23l2 2-2 2-2-2Z"/><path d="M27 25l2 2-2 2-2-2Z"/>
+    <path d="M12 30l2 2-2 2-2-2Z"/><path d="M18 30l2 2-2 2-2-2Z"/><path d="M24 30l2 2-2 2-2-2Z"/><path d="M18 36l2 2-2 2-2-2Z"/>
+  </g>
+  <path d="M18 13c0-3 2-5 4-6" stroke="#6b5a3a" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <ellipse cx="35" cy="33" rx="9" ry="10" fill="#f4f0e6"/>
+  <path d="M31 28c1-2 3-3 5-3" stroke="#ffffff" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <path d="M35 33c3 1 6 4 6 6" stroke="#e2dccd" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Papaya">
+  <path d="M24 5c9 0 14 9 14 20 0 10-6 18-14 18S10 35 10 25C10 14 15 5 24 5Z" fill="#8fb24a"/>
+  <path d="M24 8c7 0 11 8 11 17 0 9-5 15-11 15s-11-6-11-15c0-9 4-17 11-17Z" fill="#f28a3a"/>
+  <path d="M24 16c4 0 6 5 6 10 0 5-3 8-6 8s-6-3-6-8c0-5 2-10 6-10Z" fill="#f7b170"/>
+  <g fill="#2a2220"><circle cx="22" cy="20" r="1.4"/><circle cx="26" cy="20" r="1.4"/><circle cx="21" cy="25" r="1.4"/><circle cx="25" cy="24" r="1.4"/><circle cx="27" cy="28" r="1.4"/><circle cx="22" cy="29" r="1.4"/><circle cx="24" cy="32" r="1.3"/></g>
+</svg>

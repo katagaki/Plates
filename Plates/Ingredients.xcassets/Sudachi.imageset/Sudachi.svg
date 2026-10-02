@@ -1,0 +1,10 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sudachi">
+  <circle cx="17" cy="23" r="12" fill="#5f9e3a"/>
+  <path d="M9 20c1-4 4-6 8-7" stroke="#8fc25a" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+  <path d="M17 11V7" stroke="#6b5a3a" stroke-width="1.8" stroke-linecap="round"/>
+  <circle cx="32" cy="32" r="11" fill="#5f9e3a"/>
+  <circle cx="32" cy="32" r="9.5" fill="#f2f2d6"/>
+  <circle cx="32" cy="32" r="8" fill="#d6e48a"/>
+  <path d="M32 24v16M24 32h16M26.3 26.3l11.4 11.4M37.7 26.3 26.3 37.7" stroke="#f2f2d6" stroke-width="1.2"/>
+  <circle cx="32" cy="32" r="1.4" fill="#f2f2d6"/>
+</svg>

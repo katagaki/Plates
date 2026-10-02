@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nashi pear">
+  <circle cx="24" cy="27" r="15" fill="#d9b25a"/>
+  <path d="M13 22c2-5 7-8 12-8" stroke="#ecd08a" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+  <g fill="#b88f3e"><circle cx="18" cy="28" r=".8"/><circle cx="23" cy="24" r=".8"/><circle cx="29" cy="27" r=".8"/><circle cx="21" cy="33" r=".8"/><circle cx="27" cy="34" r=".8"/><circle cx="33" cy="31" r=".8"/><circle cx="31" cy="21" r=".8"/><circle cx="15" cy="33" r=".8"/></g>
+  <path d="M24 12c0-3 1-6 3-8" stroke="#6b5a3a" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>

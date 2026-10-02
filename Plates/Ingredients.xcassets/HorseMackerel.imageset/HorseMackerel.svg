@@ -1,0 +1,8 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Horse mackerel">
+  <path d="M5 24c6-8 14-11 23-11 7 0 12 4 14 11-2 7-7 11-14 11-9 0-17-3-23-11Z" fill="#d6dce2"/>
+  <path d="M5 24c6-8 14-11 23-11 7 0 12 4 14 11Z" fill="#6f8fa8"/>
+  <path d="M8 25c8-1 16-3 26-5" stroke="#e3c35a" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <g fill="#9aa6b2"><path d="M12 25l2-2 2 2-2 2Z"/><path d="M17 24l2-2 2 2-2 2Z"/><path d="M22 23l2-2 2 2-2 2Z"/><path d="M27 22l2-2 2 2-2 2Z"/></g>
+  <circle cx="37" cy="22" r="2.2" fill="#2a3540"/>
+  <path d="M5 24 1 15v18Z" fill="#6f8fa8"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Swordfish">
+  <path d="M10 24c5-6 12-9 19-9 4 0 7 2 9 5l9 3-9 2c-2 4-5 6-9 6-7 0-14-2-19-7Z" fill="#c9d1d9"/>
+  <path d="M10 24c5-6 12-9 19-9 4 0 7 2 9 5l9 3Z" fill="#4c5f7a"/>
+  <path d="M20 16l3-10 6 10Z" fill="#4c5f7a"/>
+  <path d="M10 24 3 14l3 10-3 10Z" fill="#4c5f7a"/>
+  <circle cx="34" cy="21" r="1.8" fill="#1d2633"/>
+  <path d="M24 29l2 5 3-5Z" fill="#8a9bb0"/>
+</svg>

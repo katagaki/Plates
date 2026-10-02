@@ -1,0 +1,12 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Jackfruit">
+  <path d="M24 6c9 0 15 8 15 19 0 10-6 18-15 18S9 35 9 25C9 14 15 6 24 6Z" fill="#a8b53e"/>
+  <g fill="#8a9a2c">
+    <circle cx="18" cy="14" r="1.6"/><circle cx="24" cy="12" r="1.6"/><circle cx="30" cy="14" r="1.6"/>
+    <circle cx="15" cy="20" r="1.6"/><circle cx="21" cy="19" r="1.6"/><circle cx="27" cy="19" r="1.6"/><circle cx="33" cy="20" r="1.6"/>
+    <circle cx="14" cy="27" r="1.6"/><circle cx="20" cy="26" r="1.6"/><circle cx="26" cy="26" r="1.6"/><circle cx="32" cy="27" r="1.6"/>
+    <circle cx="16" cy="33" r="1.6"/><circle cx="22" cy="33" r="1.6"/><circle cx="28" cy="33" r="1.6"/><circle cx="33" cy="33" r="1.4"/>
+    <circle cx="20" cy="39" r="1.4"/><circle cx="26" cy="39" r="1.4"/>
+  </g>
+  <path d="M13 20c1-6 4-10 8-12" stroke="#c8d06a" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  <path d="M24 6V2" stroke="#6b5a3a" stroke-width="2.4" stroke-linecap="round"/>
+</svg>

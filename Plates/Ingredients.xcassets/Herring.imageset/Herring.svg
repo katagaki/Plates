@@ -1,0 +1,8 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Herring">
+  <path d="M4 24c7-6 16-8 25-8 6 0 11 3 13 8-2 5-7 8-13 8-9 0-18-2-25-8Z" fill="#d4dade"/>
+  <path d="M4 24c7-6 16-8 25-8 6 0 11 3 13 8Z" fill="#3f7c86"/>
+  <path d="M10 24c9 1 20 1 30 0" stroke="#e8edf0" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <circle cx="37" cy="22" r="1.8" fill="#1f2e33"/>
+  <path d="M35 18c1 3 1 9 0 12" stroke="#9eacb3" stroke-width="1.2" fill="none"/>
+  <path d="M4 24 0 17v14Z" fill="#3f7c86"/>
+</svg>
