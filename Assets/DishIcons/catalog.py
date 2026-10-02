@@ -129,29 +129,44 @@ V["zucchini"] = {"coins": p(round_slice("#4f8a3a", "#e6eec0", seeds="#c5d89a"), 
 # Fruits ------------------------------------------------------------------------------------
 
 V["apple"] = {"slices": p(crescent("#c9373f", "#f6ecc8"), 14, 5), "diced": p(cube("#f6ecc8", "#fbf7ea", "#c9373f"), 9, 7)}
+V["apricot"] = {"halves": p(round_slice("#f0a040", "#f8c070", core="#a8642a"), 12, 4), "slices": p(crescent("#ec8a35", "#f8c878"), 14, 5)}
 V["avocado"] = {"half": center(avocado_half("#3f5a2a", "#c9dc8a", "#8a5a3a"), 30), "sliced": p(crescent("#3f5a2a", "#c9dc8a"), 15, 4), "diced": p(cube("#c9dc8a", "#e2edb8", "#6f8f3a"), 9, 7)}
 V["banana"] = {"coins": p(round_slice("#f2e2a6", "#fbf2cc", seeds="#c9b07a"), 11, 6)}
+V["blackberry"] = {"berries": p(cluster("#3a1f45", "#7a5a8f", 2.2), 9, 6)}
 V["blueberry"] = {"berries": p(berry("#4b5a9e", "#7c8ac2"), 7, 8)}
 V["cherry"] = {"whole": p(cherry("#a3243a", "#d4556b", "#5f8f45"), 12, 4)}
 V["coconut"] = {"flakes": garnish(flake("#fbf9f4", "#e6e0d4"), 9, 6)}
+V["cranberry"] = {"berries": p(berry("#b3202c", "#e46a70"), 7, 7), "dried": garnish(chunk("#8a1a24", "#b8404a"), 7, 8)}
 V["dates"] = {"chopped": p(chunk("#7a4a2a", "#a0683f"), 8, 6)}
+V["dragon-fruit"] = {"cubes": p(dice("#d8327a", "#e8609a") + "".join(f'<circle cx="{x}" cy="{y}" r="0.55" fill="#2a2228"/>' for x, y in ((6, 9), (9, 6.5), (10.5, 10), (7.5, 11.5))), 10, 7)}
 V["fig"] = {"quarters": p(quarter("#6b3a5a", "#e88a8a", "#f6d6a8"), 13, 4)}
 V["grape"] = {"halves": p(round_slice("#8fbf5a", "#c9e09a", seeds="#a8cf7a"), 9, 7), "whole": p(berry("#6b3a7a", "#9a6aa8"), 9, 6)}
 V["grapefruit"] = {"segments": p(citrus_wedge("#f0a07a", "#fbe6d6", "#e8695f"), 17, 4)}
+V["guava"] = {"slices": p(round_slice("#9cc25a", "#f0727a", seeds="#f4e6c4"), 13, 4)}
+V["jackfruit"] = {"pods": p(teardrop("#f2c23a", "#f8dc7a"), 12, 5)}
 V["kiwi"] = {"slices": p('<circle cx="8" cy="8" r="7" fill="#8a6a3a"/><circle cx="8" cy="8" r="6.2" fill="#7fb03a"/><circle cx="8" cy="8" r="2.2" fill="#eef3d6"/>' + "".join(f'<circle cx="{f(8 + 3.2 * math.cos(math.tau * i / 10))}" cy="{f(8 + 3.2 * math.sin(math.tau * i / 10))}" r="0.5" fill="#2a2a2a"/>' for i in range(10)), 13, 4)}
+V["kumquat"] = {"slices": p(citrus_wheel("#f29a1f", "#fbe6c8", "#f7b24a"), 10, 5)}
 V["lemon"] = {"wedges": p(citrus_wedge("#f1c21b", "#fbf2cc", "#f6dc5c"), 17, 3), "wheels": p(citrus_wheel("#f1c21b", "#fbf2cc", "#f6dc5c"), 13, 3), "zest": garnish(shreds("#f1c21b"), 8, 4)}
 V["lime"] = {"wedges": p(citrus_wedge("#5f9a45", "#e8efcf", "#a8cf6f"), 17, 3), "wheels": p(citrus_wheel("#5f9a45", "#e8efcf", "#a8cf6f"), 13, 3)}
+V["lychee"] = {"halves": p(round_slice("#cf3a4a", "#f4f0e6"), 10, 6)}
+V["mandarin"] = {"segments": p(crescent("#f08a2b", "#f8b85a"), 13, 5)}
 V["mango"] = {"cubes": p(dice("#f6a63a", "#fbc46a"), 10, 7), "slices": p(crescent("#e88a2a", "#fbc46a"), 14, 4)}
 V["melon"] = {"cubes": p(dice("#c9dc8a", "#e2edb8"), 11, 6)}
+V["nashi-pear"] = {"slices": p(crescent("#d9b25a", "#fbf6e2"), 14, 5)}
 V["orange"] = {"segments": p(citrus_wedge("#f08a2b", "#fbe6c8", "#f7a64a"), 17, 4), "wheels": p(citrus_wheel("#f08a2b", "#fbe6c8", "#f7a64a"), 13, 3)}
+V["papaya"] = {"cubes": p(dice("#f28a3a", "#f7b170"), 10, 7), "slices": p(crescent("#8fb24a", "#f28a3a"), 15, 4)}
+V["passion-fruit"] = {"pulp": garnish(cluster("#f5b82e", "#2a1a1a", 2.0), 12, 4)}
 V["peach"] = {"slices": p(crescent("#e86a4a", "#f8c47a"), 14, 5)}
 V["pear"] = {"slices": p(crescent("#b9c45a", "#f6f0d0"), 14, 5)}
 V["persimmon"] = {"wedges": p(wedge("#e8762a", "#f6a64a"), 13, 5)}
 V["pineapple"] = {"chunks": p(wedge("#e8b84a", "#f8dc7a"), 11, 6), "rings": p(ring("#f2c84a", "#f8e08a", 3.4), 15, 3)}
+V["plantain"] = {"fried": p(coin("#b8661f", "#e8a64a"), 12, 6)}
 V["plum"] = {"slices": p(crescent("#6b2a4a", "#e8a05a"), 13, 5)}
 V["pomegranate"] = {"seeds": garnish(cluster("#b8243a", "#e86a7a", 1.9), 9, 4)}
 V["raspberry"] = {"berries": p(cluster("#d9435f", "#f08aa0", 2.2), 9, 6)}
+V["rhubarb"] = {"chopped": p(stick("#c43a4f", "#ec8a96"), 12, 6)}
 V["strawberry"] = {"halves": p(heart_half("#d9364a", "#f6a6a6", "#f6e08a"), 13, 5)}
+V["sudachi"] = {"wheels": p(citrus_wheel("#5f9e3a", "#f2f2d6", "#d6e48a"), 12, 3), "wedges": p(citrus_wedge("#5f9e3a", "#f2f2d6", "#d6e48a"), 15, 3)}
 V["watermelon"] = {"cubes": p(dice("#e8505f", "#f6808a") + '<ellipse cx="10" cy="10" rx="0.9" ry="0.6" fill="#2a2a2a"/>', 11, 6)}
 V["yuzu"] = {"zest": garnish(shreds("#f1c21b", "#f6dc5c"), 8, 4), "wheels": p(citrus_wheel("#e8b81b", "#fbf2cc", "#f6dc5c"), 12, 3)}
 
@@ -179,14 +194,17 @@ V["veal"] = {"cutlet": center(sliced_fan("#f2e6d0", "#c9904b", "#d9a04f"), 40)}
 
 # Seafood -----------------------------------------------------------------------------------
 
+V["abalone"] = {"slices": p(round_slice("#6a5c48", "#ece0c4"), 13, 4)}
 V["anchovies"] = {"fillets": p(stick("#8a6a5a", "#b8a090"), 13, 4)}
 V["chikuwa"] = {"rings": p(ring("#c98a4b", "#f4ecd6", 3), 11, 6)}
 V["clams"] = {"shells": p(clam("#d9cbb4", "#f2d6b0", "#b8a688"), 13, 5)}
 V["cod"] = {"fillet": center(fillet("#f8f4ea", "#e6dfcc", "#c9c4b8"), 50)}
 V["crab"] = {"flaked": p(shreds("#f6e6dc", "#e8735f"), 11, 6)}
 V["crab-sticks"] = {"sticks": p(crab_stick("#e04a3a", "#fbf6ee"), 14, 4), "shredded": p(shreds("#fbf6ee", "#e04a3a"), 11, 6)}
+V["dried-shrimp"] = {"sprinkle": garnish(shrimp("#e07a4f", "#f4b08a"), 8, 6)}
 V["eel"] = {"glazed": center('<rect x="1" y="3" width="14" height="10" rx="1.5" fill="#6a3a1f"/><rect x="2" y="4" width="12" height="8" rx="1" fill="#9a5a2a"/><path d="M4 5v6M8 5v6M12 5v6" stroke="#5a2f15" stroke-width="0.9"/>', 44)}
 V["fish"] = {"fillet": center(fillet("#f6efe2", "#e2d6c0", "#b8b0a0"), 50)}
+V["lobster"] = {"chunks": p(chunk("#e8604a", "#f8e6dc"), 12, 5)}
 V["mackerel"] = {"fillet": center(fillet("#e6cdb0", "#c9a888", "#6f7f8f") + '<path d="M3 9c3-3 8-4.5 11-3.5" stroke="#9aaab8" stroke-width="1" fill="none"/>', 50)}
 V["mentaiko"] = {"dollop": center(dollop("#f0848a", "#f8b8b8") + "".join(f'<circle cx="{x}" cy="{y}" r="0.5" fill="#d9505a"/>' for x, y in ((6, 10), (9, 9), (11, 11), (7, 12))), 14)}
 V["mussels"] = {"shells": p(mussel("#2f3440", "#f2a65a"), 14, 5)}
@@ -196,9 +214,11 @@ V["salmon"] = {"fillet": center(fillet("#f6906a", "#fbc4a8", "#b8b0a8"), 50), "s
 V["salmon-roe"] = {"roe": p(cluster("#f2702a", "#fbb07a", 2.1), 10, 4)}
 V["sardines"] = {"fillets": whole(p(stick("#9aa6b0", "#d9c4b0"), 15, 3), 4)}
 V["scallops"] = {"seared": p(scallop("#f6ead8", "#d9a05a"), 13, 4)}
+V["sea-urchin"] = {"lobes": p(teardrop("#f0b23a", "#d97a12"), 13, 4)}
 V["seafood"] = {"shrimp": p(shrimp("#fa7368", "#ffb0a4"), 15, 3), "squid": p(ring("#f6ecdf", "#fbf7f0", 2.6), 11, 3)}
 V["shirasu"] = {"sprinkle": garnish(squiggles("#f2ead8", "#3a3a3a"), 15, 3)}
 V["shrimp"] = {"whole": p(shrimp("#fa7368", "#ffb0a4"), 15, 4)}
+V["smoked-salmon"] = {"slices": p(meat_slice("#ee8058", "#fbc4a8"), 15, 4)}
 V["squid"] = {"rings": p(ring("#f6ecdf", "#fbf7f0", 2.6), 11, 6)}
 V["tuna"] = {"sashimi": p(strip("#c8374a", "#e0606e"), 15, 4), "cubes": p(dice("#c8374a", "#e0606e"), 10, 7), "flaked": p(crumble("#e8c4b0", "#f6dccf"), 9, 7)}
 V["yellowtail"] = {"sashimi": p(strip("#f0c0b0", "#f8dcd2"), 15, 4)}

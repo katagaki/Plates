@@ -159,6 +159,20 @@
     }
   },
   "ingredients": {
+    "abalone": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/AbaloneSlices.svg",
+        "size": 16,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#e8e0c0",
+          "#685848"
+        ]
+      }
+    },
     "aburaage": {
       "strips": {
         "kind": "piece",
@@ -271,6 +285,32 @@
         "tones": [
           "#f0e8c8",
           "#c83038"
+        ]
+      }
+    },
+    "apricot": {
+      "halves": {
+        "kind": "piece",
+        "file": "Pieces/ApricotHalves.svg",
+        "size": 15,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f8c070",
+          "#f0a040"
+        ]
+      },
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/ApricotSlices.svg",
+        "size": 18,
+        "count": 5,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#f8c878",
+          "#e88830"
         ]
       }
     },
@@ -702,6 +742,19 @@
         "rank": 0,
         "tones": [
           "#282028"
+        ]
+      }
+    },
+    "blackberry": {
+      "berries": {
+        "kind": "piece",
+        "file": "Pieces/BlackberryBerries.svg",
+        "size": 11,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#381840"
         ]
       }
     },
@@ -1625,6 +1678,30 @@
         ]
       }
     },
+    "cranberry": {
+      "berries": {
+        "kind": "piece",
+        "file": "Pieces/CranberryBerries.svg",
+        "size": 9,
+        "count": 7,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#b02028"
+        ]
+      },
+      "dried": {
+        "kind": "piece",
+        "file": "Pieces/CranberryDried.svg",
+        "size": 8,
+        "count": 8,
+        "tier": 2,
+        "rank": 1,
+        "tones": [
+          "#881820"
+        ]
+      }
+    },
     "cream": {
       "swirl": {
         "kind": "piece",
@@ -1836,6 +1913,20 @@
         ]
       }
     },
+    "dragon-fruit": {
+      "cubes": {
+        "kind": "piece",
+        "file": "Pieces/DragonFruitCubes.svg",
+        "size": 12,
+        "count": 7,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#d83078",
+          "#e86098"
+        ]
+      }
+    },
     "dried-shiitake": {
       "caps": {
         "kind": "piece",
@@ -1848,6 +1939,19 @@
           "#684828",
           "#583820",
           "#c8a078"
+        ]
+      }
+    },
+    "dried-shrimp": {
+      "sprinkle": {
+        "kind": "piece",
+        "file": "Pieces/DriedShrimpSprinkle.svg",
+        "size": 9,
+        "count": 6,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#e07848"
         ]
       }
     },
@@ -2472,6 +2576,20 @@
         ]
       }
     },
+    "guava": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/GuavaSlices.svg",
+        "size": 16,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f07078",
+          "#98c058"
+        ]
+      }
+    },
     "gyoza-wrappers": {
       "dumplings": {
         "kind": "fill",
@@ -2657,6 +2775,19 @@
         "rank": 0,
         "tones": [
           "#f8f8f8"
+        ]
+      }
+    },
+    "jackfruit": {
+      "pods": {
+        "kind": "piece",
+        "file": "Pieces/JackfruitPods.svg",
+        "size": 15,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0c038"
         ]
       }
     },
@@ -2956,6 +3087,21 @@
         ]
       }
     },
+    "kumquat": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/KumquatSlices.svg",
+        "size": 12,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0b048",
+          "#f8e0c8",
+          "#f09818"
+        ]
+      }
+    },
     "lamb": {
       "chunks": {
         "kind": "piece",
@@ -3142,6 +3288,19 @@
         ]
       }
     },
+    "lobster": {
+      "chunks": {
+        "kind": "piece",
+        "file": "Pieces/LobsterChunks.svg",
+        "size": 15,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#e86048"
+        ]
+      }
+    },
     "lotus-root": {
       "slices": {
         "kind": "piece",
@@ -3180,6 +3339,20 @@
         "tones": [
           "#d88878",
           "#e8a898"
+        ]
+      }
+    },
+    "lychee": {
+      "halves": {
+        "kind": "piece",
+        "file": "Pieces/LycheeHalves.svg",
+        "size": 12,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0f0e0",
+          "#c83848"
         ]
       }
     },
@@ -3224,6 +3397,20 @@
         "tones": [
           "#e0c8b0",
           "#687888"
+        ]
+      }
+    },
+    "mandarin": {
+      "segments": {
+        "kind": "piece",
+        "file": "Pieces/MandarinSegments.svg",
+        "size": 16,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f8b858",
+          "#f08828"
         ]
       }
     },
@@ -3605,6 +3792,20 @@
         ]
       }
     },
+    "nashi-pear": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/NashiPearSlices.svg",
+        "size": 18,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f8f0e0",
+          "#d8b058"
+        ]
+      }
+    },
     "natto": {
       "dollop": {
         "kind": "piece",
@@ -3940,6 +4141,32 @@
         ]
       }
     },
+    "papaya": {
+      "cubes": {
+        "kind": "piece",
+        "file": "Pieces/PapayaCubes.svg",
+        "size": 12,
+        "count": 7,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f08838",
+          "#f0b070"
+        ]
+      },
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/PapayaSlices.svg",
+        "size": 19,
+        "count": 4,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#f08838",
+          "#88b048"
+        ]
+      }
+    },
     "paprika": {
       "dusting": {
         "kind": "piece",
@@ -4039,6 +4266,19 @@
         "rank": 0,
         "tones": [
           "#d03830"
+        ]
+      }
+    },
+    "passion-fruit": {
+      "pulp": {
+        "kind": "piece",
+        "file": "Pieces/PassionFruitPulp.svg",
+        "size": 14,
+        "count": 4,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#f0b828"
         ]
       }
     },
@@ -4286,6 +4526,20 @@
         "rank": 1,
         "tones": [
           "#e8c078"
+        ]
+      }
+    },
+    "plantain": {
+      "fried": {
+        "kind": "piece",
+        "file": "Pieces/PlantainFried.svg",
+        "size": 15,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#e8a048",
+          "#b86018"
         ]
       }
     },
@@ -4656,6 +4910,20 @@
         "tones": [
           "#b06088",
           "#e8c0d8"
+        ]
+      }
+    },
+    "rhubarb": {
+      "chopped": {
+        "kind": "piece",
+        "file": "Pieces/RhubarbChopped.svg",
+        "size": 15,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#c03848",
+          "#e88890"
         ]
       }
     },
@@ -5072,6 +5340,19 @@
         ]
       }
     },
+    "sea-urchin": {
+      "lobes": {
+        "kind": "piece",
+        "file": "Pieces/SeaUrchinLobes.svg",
+        "size": 16,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0b038"
+        ]
+      }
+    },
     "seafood": {
       "shrimp": {
         "kind": "piece",
@@ -5320,6 +5601,20 @@
         ]
       }
     },
+    "smoked-salmon": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/SmokedSalmonSlices.svg",
+        "size": 19,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#e88058",
+          "#f8c0a8"
+        ]
+      }
+    },
     "snow-peas": {
       "pods": {
         "kind": "piece",
@@ -5530,6 +5825,34 @@
         "rank": 0,
         "tones": [
           "#d83048"
+        ]
+      }
+    },
+    "sudachi": {
+      "wheels": {
+        "kind": "piece",
+        "file": "Pieces/SudachiWheels.svg",
+        "size": 15,
+        "count": 3,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0f0d0",
+          "#d0e088",
+          "#589838"
+        ]
+      },
+      "wedges": {
+        "kind": "piece",
+        "file": "Pieces/SudachiWedges.svg",
+        "size": 19,
+        "count": 3,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#d0e088",
+          "#f0f0d0",
+          "#589838"
         ]
       }
     },
