@@ -47,7 +47,7 @@ struct GenerateRecipeView: View {
         NavigationStack {
             Group {
                 if isRevising {
-                    revisionProgress
+                    RevisionProgressView(progress: editor.progress)
                 } else if let draft {
                     RecipeConfirmationView(recipe: ConfirmationRecipe(draft)) {
                         DishIcon(recipe: draft, size: 168)
@@ -83,7 +83,10 @@ struct GenerateRecipeView: View {
                     }
                 }
                 if draft != nil {
-                    ToolbarItem(placement: .bottomBar) { revisionBar }
+                    ToolbarItem(placement: .bottomBar) {
+                        RecipeRevisionBar(text: $revision, canSend: canRevise, send: revise)
+                            .disabled(!editor.isAvailable || isBusy)
+                    }
                 }
             }
         }
@@ -283,34 +286,6 @@ struct GenerateRecipeView: View {
 
     // MARK: - Revision
 
-    /// Where the cook asks for changes to the written recipe, in their own words.
-    private var revisionBar: some View {
-        HStack(spacing: 8) {
-            TextField("Edit.Ask.Label", text: $revision, prompt: Text("Edit.Ask.Prompt"))
-                .submitLabel(.send)
-                .onSubmit(revise)
-                .padding(.leading, 12)
-            Button(action: revise) {
-                Label("Edit.Ask.Title", systemImage: "arrow.up")
-                    .labelStyle(.iconOnly)
-            }
-            .buttonStyle(.borderedProminent)
-            .buttonBorderShape(.circle)
-            .disabled(!canRevise)
-        }
-        .frame(maxWidth: .infinity)
-        .disabled(!editor.isAvailable || isBusy)
-    }
-
-    private var revisionProgress: some View {
-        ScrollView {
-            EditProgressView(progress: editor.progress)
-                .padding(.listRowInset)
-                .frame(maxWidth: .infinity, alignment: .leading)
-        }
-        .background(Color(uiColor: .systemGroupedBackground))
-    }
-
     private var trimmedRevision: String {
         revision.trimmingCharacters(in: .whitespacesAndNewlines)
     }
@@ -325,13 +300,11 @@ struct GenerateRecipeView: View {
         guard let draft, canRevise else { return }
         let ask = trimmedRevision
         Task {
-            await editor.prepare(draft, request: ask)
-            if let revised = await editor.applyApprovedPlan() {
+            if let revised = await editor.revise(draft, request: ask) {
                 self.draft = revised
                 revision = ""
             } else if case let .failed(message) = editor.state {
                 revisionError = message
-                editor.discardPlan()
             }
         }
     }

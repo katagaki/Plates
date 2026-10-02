@@ -17,7 +17,10 @@ struct RecipeDetailView: View {
     @State private var editingNote: ListEdit?
     @State private var shared: SharedFile?
     @State private var shareFailed = false
-    @State private var isAsking = false
+    /// Changes the cook asks for in their own words while editing.
+    @State private var editor = RecipeAskEditor(observer: GenerationActivity.edit)
+    @State private var revision = ""
+    @State private var revisionError: String?
 
     /// The three things about a recipe that are edited in an alert rather than a sheet.
     private enum Field {
@@ -32,43 +35,18 @@ struct RecipeDetailView: View {
     }
 
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 24) {
-                if isEditing {
-                    nameCard
-                        .padding(.horizontal, .listRowInset)
-                }
-
-                dishHeader
-
-                summary
-                    .padding(.horizontal, .listRowInset)
-
-                ForEach(RecipeList.allCases) { carousel($0) }
-
-                steps
-                    .padding(.horizontal, .listRowInset)
-
-                if isEditing {
-                    notes
-                        .padding(.horizontal, .listRowInset)
-                }
+        Group {
+            if isRevising {
+                RevisionProgressView(progress: editor.progress)
+            } else {
+                page
             }
-            .padding(.vertical, 16)
         }
-        .background(Color(uiColor: .systemGroupedBackground))
         .navigationTitle(recipe.title)
         .navigationBarTitleDisplayMode(.large)
         .animation(.default, value: isEditing)
         .toolbar {
             if store != nil {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        isAsking = true
-                    } label: {
-                        Label("Edit.Ask.Title", systemImage: "apple.intelligence")
-                    }
-                }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
                         isEditing.toggle()
@@ -78,11 +56,19 @@ struct RecipeDetailView: View {
                             systemImage: isEditing ? "checkmark" : "pencil"
                         )
                     }
+                    .disabled(isRevising)
                 }
             }
 
-            ToolbarItem(placement: .bottomBar) {
-                shareMenu
+            if isEditing {
+                ToolbarItem(placement: .bottomBar) {
+                    RecipeRevisionBar(text: $revision, canSend: canRevise, send: revise)
+                        .disabled(!editor.isAvailable || isRevising)
+                }
+            } else {
+                ToolbarItem(placement: .bottomBar) {
+                    shareMenu
+                }
             }
 
             if !recipe.troubleshooting.isEmpty, !isEditing {
@@ -99,12 +85,21 @@ struct RecipeDetailView: View {
         .sheet(isPresented: $isShowingTroubleshooting) {
             TroubleshootingView(entries: recipe.troubleshooting)
         }
-        .sheet(isPresented: $isAsking) {
-            AskEditRecipeView(recipe: recipe) { edited in
-                recipe = edited
-                save()
-            }
+        .alert(
+            "Edit.Ask.Title",
+            isPresented: Binding(
+                get: { revisionError != nil },
+                set: { if !$0 { revisionError = nil } }
+            )
+        ) {
+            Button("Shared.Done", role: .cancel) {}
+        } message: {
+            Text(verbatim: revisionError ?? "")
         }
+        // A pass can take a while, and the screen is not touched while it runs, so it is held
+        // awake rather than locking part way through.
+        .onChange(of: isRevising) { UIApplication.shared.isIdleTimerDisabled = isRevising }
+        .onDisappear { UIApplication.shared.isIdleTimerDisabled = false }
         .sheet(item: $shared) { file in
             ShareSheet(url: file.url)
         }
@@ -556,6 +551,60 @@ struct RecipeDetailView: View {
             shared = SharedFile(url: try RecipeExport.file(format, for: recipe))
         } catch {
             shareFailed = true
+        }
+    }
+
+    private var page: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 24) {
+                if isEditing {
+                    nameCard
+                        .padding(.horizontal, .listRowInset)
+                }
+
+                dishHeader
+
+                summary
+                    .padding(.horizontal, .listRowInset)
+
+                ForEach(RecipeList.allCases) { carousel($0) }
+
+                steps
+                    .padding(.horizontal, .listRowInset)
+
+                if isEditing {
+                    notes
+                        .padding(.horizontal, .listRowInset)
+                }
+            }
+            .padding(.vertical, 16)
+        }
+        .background(Color(uiColor: .systemGroupedBackground))
+    }
+
+    private var isRevising: Bool { editor.state == .working }
+
+    private var trimmedRevision: String {
+        revision.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+
+    private var canRevise: Bool {
+        editor.isAvailable && !isRevising && !trimmedRevision.isEmpty
+    }
+
+    /// Asks the model for the changes and saves them, as every other edit here is saved. A
+    /// failed change leaves the recipe as it was.
+    private func revise() {
+        guard canRevise else { return }
+        let ask = trimmedRevision
+        Task {
+            if let revised = await editor.revise(recipe, request: ask) {
+                recipe = revised
+                revision = ""
+                save()
+            } else if case let .failed(message) = editor.state {
+                revisionError = message
+            }
         }
     }
 

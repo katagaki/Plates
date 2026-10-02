@@ -274,6 +274,15 @@ public final class RecipeAskEditor {
         }
     }
 
+    /// Plans the changes and makes them at once, for a recipe the cook reads again on the same
+    /// screen. A request that fails leaves the editor ready for the next one.
+    public func revise(_ recipe: Recipe, request: String) async -> Recipe? {
+        await prepare(recipe, request: request)
+        if let revised = await applyApprovedPlan() { return revised }
+        if case .awaitingApproval = state { discardPlan() }
+        return nil
+    }
+
     public func discardPlan() {
         guard state != .working else { return }
         proposedEdits = []
