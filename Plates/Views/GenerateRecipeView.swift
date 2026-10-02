@@ -21,8 +21,6 @@ struct GenerateRecipeView: View {
     @State private var decisionsRemaining: Int?
     @State private var isDeciding = false
     @State private var decideError: String?
-    @State private var shared: SharedFile?
-    @State private var shareFailed = false
 
     /// Set by a `plates-debug://` link, so a debug run can go from launch to Jev's pick untouched.
     private let startsAtOnce: Bool
@@ -77,30 +75,7 @@ struct GenerateRecipeView: View {
                         Button("Generate.Ideas.Edit") { ideas = [] }
                     }
                 }
-                if let draft {
-                    ToolbarItem(placement: .bottomBar) {
-                        Menu {
-                            ForEach(ShareFormat.allCases) { format in
-                                Button {
-                                    do {
-                                        shared = SharedFile(url: try RecipeExport.file(format, for: draft))
-                                    } catch {
-                                        shareFailed = true
-                                    }
-                                } label: {
-                                    Label(format.title, systemImage: format.symbol)
-                                }
-                            }
-                        } label: {
-                            Label("Recipe.Share.Title", systemImage: "square.and.arrow.up")
-                        }
-                    }
-                }
             }
-        }
-        .sheet(item: $shared) { file in ShareSheet(url: file.url) }
-        .alert("Recipe.Share.Error", isPresented: $shareFailed) {
-            Button("Shared.Done", role: .cancel) {}
         }
         .interactiveDismissDisabled(isBusy)
         // A pass can take a while, and the sheet is not touched while it runs, so the screen
