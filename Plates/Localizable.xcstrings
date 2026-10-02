@@ -885,6 +885,23 @@
         }
       }
     },
+    "Limits.DishIcon": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recipe Icon Generation"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アイコン描画"
+          }
+        }
+      }
+    },
     "Limits.Footer": {
       "extractionState": "manual",
       "localizations": {
@@ -897,7 +914,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "5つのアイデアは1回として数えます。上限は午前0時にリセットされます。"
+            "value": "5つのアイディアは1回として数えます。上限は午前0時にリセットされます。"
           }
         }
       }
@@ -908,13 +925,13 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ideas"
+            "value": "Idea Generation"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "アイデア"
+            "value": "アイディア生成"
           }
         }
       }
@@ -959,13 +976,13 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Recipes"
+            "value": "Recipe Generation"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "レシピ"
+            "value": "レシピ生成"
           }
         }
       }

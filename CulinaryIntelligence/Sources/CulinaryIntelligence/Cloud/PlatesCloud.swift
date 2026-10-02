@@ -36,6 +36,7 @@ public struct CloudLimits: Decodable, Equatable, Sendable {
     public let write: Allowance
     public let ideate: Allowance
     public let decide: Allowance
+    public let toppings: Allowance
 }
 
 /// The idea Jev picked, and how many more picks are left today.

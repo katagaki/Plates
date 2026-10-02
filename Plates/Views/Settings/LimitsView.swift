@@ -16,6 +16,7 @@ struct LimitsView: View {
                         row("Limits.Write", limits.write)
                         row("Limits.Ideate", limits.ideate)
                         row("Limits.Decide", limits.decide)
+                        row("Limits.DishIcon", limits.toppings)
                     } footer: {
                         Text("Limits.Footer")
                     }
