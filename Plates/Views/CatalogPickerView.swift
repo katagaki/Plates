@@ -151,13 +151,19 @@ struct CatalogPickerView: View {
         } label: {
             HStack(spacing: 10) {
                 RecipeIcon(path: path(asset), size: 40)
-                Text(verbatim: IconCatalog.displayName(for: asset))
-                    .font(.subheadline)
-                    .fontWeight(isPicked ? .semibold : .regular)
-                    .lineLimit(2, reservesSpace: true)
-                    .multilineTextAlignment(.leading)
-                    .foregroundStyle(isPicked ? Color.accentColor : .primary)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                // A hidden two line blank holds every card to the same height, so a name
+                // that fits on one line sits in the middle of the card instead of the top.
+                ZStack(alignment: .leading) {
+                    Text(verbatim: " \n ")
+                        .hidden()
+                    Text(verbatim: IconCatalog.displayName(for: asset))
+                        .fontWeight(isPicked ? .semibold : .regular)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.leading)
+                        .foregroundStyle(isPicked ? Color.accentColor : .primary)
+                }
+                .font(.subheadline)
+                .frame(maxWidth: .infinity, alignment: .leading)
             }
             .padding(.vertical, 8)
             .padding(.horizontal, 10)
