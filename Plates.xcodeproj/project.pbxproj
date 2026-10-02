@@ -76,7 +76,8 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				CardStyle.swift,
-				RecipeConfirmationView.swift,
+				Models/ConfirmationRecipe.swift,
+				Views/Confirmation/RecipeConfirmationView.swift,
 			);
 			target = E4B000000000000000000003 /* PlatesActivity */;
 		};

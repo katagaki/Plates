@@ -1,54 +1,11 @@
 import CulinaryIntelligence
 import SwiftUI
 
-/// The field in the bottom bar where the cook asks for changes to a recipe in their own words.
-struct RecipeRevisionBar: ToolbarContent {
-    @Binding var text: String
-    /// False while the model is out of reach or already at work.
-    let isEnabled: Bool
-    let canSend: Bool
-    let send: () -> Void
-
-    var body: some ToolbarContent {
-        ToolbarItem(placement: .bottomBar) {
-            TextField("Edit.Ask.Label", text: $text, prompt: Text("Edit.Ask.Prompt"))
-                .submitLabel(.send)
-                .onSubmit { if canSend { send() } }
-                .padding(.horizontal, 12)
-                .frame(idealWidth: .greatestFiniteMagnitude, maxWidth: .infinity)
-                .disabled(!isEnabled)
-        }
-        ToolbarItem(placement: .bottomBar) {
-            Button(action: send) {
-                Label("Edit.Ask.Title", systemImage: "arrow.up")
-            }
-            .buttonStyle(.glassProminent)
-            .disabled(!canSend)
-        }
-    }
-}
-
-/// While the model works, the recipe goes away and the changes have the screen to themselves.
-/// The recipe reads under them and grows as they land, so it scrolls rather than running off
-/// the bottom.
-struct RevisionProgressView: View {
-    let progress: EditProgress
-
-    var body: some View {
-        ScrollView {
-            EditProgressView(progress: progress)
-                .padding(.listRowInset)
-                .frame(maxWidth: .infinity, alignment: .leading)
-        }
-        .background(Color(uiColor: .systemGroupedBackground))
-    }
-}
-
 /// The changes filling in as the model makes them, with the recipe reading under them. The
 /// first line is the model deciding what to change, the lines under it are what it decided, and
 /// the last is the read through, which adds a line of its own for anything it asks for. The
 /// checklist is only as long as the work turned out to be.
-private struct EditProgressView: View {
+struct EditProgressView: View {
     let progress: EditProgress
 
     var body: some View {

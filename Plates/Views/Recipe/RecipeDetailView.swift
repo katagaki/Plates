@@ -42,6 +42,9 @@ struct RecipeDetailView: View {
                 page
             }
         }
+        .navigationDestination(for: RecipeList.self) { list in
+            picker(for: list)
+        }
         .navigationTitle(recipe.title)
         .navigationBarTitleDisplayMode(.large)
         .animation(.default, value: isEditing)
@@ -260,9 +263,7 @@ struct RecipeDetailView: View {
                         }
 
                         if isEditing {
-                            NavigationLink {
-                                picker(for: list)
-                            } label: {
+                            NavigationLink(value: list) {
                                 AddCard(label: "Recipe.Edit.Add")
                             }
                             .buttonStyle(.plain)
@@ -614,81 +615,5 @@ struct RecipeDetailView: View {
     /// keeps the work.
     private func save() {
         store?.save(recipe)
-    }
-}
-
-/// Time, servings, or whether the recipe has been cooked.
-private struct SummaryCell<Content: View>: View {
-    let label: LocalizedStringResource
-    @ViewBuilder let value: Content
-
-    var body: some View {
-        VStack(spacing: 4) {
-            value
-                .font(.title3.weight(.semibold))
-            Text(label)
-                .font(.caption)
-                .foregroundStyle(.secondary)
-                .multilineTextAlignment(.center)
-        }
-        .padding(.vertical, 12)
-        .padding(.horizontal, 8)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .cardBackground()
-    }
-}
-
-/// The card at the end of a row that adds to it.
-private struct AddCard: View {
-    let label: LocalizedStringResource
-
-    var body: some View {
-        HStack(spacing: 8) {
-            Image(systemName: "plus")
-            Text(label)
-                .font(.subheadline)
-                .lineLimit(1)
-        }
-        .foregroundStyle(Color.accentColor)
-        .padding(.horizontal, 8)
-        .padding(.vertical, 4)
-        .frame(minHeight: 68, maxHeight: 68)
-        .frame(maxWidth: .infinity)
-        .background(
-            .quaternary.opacity(0.4),
-            in: .rect(cornerRadius: .listRowCornerRadius, style: .continuous)
-        )
-    }
-}
-
-private struct StepCard: View {
-    let number: Int
-    let step: Step
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text(String(format: String(localized: "Recipe.Detail.Step.Title"), number, step.title))
-                .font(.headline)
-
-            if let icons = step.icons, !icons.isEmpty {
-                ScrollView(.horizontal) {
-                    HStack(spacing: 8) {
-                        ForEach(icons, id: \.self) { icon in
-                            RecipeIcon(path: icon, size: 32)
-                        }
-                    }
-                }
-                .scrollIndicators(.hidden)
-            }
-
-            ForEach(step.points, id: \.self) { point in
-                Text(verbatim: point)
-                    .foregroundStyle(.secondary)
-            }
-        }
-        .multilineTextAlignment(.leading)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(12)
-        .cardBackground()
     }
 }
