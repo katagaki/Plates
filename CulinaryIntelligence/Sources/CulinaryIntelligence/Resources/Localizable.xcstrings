@@ -5801,6 +5801,23 @@
         }
       }
     },
+    "Ingredient.Name.Pasta": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pasta"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "パスタ"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Peach": {
       "extractionState": "manual",
       "localizations": {

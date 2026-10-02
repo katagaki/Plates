@@ -248,7 +248,7 @@ private nonisolated struct DishPlanner {
 
     /// Pasta that takes its sauce into its own fill, so the sauce is not drawn beside it.
     private static func pastaTakesSauce(_ asset: String) -> Bool {
-        ["spaghetti", "fettuccine", "penne", "rigatoni", "fusilli", "macaroni", "orzo", "gnocchi", "ravioli", "lasagna"]
+        ["pasta", "spaghetti", "fettuccine", "penne", "rigatoni", "fusilli", "macaroni", "orzo", "gnocchi", "ravioli", "lasagna"]
             .contains(asset)
     }
 

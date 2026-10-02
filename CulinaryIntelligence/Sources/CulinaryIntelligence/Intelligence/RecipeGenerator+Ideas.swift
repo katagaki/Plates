@@ -165,7 +165,7 @@ extension RecipeGenerator {
     /// Each starch with the catalog ingredients that make it, so a tomato pasta is made with
     /// penne as well as spaghetti.
     static let staples: [String: Set<String>] = [
-        "pasta": ["spaghetti", "penne", "fusilli", "fettuccine", "rigatoni", "macaroni", "lasagna", "orzo", "ravioli", "gnocchi"],
+        "pasta": ["pasta", "spaghetti", "penne", "fusilli", "fettuccine", "rigatoni", "macaroni", "lasagna", "orzo", "ravioli", "gnocchi"],
         "rice": ["rice", "arborio-rice", "glutinous-rice"],
         "noodles": ["noodles", "egg-noodles", "ramen", "udon", "soba", "somen", "rice-noodles", "harusame"],
         "bread": ["bread", "pita"],

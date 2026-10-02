@@ -293,6 +293,7 @@ V["noodles"] = {"swirl": fl(lambda r: noodles(r, "#f2d68a", "#fbeab5", "#e8c46e"
 V["oats"] = {"porridge": fl(lambda r: grains_in(r, "#efe2c4", "#dcc89c", 60, 2.2, 1.6, shape="full"), BOWLS)}
 V["orzo"] = {"pasta": fl(lambda r: grains_in(r, "#f2dc9a", "#e2c47a", 90, 2, 1.1), PLATES + BOWLS + ["pan"])}
 V["panko"] = {"crumbs": garnish(dust("#e8c47a", "#f6dca0"), 10, 4)}
+V["pasta"] = {"pasta": fl(lambda r: tiled(r, tube("#f2d27a", "#d9a84a"), 18, 13, base="#e2b85a"), PLATES + BOWLS + ["pan"])}
 V["penne"] = {"pasta": fl(lambda r: tiled(r, tube("#f2d27a", "#d9a84a"), 18, 13, base="#e2b85a"), PLATES + BOWLS + ["pan"])}
 V["pita"] = {"bread": fl(lambda r: flatbread(r, "#f2d8a0", "#d9a85c", "#e2bc7a", oval=True), FLAT), "wedges": p(triangle("#e8c47a", "#f6dca0"), 14, 4)}
 V["polenta"] = {"soft": fl(lambda r: smooth(r, "#f6cf5a", "#fbe08a"), PLATES + BOWLS)}

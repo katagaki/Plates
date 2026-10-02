@@ -4282,6 +4282,22 @@
         ]
       }
     },
+    "pasta": {
+      "pasta": {
+        "kind": "fill",
+        "file": "Fills/PastaPasta.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pot",
+          "pan"
+        ],
+        "rank": 0,
+        "tones": [
+          "#e0b858"
+        ]
+      }
+    },
     "peach": {
       "slices": {
         "kind": "piece",
