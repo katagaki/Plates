@@ -64,6 +64,10 @@ public nonisolated enum DishParts {
         public let size: Double?
         public let count: Int?
         public let tier: Tier?
+        /// The most of a piece the dish has room for, when each one is a whole thing, such as a
+        /// fried egg or a sausage. A piece that has this is drawn as many times as the recipe's
+        /// amount says, and `count` times when the amount gives no number.
+        public let most: Int?
     }
 
     public struct Vessel: Decodable, Sendable {

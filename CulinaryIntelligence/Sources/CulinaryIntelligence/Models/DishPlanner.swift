@@ -18,6 +18,7 @@ private nonisolated struct DishPlanner {
     private struct Entry {
         let asset: String
         let section: Section
+        let amount: String
         /// The entry's own words and every step point that names it, lowercased, for reading
         /// how it is cut.
         let text: String
@@ -58,7 +59,7 @@ private nonisolated struct DishPlanner {
                 let mentions = points.filter { !item.isEmpty && $0.contains(item) }
                 let text = ([ingredient.item, ingredient.amount, ingredient.note ?? ""].map { $0.lowercased() } + mentions)
                     .joined(separator: "\n")
-                entries.append(Entry(asset: asset, section: section, text: text))
+                entries.append(Entry(asset: asset, section: section, amount: ingredient.amount, text: text))
             }
         }
         self.entries = entries
@@ -285,7 +286,8 @@ private nonisolated struct DishPlanner {
                 guard shown || butterOnBread else { continue }
             }
             guard let (variant, part) = pieceVariant(entry) else { continue }
-            let layer = DishLayer(entry.asset, variant)
+            let whole = part.most.flatMap { most in Self.number(in: entry.amount).map { min(max($0, 1), most) } }
+            let layer = DishLayer(entry.asset, variant, count: whole)
             switch part.tier ?? .scattered {
             case .scattered: scattered.append(layer)
             case .centered: centered.append(layer)
@@ -296,10 +298,33 @@ private nonisolated struct DishPlanner {
         scattered = Array(scattered.prefix(3))
         let share = [1.0, 1.0, 0.8, 0.6][min(scattered.count, 3)] * (kind == "plate" || kind == "pan" ? 1 : 1.1)
         scattered = scattered.map { layer in
+            guard layer.count == nil else { return layer }
             let count = DishParts.part(layer.ingredient, layer.variant)?.count ?? 4
             return DishLayer(layer.ingredient, layer.variant, count: max(2, Int((Double(count) * share).rounded())))
         }
         return scattered + Array(centered.prefix(2)) + Array(garnish.prefix(3))
+    }
+
+    private static let numberWords = [
+        "a": 1, "an": 1, "one": 1, "half": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6,
+    ]
+
+    /// How many of a thing an amount gives: 2 in "2", "2 large", and "２個", 1 in "1 to 2" and
+    /// "one", nil in "to taste". A fraction counts as one, since there is still one on the plate.
+    private static func number(in amount: String) -> Int? {
+        var digits = ""
+        for character in amount {
+            if character.unicodeScalars.first?.properties.numericType == .decimal, let value = character.wholeNumberValue {
+                digits.append(String(value))
+            } else if !digits.isEmpty {
+                break
+            }
+        }
+        if let value = Int(digits) { return max(value, 1) }
+        if amount.contains("½") || amount.contains("¼") || amount.contains("半") { return 1 }
+        if let kanji = amount.first(where: { "一二三四五六".contains($0) }) { return kanji.wholeNumberValue }
+        let words = amount.lowercased().split { !$0.isLetter }
+        return words.lazy.compactMap { numberWords[String($0)] }.first
     }
 
     /// The piece an ingredient is drawn as, read off how the recipe cuts it, or its most usual

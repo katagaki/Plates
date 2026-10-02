@@ -187,7 +187,7 @@ split is in the browsing, not in the request.
 
 A recipe card and the top of the detail view show the finished dish from above, put together
 from drawn parts rather than drawn whole. The parts are vector image sets in
-`Plates/Assets.xcassets/Dishes`: vessels (`DishVesselBowlIndigo`), fills that cover a region of
+`Plates/Dishes.xcassets`: vessels (`DishVesselBowlIndigo`), fills that cover a region of
 the vessel (`DishFillRiceBowl`), and pieces scattered on top (`DishPieceTomatoDiced`). Every
 catalog ingredient that can be seen once a dish is served has one or more variants, named by how
 it is cut or cooked, and the rest are listed as hidden with the reason. What the layout knows
@@ -201,7 +201,9 @@ the prepared SVGs and review sheets; run `python3 export.py` after changing a dr
 `Dish.planned(for:)` works out the dish from the recipe: the grain or the sauce is the food it
 is built on, the vessel follows from that and from the tools, and what is seen on top is read off
 the ingredient icons, the title, and the last step, with the cut read from the recipe's own words
-in English or Japanese. `DishLayout` places the parts on a 96 point canvas, seeded from the
+in English or Japanese. A piece that is one whole thing, such as a fried egg or a sausage, carries
+the most the dish has room for, and is drawn as many times as the ingredient's amount says, so
+one egg is one egg; when the amount gives no number, it is drawn its usual count. `DishLayout` places the parts on a 96 point canvas, seeded from the
 recipe's `id` so an icon is the same on every launch, and gives a piece an outline when its
 colours sit too close to what it lands on. `DishIcon` draws the placements in a `Canvas`. The
 dish is not written to the recipe file.

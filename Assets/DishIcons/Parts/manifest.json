@@ -415,6 +415,7 @@
         "count": 3,
         "tier": 0,
         "rank": 0,
+        "most": 4,
         "tones": [
           "#b85038",
           "#f0d0c0"
@@ -1858,6 +1859,7 @@
         "count": 1,
         "tier": 1,
         "rank": 0,
+        "most": 2,
         "tones": [
           "#f8f8f0",
           "#f0c018"
@@ -1882,6 +1884,7 @@
         "count": 2,
         "tier": 1,
         "rank": 2,
+        "most": 3,
         "tones": [
           "#f8f8f0",
           "#f0c018"
@@ -1894,6 +1897,7 @@
         "count": 1,
         "tier": 1,
         "rank": 3,
+        "most": 2,
         "tones": [
           "#f0b018"
         ]
@@ -4749,6 +4753,7 @@
         "count": 3,
         "tier": 0,
         "rank": 0,
+        "most": 4,
         "tones": [
           "#98a0b0",
           "#d8c0b0"
@@ -4763,6 +4768,7 @@
         "count": 3,
         "tier": 0,
         "rank": 0,
+        "most": 4,
         "tones": [
           "#a86038"
         ]
@@ -5236,6 +5242,7 @@
         "count": 2,
         "tier": 0,
         "rank": 0,
+        "most": 3,
         "tones": [
           "#783820"
         ]
@@ -5693,6 +5700,7 @@
         "count": 1,
         "tier": 1,
         "rank": 0,
+        "most": 3,
         "tones": [
           "#c03048"
         ]

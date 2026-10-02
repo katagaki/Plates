@@ -5,7 +5,7 @@ let files = FileManager.default
 let work = URL(fileURLWithPath: files.currentDirectoryPath, isDirectory: true)
 let root = work.deletingLastPathComponent().deletingLastPathComponent()
 let parts = work.appendingPathComponent("Parts", isDirectory: true)
-let assets = root.appendingPathComponent("Plates/Assets.xcassets/Dishes", isDirectory: true)
+let assets = root.appendingPathComponent("Plates/Dishes.xcassets", isDirectory: true)
 let resource = root.appendingPathComponent("CulinaryIntelligence/Sources/CulinaryIntelligence/Resources/DishParts.json")
 
 func object(_ value: Any?) throws -> [String: Any] {
@@ -122,6 +122,7 @@ for (ingredient, value) in ingredients {
             output["size"] = entry["size"]
             output["count"] = entry["count"]
             output["tier"] = entry["tier"]
+            if let most = entry["most"] { output["most"] = most }
         }
         appVariants[variant] = output
     }

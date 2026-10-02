@@ -40,6 +40,12 @@ def center(svg, size, count=1):
     return p(svg, size, count, 1)
 
 
+# A piece that is one whole thing, such as a fried egg or a sausage. The dish draws as many as
+# the recipe's amount says, up to the most it has room for, and the count when it says nothing.
+def whole(entry, most):
+    return {**entry, "most": most}
+
+
 GREEN, GREEN_L, GREEN_D = "#7fb069", "#a8cf8e", "#4f8a3a"
 DARK_LEAF, DARK_LEAF_L = "#3f6b3a", "#5f8f45"
 CREAM = "#f4f1e8"
@@ -151,7 +157,7 @@ V["yuzu"] = {"zest": garnish(shreds("#f1c21b", "#f6dc5c"), 8, 4), "wheels": p(ci
 
 # Meat --------------------------------------------------------------------------------------
 
-V["bacon"] = {"rashers": p(bacon("#b9503f", "#f2d6c4"), 17, 3), "lardons": p(cube("#c9604f", "#f2d6c4", "#f6e6d6"), 9, 7), "bits": garnish(crumble("#a8402f", "#d9705f"), 7, 8)}
+V["bacon"] = {"rashers": whole(p(bacon("#b9503f", "#f2d6c4"), 17, 3), 4), "lardons": p(cube("#c9604f", "#f2d6c4", "#f6e6d6"), 9, 7), "bits": garnish(crumble("#a8402f", "#d9705f"), 7, 8)}
 V["beef"] = {"slices": p(meat_slice("#8a4a3a", "#c4826a"), 15, 5), "steak": center(steak_slices("#3f1f15", "#d4707a", "#6a3424"), 46), "cubes": p(chunk("#6f3a2a", "#9a5a42"), 12, 5)}
 V["chicken"] = {"pieces": p(chunk("#d4975a", "#ecc184"), 12, 5), "cutlet": center(sliced_fan("#f6e6c8", "#c98a4b", "#d9963f"), 40), "grilled": center(fillet("#d9a56a", "#b9783f", "#c98a4b") + '<path d="M4 6l8 4M3.5 9.5l7 3.5" stroke="#8a5a2a" stroke-width="1" stroke-linecap="round"/>', 50)}
 V["chorizo"] = {"coins": p(coin("#a8302a", "#c9483a", "#f2c4a8"), 11, 6), "diced": p(dice("#a8302a", "#d9604a"), 8, 8)}
@@ -167,7 +173,7 @@ V["pancetta"] = {"cubes": p('<rect x="3" y="3" width="10" height="10" rx="2.5" f
 V["pork"] = {"strips": p('<rect x="1" y="5" width="14" height="6" rx="3" fill="#c9805f"/><rect x="1" y="5" width="14" height="2.2" rx="1.1" fill="#f2ede0"/>', 14, 4), "slices": p(meat_slice("#c9805f", "#f2e6d6"), 15, 5), "cutlet": center(sliced_fan("#f6ead8", "#d9a05a", "#c98a3f"), 40), "simmered": fl(lambda r: covering_slices(r, '<path d="M1 6c4-2 10-2 14 0 1 2.4 1 5.4 0 7-4 2-10 2-14 0-1-1.6-1-4.6 0-7Z" fill="#b87650"/><path d="M1.6 7.2c4-1.4 9-1.4 12.8 0" stroke="#e8d3b8" stroke-width="1.4" fill="none" stroke-linecap="round"/>', 30), ANY, covers=True)}
 V["prosciutto"] = {"ribbons": p(meat_slice("#d9707a", "#f6e6e0"), 15, 4)}
 V["salami"] = {"coins": p(coin("#a83a42", "#c9505a", "#f2d6c8"), 12, 5)}
-V["sausage"] = {"links": p(link("#a8603f", "#c98a5f"), 15, 3), "coins": p(coin("#9a5a3a", "#d4a088"), 11, 6)}
+V["sausage"] = {"links": whole(p(link("#a8603f", "#c98a5f"), 15, 3), 4), "coins": p(coin("#9a5a3a", "#d4a088"), 11, 6)}
 V["turkey"] = {"slices": p(meat_slice("#ead8bc", "#c9a07a"), 15, 4)}
 V["veal"] = {"cutlet": center(sliced_fan("#f2e6d0", "#c9904b", "#d9a04f"), 40)}
 
@@ -188,7 +194,7 @@ V["octopus"] = {"slices": p(octopus("#c45a6a", "#f6e6e0", "#e8a0a8"), 12, 5)}
 V["oyster"] = {"shells": p(clam("#b8b4aa", "#e8e2d0", "#8a8678"), 15, 4)}
 V["salmon"] = {"fillet": center(fillet("#f6906a", "#fbc4a8", "#b8b0a8"), 50), "sashimi": p(strip("#f6906a", "#fbc4a8"), 15, 4), "flaked": p(crumble("#f6a080", "#fbc4a8"), 9, 7)}
 V["salmon-roe"] = {"roe": p(cluster("#f2702a", "#fbb07a", 2.1), 10, 4)}
-V["sardines"] = {"fillets": p(stick("#9aa6b0", "#d9c4b0"), 15, 3)}
+V["sardines"] = {"fillets": whole(p(stick("#9aa6b0", "#d9c4b0"), 15, 3), 4)}
 V["scallops"] = {"seared": p(scallop("#f6ead8", "#d9a05a"), 13, 4)}
 V["seafood"] = {"shrimp": p(shrimp("#fa7368", "#ffb0a4"), 15, 3), "squid": p(ring("#f6ecdf", "#fbf7f0", 2.6), 11, 3)}
 V["shirasu"] = {"sprinkle": garnish(squiggles("#f2ead8", "#3a3a3a"), 15, 3)}
@@ -208,7 +214,7 @@ V["condensed-milk"] = {"drizzle": center(drizzle("#f6ecd6", 2.2), 24, 2)}
 V["cream"] = {"swirl": center(dollop("#fbf9f4", "#ece6d6"), 22), "sauce": fl(lambda r: smooth(r, "#f6efdc", "#fbf9f0"), SAUCE)}
 V["cream-cheese"] = {"dollop": center(dollop("#f8f6ef", "#e6e0d4"), 22)}
 V["creme-fraiche"] = {"dollop": center(dollop("#fbf8ef", "#e8e0cc"), 22)}
-V["egg"] = {"fried": center(egg_fried(), 42), "scrambled": p(egg_scrambled(), 15, 6), "boiled": center(egg_half("#fbf9f4", "#f1c21b", "#ffe97a"), 24, 2), "yolk": center(yolk("#f6b21b", "#ffd86a"), 22), "omelette": fl(lambda r: omelette(r, "#f6d55c", "#ffe97a", "#e8bc3a"), PLATES)}
+V["egg"] = {"fried": whole(center(egg_fried(), 42), 2), "scrambled": p(egg_scrambled(), 15, 6), "boiled": whole(center(egg_half("#fbf9f4", "#f1c21b", "#ffe97a"), 24, 2), 3), "yolk": whole(center(yolk("#f6b21b", "#ffd86a"), 22), 2), "omelette": fl(lambda r: omelette(r, "#f6d55c", "#ffe97a", "#e8bc3a"), PLATES)}
 V["feta"] = {"crumbled": p(cube("#fbfaf4", "#ffffff", "#e6e0d0"), 8, 8)}
 V["goat-cheese"] = {"crumbled": p(crumble("#fbfaf6", "#e6e2d6"), 9, 6)}
 V["gruyere"] = {"grated": garnish(shreds("#f2dc9a", "#f8ecc4"), 9, 6), "melted": fl(lambda r: melted(r, "#f2d48a", "#f8e8b8", "#c98a3a"), ANY, covers=True)}
@@ -282,7 +288,7 @@ V["sage"] = {"leaves": garnish(leaf("#7f9a7a", "#b8c8b0"), 12, 3)}
 V["sesame-seeds"] = {"sprinkle": garnish('<ellipse cx="8" cy="8" rx="2.4" ry="1.4" fill="#e8d4a4"/><ellipse cx="7.4" cy="7.6" rx="1.2" ry="0.6" fill="#f8eed8"/>', 6, 10), "black": garnish('<ellipse cx="8" cy="8" rx="2.4" ry="1.4" fill="#2a2a2a"/>', 6, 10)}
 V["shichimi"] = {"sprinkle": garnish(dust("#d9533f", "#2a2a2a"), 10, 2)}
 V["sichuan-peppercorns"] = {"cracked": garnish(dust("#8a3a2a", "#c9604a"), 9, 3)}
-V["star-anise"] = {"whole": p('<path d="' + "".join(f'M8 8L{f(8 + 6.5 * math.cos(math.tau * i / 8))} {f(8 + 6.5 * math.sin(math.tau * i / 8))}' for i in range(8)) + '" stroke="#7a3f22" stroke-width="2.6" stroke-linecap="round"/><circle cx="8" cy="8" r="1.4" fill="#a85a32"/>', 12, 2)}
+V["star-anise"] = {"whole": whole(p('<path d="' + "".join(f'M8 8L{f(8 + 6.5 * math.cos(math.tau * i / 8))} {f(8 + 6.5 * math.sin(math.tau * i / 8))}' for i in range(8)) + '" stroke="#7a3f22" stroke-width="2.6" stroke-linecap="round"/><circle cx="8" cy="8" r="1.4" fill="#a85a32"/>', 12, 2), 3)}
 V["tarragon"] = {"leaves": garnish(julienne("#6a9a4a"), 7, 8)}
 V["thai-basil"] = {"leaves": garnish(leaf("#3f7f3a", "#8a4a7a"), 12, 4)}
 V["thyme"] = {"sprigs": garnish(sprig("#5f7f4a", "#8a7a5a"), 13, 3)}
@@ -375,7 +381,7 @@ V["shirataki"] = {"noodles": fl(lambda r: noodles(r, "#e6e2da", "#f6f4ee", "#d4d
 V["sun-dried-tomatoes"] = {"strips": p(strip("#9a2a2a", "#c4483a"), 12, 5)}
 V["takuan"] = {"slices": p(half_moon("#f2c81b", "#f8e05a"), 12, 4)}
 V["tofu"] = {"cubes": p(cube("#fbf8ee", "#ffffff", "#e8e2d0"), 11, 6), "fried": p(cube("#f2dcb0", "#fbecd0", "#d99a4a"), 11, 6), "block": fl(lambda r: block(r, "#fbf8ee", "#ffffff", "#e8e2d0"), PLATES + BOWLS)}
-V["umeboshi"] = {"whole": center('<circle cx="8" cy="8" r="5.6" fill="#c4304a"/><path d="M5 7c1-1 2-1 3 0M8 10c1 1 2 1 3 0" stroke="#e05a6a" stroke-width="1" fill="none" stroke-linecap="round"/>', 12)}
+V["umeboshi"] = {"whole": whole(center('<circle cx="8" cy="8" r="5.6" fill="#c4304a"/><path d="M5 7c1-1 2-1 3 0M8 10c1 1 2 1 3 0" stroke="#e05a6a" stroke-width="1" fill="none" stroke-linecap="round"/>', 12), 3)}
 V["wakame"] = {"pieces": p(torn_leaf("#2f5a3a", "#4a7a52"), 12, 5)}
 V["walnuts"] = {"halves": p(walnut("#b8864a", "#8a5a2a"), 11, 5)}
 V["wheat-gluten"] = {"fu": p(ring("#f2dcb0", "#fbecd0", 3), 12, 3)}

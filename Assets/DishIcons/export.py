@@ -47,6 +47,8 @@ for ingredient in sorted(V):
             file = f"Pieces/{name}.svg"
             write(f"{OUT}/{file}", 16, entry["svg"])
             out = {"kind": "piece", "file": file, "size": entry["size"], "count": entry["count"], "tier": entry["tier"], "rank": len(manifest["ingredients"].get(ingredient, {}))}
+            if "most" in entry:
+                out["most"] = entry["most"]
         manifest["ingredients"].setdefault(ingredient, {})[variant] = out
 
 # The colours each part reads as, measured off the part as CoreSVG draws it. The layout uses
