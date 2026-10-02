@@ -168,13 +168,10 @@ struct CatalogPickerView: View {
             .padding(.vertical, 8)
             .padding(.horizontal, 10)
             .background(
-                isPicked ? AnyShapeStyle(Color.accentColor.opacity(0.15))
+                isPicked ? AnyShapeStyle(Color.accentColor.opacity(0.3))
                     : AnyShapeStyle(Color(.secondarySystemGroupedBackground)),
                 in: shape
             )
-            .overlay {
-                shape.strokeBorder(isPicked ? Color.accentColor : .clear, lineWidth: 2)
-            }
             .contentShape(shape)
         }
         .buttonStyle(.plain)
