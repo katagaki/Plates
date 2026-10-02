@@ -61,10 +61,12 @@ struct RecipeDetailView: View {
             }
 
             if isEditing {
-                ToolbarItem(placement: .bottomBar) {
-                    RecipeRevisionBar(text: $revision, canSend: canRevise, send: revise)
-                        .disabled(!editor.isAvailable || isRevising)
-                }
+                RecipeRevisionBar(
+                    text: $revision,
+                    isEnabled: editor.isAvailable && !isRevising,
+                    canSend: canRevise,
+                    send: revise
+                )
             } else {
                 ToolbarItem(placement: .bottomBar) {
                     shareMenu

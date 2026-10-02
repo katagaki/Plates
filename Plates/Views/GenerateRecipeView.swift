@@ -83,10 +83,12 @@ struct GenerateRecipeView: View {
                     }
                 }
                 if draft != nil {
-                    ToolbarItem(placement: .bottomBar) {
-                        RecipeRevisionBar(text: $revision, canSend: canRevise, send: revise)
-                            .disabled(!editor.isAvailable || isBusy)
-                    }
+                    RecipeRevisionBar(
+                        text: $revision,
+                        isEnabled: editor.isAvailable && !isBusy,
+                        canSend: canRevise,
+                        send: revise
+                    )
                 }
             }
         }
