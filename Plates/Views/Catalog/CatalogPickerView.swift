@@ -145,7 +145,7 @@ struct CatalogPickerView: View {
 
     private func cell(_ asset: String) -> some View {
         let isPicked = selection.contains(asset)
-        let shape = RoundedRectangle(cornerRadius: 14, style: .continuous)
+        let shape = RoundedRectangle(cornerRadius: .listRowCornerRadius, style: .continuous)
         return Button {
             toggle(asset)
         } label: {
