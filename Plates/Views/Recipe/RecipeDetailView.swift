@@ -42,6 +42,16 @@ struct RecipeDetailView: View {
                 page
             }
         }
+        .safeAreaBar(edge: .bottom) {
+            if isEditing {
+                RecipeRevisionBar(
+                    text: $revision,
+                    isEnabled: editor.isAvailable && !isRevising,
+                    canSend: canRevise,
+                    send: revise
+                )
+            }
+        }
         .navigationDestination(for: RecipeList.self) { list in
             picker(for: list)
         }
@@ -63,14 +73,7 @@ struct RecipeDetailView: View {
                 }
             }
 
-            if isEditing {
-                RecipeRevisionBar(
-                    text: $revision,
-                    isEnabled: editor.isAvailable && !isRevising,
-                    canSend: canRevise,
-                    send: revise
-                )
-            } else {
+            if !isEditing {
                 ToolbarItem(placement: .bottomBar) {
                     shareMenu
                 }

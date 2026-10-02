@@ -98,6 +98,8 @@ struct GenerateRecipeView: View {
                         Button("Generate.Ideas.Edit") { ideas = [] }
                     }
                 }
+            }
+            .safeAreaBar(edge: .bottom) {
                 if draft != nil {
                     RecipeRevisionBar(
                         text: $revision,
