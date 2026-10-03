@@ -7309,7 +7309,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "ペースト"
+            "value": "バジルペースト"
           }
         }
       }
@@ -7320,7 +7320,7 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pickled ginger"
+            "value": "Red pickled ginger"
           }
         },
         "ja": {
@@ -9910,7 +9910,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "くわい"
+            "value": "クログワイ"
           }
         }
       }
