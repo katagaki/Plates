@@ -28,6 +28,7 @@ struct MainView: View {
     /// The shared web page being sorted, one at a time.
     @State private var sharedImport: SharedImport?
     @State private var isShowingLimits = false
+    @State private var isShowingInventory = false
     @AppStorage("Onboarding.Completed") private var onboardingCompleted = false
     @State private var isOnboarding = false
     /// The dish named at the end of onboarding, written in once the recipe sheet opens.
@@ -48,6 +49,14 @@ struct MainView: View {
                     }
                 }
                 .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button {
+                            isShowingInventory = true
+                        } label: {
+                            Label("Menu.Inventory", systemImage: "refrigerator")
+                        }
+                    }
+                    ToolbarSpacer(.fixed, placement: .topBarTrailing)
                     ToolbarItem(placement: .topBarTrailing) {
                         menu
                     }
@@ -76,6 +85,9 @@ struct MainView: View {
         }
         .sheet(isPresented: $isShowingLimits) {
             LimitsView()
+        }
+        .sheet(isPresented: $isShowingInventory, onDismiss: openNextImport) {
+            InventoryView()
         }
         .sheet(item: $sharedImport, onDismiss: openNextImport) { shared in
             ImportRecipeView(store: store, shared: shared)
@@ -122,7 +134,8 @@ struct MainView: View {
     /// Opens the next shared web page once nothing else is on screen, so a page shared while
     /// the cook was busy waits its turn rather than covering what they were doing.
     private func openNextImport() {
-        guard sharedImport == nil, generation == nil, !isOnboarding, !isShowingLimits else { return }
+        guard sharedImport == nil, generation == nil, !isOnboarding, !isShowingLimits,
+              !isShowingInventory else { return }
         sharedImport = store.sharedPages.first
     }
 

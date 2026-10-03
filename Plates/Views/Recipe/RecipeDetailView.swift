@@ -9,6 +9,7 @@ struct RecipeDetailView: View {
     @State private var recipe: Recipe
     @State private var isEditing = false
     @State private var isShowingTroubleshooting = false
+    @State private var isShowingShoppingList = false
     @State private var isCooking = false
     @State private var tapped: TileInfo?
     @State private var field: Field?
@@ -78,6 +79,13 @@ struct RecipeDetailView: View {
                 ToolbarItem(placement: .bottomBar) {
                     shareMenu
                 }
+                ToolbarItem(placement: .bottomBar) {
+                    Button {
+                        isShowingShoppingList = true
+                    } label: {
+                        Label("ShoppingList.Title", systemImage: "cart")
+                    }
+                }
             }
 
             if !recipe.steps.isEmpty, !isEditing {
@@ -106,6 +114,9 @@ struct RecipeDetailView: View {
         }
         .sheet(isPresented: $isShowingTroubleshooting) {
             TroubleshootingView(entries: recipe.troubleshooting)
+        }
+        .sheet(isPresented: $isShowingShoppingList) {
+            ShoppingListView(recipe: recipe)
         }
         .fullScreenCover(isPresented: $isCooking) {
             CookingView(recipe: recipe, markTried: store == nil ? nil : {

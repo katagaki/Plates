@@ -194,13 +194,13 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Name a dish, pick what is in your kitchen, or do both. When you pick ingredients, the recipe is written from those alone."
+            "value": "Name a dish, or say what you would like to cook."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "料理名を入力するか、キッチンにある材料を選択してください。両方でもかまいません。材料を選択した場合は、その材料だけでレシピを生成します。"
+            "value": "料理名か、作りたいものを入力してください。"
           }
         }
       }
@@ -354,40 +354,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "料理を選んでください"
-          }
-        }
-      }
-    },
-    "Generate.IgnorePicks.Footer": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Leave the picked ingredients and tools out. They stay here for the next recipe."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "選択した材料と道具をレシピに使いません。選択内容は次のレシピのために残ります。"
-          }
-        }
-      }
-    },
-    "Generate.IgnorePicks.Label": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ignore my picks"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "選択を無視"
           }
         }
       }
@@ -902,6 +868,23 @@
         }
       }
     },
+    "Inventory.Title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inventory"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在庫"
+          }
+        }
+      }
+    },
     "Limits.Decide": {
       "extractionState": "manual",
       "localizations": {
@@ -1136,6 +1119,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "レシピを生成"
+          }
+        }
+      }
+    },
+    "Menu.Inventory": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inventory"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在庫"
           }
         }
       }
@@ -2599,6 +2599,74 @@
           "stringUnit": {
             "state": "translated",
             "value": "保存"
+          }
+        }
+      }
+    },
+    "ShoppingList.Empty.Description": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Everything this recipe needs is in your inventory."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "このレシピに必要なものはすべて在庫にあります。"
+          }
+        }
+      }
+    },
+    "ShoppingList.Empty.Title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nothing to Buy"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "買うものはありません"
+          }
+        }
+      }
+    },
+    "ShoppingList.Footer": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap what you have bought to add it to your inventory."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "購入したものをタップすると、在庫に追加されます。"
+          }
+        }
+      }
+    },
+    "ShoppingList.Title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "To Buy"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "買うもの"
           }
         }
       }

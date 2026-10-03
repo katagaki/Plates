@@ -6,12 +6,6 @@ import SwiftUI
 /// the cook picks one or lets Jev pick it. Gemma writes the recipe and Apple Intelligence sorts
 /// it, so the sheet waits on both.
 struct GenerateRecipeView: View {
-    private enum PickerRoute: Hashable {
-        case freshIngredients
-        case pantryIngredients
-        case tools
-    }
-
     @Environment(\.dismiss) private var dismiss
 
     let store: RecipeStore
@@ -42,11 +36,7 @@ struct GenerateRecipeView: View {
         self.store = store
         self.startsAtOnce = startsAtOnce
         self.decidesAtOnce = decidesAtOnce
-        _request = State(initialValue: GenerationRequest(
-            description: dish,
-            ingredients: Pantry.ingredients,
-            tools: Pantry.tools
-        ))
+        _request = State(initialValue: GenerationRequest(description: dish))
     }
 
     var body: some View {
@@ -68,16 +58,6 @@ struct GenerateRecipeView: View {
                     ideaList
                 } else {
                     form
-                }
-            }
-            .navigationDestination(for: PickerRoute.self) { route in
-                switch route {
-                case .freshIngredients:
-                    CatalogPickerView.ingredients(selection: shelf(.fresh))
-                case .pantryIngredients:
-                    CatalogPickerView.pantry(selection: shelf(.pantry))
-                case .tools:
-                    CatalogPickerView.tools(selection: $request.tools)
                 }
             }
             .navigationTitle(title)
@@ -126,8 +106,6 @@ struct GenerateRecipeView: View {
         // is held awake rather than locking part way through a recipe.
         .onChange(of: isBusy) { UIApplication.shared.isIdleTimerDisabled = isBusy }
         .onDisappear { UIApplication.shared.isIdleTimerDisabled = false }
-        .onChange(of: request.ingredients) { Pantry.ingredients = request.ingredients }
-        .onChange(of: request.tools) { Pantry.tools = request.tools }
         .task { if startsAtOnce, canGenerate { await start() } }
     }
 
@@ -154,37 +132,6 @@ struct GenerateRecipeView: View {
             } footer: {
                 Text("Generate.Description.Footer")
             }
-
-            Section {
-                Toggle("Generate.IgnorePicks.Label", isOn: $request.ignoresPicks)
-                    .disabled(!generator.isAvailable)
-            } footer: {
-                Text("Generate.IgnorePicks.Footer")
-            }
-
-            picks(
-                "Generate.Choose.Ingredients",
-                assets: shelf(.fresh),
-                path: IconCatalog.ingredientPath,
-                route: .freshIngredients
-            )
-            .disabled(request.ignoresPicks)
-
-            picks(
-                "Generate.Choose.Pantry",
-                assets: shelf(.pantry),
-                path: IconCatalog.ingredientPath,
-                route: .pantryIngredients
-            )
-            .disabled(request.ignoresPicks)
-
-            picks(
-                "Generate.Choose.Tools",
-                assets: $request.tools,
-                path: IconCatalog.toolPath,
-                route: .tools
-            )
-            .disabled(request.ignoresPicks)
         }
         .safeAreaInset(edge: .bottom) { generateBar }
     }
@@ -222,58 +169,6 @@ struct GenerateRecipeView: View {
         .multilineTextAlignment(.center)
         .padding(.horizontal, 16)
         .padding(.bottom, 8)
-    }
-
-    /// One shelf of the picks, so each picker shows and edits its own half while the model is
-    /// still handed a single list. Writing back keeps the other shelf as it was.
-    private func shelf(_ shelf: IngredientShelf) -> Binding<[String]> {
-        Binding(
-            get: { request.ingredients.filter { IconCatalog.shelf(of: $0) == shelf } },
-            set: { picks in
-                request.ingredients =
-                    request.ingredients.filter { IconCatalog.shelf(of: $0) != shelf } + picks
-            }
-        )
-    }
-
-    /// What the cook has already picked, with the way back into the catalog under it.
-    private func picks(
-        _ label: LocalizedStringResource,
-        assets: Binding<[String]>,
-        path: @escaping (String) -> String,
-        route: PickerRoute
-    ) -> some View {
-        Section {
-            if !assets.wrappedValue.isEmpty {
-                ScrollView(.horizontal) {
-                    HStack(spacing: 4) {
-                        ForEach(assets.wrappedValue, id: \.self) { asset in
-                            Button {
-                                assets.wrappedValue.removeAll { $0 == asset }
-                            } label: {
-                                VStack(spacing: 2) {
-                                    RecipeIcon(path: path(asset), size: 30)
-                                    Text(verbatim: IconCatalog.displayName(for: asset))
-                                        .font(.caption2)
-                                        .lineLimit(1)
-                                        .foregroundStyle(.primary)
-                                }
-                                .frame(width: 66)
-                            }
-                            .buttonStyle(.plain)
-                        }
-                    }
-                    .padding(.vertical, 8)
-                }
-                .scrollIndicators(.hidden)
-                .contentMargins(.horizontal, 16, for: .scrollContent)
-                .listRowInsets(EdgeInsets())
-            }
-
-            NavigationLink(value: route) {
-                Text(label)
-            }
-        }
     }
 
     /// While the model works, the form goes away and the passes have the screen to themselves.
