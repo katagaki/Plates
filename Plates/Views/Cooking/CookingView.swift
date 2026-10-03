@@ -37,6 +37,10 @@ struct CookingView: View {
                             }
                         )
                         .page(insets: insets, background: .step(step.title))
+                        .overlay(alignment: .bottom) {
+                            swipeHint(isLast: index == recipe.steps.count - 1)
+                                .padding(.bottom, insets.bottom)
+                        }
                     }
 
                     finished
@@ -55,7 +59,7 @@ struct CookingView: View {
             if timer.isSet, timerSource?.step != page ?? 0 {
                 CookingTimerBar(timer: timer)
                     .padding(.horizontal, 16)
-                    .padding(.bottom, 8)
+                    .padding(.bottom, Self.hintHeight)
                     .transition(.move(edge: .bottom).combined(with: .opacity))
             }
         }
@@ -79,6 +83,23 @@ struct CookingView: View {
         .sensoryFeedback(.warning, trigger: rings)
         .onAppear { UIApplication.shared.isIdleTimerDisabled = true }
         .onDisappear { UIApplication.shared.isIdleTimerDisabled = false }
+    }
+
+    /// The room the swipe hint takes along the bottom of a step, which the timer sits above.
+    fileprivate static let hintHeight: CGFloat = 44
+
+    /// A nudge along the very bottom of a step that there is more above the thumb.
+    private func swipeHint(isLast: Bool) -> some View {
+        VStack(spacing: 2) {
+            Image(systemName: "chevron.compact.up")
+                .font(.title2)
+                .symbolEffect(.bounce.up, options: .repeat(.periodic(delay: 2)))
+            Text(isLast ? "Recipe.Cook.Swipe.Finish" : "Recipe.Cook.Swipe.Next")
+                .font(.footnote.weight(.semibold))
+        }
+        .foregroundStyle(.white.opacity(0.75))
+        .frame(height: Self.hintHeight)
+        .accessibilityHidden(true)
     }
 
     private var topBar: some View {
@@ -159,7 +180,7 @@ private extension View {
     func page(insets: EdgeInsets, background: Color) -> some View {
         padding(.horizontal, 24)
             .padding(.top, insets.top + 64)
-            .padding(.bottom, insets.bottom + 100)
+            .padding(.bottom, insets.bottom + CookingView.hintHeight + 92)
             .containerRelativeFrame([.horizontal, .vertical])
             .background(background)
     }

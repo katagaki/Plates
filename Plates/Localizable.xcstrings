@@ -1667,6 +1667,40 @@
         }
       }
     },
+    "Recipe.Cook.Swipe.Finish": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Swipe up to finish"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上にスワイプして完了"
+          }
+        }
+      }
+    },
+    "Recipe.Cook.Swipe.Next": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Swipe up for the next step"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上にスワイプして次の手順へ"
+          }
+        }
+      }
+    },
     "Recipe.Cook.Timer.AddMinute": {
       "extractionState": "manual",
       "localizations": {
