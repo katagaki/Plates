@@ -125,12 +125,21 @@ struct CookingView: View {
 
     /// A nudge along the very bottom of a step that there is more above the thumb.
     private func swipeHint(isLast: Bool) -> some View {
-        VStack(spacing: 2) {
-            Image(systemName: "chevron.compact.down")
-                .font(.title2)
-                .symbolEffect(.bounce.down, options: .repeat(.periodic(delay: 2)))
+        VStack(spacing: 4) {
             Text(isLast ? "Recipe.Cook.Swipe.Finish" : "Recipe.Cook.Swipe.Next")
                 .font(.footnote.weight(.semibold))
+            Image(systemName: "chevron.compact.down")
+                .font(.title2)
+        }
+        // Lifts, drops back with a bounce, then rests a moment before the next lift.
+        .keyframeAnimator(initialValue: 0.0, repeating: true) { content, lift in
+            content.offset(y: lift)
+        } keyframes: { _ in
+            KeyframeTrack {
+                CubicKeyframe(-8, duration: 0.3)
+                SpringKeyframe(0, duration: 0.6, spring: .bouncy(duration: 0.45, extraBounce: 0.3))
+                LinearKeyframe(0, duration: 1.4)
+            }
         }
         .foregroundStyle(.white.opacity(0.75))
         .frame(height: Self.hintHeight)
