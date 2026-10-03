@@ -107,6 +107,10 @@ from `Assets/DishIcons/Parts`. Do not edit the outputs.
 - `swift contrast.swift` checks piece colours against the test surfaces.
 - After changing a drawn shape, run `python3 export.py` there to regenerate the prepared SVGs and
   review sheets.
+- Parts are drawn in flat colours. `export.py` shades them in the Fluent style as it writes them,
+  so do not add gradients to `catalog.py` or `draw.py` by hand.
+- `python3 preview.py out.png ingredient ...` draws a few ingredients straight from the catalog,
+  on every surface and in every vessel, without exporting anything.
 
 ## Localization
 

@@ -1,5 +1,7 @@
+import colorsys
 import math
 import random
+import re
 
 # The shapes every prepared part is drawn from. Pieces are drawn on a 16 x 16 canvas around
 # (8, 8). Fills are drawn on a 64 x 64 canvas into the circle around (32, 32) of radius 30,
@@ -45,6 +47,58 @@ def scatter_in_circle(rng, cx, cy, r, count, gap=0.0):
 
 def place(svg, x, y, size, rot=0):
     return f'<g transform="translate({f(x)} {f(y)}) rotate({f(rot)}) scale({f(size / 16)}) translate(-8 -8)">{svg}</g>'
+
+
+# Fluent shading --------------------------------------------------------------------------
+#
+# Parts are written in flat colours and shaded as they are exported, the way the ingredient
+# icons are drawn (Assets/IconStyle/STYLE.md): every solid shape runs from a lighter tint to a
+# deeper shade of its own colour. Fills and vessels never turn, so they are lit from the top
+# left. Pieces are turned to any angle on the dish, so they darken toward their edges instead, and
+# a turned piece never looks lit from below. Strokes, see-through shapes and specks stay flat.
+
+
+def ramp(color, lift, drop):
+    r, g, b = (int(color[i:i + 2], 16) / 255 for i in (1, 3, 5))
+    h, l, s = colorsys.rgb_to_hls(r, g, b)
+
+    def hex_of(h2, l2, s2):
+        return "#%02x%02x%02x" % tuple(round(c * 255) for c in colorsys.hls_to_rgb(h2 % 1, max(0, min(1, l2)), max(0, min(1, s2))))
+
+    # Tints run a little warmer and shades a little deeper, as Fluent's do.
+    warm = 0.012 if 0.08 < h < 0.5 else -0.012
+    return hex_of(h - warm, l + (1 - l) * lift, s), color, hex_of(h + warm, l * (1 - drop), s * 1.12)
+
+
+SHAPE = re.compile(r"<(path|circle|ellipse|rect|polygon)\b[^>]*>")
+
+
+def fluent(svg, turned):
+    defs = {}
+
+    def shade(match):
+        element = match.group(0)
+        fill = re.search(r'fill="(#[0-9a-fA-F]{6})"', element)
+        if not fill or "opacity" in element:
+            return element
+        radius = re.search(r'\br="([0-9.]+)"', element)
+        if match.group(1) == "circle" and radius and float(radius.group(1)) < 1.4:
+            return element
+        color = fill.group(1).lower()
+        key = ("p" if turned else "f") + color[1:]
+        defs[key] = color
+        return element.replace(fill.group(0), f'fill="url(#{key})"')
+
+    body = SHAPE.sub(shade, svg)
+    out = ""
+    for key, color in defs.items():
+        if turned:
+            tint, base, deep = ramp(color, 0.08, 0.2)
+            out += f'<radialGradient id="{key}" cx="0.5" cy="0.5" r="0.62"><stop offset="0" stop-color="{tint}"/><stop offset="0.55" stop-color="{base}"/><stop offset="1" stop-color="{deep}"/></radialGradient>'
+        else:
+            tint, base, deep = ramp(color, 0.3, 0.2)
+            out += f'<linearGradient id="{key}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{tint}"/><stop offset="0.5" stop-color="{base}"/><stop offset="1" stop-color="{deep}"/></linearGradient>'
+    return (f"<defs>{out}</defs>" if out else "") + body
 
 
 # Pieces ------------------------------------------------------------------------------------
@@ -614,17 +668,41 @@ def covering_slices(rng, piece_svg, size, n=5):
 
 # Vessels -----------------------------------------------------------------------------------
 
+def dish(cx, rim, well, rim_r, well_r, extra="", inner=""):
+    """A plate, bowl or pan seen from above: a rim lit from the top left, a well that falls
+    away from it, a bright edge on the lit side of the rim, and a shade inside the far wall."""
+    rt, rb, rd = ramp(rim, 0.35, 0.16)
+    wt, wb, wd = ramp(well, 0.25, 0.1)
+    a = rim_r * 0.7
+    return (
+        f'<defs><linearGradient id="vr" x1="{cx - rim_r}" y1="{48 - rim_r}" x2="{cx + rim_r}" y2="{48 + rim_r}" gradientUnits="userSpaceOnUse">'
+        f'<stop offset="0" stop-color="{rt}"/><stop offset="0.5" stop-color="{rb}"/><stop offset="1" stop-color="{rd}"/></linearGradient>'
+        f'<radialGradient id="vw" cx="{cx + well_r * 0.25}" cy="{48 + well_r * 0.3}" r="{well_r * 1.25}" gradientUnits="userSpaceOnUse">'
+        f'<stop offset="0" stop-color="{wt}"/><stop offset="0.6" stop-color="{wb}"/><stop offset="1" stop-color="{wd}"/></radialGradient></defs>'
+        f'{extra}<circle cx="{cx}" cy="48" r="{rim_r}" fill="url(#vr)"/>'
+        f'<path d="M{f(cx - a)} {f(48 + a * 0.35)}A{rim_r - 1.6} {rim_r - 1.6} 0 0 1 {f(cx + a * 0.35)} {f(48 - a)}" stroke="#ffffff" stroke-opacity="0.55" stroke-width="1.6" fill="none" stroke-linecap="round"/>'
+        f'{inner}<circle cx="{cx}" cy="48" r="{well_r}" fill="url(#vw)"/>'
+        f'<path d="M{f(cx - well_r * 0.8)} {f(48 - well_r * 0.45)}A{well_r - 1} {well_r - 1} 0 0 1 {f(cx + well_r * 0.45)} {f(48 - well_r * 0.8)}" stroke="{wd}" stroke-opacity="0.35" stroke-width="2" fill="none" stroke-linecap="round"/>'
+    )
+
+
+HANDLE = '<defs><linearGradient id="vh" x1="0" y1="43" x2="0" y2="53" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d79c64"/><stop offset="1" stop-color="#8a5530"/></linearGradient><linearGradient id="vk" x1="0" y1="43" x2="0" y2="53" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5d636b"/><stop offset="1" stop-color="#26292e"/></linearGradient></defs>'
+
 VESSELS = {
-    "plate": ('<circle cx="48" cy="48" r="46" fill="#f0ece4"/><circle cx="48" cy="48" r="37" fill="#e8e3d8"/>', "plate"),
-    "plate-rim": ('<circle cx="48" cy="48" r="46" fill="#f0ece4"/><circle cx="48" cy="48" r="43" fill="none" stroke="#5f7fa3" stroke-width="2.4"/><circle cx="48" cy="48" r="37" fill="#e8e3d8"/>', "plate"),
-    "plate-sage": ('<circle cx="48" cy="48" r="46" fill="#9fb8a0"/><circle cx="48" cy="48" r="37" fill="#b6cbb5"/>', "plate"),
-    "plate-terracotta": ('<circle cx="48" cy="48" r="46" fill="#c9805f"/><circle cx="48" cy="48" r="37" fill="#d99a7c"/>', "plate"),
-    "bowl": ('<circle cx="48" cy="48" r="46" fill="#f0ece4"/><circle cx="48" cy="48" r="40" fill="#d9d2c3"/>', "bowl"),
-    "bowl-indigo": ('<circle cx="48" cy="48" r="46" fill="#3f5a7a"/><circle cx="48" cy="48" r="40" fill="#2f4762"/>', "bowl"),
-    "bowl-sage": ('<circle cx="48" cy="48" r="46" fill="#7f9c82"/><circle cx="48" cy="48" r="40" fill="#6a876d"/>', "bowl"),
-    "pan": ('<rect x="80" y="43" width="16" height="10" rx="5" fill="#a97142"/><circle cx="44" cy="48" r="42" fill="#6f747b"/><circle cx="44" cy="48" r="37" fill="#4a4e54"/>', "pan"),
-    "pot": ('<rect x="0" y="43" width="12" height="10" rx="4" fill="#3d4146"/><rect x="84" y="43" width="12" height="10" rx="4" fill="#3d4146"/><circle cx="48" cy="48" r="40" fill="#8a9097"/><circle cx="48" cy="48" r="36" fill="#5d6268"/>', "pot"),
-    "board": ('<rect x="4" y="12" width="88" height="72" rx="10" fill="#b98a55"/><rect x="8" y="16" width="80" height="64" rx="8" fill="#c99a62"/><path d="M14 30h30M50 44h32M16 62h40" stroke="#b98a55" stroke-width="1.6" stroke-linecap="round"/>', "board"),
+    "plate": (dish(48, "#f0ece4", "#e8e3d8", 46, 37), "plate"),
+    "plate-rim": (dish(48, "#f0ece4", "#e8e3d8", 46, 37, inner='<circle cx="48" cy="48" r="43" fill="none" stroke="#5f7fa3" stroke-width="2.4"/>'), "plate"),
+    "plate-sage": (dish(48, "#9fb8a0", "#b6cbb5", 46, 37), "plate"),
+    "plate-terracotta": (dish(48, "#c9805f", "#d99a7c", 46, 37), "plate"),
+    "bowl": (dish(48, "#f0ece4", "#d9d2c3", 46, 40), "bowl"),
+    "bowl-indigo": (dish(48, "#3f5a7a", "#2f4762", 46, 40), "bowl"),
+    "bowl-sage": (dish(48, "#7f9c82", "#6a876d", 46, 40), "bowl"),
+    "pan": (HANDLE + dish(44, "#6f747b", "#4a4e54", 42, 37, extra='<rect x="80" y="43" width="16" height="10" rx="5" fill="url(#vh)"/>'), "pan"),
+    "pot": (HANDLE + dish(48, "#8a9097", "#5d6268", 40, 36, extra='<rect x="0" y="43" width="12" height="10" rx="4" fill="url(#vk)"/><rect x="84" y="43" width="12" height="10" rx="4" fill="url(#vk)"/>'), "pot"),
+    "board": ('<defs><linearGradient id="vb" x1="4" y1="12" x2="92" y2="84" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d4a56c"/><stop offset="0.5" stop-color="#b98a55"/><stop offset="1" stop-color="#94683a"/></linearGradient>'
+              '<linearGradient id="vt" x1="8" y1="16" x2="88" y2="80" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e2b77e"/><stop offset="0.5" stop-color="#c99a62"/><stop offset="1" stop-color="#ad7f4a"/></linearGradient></defs>'
+              '<rect x="4" y="12" width="88" height="72" rx="10" fill="url(#vb)"/><rect x="8" y="16" width="80" height="64" rx="8" fill="url(#vt)"/>'
+              '<path d="M14 30h30M50 44h32M16 62h40" stroke="#a87a46" stroke-opacity="0.7" stroke-width="1.6" stroke-linecap="round"/>'
+              '<path d="M12 74V24c0-3 2-5 5-5h40" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1.6" fill="none" stroke-linecap="round"/>', "board"),
 }
 
 # Where fills sit on each kind of vessel, as (cx, cy, r) on the 96 canvas.

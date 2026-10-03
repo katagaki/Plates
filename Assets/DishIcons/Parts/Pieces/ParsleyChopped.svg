@@ -1,1 +1,1 @@
-<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M3 10c1.5-5 6-7.5 10-5-1.5 5-6 7-10 5Z" fill="#5f9a45"/></svg>
+<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="p5f9a45" cx="0.5" cy="0.5" r="0.62"><stop offset="0" stop-color="#70aa4c"/><stop offset="0.55" stop-color="#5f9a45"/><stop offset="1" stop-color="#457f33"/></radialGradient></defs><path d="M3 10c1.5-5 6-7.5 10-5-1.5 5-6 7-10 5Z" fill="url(#p5f9a45)"/></svg>

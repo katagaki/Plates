@@ -14,13 +14,19 @@ _bodies = {}
 
 def body(file):
     if file not in _bodies:
-        _bodies[file] = re.sub(r"^\s*<svg[^>]*>|</svg>\s*$", "", open(f"{PARTS}/{file}").read())
+        svg = re.sub(r"^\s*<svg[^>]*>|</svg>\s*$", "", open(f"{PARTS}/{file}").read())
+        # Gradient ids are only unique within a part, so they are named after it once parts
+        # share one sheet.
+        name = re.sub(r"\W", "", file)
+        svg = re.sub(r'id="([^"]+)"', rf'id="{name}-\1"', svg)
+        _bodies[file] = re.sub(r"url\(#([^)]+)\)", rf"url(#{name}-\1)", svg)
     return _bodies[file]
 
 
 def silhouette(svg):
     """The piece in one dark colour, the way SwiftUI draws a template image."""
-    svg = re.sub(r'(fill|stroke)="#[0-9a-fA-F]{3,6}"', r'\1="#000000"', svg)
+    svg = re.sub(r"<defs>.*?</defs>", "", svg)
+    svg = re.sub(r'(fill|stroke)="(#[0-9a-fA-F]{3,6}|url\(#[^)]+\))"', r'\1="#000000"', svg)
     return re.sub(r' opacity="[0-9.]+"', "", svg)
 
 
