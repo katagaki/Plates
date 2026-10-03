@@ -233,6 +233,18 @@ extension Step {
         return names.flatMap(terms).contains { words.contains($0) }
     }
 
+    /// Whether some text names an ingredient or tool by the name a recipe lists it under. The
+    /// icon is left out of it, so a step that says "pork" is not taken to name the guanciale.
+    /// A name of more than one word is only named when every word of it is, so taking out a
+    /// rice cooker does not touch every step with rice in it.
+    static func mentions(_ name: String, in text: String) -> Bool {
+        let written = text.lowercased()
+        if runsTogether(name) { return written.contains(name.lowercased()) }
+        let words = Set(terms(in: text))
+        let parts = terms(in: name)
+        return !parts.isEmpty && parts.allSatisfy(words.contains)
+    }
+
     /// True when a name is written without spaces, as Japanese is. Those names are looked for
     /// in the step as written, since there are no words to split them into.
     private static func runsTogether(_ name: String) -> Bool {

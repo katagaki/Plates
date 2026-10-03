@@ -74,6 +74,34 @@ final class ModelPasses {
         }
     }
 
+    /// One answer in a session of its own, held to a response length. A pass that fails is
+    /// tried again, waiting longer each time. The usual failure is the system holding back a
+    /// run that has gone on in the background, which clears after a short wait.
+    func respond<Content: Generable>(
+        _ type: Content.Type,
+        to prompt: String,
+        instructions: String,
+        tokenLimit: Int
+    ) async throws -> Content {
+        var waits: [Duration] = [.seconds(1), .seconds(4), .seconds(10)]
+        while true {
+            do {
+                return try await run(instructions: instructions) { session in
+                    try await session.respond(
+                        to: prompt,
+                        generating: Content.self,
+                        options: GenerationOptions(maximumResponseTokens: tokenLimit)
+                    ).content
+                }
+            } catch is CancellationError {
+                throw CancellationError()
+            } catch {
+                guard !waits.isEmpty else { throw error }
+                try await Task.sleep(for: waits.removeFirst())
+            }
+        }
+    }
+
     // MARK: - Running in the background
 
     /// Asks for the time to finish once the app is no longer on screen. The system takes it
@@ -104,7 +132,4 @@ final class ModelPasses {
     static func joined(_ items: [String]) -> String {
         items.joined(separator: text("Generate.Prompt.Separator"))
     }
-
-    /// The line every pass opens with, so the model knows what it is working on.
-    static var houseStyle: String { text("Generate.Prompt.HouseStyle") }
 }

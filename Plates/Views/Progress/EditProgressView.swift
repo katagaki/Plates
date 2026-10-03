@@ -2,9 +2,9 @@ import CulinaryIntelligence
 import SwiftUI
 
 /// The changes filling in as the model makes them, with the recipe reading under them. The
-/// first line is the model deciding what to change, the lines under it are what it decided, and
-/// the last is the read through, which adds a line of its own for anything it asks for. The
-/// checklist is only as long as the work turned out to be.
+/// first line is the model deciding what to change, and the lines under it are what it decided,
+/// followed by the steps and notes put right for it. The checklist is only as long as the work
+/// turned out to be.
 struct EditProgressView: View {
     let progress: EditProgress
 
@@ -21,10 +21,6 @@ struct EditProgressView: View {
                         Text(verbatim: change.title)
                     }
                 }
-
-                row(state: reviewState) {
-                    Text("Edit.Progress.Reviewing")
-                }
             }
 
             if !progress.title.isEmpty {
@@ -37,13 +33,6 @@ struct EditProgressView: View {
             }
         }
         .animation(.default, value: progress)
-    }
-
-    /// The read through waits its turn like any other line, and is ticked with the rest when
-    /// the run ends.
-    private var reviewState: ProgressMarkerState {
-        if progress.isFinished { return .done }
-        return progress.isReviewing ? .working : .waiting
     }
 
     private func state(of change: EditProgress.Change) -> ProgressMarkerState {

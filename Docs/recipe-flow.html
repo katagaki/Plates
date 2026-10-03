@@ -13,7 +13,7 @@ svg { width: 100%; height: auto; max-height: calc(100vh - 32px); display: block;
 <body>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1040" font-family="-apple-system, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title description">
 <title id="title">Recipe generation and editing in Plates</title>
-<desc id="description">Implemented generation uses Gemma through PlatesCloud to write recipe text, then Apple Intelligence structures it one line at a time, with Private Cloud Compute only as a context size fallback. Editing plans changes for cook approval, applies them, and checks the recipe up to twice.</desc>
+<desc id="description">Implemented generation uses Gemma through PlatesCloud to write recipe text, then Apple Intelligence structures it one line at a time, with Private Cloud Compute only as a context size fallback. Editing plans one-line changes for cook approval, applies them a line at a time, and follows swaps and removals through the steps and notes.</desc>
 <defs>
   <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#344054"/></marker>
   <style>
@@ -99,20 +99,20 @@ svg { width: 100%; height: auto; max-height: calc(100vh - 32px); display: block;
 <rect class="box" x="190" y="815" width="195" height="78"/>
 <text class="label" x="287" y="842"><tspan x="287">Describe a change</tspan><tspan class="small" x="287" dy="20">Cook's own words</tspan></text>
 <rect class="box edit" x="440" y="815" width="220" height="78"/>
-<text class="label" x="550" y="840"><tspan x="550">Plan changes</tspan><tspan class="small" x="550" dy="20">One to five checklist rows</tspan><tspan class="small" x="550" dy="17">No recipe text changed yet</tspan></text>
+<text class="label" x="550" y="840"><tspan x="550">Plan changes</tspan><tspan class="small" x="550" dy="20">One to six one-line changes</tspan><tspan class="small" x="550" dy="17">No recipe text changed yet</tspan></text>
 <path class="arrow" d="M385 854 H438"/>
 <rect class="box" x="715" y="815" width="200" height="78"/>
 <text class="label" x="815" y="842"><tspan x="815">Review the plan</tspan><tspan class="small" x="815" dy="20">Apply edits or revise request</tspan></text>
 <path class="arrow" d="M660 854 H713"/>
 <rect class="box edit" x="970" y="815" width="245" height="78"/>
-<text class="label" x="1092" y="840"><tspan x="1092">Apply approved changes</tspan><tspan class="small" x="1092" dy="20">One pass per change</tspan><tspan class="small" x="1092" dy="17">Recipe preview updates</tspan></text>
+<text class="label" x="1092" y="840"><tspan x="1092">Apply approved changes</tspan><tspan class="small" x="1092" dy="20">One line per pass</tspan><tspan class="small" x="1092" dy="17">Serving count scaled in code</tspan></text>
 <path class="arrow" d="M915 854 H968"/>
 <rect class="box edit" x="1270" y="815" width="260" height="78"/>
-<text class="label" x="1400" y="840"><tspan x="1400">Read recipe back</tspan><tspan class="small" x="1400" dy="20">Fix issues as more checklist rows</tspan><tspan class="small" x="1400" dy="17">At most two review rounds</tspan></text>
+<text class="label" x="1400" y="840"><tspan x="1400">Follow changes through</tspan><tspan class="small" x="1400" dy="20">Steps and notes naming a swap</tspan><tspan class="small" x="1400" dy="17">Checked in code, asked again once</tspan></text>
 <path class="arrow" d="M1215 854 H1268"/>
 <path class="fallback" d="M550 893 V930 H1092 V895"/>
-<text class="small" x="820" y="925">Planning, edits, and review use on-device Apple Intelligence; PCC is only a context size fallback.</text>
-<text x="28" y="1008" font-size="12" fill="#667085">Every edit is written through to the recipe file as it is applied. A failed read through leaves the recipe as it stands.</text>
+<text class="small" x="820" y="925">Planning and edits use on-device Apple Intelligence; PCC is only a context size fallback.</text>
+<text x="28" y="1008" font-size="12" fill="#667085">Every edit is written through to the recipe file as it is applied.</text>
 </svg>
 </body>
 </html>

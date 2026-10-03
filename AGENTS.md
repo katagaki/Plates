@@ -66,9 +66,19 @@ of the evals, so do not undo one without running them again.
   comes back as green peppers.
 - Asked whether the picks can make a dish, the model said yes to a tomato pasta with no pasta.
   The starch is checked against the picks in code.
-- A generation has no read through at the end. It rewrote whole lists, dropping, duplicating,
-  and inventing lines. A rewrite keeps its read through, since there it checks the result
-  against what the cook asked.
+- Neither a generation nor an edit has a read through at the end. In a generation it rewrote
+  whole lists, dropping, duplicating, and inventing lines. In an edit it met no more requests
+  than going without, and undid swaps, scaled a recipe twice, and wrote its reasoning into steps.
+- An edit changes one line per pass. Asked to write a list back with one change, the model
+  dropped lines, moved them between sections, and lost their notes. Lines are dropped and
+  serving counts scaled in code.
+- The edit plan points at lines by label (I3, T1, S2, N4), and the label decides the list.
+  Numbered from 1 per list, it filed a step change as an ingredient change.
+- The edit plan sees step titles only, so code follows a swap or a removal into every step,
+  note, and title that names it, and checks the result. Left to the plan, a swap changed the
+  shopping list and none of the method.
+- The edit plan files changes under the wrong target, such as a shorter soak as a serving
+  count. Code moves a change that names nothing on its line to the step it belongs in.
 - Never inline the catalog into a `@Generable` schema. The on-device window is 4,096 tokens,
   and an `.anyOf` over every ingredient name overruns it on its own.
 - Keep passes small enough that Private Cloud Compute stays a fallback for

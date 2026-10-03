@@ -512,27 +512,14 @@ public final class RecipeGenerator {
     }
 
     /// One line sorted in a session of its own. A line cannot be left out without the recipe
-    /// being wrong, so a pass that fails is tried again, waiting longer each time. The usual
-    /// failure is the system holding back a run that has gone on in the background, which
-    /// clears after a short wait.
+    /// being wrong, so a pass that fails is tried again.
     func sortLine<Content: Generable>(_ type: Content.Type, _ prompt: String) async throws -> Content {
-        var waits: [Duration] = [.seconds(1), .seconds(4), .seconds(10)]
-        while true {
-            do {
-                return try await passes.run(instructions: Self.structureInstructions) { session in
-                    try await session.respond(
-                        to: prompt,
-                        generating: Content.self,
-                        options: GenerationOptions(maximumResponseTokens: Self.lineTokenLimit)
-                    ).content
-                }
-            } catch is CancellationError {
-                throw CancellationError()
-            } catch {
-                guard !waits.isEmpty else { throw error }
-                try await Task.sleep(for: waits.removeFirst())
-            }
-        }
+        try await passes.respond(
+            type,
+            to: prompt,
+            instructions: Self.structureInstructions,
+            tokenLimit: Self.lineTokenLimit
+        )
     }
 
     /// The most a pass sorting one line may write. A line of Gemma's runs to a few dozen
@@ -767,8 +754,6 @@ public final class RecipeGenerator {
     }
 
     private static func joined(_ items: [String]) -> String { ModelPasses.joined(items) }
-
-    private static var houseStyle: String { ModelPasses.houseStyle }
 
     /// The prompt shorthand for Gemma, which is always asked in English.
     static func english(_ key: String.LocalizationValue, _ arguments: CVarArg...) -> String {
