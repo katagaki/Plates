@@ -196,16 +196,6 @@ def fleck(m):
     return f'<path d="M3 10c1.5-5 6-7.5 10-5-1.5 5-6 7-10 5Z" fill="{m}"/>'
 
 
-def sprig(m, stem=None):
-    st = stem or m
-    s = f'<path d="M3 13 13 3" stroke="{st}" stroke-width="1" stroke-linecap="round"/>'
-    for t in (0.25, 0.45, 0.65, 0.85):
-        x, y = 3 + 10 * t, 13 - 10 * t
-        s += f'<ellipse cx="{f(x - 1.6)}" cy="{f(y - 1.6)}" rx="1.9" ry="0.9" fill="{m}" transform="rotate(-80 {f(x - 1.6)} {f(y - 1.6)})"/>'
-        s += f'<ellipse cx="{f(x + 1.6)}" cy="{f(y + 1.6)}" rx="1.9" ry="0.9" fill="{m}" transform="rotate(-10 {f(x + 1.6)} {f(y + 1.6)})"/>'
-    return s
-
-
 def needles(m):
     s = f'<path d="M3 13 13 3" stroke="{m}" stroke-width="0.9" stroke-linecap="round"/>'
     for t in (0.2, 0.35, 0.5, 0.65, 0.8):
@@ -252,7 +242,8 @@ def shreds(m, l=None):
 
 
 def flake(m, l):
-    return f'<path d="M2 9c2-5 7-7 12-5-1 2-3 3-5 3 2 1 3 3 3 5-4 1-8 0-10-3Z" fill="{m}"/><path d="M5 8c2-1.5 4-2 6-2" stroke="{l}" stroke-width="1" fill="none" stroke-linecap="round"/>'
+    """A thin shaving that curls as it comes off the block."""
+    return f'<path d="M1.6 12.6C1.4 5.8 6.4 1.6 14.2 2.2c.4 2.8-1 4.8-3.8 5.2C8.4 7.8 7 9.6 6.8 12.8c-1.6 1-3.6 1-5.2-.2Z" fill="{m}"/><path d="M3.4 11.4c.2-4.4 3.4-7.2 8.6-7.6" stroke="{l}" stroke-width="1" fill="none" stroke-linecap="round"/>'
 
 
 def bacon(m, fat):
@@ -358,7 +349,7 @@ def squiggles(m, l):
 
 
 def fillet(m, l, skin):
-    return f'<path d="M1 9c1-4 5-6.5 9-6.5s5 2.5 5 5.5-2 6-7 6-7.5-2-7-5Z" fill="{skin}"/><path d="M2.2 9c1-3.4 4.4-5.4 7.8-5.4s3.8 2 3.8 4.4-1.6 4.8-5.8 4.8-6.2-1.6-5.8-3.8Z" fill="{m}"/><path d="M5 6.5c1 2 1 4 0 5.5M8 5.2c1 2.5 1 5 0 7M11 5.2c.8 2 .8 4.5 0 6.5" stroke="{l}" stroke-width="0.9" fill="none" stroke-linecap="round"/>'
+    return f'<path d="M1 9c1-4 5-6.5 9-6.5s5 2.5 5 5.5-2 6-7 6-7.5-2-7-5Z" fill="{skin}"/><path d="M1.4 9.6c1-3 4.6-4.8 8.6-4.8s5 2.2 5 4.6-2 4.6-7 4.6-7-1.8-6.6-4.4Z" fill="{m}"/><path d="M5 6.5c1 2 1 4 0 5.5M8 5.2c1 2.5 1 5 0 7M11 5.2c.8 2 .8 4.5 0 6.5" stroke="{l}" stroke-width="0.9" fill="none" stroke-linecap="round"/>'
 
 
 def sliced_fan(m, l, crust):
@@ -579,6 +570,20 @@ def fig_quarter(skin, pith, flesh, seed_color):
 def crab_meat(m, red, fibre):
     """A lump of white crab meat with the red-orange tinge of the shell on one side."""
     return f'<path d="M1.5 8.5c.5-2.5 3-4 6-4.2 1.5-.1 2.5.6 3.6.2 1.5-.4 3 .6 3.4 2.5.6 1.6-.4 3.6-2.6 4.4-2.4 1-6 1.2-8.4.4C1.8 11.2 1.2 10 1.5 8.5Z" fill="{m}"/><path d="M3.4 6.4c1.6-1 3.4-1.4 5.4-1.3" stroke="{red}" stroke-width="1.7" stroke-linecap="round"/><path d="M3.6 9.2c2.6-.6 5.6-.8 8.6-.4M4.6 11c2-.3 4.2-.4 6-.2" stroke="{fibre}" stroke-width="0.8" fill="none" stroke-linecap="round"/>'
+
+
+def bonito_flake(m, l):
+    """A paper thin shaving of dried bonito, wide and ruffled at the edge."""
+    return f'<path d="M2 5.6c2-1.8 3.8.2 5.8-1.6s4 .2 6.2-.8c.8 2.8-1.2 3.8 0 6s-1.2 4-3.2 4.2-3.2 1.6-5.2.8-3.8-1.2-4.2-3.2.2-2.4.6-5.4Z" fill="{m}"/><path d="M4.4 9.4c2-1.4 4.4-2 7.2-1.6M5 6.8c1.4-.6 2.8-.8 4.2-.6" stroke="{l}" stroke-width="0.7" fill="none" stroke-linecap="round"/>'
+
+
+def bean_heap(m, l, strings=None):
+    """A small heap of whole beans, each with its own glint, with sticky strings for natto."""
+    beans = ((5, 5.6, -20), (10.4, 5, 25), (12, 10, -40), (7.6, 9, 10), (3.8, 10.8, 40), (8.6, 13, -10))
+    s = "".join(f'<ellipse cx="{x}" cy="{y}" rx="2.6" ry="1.9" fill="{m}" transform="rotate({r} {x} {y})"/><circle cx="{f(x - 0.8)}" cy="{f(y - 0.6)}" r="0.6" fill="{l}"/>' for x, y, r in beans)
+    if strings:
+        s += f'<path d="M3 6c3 2 7 1 10 5M5 13c2-3 5-5 8-6" stroke="{strings}" stroke-width="0.5" fill="none" stroke-linecap="round"/>'
+    return s
 
 
 def cream_swirl(m):
@@ -1034,7 +1039,7 @@ def row_of(rng, piece_svg, size, n=5):
         count = n if row == 0 else n - 1
         x0 = C - step * (count - 1) / 2
         for i in range(count):
-            s += place(piece_svg, x0 + i * step, C + dy, size, 0 if row == 0 else 180)
+            s += place(piece_svg, x0 + i * step, C + dy, size)
     return s
 
 
