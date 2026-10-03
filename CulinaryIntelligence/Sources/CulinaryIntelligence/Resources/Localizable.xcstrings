@@ -5070,6 +5070,23 @@
         }
       }
     },
+    "Ingredient.Name.MentaikoPastaSauce": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mentaiko pasta sauce"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "明太子パスタソース"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Mentsuyu": {
       "extractionState": "manual",
       "localizations": {
@@ -6324,6 +6341,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "パンプキン"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.PuttanescaSauce": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Puttanesca sauce"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "プッタネスカソース"
           }
         }
       }
@@ -7667,6 +7701,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "タマリンド"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.TarakoPastaSauce": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tarako pasta sauce"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "たらこパスタソース"
           }
         }
       }

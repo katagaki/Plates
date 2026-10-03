@@ -242,8 +242,9 @@ private nonisolated struct DishPlanner {
 
     /// Sauces that fill a region of their own, most telling first.
     private static let sauces = [
-        "curry-roux", "coconut-milk", "lentils", "bolognese-sauce", "arrabbiata-sauce", "vodka-sauce", "marinara-sauce",
-        "passata", "canned-tomatoes", "carbonara-sauce", "alfredo-sauce", "pesto", "tianmianjiang", "beans",
+        "curry-roux", "coconut-milk", "lentils", "bolognese-sauce", "arrabbiata-sauce", "puttanesca-sauce", "vodka-sauce",
+        "marinara-sauce", "passata", "canned-tomatoes", "carbonara-sauce", "alfredo-sauce", "mentaiko-pasta-sauce",
+        "tarako-pasta-sauce", "pesto", "tianmianjiang", "beans",
     ]
     private static let soups = ["miso", "doenjang", "pumpkin", "butternut-squash", "dashi"]
 
@@ -283,9 +284,14 @@ private nonisolated struct DishPlanner {
             }
             return kind == "bowl" || kind == "pot" ? "bowl" : "mound"
         case "spaghetti", "fettuccine":
+            let roe = ["mentaiko-pasta-sauce", "tarako-pasta-sauce", "mentaiko"].first { assets.contains($0) }
+            if grain == "spaghetti", let roe {
+                consumed.insert(roe)
+                return "roe"
+            }
             let tomato = [
-                "bolognese-sauce", "arrabbiata-sauce", "vodka-sauce", "marinara-sauce", "tomato", "passata", "canned-tomatoes",
-                "tomato-paste", "ketchup",
+                "bolognese-sauce", "arrabbiata-sauce", "puttanesca-sauce", "vodka-sauce", "marinara-sauce", "tomato", "passata",
+                "canned-tomatoes", "tomato-paste", "ketchup",
             ].first { assets.contains($0) }
             if grain == "spaghetti", let tomato {
                 consumed.insert(tomato)

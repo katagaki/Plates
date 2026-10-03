@@ -306,7 +306,7 @@ V["rice-paper"] = {"rolls": fl(lambda r: rolls(r, "#f4efe4", "#ffffff", "#e8735f
 V["rigatoni"] = {"pasta": fl(lambda r: tiled(r, tube("#f2d27a", "#d9a84a", True), 20, 10, base="#e2b85a"), PLATES + BOWLS + ["pan"])}
 V["soba"] = {"swirl": fl(lambda r: noodles(r, "#9a8a72", "#b8a88e", "#857560", 1.6, 34), PLATES + BOWLS), "broth": fl(lambda r: noodles(r, "#9a8a72", "#b8a88e", "#857560", 1.6, 34, broth="#9a6a3a"), BOWLS)}
 V["somen"] = {"swirl": fl(lambda r: noodles(r, "#fbf9f2", "#ffffff", "#ece8dc", 1.2, 40), PLATES + BOWLS)}
-V["spaghetti"] = {"plain": fl(lambda r: noodles(r, "#efd281", "#fbeab5", "#e8c46e"), PLATES + ["pan"]), "creamy": fl(lambda r: noodles(r, "#efd281", "#fbeab5", "#f6e3a8"), PLATES + ["pan"]), "tomato": fl(lambda r: noodles(r, "#e2694f", "#f08a6a", "#d9533f"), PLATES + ["pan"])}
+V["spaghetti"] = {"plain": fl(lambda r: noodles(r, "#efd281", "#fbeab5", "#e8c46e"), PLATES + ["pan"]), "creamy": fl(lambda r: noodles(r, "#efd281", "#fbeab5", "#f6e3a8"), PLATES + ["pan"]), "tomato": fl(lambda r: noodles(r, "#e2694f", "#f08a6a", "#d9533f"), PLATES + ["pan"]), "roe": fl(lambda r: noodles(r, "#f2c4a4", "#f8dcc4", "#eab09a", dots="#d9505a"), PLATES + ["pan"])}
 V["tortilla"] = {"flat": fl(lambda r: flatbread(r, "#f2dca8", "#d9b070", "#e8c88a"), FLAT), "chips": p(triangle("#f2c85a", "#f8dc8a"), 13, 6)}
 V["udon"] = {"broth": fl(lambda r: noodles(r, "#fbf6e6", "#ffffff", "#ece4cc", 4.2, 16, broth="#c99a5a"), BOWLS), "swirl": fl(lambda r: noodles(r, "#fbf6e6", "#ffffff", "#ece4cc", 4.2, 16), PLATES + ["pan"])}
 V["wonton-wrappers"] = {"wontons": p(dumpling("#f6f0e0", "#e2d8c0"), 15, 4)}
@@ -350,6 +350,7 @@ V["bolognese-sauce"] = {"sauce": fl(lambda r: smooth(r, "#9a3f28", "#b85a3a", sp
 V["carbonara-sauce"] = {"sauce": fl(lambda r: smooth(r, "#f2d888", "#fbeab8", specks="#3a3530"), SAUCE)}
 V["marinara-sauce"] = {"sauce": fl(lambda r: smooth(r, "#cc3e2e", "#e8604a", specks="#4f7a3a"), SAUCE)}
 V["vodka-sauce"] = {"sauce": fl(lambda r: smooth(r, "#e07a5a", "#f0a080"), SAUCE)}
+V["puttanesca-sauce"] = {"sauce": fl(lambda r: smooth(r, "#b8352a", "#d9564a", specks="#2a2a1f"), SAUCE)}
 V["pesto"] = {"dollop": center(dollop("#5f8f3a", "#8ab55a"), 22), "sauce": fl(lambda r: smooth(r, "#6a9a3f", "#8ab55a", specks="#3f6b2a"), PLATES + ["pan"])}
 V["chili-oil"] = {"drizzle": center(drizzle("#c9301f", 2.4) + '<circle cx="5" cy="9" r="0.8" fill="#6a1f15"/><circle cx="11" cy="7" r="0.8" fill="#6a1f15"/>', 24, 2)}
 V["douchi"] = {"beans": garnish(cluster("#2a2422", "#5a4a42", 1.6, 5), 7, 4)}
@@ -361,6 +362,8 @@ V["dashi"] = {"broth": fl(lambda r: soup(r, "#e8d6a0", "#f6e8c4"), BOWLS)}
 V["miso"] = {"soup": fl(lambda r: soup(r, "#d9b06a", "#e8c88a", "#c4954a"), BOWLS), "glaze": center(dollop("#c9903a", "#e2b060"), 22)}
 V["okonomiyaki-sauce"] = {"drizzle": center(zigzag("#4a2a1a"), 26, 1)}
 V["sesame-dressing"] = {"drizzle": center(drizzle("#e8d6a8", 2.2), 24, 2)}
+V["mentaiko-pasta-sauce"] = {"sauce": fl(lambda r: smooth(r, "#ec9a8c", "#f6c4b8", specks="#c9304a"), SAUCE)}
+V["tarako-pasta-sauce"] = {"sauce": fl(lambda r: smooth(r, "#f2b8a4", "#f8d8cc", specks="#e07a80"), SAUCE)}
 V["teriyaki-sauce"] = {"glaze": center(drizzle("#6a3a1a", 2.6), 24, 2)}
 V["tonkatsu-sauce"] = {"drizzle": center(zigzag("#3a1f15"), 24, 1)}
 V["yakisoba-sauce"] = {"noodles": fl(lambda r: noodles(r, "#b8743a", "#d4955a", "#9a5a2a", 2.2, 28), PLATES + ["pan"])}

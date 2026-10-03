@@ -3624,6 +3624,22 @@
         ]
       }
     },
+    "mentaiko-pasta-sauce": {
+      "sauce": {
+        "kind": "fill",
+        "file": "Fills/MentaikoPastaSauceSauce.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 0,
+        "tones": [
+          "#e89888"
+        ]
+      }
+    },
     "minced-meat": {
       "crumbled": {
         "kind": "piece",
@@ -4863,6 +4879,22 @@
         ]
       }
     },
+    "puttanesca-sauce": {
+      "sauce": {
+        "kind": "fill",
+        "file": "Fills/PuttanescaSauceSauce.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 0,
+        "tones": [
+          "#b83028"
+        ]
+      }
+    },
     "quinoa": {
       "mound": {
         "kind": "fill",
@@ -5815,6 +5847,18 @@
         "tones": [
           "#d85038"
         ]
+      },
+      "roe": {
+        "kind": "fill",
+        "file": "Fills/SpaghettiRoe.svg",
+        "vessels": [
+          "plate",
+          "pan"
+        ],
+        "rank": 3,
+        "tones": [
+          "#e8b098"
+        ]
       }
     },
     "spinach": {
@@ -6095,6 +6139,22 @@
         "tones": [
           "#f8e058",
           "#f0c818"
+        ]
+      }
+    },
+    "tarako-pasta-sauce": {
+      "sauce": {
+        "kind": "fill",
+        "file": "Fills/TarakoPastaSauceSauce.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 0,
+        "tones": [
+          "#f0b8a0"
         ]
       }
     },

@@ -500,7 +500,7 @@ def soup(rng, base, sheen, dots=None):
     return s
 
 
-def noodles(rng, m, l, shade, width=2.4, count=26, broth=None, full=False):
+def noodles(rng, m, l, shade, width=2.4, count=26, broth=None, full=False, dots=None):
     s = ""
     if broth:
         s += f'<circle cx="{C}" cy="{C}" r="{R}" fill="{broth}"/>'
@@ -517,6 +517,9 @@ def noodles(rng, m, l, shade, width=2.4, count=26, broth=None, full=False):
         large = 1 if sweep > math.pi else 0
         c = m if i % 3 else l
         s += f'<path d="M{f(x0)} {f(y0)}A{f(rr)} {f(rr)} 0 {large} 1 {f(x1)} {f(y1)}" stroke="{c}" stroke-width="{width}" fill="none" stroke-linecap="round"/>'
+    if dots:
+        for x, y in scatter_in_circle(rng, C, C, r_nest * 0.85, 40):
+            s += f'<circle cx="{f(x)}" cy="{f(y)}" r="0.8" fill="{dots}"/>'
     return s
 
 
