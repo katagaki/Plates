@@ -1,51 +1,77 @@
-# Fluent icon style for Plates
+# Icon style for Plates
 
-Every ingredient and tool icon is drawn in a Fluent Color style: flat shapes, no outlines,
-filled with soft gradients lit from the top left, and one highlight per main body. Open several
-existing icons before you draw, in particular Tomato, Egg, Broccoli, Butter, Garlic, Rice,
-SoySauce, Pot and Knife.
+Plates draws two kinds of icon, and both are in a Fluent Color style: flat shapes with no
+outlines, soft gradients of each shape's own colour, and light from the top left.
 
-## File rules
+- Ingredient and tool icons are hand written SVGs in `Plates/Ingredients.xcassets` and
+  `Plates/Tools.xcassets`. They carry their own gradients and highlights.
+- Dish icons are put together from parts that `Assets/DishIcons` generates. Parts are written
+  in flat colours and shaded as they are exported.
+
+Whatever you draw, check it against the real thing first, and look at it rendered before you
+call it done.
+
+## Accuracy, before drawing anything
+
+1. Work out what the thing is. Icon names are the Pascal cased recipe id. The English and
+   Japanese names are under `Ingredient.Name.<Name>` or `Tool.Name.<Name>` in
+   `CulinaryIntelligence/Sources/CulinaryIntelligence/Resources/Localizable.xcstrings`. Read
+   both: the Japanese name often says which form is meant (`紅しょうが` is red shredded ginger,
+   not pink gari; `包丁` is an everyday kitchen knife, not a cleaver).
+2. Draw the form a cook buys or uses it in, with the right shape, proportions, colour and
+   anatomy. When unsure, look at photos before drawing.
+3. A fish ingredient is the whole fish. Fillets, steaks, cans and kabayaki are their own
+   variants and share the parent's colours.
+4. Tell it apart from its neighbours by shape, not only by colour. Families to check against
+   each other: citrus (lemon, lime, yuzu, sudachi, mandarin); mushrooms; leafy herbs (basil,
+   shiso, perilla, mint, coriander, parsley); bottled sauces; spice jars; flours; pasta shapes;
+   white cheeses and dairy; beans; white fish.
+5. Things to avoid, each of which came up in review:
+   - Two dark dots under a curved highlight read as a face.
+   - Thin curved strokes read as worms. Shreds and shavings need width.
+   - A rosette of round dots reads as a flower, and a thin pointed lens reads as a seed or an
+     almond.
+   - A ring with a second circle inside its hole reads as a target.
+   - A rounded capsule reads as a sausage, whatever colour it is.
+
+## Ingredient and tool icons
+
+### File rules
 
 - Root element exactly: `<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="...">`.
-  Keep the `aria-label` in plain English (US), describing the thing drawn.
+  The `aria-label` is plain English (US), describing the thing drawn.
 - Allowed elements: `defs`, `linearGradient`, `radialGradient`, `stop`, `g`, `path`, `circle`,
   `ellipse`, `rect`, `line`, `polygon`. Attributes: `fill`, `fill-opacity`, `stroke`,
   `stroke-opacity`, `stroke-width`, `stroke-linecap`, `stroke-linejoin`, `opacity`, `transform`.
 - Not allowed: `filter`, `mask`, `clipPath`, `pattern`, `image`, `text`, `use`, `style`
-  elements or attributes, CSS classes. The asset catalog renders through CoreSVG.
-- Gradients use `gradientUnits="userSpaceOnUse"` with explicit coordinates, so they line up
-  with the shapes. They live in `<defs>` at the top. Ids are short and unique within the file.
-- No file header or comments. Two space indentation, one element per line, like the existing icons.
-- Do not touch `Contents.json`, file names, or anything outside your assigned `.svg` files.
-- The drawing fills about the same area as today: roughly 40 by 40 inside the 48 box, centred.
-  Many current files wrap the drawing in `<g transform="translate(...) scale(1.125)">`. Keeping
-  that wrapper is fine; gradient coordinates are then in the inner space.
+  elements or attributes, CSS classes, `fill-rule`. The asset catalog renders through CoreSVG.
+  Cut a hole by drawing its path in the opposite direction.
+- Gradients use `gradientUnits="userSpaceOnUse"` with explicit coordinates and live in `<defs>`
+  at the top, with short ids unique within the file.
+- No file header or comments. Two space indentation, one element per line.
+- The drawing fills roughly 40 by 40 inside the 48 box, centred. Wrapping it in
+  `<g transform="translate(...) scale(1.125)">` is fine; gradient coordinates are then in the
+  inner space.
 
-## Light and colour
+### Light and colour
 
-- Light comes from the top left. Every main body gets a gradient from a lighter tint at the top
-  left, through the base colour, to a deeper shade at the bottom right.
-  - Round bodies (fruit, bulbs, florets): `radialGradient` centred at the upper left of the shape,
-    radius about 1.5 times the shape's radius. Three stops: tint, base at about .5, shade at 1.
-  - Flat faces and boxes: `linearGradient` on the diagonal. On boxes, the top face is lightest,
-    the left face is the base, and the right face is darkest.
+- Every main body runs from a lighter tint at the top left, through its base colour, to a
+  deeper shade at the bottom right.
+  - Round bodies (fruit, bulbs, florets): `radialGradient` centred at the upper left of the
+    shape, radius about 1.5 times the shape's. Stops: tint, base at about .5, shade at 1.
+  - Flat faces and boxes: `linearGradient` on the diagonal. On a box the top face is lightest,
+    the left face is the base and the right face is darkest.
   - Cylinders, bottles and handles: horizontal `linearGradient`, light on the left.
-- Shift hue a little across the ramp, as Fluent does: tints run warmer and lighter, shades run
-  deeper and more saturated. Tomato goes `#ff8a75` to `#ec4a3c` to `#b3242b`.
-- One specular highlight on each main body, at the upper left: a white ellipse or a short round
-  capped stroke, `fill-opacity` or `stroke-opacity` from .5 to .85. Glossy things (tomato, egg
-  yolk, eggplant, chili, cherries) get a crisp bright one. Matte things (bread, flour, meat, tofu)
-  get a soft one around .3 to .5, or none.
-- Detail lines (ridges, segments, veins, scale marks, seams) are a darker shade of the body
-  colour at opacity .4 to .6, not an opaque new colour.
-- No outlines, no drop shadows, no backgrounds, no ground plane.
+- Tints run a little warmer and lighter, shades deeper and more saturated. Tomato goes
+  `#ff8a75` to `#ec4a3c` to `#b3242b`.
+- One highlight on each main body, at the upper left: a white ellipse or a short round capped
+  stroke at opacity .5 to .85. Glossy things (tomato, yolk, eggplant, chili, glass) get a crisp
+  one. Matte things (bread, flour, meat, tofu) get a soft one at .3 to .5, or none.
+- Detail lines (ridges, veins, segments, scale marks, seams) are a darker shade of the body at
+  opacity .4 to .6, not a new opaque colour.
+- No outlines, drop shadows, backgrounds or ground planes.
 
-## Reusable ramps
-
-Keep families consistent across icons:
-
-| Material | Ramp (tint, base, shade) |
+| Material | Tint, base, shade |
 | --- | --- |
 | Leaf green | `#a6dc7e`, `#5fa83f`, `#3f8a2e` |
 | Deep green (broccoli, kale) | `#8fcf5c`, `#4f9a34`, `#2f6e22` |
@@ -54,47 +80,88 @@ Keep families consistent across icons:
 | Yellow (lemon, butter) | `#fff59a`, `#ffd21f`, `#e09a00` |
 | White food (garlic, rice, tofu) | `#ffffff`, `#f1ece0`, `#cfc6b2` |
 | Brown (mushroom, crust) | `#d79a63`, `#a4693a`, `#6e3d1c` |
+| Dark sauce (soy, Worcestershire) | `#7a5638`, `#3c2a1c`, `#1e140c` |
 | Steel | `#e3e9ef`, `#b2bcc6`, `#8e99a4` |
 | Dark metal (pans, pots) | `#767d86`, `#4e545c`, `#25282d` |
 | Wood | `#d79c64`, `#b07440`, `#8a5530` |
 | Fish back (blue grey) | `#7f9fb6`, `#5a7b93`, `#3f5e75` |
 
-## Small sizes and dark mode
+### Packaged things
 
-- The smallest size the app draws is 20 pt. Every icon must still be recognisable there.
-  Nothing structural thinner than about 1.2 units. The silhouette carries recognition, not the
-  gradients.
+Bottles, jars and tubs are the hardest family, because the real ones look alike. Give each its
+own outline, taken from how it is sold, before reaching for cap and label colour: the round
+Kikkoman table bottle for soy sauce, a long neck for dark soy, a wide waisted plastic bottle for
+mentsuyu, a paper wrapped slim bottle for Worcestershire, a round bottle for yakiniku sauce, a
+clay jar for Shaoxing wine, a squeeze bottle with a flip cap for tonkatsu sauce. A small picture
+on the label (a fish for fish sauce, a maple leaf, a chili) helps more than a coloured band. To
+compare a family, render it together with `overview.py` on the dark background.
+
+### Small sizes and dark mode
+
+- The smallest size the app draws is 20 pt, in recipe steps. Every icon must still read there.
+  Nothing structural is thinner than about 1.2 units; the silhouette carries recognition, not
+  the gradients.
 - Check every icon on white and on `#1c1c1e`. White foods keep their lightest stop at `#f0f0f0`
-  or above so they do not go grey. Very dark items (soy sauce, nori, black beans, pans) need a
-  lighter tint or a highlight on the top left edge so they separate from the dark background.
+  or above so they do not turn grey. Very dark items (soy sauce, nori, black beans, pans) need a
+  lighter tint or a highlight on the top left edge to separate from a dark background.
 
-## Accuracy review, before you redraw
+### Workflow
 
-For each icon, before drawing, check the current icon against the real thing:
+1. Do the accuracy check above, and open the neighbouring icons.
+2. Draw or edit the SVG. A new icon also needs its `Ingredient.Name.` or `Tool.Name.` key in both
+   languages (see `AGENTS.md`) and, for an ingredient, dish parts (below).
+3. `python3 Assets/IconStyle/batch_sheet.py /tmp/icons.png Name ...` (up to about 8 names)
+   renders the committed version beside the working tree, on light and dark, at 48 pt and 20 pt.
+   Look at it, fix what is wrong, and render again.
+4. `python3 Assets/IconStyle/overview.py /tmp/family "#1c1c1e" SoySauce Mentsuyu ...` lays out a
+   family side by side. Pass `all` for a contact sheet of every icon.
 
-1. Find what the ingredient is. The icon name is the Pascal cased recipe id. Look up its English
-   name in `Plates/Localizable.xcstrings` (`Ingredient.Name.<Name>` or `Tool.Name.<Name>`), and
-   its id in `CulinaryIntelligence` if needed. Note the Japanese name too; it can clarify which
-   ingredient is meant (for example `Mentsuyu`, `Chikuwa`, `Shiso`).
-2. Ask: is this what a cook would recognise? Right shape, proportions, colour, anatomy, and the
-   form it is usually bought or used in. If you are unsure what it looks like, search the web for
-   photos (WebSearch, WebFetch) before deciding.
-3. Conventions: a fish ingredient is the whole fish; fillets, steaks, cans and kabayaki are their
-   own variant icons. Variants stay visually consistent with their parent (Salmon,
-   SalmonFillet, SmokedSalmon share colours).
-4. It must be told apart from its neighbours at 20 pt: Lemon, Lime, Yuzu, Sudachi, Mandarin;
-   Shiitake, Mushroom, Enoki, Shimeji, KingOyster; the soy sauces and vinegars; the pasta
-   shapes; the flours. Open neighbouring icons (even outside your batch, read only) to compare.
-5. If anything is wrong, fix it in the redraw: change the shape, colour or detail as needed. If
-   it is right, keep the silhouette and change only the rendering.
+## Dish icons
 
-## Workflow
+A dish icon is a vessel (plate, bowl, pan, pot or board), the fill it is built on (rice, a
+sauce, a soup), and pieces scattered or set on top. It is seen from directly above and shown at
+about 72 pt on a recipe card, so a piece is only a few points across.
 
-1. Read the current SVG, if there is one, and do the accuracy review.
-2. Draw the SVG in `Plates/Ingredients.xcassets` or `Plates/Tools.xcassets`.
-3. Render it: `python3 Assets/IconStyle/batch_sheet.py /tmp/icons.png Name1 Name2 ...` (up to
-   about 8 names). It shows the committed version and the working tree side by side, on light
-   and dark, at 48 pt and 20 pt. Look at it, fix anything that looks wrong, and render again.
-4. To compare a group of neighbours, such as every bottled sauce:
-   `python3 Assets/IconStyle/overview.py /tmp/sauces "#1c1c1e" SoySauce Mentsuyu Ponzu ...`.
-   Pass `all` instead of names for a contact sheet of every icon.
+### How parts are drawn
+
+- Every ingredient that can be seen on a served dish has an entry in
+  `Assets/DishIcons/catalog.py`, one variant per way it is served (`diced`, `sliced`, `sauce`).
+  An ingredient that cannot be seen goes in `HIDDEN`, with the reason.
+- Shapes are helper functions in `draw.py`. Pieces are drawn on a 16 by 16 canvas around (8, 8);
+  fills on a 64 by 64 canvas inside the circle of radius 30 around (32, 32). The catalog only
+  picks a helper and its colours, size and count.
+- Write flat colours. `export.py` shades every part through `draw.fluent()`:
+  - Fills and vessels never turn, so they are lit from the top left.
+  - Pieces are turned to any angle on the dish, so they darken toward their edges instead.
+    Never draw a directional highlight into a piece; once turned it would be lit from below.
+  - Strokes, specks and shapes with `opacity` stay flat. Sheens and glints are written as white
+    shapes with `opacity`.
+  - Vessels are shaded by hand in `draw.dish()`.
+- Reuse a helper before writing a new one, so a family stays consistent: `sashimi` for raw fish
+  slices, `whole_fish`, `small_fish` and `long_fish` for fish served whole, `small_fillet` and
+  `oily_fillet` for small fillets, `roast_slice` for sliced roast meat, `thick_wedge` and
+  `crescent` for cut fruit and vegetables, `powder` for fine spices, `bean_heap` for beans,
+  `grated_mound` for grated roots. A new helper goes in `draw.py`, beside the ones like it.
+- Do not rename variants or remove them. Recipes and the planner refer to them.
+
+### Reading on the dish
+
+- Preview every variant on the surfaces it will land on. A piece whose colours are too close to
+  what it sits on gets an outline from the layout, which is fine; a piece that needs one
+  everywhere should change colour instead.
+- Similar foods should differ in shape where they can: chorizo and salami differ in colour and
+  fat; sour cream is a swirl, yogurt a smooth spoonful, grated ginger a grated mound.
+- Size pieces so they read on a 72 pt card. Garnish is the smallest, and nothing set in the
+  middle is smaller than 18.
+
+### Workflow
+
+From `Assets/DishIcons`:
+
+1. `python3 preview.py /tmp/parts.png ingredient ...` draws ingredients straight from the
+   catalog on every surface and in every vessel, without exporting. Iterate here.
+2. `python3 export.py` writes the parts and their manifest and syncs them into
+   `Plates/Dishes.xcassets` and `DishParts.json`.
+3. `python3 qa.py` writes the review sheets, `python3 layout.py` the sample sheet `dishes.png`,
+   and `swift contrast.swift` lists pieces that are hard to see on a test surface.
+4. Only the PNGs are committed. Delete `Review/*.svg` and `dishes.svg` afterwards.

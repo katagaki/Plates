@@ -95,22 +95,20 @@ of the evals, so do not undo one without running them again.
   will not take it.
 - Adding an icon means adding its `Ingredient.Name.` or `Tool.Name.` key in both languages, by
   hand, with `extractionState` set to `manual`.
-- Ingredient and tool icons are drawn in the Fluent style in `Assets/IconStyle/STYLE.md`. Check
-  each one against the real thing before drawing it, and render it with `batch_sheet.py` there.
+- Every icon, dish parts included, follows the Fluent style in `Assets/IconStyle/STYLE.md`.
+  Check what you draw against the real thing first, and look at it rendered on light and dark
+  before you finish.
 
 ### Dish icons
 
 The parts, `Plates/Dishes.xcassets`, and the package's `Resources/DishParts.json` are all written
 from `Assets/DishIcons/Parts`. Do not edit the outputs.
 
-- After changing a prepared part, run `swift sync.swift` from `Assets/DishIcons`.
-- `swift contrast.swift` checks piece colours against the test surfaces.
-- After changing a drawn shape, run `python3 export.py` there to regenerate the prepared SVGs and
-  review sheets.
-- Parts are drawn in flat colours. `export.py` shades them in the Fluent style as it writes them,
-  so do not add gradients to `catalog.py` or `draw.py` by hand.
-- `python3 preview.py out.png ingredient ...` draws a few ingredients straight from the catalog,
-  on every surface and in every vessel, without exporting anything.
+- Parts are drawn in flat colours. `export.py` shades them as it writes them, so do not add
+  gradients to `catalog.py` or `draw.py` by hand.
+- Work in `Assets/DishIcons`: `python3 preview.py` while drawing, then `python3 export.py`,
+  `python3 qa.py`, `python3 layout.py` and `swift contrast.swift`. `STYLE.md` has the details.
+- Only the PNGs from `qa.py` and `layout.py` are committed. Delete the SVGs they leave behind.
 
 ## Localization
 
