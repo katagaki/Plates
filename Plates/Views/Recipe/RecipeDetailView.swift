@@ -9,6 +9,7 @@ struct RecipeDetailView: View {
     @State private var recipe: Recipe
     @State private var isEditing = false
     @State private var isShowingTroubleshooting = false
+    @State private var isCooking = false
     @State private var tapped: TileInfo?
     @State private var field: Field?
     @State private var fieldText = ""
@@ -79,6 +80,19 @@ struct RecipeDetailView: View {
                 }
             }
 
+            if !recipe.steps.isEmpty, !isEditing {
+                ToolbarSpacer(.flexible, placement: .bottomBar)
+                ToolbarItem(placement: .bottomBar) {
+                    Button {
+                        isCooking = true
+                    } label: {
+                        Label("Recipe.Cook.Start", systemImage: "frying.pan")
+                            .labelStyle(.titleAndIcon)
+                    }
+                    .buttonStyle(.glassProminent)
+                }
+            }
+
             if !recipe.troubleshooting.isEmpty, !isEditing {
                 ToolbarSpacer(.flexible, placement: .bottomBar)
                 ToolbarItem(placement: .bottomBar) {
@@ -92,6 +106,12 @@ struct RecipeDetailView: View {
         }
         .sheet(isPresented: $isShowingTroubleshooting) {
             TroubleshootingView(entries: recipe.troubleshooting)
+        }
+        .fullScreenCover(isPresented: $isCooking) {
+            CookingView(recipe: recipe, markTried: store == nil ? nil : {
+                recipe.tried = true
+                save()
+            })
         }
         .alert(
             "Edit.Ask.Title",
