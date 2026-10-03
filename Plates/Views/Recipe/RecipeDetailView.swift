@@ -127,7 +127,11 @@ struct RecipeDetailView: View {
         // A pass can take a while, and the screen is not touched while it runs, so it is held
         // awake rather than locking part way through.
         .onChange(of: isRevising) { UIApplication.shared.isIdleTimerDisabled = isRevising }
-        .onDisappear { UIApplication.shared.isIdleTimerDisabled = false }
+        // Covering the page with cooking mode can count as leaving it, and cooking mode keeps
+        // the screen awake itself, so it is left alone then.
+        .onDisappear {
+            if !isCooking { UIApplication.shared.isIdleTimerDisabled = false }
+        }
         .sheet(item: $shared) { file in
             ShareSheet(url: file.url)
         }
