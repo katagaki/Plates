@@ -151,6 +151,7 @@ struct CookingView: View {
             Button("Recipe.Cook.Close", systemImage: "xmark") {
                 dismiss()
             }
+            .font(.title3)
 
             Spacer()
 
