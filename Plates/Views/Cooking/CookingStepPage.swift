@@ -125,12 +125,13 @@ struct CookingStepPage: View {
                 Image(systemName: "timer")
             }
             .font(.title.weight(.bold))
-            // The glass style pads the label, so it is cut by that much to match the bar.
+            // Drawn the way the bar is drawn, so the bar takes its place without a change in size.
             .frame(maxWidth: .infinity)
-            .frame(height: CookingTimerBar.height - 14)
+            .frame(height: CookingTimerBar.height)
+            .contentShape(.capsule)
+            .glassEffect(.regular.interactive(), in: .capsule)
         }
-        .buttonStyle(.glass)
-        .buttonBorderShape(.capsule)
+        .buttonStyle(.plain)
         .accessibilityLabel(Text(String(format: String(localized: "Recipe.Cook.Timer.Start"), text)))
     }
 }

@@ -58,7 +58,7 @@ struct CookingView: View {
         .overlay(alignment: .bottom) {
             if timer.isSet, timerSource?.step != page ?? 0 {
                 CookingTimerBar(timer: timer)
-                    .padding(.horizontal, 16)
+                    .padding(.horizontal, CookingView.pageMargin)
                     .padding(.bottom, Self.hintHeight)
                     .transition(.move(edge: .bottom).combined(with: .opacity))
             }
@@ -84,6 +84,9 @@ struct CookingView: View {
         .onAppear { UIApplication.shared.isIdleTimerDisabled = true }
         .onDisappear { UIApplication.shared.isIdleTimerDisabled = false }
     }
+
+    /// The space either side of a page's content, which the floating timer keeps to as well.
+    fileprivate static let pageMargin: CGFloat = 24
 
     /// The room the swipe hint takes along the bottom of a step, which the timer sits above.
     fileprivate static let hintHeight: CGFloat = 44
@@ -178,7 +181,7 @@ private extension View {
     /// Fills one screen of the pager in a colour that runs to the edges, with the content kept
     /// clear of the top buttons, the timer, and the device's own edges.
     func page(insets: EdgeInsets, background: Color) -> some View {
-        padding(.horizontal, 24)
+        padding(.horizontal, CookingView.pageMargin)
             .padding(.top, insets.top + 64)
             .padding(.bottom, insets.bottom + CookingView.hintHeight + 92)
             .containerRelativeFrame([.horizontal, .vertical])
