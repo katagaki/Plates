@@ -16,6 +16,9 @@ struct CookingView: View {
     /// The page on screen, so the timer is kept along the bottom of every other page.
     @State private var page: Int?
     @State private var rings = 0
+    /// Counts the times the cook tried to move on while the step's timer ran, to shake it each time.
+    @State private var shakes = 0
+    @State private var hasShaken = false
     @State private var isShowingTroubleshooting = false
 
     var body: some View {
@@ -31,6 +34,7 @@ struct CookingView: View {
                             items: items,
                             timer: timer,
                             runningDuration: timerSource?.step == index ? timerSource?.duration : nil,
+                            shakes: timerSource?.step == index ? shakes : 0,
                             startTimer: { duration in
                                 timerSource = TimerSource(step: index, duration: duration)
                                 timer.start(duration)
@@ -50,6 +54,8 @@ struct CookingView: View {
                 .scrollTargetLayout()
             }
             .scrollPosition(id: $page)
+            .scrollDisabled(isHeld)
+            .simultaneousGesture(holdGesture, including: isHeld ? .all : .subviews)
             .scrollTargetBehavior(.paging)
             .scrollIndicators(.hidden)
             .ignoresSafeArea()
@@ -81,8 +87,34 @@ struct CookingView: View {
             AudioServicesPlayAlertSound(SystemSoundID(1005))
         }
         .sensoryFeedback(.warning, trigger: rings)
+        .sensoryFeedback(.error, trigger: shakes)
         .onAppear { UIApplication.shared.isIdleTimerDisabled = true }
         .onDisappear { UIApplication.shared.isIdleTimerDisabled = false }
+    }
+
+    private var currentPage: Int { page ?? 0 }
+
+    /// Whether the step on screen is held until its timer is done. A paused or finished timer
+    /// lets the cook move on; the ring when it finishes draws the page again to let go.
+    private var isHeld: Bool {
+        timerSource?.step == currentPage && timer.isRunning && !timer.isFinished()
+    }
+
+    /// While a step is held, a swipe up shakes its timer instead of moving on, and a swipe
+    /// down still goes back a step.
+    private var holdGesture: some Gesture {
+        DragGesture(minimumDistance: 24)
+            .onChanged { value in
+                guard !hasShaken, value.translation.height < -24 else { return }
+                hasShaken = true
+                shakes += 1
+            }
+            .onEnded { value in
+                hasShaken = false
+                if value.translation.height > 60, currentPage > 0 {
+                    withAnimation { page = currentPage - 1 }
+                }
+            }
     }
 
     /// The space either side of a page's content, which the floating timer keeps to as well.
@@ -94,9 +126,9 @@ struct CookingView: View {
     /// A nudge along the very bottom of a step that there is more above the thumb.
     private func swipeHint(isLast: Bool) -> some View {
         VStack(spacing: 2) {
-            Image(systemName: "chevron.compact.up")
+            Image(systemName: "chevron.compact.down")
                 .font(.title2)
-                .symbolEffect(.bounce.up, options: .repeat(.periodic(delay: 2)))
+                .symbolEffect(.bounce.down, options: .repeat(.periodic(delay: 2)))
             Text(isLast ? "Recipe.Cook.Swipe.Finish" : "Recipe.Cook.Swipe.Next")
                 .font(.footnote.weight(.semibold))
         }

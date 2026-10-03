@@ -12,6 +12,8 @@ struct CookingStepPage: View {
     let timer: CookingTimer
     /// The wait the timer was started from on this step, whose button gives way to the controls.
     let runningDuration: Duration?
+    /// Goes up each time the cook tries to move on while this step's timer runs.
+    let shakes: Int
     let startTimer: (Duration) -> Void
 
     @ScaledMetric(relativeTo: .largeTitle) private var titleSize: CGFloat = 46
@@ -102,6 +104,7 @@ struct CookingStepPage: View {
             ForEach(step.durations.prefix(3), id: \.self) { duration in
                 if duration == runningDuration, timer.isSet {
                     CookingTimerBar(timer: timer)
+                        .shaking(shakes)
                         .transition(.opacity.combined(with: .scale(scale: 0.95)))
                 } else {
                     timerButton(duration)
@@ -133,5 +136,22 @@ struct CookingStepPage: View {
         }
         .buttonStyle(.plain)
         .accessibilityLabel(Text(String(format: String(localized: "Recipe.Cook.Timer.Start"), text)))
+    }
+}
+
+private extension View {
+    /// A quick shake from side to side, the way a field turns down a wrong password.
+    func shaking(_ trigger: Int) -> some View {
+        keyframeAnimator(initialValue: 0.0, trigger: trigger) { content, offset in
+            content.offset(x: offset)
+        } keyframes: { _ in
+            KeyframeTrack {
+                LinearKeyframe(-14, duration: 0.06)
+                LinearKeyframe(14, duration: 0.08)
+                LinearKeyframe(-10, duration: 0.08)
+                LinearKeyframe(8, duration: 0.07)
+                CubicKeyframe(0, duration: 0.12)
+            }
+        }
     }
 }
