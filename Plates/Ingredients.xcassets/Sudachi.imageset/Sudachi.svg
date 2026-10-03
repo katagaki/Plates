@@ -1,10 +1,16 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sudachi">
-  <circle cx="17" cy="23" r="12" fill="#5f9e3a"/>
-  <path d="M9 20c1-4 4-6 8-7" stroke="#8fc25a" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sudachi, whole and halved">
+  <defs>
+    <radialGradient id="w" cx="12" cy="17" r="18" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a8dc72"/><stop offset=".5" stop-color="#5f9e3a"/><stop offset="1" stop-color="#3a6e22"/></radialGradient>
+    <radialGradient id="r" cx="29" cy="29" r="16" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8fcf5c"/><stop offset=".5" stop-color="#4f9a34"/><stop offset="1" stop-color="#2f6e22"/></radialGradient>
+    <radialGradient id="p" cx="30" cy="30" r="10" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f8fbd0"/><stop offset="1" stop-color="#d2e47e"/></radialGradient>
+  </defs>
   <path d="M17 11V7" stroke="#6b5a3a" stroke-width="1.8" stroke-linecap="round"/>
-  <circle cx="32" cy="32" r="11" fill="#5f9e3a"/>
-  <circle cx="32" cy="32" r="9.5" fill="#f2f2d6"/>
-  <circle cx="32" cy="32" r="8" fill="#d6e48a"/>
-  <path d="M32 24v16M24 32h16M26.3 26.3l11.4 11.4M37.7 26.3 26.3 37.7" stroke="#f2f2d6" stroke-width="1.2"/>
-  <circle cx="32" cy="32" r="1.4" fill="#f2f2d6"/>
+  <circle cx="17" cy="23" r="12" fill="url(#w)"/>
+  <path d="M9.6 19.6c1-3.2 3.6-5.4 6.8-6" stroke="#fff" stroke-linecap="round" fill="none" stroke-opacity=".6" stroke-width="2.2"/>
+  <circle cx="32" cy="32" r="11" fill="url(#r)"/>
+  <circle cx="32" cy="32" r="9.4" fill="#f6f6dc"/>
+  <circle cx="32" cy="32" r="8" fill="url(#p)"/>
+  <path d="M32 24v16M24 32h16M26.3 26.3l11.4 11.4M37.7 26.3 26.3 37.7" stroke="#f6f6dc" stroke-width="1.2"/>
+  <circle cx="32" cy="32" r="1.4" fill="#f6f6dc"/>
+  <g fill="#c8b46a" fill-opacity=".8"><ellipse cx="29.4" cy="34.6" rx=".7" ry="1"/><ellipse cx="34.8" cy="29.2" rx=".7" ry="1"/></g>
 </svg>

@@ -1,6 +1,12 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Yakiniku sauce">
-  <path d="M20 15h8v4l3 6v14a3 3 0 0 1-3 3H20a3 3 0 0 1-3-3V25l3-6Z" fill="#3a1f14"/>
-  <rect x="19" y="9" width="10" height="7" rx="2" fill="#c0392b"/>
-  <rect x="18" y="27" width="12" height="8" rx="1" fill="#e8b53a"/>
-  <path d="M21 31h6" stroke="#8a2f22" stroke-width="1.6" stroke-linecap="round"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bottle of yakiniku sauce">
+  <defs>
+    <linearGradient id="b" x1="13" y1="0" x2="35" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7a5638"/><stop offset=".45" stop-color="#3c2a1c"/><stop offset="1" stop-color="#1e140c"/></linearGradient>
+    <linearGradient id="c" x1="0" y1="8" x2="0" y2="15" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f06a56"/><stop offset="1" stop-color="#a8302a"/></linearGradient>
+    <linearGradient id="l" x1="0" y1="27" x2="0" y2="36" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3a3a3a"/><stop offset="1" stop-color="#151515"/></linearGradient>
+  </defs>
+  <path d="M19.5 14h9v6.2c4.4 1.8 6.5 5.6 6.5 10.6 0 6.6-4.9 12.2-11 12.2s-11-5.6-11-12.2c0-5 2.1-8.8 6.5-10.6Z" fill="url(#b)"/>
+  <rect x="18.5" y="8.5" width="11" height="6.5" rx="2" fill="url(#c)"/>
+  <rect x="15.5" y="27" width="17" height="9" rx="4.5" fill="url(#l)"/>
+  <path d="M19.6 31.5h8.8" stroke="#f0b400" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M15.4 25c.8-1.6 2-2.8 3.4-3.6" stroke="#fff" stroke-opacity=".45" stroke-width="1.5" fill="none" stroke-linecap="round"/>
 </svg>

@@ -1,11 +1,46 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Orzo">
-  <g transform="translate(-3 -3.33) scale(1.125)">
-    <path d="M9 32c0-7 7-12 15-12s15 5 15 12Z" fill="#e0b85c"/>
-    <g fill="#f0c463">
-      <ellipse cx="16" cy="27" rx="4" ry="2.2" transform="rotate(-20 16 27)"/>
-      <ellipse cx="25" cy="25" rx="4" ry="2.2" transform="rotate(15 25 25)"/>
-      <ellipse cx="32" cy="29" rx="4" ry="2.2" transform="rotate(-10 32 29)"/>
-      <ellipse cx="21" cy="31" rx="4" ry="2.2" transform="rotate(10 21 31)"/>
-    </g>
-  </g>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Orzo pasta">
+  <path d="M16.3 16.2Q20.9 11.6 25.5 16.2Q20.9 20.8 16.3 16.2Z" transform="rotate(11 20.9 16.2)" fill="#f2c664"/>
+  <path d="M21.9 16.5Q26.5 11.9 31.1 16.5Q26.5 21.1 21.9 16.5Z" transform="rotate(-9 26.5 16.5)" fill="#eab853"/>
+  <path d="M13.2 21.5Q17.8 16.9 22.4 21.5Q17.8 26.1 13.2 21.5Z" transform="rotate(-32 17.8 21.5)" fill="#f1c15c"/>
+  <path d="M19.3 21.1Q23.9 16.5 28.5 21.1Q23.9 25.7 19.3 21.1Z" transform="rotate(-29 23.9 21.1)" fill="#e6b24e"/>
+  <path d="M25.1 21.8Q29.7 17.2 34.3 21.8Q29.7 26.4 25.1 21.8Z" transform="rotate(-26 29.7 21.8)" fill="#d9a13f"/>
+  <path d="M10.4 26.6Q15.0 22.0 19.6 26.6Q15.0 31.2 10.4 26.6Z" transform="rotate(31 15.0 26.6)" fill="#edbc56"/>
+  <path d="M16.6 26.4Q21.2 21.8 25.8 26.4Q21.2 31.0 16.6 26.4Z" transform="rotate(33 21.2 26.4)" fill="#e1ac49"/>
+  <path d="M21.8 26.9Q26.4 22.3 31.0 26.9Q26.4 31.5 21.8 26.9Z" transform="rotate(-15 26.4 26.9)" fill="#d59c3b"/>
+  <path d="M27.7 26.1Q32.3 21.5 36.9 26.1Q32.3 30.7 27.7 26.1Z" transform="rotate(-13 32.3 26.1)" fill="#cb8e30"/>
+  <path d="M8.1 31.2Q12.7 26.6 17.3 31.2Q12.7 35.8 8.1 31.2Z" transform="rotate(6 12.7 31.2)" fill="#e8b551"/>
+  <path d="M13.7 31.4Q18.3 26.8 22.9 31.4Q18.3 36.0 13.7 31.4Z" transform="rotate(3 18.3 31.4)" fill="#dda644"/>
+  <path d="M19.0 31.1Q23.6 26.5 28.2 31.1Q23.6 35.7 19.0 31.1Z" transform="rotate(-21 23.6 31.1)" fill="#d39938"/>
+  <path d="M25.4 31.4Q30.0 26.8 34.6 31.4Q30.0 36.0 25.4 31.4Z" transform="rotate(-13 30.0 31.4)" fill="#c88a2c"/>
+  <path d="M31.1 31.5Q35.7 26.9 40.3 31.5Q35.7 36.1 31.1 31.5Z" transform="rotate(-14 35.7 31.5)" fill="#c88a2c"/>
+  <path d="M5.2 36.7Q9.8 32.1 14.4 36.7Q9.8 41.3 5.2 36.7Z" transform="rotate(-18 9.8 36.7)" fill="#e3ae4b"/>
+  <path d="M10.8 36.5Q15.4 31.9 20.0 36.5Q15.4 41.1 10.8 36.5Z" transform="rotate(26 15.4 36.5)" fill="#d8a03f"/>
+  <path d="M16.7 36.3Q21.3 31.7 25.9 36.3Q21.3 40.9 16.7 36.3Z" transform="rotate(34 21.3 36.3)" fill="#cd9031"/>
+  <path d="M21.9 36.4Q26.5 31.8 31.1 36.4Q26.5 41.0 21.9 36.4Z" transform="rotate(18 26.5 36.4)" fill="#c88a2c"/>
+  <path d="M27.8 36.5Q32.4 31.9 37.0 36.5Q32.4 41.1 27.8 36.5Z" transform="rotate(-32 32.4 36.5)" fill="#c88a2c"/>
+  <path d="M34.1 36.8Q38.7 32.2 43.3 36.8Q38.7 41.4 34.1 36.8Z" transform="rotate(5 38.7 36.8)" fill="#c88a2c"/>
+  <path d="M2.9 42.0Q7.5 37.4 12.1 42.0Q7.5 46.6 2.9 42.0Z" transform="rotate(10 7.5 42.0)" fill="#dda644"/>
+  <path d="M35.9 42.5Q40.5 37.9 45.1 42.5Q40.5 47.1 35.9 42.5Z" transform="rotate(-25 40.5 42.5)" fill="#c88a2c"/>
+  <path d="M18.7 15.2H21.7" transform="rotate(11 20.9 16.2)" stroke="#fff" stroke-opacity=".6" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M24.3 15.5H27.3" transform="rotate(-9 26.5 16.5)" stroke="#fff" stroke-opacity=".6" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M15.6 20.5H18.6" transform="rotate(-32 17.8 21.5)" stroke="#fff" stroke-opacity=".6" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M21.7 20.1H24.7" transform="rotate(-29 23.9 21.1)" stroke="#fff" stroke-opacity=".6" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M27.5 20.8H30.5" transform="rotate(-26 29.7 21.8)" stroke="#fff" stroke-opacity=".6" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M12.8 25.6H15.8" transform="rotate(31 15.0 26.6)" stroke="#fff" stroke-opacity=".6" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M19.0 25.4H22.0" transform="rotate(33 21.2 26.4)" stroke="#fff" stroke-opacity=".6" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M24.2 25.9H27.2" transform="rotate(-15 26.4 26.9)" stroke="#fff" stroke-opacity=".6" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M30.1 25.1H33.1" transform="rotate(-13 32.3 26.1)" stroke="#fff" stroke-opacity=".6" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M10.5 30.2H13.5" transform="rotate(6 12.7 31.2)" stroke="#fff" stroke-opacity=".6" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M16.1 30.4H19.1" transform="rotate(3 18.3 31.4)" stroke="#fff" stroke-opacity=".6" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M21.4 30.1H24.4" transform="rotate(-21 23.6 31.1)" stroke="#fff" stroke-opacity=".6" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M27.8 30.4H30.8" transform="rotate(-13 30.0 31.4)" stroke="#fff" stroke-opacity=".6" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M33.5 30.5H36.5" transform="rotate(-14 35.7 31.5)" stroke="#fff" stroke-opacity=".6" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M7.6 35.7H10.6" transform="rotate(-18 9.8 36.7)" stroke="#fff" stroke-opacity=".6" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M13.2 35.5H16.2" transform="rotate(26 15.4 36.5)" stroke="#fff" stroke-opacity=".6" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M19.1 35.3H22.1" transform="rotate(34 21.3 36.3)" stroke="#fff" stroke-opacity=".6" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M24.3 35.4H27.3" transform="rotate(18 26.5 36.4)" stroke="#fff" stroke-opacity=".6" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M30.2 35.5H33.2" transform="rotate(-32 32.4 36.5)" stroke="#fff" stroke-opacity=".6" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M36.5 35.8H39.5" transform="rotate(5 38.7 36.8)" stroke="#fff" stroke-opacity=".6" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M5.3 41.0H8.3" transform="rotate(10 7.5 42.0)" stroke="#fff" stroke-opacity=".6" stroke-width=".8" stroke-linecap="round"/>
+  <path d="M38.3 41.5H41.3" transform="rotate(-25 40.5 42.5)" stroke="#fff" stroke-opacity=".6" stroke-width=".8" stroke-linecap="round"/>
 </svg>

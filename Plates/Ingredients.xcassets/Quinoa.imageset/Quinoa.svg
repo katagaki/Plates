@@ -1,9 +1,46 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Quinoa">
-  <g transform="translate(-3 -3.46) scale(1.125)">
-    <path d="M9 32c0-7 7-12 15-12s15 5 15 12Z" fill="#e6d9b8"/>
-    <g fill="none" stroke="#c9b184" stroke-width="1.4">
-      <circle cx="17" cy="27" r="2.6"/><circle cx="25" cy="25" r="2.6"/><circle cx="32" cy="29" r="2.6"/>
-      <circle cx="21" cy="31" r="2.6"/><circle cx="29" cy="32" r="2.6"/>
-    </g>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pile of quinoa">
+  <defs>
+    <radialGradient id="m" cx="18" cy="22" r="26" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fbf3dc"/><stop offset=".55" stop-color="#eadbb5"/><stop offset="1" stop-color="#c9b184"/></radialGradient>
+  </defs>
+  <path d="M5 38c2-10 10-18 19-18s17 8 19 18c-5 2.4-12 3.4-19 3.4S10 40.4 5 38Z" fill="url(#m)"/>
+  <ellipse cx="15.6" cy="27" rx="3.4" ry="1.6" transform="rotate(-40 15.6 27)" fill="#fff" fill-opacity=".5"/>
+  <g fill="#f6ecd2">
+    <circle cx="19.5" cy="24" r="2"/>
+    <circle cx="24.5" cy="24" r="2"/>
+    <circle cx="12.6" cy="28.4" r="2"/>
+    <circle cx="22.2" cy="28.4" r="2"/>
+    <circle cx="27" cy="28.4" r="2"/>
+    <circle cx="36.6" cy="28.4" r="2"/>
+    <circle cx="10" cy="32.8" r="2"/>
+    <circle cx="19.6" cy="32.8" r="2"/>
+    <circle cx="24.4" cy="32.8" r="2"/>
+    <circle cx="29.2" cy="32.8" r="2"/>
+    <circle cx="38.4" cy="32.8" r="2"/>
+    <circle cx="8.6" cy="37.2" r="2"/>
+    <circle cx="13.4" cy="37.2" r="2"/>
+    <circle cx="18.2" cy="37.2" r="2"/>
+    <circle cx="27.8" cy="37.2" r="2"/>
+    <circle cx="32.6" cy="37.2" r="2"/>
+  </g>
+  <g fill="#b5523b">
+    <circle cx="17.4" cy="28.4" r="2"/>
+    <circle cx="31.8" cy="28.4" r="2"/>
+    <circle cx="23" cy="37.2" r="2"/>
+    <circle cx="37.4" cy="37.2" r="2"/>
+  </g>
+  <g fill="#4a3a35">
+    <circle cx="29.5" cy="24" r="2"/>
+    <circle cx="14.8" cy="32.8" r="2"/>
+    <circle cx="34" cy="32.8" r="2"/>
+  </g>
+  <g stroke="#b29864" stroke-opacity=".55" stroke-width=".9" fill="none" stroke-linecap="round">
+    <path d="M17.9 24.4a1.7 1.7 0 0 0 3.2 0"/>
+    <path d="M11.0 28.799999999999997a1.7 1.7 0 0 0 3.2 0"/>
+    <path d="M25.4 28.799999999999997a1.7 1.7 0 0 0 3.2 0"/>
+    <path d="M8.4 33.199999999999996a1.7 1.7 0 0 0 3.2 0"/>
+    <path d="M22.799999999999997 33.199999999999996a1.7 1.7 0 0 0 3.2 0"/>
+    <path d="M36.8 33.199999999999996a1.7 1.7 0 0 0 3.2 0"/>
+    <path d="M11.8 37.6a1.7 1.7 0 0 0 3.2 0"/>
+    <path d="M26.2 37.6a1.7 1.7 0 0 0 3.2 0"/>
   </g>
 </svg>

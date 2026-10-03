@@ -1,6 +1,19 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cornmeal">
-  <path d="M7 30h34c-1 6-8 10-17 10S8 36 7 30Z" fill="#8a6a4a"/>
-  <path d="M7 30h34" stroke="#a5845f" stroke-width="2" stroke-linecap="round"/>
-  <path d="M10 30c2-8 8-12 14-12s12 4 14 12Z" fill="#efc443"/>
-  <g fill="#d69f24"><circle cx="16" cy="27" r="1"/><circle cx="21" cy="23" r="1"/><circle cx="26" cy="25" r="1"/><circle cx="31" cy="27" r="1"/><circle cx="24" cy="28.5" r=".9"/><circle cx="28" cy="21.5" r=".9"/></g>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bowl of cornmeal">
+  <defs>
+    <radialGradient id="m" cx="18" cy="19" r="20" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff07a"/><stop offset=".5" stop-color="#f0c437"/><stop offset="1" stop-color="#cc8e10"/></radialGradient>
+    <linearGradient id="b" x1="7" y1="0" x2="41" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d79c64"/><stop offset=".5" stop-color="#b07440"/><stop offset="1" stop-color="#8a5530"/></linearGradient>
+  </defs>
+  <path d="M10 30c2-8 8-12 14-12s12 4 14 12Z" fill="url(#m)"/>
+  <g fill="#b07600" fill-opacity=".55">
+    <circle cx="16" cy="27" r="1"/>
+    <circle cx="21" cy="23" r="1"/>
+    <circle cx="26" cy="25" r="1"/>
+    <circle cx="31" cy="27" r="1"/>
+    <circle cx="24" cy="28.5" r=".9"/>
+    <circle cx="28" cy="21.5" r=".9"/>
+  </g>
+  <path d="M15 24c1.4-2 3.2-3.4 5.2-4" stroke="#fff" stroke-opacity=".5" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <path d="M7 30h34c-1 6-8 10-17 10S8 36 7 30Z" fill="url(#b)"/>
+  <path d="M7 30h34" stroke="#e2b07c" stroke-width="2" stroke-linecap="round"/>
+  <path d="M11 33.4c1.6 1.8 3.6 3 6 3.6" stroke="#fff" stroke-opacity=".35" stroke-width="1.6" fill="none" stroke-linecap="round"/>
 </svg>

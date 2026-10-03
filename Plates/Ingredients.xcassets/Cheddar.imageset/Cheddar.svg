@@ -1,7 +1,13 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cheddar">
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Block of cheddar">
+  <defs>
+    <linearGradient id="t" x1="8" y1="19" x2="40" y2="26" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffd08a"/><stop offset="1" stop-color="#f7a84a"/></linearGradient>
+    <linearGradient id="f" x1="8" y1="26" x2="28" y2="36" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fba443"/><stop offset="1" stop-color="#de7a1c"/></linearGradient>
+    <linearGradient id="d" x1="28" y1="20" x2="40" y2="34" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d47a22"/><stop offset="1" stop-color="#a8560f"/></linearGradient>
+  </defs>
   <g transform="translate(-3 -3.44) scale(1.125)">
-    <path d="M8 26 20 19h20l-12 7Z" fill="#f0a03a"/>
-    <rect x="8" y="26" width="20" height="10" fill="#e8862d"/>
-    <path d="M28 26 40 19v10l-12 7Z" fill="#c96f1e"/>
+    <path d="M8 26 20 19h20l-12 7Z" fill="url(#t)"/>
+    <rect x="8" y="26" width="20" height="10" fill="url(#f)"/>
+    <path d="M28 26 40 19v10l-12 7Z" fill="url(#d)"/>
+    <path d="M10.4 28.4h10" stroke="#fff" stroke-opacity=".55" stroke-width="1.6" stroke-linecap="round"/>
   </g>
 </svg>

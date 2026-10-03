@@ -1,6 +1,12 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kecap manis">
-  <path d="M20 15h8v4l3 6v14a3 3 0 0 1-3 3H20a3 3 0 0 1-3-3V25l3-6Z" fill="#231510"/>
-  <rect x="19" y="9" width="10" height="7" rx="2" fill="#c9a23a"/>
-  <rect x="18" y="27" width="12" height="8" rx="1" fill="#c0392b"/>
-  <path d="M21 31h6" stroke="#f2d06a" stroke-width="1.6" stroke-linecap="round"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bottle of kecap manis">
+  <defs>
+    <linearGradient id="b" x1="15" y1="0" x2="33" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7a5638"/><stop offset=".45" stop-color="#3c2a1c"/><stop offset="1" stop-color="#1e140c"/></linearGradient>
+    <linearGradient id="c" x1="0" y1="7" x2="0" y2="14" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f06a56"/><stop offset="1" stop-color="#a8302a"/></linearGradient>
+    <linearGradient id="l" x1="15" y1="25" x2="33" y2="37" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7fd08a"/><stop offset=".5" stop-color="#3f9a4e"/><stop offset="1" stop-color="#2a6e36"/></linearGradient>
+  </defs>
+  <path d="M20.5 13h7v3.5h3.5a2 2 0 0 1 2 2V40a3 3 0 0 1-3 3H18a3 3 0 0 1-3-3V18.5a2 2 0 0 1 2-2h3.5Z" fill="url(#b)"/>
+  <path d="M20 13.6V10a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v3.6Z" fill="url(#c)"/>
+  <rect x="15" y="25" width="18" height="12" fill="url(#l)"/>
+  <path d="M24 28c-1.6 2.4-2.4 4-2.4 5.2a2.4 2.4 0 0 0 4.8 0c0-1.2-.8-2.8-2.4-5.2Z" fill="#2a1a10"/>
+  <path d="M17 20.4v2.6" stroke="#fff" stroke-opacity=".45" stroke-width="1.5" stroke-linecap="round"/>
 </svg>

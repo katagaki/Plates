@@ -1,8 +1,18 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cherry tomato">
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cherry tomatoes on the vine">
+  <defs>
+    <radialGradient id="a" cx="9.62" cy="20.62" r="11.25" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff8a75"/><stop offset=".5" stop-color="#ec4a3c"/><stop offset="1" stop-color="#b3242b"/></radialGradient>
+    <radialGradient id="b" cx="23.07" cy="20.07" r="9.75" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff8a75"/><stop offset=".5" stop-color="#ec4a3c"/><stop offset="1" stop-color="#b3242b"/></radialGradient>
+    <radialGradient id="c" cx="29.62" cy="30.62" r="11.25" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff8a75"/><stop offset=".5" stop-color="#ec4a3c"/><stop offset="1" stop-color="#b3242b"/></radialGradient>
+  </defs>
   <path d="M8 8c7 0 11 3 14 7s7 6 15 6" stroke="#4f8a3a" stroke-width="2.2" fill="none" stroke-linecap="round"/>
   <g stroke="#4f8a3a" stroke-width="1.8" stroke-linecap="round"><path d="M13 9v8"/><path d="M26 17.5V16"/><path d="M34 21v6"/></g>
-  <circle cx="13" cy="24" r="7.5" fill="#df3f2e"/>
-  <circle cx="26" cy="23" r="6.5" fill="#e8513c"/>
-  <circle cx="33" cy="34" r="7.5" fill="#df3f2e"/>
-  <g fill="#f49a8b"><circle cx="10.5" cy="21" r="1.6"/><circle cx="24" cy="20.5" r="1.3"/><circle cx="30.5" cy="31" r="1.6"/></g>
+  <circle cx="13" cy="24" r="7.5" fill="url(#a)"/>
+  <circle cx="26" cy="23" r="6.5" fill="url(#b)"/>
+  <circle cx="33" cy="34" r="7.5" fill="url(#c)"/>
+  <path d="M13 15.35 13.59 16.99 15.85 16.9 13.95 17.83 14.76 19.42 13 18.35 11.24 19.42 12.05 17.83 10.15 16.9 12.41 16.99ZM26 15.45 26.53 16.85 28.47 16.8 26.86 17.61 27.53 18.98 26 18.07 24.47 18.98 25.14 17.61 23.53 16.8 25.47 16.85ZM33 25.35 33.59 26.99 35.85 26.9 33.95 27.83 34.76 29.42 33 28.35 31.24 29.42 32.05 27.83 30.15 26.9 32.41 26.99Z" fill="#4f9a34"/>
+  <g fill="#fff" fill-opacity=".85">
+    <ellipse cx="10.15" cy="21.75" rx="1.8" ry="1.12" transform="rotate(-35 10.15 21.75)"/>
+    <ellipse cx="23.53" cy="21.05" rx="1.56" ry="0.97" transform="rotate(-35 23.53 21.05)"/>
+    <ellipse cx="30.15" cy="31.75" rx="1.8" ry="1.12" transform="rotate(-35 30.15 31.75)"/>
+  </g>
 </svg>

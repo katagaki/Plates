@@ -1,10 +1,24 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Coriander">
-  <g transform="translate(-3 -3.21) scale(1.125)">
-    <path d="M24 42V22" stroke="#7a9e4e" stroke-width="2.6" stroke-linecap="round"/>
-    <path d="M24 22c-6 0-9 3-9 3s3 4 9 4Z" fill="#5f8c3f"/>
-    <path d="M24 22c6 0 9 3 9 3s-3 4-9 4Z" fill="#7a9e4e"/>
-    <path d="M24 12c-5 2-7 6-7 9 4 1 7-2 7-9Z" fill="#5f8c3f"/>
-    <path d="M24 12c5 2 7 6 7 9-4 1-7-2-7-9Z" fill="#7a9e4e"/>
-    <path d="M24 8c-3 3-3 7-1 9 2-2 3-6 1-9Z" fill="#a8cf8e"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Coriander with its root">
+  <defs>
+    <radialGradient id="g" cx="-3" cy="-4" r="13" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a6dc7e"/><stop offset=".5" stop-color="#5fa83f"/><stop offset="1" stop-color="#3f8a2e"/></radialGradient>
+    <linearGradient id="s" x1="14" y1="0" x2="34" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#b8e08e"/><stop offset="1" stop-color="#6fae4a"/></linearGradient>
+    <linearGradient id="r" x1="21" y1="0" x2="27" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#f1e6dc"/><stop offset="1" stop-color="#d9b8b0"/></linearGradient>
+  </defs>
+  <path d="M24 35V15M24 35c-2.6-4.6-5.6-8.6-10-12M24 33c2.6-4.6 5.6-8 10-10.6" stroke="url(#s)" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M22 34.4h4l-1.4 9.2a.6.6 0 0 1-1.2 0Z" fill="url(#r)"/>
+  <path d="M22.6 38.6l-2.2 2.6M25.4 37.6l2.2 2.4" stroke="#e8d8cc" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <path d="M22.4 34.6h3.2" stroke="#c98a8a" stroke-opacity=".6" stroke-width="1.4" stroke-linecap="round"/>
+  <g transform="translate(24 10.5) rotate(0) scale(1.25)">
+    <path d="M0 6C-4.6 5.4-7.6 2.4-7.2-1c.2-1.6 1.8-2.4 3.2-1.6-.4-2.2 1-4 2.8-4 .6 0 1 .2 1.2.6.2-.4.6-.6 1.2-.6 1.8 0 3.2 1.8 2.8 4 1.4-.8 3 0 3.2 1.6C7.6 2.4 4.6 5.4 0 6Z" fill="url(#g)"/>
+    <path d="M0 5.4V-3M0 4l-3.6-4.4M0 4l3.6-4.4" stroke="#2f6e22" stroke-opacity=".45" stroke-width="1" fill="none" stroke-linecap="round"/>
   </g>
+  <g transform="translate(12.5 20) rotate(-50) scale(1.25)">
+    <path d="M0 6C-4.6 5.4-7.6 2.4-7.2-1c.2-1.6 1.8-2.4 3.2-1.6-.4-2.2 1-4 2.8-4 .6 0 1 .2 1.2.6.2-.4.6-.6 1.2-.6 1.8 0 3.2 1.8 2.8 4 1.4-.8 3 0 3.2 1.6C7.6 2.4 4.6 5.4 0 6Z" fill="url(#g)"/>
+    <path d="M0 5.4V-3M0 4l-3.6-4.4M0 4l3.6-4.4" stroke="#2f6e22" stroke-opacity=".45" stroke-width="1" fill="none" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(35.5 20) rotate(50) scale(1.25)">
+    <path d="M0 6C-4.6 5.4-7.6 2.4-7.2-1c.2-1.6 1.8-2.4 3.2-1.6-.4-2.2 1-4 2.8-4 .6 0 1 .2 1.2.6.2-.4.6-.6 1.2-.6 1.8 0 3.2 1.8 2.8 4 1.4-.8 3 0 3.2 1.6C7.6 2.4 4.6 5.4 0 6Z" fill="url(#g)"/>
+    <path d="M0 5.4V-3M0 4l-3.6-4.4M0 4l3.6-4.4" stroke="#2f6e22" stroke-opacity=".45" stroke-width="1" fill="none" stroke-linecap="round"/>
+  </g>
+  <ellipse cx="20.4" cy="6.6" rx="2" ry="1.1" transform="rotate(-35 20.4 6.6)" fill="#fff" fill-opacity=".45"/>
 </svg>

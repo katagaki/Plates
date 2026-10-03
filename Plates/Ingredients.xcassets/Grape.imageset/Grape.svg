@@ -1,12 +1,27 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Grapes">
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bunch of grapes">
+  <defs>
+    <radialGradient id="g0" cx="22" cy="16.8" r="7.5" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c39ae0"/><stop offset=".55" stop-color="#8a56a8"/><stop offset="1" stop-color="#5a2f74"/></radialGradient>
+    <radialGradient id="g1" cx="15" cy="23.8" r="7.5" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c39ae0"/><stop offset=".55" stop-color="#8a56a8"/><stop offset="1" stop-color="#5a2f74"/></radialGradient>
+    <radialGradient id="g2" cx="29" cy="23.8" r="7.5" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c39ae0"/><stop offset=".55" stop-color="#8a56a8"/><stop offset="1" stop-color="#5a2f74"/></radialGradient>
+    <radialGradient id="g3" cx="22" cy="26.8" r="7.5" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c39ae0"/><stop offset=".55" stop-color="#8a56a8"/><stop offset="1" stop-color="#5a2f74"/></radialGradient>
+    <radialGradient id="g4" cx="18" cy="32.8" r="7.5" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c39ae0"/><stop offset=".55" stop-color="#8a56a8"/><stop offset="1" stop-color="#5a2f74"/></radialGradient>
+    <radialGradient id="g5" cx="26" cy="32.8" r="7.5" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c39ae0"/><stop offset=".55" stop-color="#8a56a8"/><stop offset="1" stop-color="#5a2f74"/></radialGradient>
+    <linearGradient id="lf" x1="26" y1="6" x2="33" y2="10" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a6dc7e"/><stop offset="1" stop-color="#3f8a2e"/></linearGradient>
+  </defs>
   <g transform="translate(-3 -2.9) scale(1.125)">
-    <circle cx="24" cy="19" r="5" fill="#8f5fa8"/>
-    <circle cx="17" cy="26" r="5" fill="#7d519a"/>
-    <circle cx="31" cy="26" r="5" fill="#7d519a"/>
-    <circle cx="24" cy="29" r="5" fill="#9a6ab5"/>
-    <circle cx="20" cy="35" r="5" fill="#8f5fa8"/>
-    <circle cx="28" cy="35" r="5" fill="#7d519a"/>
-    <path d="M24 14V8" stroke="#7a5a3a" stroke-width="2" stroke-linecap="round"/>
-    <path d="M25 9c3-3 6-3 9-2-3 4-7 5-9 2Z" fill="#5f9e4a"/>
+    <path d="M24 14V8" stroke="#8a6440" stroke-width="2" stroke-linecap="round"/>
+    <path d="M25 9c3-3 6-3 9-2-3 4-7 5-9 2Z" fill="url(#lf)"/>
+    <circle cx="24" cy="19" r="5" fill="url(#g0)"/>
+    <circle cx="17" cy="26" r="5" fill="url(#g1)"/>
+    <circle cx="31" cy="26" r="5" fill="url(#g2)"/>
+    <circle cx="24" cy="29" r="5" fill="url(#g3)"/>
+    <circle cx="20" cy="35" r="5" fill="url(#g4)"/>
+    <circle cx="28" cy="35" r="5" fill="url(#g5)"/>
+    <ellipse cx="22" cy="16.8" rx="1.5" ry="1" transform="rotate(-35 22 16.8)" fill="#fff" fill-opacity=".75"/>
+    <ellipse cx="15" cy="23.8" rx="1.5" ry="1" transform="rotate(-35 15 23.8)" fill="#fff" fill-opacity=".75"/>
+    <ellipse cx="29" cy="23.8" rx="1.5" ry="1" transform="rotate(-35 29 23.8)" fill="#fff" fill-opacity=".75"/>
+    <ellipse cx="22" cy="26.8" rx="1.5" ry="1" transform="rotate(-35 22 26.8)" fill="#fff" fill-opacity=".75"/>
+    <ellipse cx="18" cy="32.8" rx="1.5" ry="1" transform="rotate(-35 18 32.8)" fill="#fff" fill-opacity=".75"/>
+    <ellipse cx="26" cy="32.8" rx="1.5" ry="1" transform="rotate(-35 26 32.8)" fill="#fff" fill-opacity=".75"/>
   </g>
 </svg>

@@ -1,8 +1,25 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sardines">
-  <path transform="translate(4 15)" d="M0 0c6-6 18-7 26-2l6-4v12l-6-4c-8 5-20 4-26-2Z" fill="#5b7fa6"/>
-  <path d="M7 16c8 3 16 3 23 0" stroke="#c9d7e6" stroke-width="2" fill="none" stroke-linecap="round"/>
-  <circle cx="9" cy="14" r="1.3" fill="#1e2a38"/>
-  <path transform="translate(9 32)" d="M0 0c6-6 18-7 26-2l6-4v12l-6-4c-8 5-20 4-26-2Z" fill="#4a6d94"/>
-  <path d="M12 33c8 3 16 3 23 0" stroke="#c9d7e6" stroke-width="2" fill="none" stroke-linecap="round"/>
-  <circle cx="14" cy="31" r="1.3" fill="#1e2a38"/>
+  <defs>
+    <linearGradient id="k" x1="0" y1="-6" x2="0" y2="1" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3f6488"/><stop offset="1" stop-color="#7fa6c8"/></linearGradient>
+    <linearGradient id="w" x1="0" y1="-1" x2="0" y2="5" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#c8d2dc"/></linearGradient>
+    <linearGradient id="t" x1="0" y1="-6" x2="0" y2="6" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7fa6c8"/><stop offset="1" stop-color="#3f6488"/></linearGradient>
+  </defs>
+  <g transform="translate(4 15)">
+    <path d="M25 -1.6 32 -6v12l-7-4.6Z" fill="url(#t)"/>
+    <path d="M0 0c6-6 18-7 26-2v4c-8 5-20 4-26-2Z" fill="url(#w)"/>
+    <path d="M0 0c6-6 18-7 26-2v2.4C17 1.2 8 1.2 0 0Z" fill="url(#k)"/>
+    <g fill="#24364a" fill-opacity=".7"><circle cx="10" cy="1.6" r=".7"/><circle cx="13.4" cy="1.8" r=".7"/><circle cx="16.8" cy="1.7" r=".7"/></g>
+    <path d="M7.4 -3.2c-1.4 1.6-1.4 3.6 0 5.4" stroke="#9fb3c6" stroke-width="1" fill="none" stroke-linecap="round"/>
+    <path d="M10 -3.6c4-1.4 9-1.6 13-.6" stroke="#fff" stroke-opacity=".45" stroke-width="1" fill="none" stroke-linecap="round"/>
+    <circle cx="4.4" cy="-1" r="1.3" fill="#1e2a38"/>
+  </g>
+  <g transform="translate(9 32)">
+    <path d="M25 -1.6 32 -6v12l-7-4.6Z" fill="url(#t)"/>
+    <path d="M0 0c6-6 18-7 26-2v4c-8 5-20 4-26-2Z" fill="url(#w)"/>
+    <path d="M0 0c6-6 18-7 26-2v2.4C17 1.2 8 1.2 0 0Z" fill="url(#k)"/>
+    <g fill="#24364a" fill-opacity=".7"><circle cx="10" cy="1.6" r=".7"/><circle cx="13.4" cy="1.8" r=".7"/><circle cx="16.8" cy="1.7" r=".7"/></g>
+    <path d="M7.4 -3.2c-1.4 1.6-1.4 3.6 0 5.4" stroke="#9fb3c6" stroke-width="1" fill="none" stroke-linecap="round"/>
+    <path d="M10 -3.6c4-1.4 9-1.6 13-.6" stroke="#fff" stroke-opacity=".45" stroke-width="1" fill="none" stroke-linecap="round"/>
+    <circle cx="4.4" cy="-1" r="1.3" fill="#1e2a38"/>
+  </g>
 </svg>

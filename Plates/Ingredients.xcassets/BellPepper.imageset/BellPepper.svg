@@ -1,8 +1,12 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Green bell pepper">
+  <defs>
+    <radialGradient id="b" cx="17" cy="19" r="25" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a6dc7e"/><stop offset=".5" stop-color="#5fa83f"/><stop offset="1" stop-color="#3a7f2a"/></radialGradient>
+    <linearGradient id="s" x1="22" y1="0" x2="26" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8cc46a"/><stop offset="1" stop-color="#4f8a34"/></linearGradient>
+  </defs>
   <g transform="translate(-3 -3) scale(1.125)">
-    <path d="M24 16c6-4 15-1 15 9 0 9-5 16-11 16-2 0-3-1-4-1s-2 1-4 1c-6 0-11-7-11-16 0-10 9-13 15-9Z" fill="#5aa84f"/>
-    <path d="M17 20c-3 3-4 8-3 13" stroke="#8fc97f" stroke-width="3" fill="none" stroke-linecap="round"/>
-    <path d="M24 33c-2 0-3-4-3-8" stroke="#4a8f42" stroke-width="2" fill="none" stroke-linecap="round"/>
-    <rect x="22" y="7" width="4" height="9" rx="2" fill="#7fb069"/>
+    <path d="M24 16c6-4 15-1 15 9 0 9-5 16-11 16-2 0-3-1-4-1s-2 1-4 1c-6 0-11-7-11-16 0-10 9-13 15-9Z" fill="url(#b)"/>
+    <path d="M24 33c-2 0-3-4-3-8M29.4 34c1.6-2 2.4-5 2.4-8.4" stroke="#2f6e22" stroke-opacity=".45" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    <path d="M17 20c-3 3-4 8-3 13" stroke="#fff" stroke-opacity=".6" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    <path d="M22 16.4V10a2 2 0 0 1 4 0v6.4c-1.2.6-2.8.6-4 0Z" fill="url(#s)"/>
   </g>
 </svg>

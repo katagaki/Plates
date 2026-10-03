@@ -1,8 +1,23 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Corn on the cob">
+  <defs>
+    <linearGradient id="c" x1="16" y1="0" x2="32" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff07a"/><stop offset=".5" stop-color="#ffcc1f"/><stop offset="1" stop-color="#e09a00"/></linearGradient>
+    <linearGradient id="a" x1="8" y1="20" x2="20" y2="36" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a6dc7e"/><stop offset=".5" stop-color="#5fa83f"/><stop offset="1" stop-color="#3f8a2e"/></linearGradient>
+    <linearGradient id="b" x1="28" y1="20" x2="40" y2="36" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8fcf5c"/><stop offset=".5" stop-color="#4f9a34"/><stop offset="1" stop-color="#2f6e22"/></linearGradient>
+  </defs>
   <g transform="translate(-3 -3) scale(1.125)">
-    <rect x="16" y="8" width="16" height="32" rx="8" fill="#f1c21b"/>
-    <g fill="#e0a900"><rect x="19" y="13" width="10" height="2" rx="1"/><rect x="19" y="19" width="10" height="2" rx="1"/><rect x="19" y="25" width="10" height="2" rx="1"/><rect x="19" y="31" width="10" height="2" rx="1"/></g>
-    <path d="M16 20c-6 2-8 8-6 14 6 1 9-4 9-10Z" fill="#7a9e4e"/>
-    <path d="M32 20c6 2 8 8 6 14-6 1-9-4-9-10Z" fill="#8fb35c"/>
+    <rect x="16" y="8" width="16" height="32" rx="8" fill="url(#c)"/>
+    <g stroke="#c27f00" stroke-opacity=".5" stroke-width="1" fill="none" stroke-linecap="round">
+      <path d="M17 13h14"/>
+      <path d="M17 16.5h14"/>
+      <path d="M17 20h14"/>
+      <path d="M17 23.5h14"/>
+      <path d="M17 27h14"/>
+      <path d="M17 30.5h14"/>
+      <path d="M17 34h14"/>
+      <path d="M21.3 10v27M26.7 10v27"/>
+    </g>
+    <path d="M19 13v8" stroke="#fff" stroke-opacity=".7" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M16 20c-6 2-8 8-6 14 6 1 9-4 9-10Z" fill="url(#a)"/>
+    <path d="M32 20c6 2 8 8 6 14-6 1-9-4-9-10Z" fill="url(#b)"/>
   </g>
 </svg>

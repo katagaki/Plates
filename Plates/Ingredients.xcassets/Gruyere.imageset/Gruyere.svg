@@ -1,8 +1,14 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gruyère">
-  <path d="M6 30 34 14l8 4v12Z" fill="#f4d47a"/>
-  <path d="M6 30h36v8H6Z" fill="#e8bf55"/>
-  <path d="M34 14l8 4" stroke="#b9853e" stroke-width="2.4" stroke-linecap="round"/>
-  <path d="M42 18v20" stroke="#b9853e" stroke-width="2.4" stroke-linecap="round"/>
-  <g fill="#fbe7ae"><circle cx="30" cy="24" r="2.2"/><circle cx="36" cy="27" r="1.4"/><circle cx="24" cy="28" r="1.2"/></g>
-  <g fill="#d6a53e"><circle cx="15" cy="34" r="1.8"/><circle cx="27" cy="35" r="1.4"/><circle cx="37" cy="33" r="1.6"/></g>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Wedge of Gruyère">
+  <defs>
+    <linearGradient id="t" x1="8" y1="16" x2="36" y2="32" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff3bc"/><stop offset="1" stop-color="#f6d878"/></linearGradient>
+    <linearGradient id="f" x1="6" y1="30" x2="42" y2="38" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f2cf68"/><stop offset="1" stop-color="#dcae44"/></linearGradient>
+    <linearGradient id="r" x1="0" y1="14" x2="0" y2="38" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c99862"/><stop offset="1" stop-color="#8a5a2c"/></linearGradient>
+  </defs>
+  <path d="M6 30 34 14l8 4v12Z" fill="url(#t)"/>
+  <path d="M6 30h36v8H6Z" fill="url(#f)"/>
+  <path d="M34 14l8 4" stroke="url(#r)" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M42 18v20" stroke="url(#r)" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="31" cy="25" r="1.2" fill="#e3bd5a" fill-opacity=".6"/>
+  <circle cx="24" cy="34.5" r=".9" fill="#b98a2e" fill-opacity=".45"/>
+  <path d="M12 28.6 26 20.6" stroke="#fff" stroke-opacity=".6" stroke-width="1.6" stroke-linecap="round"/>
 </svg>

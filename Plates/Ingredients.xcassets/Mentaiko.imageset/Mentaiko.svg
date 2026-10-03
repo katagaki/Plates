@@ -1,6 +1,11 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mentaiko">
-  <ellipse cx="22" cy="21" rx="15" ry="6" transform="rotate(-10 22 21)" fill="#e0475a"/>
-  <ellipse cx="26" cy="30" rx="15" ry="6" transform="rotate(-10 26 30)" fill="#c93448"/>
-  <g fill="#f5a0aa"><circle cx="14" cy="21" r=".9"/><circle cx="19" cy="19" r=".9"/><circle cx="25" cy="20" r=".9"/><circle cx="30" cy="17" r=".9"/><circle cx="20" cy="31" r=".9"/><circle cx="26" cy="29" r=".9"/><circle cx="32" cy="28" r=".9"/><circle cx="36" cy="26" r=".9"/></g>
-  <path d="M11 22c2-3 7-5 11-5.5" stroke="#f07c8c" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pair of mentaiko, spicy cod roe sacs">
+  <defs>
+    <radialGradient id="a" cx="15" cy="17" r="20" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff8c98"/><stop offset=".5" stop-color="#e0475a"/><stop offset="1" stop-color="#b02a3c"/></radialGradient>
+    <radialGradient id="b" cx="19" cy="26" r="20" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f26c7c"/><stop offset=".5" stop-color="#c93448"/><stop offset="1" stop-color="#931c2e"/></radialGradient>
+  </defs>
+  <ellipse cx="22" cy="21" rx="15" ry="6" transform="rotate(-10 22 21)" fill="url(#a)"/>
+  <ellipse cx="26" cy="30" rx="15" ry="6" transform="rotate(-10 26 30)" fill="url(#b)"/>
+  <g fill="#ffd0d6" fill-opacity=".7"><circle cx="14" cy="21" r=".9"/><circle cx="19" cy="19" r=".9"/><circle cx="25" cy="20" r=".9"/><circle cx="30" cy="17" r=".9"/><circle cx="20" cy="31" r=".9"/><circle cx="26" cy="29" r=".9"/><circle cx="32" cy="28" r=".9"/><circle cx="36" cy="26" r=".9"/></g>
+  <path d="M11 22c2-3 7-5 11-5.5" stroke="#fff" stroke-opacity=".7" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <path d="M15 31c2-2.4 5-3.8 8.4-4.4" stroke="#fff" stroke-opacity=".45" stroke-width="1.5" fill="none" stroke-linecap="round"/>
 </svg>

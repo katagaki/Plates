@@ -1,6 +1,11 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abalone">
-  <path d="M6 25c0-9 8-16 19-16s17 6 17 14c0 10-9 16-19 16C13 39 6 33 6 25Z" fill="#8a7a5c"/>
-  <path d="M10 25c0-7 6-12 15-12s13 5 13 11c0 7-7 12-15 12-8 0-13-5-13-11Z" fill="#a9b8a0"/>
-  <path d="M14 26c1-5 5-8 11-8 5 0 8 3 8 6" stroke="#cfdcc6" stroke-width="2.4" fill="none" stroke-linecap="round"/>
-  <g fill="#5c5040"><circle cx="11" cy="20" r="1.4"/><circle cx="15" cy="15" r="1.4"/><circle cx="20" cy="12" r="1.4"/><circle cx="26" cy="11" r="1.4"/><circle cx="32" cy="12" r="1.4"/></g>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abalone in its shell">
+  <defs>
+    <radialGradient id="s" cx="14" cy="14" r="36" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c2ab80"/><stop offset=".5" stop-color="#8a7a5c"/><stop offset="1" stop-color="#5a4b34"/></radialGradient>
+    <radialGradient id="m" cx="19" cy="19" r="22" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f2f4e8"/><stop offset=".5" stop-color="#c9d2bb"/><stop offset="1" stop-color="#93a287"/></radialGradient>
+  </defs>
+  <path d="M6 25c0-9 8-16 19-16s17 6 17 14c0 10-9 16-19 16C13 39 6 33 6 25Z" fill="url(#s)"/>
+  <path d="M10.5 25.5c0-6.5 6-11.5 14.5-11.5s12.5 4.5 12.5 10.5c0 7-6.5 11.5-14.5 11.5-7.5 0-12.5-4.5-12.5-10.5Z" fill="url(#m)"/>
+  <path d="M15.5 26c0-4 4-6.8 9.2-6.8s8.3 2.8 8.3 6.3-4 6.5-9 6.5-8.5-2.5-8.5-6Z" stroke="#6f7d62" stroke-opacity=".45" stroke-width="1.4" fill="none"/>
+  <g fill="#3f3424"><circle cx="11" cy="20" r="1.4"/><circle cx="15" cy="15.2" r="1.4"/><circle cx="20" cy="12.2" r="1.4"/><circle cx="26" cy="11.2" r="1.4"/><circle cx="32" cy="12.2" r="1.4"/></g>
+  <path d="M14 22.5c1.4-2.8 4.4-4.8 8.2-5.4" stroke="#fff" stroke-opacity=".75" stroke-width="1.8" fill="none" stroke-linecap="round"/>
 </svg>

@@ -1,5 +1,10 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Radicchio">
-  <circle cx="24" cy="26" r="17" fill="#8a1f3a"/>
-  <path d="M7.5 23c4-9 10-13 16.5-13s12.5 4 16.5 13c-6-5-11-6.5-16.5-6.5S13.5 18 7.5 23Z" fill="#a8304f"/>
-  <g stroke="#f4e6ea" stroke-width="1.7" fill="none" stroke-linecap="round"><path d="M24 42V18"/><path d="M24 31c-6-3-10-8-12-13"/><path d="M24 31c6-3 10-8 12-13"/><path d="M24 37c-7-1-13-5-16-10"/><path d="M24 37c7-1 13-5 16-10"/></g>
+  <defs>
+    <radialGradient id="b" cx="17" cy="19" r="28" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#cf4a72"/><stop offset=".5" stop-color="#8f1f40"/><stop offset="1" stop-color="#560c26"/></radialGradient>
+    <linearGradient id="t" x1="10" y1="10" x2="36" y2="22" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d65a80"/><stop offset="1" stop-color="#9c2a4a"/></linearGradient>
+  </defs>
+  <circle cx="24" cy="26" r="17" fill="url(#b)"/>
+  <path d="M7.5 23c4-9 10-13 16.5-13s12.5 4 16.5 13c-6-5-11-6.5-16.5-6.5S13.5 18 7.5 23Z" fill="url(#t)"/>
+  <g stroke="#f6e8ec" stroke-opacity=".92" stroke-width="1.8" fill="none" stroke-linecap="round"><path d="M24 42V18"/><path d="M24 31c-6-3-10-8-12-13"/><path d="M24 31c6-3 10-8 12-13"/><path d="M24 37c-7-1-13-5-16-10"/><path d="M24 37c7-1 13-5 16-10"/></g>
+  <path d="M12.6 15.4c2.4-2.4 5.4-3.8 8.4-4.2" stroke="#fff" stroke-opacity=".5" stroke-width="1.6" fill="none" stroke-linecap="round"/>
 </svg>

@@ -1,10 +1,21 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shishamo">
-  <path d="M11.5 24L2 15L5.5 24L2 33Z" fill="#6f6248"/>
-  <path d="M30 18.55 26 14.05l-4 6Z" fill="#6f6248"/>
-  <path d="M46 24C45 21.05 37 18.05 28 18.05C19 18.05 13 21.8 10 22.4L10 25.6C13 26.2 19 29.1 28 29.1C37 29.1 45 27.1 46 24Z" fill="#f2d690"/>
-  <path d="M46 24C45 21.05 37 18.05 28 18.05C19 18.05 13 21.8 10 22.4L10 24C22 24 36 24.5 46 24Z" fill="#8a7a5a"/>
-  <path d="M20 27.5c5 1.5 11 1.5 17 0" stroke="#f6b860" stroke-width="2.4" fill="none" stroke-linecap="round"/>
-  <g fill="#5a4a32"><ellipse cx="22" cy="20" rx="1.6" ry=".9"/><ellipse cx="30" cy="19" rx="1.6" ry=".9"/><ellipse cx="26" cy="23" rx="1.4" ry=".8"/></g>
-  <path d="M37.5 20.55C35 21.5 35 26 37.5 27.1" stroke="#6f6248" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-  <circle cx="41.5" cy="22.2" r="1.8" fill="#2a2a2a"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shishamo fish">
+  <defs>
+    <linearGradient id="k" x1="0" y1="18" x2="0" y2="25" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a8987a"/><stop offset=".5" stop-color="#7e6e50"/><stop offset="1" stop-color="#5a4c34"/></linearGradient>
+    <linearGradient id="v" x1="0" y1="22" x2="0" y2="29" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff2be"/><stop offset=".5" stop-color="#f2d690"/><stop offset="1" stop-color="#d6ac5c"/></linearGradient>
+    <linearGradient id="f" x1="2" y1="15" x2="11" y2="33" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8e7e60"/><stop offset="1" stop-color="#5a4c34"/></linearGradient>
+  </defs>
+  <path d="M11.5 24 2 15l3.5 9L2 33Z" fill="url(#f)"/>
+  <path d="M30 18.55 26 14.05l-4 6Z" fill="url(#f)"/>
+  <path d="M46 24C45 21.05 37 18.05 28 18.05 19 18.05 13 21.8 10 22.4v3.2c3 .6 9 3.5 18 3.5S45 27.1 46 24Z" fill="url(#v)"/>
+  <path d="M46 24C45 21.05 37 18.05 28 18.05 19 18.05 13 21.8 10 22.4V24c12 0 26 .5 36 0Z" fill="url(#k)"/>
+  <path d="M20 27.5c5 1.5 11 1.5 17 0" stroke="#f0a050" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  <g fill="#4a3c26" fill-opacity=".55">
+    <ellipse cx="22" cy="20.4" rx="1.6" ry=".9"/>
+    <ellipse cx="30" cy="19.6" rx="1.6" ry=".9"/>
+    <ellipse cx="26" cy="22.6" rx="1.4" ry=".8"/>
+  </g>
+  <path d="M37.5 20.55C35 21.5 35 26 37.5 27.1" stroke="#5a4c34" stroke-opacity=".6" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <path d="M15 21.6c4-1.6 8-2.4 12-2.4" stroke="#fff" stroke-opacity=".4" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <circle cx="41.5" cy="22.2" r="1.8" fill="#222"/>
+  <circle cx="41" cy="21.7" r=".55" fill="#fff" fill-opacity=".85"/>
 </svg>

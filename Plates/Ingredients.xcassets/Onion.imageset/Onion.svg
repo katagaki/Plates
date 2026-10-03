@@ -1,7 +1,12 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Onion">
+  <defs>
+    <radialGradient id="b" cx="19" cy="22" r="18" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff3d2"/><stop offset=".55" stop-color="#f2d99a"/><stop offset="1" stop-color="#cfa75a"/></radialGradient>
+    <linearGradient id="g" x1="18" y1="8" x2="30" y2="16" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a6dc7e"/><stop offset="1" stop-color="#4f9a34"/></linearGradient>
+  </defs>
   <g transform="translate(-3 -3.09) scale(1.125)">
-    <circle cx="24" cy="28" r="13" fill="#f3dfae"/>
-    <path d="M24 15c-6 7-6 19 0 26M24 15c6 7 6 19 0 26" stroke="#e8c66a" stroke-width="2" fill="none"/>
-    <path d="M24 15c-2-4-4-5-6-6M24 15c2-4 4-5 6-6" stroke="#7fb069" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <circle cx="24" cy="28" r="13" fill="url(#b)"/>
+    <path d="M24 15c-6 7-6 19 0 26M24 15c6 7 6 19 0 26" stroke="#c99a45" stroke-opacity=".55" stroke-width="1.8" fill="none"/>
+    <path d="M24 15c-2-4-4-5-6-6M24 15c2-4 4-5 6-6" stroke="url(#g)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <ellipse cx="18.4" cy="22.6" rx="3" ry="1.8" transform="rotate(-40 18.4 22.6)" fill="#fff" fill-opacity=".75"/>
   </g>
 </svg>

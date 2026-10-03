@@ -1,10 +1,18 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shirataki">
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shirataki noodles">
+  <defs>
+    <linearGradient id="n" x1="10" y1="12" x2="38" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fbf9f4"/><stop offset=".5" stop-color="#e0d9cb"/><stop offset="1" stop-color="#b6ae9e"/></linearGradient>
+  </defs>
   <g transform="translate(-3 -3.12) scale(1.125)">
-    <g stroke="#e6e0d4" stroke-width="5" fill="none" stroke-linecap="round">
-      <path d="M10 16c5 4 9 4 14 0s9-4 14 0"/><path d="M10 25c5 4 9 4 14 0s9-4 14 0"/><path d="M10 34c5 4 9 4 14 0s9-4 14 0"/>
+    <g stroke="url(#n)" stroke-width="5" fill="none" stroke-linecap="round">
+      <path d="M10 16c5 4 9 4 14 0s9-4 14 0"/>
+      <path d="M10 25c5 4 9 4 14 0s9-4 14 0"/>
+      <path d="M10 34c5 4 9 4 14 0s9-4 14 0"/>
     </g>
-    <g stroke="#c8c2b6" stroke-width="1.4" fill="none">
-      <path d="M10 16c5 4 9 4 14 0s9-4 14 0"/><path d="M10 25c5 4 9 4 14 0s9-4 14 0"/><path d="M10 34c5 4 9 4 14 0s9-4 14 0"/>
+    <g stroke="#9a9282" stroke-opacity=".45" stroke-width="1.2" fill="none">
+      <path d="M10 16c5 4 9 4 14 0s9-4 14 0"/>
+      <path d="M10 25c5 4 9 4 14 0s9-4 14 0"/>
+      <path d="M10 34c5 4 9 4 14 0s9-4 14 0"/>
     </g>
+    <path d="M10.4 14.8c1.4 1 2.6 1.6 4 2" stroke="#fff" stroke-opacity=".8" stroke-width="1.3" fill="none" stroke-linecap="round"/>
   </g>
 </svg>

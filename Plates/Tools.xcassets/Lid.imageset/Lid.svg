@@ -1,6 +1,11 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pan lid">
-  <path d="M6 30a18 13 0 0 1 36 0Z" fill="#cfd6dd"/>
-  <path d="M6 30a18 13 0 0 1 36 0Z" fill="none" stroke="#8d939b" stroke-width="1.5"/>
-  <rect x="4" y="30" width="40" height="4" rx="2" fill="#8d939b"/>
-  <circle cx="24" cy="14" r="4" fill="#3c4046"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pot lid">
+  <defs>
+    <linearGradient id="d" x1="8" y1="21" x2="38" y2="33" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e3e9ef"/><stop offset=".5" stop-color="#b2bcc6"/><stop offset="1" stop-color="#8e99a4"/></linearGradient>
+    <linearGradient id="r" x1="4" y1="0" x2="44" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a7b1bb"/><stop offset="1" stop-color="#6f7a85"/></linearGradient>
+    <linearGradient id="k" x1="17" y1="15" x2="31" y2="21" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#767d86"/><stop offset=".5" stop-color="#4e545c"/><stop offset="1" stop-color="#25282d"/></linearGradient>
+  </defs>
+  <path d="M19 23v-3.4a2.6 2.6 0 0 1 2.6-2.6h4.8a2.6 2.6 0 0 1 2.6 2.6V23" stroke="url(#k)" stroke-width="3" fill="none"/>
+  <path d="M5 32C5 26 13.5 22 24 22S43 26 43 32Z" fill="url(#d)"/>
+  <rect x="3" y="31" width="42" height="4.2" rx="2.1" fill="url(#r)"/>
+  <path d="M10.6 28.2c2-1.8 4.8-3 8-3.6" stroke="#fff" stroke-opacity=".8" stroke-width="1.8" fill="none" stroke-linecap="round"/>
 </svg>

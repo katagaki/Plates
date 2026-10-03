@@ -1,9 +1,14 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Slices of ham">
+  <defs>
+    <radialGradient id="a" cx="15" cy="19" r="20" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f7c0c0"/><stop offset=".5" stop-color="#e8959a"/><stop offset="1" stop-color="#c96a74"/></radialGradient>
+    <radialGradient id="b" cx="22" cy="17" r="20" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f9c6c4"/><stop offset=".5" stop-color="#ec9ca0"/><stop offset="1" stop-color="#cf6f79"/></radialGradient>
+  </defs>
   <g transform="translate(-3.06 -3.12) scale(1.125)">
-    <circle cx="21" cy="26" r="13" fill="#e39a9a"/>
-    <circle cx="21" cy="26" r="9" fill="#f0b9b9"/>
-    <circle cx="28" cy="24" r="13" fill="#dd8a8a"/>
-    <circle cx="28" cy="24" r="9" fill="#eeadad"/>
-    <g fill="#f6dada"><circle cx="26" cy="21" r="1.6"/><circle cx="31" cy="27" r="1.4"/></g>
+    <circle cx="21" cy="26" r="13" fill="#fbe4df"/>
+    <circle cx="21" cy="26" r="11.4" fill="url(#a)"/>
+    <circle cx="28" cy="24" r="13" fill="#fdeae6"/>
+    <circle cx="28" cy="24" r="11.4" fill="url(#b)"/>
+    <g fill="#fbe0dc" fill-opacity=".8"><circle cx="30" cy="21" r="1.6"/><circle cx="33" cy="28" r="1.3"/><circle cx="25" cy="29" r="1.1"/></g>
+    <ellipse cx="22.6" cy="17.6" rx="3" ry="1.5" transform="rotate(-40 22.6 17.6)" fill="#fff" fill-opacity=".55"/>
   </g>
 </svg>

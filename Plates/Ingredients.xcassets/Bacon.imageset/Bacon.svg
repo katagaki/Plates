@@ -1,7 +1,11 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rashers of bacon">
+  <defs>
+    <linearGradient id="a" x1="7" y1="12" x2="41" y2="26" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f29a86"/><stop offset=".5" stop-color="#d9685a"/><stop offset="1" stop-color="#b04a3a"/></linearGradient>
+    <linearGradient id="b" x1="7" y1="22" x2="41" y2="36" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f7a894"/><stop offset=".5" stop-color="#e27a66"/><stop offset="1" stop-color="#bb5644"/></linearGradient>
+  </defs>
   <g transform="translate(-2.99 -3.2) scale(1.125)">
-    <path d="M7 17c6-5 10 3 16-1s12 2 18-2v10c-6 4-12-2-18 2s-10-4-16 1Z" fill="#d9705c"/>
-    <path d="M7 27c6-5 10 3 16-1s12 2 18-2v10c-6 4-12-2-18 2s-10-4-16 1Z" fill="#e8927c"/>
-    <path d="M7 21c6-5 10 3 16-1s12 2 18-2" stroke="#f5cfc3" stroke-width="2.5" fill="none"/>
+    <path d="M7 17c6-5 10 3 16-1s12 2 18-2v10c-6 4-12-2-18 2s-10-4-16 1Z" fill="url(#a)"/>
+    <path d="M7 27c6-5 10 3 16-1s12 2 18-2v10c-6 4-12-2-18 2s-10-4-16 1Z" fill="url(#b)"/>
+    <g stroke="#fff3ea" stroke-opacity=".9" stroke-width="2.4" fill="none"><path d="M7 21c6-5 10 3 16-1s12 2 18-2"/><path d="M7 31c6-5 10 3 16-1s12 2 18-2"/></g>
   </g>
 </svg>

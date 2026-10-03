@@ -1,8 +1,15 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Daikon radish">
+  <defs>
+    <linearGradient id="r" x1="18" y1="0" x2="30" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#f3efe4"/><stop offset="1" stop-color="#d6cdb8"/></linearGradient>
+    <linearGradient id="s" x1="0" y1="19" x2="0" y2="30" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#b6dc86" stop-opacity=".95"/><stop offset="1" stop-color="#d8ecb8" stop-opacity="0"/></linearGradient>
+    <linearGradient id="l" x1="14" y1="6" x2="32" y2="22" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a6dc7e"/><stop offset=".5" stop-color="#5fa83f"/><stop offset="1" stop-color="#3f8a2e"/></linearGradient>
+  </defs>
   <g transform="translate(-3 -3.12) scale(1.125)">
-    <path d="M19 20h10v13c0 6-2 10-5 10s-5-4-5-10Z" fill="#f6f3ec"/>
-    <path d="M24 33v8" stroke="#ddd6c4" stroke-width="1.6"/>
-    <path d="M19 20h10v4H19Z" fill="#e6e0d4"/>
-    <path d="M24 20 16 7c5 0 8 5 8 9 1-4 4-9 8-9Z" fill="#5f8c3f"/>
+    <path d="M24 21 15.5 7.5c4.6-.6 7.6 3.6 8.5 7.6.9-4 3.9-8.2 8.5-7.6Z" fill="url(#l)"/>
+    <path d="M24 21 21.5 6c2.2.6 2.8 4 2.5 6.4.3-2.4.8-5.8 2.5-6.4Z" fill="url(#l)"/>
+    <path d="M18.5 22c0-1.6 1.2-2.6 2.6-2.6h5.8c1.4 0 2.6 1 2.6 2.6v13c0 5.4-2.4 9.4-5.5 9.4s-5.5-4-5.5-9.4Z" fill="url(#r)"/>
+    <path d="M18.5 22c0-1.6 1.2-2.6 2.6-2.6h5.8c1.4 0 2.6 1 2.6 2.6v8h-11Z" fill="url(#s)"/>
+    <path d="M25 27.5h3M23.5 34h3.5" stroke="#bfb49c" stroke-opacity=".5" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M20.6 23v10" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
   </g>
 </svg>

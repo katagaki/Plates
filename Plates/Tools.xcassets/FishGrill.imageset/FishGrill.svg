@@ -1,11 +1,19 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fish grill">
-  <rect x="4" y="22" width="40" height="5" rx="2" fill="#d9402f" opacity=".85"/>
-  <path d="M8 23c1-2 2-3 2-5 1 2 2 3 2 5M18 23c1-2 2-3 2-5 1 2 2 3 2 5M28 23c1-2 2-3 2-5 1 2 2 3 2 5M38 23c1-2 2-3 2-5 1 2 2 3 2 5" fill="#f6a23a"/>
-  <rect x="4" y="13" width="40" height="8" rx="1.5" fill="none" stroke="#8d939b" stroke-width="1.6"/>
-  <path d="M10 13v8M16 13v8M22 13v8M28 13v8M34 13v8M40 13v8M4 17h40" stroke="#8d939b" stroke-width="1"/>
-  <path d="M14 15.5 8 11.5l1.6 4L8 19.5Z" fill="#5a6a7a"/>
-  <path d="M40 15.5c-1-2.5-6-4-11-4s-9 2.5-15 4c6 1.5 10 4 15 4s10-1.5 11-4Z" fill="#8a9aa8"/>
-  <circle cx="37" cy="14.6" r="1" fill="#2a2a2a"/>
-  <rect x="6" y="30" width="36" height="12" rx="2" fill="#3c4046"/>
-  <rect x="17" y="34" width="14" height="3" rx="1.5" fill="#8d939b"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fish grill drawer with a fish on the grate">
+  <defs>
+    <linearGradient id="p" x1="0" y1="13" x2="0" y2="30" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4e545c"/><stop offset="1" stop-color="#25282d"/></linearGradient>
+    <linearGradient id="f" x1="4" y1="0" x2="44" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#767d86"/><stop offset=".45" stop-color="#4e545c"/><stop offset="1" stop-color="#25282d"/></linearGradient>
+    <linearGradient id="s" x1="0" y1="14" x2="0" y2="27" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7f9fb6"/><stop offset=".5" stop-color="#5a7b93"/><stop offset="1" stop-color="#c9d6df"/></linearGradient>
+    <linearGradient id="h" x1="0" y1="32" x2="0" y2="36" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e3e9ef"/><stop offset="1" stop-color="#8e99a4"/></linearGradient>
+  </defs>
+  <path d="M9 13h30l5 17H4Z" fill="url(#p)"/>
+  <path d="M9 13h30" stroke="#8e99a4" stroke-width="1.4" stroke-linecap="round"/>
+  <g stroke="#b2bcc6" stroke-width="1.3" stroke-linecap="round"><path d="M8.2 17h31.6"/><path d="M7 21.5h34"/><path d="M5.8 26h36.4"/></g>
+  <path d="M15 21c3-4.5 8-6.5 13-6.5 5.5 0 9 2.6 10.5 6.5-1.5 3.9-5 6.5-10.5 6.5-5 0-10-2-13-6.5Z" fill="url(#s)"/>
+  <path d="M15.5 21 9.5 16.5c-.4 1.6-.4 2.8.3 4.5-.7 1.7-.7 2.9-.3 4.5Z" fill="#5a7b93"/>
+  <g stroke="#3a2a1c" stroke-opacity=".55" stroke-width="1.4" stroke-linecap="round"><path d="M21 17.5l-1.8 6.5"/><path d="M26 16.5l-1.8 8"/><path d="M31 16.8l-1.8 7.6"/></g>
+  <circle cx="35" cy="19.8" r="1" fill="#1f2226"/>
+  <path d="M28 15.8c2.6.1 5 .9 6.6 2.4" stroke="#fff" stroke-opacity=".7" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+  <rect x="4" y="29.5" width="40" height="12" rx="2" fill="url(#f)"/>
+  <rect x="16" y="33.2" width="16" height="3.6" rx="1.8" fill="url(#h)"/>
+  <path d="M7 32.5v6" stroke="#fff" stroke-opacity=".3" stroke-width="1.6" stroke-linecap="round"/>
 </svg>

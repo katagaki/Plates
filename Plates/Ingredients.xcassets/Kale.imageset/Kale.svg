@@ -1,10 +1,10 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kale">
-  <g transform="translate(-3 -3.09) scale(1.125)">
-    <path d="M24 42V24" stroke="#3f6b2a" stroke-width="3" stroke-linecap="round"/>
-    <g fill="#4f8f45">
-      <circle cx="24" cy="12" r="6"/><circle cx="15" cy="17" r="6"/><circle cx="33" cy="17" r="6"/>
-      <circle cx="19" cy="24" r="6"/><circle cx="29" cy="24" r="6"/><circle cx="24" cy="19" r="7"/>
-    </g>
-    <path d="M24 26V12M20 20l-5-3M28 20l5-3" stroke="#3f6b2a" stroke-width="1.4"/>
-  </g>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Curly kale leaf">
+  <defs>
+    <radialGradient id="l" cx="17" cy="12" r="30" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#86c466"/><stop offset=".5" stop-color="#3f8538"/><stop offset="1" stop-color="#1f5228"/></radialGradient>
+    <linearGradient id="r" x1="22" y1="0" x2="26" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e2f3c4"/><stop offset="1" stop-color="#a6cf7a"/></linearGradient>
+  </defs>
+  <path d="M24 3.5Q25.58 1.16 26.75 4.01Q28.68 2.23 29.34 5.5Q31.56 4.33 31.63 7.9Q34.09 7.39 33.46 11.06Q36.14 11.3 34.75 14.79Q37.52 15.93 35.42 18.89Q38.02 21 35.42 23.11Q37.52 26.07 34.75 27.21Q36.14 30.7 33.46 30.94Q34.09 34.61 31.63 34.1Q31.56 37.67 29.34 36.5Q28.68 39.77 26.75 37.99Q25.58 40.84 24 38.5Q22.42 40.84 21.25 37.99Q19.32 39.77 18.66 36.5Q16.44 37.67 16.37 34.1Q13.91 34.61 14.54 30.94Q11.86 30.7 13.25 27.21Q10.48 26.07 12.58 23.11Q9.98 21 12.58 18.89Q10.48 15.93 13.25 14.79Q11.86 11.3 14.54 11.06Q13.91 7.39 16.37 7.9Q16.44 4.33 18.66 5.5Q19.32 2.23 21.25 4.01Q22.42 1.16 24 3.5Z" fill="url(#l)"/>
+  <path d="M24 31c-3-2-6-5-8.5-9M24 24c-2.6-1.6-5-4-6.6-7M24 17c-1.8-1.2-3.2-2.8-4.2-4.6M24 31c3-2 6-5 8.5-9M24 24c2.6-1.6 5-4 6.6-7M24 17c1.8-1.2 3.2-2.8 4.2-4.6" stroke="#2f6e22" stroke-opacity=".55" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <path d="M22.6 44V10c0-.8.6-1.4 1.4-1.4s1.4.6 1.4 1.4v34Z" fill="url(#r)"/>
+  <path d="M15 13.6c1.6-2.6 3.8-4.4 6-5.2" stroke="#fff" stroke-opacity=".45" stroke-width="2" fill="none" stroke-linecap="round"/>
 </svg>

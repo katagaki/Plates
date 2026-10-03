@@ -1,7 +1,9 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lentils">
-  <g transform="translate(-3 -3.44) scale(1.125)">
-    <path d="M8 30c0-6 7-10 16-10s16 4 16 10Z" fill="#c96a3c"/>
-    <g fill="#e08c58"><ellipse cx="16" cy="26" rx="3" ry="2.2"/><ellipse cx="24" cy="24" rx="3" ry="2.2"/><ellipse cx="32" cy="26" rx="3" ry="2.2"/><ellipse cx="20" cy="29" rx="3" ry="2.2"/><ellipse cx="28" cy="29" rx="3" ry="2.2"/></g>
-    <path d="M6 30h36v3a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2Z" fill="#8d939b"/>
-  </g>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Red lentils">
+  <defs>
+    <radialGradient id="m" cx="18" cy="20" r="20" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffc08a"/><stop offset=".5" stop-color="#ec7a3c"/><stop offset="1" stop-color="#b8501f"/></radialGradient>
+  </defs>
+  <path d="M7 37c0-2 1.2-2.6 1.6-4.4C10.6 24.6 16.6 18.4 24 18.4s13.4 6.2 15.4 14.2c.4 1.8 1.6 2.4 1.6 4.4Z" fill="url(#m)"/>
+  <g fill="#ffd2a8" fill-opacity=".75"><ellipse cx="14" cy="30" rx="2" ry="1.4"/><ellipse cx="19" cy="27.4" rx="2" ry="1.4"/><ellipse cx="24" cy="25" rx="2" ry="1.4"/><ellipse cx="29" cy="27.4" rx="2" ry="1.4"/><ellipse cx="34" cy="30" rx="2" ry="1.4"/><ellipse cx="17.6" cy="32.4" rx="2" ry="1.4"/><ellipse cx="22.6" cy="30.4" rx="2" ry="1.4"/><ellipse cx="27.6" cy="30.6" rx="2" ry="1.4"/><ellipse cx="31" cy="33.4" rx="2" ry="1.4"/><ellipse cx="21" cy="21.4" rx="2" ry="1.4"/><ellipse cx="26.6" cy="21" rx="2" ry="1.4"/><ellipse cx="24" cy="34" rx="2" ry="1.4"/></g>
+  <g fill="#a8461a" fill-opacity=".5"><ellipse cx="14.5" cy="31.3" rx="1.6" ry=".5"/><ellipse cx="19.5" cy="28.7" rx="1.6" ry=".5"/><ellipse cx="24.5" cy="26.3" rx="1.6" ry=".5"/><ellipse cx="29.5" cy="28.7" rx="1.6" ry=".5"/><ellipse cx="34.5" cy="31.3" rx="1.6" ry=".5"/><ellipse cx="18.1" cy="33.699999999999996" rx="1.6" ry=".5"/><ellipse cx="23.1" cy="31.7" rx="1.6" ry=".5"/><ellipse cx="28.1" cy="31.900000000000002" rx="1.6" ry=".5"/><ellipse cx="31.5" cy="34.699999999999996" rx="1.6" ry=".5"/><ellipse cx="21.5" cy="22.7" rx="1.6" ry=".5"/><ellipse cx="27.1" cy="22.3" rx="1.6" ry=".5"/><ellipse cx="24.5" cy="35.3" rx="1.6" ry=".5"/></g>
+  <path d="M13 28c1.6-3 3.8-5 6.4-6" stroke="#fff" stroke-opacity=".45" stroke-width="1.6" fill="none" stroke-linecap="round"/>
 </svg>

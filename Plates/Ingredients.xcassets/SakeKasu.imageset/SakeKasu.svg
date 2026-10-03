@@ -1,12 +1,20 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sake lees">
-  <path d="M6 26l26 -4 4 9-26 4Z" fill="#fbf8ee" stroke="#d6cfba" stroke-width="1.2" stroke-linejoin="round"/>
-  <path d="M10 33l26 -4 4 9-26 4Z" fill="#fbf8ee" stroke="#d6cfba" stroke-width="1.2" stroke-linejoin="round"/>
-  <path d="M14 19l24 -4 4 9-24 4Z" fill="#fbf8ee" stroke="#d6cfba" stroke-width="1.2" stroke-linejoin="round"/>
-  <circle cx="14" cy="24" r=".8" fill="#e6dfc8"/>
-  <circle cx="22" cy="21" r=".8" fill="#e6dfc8"/>
-  <circle cx="28" cy="26" r=".8" fill="#e6dfc8"/>
-  <circle cx="18" cy="33" r=".8" fill="#e6dfc8"/>
-  <circle cx="26" cy="35" r=".8" fill="#e6dfc8"/>
-  <circle cx="32" cy="31" r=".8" fill="#e6dfc8"/>
-  <circle cx="22" cy="28" r=".8" fill="#e6dfc8"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sheets of sake lees">
+  <defs>
+    <linearGradient id="t" x1="8" y1="15" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#f6f1e4"/><stop offset="1" stop-color="#ddd3bd"/></linearGradient>
+  </defs>
+  <path d="M18 28l24-4v2.2l-24 4Z" fill="#cfc4ab"/>
+  <path d="M14 19l24-4 4 9-24 4Z" fill="url(#t)"/>
+  <path d="M14 19l24-4 4 9" stroke="#b9ad92" stroke-opacity=".6" stroke-width="1" fill="none" stroke-linejoin="round"/>
+  <path d="M10 35l26-4v2.2l-26 4Z" fill="#cfc4ab"/>
+  <path d="M6 26l26-4 4 9-26 4Z" fill="url(#t)"/>
+  <path d="M6 26l26-4 4 9" stroke="#b9ad92" stroke-opacity=".6" stroke-width="1" fill="none" stroke-linejoin="round"/>
+  <path d="M14 42l26-4v2.2l-26 4Z" fill="#cfc4ab"/>
+  <path d="M10 33l26-4 4 9-26 4Z" fill="url(#t)"/>
+  <path d="M10 33l26-4 4 9" stroke="#b9ad92" stroke-opacity=".6" stroke-width="1" fill="none" stroke-linejoin="round"/>
+  <g fill="#cfc4ab" fill-opacity=".7">
+    <circle cx="22" cy="20.6" r=".8"/><circle cx="31" cy="20" r=".8"/>
+    <circle cx="14" cy="28" r=".8"/><circle cx="22" cy="28.6" r=".8"/><circle cx="28" cy="26" r=".8"/>
+    <circle cx="18" cy="36" r=".8"/><circle cx="26" cy="36.6" r=".8"/><circle cx="32" cy="33.6" r=".8"/>
+  </g>
+  <path d="M13.6 34.4l8-1.2" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/>
 </svg>

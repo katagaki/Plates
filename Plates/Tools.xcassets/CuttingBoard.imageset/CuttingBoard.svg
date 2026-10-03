@@ -1,6 +1,10 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cutting board">
-  <path d="M8 13h26a5 5 0 0 1 5 5v14a5 5 0 0 1-5 5H8Z" fill="#c08a54"/>
-  <path d="M8 13h26a5 5 0 0 1 5 5v3H8Z" fill="#d19a63"/>
-  <circle cx="12" cy="17" r="2" fill="#8f5f36"/>
-  <path d="M16 26h18M16 31h13" stroke="#a97142" stroke-width="2" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="b" x1="6" y1="11" x2="40" y2="38" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e2ab74"/><stop offset=".5" stop-color="#c08550"/><stop offset="1" stop-color="#9a6238"/></linearGradient>
+  </defs>
+  <path d="M5 16a5 5 0 0 1 5-5h28a5 5 0 0 1 5 5v19a5 5 0 0 1-5 5H10a5 5 0 0 1-5-5Z" fill="#8a5530"/>
+  <path d="M5 16a5 5 0 0 1 5-5h28a5 5 0 0 1 5 5v17a5 5 0 0 1-5 5H10a5 5 0 0 1-5-5Z" fill="url(#b)"/>
+  <circle cx="11" cy="17" r="2.2" fill="#6e3d1c"/>
+  <path d="M17 24h20M13 30h18" stroke="#8a5530" stroke-opacity=".5" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M17 14.6h14" stroke="#fff" stroke-opacity=".45" stroke-width="1.8" stroke-linecap="round"/>
 </svg>

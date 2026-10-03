@@ -1,30 +1,61 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Azuki beans">
-  <ellipse cx="14" cy="32" rx="3" ry="2.3" fill="#7a1f2a"/>
-  <ellipse cx="19" cy="29" rx="3" ry="2.3" fill="#7a1f2a"/>
-  <ellipse cx="24" cy="28" rx="3" ry="2.3" fill="#7a1f2a"/>
-  <ellipse cx="29" cy="29" rx="3" ry="2.3" fill="#7a1f2a"/>
-  <ellipse cx="34" cy="32" rx="3" ry="2.3" fill="#7a1f2a"/>
-  <ellipse cx="16" cy="36" rx="3" ry="2.3" fill="#7a1f2a"/>
-  <ellipse cx="21" cy="34" rx="3" ry="2.3" fill="#7a1f2a"/>
-  <ellipse cx="26" cy="33" rx="3" ry="2.3" fill="#7a1f2a"/>
-  <ellipse cx="31" cy="35" rx="3" ry="2.3" fill="#7a1f2a"/>
-  <ellipse cx="19" cy="24" rx="3" ry="2.3" fill="#7a1f2a"/>
-  <ellipse cx="24" cy="23" rx="3" ry="2.3" fill="#7a1f2a"/>
-  <ellipse cx="29" cy="25" rx="3" ry="2.3" fill="#7a1f2a"/>
-  <ellipse cx="22" cy="19" rx="3" ry="2.3" fill="#7a1f2a"/>
-  <ellipse cx="27" cy="20" rx="3" ry="2.3" fill="#7a1f2a"/>
-  <path d="M12.8 31.1h2.4" stroke="#f1e3d0" stroke-width=".8" stroke-linecap="round"/>
-  <path d="M17.8 28.1h2.4" stroke="#f1e3d0" stroke-width=".8" stroke-linecap="round"/>
-  <path d="M22.8 27.1h2.4" stroke="#f1e3d0" stroke-width=".8" stroke-linecap="round"/>
-  <path d="M27.8 28.1h2.4" stroke="#f1e3d0" stroke-width=".8" stroke-linecap="round"/>
-  <path d="M32.8 31.1h2.4" stroke="#f1e3d0" stroke-width=".8" stroke-linecap="round"/>
-  <path d="M14.8 35.1h2.4" stroke="#f1e3d0" stroke-width=".8" stroke-linecap="round"/>
-  <path d="M19.8 33.1h2.4" stroke="#f1e3d0" stroke-width=".8" stroke-linecap="round"/>
-  <path d="M24.8 32.1h2.4" stroke="#f1e3d0" stroke-width=".8" stroke-linecap="round"/>
-  <path d="M29.8 34.1h2.4" stroke="#f1e3d0" stroke-width=".8" stroke-linecap="round"/>
-  <path d="M17.8 23.1h2.4" stroke="#f1e3d0" stroke-width=".8" stroke-linecap="round"/>
-  <path d="M22.8 22.1h2.4" stroke="#f1e3d0" stroke-width=".8" stroke-linecap="round"/>
-  <path d="M27.8 24.1h2.4" stroke="#f1e3d0" stroke-width=".8" stroke-linecap="round"/>
-  <path d="M20.8 18.1h2.4" stroke="#f1e3d0" stroke-width=".8" stroke-linecap="round"/>
-  <path d="M25.8 19.1h2.4" stroke="#f1e3d0" stroke-width=".8" stroke-linecap="round"/>
+  <defs>
+    <radialGradient id="b" cx="-1.2" cy="-1.2" r="4.4" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c25660"/><stop offset=".5" stop-color="#83222e"/><stop offset="1" stop-color="#4f1018"/></radialGradient>
+  </defs>
+  <g transform="translate(22 19)">
+    <ellipse rx="3" ry="2.3" fill="url(#b)"/>
+    <path d="M-1.2-.9h2.4" stroke="#f6ead8" stroke-width=".9" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(27 20)">
+    <ellipse rx="3" ry="2.3" fill="url(#b)"/>
+    <path d="M-1.2-.9h2.4" stroke="#f6ead8" stroke-width=".9" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(24 23)">
+    <ellipse rx="3" ry="2.3" fill="url(#b)"/>
+    <path d="M-1.2-.9h2.4" stroke="#f6ead8" stroke-width=".9" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(19 24)">
+    <ellipse rx="3" ry="2.3" fill="url(#b)"/>
+    <path d="M-1.2-.9h2.4" stroke="#f6ead8" stroke-width=".9" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(29 25)">
+    <ellipse rx="3" ry="2.3" fill="url(#b)"/>
+    <path d="M-1.2-.9h2.4" stroke="#f6ead8" stroke-width=".9" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(24 28)">
+    <ellipse rx="3" ry="2.3" fill="url(#b)"/>
+    <path d="M-1.2-.9h2.4" stroke="#f6ead8" stroke-width=".9" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(19 29)">
+    <ellipse rx="3" ry="2.3" fill="url(#b)"/>
+    <path d="M-1.2-.9h2.4" stroke="#f6ead8" stroke-width=".9" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(29 29)">
+    <ellipse rx="3" ry="2.3" fill="url(#b)"/>
+    <path d="M-1.2-.9h2.4" stroke="#f6ead8" stroke-width=".9" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(14 32)">
+    <ellipse rx="3" ry="2.3" fill="url(#b)"/>
+    <path d="M-1.2-.9h2.4" stroke="#f6ead8" stroke-width=".9" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(34 32)">
+    <ellipse rx="3" ry="2.3" fill="url(#b)"/>
+    <path d="M-1.2-.9h2.4" stroke="#f6ead8" stroke-width=".9" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(26 33)">
+    <ellipse rx="3" ry="2.3" fill="url(#b)"/>
+    <path d="M-1.2-.9h2.4" stroke="#f6ead8" stroke-width=".9" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(21 34)">
+    <ellipse rx="3" ry="2.3" fill="url(#b)"/>
+    <path d="M-1.2-.9h2.4" stroke="#f6ead8" stroke-width=".9" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(31 35)">
+    <ellipse rx="3" ry="2.3" fill="url(#b)"/>
+    <path d="M-1.2-.9h2.4" stroke="#f6ead8" stroke-width=".9" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(16 36)">
+    <ellipse rx="3" ry="2.3" fill="url(#b)"/>
+    <path d="M-1.2-.9h2.4" stroke="#f6ead8" stroke-width=".9" stroke-linecap="round"/>
+  </g>
 </svg>

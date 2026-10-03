@@ -1,6 +1,13 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Saucepan">
-  <path d="M6 20h24v12a7 7 0 0 1-7 7h-10a7 7 0 0 1-7-7Z" fill="#cfd6dd"/>
-  <rect x="4" y="17" width="28" height="4" rx="2" fill="#8d939b"/>
-  <rect x="30" y="17" width="14" height="4" rx="2" fill="#4a4e54"/>
-  <path d="M10 26h16" stroke="#a8b0b8" stroke-width="2" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="b" x1="6" y1="0" x2="30" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e3e9ef"/><stop offset=".5" stop-color="#b2bcc6"/><stop offset="1" stop-color="#8e99a4"/></linearGradient>
+    <linearGradient id="r" x1="4" y1="0" x2="32" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d3dae1"/><stop offset="1" stop-color="#8e99a4"/></linearGradient>
+    <linearGradient id="h" x1="0" y1="16.8" x2="0" y2="21.2" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#767d86"/><stop offset="1" stop-color="#25282d"/></linearGradient>
+  </defs>
+  <rect x="29" y="16.8" width="16" height="4.4" rx="2.2" fill="url(#h)"/>
+  <circle cx="42" cy="19" r="1" fill="#b2bcc6"/>
+  <path d="M6 20h24v12a7 7 0 0 1-7 7H13a7 7 0 0 1-7-7Z" fill="url(#b)"/>
+  <rect x="4" y="16.8" width="28" height="4.4" rx="2.2" fill="url(#r)"/>
+  <path d="M10 26h16" stroke="#7c858f" stroke-opacity=".5" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M9.4 24.5v8" stroke="#fff" stroke-opacity=".7" stroke-width="1.8" stroke-linecap="round"/>
 </svg>

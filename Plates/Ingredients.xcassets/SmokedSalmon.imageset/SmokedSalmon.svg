@@ -1,8 +1,14 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Smoked salmon">
-  <path d="M6 30c4-10 14-16 24-16 6 0 10 2 12 5-9 0-18 5-24 13-4 5-14 4-12-2Z" fill="#f08a5d"/>
-  <path d="M10 37c4-8 13-13 23-13 5 0 8 1 10 4-9 1-16 5-21 11-4 4-13 3-12-2Z" fill="#f6a37c"/>
-  <g stroke="#fbd3bc" stroke-width="1.6" fill="none" stroke-linecap="round">
-    <path d="M14 26c4-4 9-7 14-8"/><path d="M11 31c5-6 11-10 17-11"/>
-    <path d="M17 34c4-4 9-6 14-7"/><path d="M15 38c5-4 11-7 17-8"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Slices of smoked salmon">
+  <defs>
+    <linearGradient id="a" x1="6" y1="14" x2="42" y2="36" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffa47a"/><stop offset=".5" stop-color="#ee7f52"/><stop offset="1" stop-color="#c85a32"/></linearGradient>
+    <linearGradient id="b" x1="10" y1="24" x2="43" y2="42" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffc4a2"/><stop offset=".5" stop-color="#f6a07a"/><stop offset="1" stop-color="#d8744c"/></linearGradient>
+  </defs>
+  <path d="M6 30c4-10 14-16 24-16 6 0 10 2 12 5-9 0-18 5-24 13-4 5-14 4-12-2Z" fill="url(#a)"/>
+  <path d="M10 37c4-8 13-13 23-13 5 0 8 1 10 4-9 1-16 5-21 11-4 4-13 3-12-2Z" fill="url(#b)"/>
+  <g stroke="#fff" stroke-opacity=".6" stroke-width="1.6" fill="none" stroke-linecap="round">
+    <path d="M14 26c4-4 9-7 14-8"/>
+    <path d="M11 31c5-6 11-10 17-11"/>
+    <path d="M17 34c4-4 9-6 14-7"/>
+    <path d="M15 38c5-4 11-7 17-8"/>
   </g>
 </svg>

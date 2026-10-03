@@ -1,8 +1,15 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Turkey">
-  <path d="M5 39h38" stroke="#cfd6dd" stroke-width="3.4" stroke-linecap="round"/>
-  <ellipse cx="22" cy="28" rx="16" ry="10.5" fill="#b8692f"/>
-  <path d="M12 24c3-4.5 8.5-6.5 14-6.5" stroke="#dc9458" stroke-width="3" fill="none" stroke-linecap="round"/>
-  <path d="M28 26c3-5 7-8 10-7s1 6-3 9c-3 2-6 1-7-2Z" fill="#c97a3c"/>
-  <path d="M36 21l4-5" stroke="#f3ead8" stroke-width="3" stroke-linecap="round"/>
-  <circle cx="41" cy="15" r="2" fill="#f3ead8"/><circle cx="39" cy="14" r="1.8" fill="#f3ead8"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Roast turkey">
+  <defs>
+    <linearGradient id="p" x1="5" y1="0" x2="43" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e3e9ef"/><stop offset=".5" stop-color="#c4cdd6"/><stop offset="1" stop-color="#9aa5b0"/></linearGradient>
+    <radialGradient id="b" cx="15" cy="20" r="24" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e6a462"/><stop offset=".5" stop-color="#b8692f"/><stop offset="1" stop-color="#7e4018"/></radialGradient>
+    <radialGradient id="l" cx="31" cy="20" r="11" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#eaa868"/><stop offset=".55" stop-color="#c47a3c"/><stop offset="1" stop-color="#8e4c1e"/></radialGradient>
+    <linearGradient id="n" x1="34" y1="0" x2="43" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e6dcc6"/></linearGradient>
+  </defs>
+  <path d="M5 39h38" stroke="url(#p)" stroke-width="3.4" stroke-linecap="round"/>
+  <ellipse cx="22" cy="28" rx="16" ry="10.5" fill="url(#b)"/>
+  <path d="M12 24c3-4.5 8.5-6.5 14-6.5" stroke="#fff" stroke-opacity=".45" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  <path d="M28 26c3-5 7-8 10-7s1 6-3 9c-3 2-6 1-7-2Z" fill="url(#l)"/>
+  <path d="M36 21l4-5" stroke="url(#n)" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="41" cy="15" r="2" fill="url(#n)"/>
+  <circle cx="39" cy="14" r="1.8" fill="url(#n)"/>
 </svg>

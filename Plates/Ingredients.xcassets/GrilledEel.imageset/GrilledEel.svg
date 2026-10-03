@@ -1,6 +1,12 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Grilled eel">
-  <path d="M4 25h40" stroke="#e3cfa5" stroke-width="1.8" stroke-linecap="round"/>
-  <path d="M7 19c10-4 24-4 34 0v11c-10 4-24 4-34 0Z" fill="#8a4a1f"/>
-  <path d="M7 19c10-4 24-4 34 0v3c-10-4-24-4-34 0Z" fill="#c07a36"/>
-  <g stroke="#5a2e12" stroke-width="1.8" stroke-linecap="round"><path d="M14 22v8"/><path d="M21 21v10"/><path d="M28 21v10"/><path d="M35 22v8"/></g>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Grilled eel kabayaki">
+  <defs>
+    <linearGradient id="w" x1="0" y1="0" x2="48" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d79c64"/><stop offset="1" stop-color="#8a5530"/></linearGradient>
+    <linearGradient id="e" x1="10" y1="14" x2="34" y2="36" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e09a52"/><stop offset=".5" stop-color="#b0612a"/><stop offset="1" stop-color="#723613"/></linearGradient>
+    <linearGradient id="k" x1="0" y1="28" x2="0" y2="34" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7a3c16"/><stop offset="1" stop-color="#4e2208"/></linearGradient>
+  </defs>
+  <path d="M3 21h42M3 28.5h42" stroke="url(#w)" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M8 15.5c3-1.4 6-1.4 9 0s6 1.4 9 0 6-1.4 9 0 4 .8 5 .6c.8 0 1 .4 1 1V32c0 .8-.4 1.2-1.2 1.2-1.6 0-3.2-.8-4.8-1.4-3-1.2-6-1.2-9 0s-6 1.2-9 0-6-1.2-9 0c-.8.4-1.4 0-1.4-.8V16.6c0-.5.2-.9.6-1.1Z" fill="url(#e)"/>
+  <path d="M7.6 30c3-1.4 6-1.4 9 0s6 1.4 9 0 6-1.4 9 0 4 1.2 6.4 1.4v.8c0 .8-.4 1.2-1.2 1.2-1.6 0-3.2-.8-4.8-1.4-3-1.2-6-1.2-9 0s-6 1.2-9 0-6-1.2-9 0c-.8.4-1.4 0-1.4-.8Z" fill="url(#k)"/>
+  <g stroke="#5a2a0c" stroke-opacity=".5" stroke-width="1.8" stroke-linecap="round"><path d="M13 19l-2.6 8"/><path d="M20 19l-2.6 8"/><path d="M27 19l-2.6 8"/><path d="M34 19l-2.6 8"/></g>
+  <path d="M11 18.6c3-1 5.4-1 8 0" stroke="#fff" stroke-opacity=".6" stroke-width="1.6" stroke-linecap="round" fill="none"/>
 </svg>

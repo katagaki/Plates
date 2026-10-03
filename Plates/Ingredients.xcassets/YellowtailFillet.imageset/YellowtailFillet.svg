@@ -1,7 +1,15 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Yellowtail fillet">
-  <path d="M7 20c0-3 3-6 7-6h20c4 0 7 3 7 6v10c0 3-3 6-7 6H14c-4 0-7-3-7-6Z" fill="#f4cdbf"/>
-  <path d="M7 20c0-3 3-6 7-6h20c4 0 7 3 7 6Z" fill="#6f8aa6"/>
-  <path d="M7 20h34" stroke="#e8e0cf" stroke-width="1.6"/>
-  <path d="M26 21c-2 4-2 9 0 14" stroke="#b8434a" stroke-width="4" fill="none" stroke-linecap="round"/>
-  <g stroke="#e6ac9c" stroke-width="1.3" fill="none" stroke-linecap="round"><path d="M12 24c2 3 2 6 0 9"/><path d="M18 24c2 3 2 6 0 9"/><path d="M33 24c-2 3-2 6 0 9"/></g>
+  <defs>
+    <linearGradient id="f" x1="9" y1="20" x2="38" y2="38" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fde4da"/><stop offset=".5" stop-color="#f4c6b6"/><stop offset="1" stop-color="#d9998a"/></linearGradient>
+    <linearGradient id="s" x1="0" y1="14" x2="0" y2="20" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7f9fb6"/><stop offset="1" stop-color="#3f5e75"/></linearGradient>
+    <linearGradient id="r" x1="0" y1="21" x2="0" y2="35" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#cf5a5e"/><stop offset="1" stop-color="#93293a"/></linearGradient>
+  </defs>
+  <path d="M7 20c0-3 3-6 7-6h20c4 0 7 3 7 6v10c0 3-3 6-7 6H14c-4 0-7-3-7-6Z" fill="url(#f)"/>
+  <path d="M7 20c0-3 3-6 7-6h20c4 0 7 3 7 6Z" fill="url(#s)"/>
+  <path d="M7.6 20h32.8" stroke="#f1ece0" stroke-width="1.6"/>
+  <path d="M10.4 18.2h28" stroke="#ffd21f" stroke-opacity=".8" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M26 21c-2 4-2 9 0 14" stroke="url(#r)" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <g stroke="#d9998a" stroke-opacity=".6" stroke-width="1.3" fill="none" stroke-linecap="round"><path d="M13 24c2 3 2 6 0 9"/><path d="M19 24c2 3 2 6 0 9"/><path d="M33 24c-2 3-2 6 0 9"/></g>
+  <path d="M10.4 23.4v4" stroke="#fff" stroke-opacity=".5" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M12 16h8" stroke="#fff" stroke-opacity=".45" stroke-width="1.2" stroke-linecap="round"/>
 </svg>

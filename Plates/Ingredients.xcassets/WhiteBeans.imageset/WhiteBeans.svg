@@ -1,15 +1,19 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="White beans">
-  <g transform="rotate(-60 11 36)"><path d="M5.6 36.6c-.8-3 1.6-5 4.2-4.4.8.2 1.6.2 2.4 0 2.6-.8 4.4 2 2.8 4.6-1.6 2.6-7.6 3.4-9.4-.2Z" fill="#f6f2e4" stroke="#d6cdb4" stroke-width="1"/></g>
-  <g transform="rotate(-23 19 38)"><path d="M13.6 38.6c-.8-3 1.6-5 4.2-4.4.8.2 1.6.2 2.4 0 2.6-.8 4.4 2 2.8 4.6-1.6 2.6-7.6 3.4-9.4-.2Z" fill="#f6f2e4" stroke="#d6cdb4" stroke-width="1"/></g>
-  <g transform="rotate(14 27 37)"><path d="M21.6 37.6c-.8-3 1.6-5 4.2-4.4.8.2 1.6.2 2.4 0 2.6-.8 4.4 2 2.8 4.6-1.6 2.6-7.6 3.4-9.4-.2Z" fill="#f6f2e4" stroke="#d6cdb4" stroke-width="1"/></g>
-  <g transform="rotate(51 35 36)"><path d="M29.6 36.6c-.8-3 1.6-5 4.2-4.4.8.2 1.6.2 2.4 0 2.6-.8 4.4 2 2.8 4.6-1.6 2.6-7.6 3.4-9.4-.2Z" fill="#f6f2e4" stroke="#d6cdb4" stroke-width="1"/></g>
-  <g transform="rotate(-32 15 30)"><path d="M9.6 30.6c-.8-3 1.6-5 4.2-4.4.8.2 1.6.2 2.4 0 2.6-.8 4.4 2 2.8 4.6-1.6 2.6-7.6 3.4-9.4-.2Z" fill="#f6f2e4" stroke="#d6cdb4" stroke-width="1"/></g>
-  <g transform="rotate(5 23 31)"><path d="M17.6 31.6c-.8-3 1.6-5 4.2-4.4.8.2 1.6.2 2.4 0 2.6-.8 4.4 2 2.8 4.6-1.6 2.6-7.6 3.4-9.4-.2Z" fill="#f6f2e4" stroke="#d6cdb4" stroke-width="1"/></g>
-  <g transform="rotate(42 31 30)"><path d="M25.6 30.6c-.8-3 1.6-5 4.2-4.4.8.2 1.6.2 2.4 0 2.6-.8 4.4 2 2.8 4.6-1.6 2.6-7.6 3.4-9.4-.2Z" fill="#f6f2e4" stroke="#d6cdb4" stroke-width="1"/></g>
-  <g transform="rotate(-41 39 30)"><path d="M33.6 30.6c-.8-3 1.6-5 4.2-4.4.8.2 1.6.2 2.4 0 2.6-.8 4.4 2 2.8 4.6-1.6 2.6-7.6 3.4-9.4-.2Z" fill="#f6f2e4" stroke="#d6cdb4" stroke-width="1"/></g>
-  <g transform="rotate(-4 19 24)"><path d="M13.6 24.6c-.8-3 1.6-5 4.2-4.4.8.2 1.6.2 2.4 0 2.6-.8 4.4 2 2.8 4.6-1.6 2.6-7.6 3.4-9.4-.2Z" fill="#f6f2e4" stroke="#d6cdb4" stroke-width="1"/></g>
-  <g transform="rotate(33 27 24)"><path d="M21.6 24.6c-.8-3 1.6-5 4.2-4.4.8.2 1.6.2 2.4 0 2.6-.8 4.4 2 2.8 4.6-1.6 2.6-7.6 3.4-9.4-.2Z" fill="#f6f2e4" stroke="#d6cdb4" stroke-width="1"/></g>
-  <g transform="rotate(-50 35 24)"><path d="M29.6 24.6c-.8-3 1.6-5 4.2-4.4.8.2 1.6.2 2.4 0 2.6-.8 4.4 2 2.8 4.6-1.6 2.6-7.6 3.4-9.4-.2Z" fill="#f6f2e4" stroke="#d6cdb4" stroke-width="1"/></g>
-  <g transform="rotate(-13 23 18)"><path d="M17.6 18.6c-.8-3 1.6-5 4.2-4.4.8.2 1.6.2 2.4 0 2.6-.8 4.4 2 2.8 4.6-1.6 2.6-7.6 3.4-9.4-.2Z" fill="#f6f2e4" stroke="#d6cdb4" stroke-width="1"/></g>
-  <g transform="rotate(24 31 18)"><path d="M25.6 18.6c-.8-3 1.6-5 4.2-4.4.8.2 1.6.2 2.4 0 2.6-.8 4.4 2 2.8 4.6-1.6 2.6-7.6 3.4-9.4-.2Z" fill="#f6f2e4" stroke="#d6cdb4" stroke-width="1"/></g>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pile of white beans">
+  <defs>
+    <radialGradient id="b" cx="-2.4" cy="-2.2" r="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#f3eddc"/><stop offset="1" stop-color="#cdbf9f"/></radialGradient>
+  </defs>
+  <g transform="translate(24 15.5) rotate(-10)"><path d="M-5.4 1.4c-.9-3.4 1.8-5.4 4.6-4.8.9.2 1.6.2 2.4 0 2.9-.8 4.9 2.2 3.1 5-1.8 2.9-8.4 3.8-10.1-.2Z" fill="url(#b)"/></g>
+  <g transform="translate(17.5 21) rotate(25)"><path d="M-5.4 1.4c-.9-3.4 1.8-5.4 4.6-4.8.9.2 1.6.2 2.4 0 2.9-.8 4.9 2.2 3.1 5-1.8 2.9-8.4 3.8-10.1-.2Z" fill="url(#b)"/></g>
+  <g transform="translate(29.5 21) rotate(-30)"><path d="M-5.4 1.4c-.9-3.4 1.8-5.4 4.6-4.8.9.2 1.6.2 2.4 0 2.9-.8 4.9 2.2 3.1 5-1.8 2.9-8.4 3.8-10.1-.2Z" fill="url(#b)"/></g>
+  <g transform="translate(11.5 27) rotate(-35)"><path d="M-5.4 1.4c-.9-3.4 1.8-5.4 4.6-4.8.9.2 1.6.2 2.4 0 2.9-.8 4.9 2.2 3.1 5-1.8 2.9-8.4 3.8-10.1-.2Z" fill="url(#b)"/></g>
+  <g transform="translate(23 27) rotate(8)"><path d="M-5.4 1.4c-.9-3.4 1.8-5.4 4.6-4.8.9.2 1.6.2 2.4 0 2.9-.8 4.9 2.2 3.1 5-1.8 2.9-8.4 3.8-10.1-.2Z" fill="url(#b)"/></g>
+  <g transform="translate(34.5 27) rotate(30)"><path d="M-5.4 1.4c-.9-3.4 1.8-5.4 4.6-4.8.9.2 1.6.2 2.4 0 2.9-.8 4.9 2.2 3.1 5-1.8 2.9-8.4 3.8-10.1-.2Z" fill="url(#b)"/></g>
+  <g transform="translate(8.5 33.5) rotate(15)"><path d="M-5.4 1.4c-.9-3.4 1.8-5.4 4.6-4.8.9.2 1.6.2 2.4 0 2.9-.8 4.9 2.2 3.1 5-1.8 2.9-8.4 3.8-10.1-.2Z" fill="url(#b)"/></g>
+  <g transform="translate(17.5 33) rotate(-20)"><path d="M-5.4 1.4c-.9-3.4 1.8-5.4 4.6-4.8.9.2 1.6.2 2.4 0 2.9-.8 4.9 2.2 3.1 5-1.8 2.9-8.4 3.8-10.1-.2Z" fill="url(#b)"/></g>
+  <g transform="translate(27.5 33.5) rotate(20)"><path d="M-5.4 1.4c-.9-3.4 1.8-5.4 4.6-4.8.9.2 1.6.2 2.4 0 2.9-.8 4.9 2.2 3.1 5-1.8 2.9-8.4 3.8-10.1-.2Z" fill="url(#b)"/></g>
+  <g transform="translate(37.5 33) rotate(-15)"><path d="M-5.4 1.4c-.9-3.4 1.8-5.4 4.6-4.8.9.2 1.6.2 2.4 0 2.9-.8 4.9 2.2 3.1 5-1.8 2.9-8.4 3.8-10.1-.2Z" fill="url(#b)"/></g>
+  <g transform="translate(13 38.5) rotate(5)"><path d="M-5.4 1.4c-.9-3.4 1.8-5.4 4.6-4.8.9.2 1.6.2 2.4 0 2.9-.8 4.9 2.2 3.1 5-1.8 2.9-8.4 3.8-10.1-.2Z" fill="url(#b)"/></g>
+  <g transform="translate(23 39) rotate(-8)"><path d="M-5.4 1.4c-.9-3.4 1.8-5.4 4.6-4.8.9.2 1.6.2 2.4 0 2.9-.8 4.9 2.2 3.1 5-1.8 2.9-8.4 3.8-10.1-.2Z" fill="url(#b)"/></g>
+  <g transform="translate(33 38.5) rotate(12)"><path d="M-5.4 1.4c-.9-3.4 1.8-5.4 4.6-4.8.9.2 1.6.2 2.4 0 2.9-.8 4.9 2.2 3.1 5-1.8 2.9-8.4 3.8-10.1-.2Z" fill="url(#b)"/></g>
+  <path d="M20 13.6c1-.8 2.4-1.2 3.6-1" stroke="#fff" stroke-opacity=".8" stroke-width="1.2" fill="none" stroke-linecap="round"/>
 </svg>

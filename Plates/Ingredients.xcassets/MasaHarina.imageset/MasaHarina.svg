@@ -1,12 +1,16 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Masa harina">
-  <path d="M10 14l4-4h20l4 4v26a3 3 0 0 1-3 3H13a3 3 0 0 1-3-3Z" fill="#f2dca0"/>
-  <path d="M14 10h20l4 4H10Z" fill="#e2c47a"/>
-  <path d="M24 19c-4 3-5 9-4 15 2 3 6 3 8 0 1-6 0-12-4-15Z" fill="#f2c23a"/>
-  <circle cx="22.5" cy="24" r="1.1" fill="#e0a81b"/>
-  <circle cx="25.5" cy="24" r="1.1" fill="#e0a81b"/>
-  <circle cx="22.5" cy="28" r="1.1" fill="#e0a81b"/>
-  <circle cx="25.5" cy="28" r="1.1" fill="#e0a81b"/>
-  <circle cx="24" cy="32" r="1.1" fill="#e0a81b"/>
-  <circle cx="24" cy="21.5" r="1.1" fill="#e0a81b"/>
-  <path d="M20 34c-3-3-5-8-4-13 2 3 4 7 5 11M28 34c3-3 5-8 4-13-2 3-4 7-5 11" fill="#7fb069"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bag of masa harina with an ear of corn">
+  <defs>
+    <linearGradient id="b" x1="10" y1="14" x2="38" y2="43" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fbeec4"/><stop offset=".5" stop-color="#f2dca0"/><stop offset="1" stop-color="#d9bd78"/></linearGradient>
+    <linearGradient id="t" x1="10" y1="10" x2="38" y2="14" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ecd48e"/><stop offset="1" stop-color="#cfae62"/></linearGradient>
+    <radialGradient id="k" cx="22" cy="22" r="12" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff59a"/><stop offset=".5" stop-color="#ffd21f"/><stop offset="1" stop-color="#e09a00"/></radialGradient>
+    <linearGradient id="h" x1="16" y1="21" x2="32" y2="35" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a6dc7e"/><stop offset=".5" stop-color="#5fa83f"/><stop offset="1" stop-color="#3f8a2e"/></linearGradient>
+  </defs>
+  <path d="M10 14l4-4h20l4 4v26a3 3 0 0 1-3 3H13a3 3 0 0 1-3-3Z" fill="url(#b)"/>
+  <path d="M14 10h20l4 4H10Z" fill="url(#t)"/>
+  <path d="M24 19c-4 3-5 9-4 15 2 3 6 3 8 0 1-6 0-12-4-15Z" fill="url(#k)"/>
+  <g fill="#c88400" fill-opacity=".55">
+    <circle cx="22.5" cy="24" r="1.1"/><circle cx="25.5" cy="24" r="1.1"/><circle cx="22.5" cy="28" r="1.1"/><circle cx="25.5" cy="28" r="1.1"/><circle cx="24" cy="32" r="1.1"/><circle cx="24" cy="21.5" r="1.1"/>
+  </g>
+  <path d="M20 34c-3-3-5-8-4-13 2 3 4 7 5 11M28 34c3-3 5-8 4-13-2 3-4 7-5 11" fill="url(#h)"/>
+  <path d="M12.6 17v18" stroke="#fff" stroke-opacity=".5" stroke-width="1.6" stroke-linecap="round"/>
 </svg>

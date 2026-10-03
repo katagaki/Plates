@@ -1,9 +1,16 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chipotle in adobo">
-  <path d="M8 20h32v18a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4Z" fill="#cfd6dd"/>
-  <rect x="8" y="27" width="32" height="10" fill="#d9a02a"/>
-  <ellipse cx="24" cy="20" rx="16" ry="4.5" fill="#8d939b"/>
-  <ellipse cx="24" cy="20" rx="14" ry="3.4" fill="#7a2a1a"/>
-  <path d="M13 19c3-6 10-10 17-10 3 0 4 2 2 3.5-5 1.5-10 4.5-13 9Z" fill="#5a2215"/>
-  <path d="M17 17c3-3 7-5 11-6" stroke="#8a3a25" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-  <path d="M31 11c2-1 4-.5 5 1" stroke="#6a5a2a" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Can of chipotle peppers in adobo sauce">
+  <defs>
+    <linearGradient id="b" x1="8" y1="0" x2="40" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e3e9ef"/><stop offset=".5" stop-color="#b2bcc6"/><stop offset="1" stop-color="#8e99a4"/></linearGradient>
+    <linearGradient id="l" x1="8" y1="0" x2="40" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffc04d"/><stop offset=".5" stop-color="#e89a1c"/><stop offset="1" stop-color="#b86a0c"/></linearGradient>
+    <linearGradient id="s" x1="12" y1="17" x2="36" y2="23" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#9a3a22"/><stop offset="1" stop-color="#5e1e12"/></linearGradient>
+    <linearGradient id="c" x1="14" y1="9" x2="32" y2="21" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8a3a24"/><stop offset=".5" stop-color="#5a2215"/><stop offset="1" stop-color="#3a140c"/></linearGradient>
+  </defs>
+  <path d="M8 20h32v18a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4Z" fill="url(#b)"/>
+  <rect x="8" y="27" width="32" height="10" fill="url(#l)"/>
+  <path d="M11 29v6" stroke="#fff" stroke-opacity=".45" stroke-width="1.6" stroke-linecap="round"/>
+  <ellipse cx="24" cy="20" rx="16" ry="4.5" fill="#9aa4ae"/>
+  <ellipse cx="24" cy="20" rx="14" ry="3.4" fill="url(#s)"/>
+  <path d="M13 19c3-6 10-10 17-10 3 0 4 2 2 3.5-5 1.5-10 4.5-13 9Z" fill="url(#c)"/>
+  <path d="M17 17c3-3 7-5 11-6" stroke="#c0603e" stroke-opacity=".6" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <path d="M31 11c2-1 4-.5 5 1" stroke="#7a6a34" stroke-width="1.8" fill="none" stroke-linecap="round"/>
 </svg>

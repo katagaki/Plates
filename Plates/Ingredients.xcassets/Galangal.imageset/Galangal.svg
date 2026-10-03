@@ -1,5 +1,11 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Galangal">
-  <path d="M6 30c0-5 4-8 9-8 2-4 7-6 11-4 3-3 9-3 12 1 4 1 5 6 3 9-1 4-6 6-10 4-3 3-9 3-12 1-4 2-10 2-12-1-1 0-1-1-1-2Z" fill="#ead8b8"/>
-  <g stroke="#c9a07a" stroke-width="1.3" fill="none" stroke-linecap="round"><path d="M14 23c-1 3-1 6 0 9M22 20c-1 4-1 8 0 12M30 19c-1 4-1 9 0 13M37 21c-1 3-1 6 0 9"/></g>
-  <path d="M15 22c-1-3 0-6 2-8M27 18c0-3 1-5 3-7" stroke="#e88a9a" stroke-width="3" fill="none" stroke-linecap="round"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Galangal root">
+  <defs>
+    <radialGradient id="g" cx="16" cy="20" r="28" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fbf2de"/><stop offset="0.5" stop-color="#ead8b8"/><stop offset="1" stop-color="#c9a57a"/></radialGradient>
+    <linearGradient id="p" x1="0" y1="10" x2="0" y2="23" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f7a8b4"/><stop offset="1" stop-color="#d9667a"/></linearGradient>
+  </defs>
+  <path d="M15 22c-1-3 0-6 2-8M27 18c0-3 1-5 3-7" stroke="url(#p)" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M6 30c0-5 4-8 9-8 2-4 7-6 11-4 3-3 9-3 12 1 4 1 5 6 3 9-1 4-6 6-10 4-3 3-9 3-12 1-4 2-10 2-12-1-1 0-1-1-1-2Z" fill="url(#g)"/>
+  <g stroke="#a9805a" stroke-opacity=".55" stroke-width="1.3" fill="none" stroke-linecap="round"><path d="M14 23c-1 3-1 6 0 9M22 20c-1 4-1 8 0 12M30 19c-1 4-1 9 0 13M37 21c-1 3-1 6 0 9"/></g>
+  <g fill="#e88a9a" fill-opacity=".55"><ellipse cx="18" cy="34.4" rx="1.6" ry=".9"/><ellipse cx="33.6" cy="32.4" rx="1.4" ry=".8"/></g>
+  <path d="M9 27.6c.8-1.6 2-2.6 3.6-3.2M24.6 20.6c1-1 2.2-1.6 3.6-1.8" stroke="#fff" stroke-opacity=".7" stroke-width="1.4" fill="none" stroke-linecap="round"/>
 </svg>

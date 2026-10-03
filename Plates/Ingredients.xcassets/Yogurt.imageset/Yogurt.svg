@@ -1,7 +1,14 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pot of yogurt">
+  <defs>
+    <linearGradient id="p" x1="14" y1="0" x2="34" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#f4f1ea"/><stop offset="1" stop-color="#d6cfc1"/></linearGradient>
+    <linearGradient id="b" x1="15" y1="0" x2="33" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f0ebe0"/><stop offset=".5" stop-color="#e0d9cb"/><stop offset="1" stop-color="#bcb3a2"/></linearGradient>
+    <linearGradient id="l" x1="12" y1="0" x2="36" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#eaf6ff"/><stop offset=".5" stop-color="#bfe0f7"/><stop offset="1" stop-color="#86b9de"/></linearGradient>
+  </defs>
   <g transform="translate(-3 -3.44) scale(1.125)">
-    <path d="M14 18h20l-2 20a3 3 0 0 1-3 3H19a3 3 0 0 1-3-3Z" fill="#f8f6f1"/>
-    <path d="M15 26h18l-1 12a3 3 0 0 1-3 3H19a3 3 0 0 1-3-3Z" fill="#e6e0d4"/>
-    <rect x="12" y="14" width="24" height="5" rx="2.5" fill="#d8eefc"/>
+    <path d="M14 18h20l-2 20a3 3 0 0 1-3 3H19a3 3 0 0 1-3-3Z" fill="url(#p)"/>
+    <path d="M15 26h18l-1 12a3 3 0 0 1-3 3H19a3 3 0 0 1-3-3Z" fill="url(#b)"/>
+    <rect x="12" y="14" width="24" height="5" rx="2.5" fill="url(#l)"/>
+    <path d="M16.6 21.4l1 14" stroke="#fff" stroke-opacity=".85" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M15.4 15.8h7" stroke="#fff" stroke-opacity=".7" stroke-width="1.2" stroke-linecap="round"/>
   </g>
 </svg>

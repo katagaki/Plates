@@ -1,12 +1,19 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bonito">
-  <path d="M12.5 24C9 20 6 16 2 12C4.5 19 5 22 5 24C5 26 4.5 29 2 36C6 32 9 28 12.5 24Z" fill="#2f3f66"/>
+  <defs>
+    <linearGradient id="k" x1="0" y1="16" x2="0" y2="25" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4d6394"/><stop offset=".6" stop-color="#2f3f66"/><stop offset="1" stop-color="#1e2a48"/></linearGradient>
+    <linearGradient id="v" x1="0" y1="22" x2="0" y2="32" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f4f6f8"/><stop offset="1" stop-color="#bcc4ce"/></linearGradient>
+    <linearGradient id="t" x1="2" y1="12" x2="12" y2="36" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#465c8c"/><stop offset="1" stop-color="#1e2a48"/></linearGradient>
+  </defs>
+  <path d="M12.5 24C9 20 6 16 2 12C4.5 19 5 22 5 24C5 26 4.5 29 2 36C6 32 9 28 12.5 24Z" fill="url(#t)"/>
   <path d="M33 17.5 31 14l-9 2.5-1 1.5Z" fill="#2f3f66"/>
   <path d="M20 18.5l2-3 2 2.5Z" fill="#2f3f66"/>
   <g fill="#2f3f66"><path d="M13 22l1.2-2 1.2 1.6Z"/><path d="M16 21l1.2-2 1.2 1.6Z"/><path d="M13 26l1.2 2 1.2-1.6Z"/><path d="M16 27l1.2 2 1.2-1.6Z"/></g>
-  <path d="M46 24C45 18.8 37 16 28 16C19.5 16 14 21.8 11 22.4L11 25.6C14 26.2 19.5 31.5 28 31.5C37 31.5 45 28.88 46 24Z" fill="#d3d8de"/>
-  <path d="M46 24C45 18.8 37 16 28 16C19.5 16 14 21.8 11 22.4L11 24.3C23 24.6 36 24.6 46 24Z" fill="#2f3f66"/>
-  <g stroke="#2f3f66" stroke-width="1.6" fill="none" stroke-linecap="round"><path d="M16 26.3c7 .5 14 .6 22 0"/><path d="M18 28.6c6 .6 12 .6 17 0"/><path d="M21 30.6c4 .4 8 .4 11 0"/></g>
-  <path d="M39 19C36.5 23 36.5 26 39 28.8" stroke="#55627a" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <path d="M46 24C45 18.8 37 16 28 16C19.5 16 14 21.8 11 22.4L11 25.6C14 26.2 19.5 31.5 28 31.5C37 31.5 45 28.88 46 24Z" fill="url(#v)"/>
+  <path d="M46 24C45 18.8 37 16 28 16C19.5 16 14 21.8 11 22.4L11 24.3C23 24.6 36 24.6 46 24Z" fill="url(#k)"/>
+  <g stroke="#2f3f66" stroke-opacity=".85" stroke-width="1.6" fill="none" stroke-linecap="round"><path d="M16 26.3c7 .5 14 .6 22 0"/><path d="M18 28.6c6 .6 12 .6 17 0"/><path d="M21 30.6c4 .4 8 .4 11 0"/></g>
+  <path d="M39 19C36.5 23 36.5 26 39 28.8" stroke="#55627a" stroke-opacity=".7" stroke-width="1.2" fill="none" stroke-linecap="round"/>
   <path d="M37 25.5c-3 .5-5 2-6.5 3.5 3 0 5-1 6.5-3.5Z" fill="#2f3f66"/>
+  <path d="M22 19.4c3-1.6 6.4-2.4 10-2.4" stroke="#fff" stroke-opacity=".45" stroke-width="1.4" fill="none" stroke-linecap="round"/>
   <circle cx="41.5" cy="22.6" r="1.7" fill="#121a26"/>
+  <circle cx="41" cy="22.1" r=".5" fill="#fff" fill-opacity=".8"/>
 </svg>

@@ -1,6 +1,13 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ladle">
-  <path d="M28 8c1 12 0 18-4 21" stroke="#8d939b" stroke-width="4" fill="none" stroke-linecap="round"/>
-  <path d="M12 28h20a10 9 0 0 1-20 0Z" fill="#cfd6dd"/>
-  <path d="M14 29h16a8 7 0 0 1-16 0Z" fill="#f4f6f8"/>
-  <rect x="26" y="5" width="5" height="6" rx="2.5" fill="#a97142"/>
+  <defs>
+    <linearGradient id="b" x1="10" y1="27" x2="34" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e3e9ef"/><stop offset=".5" stop-color="#b2bcc6"/><stop offset="1" stop-color="#8e99a4"/></linearGradient>
+    <linearGradient id="i" x1="10" y1="0" x2="34" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8e99a4"/><stop offset="1" stop-color="#c3ccd4"/></linearGradient>
+    <linearGradient id="s" x1="29" y1="0" x2="36" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d4dbe2"/><stop offset="1" stop-color="#8e99a4"/></linearGradient>
+    <linearGradient id="h" x1="31.5" y1="0" x2="36.5" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d79c64"/><stop offset=".5" stop-color="#b07440"/><stop offset="1" stop-color="#8a5530"/></linearGradient>
+  </defs>
+  <path d="M33.6 12C34.4 19 33.2 24.6 29.4 28.6" stroke="url(#s)" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+  <path d="M10 28h24a12 11 0 0 1-24 0Z" fill="url(#b)"/>
+  <ellipse cx="22" cy="28" rx="12" ry="3" fill="url(#i)"/>
+  <path d="M33.8 4.8 33.9 12" stroke="url(#h)" stroke-width="4.6" stroke-linecap="round"/>
+  <path d="M13.4 31.6c1 2.8 3 4.8 5.6 5.8" stroke="#fff" stroke-opacity=".7" stroke-width="1.6" fill="none" stroke-linecap="round"/>
 </svg>

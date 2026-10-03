@@ -1,7 +1,14 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Radish">
+  <defs>
+    <radialGradient id="b" cx="19" cy="25" r="18" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff8a95"/><stop offset=".5" stop-color="#e2384f"/><stop offset="1" stop-color="#a51f37"/></radialGradient>
+    <linearGradient id="r" x1="0" y1="38" x2="0" y2="44" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e6dfcf"/></linearGradient>
+    <linearGradient id="g" x1="14" y1="8" x2="27" y2="20" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a6dc7e"/><stop offset=".5" stop-color="#5fa83f"/><stop offset="1" stop-color="#3f8a2e"/></linearGradient>
+  </defs>
   <g transform="translate(-3 -3.19) scale(1.125)">
-    <path d="M24 20c7 0 11 6 11 12 0 5-5 9-11 9s-11-4-11-9c0-6 4-12 11-12Z" fill="#d94f45"/>
-    <path d="M20 40c1 2 3 3 4 3s3-1 4-3Z" fill="#f2f0e6"/>
-    <path d="M24 20c-2-5-1-9 1-12 2 3 3 8 1 12ZM24 20c-4-3-7-3-10-2 2 3 6 5 10 2Z" fill="#5f9e4a"/>
+    <path d="M24 20c-2-5-1-9 1-12 2 3 3 8 1 12ZM24 20c-4-3-7-3-10-2 2 3 6 5 10 2Z" fill="url(#g)"/>
+    <path d="M20 39.4c1 2 3 3.6 4 3.6s3-1.6 4-3.6Z" fill="url(#r)"/>
+    <path d="M24 20c7 0 11 6 11 12 0 5-5 9-11 9s-11-4-11-9c0-6 4-12 11-12Z" fill="url(#b)"/>
+    <path d="M22.4 40.4c.6.4 1.6.6 1.6.6s1-.2 1.6-.6" stroke="#fff" stroke-opacity=".8" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+    <ellipse cx="18.4" cy="26" rx="3" ry="1.8" transform="rotate(-50 18.4 26)" fill="#fff" fill-opacity=".7"/>
   </g>
 </svg>

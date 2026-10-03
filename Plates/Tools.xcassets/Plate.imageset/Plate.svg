@@ -1,4 +1,10 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Plate">
-  <ellipse cx="24" cy="26" rx="19" ry="12" fill="#f0ece4"/>
-  <ellipse cx="24" cy="25" rx="13" ry="8" fill="#e6e0d4"/>
+  <defs>
+    <linearGradient id="r" x1="5" y1="14" x2="43" y2="38" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#f1ece0"/><stop offset="1" stop-color="#cfc6b2"/></linearGradient>
+    <linearGradient id="w" x1="11" y1="18" x2="37" y2="33" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ddd5c4"/><stop offset="1" stop-color="#f8f5ee"/></linearGradient>
+  </defs>
+  <path d="M5 25v1.6C5 33.2 13.5 38.4 24 38.4S43 33.2 43 26.6V25Z" fill="#c4baa4"/>
+  <ellipse cx="24" cy="25" rx="19" ry="12" fill="url(#r)"/>
+  <ellipse cx="24" cy="24.6" rx="12.6" ry="7.4" fill="url(#w)"/>
+  <path d="M9.2 21.4c1.6-2.8 4.4-4.8 7.8-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round"/>
 </svg>

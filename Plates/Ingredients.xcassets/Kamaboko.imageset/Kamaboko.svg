@@ -1,7 +1,12 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kamaboko">
-  <g transform="translate(-3 -3.62) scale(1.125)">
-    <path d="M11 34c0-9 6-15 13-15s13 6 13 15Z" fill="#f8f6f1"/>
-    <path d="M11 34c0-9 6-15 13-15s13 6 13 15h-3c0-8-4-12-10-12s-10 4-10 12Z" fill="#e8829a"/>
-    <rect x="9" y="34" width="30" height="5" rx="2" fill="#dcd7cc"/>
-  </g>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kamaboko on its board">
+  <defs>
+    <radialGradient id="p" cx="17" cy="17" r="24" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffb0c0"/><stop offset=".5" stop-color="#f07a95"/><stop offset="1" stop-color="#c94f6e"/></radialGradient>
+    <linearGradient id="w" x1="13" y1="18" x2="34" y2="32" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#f6f1e7"/><stop offset="1" stop-color="#ddd3bf"/></linearGradient>
+    <linearGradient id="b" x1="6" y1="0" x2="42" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d79c64"/><stop offset=".5" stop-color="#b07440"/><stop offset="1" stop-color="#8a5530"/></linearGradient>
+  </defs>
+  <path d="M8.5 33C8.5 21.6 15.4 13.5 24 13.5S39.5 21.6 39.5 33Z" fill="url(#p)"/>
+  <path d="M12.2 33C12.2 23.6 17.4 17.2 24 17.2S35.8 23.6 35.8 33Z" fill="url(#w)"/>
+  <path d="M12 22.4c1.6-3.4 4.2-5.8 7.4-6.8" stroke="#fff" stroke-opacity=".6" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <rect x="5.5" y="32.5" width="37" height="6" rx="1.6" fill="url(#b)"/>
+  <path d="M8 35.6h32" stroke="#8a5530" stroke-opacity=".45" stroke-width="1" stroke-linecap="round"/>
 </svg>

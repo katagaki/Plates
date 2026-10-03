@@ -1,10 +1,24 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Asparagus">
-  <g transform="translate(-3 -2.38) scale(1.125)">
-    <g stroke="#5f8c3f" stroke-width="5" stroke-linecap="round" fill="none">
-      <path d="M16 40V16"/><path d="M24 41V12"/><path d="M32 40V17"/>
-    </g>
-    <g fill="#7a9e4e">
-      <path d="M16 18c-3-3-3-6-2-9 3 3 4 6 4 9Z"/><path d="M24 14c-3-4-3-8-2-11 3 4 4 7 4 11Z"/><path d="M32 19c3-3 3-6 2-9-3 3-4 6-4 9Z"/>
-    </g>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Asparagus spears">
+  <defs>
+    <linearGradient id="s" x1="-2.6" y1="0" x2="2.6" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a6dc7e"/><stop offset=".5" stop-color="#5fa83f"/><stop offset="1" stop-color="#3f8a2e"/></linearGradient>
+    <linearGradient id="t" x1="-3" y1="-33" x2="3" y2="-24" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8fcf5c"/><stop offset=".5" stop-color="#4f8a34"/><stop offset="1" stop-color="#2f5e22"/></linearGradient>
+  </defs>
+  <g transform="translate(15 42) rotate(-6)">
+    <rect x="-2.6" y="-25" width="5.2" height="27" rx="2.6" fill="url(#s)"/>
+    <path d="M0-34c-2.8 2.6-3.6 6.4-3.2 10.2h6.4c.4-3.8-.4-7.6-3.2-10.2Z" fill="url(#t)"/>
+    <path d="M-2.6-14.6 0-17.4M2.6-7.6 0-10.4" stroke="#2f6e22" stroke-opacity=".5" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <path d="M-1.2-22v16" stroke="#fff" stroke-opacity=".45" stroke-width="1.2" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(33 42) rotate(6)">
+    <rect x="-2.6" y="-25" width="5.2" height="27" rx="2.6" fill="url(#s)"/>
+    <path d="M0-34c-2.8 2.6-3.6 6.4-3.2 10.2h6.4c.4-3.8-.4-7.6-3.2-10.2Z" fill="url(#t)"/>
+    <path d="M-2.6-14.6 0-17.4M2.6-7.6 0-10.4" stroke="#2f6e22" stroke-opacity=".5" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <path d="M-1.2-22v16" stroke="#fff" stroke-opacity=".45" stroke-width="1.2" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(24 40.5)">
+    <rect x="-2.6" y="-25" width="5.2" height="27" rx="2.6" fill="url(#s)"/>
+    <path d="M0-34c-2.8 2.6-3.6 6.4-3.2 10.2h6.4c.4-3.8-.4-7.6-3.2-10.2Z" fill="url(#t)"/>
+    <path d="M-2.6-14.6 0-17.4M2.6-7.6 0-10.4" stroke="#2f6e22" stroke-opacity=".5" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <path d="M-1.2-22v16" stroke="#fff" stroke-opacity=".45" stroke-width="1.2" stroke-linecap="round"/>
   </g>
 </svg>

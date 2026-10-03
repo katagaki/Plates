@@ -1,6 +1,11 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stock pot">
-  <path d="M9 20h30v14a6 6 0 0 1-6 6H15a6 6 0 0 1-6-6Z" fill="#4a4e54"/>
-  <rect x="7" y="17" width="34" height="4" rx="2" fill="#6f747b"/>
+  <defs>
+    <linearGradient id="b" x1="9" y1="0" x2="39" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#767d86"/><stop offset=".35" stop-color="#4e545c"/><stop offset="1" stop-color="#25282d"/></linearGradient>
+    <linearGradient id="r" x1="7" y1="0" x2="41" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a7aeb7"/><stop offset="1" stop-color="#5f656d"/></linearGradient>
+  </defs>
   <path d="M7 24c-3 0-3 5 0 5M41 24c3 0 3 5 0 5" stroke="#8d939b" stroke-width="3" fill="none" stroke-linecap="round"/>
-  <path d="M13 26h22" stroke="#6f747b" stroke-width="2" stroke-linecap="round"/>
+  <path d="M9 20h30v14a6 6 0 0 1-6 6H15a6 6 0 0 1-6-6Z" fill="url(#b)"/>
+  <rect x="7" y="17" width="34" height="4.4" rx="2.2" fill="url(#r)"/>
+  <path d="M13 26h22" stroke="#8a919a" stroke-opacity=".7" stroke-width="2" stroke-linecap="round"/>
+  <path d="M12.4 29v4" stroke="#fff" stroke-opacity=".25" stroke-width="2" stroke-linecap="round"/>
 </svg>

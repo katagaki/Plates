@@ -1,8 +1,15 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Doubanjiang">
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Jar of doubanjiang">
+  <defs>
+    <linearGradient id="g" x1="14" y1="0" x2="34" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#f2eee6"/><stop offset="1" stop-color="#d8d1c2"/></linearGradient>
+    <linearGradient id="p" x1="15" y1="0" x2="33" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e0584a"/><stop offset=".5" stop-color="#a8322a"/><stop offset="1" stop-color="#6e1a16"/></linearGradient>
+    <linearGradient id="l" x1="12" y1="0" x2="36" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff7a66"/><stop offset=".5" stop-color="#d8322c"/><stop offset="1" stop-color="#9a1c1a"/></linearGradient>
+  </defs>
   <g transform="translate(-3 -3.38) scale(1.125)">
-    <path d="M14 19h20v19a3 3 0 0 1-3 3H17a3 3 0 0 1-3-3Z" fill="#f0ece4"/>
-    <path d="M15 25h18v13a3 3 0 0 1-3 3H18a3 3 0 0 1-3-3Z" fill="#a8322a"/>
-    <path d="M20 31c3-2 6-2 8 0" stroke="#7a2320" stroke-width="2" fill="none" stroke-linecap="round"/>
-    <rect x="12" y="13" width="24" height="7" rx="2" fill="#c9302c"/>
+    <path d="M14 19h20v19a3 3 0 0 1-3 3H17a3 3 0 0 1-3-3Z" fill="url(#g)"/>
+    <path d="M15 25h18v13a3 3 0 0 1-3 3H18a3 3 0 0 1-3-3Z" fill="url(#p)"/>
+    <g fill="#4a0e0c" fill-opacity=".5"><ellipse cx="20" cy="30" rx="1.6" ry="1.1"/><ellipse cx="26.5" cy="29" rx="1.6" ry="1.1"/><ellipse cx="23" cy="35" rx="1.6" ry="1.1"/><ellipse cx="29" cy="35.5" rx="1.4" ry="1"/></g>
+    <rect x="12" y="13" width="24" height="7" rx="2" fill="url(#l)"/>
+    <path d="M15 15.6h6" stroke="#fff" stroke-opacity=".55" stroke-width="1.4" stroke-linecap="round"/>
+    <path d="M16.6 22v14" stroke="#fff" stroke-opacity=".55" stroke-width="1.6" stroke-linecap="round"/>
   </g>
 </svg>

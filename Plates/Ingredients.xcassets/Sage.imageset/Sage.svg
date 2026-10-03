@@ -1,9 +1,17 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sage">
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sprig of sage">
+  <defs>
+    <radialGradient id="a" cx="11" cy="18" r="14" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c3d1b0"/><stop offset=".5" stop-color="#8fa17c"/><stop offset="1" stop-color="#64775a"/></radialGradient>
+    <radialGradient id="b" cx="29" cy="15" r="14" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c3d1b0"/><stop offset=".5" stop-color="#8fa17c"/><stop offset="1" stop-color="#64775a"/></radialGradient>
+    <radialGradient id="c" cx="21" cy="7" r="14" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c3d1b0"/><stop offset=".5" stop-color="#8fa17c"/><stop offset="1" stop-color="#64775a"/></radialGradient>
+  </defs>
   <g transform="translate(-3.01 -3.01) scale(1.125)">
     <path d="M24 42V20" stroke="#6f8a5c" stroke-width="2.4" stroke-linecap="round"/>
-    <ellipse cx="15" cy="22" rx="8" ry="5" transform="rotate(-25 15 22)" fill="#8fa17c"/>
-    <ellipse cx="33" cy="20" rx="8" ry="5" transform="rotate(20 33 20)" fill="#a3b391"/>
-    <ellipse cx="24" cy="13" rx="6" ry="8" fill="#8fa17c"/>
-    <path d="M24 8v10" stroke="#b9c6a9" stroke-width="1.4"/>
+    <ellipse cx="15" cy="23" rx="9" ry="4.6" transform="rotate(-28 15 23)" fill="url(#a)"/>
+    <ellipse cx="33" cy="21" rx="9" ry="4.6" transform="rotate(24 33 21)" fill="url(#b)"/>
+    <ellipse cx="24" cy="13" rx="5" ry="9" fill="url(#c)"/>
+    <g stroke="#55684b" stroke-opacity=".5" stroke-width="1.1" fill="none" stroke-linecap="round">
+      <path d="M23 26.4 8.4 26.6"/><path d="M25 24.6l14 3.2"/><path d="M24 21V6.6"/>
+    </g>
+    <path d="M21.2 9.6c.4-1.6 1-2.6 1.8-3.2" stroke="#fff" stroke-opacity=".45" stroke-width="1.4" fill="none" stroke-linecap="round"/>
   </g>
 </svg>

@@ -1,8 +1,12 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Prosciutto">
-  <g transform="translate(-3.01 -3.2) scale(1.125)">
-    <path d="M8 30c4-9 12-14 22-14 7 0 11 3 10 7-1 5-8 8-16 10s-14 4-16-3Z" fill="#dd8a8a"/>
-    <g stroke="#f6dada" stroke-width="2.4" fill="none" stroke-linecap="round">
-      <path d="M13 29c5-6 12-9 19-10"/><path d="M16 34c5-6 12-9 19-11"/>
-    </g>
-  </g>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Slice of prosciutto">
+  <defs>
+    <linearGradient id="m" x1="8" y1="13" x2="38" y2="37" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f59aa2"/><stop offset=".5" stop-color="#d95a6c"/><stop offset="1" stop-color="#a53046"/></linearGradient>
+    <linearGradient id="f" x1="8" y1="0" x2="40" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fffaf5"/><stop offset="1" stop-color="#f0dcd4"/></linearGradient>
+    <linearGradient id="u" x1="26" y1="24" x2="40" y2="36" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f7b2b6"/><stop offset="1" stop-color="#d06a78"/></linearGradient>
+  </defs>
+  <path d="M6 29c2-10 12-17 23-17 8 0 13 4 12 9-1 7-10 12-19 15S5 37 6 29Z" fill="url(#m)"/>
+  <path d="M7.6 26.6C10.4 18.4 19.4 13.6 29 13.6c6 0 10 2.6 10.4 6" stroke="url(#f)" stroke-width="3.6" fill="none" stroke-linecap="round"/>
+  <path d="M41 21c-1 7-10 12-19 15 4-3 6-6 6.4-9.6 4.2.8 9.4-1.6 12.6-5.4Z" fill="url(#u)"/>
+  <path d="M12 27.6c2.6-4 6.4-6.8 11-8" stroke="#fff" stroke-opacity=".45" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <path d="M14 32c3-1 6-3 8-5.4" stroke="#8a2236" stroke-opacity=".4" stroke-width="1.2" fill="none" stroke-linecap="round"/>
 </svg>

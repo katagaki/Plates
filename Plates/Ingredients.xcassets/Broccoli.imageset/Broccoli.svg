@@ -1,7 +1,13 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Broccoli">
-  <g transform="translate(-3 -3) scale(1.125)">
-    <path d="M20 24h8v14a4 4 0 0 1-8 0Z" fill="#a8cf8e"/>
-    <g fill="#5f8c3f"><circle cx="17" cy="19" r="7"/><circle cx="31" cy="19" r="7"/><circle cx="24" cy="14" r="8"/></g>
-    <g fill="#7a9e4e"><circle cx="19" cy="15" r="3"/><circle cx="28" cy="21" r="3"/></g>
-  </g>
+  <defs>
+    <linearGradient id="st" x1="19" y1="26" x2="30" y2="26" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d4ecb0"/><stop offset="1" stop-color="#86b955"/></linearGradient>
+    <radialGradient id="f1" cx="14" cy="17" r="10" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8fcf5c"/><stop offset="1" stop-color="#2f6e22"/></radialGradient>
+    <radialGradient id="f2" cx="29" cy="17" r="10" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8fcf5c"/><stop offset="1" stop-color="#2f6e22"/></radialGradient>
+    <radialGradient id="f3" cx="21" cy="9" r="11" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a3dc6e"/><stop offset="1" stop-color="#3a7d29"/></radialGradient>
+  </defs>
+  <path d="M19.5 24h9v16.5a4.5 4.5 0 0 1-9 0Z" fill="url(#st)"/>
+  <circle cx="16.1" cy="21.4" r="7.9" fill="url(#f1)"/>
+  <circle cx="31.9" cy="21.4" r="7.9" fill="url(#f2)"/>
+  <circle cx="24" cy="15.8" r="9" fill="url(#f3)"/>
+  <g fill="#c2ec92" fill-opacity=".7"><circle cx="20.6" cy="12" r="2.2"/><circle cx="13.6" cy="18.6" r="1.8"/><circle cx="29.4" cy="18.4" r="1.8"/></g>
 </svg>

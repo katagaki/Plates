@@ -1,14 +1,20 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Daikon sprouts">
-  <g stroke="#f4f1e8" stroke-width="1.8" stroke-linecap="round" fill="none"><path d="M24 40V14"/><path d="M22 40 16 17"/><path d="M26 40 32 17"/><path d="M20 40 10 23"/><path d="M28 40 38 23"/></g>
-  <ellipse cx="21.01" cy="11.62" rx="3.68" ry="2.3" transform="rotate(25 21.01 11.62)" fill="#6aa04f"/>
-  <ellipse cx="26.99" cy="11.62" rx="3.68" ry="2.3" transform="rotate(-25 26.99 11.62)" fill="#8fc06a"/>
-  <ellipse cx="13.01" cy="14.62" rx="3.68" ry="2.3" transform="rotate(25 13.01 14.62)" fill="#6aa04f"/>
-  <ellipse cx="18.99" cy="14.62" rx="3.68" ry="2.3" transform="rotate(-25 18.99 14.62)" fill="#8fc06a"/>
-  <ellipse cx="29.01" cy="14.62" rx="3.68" ry="2.3" transform="rotate(25 29.01 14.62)" fill="#6aa04f"/>
-  <ellipse cx="34.99" cy="14.62" rx="3.68" ry="2.3" transform="rotate(-25 34.99 14.62)" fill="#8fc06a"/>
-  <ellipse cx="7.01" cy="20.62" rx="3.68" ry="2.3" transform="rotate(25 7.01 20.62)" fill="#6aa04f"/>
-  <ellipse cx="12.99" cy="20.62" rx="3.68" ry="2.3" transform="rotate(-25 12.99 20.62)" fill="#8fc06a"/>
-  <ellipse cx="35.01" cy="20.62" rx="3.68" ry="2.3" transform="rotate(25 35.01 20.62)" fill="#6aa04f"/>
-  <ellipse cx="40.99" cy="20.62" rx="3.68" ry="2.3" transform="rotate(-25 40.99 20.62)" fill="#8fc06a"/>
-  <rect x="15" y="38" width="18" height="6" rx="2" fill="#e8e2d0"/>
+  <defs>
+    <linearGradient id="s" x1="0" y1="14" x2="0" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dcd5c2"/></linearGradient>
+    <linearGradient id="l" x1="4" y1="8" x2="40" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8fcb63"/><stop offset="1" stop-color="#4f8f34"/></linearGradient>
+    <linearGradient id="m" x1="4" y1="8" x2="40" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#b2e08a"/><stop offset="1" stop-color="#6aa84a"/></linearGradient>
+    <linearGradient id="p" x1="15" y1="38" x2="33" y2="44" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f6f1e4"/><stop offset="1" stop-color="#d6ccb2"/></linearGradient>
+  </defs>
+  <g stroke="url(#s)" stroke-width="1.8" stroke-linecap="round" fill="none"><path d="M24 40V14"/><path d="M22 40 16 17"/><path d="M26 40 32 17"/><path d="M20 40 10 23"/><path d="M28 40 38 23"/></g>
+  <ellipse cx="21.01" cy="11.62" rx="3.68" ry="2.3" transform="rotate(25 21.01 11.62)" fill="url(#l)"/>
+  <ellipse cx="26.99" cy="11.62" rx="3.68" ry="2.3" transform="rotate(-25 26.99 11.62)" fill="url(#m)"/>
+  <ellipse cx="13.01" cy="14.62" rx="3.68" ry="2.3" transform="rotate(25 13.01 14.62)" fill="url(#l)"/>
+  <ellipse cx="18.99" cy="14.62" rx="3.68" ry="2.3" transform="rotate(-25 18.99 14.62)" fill="url(#m)"/>
+  <ellipse cx="29.01" cy="14.62" rx="3.68" ry="2.3" transform="rotate(25 29.01 14.62)" fill="url(#l)"/>
+  <ellipse cx="34.99" cy="14.62" rx="3.68" ry="2.3" transform="rotate(-25 34.99 14.62)" fill="url(#m)"/>
+  <ellipse cx="7.01" cy="20.62" rx="3.68" ry="2.3" transform="rotate(25 7.01 20.62)" fill="url(#l)"/>
+  <ellipse cx="12.99" cy="20.62" rx="3.68" ry="2.3" transform="rotate(-25 12.99 20.62)" fill="url(#m)"/>
+  <ellipse cx="35.01" cy="20.62" rx="3.68" ry="2.3" transform="rotate(25 35.01 20.62)" fill="url(#l)"/>
+  <ellipse cx="40.99" cy="20.62" rx="3.68" ry="2.3" transform="rotate(-25 40.99 20.62)" fill="url(#m)"/>
+  <rect x="15" y="38" width="18" height="6" rx="2" fill="url(#p)"/>
 </svg>

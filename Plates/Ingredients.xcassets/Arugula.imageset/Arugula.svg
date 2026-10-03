@@ -1,7 +1,30 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Arugula">
-  <g transform="translate(-3.06 -3.14) scale(1.125)">
-    <path d="M24 41V22" stroke="#5f8c3f" stroke-width="2.4" stroke-linecap="round"/>
-    <path d="M23 24c-6-1-9-4-11-9 5-1 9 1 11 4-1-4 0-8 2-11 3 4 3 9 1 12 3-3 7-4 11-3-2 5-6 8-12 7Z" fill="#4f7c37"/>
-    <path d="M25 24c5 0 9-3 11-7" stroke="#8fb35c" stroke-width="1.6" fill="none"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Arugula leaves">
+  <defs>
+    <radialGradient id="g" cx="-4" cy="-30" r="26" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a6dc7e"/><stop offset=".5" stop-color="#5fa83f"/><stop offset="1" stop-color="#3f8a2e"/></radialGradient>
+  </defs>
+  <g transform="translate(27 43) rotate(22)">
+    <path d="M0 0V-12" stroke="#4f8a3a" stroke-width="2.2" stroke-linecap="round"/>
+    <g fill="url(#g)">
+      <path d="M0-9V-31" stroke="url(#g)" stroke-width="3" stroke-linecap="round"/>
+      <ellipse cx="-3.4" cy="-11" rx="3.4" ry="1.9" transform="rotate(30 -3.4 -11)"/>
+      <ellipse cx="3.4" cy="-11" rx="3.4" ry="1.9" transform="rotate(-30 3.4 -11)"/>
+      <ellipse cx="-4" cy="-16.4" rx="4.2" ry="2.3" transform="rotate(30 -4 -16.4)"/>
+      <ellipse cx="4" cy="-16.4" rx="4.2" ry="2.3" transform="rotate(-30 4 -16.4)"/>
+      <ellipse cx="0" cy="-27" rx="6.4" ry="8.4"/>
+    </g>
+    <path d="M0-10V-31" stroke="#2f6e22" stroke-opacity=".45" stroke-width="1" stroke-linecap="round"/>
   </g>
+  <g transform="translate(21 43) rotate(-16)">
+    <path d="M0 0V-12" stroke="#4f8a3a" stroke-width="2.2" stroke-linecap="round"/>
+    <g fill="url(#g)">
+      <path d="M0-9V-31" stroke="url(#g)" stroke-width="3" stroke-linecap="round"/>
+      <ellipse cx="-3.4" cy="-11" rx="3.4" ry="1.9" transform="rotate(30 -3.4 -11)"/>
+      <ellipse cx="3.4" cy="-11" rx="3.4" ry="1.9" transform="rotate(-30 3.4 -11)"/>
+      <ellipse cx="-4" cy="-16.4" rx="4.2" ry="2.3" transform="rotate(30 -4 -16.4)"/>
+      <ellipse cx="4" cy="-16.4" rx="4.2" ry="2.3" transform="rotate(-30 4 -16.4)"/>
+      <ellipse cx="0" cy="-27" rx="6.4" ry="8.4"/>
+    </g>
+    <path d="M0-10V-31" stroke="#2f6e22" stroke-opacity=".45" stroke-width="1" stroke-linecap="round"/>
+  </g>
+  <ellipse cx="9.2" cy="15.6" rx="1.6" ry="3" transform="rotate(-10 9.2 15.6)" fill="#fff" fill-opacity=".55"/>
 </svg>

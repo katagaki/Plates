@@ -1,10 +1,17 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cardamom">
-  <g transform="translate(-3 -3.16) scale(1.125)">
-    <g fill="#8fb35c">
-      <ellipse cx="18" cy="28" rx="5" ry="9" transform="rotate(-25 18 28)"/>
-      <ellipse cx="30" cy="26" rx="5" ry="9" transform="rotate(20 30 26)"/>
-    </g>
-    <path d="M14 21l-2-4M34 19l2-4" stroke="#7a9e4e" stroke-width="2" stroke-linecap="round"/>
-    <path d="M17 21l3 15M31 19l-3 15" stroke="#6f8f45" stroke-width="1.4"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Green cardamom pods">
+  <defs>
+    <linearGradient id="p" x1="-6" y1="-5" x2="6" y2="6" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c6e292"/><stop offset=".5" stop-color="#8fb35c"/><stop offset="1" stop-color="#5c7c33"/></linearGradient>
+  </defs>
+  <g transform="translate(16.6 26) rotate(-22)">
+    <path d="M0 -11C4.6 -8.2 6 -2.4 6 1.2 6 6.4 3.4 10.4 0 11 -3.4 10.4 -6 6.4 -6 1.2 -6 -2.4 -4.6 -8.2 0 -11Z" fill="url(#p)"/>
+    <path d="M.4 -9C2 -3.4 2 4 .4 9.6M-3.4 -6C-4.2 -.4 -3.6 5.4 -1.8 9" stroke="#4f6f2a" stroke-opacity=".5" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <path d="M0 -10.6V-13" stroke="#6f8f45" stroke-width="1.8" stroke-linecap="round"/>
+    <ellipse cx="-3" cy="-2" rx="1" ry="3.2" fill="#fff" fill-opacity=".5"/>
+  </g>
+  <g transform="translate(31.4 24.4) rotate(20)">
+    <path d="M0 -11C4.6 -8.2 6 -2.4 6 1.2 6 6.4 3.4 10.4 0 11 -3.4 10.4 -6 6.4 -6 1.2 -6 -2.4 -4.6 -8.2 0 -11Z" fill="url(#p)"/>
+    <path d="M.4 -9C2 -3.4 2 4 .4 9.6M-3.4 -6C-4.2 -.4 -3.6 5.4 -1.8 9" stroke="#4f6f2a" stroke-opacity=".5" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <path d="M0 -10.6V-13" stroke="#6f8f45" stroke-width="1.8" stroke-linecap="round"/>
+    <ellipse cx="-3" cy="-2" rx="1" ry="3.2" fill="#fff" fill-opacity=".5"/>
   </g>
 </svg>

@@ -1,8 +1,15 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Oats">
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bowl of oatmeal">
+  <defs>
+    <radialGradient id="m" cx="19" cy="17" r="15" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fbf0d4"/><stop offset=".55" stop-color="#e6d3a4"/><stop offset="1" stop-color="#c4a774"/></radialGradient>
+    <linearGradient id="b" x1="9" y1="0" x2="39" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d79c64"/><stop offset=".45" stop-color="#b07440"/><stop offset="1" stop-color="#7a4a26"/></linearGradient>
+    <linearGradient id="f" x1="0" y1="18" x2="0" y2="26" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fffaea"/><stop offset="1" stop-color="#ead9b0"/></linearGradient>
+  </defs>
   <g transform="translate(-3 -3.75) scale(1.125)">
-    <path d="M9 26h30a15 13 0 0 1-30 0Z" fill="#e6e0d4"/>
-    <path d="M12 26c2-5 7-8 12-8s10 3 12 8Z" fill="#d9c9a3"/>
-    <g fill="#f0e6cd"><ellipse cx="18" cy="23" rx="2.4" ry="1.6"/><ellipse cx="25" cy="21" rx="2.4" ry="1.6"/><ellipse cx="31" cy="24" rx="2.4" ry="1.6"/></g>
-    <rect x="19" y="39" width="10" height="3" rx="1.5" fill="#c8c2b6"/>
+    <path d="M11.5 26c1.6-5.4 6.6-8.6 12.5-8.6s10.9 3.2 12.5 8.6Z" fill="url(#m)"/>
+    <g fill="url(#f)"><ellipse cx="18" cy="22.6" rx="2.6" ry="1.6" transform="rotate(-15 18 22.6)"/><ellipse cx="25" cy="20.6" rx="2.6" ry="1.6" transform="rotate(10 25 20.6)"/><ellipse cx="30.6" cy="23.8" rx="2.4" ry="1.5" transform="rotate(-20 30.6 23.8)"/><ellipse cx="22.6" cy="24.8" rx="2.2" ry="1.4"/></g>
+    <g stroke="#a8864e" stroke-opacity=".45" stroke-width=".9" fill="none" stroke-linecap="round"><path d="M16 23.6c1.2.6 2.8.6 4 0"/><path d="M23 21.6c1.2.6 2.8.6 4 0"/><path d="M28.8 24.8c1.2.6 2.6.4 3.6-.2"/></g>
+    <path d="M9 25h30a15 13 0 0 1-30 0Z" fill="url(#b)"/>
+    <rect x="19.5" y="38" width="9" height="3" rx="1.5" fill="#7a4a26"/>
+    <path d="M12.4 28.4c1.4 3.4 4 6 7.4 7.4" stroke="#fff" stroke-opacity=".45" stroke-width="1.8" fill="none" stroke-linecap="round"/>
   </g>
 </svg>

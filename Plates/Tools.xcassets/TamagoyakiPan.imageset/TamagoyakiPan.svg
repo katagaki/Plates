@@ -1,8 +1,16 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tamagoyaki pan">
-  <path d="M4 18 26 12l10 14-22 6Z" fill="#c9783a"/>
-  <path d="M6.5 19 25 14l8 11.4-18.6 5Z" fill="#e8964a"/>
-  <path d="M11 24.5 22 21.5l4.5 6-11 3Z" fill="#f6d55c"/>
-  <path d="M13.5 27.5l10-2.6" stroke="#e8bc3a" stroke-width="1.2"/>
-  <path d="M35 24l9-4" stroke="#8d939b" stroke-width="2.4" stroke-linecap="round"/>
-  <path d="M38 22.6l7-3" stroke="#a97142" stroke-width="5" stroke-linecap="round" transform="translate(1 -1)"/>
+  <defs>
+    <linearGradient id="o" x1="4" y1="12" x2="36" y2="32" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f2a466"/><stop offset=".5" stop-color="#d27a3c"/><stop offset="1" stop-color="#a3521f"/></linearGradient>
+    <linearGradient id="i" x1="7" y1="14" x2="33" y2="30" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f7b77c"/><stop offset="1" stop-color="#e08a48"/></linearGradient>
+    <linearGradient id="y" x1="11" y1="21" x2="26" y2="30" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff59a"/><stop offset=".5" stop-color="#ffd21f"/><stop offset="1" stop-color="#e09a00"/></linearGradient>
+    <linearGradient id="h" x1="40.5" y1="18" x2="42.5" y2="23" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d79c64"/><stop offset=".5" stop-color="#b07440"/><stop offset="1" stop-color="#8a5530"/></linearGradient>
+  </defs>
+  <path d="M35 24l5-2.2" stroke="#8e99a4" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M39 22.6l7-3" stroke="url(#h)" stroke-width="5" stroke-linecap="round"/>
+  <path d="M4 18 26 12l10 14-22 6Z" fill="url(#o)"/>
+  <path d="M6.5 19 25 14l8 11.4-18.6 5Z" fill="url(#i)"/>
+  <path d="M11 24.5 22 21.5l4.5 6-11 3Z" fill="url(#y)"/>
+  <path d="M13.5 27.5l10-2.6" stroke="#e09a00" stroke-opacity=".6" stroke-width="1.2"/>
+  <path d="M13.2 24.4l6-1.6" stroke="#fff" stroke-opacity=".7" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M7 18.2 24 13.6" stroke="#ffd1a6" stroke-opacity=".8" stroke-width="1.2" stroke-linecap="round"/>
 </svg>

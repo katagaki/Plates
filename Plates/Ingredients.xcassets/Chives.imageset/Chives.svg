@@ -1,6 +1,19 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chives">
-  <g transform="translate(-3 -3.06) scale(1.125)">
-    <path d="M12 40V21M18 40V13M24 40V9M30 40V15M36 40V22" stroke="#5f9e4a" stroke-width="3" stroke-linecap="round"/>
-    <rect x="9" y="29" width="30" height="5" rx="2.5" fill="#c98b3a"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bunch of chives with a blossom">
+  <defs>
+    <linearGradient id="g" x1="11" y1="0" x2="36" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8fcf5c"/><stop offset=".5" stop-color="#5fa83f"/><stop offset="1" stop-color="#3f8a2e"/></linearGradient>
+    <radialGradient id="f" cx="28.5" cy="8" r="7" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#efc6ff"/><stop offset=".5" stop-color="#bb78dc"/><stop offset="1" stop-color="#8240ab"/></radialGradient>
+    <linearGradient id="t" x1="0" y1="29" x2="0" y2="34" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ead2a0"/><stop offset="1" stop-color="#b8945a"/></linearGradient>
+  </defs>
+  <g stroke="url(#g)" stroke-width="2.4" stroke-linecap="round" fill="none">
+    <path d="M12.5 41V18"/>
+    <path d="M16 41V13"/>
+    <path d="M19.5 41V10"/>
+    <path d="M23 41V14"/>
+    <path d="M26.5 41V9"/>
+    <path d="M33.5 41V17"/>
+    <path d="M30 41V13"/>
   </g>
+  <circle cx="30" cy="10" r="4.6" fill="url(#f)"/>
+  <ellipse cx="28.4" cy="8.4" rx="1.6" ry="1.1" transform="rotate(-35 28.4 8.4)" fill="#fff" fill-opacity=".6"/>
+  <rect x="10" y="29" width="27" height="4.4" rx="2.2" fill="url(#t)"/>
 </svg>

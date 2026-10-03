@@ -1,9 +1,21 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Watercress">
+  <defs>
+    <linearGradient id="s" x1="0" y1="16" x2="0" y2="42" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6fae4e"/><stop offset="1" stop-color="#3f7a2a"/></linearGradient>
+    <linearGradient id="l" x1="9" y1="11" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#9cd476"/><stop offset=".5" stop-color="#5a9e3e"/><stop offset="1" stop-color="#2f6e22"/></linearGradient>
+  </defs>
   <g transform="translate(-2.88 -3.44) scale(1.125)">
-    <path d="M24 42c0-10 2-18 8-24M24 42c-2-9-5-15-10-19" stroke="#4f7f36" stroke-width="2" fill="none" stroke-linecap="round"/>
-    <circle cx="32" cy="17" r="5" fill="#5f9e4a"/>
-    <circle cx="14" cy="22" r="5" fill="#6ba14a"/>
-    <circle cx="27" cy="27" r="4" fill="#7fb069"/>
-    <circle cx="19" cy="31" r="4" fill="#6ba14a"/>
+    <path d="M24 42c0-10 2-18 8-24M24 42c-2-9-5-15-10-19M24.6 33c1.6-2.2 3.4-4.4 4.6-5.6M22.8 35.6c-1.4-1.6-3-3.2-4.6-4.2" stroke="url(#s)" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <g fill="url(#l)">
+      <circle cx="32" cy="17" r="5"/>
+      <circle cx="14" cy="22" r="5"/>
+      <circle cx="27.6" cy="20.6" r="2.8"/>
+      <circle cx="18.6" cy="23.2" r="2.8"/>
+      <circle cx="29.4" cy="27" r="4"/>
+      <circle cx="18" cy="31" r="4"/>
+    </g>
+    <g fill="#fff" fill-opacity=".55">
+      <ellipse cx="30.2" cy="15.2" rx="1.8" ry="1.1" transform="rotate(-40 30.2 15.2)"/>
+      <ellipse cx="12.2" cy="20.2" rx="1.8" ry="1.1" transform="rotate(-40 12.2 20.2)"/>
+    </g>
   </g>
 </svg>

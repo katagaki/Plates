@@ -1,7 +1,13 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Carton of milk">
+  <defs>
+    <linearGradient id="f" x1="13" y1="12" x2="26" y2="41" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#ebe6da"/></linearGradient>
+    <linearGradient id="s" x1="24" y1="12" x2="35" y2="41" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e2ddd1"/><stop offset="1" stop-color="#bdb6a6"/></linearGradient>
+    <linearGradient id="l" x1="17" y1="24" x2="31" y2="34" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7fd0ff"/><stop offset=".5" stop-color="#33b1ff"/><stop offset="1" stop-color="#1680d0"/></linearGradient>
+  </defs>
   <g transform="translate(-3 -3.19) scale(1.125)">
-    <path d="M13 17 24 10l11 7v22a2 2 0 0 1-2 2H15a2 2 0 0 1-2-2Z" fill="#f0ece4"/>
-    <path d="M24 10 35 17v22a2 2 0 0 1-2 2h-9Z" fill="#dcd7cc"/>
-    <rect x="17" y="24" width="14" height="10" rx="2" fill="#33b1ff"/>
+    <path d="M13 17 24 10l11 7v22a2 2 0 0 1-2 2H15a2 2 0 0 1-2-2Z" fill="url(#f)"/>
+    <path d="M24 10 35 17v22a2 2 0 0 1-2 2h-9Z" fill="url(#s)"/>
+    <rect x="17" y="24" width="14" height="10" rx="2" fill="url(#l)"/>
+    <path d="M15 19.6v14" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/>
   </g>
 </svg>

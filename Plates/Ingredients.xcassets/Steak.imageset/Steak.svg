@@ -1,5 +1,10 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Steak">
-  <path d="M6 24c0-8 7-14 17-14 7 0 11 3 14 7 4 1 6 4 6 8 0 7-6 12-15 13-6 .6-11-.5-15-3-4-2.5-7-6-7-11Z" fill="#f4e4cc"/>
-  <path d="M9.5 24c0-6 6-10.5 13.5-10.5 6 0 9.5 2.5 12 6 3.5 1 5 3.2 5 6.2 0 5.5-5 9.5-12.5 10.3-5 .5-9.5-.3-12.5-2.5-3.5-2.2-5.5-5.5-5.5-9.5Z" fill="#c43a3a"/>
-  <path d="M15 21c3-2 6-2 8 0M24 28c3 1.5 6 1.5 8-.5M14 29c1.5 1 3 1 4.5.2M28 20c1.5-.5 3 0 4 1" stroke="#ecc4b8" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Raw steak">
+  <defs>
+    <linearGradient id="f" x1="6" y1="10" x2="43" y2="38" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fffaf0"/><stop offset=".5" stop-color="#f4e4cc"/><stop offset="1" stop-color="#d9c19c"/></linearGradient>
+    <radialGradient id="m" cx="17" cy="18" r="26" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f0766a"/><stop offset=".5" stop-color="#c43a3a"/><stop offset="1" stop-color="#8a1f26"/></radialGradient>
+  </defs>
+  <path d="M6 24c0-8 7-14 17-14 7 0 11 3 14 7 4 1 6 4 6 8 0 7-6 12-15 13-6 .6-11-.5-15-3-4-2.5-7-6-7-11Z" fill="url(#f)"/>
+  <path d="M9.5 24c0-6 6-10.5 13.5-10.5 6 0 9.5 2.5 12 6 3.5 1 5 3.2 5 6.2 0 5.5-5 9.5-12.5 10.3-5 .5-9.5-.3-12.5-2.5-3.5-2.2-5.5-5.5-5.5-9.5Z" fill="url(#m)"/>
+  <path d="M15 21c3-2 6-2 8 0M24 28c3 1.5 6 1.5 8-.5M14 29c1.5 1 3 1 4.5.2M28 20c1.5-.5 3 0 4 1" stroke="#f8d4ca" stroke-opacity=".8" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <path d="M12.4 20.6c1-2 2.6-3.4 4.6-4.2" stroke="#fff" stroke-linecap="round" fill="none" stroke-opacity=".45" stroke-width="1.6"/>
 </svg>

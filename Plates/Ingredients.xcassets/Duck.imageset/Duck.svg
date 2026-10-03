@@ -1,14 +1,22 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sliced duck breast">
-  <g transform="translate(-3 -3.38) scale(1.125)">
-    <g fill="#a8523f" stroke="#f0e2cf" stroke-width="2">
-      <ellipse cx="15" cy="31" rx="8" ry="6" transform="rotate(-15 15 31)"/>
-      <ellipse cx="24" cy="27" rx="8" ry="6" transform="rotate(-15 24 27)"/>
-      <ellipse cx="33" cy="23" rx="8" ry="6" transform="rotate(-15 33 23)"/>
-    </g>
-    <g fill="#cd6f60">
-      <ellipse cx="15" cy="31" rx="4.5" ry="3" transform="rotate(-15 15 31)"/>
-      <ellipse cx="24" cy="27" rx="4.5" ry="3" transform="rotate(-15 24 27)"/>
-      <ellipse cx="33" cy="23" rx="4.5" ry="3" transform="rotate(-15 33 23)"/>
-    </g>
+  <defs>
+    <radialGradient id="m" cx="-3" cy="-1" r="12" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f6b0aa"/><stop offset=".55" stop-color="#d8646c"/><stop offset="1" stop-color="#9a3344"/></radialGradient>
+    <linearGradient id="k" x1="0" y1="-6" x2="0" y2="-2" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c98446"/><stop offset=".5" stop-color="#8e4e22"/><stop offset="1" stop-color="#5e2e10"/></linearGradient>
+  </defs>
+  <g transform="translate(14 31) rotate(-22)">
+    <path d="M-9.5-3.4C-9.5-5-8.2-6.2-6.6-6.2H6.6c1.6 0 2.9 1.2 2.9 2.8V0c0 4.4-4.2 7.4-9.5 7.4S-9.5 4.4-9.5 0Z" fill="url(#m)"/>
+    <path d="M-9.5-3.4C-9.5-5-8.2-6.2-6.6-6.2H6.6c1.6 0 2.9 1.2 2.9 2.8v.4h-19Z" fill="url(#k)"/>
+    <path d="M-9.5-2.4H9.5" stroke="#fbeedb" stroke-width="1.2"/>
   </g>
+  <g transform="translate(23 26.5) rotate(-22)">
+    <path d="M-9.5-3.4C-9.5-5-8.2-6.2-6.6-6.2H6.6c1.6 0 2.9 1.2 2.9 2.8V0c0 4.4-4.2 7.4-9.5 7.4S-9.5 4.4-9.5 0Z" fill="url(#m)"/>
+    <path d="M-9.5-3.4C-9.5-5-8.2-6.2-6.6-6.2H6.6c1.6 0 2.9 1.2 2.9 2.8v.4h-19Z" fill="url(#k)"/>
+    <path d="M-9.5-2.4H9.5" stroke="#fbeedb" stroke-width="1.2"/>
+  </g>
+  <g transform="translate(32 22) rotate(-22)">
+    <path d="M-9.5-3.4C-9.5-5-8.2-6.2-6.6-6.2H6.6c1.6 0 2.9 1.2 2.9 2.8V0c0 4.4-4.2 7.4-9.5 7.4S-9.5 4.4-9.5 0Z" fill="url(#m)"/>
+    <path d="M-9.5-3.4C-9.5-5-8.2-6.2-6.6-6.2H6.6c1.6 0 2.9 1.2 2.9 2.8v.4h-19Z" fill="url(#k)"/>
+    <path d="M-9.5-2.4H9.5" stroke="#fbeedb" stroke-width="1.2"/>
+  </g>
+  <ellipse cx="27" cy="25.4" rx="2.6" ry="1.3" transform="rotate(-22 27 25.4)" fill="#fff" fill-opacity=".35"/>
 </svg>

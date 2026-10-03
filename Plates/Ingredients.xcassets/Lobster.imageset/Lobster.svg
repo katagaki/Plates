@@ -1,12 +1,16 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lobster">
-  <path d="M20 16c0-3 2-5 4-5s4 2 4 5v12c0 3-2 5-4 5s-4-2-4-5Z" fill="#c8382f"/>
-  <path d="M21 32h6l-1 3h-4Z" fill="#a82a24"/>
-  <path d="M20 36h8l-1 3h-6Z" fill="#a82a24"/>
-  <path d="M18 40c2-1 4-1 6 0 2-1 4-1 6 0l-2 4h-8Z" fill="#c8382f"/>
-  <path d="M20 17c-4-2-7-4-8-8M28 17c4-2 7-4 8-8" stroke="#c8382f" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-  <path d="M12 9c-4-1-7 1-7 4 0 2 2 3 4 2-1-2 0-3 1-3 1 2 3 2 4 0Z" fill="#c8382f"/>
-  <path d="M36 9c4-1 7 1 7 4 0 2-2 3-4 2 1-2 0-3-1-3-1 2-3 2-4 0Z" fill="#c8382f"/>
-  <path d="M22 11c-2-4-5-6-9-7M26 11c2-4 5-6 9-7" stroke="#a82a24" stroke-width="1" fill="none" stroke-linecap="round"/>
-  <g stroke="#a82a24" stroke-width="1.6" stroke-linecap="round"><path d="M20 22l-5 2M20 26l-5 3M28 22l5 2M28 26l5 3"/></g>
-  <path d="M22 20h4M22 24h4M22 28h4" stroke="#e86a5a" stroke-width="1.2" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="b" x1="17" y1="0" x2="31" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff8a6a"/><stop offset=".5" stop-color="#e0402f"/><stop offset="1" stop-color="#a8241c"/></linearGradient>
+    <radialGradient id="c" cx="8" cy="6" r="9" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff8a6a"/><stop offset=".5" stop-color="#e0402f"/><stop offset="1" stop-color="#a8241c"/></radialGradient>
+    <radialGradient id="d" cx="37" cy="6" r="9" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff8a6a"/><stop offset=".5" stop-color="#e0402f"/><stop offset="1" stop-color="#a8241c"/></radialGradient>
+  </defs>
+  <path d="M22.6 11C20 7 16 4 11 3M25.4 11C28 7 32 4 37 3" stroke="#b3281f" stroke-width="1" fill="none" stroke-linecap="round"/>
+  <g stroke="#b3281f" stroke-width="1.4" stroke-linecap="round" fill="none"><path d="M20.4 20.4 15 22.6M20.4 23.6l-5.4 3M27.6 20.4l5.4 2.2M27.6 23.6l5.4 3"/></g>
+  <path d="M21 17.4 15.4 14.4M27 17.4l5.6-3" stroke="url(#b)" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M16.4 15.4C12 18 6.4 15.6 5.6 10.4 5 6.6 7.4 3.4 10.2 3.6c1 0 1.6.8 1.2 1.8l-1.4 3.2c-.4 1 .6 1.8 1.6 1.2l2-1.4c.8-.6 2-.4 2.4.6.8 2 .8 4.6.4 6.4Z" fill="url(#c)"/>
+  <path d="M31.6 15.4c4.4 2.6 10 .2 10.8-5 .6-3.8-1.8-7-4.6-6.8-1 0-1.6.8-1.2 1.8l1.4 3.2c.4 1-.6 1.8-1.6 1.2l-2-1.4c-.8-.6-2-.4-2.4.6-.8 2-.8 4.6-.4 6.4Z" fill="url(#d)"/>
+  <path d="M24 9.6c3.2 0 4.6 3 4.6 7.6v6c0 2.4-2 3.8-4.6 3.8s-4.6-1.4-4.6-3.8v-6c0-4.6 1.4-7.6 4.6-7.6Z" fill="url(#b)"/>
+  <path d="M20.2 27h7.6l-.4 3.4h-6.8ZM20.8 31.2h6.4l-.4 3.2h-5.6ZM21.4 35.2h5.2l-.4 2.8h-4.4Z" fill="url(#b)"/>
+  <path d="M24 38.4c-1.4 0-5.4 1.4-6 3.8.8.8 3 1.4 6 1.4s5.2-.6 6-1.4c-.6-2.4-4.6-3.8-6-3.8Z" fill="url(#b)"/>
+  <path d="M21.6 13.4c.4-1.2 1-2 2-2.4M7.6 9c.4-1.4 1.2-2.4 2.2-2.8" stroke="#fff" stroke-opacity=".75" stroke-width="1.4" fill="none" stroke-linecap="round"/>
 </svg>

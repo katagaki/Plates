@@ -1,8 +1,14 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Yuzu">
+  <defs>
+    <radialGradient id="b" cx="18" cy="21" r="21" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff59a"/><stop offset=".5" stop-color="#fad41f"/><stop offset="1" stop-color="#d9a300"/></radialGradient>
+    <linearGradient id="l" x1="24" y1="8" x2="32" y2="14" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a6dc7e"/><stop offset=".5" stop-color="#5fa83f"/><stop offset="1" stop-color="#3f8a2e"/></linearGradient>
+    <radialGradient id="s" cx="17" cy="21" r="6" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  </defs>
   <g transform="translate(-3 -3.06) scale(1.125)">
-    <circle cx="24" cy="27" r="14" fill="#f1c21b"/>
-    <path d="M13 23c3-4 8-6 12-5" stroke="#ffe97a" stroke-width="3.4" fill="none" stroke-linecap="round"/>
-    <g fill="#e0a900"><circle cx="30" cy="32" r="1.2"/><circle cx="26" cy="35" r="1.2"/><circle cx="33" cy="27" r="1.2"/></g>
-    <path d="M24 13c2-4 5-5 8-5-3 2-4 4-4 6Z" fill="#5f8c3f"/>
+    <path d="M24 13.4c4.4-.6 8.4.8 11 3.6 2.8 3 4 6.6 3.6 10.6-.4 4.6-2.6 8.4-6.6 10.6-2.6 1.4-5.4 1.8-8 1.8s-5.4-.4-8-1.8c-4-2.2-6.2-6-6.6-10.6-.4-4 .8-7.6 3.6-10.6 2.6-2.8 6.6-4.2 11-3.6Z" fill="url(#b)"/>
+    <ellipse cx="17" cy="21" rx="5.6" ry="3.2" transform="rotate(-35 17 21)" fill="url(#s)"/>
+    <g fill="#b88a00" fill-opacity=".45"><circle cx="30" cy="32" r="1"/><circle cx="26" cy="35.4" r="1"/><circle cx="33.4" cy="26.6" r="1"/><circle cx="21" cy="33" r=".9"/><circle cx="29.6" cy="21" r=".9"/><circle cx="24.6" cy="28" r=".8"/><circle cx="16" cy="29" r=".8"/></g>
+    <path d="M24 14.4c-.2-1.4-.6-2.4-1.2-3.2" stroke="#3f8a2e" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    <path d="M24 13c2-4 5-5.4 9-5.2-1.6 3.4-4.8 5.4-9 5.2Z" fill="url(#l)"/>
   </g>
 </svg>

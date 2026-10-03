@@ -1,9 +1,20 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Artichoke">
-  <g transform="translate(-3 -2.94) scale(1.125)">
-    <path d="M24 8c8 4 11 12 9 20-2 7-6 11-9 11s-7-4-9-11c-2-8 1-16 9-20Z" fill="#5f7c45"/>
-    <path d="M24 8c4 4 5 12 4 19-1 5-2 9-4 12" fill="#7a9e4e"/>
-    <g stroke="#8fb35c" stroke-width="1.6" fill="none">
-      <path d="M17 16c3 2 11 2 14 0"/><path d="M16 24c4 2 12 2 16 0"/><path d="M17 31c3 2 11 2 14 0"/>
-    </g>
-  </g>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Globe artichoke">
+  <defs>
+    <linearGradient id="a" x1="0" y1="7" x2="0" y2="22" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c5dd94"/><stop offset=".5" stop-color="#7f9f52"/><stop offset="1" stop-color="#3f5a28"/></linearGradient>
+    <linearGradient id="b" x1="0" y1="13" x2="0" y2="29" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#b9d488"/><stop offset=".5" stop-color="#76964a"/><stop offset="1" stop-color="#3f5a28"/></linearGradient>
+    <linearGradient id="c" x1="0" y1="19" x2="0" y2="38" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#b0cd7e"/><stop offset=".5" stop-color="#6f8f44"/><stop offset="1" stop-color="#3f5a28"/></linearGradient>
+    <linearGradient id="s" x1="22" y1="0" x2="26" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a5c27a"/><stop offset="1" stop-color="#4f6e34"/></linearGradient>
+  </defs>
+  <rect x="22" y="34" width="4" height="9" rx="2" fill="url(#s)"/>
+  <path d="M14.5 21C14.5 14.675 17.38 11.5 19 9.5C20.62 11.5 23.5 14.675 23.5 21Q19 24.15 14.5 21Z" fill="url(#a)"/>
+  <path d="M24.5 21C24.5 14.675 27.38 11.5 29 9.5C30.62 11.5 33.5 14.675 33.5 21Q29 24.15 24.5 21Z" fill="url(#a)"/>
+  <path d="M20 19C20 11.85 22.56 8 24 6C25.44 8 28 11.85 28 19Q24 21.8 20 19Z" fill="url(#a)"/>
+  <path d="M8.5 28C8.5 21.4 11.7 18 13.5 16C15.3 18 18.5 21.4 18.5 28Q13.5 31.5 8.5 28Z" fill="url(#b)"/>
+  <path d="M29.5 28C29.5 21.4 32.7 18 34.5 16C36.3 18 39.5 21.4 39.5 28Q34.5 31.5 29.5 28Z" fill="url(#b)"/>
+  <path d="M15.5 27C15.5 19.3 18.7 15 20.5 13C22.3 15 25.5 19.3 25.5 27Q20.5 30.5 15.5 27Z" fill="url(#b)"/>
+  <path d="M22.5 27C22.5 19.3 25.7 15 27.5 13C29.3 15 32.5 19.3 32.5 27Q27.5 30.5 22.5 27Z" fill="url(#b)"/>
+  <path d="M10.25 34C10.25 26.85 13.93 23 16 21C18.07 23 21.75 26.85 21.75 34Q16 38.025 10.25 34Z" fill="url(#c)"/>
+  <path d="M26.25 34C26.25 26.85 29.93 23 32 21C34.07 23 37.75 26.85 37.75 34Q32 38.025 26.25 34Z" fill="url(#c)"/>
+  <path d="M18 35C18 26.475 21.84 21.5 24 19.5C26.16 21.5 30 26.475 30 35Q24 39.2 18 35Z" fill="url(#c)"/>
+  <path d="M14.4 24c.4-2.8 1.4-5.2 3-7" stroke="#fff" stroke-opacity=".5" stroke-width="1.6" fill="none" stroke-linecap="round"/>
 </svg>

@@ -1,10 +1,15 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sumac">
-  <path d="M5 38c2-9 9-17 19-17s17 8 19 17Z" fill="#8a1f2f"/>
-  <path d="M13 30c3-4 7-6 11-6" stroke="#b03a48" stroke-width="2.4" fill="none" stroke-linecap="round"/>
-  <circle cx="14" cy="34" r="0.8" fill="#5a1018"/>
-  <circle cx="22" cy="31" r="0.8" fill="#c95a62"/>
-  <circle cx="30" cy="33" r="0.8" fill="#5a1018"/>
-  <circle cx="26" cy="26" r="0.7" fill="#c95a62"/>
-  <circle cx="35" cy="35" r="0.7" fill="#5a1018"/>
-  <rect x="3" y="37" width="42" height="3" rx="1.5" fill="#d9d2c4"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ground sumac with berries">
+  <defs>
+    <radialGradient id="m" cx="17" cy="22" r="24" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c04a5e"/><stop offset=".5" stop-color="#8a1f35"/><stop offset="1" stop-color="#561020"/></radialGradient>
+    <radialGradient id="k" cx="33" cy="15" r="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e0607a"/><stop offset=".5" stop-color="#a82640"/><stop offset="1" stop-color="#6e1426"/></radialGradient>
+    <linearGradient id="p" x1="3" y1="0" x2="45" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ece6da"/><stop offset="1" stop-color="#b9b0a0"/></linearGradient>
+  </defs>
+  <path d="M5 38c2-9 9-17 19-17s17 8 19 17Z" fill="url(#m)"/>
+  <g fill="#3e0a14" fill-opacity=".5"><circle cx="14" cy="34" r=".8"/><circle cx="30" cy="33" r=".8"/><circle cx="35" cy="35" r=".7"/><circle cx="20" cy="36" r=".7"/></g>
+  <g fill="#e88a96" fill-opacity=".6"><circle cx="22" cy="31" r=".8"/><circle cx="26" cy="27" r=".7"/><circle cx="17" cy="30" r=".6"/></g>
+  <path d="M12.6 30c3-3.8 7-5.8 11-6" stroke="#fff" stroke-linecap="round" fill="none" stroke-opacity=".35" stroke-width="2.2"/>
+  <path d="M36 22c1-4 2.6-7 5-9" stroke="#7a5a3a" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+  <g fill="url(#k)"><circle cx="33" cy="12.6" r="2.3"/><circle cx="37.2" cy="12" r="2.2"/><circle cx="31" cy="16.6" r="2.3"/><circle cx="35.2" cy="16.4" r="2.3"/><circle cx="33" cy="20.4" r="2.2"/><circle cx="37" cy="20" r="2"/><circle cx="35" cy="8.6" r="2"/></g>
+  <g fill="#fff" fill-opacity=".55"><circle cx="32.2" cy="11.8" r=".7"/><circle cx="30.2" cy="15.8" r=".7"/></g>
+  <rect x="3" y="37" width="42" height="3" rx="1.5" fill="url(#p)"/>
 </svg>

@@ -1,7 +1,14 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Teriyaki sauce">
-  <g transform="translate(-3 -3.25) scale(1.125)">
-    <path d="M20 15h8v4l4 6v15a3 3 0 0 1-3 3H19a3 3 0 0 1-3-3V25l4-6Z" fill="#3c2418"/>
-    <rect x="19" y="9" width="10" height="7" rx="2" fill="#c9302c"/>
-    <rect x="18" y="28" width="12" height="8" rx="1" fill="#e8b53a"/>
-  </g>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bottle of teriyaki sauce">
+  <defs>
+    <linearGradient id="b" x1="13" y1="0" x2="35" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a0603a"/><stop offset=".45" stop-color="#6a3018"/><stop offset="1" stop-color="#3a160a"/></linearGradient>
+    <linearGradient id="c" x1="0" y1="9" x2="0" y2="16" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffb25c"/><stop offset="1" stop-color="#d9520c"/></linearGradient>
+    <linearGradient id="l" x1="0" y1="27" x2="0" y2="37" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e2dccf"/></linearGradient>
+    <linearGradient id="g" x1="19" y1="29" x2="29" y2="35" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d98a4a"/><stop offset="1" stop-color="#8a3e16"/></linearGradient>
+  </defs>
+  <path d="M18 16h12v3.5c3.4.8 5 2.6 5 5.5v14.5a3.5 3.5 0 0 1-3.5 3.5h-15a3.5 3.5 0 0 1-3.5-3.5V25c0-2.9 1.6-4.7 5-5.5Z" fill="url(#b)"/>
+  <rect x="17" y="9.5" width="14" height="7" rx="2" fill="url(#c)"/>
+  <rect x="15" y="27" width="18" height="10" rx="1.4" fill="url(#l)"/>
+  <rect x="19" y="29.6" width="10" height="4.8" rx="2.4" fill="url(#g)"/>
+  <path d="M20.6 30.6l2.4 2.8M24 30.4l2.4 2.8" stroke="#4a1e08" stroke-opacity=".55" stroke-width="1" stroke-linecap="round"/>
+  <path d="M15.4 23.4c.6-1 1.4-1.6 2.6-2" stroke="#fff" stroke-opacity=".45" stroke-width="1.5" fill="none" stroke-linecap="round"/>
 </svg>

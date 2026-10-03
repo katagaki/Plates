@@ -1,12 +1,19 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mackerel">
-  <path d="M11.5 24L2 15L5.5 24L2 33Z" fill="#3f6f8f"/>
-  <path d="M30 17.6l-2-4.5-3 1-2 4Z" fill="#3f6f8f"/>
-  <path d="M19 19.5l1.5-3.5 2.5 3Z" fill="#3f6f8f"/>
-  <path d="M46 24C45 19.45 37.5 17 29 17C19.5 17 13 21.8 10 22.4L10 25.6C13 26.2 19.5 30.5 29 30.5C37.5 30.5 45 28.22 46 24Z" fill="#d6dce2"/>
-  <path d="M46 24C45 19.45 37.5 17 29 17C19.5 17 13 21.8 10 22.4L10 24.3C22 24.6 36 24.6 46 24Z" fill="#3f8a8a"/>
-  <g stroke="#1f3d55" stroke-width="1.5" fill="none" stroke-linecap="round">
-  <path d="M14 21.5c1-1 2 0 2.5-1.5"/><path d="M17.5 23c1-2 2-1 2.5-3.5s2-1 2.5-2"/><path d="M22.5 23.5c1-2 2-1 2.5-3.5s2-1 2.5-2.5"/><path d="M27.5 23.5c1-2 2-1 2.5-3.5s2-1 2.5-2.5"/><path d="M32.5 23c1-2 2-1 2.5-3.5"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Whole mackerel">
+  <defs>
+    <linearGradient id="f" x1="2" y1="15" x2="12" y2="33" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7f9fb6"/><stop offset=".5" stop-color="#5a7b93"/><stop offset="1" stop-color="#3f5e75"/></linearGradient>
+    <linearGradient id="s" x1="0" y1="20" x2="0" y2="31" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f4f7f9"/><stop offset=".6" stop-color="#d6dce2"/><stop offset="1" stop-color="#aab4be"/></linearGradient>
+    <linearGradient id="b" x1="14" y1="17" x2="40" y2="25" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5fb0aa"/><stop offset=".5" stop-color="#3f8a8a"/><stop offset="1" stop-color="#2a6670"/></linearGradient>
+  </defs>
+  <path d="M11.5 24L2 15L5.5 24L2 33Z" fill="url(#f)"/>
+  <path d="M30 17.6l-2-4.5-3 1-2 4Z" fill="url(#f)"/>
+  <path d="M19 19.5l1.5-3.5 2.5 3Z" fill="url(#f)"/>
+  <path d="M46 24C45 19.45 37.5 17 29 17C19.5 17 13 21.8 10 22.4L10 25.6C13 26.2 19.5 30.5 29 30.5C37.5 30.5 45 28.22 46 24Z" fill="url(#s)"/>
+  <path d="M46 24C45 19.45 37.5 17 29 17C19.5 17 13 21.8 10 22.4L10 24.3C22 24.6 36 24.6 46 24Z" fill="url(#b)"/>
+  <g stroke="#173448" stroke-opacity=".75" stroke-width="1.5" fill="none" stroke-linecap="round">
+    <path d="M14 21.5c1-1 2 0 2.5-1.5"/><path d="M17.5 23c1-2 2-1 2.5-3.5s2-1 2.5-2"/><path d="M22.5 23.5c1-2 2-1 2.5-3.5s2-1 2.5-2.5"/><path d="M27.5 23.5c1-2 2-1 2.5-3.5s2-1 2.5-2.5"/><path d="M32.5 23c1-2 2-1 2.5-3.5"/>
   </g>
-  <path d="M39 19.5C36.5 23 36.5 26 39 28.3" stroke="#9aa6b2" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <path d="M39 19.5C36.5 23 36.5 26 39 28.3" stroke="#7d8a97" stroke-opacity=".6" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <path d="M20 27.2c4 1.4 9 1.8 14 1.2" stroke="#fff" stroke-opacity=".75" stroke-width="1.3" fill="none" stroke-linecap="round"/>
   <circle cx="41.5" cy="22.6" r="1.8" fill="#1c2a36"/>
+  <circle cx="41" cy="22.1" r=".55" fill="#fff" fill-opacity=".85"/>
 </svg>

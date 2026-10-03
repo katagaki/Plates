@@ -1,6 +1,12 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aluminium foil">
-  <rect x="8" y="18" width="32" height="12" rx="3" fill="#a8b0b8"/>
-  <rect x="8" y="18" width="32" height="6" rx="3" fill="#cfd6dd"/>
-  <path d="M40 24c4 2 4 8 0 10H16l6-10Z" fill="#e8edf2"/>
-  <path d="M22 34c-2-3-2-7 0-10" stroke="#a8b0b8" stroke-width="1.6" fill="none"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Roll of aluminum foil">
+  <defs>
+    <linearGradient id="r" x1="0" y1="10" x2="0" y2="22" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f2f5f8"/><stop offset=".5" stop-color="#b2bcc6"/><stop offset="1" stop-color="#8e99a4"/></linearGradient>
+    <linearGradient id="s" x1="8" y1="20" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f2f5f8"/><stop offset=".5" stop-color="#c9d1d9"/><stop offset="1" stop-color="#9aa5b0"/></linearGradient>
+  </defs>
+  <path d="M10 10.5h28v11H10a5.5 5.5 0 0 1 0-11Z" fill="url(#r)"/>
+  <ellipse cx="38" cy="16" rx="3.6" ry="5.5" fill="#d3dae1"/>
+  <ellipse cx="38" cy="16" rx="1.5" ry="2.4" fill="#a4693a"/>
+  <path d="M8.5 19.5h29.5l1.6 6-1.8 5 2.2 7.5H11l-2.2-6.5 1.8-5Z" fill="url(#s)"/>
+  <g stroke="#7d8792" stroke-opacity=".4" stroke-width="1.2" stroke-linecap="round" fill="none"><path d="M16 22.5l2.5 6.5-1 7.5"/><path d="M29.5 22l1 6-2.5 8.5"/></g>
+  <path d="M10.5 13.2h13" stroke="#fff" stroke-opacity=".85" stroke-width="1.6" stroke-linecap="round"/>
 </svg>

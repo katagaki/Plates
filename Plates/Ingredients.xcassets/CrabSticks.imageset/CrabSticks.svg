@@ -1,9 +1,16 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Crab sticks">
+  <defs>
+    <linearGradient id="w1" x1="0" y1="14" x2="0" y2="22" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e6dccd"/></linearGradient>
+    <linearGradient id="w2" x1="0" y1="26" x2="0" y2="34" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e6dccd"/></linearGradient>
+    <linearGradient id="r1" x1="0" y1="14" x2="0" y2="18" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff7a5c"/><stop offset=".6" stop-color="#e2472f"/><stop offset="1" stop-color="#e2472f" stop-opacity=".6"/></linearGradient>
+    <linearGradient id="r2" x1="0" y1="26" x2="0" y2="30" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff7a5c"/><stop offset=".6" stop-color="#e2472f"/><stop offset="1" stop-color="#e2472f" stop-opacity=".6"/></linearGradient>
+  </defs>
   <g transform="rotate(-18 24 24)">
-    <rect x="5" y="14" width="32" height="8" rx="2" fill="#f6f1ea"/>
-    <path d="M7 14h28a2 2 0 0 1 2 2v1.5H5V16a2 2 0 0 1 2-2Z" fill="#e2472f"/>
-    <rect x="9" y="26" width="32" height="8" rx="2" fill="#f6f1ea"/>
-    <path d="M11 26h28a2 2 0 0 1 2 2v1.5H9V28a2 2 0 0 1 2-2Z" fill="#e2472f"/>
-    <g stroke="#e6ddd0" stroke-width="1" stroke-linecap="round"><path d="M7 20h28M11 32h28"/></g>
+    <rect x="5" y="14" width="32" height="8" rx="2" fill="url(#w1)"/>
+    <path d="M7 14h28a2 2 0 0 1 2 2v2H5v-2a2 2 0 0 1 2-2Z" fill="url(#r1)"/>
+    <rect x="9" y="26" width="32" height="8" rx="2" fill="url(#w2)"/>
+    <path d="M11 26h28a2 2 0 0 1 2 2v2H9v-2a2 2 0 0 1 2-2Z" fill="url(#r2)"/>
+    <path d="M7 20.4h28M11 32.4h28" stroke="#cfc4b2" stroke-opacity=".6" stroke-width="1" stroke-linecap="round"/>
+    <path d="M8 15.4h12M12 27.4h12" stroke="#fff" stroke-opacity=".55" stroke-width="1.2" stroke-linecap="round"/>
   </g>
 </svg>

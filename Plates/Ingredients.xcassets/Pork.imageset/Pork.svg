@@ -1,7 +1,13 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Thin-sliced pork">
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Thinly sliced pork">
+  <defs>
+    <linearGradient id="m" x1="9" y1="18" x2="38" y2="34" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffb8a6"/><stop offset=".5" stop-color="#ee907c"/><stop offset="1" stop-color="#c9604f"/></linearGradient>
+    <linearGradient id="n" x1="10" y1="13" x2="38" y2="26" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f6a593"/><stop offset="1" stop-color="#c25a4a"/></linearGradient>
+  </defs>
   <g transform="translate(-3 -3.28) scale(1.125)">
-    <path d="M9 30c4-8 12-12 20-11 5 1 9 4 10 8-6 5-14 7-21 6-4-1-7-2-9-3Z" fill="#e8927c"/>
-    <path d="M12 24c5-5 12-7 18-6" stroke="#f5cfc3" stroke-width="3" fill="none" stroke-linecap="round"/>
-    <path d="M14 34c6 2 14 1 20-3" stroke="#d9705c" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M10 25c4-7 11-10 19-10 5 0 9 2 10 5-5 4-12 6-19 6-4 0-7-.5-10-1Z" fill="url(#n)"/>
+    <path d="M12.4 23.4c4-5 10-7.2 17-7.2" stroke="#fff3ea" stroke-opacity=".9" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    <path d="M9 30c4-8 12-12 20-11 5 1 9 4 10 8-6 5-14 7-21 6-4-1-7-2-9-3Z" fill="url(#m)"/>
+    <path d="M11.2 28.4c4-6 10.4-8.6 17.6-8.2" stroke="#fff6ef" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    <path d="M16 30.6c4-3 9-4.4 14-3.8M20 34c3.4-1.4 7-2 10.4-1.6" stroke="#a8473a" stroke-opacity=".4" stroke-width="1.2" fill="none" stroke-linecap="round"/>
   </g>
 </svg>

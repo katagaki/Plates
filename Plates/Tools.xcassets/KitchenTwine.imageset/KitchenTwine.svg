@@ -1,14 +1,12 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kitchen twine">
-  <path d="M12 14h18v22H12Z" fill="#f2ead2"/>
-  <path d="M12 16c6 1.4 12 1.4 18 0" stroke="#d9c89a" stroke-width="1" fill="none"/>
-  <path d="M12 19c6 1.4 12 1.4 18 0" stroke="#d9c89a" stroke-width="1" fill="none"/>
-  <path d="M12 22c6 1.4 12 1.4 18 0" stroke="#d9c89a" stroke-width="1" fill="none"/>
-  <path d="M12 25c6 1.4 12 1.4 18 0" stroke="#d9c89a" stroke-width="1" fill="none"/>
-  <path d="M12 28c6 1.4 12 1.4 18 0" stroke="#d9c89a" stroke-width="1" fill="none"/>
-  <path d="M12 31c6 1.4 12 1.4 18 0" stroke="#d9c89a" stroke-width="1" fill="none"/>
-  <path d="M12 34c6 1.4 12 1.4 18 0" stroke="#d9c89a" stroke-width="1" fill="none"/>
-  <ellipse cx="21" cy="14" rx="9" ry="3" fill="#f6efdc" stroke="#d9c89a" stroke-width="1"/>
-  <ellipse cx="21" cy="14" rx="3" ry="1" fill="#b8a070"/>
-  <ellipse cx="21" cy="36" rx="9" ry="3" fill="#e8dcbc"/>
-  <path d="M30 28c6 0 8 3 7 6s-6 4-4 7 7 2 9 0" stroke="#d9c89a" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Spool of kitchen twine">
+  <defs>
+    <linearGradient id="b" x1="12" y1="0" x2="30" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fffaf0"/><stop offset=".5" stop-color="#efe4c6"/><stop offset="1" stop-color="#cdbb8e"/></linearGradient>
+    <linearGradient id="t" x1="12" y1="11" x2="30" y2="17" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e6dab8"/></linearGradient>
+  </defs>
+  <path d="M30 28c6 0 8 3 7 6s-6 4-4 7 7 2 9 0" stroke="#d2bf8e" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <path d="M12 14h18v22c0 1.7-4 3-9 3s-9-1.3-9-3Z" fill="url(#b)"/>
+  <g stroke="#b8a370" stroke-opacity=".5" stroke-width="1" fill="none"><path d="M12 18c6 1.4 12 1.4 18 0"/><path d="M12 22c6 1.4 12 1.4 18 0"/><path d="M12 26c6 1.4 12 1.4 18 0"/><path d="M12 30c6 1.4 12 1.4 18 0"/><path d="M12 34c6 1.4 12 1.4 18 0"/></g>
+  <ellipse cx="21" cy="14" rx="9" ry="3" fill="url(#t)"/>
+  <ellipse cx="21" cy="14" rx="3" ry="1" fill="#a4693a"/>
+  <path d="M14.6 20v9" stroke="#fff" stroke-opacity=".7" stroke-width="1.6" stroke-linecap="round"/>
 </svg>

@@ -1,7 +1,11 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fried egg">
-  <g transform="translate(-2.94 -3.09) scale(1.125)">
-    <path d="M17 12c8-4 15 1 15 8 0 4 6 4 6 10s-6 9-13 9-16-3-16-10c0-5 3-6 4-9s1-6 4-8Z" fill="#f8f6f1"/>
-    <circle cx="23" cy="26" r="7" fill="#f1c21b"/>
-    <circle cx="21" cy="24" r="2.4" fill="#ffe97a"/>
-  </g>
+  <defs>
+    <linearGradient id="w" x1="10" y1="9" x2="38" y2="43" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e3ddd0"/></linearGradient>
+    <radialGradient id="y" cx="21" cy="23" r="10" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffe680"/><stop offset=".55" stop-color="#ffbf1f"/><stop offset="1" stop-color="#ef8a0a"/></radialGradient>
+    <radialGradient id="r" cx="24" cy="28.5" r="11" gradientUnits="userSpaceOnUse"><stop offset=".6" stop-color="#c9b98f" stop-opacity=".45"/><stop offset="1" stop-color="#c9b98f" stop-opacity="0"/></radialGradient>
+  </defs>
+  <path d="M16.2 10.4c9-4.5 16.9 1.1 16.9 9 0 4.5 6.8 4.5 6.8 11.3S33.1 40.8 25.2 40.8 7.2 37.4 7.2 29.5c0-5.6 3.4-6.8 4.5-10.1s1.1-6.8 4.5-9Z" fill="url(#w)"/>
+  <circle cx="24" cy="28.5" r="11" fill="url(#r)"/>
+  <circle cx="23" cy="26.5" r="8" fill="url(#y)"/>
+  <ellipse cx="20.4" cy="23.6" rx="2.6" ry="1.8" transform="rotate(-35 20.4 23.6)" fill="#fff" fill-opacity=".85"/>
 </svg>

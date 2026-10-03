@@ -1,7 +1,10 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shrimp">
-  <g transform="translate(-3.62 -3.1) scale(1.125)">
-    <path d="M36 14c-14 0-22 7-22 15 0 6 5 9 10 9 6 0 9-4 9-8 0-3-2-5-5-5-2 0-4 1-4 3 2-1 4 0 4 2s-2 3-4 3c-3 0-5-2-5-5 0-6 7-10 17-10Z" fill="#e8804f"/>
-    <path d="M36 14c-8 0-14 2-18 6" stroke="#f4a97f" stroke-width="3" fill="none" stroke-linecap="round"/>
-    <path d="M36 14c3-2 6-3 8-2-2 2-3 4-3 6Z" fill="#f4a97f"/>
-  </g>
+  <defs>
+    <linearGradient id="b" x1="14" y1="12" x2="34" y2="42" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffb489"/><stop offset=".5" stop-color="#f27a45"/><stop offset="1" stop-color="#c94a22"/></linearGradient>
+    <linearGradient id="t" x1="38" y1="11" x2="47" y2="20" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffc9a3"/><stop offset="1" stop-color="#ef8150"/></linearGradient>
+  </defs>
+  <path d="M37 12.8c3.4-2.2 6.8-3.4 9-2.2-2.2 2.2-3.4 4.5-3.4 6.8Z" fill="url(#t)"/>
+  <path d="M37 12.8c-15.8 0-24.8 7.9-24.8 16.9 0 6.8 5.6 10.1 11.3 10.1 6.8 0 10.1-4.5 10.1-9 0-3.4-2.2-5.6-5.6-5.6-2.2 0-4.5 1.1-4.5 3.4 2.2-1.1 4.5 0 4.5 2.2s-2.2 3.4-4.5 3.4c-3.4 0-5.6-2.2-5.6-5.6 0-6.8 7.9-11.3 19.1-11.3Z" fill="url(#b)"/>
+  <path d="M27 14.6c.6 2 .4 4.2-.6 6M20.6 18c1.4 1.6 1.8 3.6 1.4 5.8M16.4 23.4c1.8 1 2.8 2.6 3 4.6" stroke="#b5401c" stroke-opacity=".5" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <path d="M35 14.4c-7.2.4-13 2.6-17 6.4" stroke="#fff" stroke-opacity=".5" stroke-width="2.2" fill="none" stroke-linecap="round"/>
 </svg>

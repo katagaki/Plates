@@ -1,7 +1,14 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Swiss chard">
-  <g stroke-width="3.2" stroke-linecap="round" fill="none"><path d="M20 43 15 24" stroke="#d23c4a"/><path d="M24 43V20" stroke="#f0b429"/><path d="M28 43 33 24" stroke="#d23c4a"/></g>
-  <path d="M15 26C5 22 5 10 11 3c6 4 8 13 4 23Z" fill="#3e7d3a"/>
-  <path d="M33 26c10-4 10-16 4-23-6 4-8 13-4 23Z" fill="#3e7d3a"/>
-  <path d="M24 22c-5-5-5-13 0-19 5 6 5 14 0 19Z" fill="#4a9044"/>
-  <g stroke-width="1.4" fill="none"><path d="M15 26 11 5" stroke="#e05a66"/><path d="M33 26 37 5" stroke="#e05a66"/><path d="M24 21V5" stroke="#f6cf6a"/></g>
+  <defs>
+    <linearGradient id="r" x1="0" y1="20" x2="0" y2="43" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f0707a"/><stop offset="1" stop-color="#b3243a"/></linearGradient>
+    <linearGradient id="y" x1="0" y1="20" x2="0" y2="43" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffd866"/><stop offset="1" stop-color="#e09a00"/></linearGradient>
+    <radialGradient id="l" cx="9" cy="8" r="24" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7fbf55"/><stop offset=".5" stop-color="#3e7d3a"/><stop offset="1" stop-color="#24561e"/></radialGradient>
+    <radialGradient id="c" cx="21" cy="6" r="20" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8fcf5c"/><stop offset=".5" stop-color="#4a9044"/><stop offset="1" stop-color="#2f6e22"/></radialGradient>
+  </defs>
+  <g stroke-width="3.2" stroke-linecap="round" fill="none"><path d="M20 43 15 24" stroke="url(#r)"/><path d="M24 43V20" stroke="url(#y)"/><path d="M28 43 33 24" stroke="url(#r)"/></g>
+  <path d="M15 26C5 22 5 10 11 3c6 4 8 13 4 23Z" fill="url(#l)"/>
+  <path d="M33 26c10-4 10-16 4-23-6 4-8 13-4 23Z" fill="url(#l)"/>
+  <path d="M24 22c-5-5-5-13 0-19 5 6 5 14 0 19Z" fill="url(#c)"/>
+  <g stroke-width="1.4" fill="none"><path d="M15 26 11 5" stroke="#f07a86"/><path d="M33 26 37 5" stroke="#f07a86"/><path d="M24 21V5" stroke="#ffe08a"/></g>
+  <path d="M7.4 14c.4-2.6 1.2-4.8 2.4-6.6" stroke="#fff" stroke-linecap="round" fill="none" stroke-opacity=".45" stroke-width="1.4"/>
 </svg>

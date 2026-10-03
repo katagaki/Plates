@@ -1,7 +1,13 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pizza cutter">
-  <path d="M24 24 42 42" stroke="#3c4046" stroke-width="5" stroke-linecap="round"/>
-  <circle cx="17" cy="17" r="12" fill="#cfd6dd"/>
-  <circle cx="17" cy="17" r="12" fill="none" stroke="#e8edf2" stroke-width="1.6"/>
-  <path d="M17 17 26 26" stroke="#8d939b" stroke-width="3" stroke-linecap="round"/>
-  <circle cx="17" cy="17" r="2.6" fill="#8d939b"/>
+  <defs>
+    <radialGradient id="w" cx="12" cy="12" r="19" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f2f6f9"/><stop offset=".5" stop-color="#c3ccd4"/><stop offset="1" stop-color="#8e99a4"/></radialGradient>
+    <linearGradient id="h" x1="25" y1="25" x2="43" y2="43" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#767d86"/><stop offset=".5" stop-color="#4e545c"/><stop offset="1" stop-color="#25282d"/></linearGradient>
+  </defs>
+  <path d="M27 27 41.5 41.5" stroke="url(#h)" stroke-width="5.4" stroke-linecap="round"/>
+  <circle cx="17" cy="17" r="12" fill="url(#w)"/>
+  <circle cx="17" cy="17" r="10.6" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="1"/>
+  <path d="M17 17 28 28" stroke="#8e99a4" stroke-width="3.2" stroke-linecap="round"/>
+  <circle cx="17" cy="17" r="2.8" fill="#6f7a85"/>
+  <path d="M10 12.4c1-1.8 2.6-3.2 4.6-3.8" stroke="#fff" stroke-opacity=".85" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <path d="M29.4 31.4 38 40" stroke="#fff" stroke-opacity=".2" stroke-width="1.2" stroke-linecap="round"/>
 </svg>

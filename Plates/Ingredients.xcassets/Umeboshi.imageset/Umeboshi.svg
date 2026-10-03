@@ -1,8 +1,14 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Umeboshi">
-  <g transform="translate(-3 -3.12) scale(1.125)">
-    <circle cx="24" cy="27" r="13" fill="#c0445c"/>
-    <path d="M15 22c3-4 7-5 10-4" stroke="#d96b80" stroke-width="3" fill="none" stroke-linecap="round"/>
-    <path d="M20 30c2-2 4-2 6 0s4 2 6 0" stroke="#9c2f45" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-    <path d="M24 14c1-3 3-4 5-4-2 2-2 3-1 5Z" fill="#5f8c3f"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Umeboshi pickled plum">
+  <defs>
+    <radialGradient id="b" cx="17" cy="18" r="26" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f4808f"/><stop offset=".5" stop-color="#c8344c"/><stop offset="1" stop-color="#8a1c34"/></radialGradient>
+  </defs>
+  <path d="M24 10.6c3.6-.8 7.6.2 11 2.8 4.6 3.6 6.6 9.4 5.4 15-1.2 6-6.4 11-13 11.8-6.8.8-13.8-2-16.6-8-2.4-5.2-1.6-11.8 2.4-16.2 2.8-3.2 6.6-4.8 10.8-5.4Z" fill="url(#b)"/>
+  <g stroke="#7a1428" stroke-opacity=".5" stroke-width="1.4" fill="none" stroke-linecap="round">
+    <path d="M18 24c2-1.6 4-1.6 6 0s4 1.6 6 0"/>
+    <path d="M15 31c2.4-1.2 4.6-1 6.8.6"/>
+    <path d="M27 32.4c2-.8 4-.6 6 .8"/>
+    <path d="M30 18.4c1.6.4 3 1.6 3.8 3.2"/>
   </g>
+  <ellipse cx="24.6" cy="11.8" rx="2.4" ry="1.2" fill="#6e1226" fill-opacity=".7"/>
+  <ellipse cx="16.6" cy="17.6" rx="3.4" ry="2" transform="rotate(-35 16.6 17.6)" fill="#fff" fill-opacity=".75"/>
 </svg>

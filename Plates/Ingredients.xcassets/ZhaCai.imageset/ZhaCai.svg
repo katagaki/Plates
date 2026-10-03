@@ -1,7 +1,18 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zha cai">
-  <path d="M7 30h34c-1 6-8 10-17 10S8 36 7 30Z" fill="#e8e2d6"/>
-  <path d="M7 30h34" stroke="#f4efe6" stroke-width="2" stroke-linecap="round"/>
-  <g stroke="#8f8a3a" stroke-width="2.4" fill="none" stroke-linecap="round"><path d="M12 28c3-3 7-5 11-5"/><path d="M16 29c4-4 9-6 14-6"/><path d="M22 29c4-3 9-4 14-3"/><path d="M14 24c4-2 8-3 12-2"/><path d="M24 24c3-2 7-2 10 0"/></g>
-  <g stroke="#b3ad55" stroke-width="1" fill="none" stroke-linecap="round"><path d="M13 27c3-2 6-4 10-4"/><path d="M23 28c4-3 8-3 12-2"/></g>
-  <g fill="#d0301f"><circle cx="18" cy="25" r=".9"/><circle cx="27" cy="23" r=".9"/><circle cx="32" cy="27" r=".9"/><circle cx="21" cy="28" r=".8"/></g>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bowl of zha cai">
+  <defs>
+    <linearGradient id="b" x1="7" y1="0" x2="41" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f6f2ea"/><stop offset=".5" stop-color="#e2dbcd"/><stop offset="1" stop-color="#b9b0a0"/></linearGradient>
+    <linearGradient id="s" x1="12" y1="22" x2="36" y2="30" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c4c070"/><stop offset=".5" stop-color="#9a9540"/><stop offset="1" stop-color="#6f6a24"/></linearGradient>
+  </defs>
+  <g stroke="url(#s)" stroke-width="2.6" fill="none" stroke-linecap="round">
+    <path d="M14 24c4-2 8-3 12-2"/>
+    <path d="M24 24c3-2 7-2 10 0"/>
+    <path d="M12 28c3-3 7-5 11-5"/>
+    <path d="M16 29c4-4 9-6 14-6"/>
+    <path d="M22 29c4-3 9-4 14-3"/>
+  </g>
+  <g stroke="#fff" stroke-opacity=".45" stroke-width="1" fill="none" stroke-linecap="round"><path d="M13.4 26.6c2.4-1.8 5-3 7.6-3.2"/><path d="M17.6 27.4c2.4-2 5-3.2 7.6-3.6"/></g>
+  <g fill="#d0301f"><circle cx="18" cy="25" r="1"/><circle cx="27" cy="23" r="1"/><circle cx="32" cy="27" r="1"/><circle cx="21" cy="28" r=".9"/></g>
+  <path d="M7 30h34c-1 6-8 10-17 10S8 36 7 30Z" fill="url(#b)"/>
+  <path d="M7 30h34" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  <path d="M11 33c1.6 2.4 4 4 7 4.8" stroke="#fff" stroke-opacity=".8" stroke-width="1.6" fill="none" stroke-linecap="round"/>
 </svg>

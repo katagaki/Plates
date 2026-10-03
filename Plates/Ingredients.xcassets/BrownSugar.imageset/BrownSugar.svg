@@ -1,7 +1,14 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Brown sugar">
+  <defs>
+    <radialGradient id="m" cx="18" cy="22" r="20" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#dca36a"/><stop offset=".5" stop-color="#a9682e"/><stop offset="1" stop-color="#77421a"/></radialGradient>
+    <linearGradient id="p" x1="7" y1="0" x2="41" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#b8c0c8"/><stop offset=".5" stop-color="#8d939b"/><stop offset="1" stop-color="#646a72"/></linearGradient>
+  </defs>
   <g transform="translate(-3 -3.56) scale(1.125)">
-    <path d="M9 32c0-7 7-12 15-12s15 5 15 12Z" fill="#a9682e"/>
-    <g fill="#c98a45"><rect x="15" y="25" width="7" height="5" rx="1"/><rect x="24" y="23" width="7" height="5" rx="1" transform="rotate(-8 27.5 25.5)"/><rect x="20" y="30" width="7" height="5" rx="1"/></g>
-    <path d="M7 32h34v3a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2Z" fill="#8d939b"/>
+    <path d="M9 32c0-6 5-9.6 9-10.4 1.6-1.6 4-2.4 6-2.4s5 .8 6.6 2.6C35 23 39 26.4 39 32Z" fill="url(#m)"/>
+    <g fill="#7a4518" fill-opacity=".45"><circle cx="21" cy="27.6" r="2.4"/><circle cx="30.4" cy="28.6" r="2"/><circle cx="15.4" cy="29.6" r="1.6"/></g>
+    <g fill="#f3cf98"><circle cx="13" cy="29.4" r=".6"/><circle cx="19" cy="30.6" r=".6"/><circle cx="24.6" cy="29" r=".6"/><circle cx="29" cy="31" r=".6"/><circle cx="35" cy="30" r=".6"/><circle cx="18.4" cy="23.4" r=".6"/><circle cx="21.8" cy="31.2" r=".6"/><circle cx="14.8" cy="31.2" r=".6"/></g>
+    <g fill="#6e3d1c" fill-opacity=".7"><circle cx="16.6" cy="26" r=".6"/><circle cx="22.6" cy="24.4" r=".6"/><circle cx="27.4" cy="24.8" r=".6"/><circle cx="32.6" cy="26.6" r=".6"/><circle cx="25.6" cy="21.6" r=".6"/><circle cx="31.4" cy="23.4" r=".6"/><circle cx="26.6" cy="26.8" r=".6"/><circle cx="33.4" cy="31.2" r=".6"/></g>
+    <path d="M7 32h34v3a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2Z" fill="url(#p)"/>
+    <path d="M13 26.6c1.4-1.8 3.2-3.2 5.4-4" stroke="#fff" stroke-opacity=".4" stroke-width="1.4" fill="none" stroke-linecap="round"/>
   </g>
 </svg>

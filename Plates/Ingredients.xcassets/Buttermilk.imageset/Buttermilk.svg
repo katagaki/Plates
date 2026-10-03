@@ -1,7 +1,13 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Buttermilk">
-  <path d="M19 12h10v4l4 5v17a4 4 0 0 1-4 4H19a4 4 0 0 1-4-4V21l4-5Z" fill="#f7f4ea"/>
-  <path d="M33 21v17a4 4 0 0 1-4 4h-4V12h4v4Z" fill="#e9e3d4"/>
-  <rect x="18.5" y="6" width="11" height="6" rx="1.5" fill="#d9a441"/>
-  <rect x="15" y="24" width="18" height="10" fill="#e9c46a"/>
-  <path d="M19 29h10" stroke="#fbf1d0" stroke-width="2" stroke-linecap="round"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bottle of buttermilk">
+  <defs>
+    <linearGradient id="b" x1="15" y1="0" x2="33" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fdfbf6"/><stop offset=".45" stop-color="#f1ece0"/><stop offset="1" stop-color="#cfc6b2"/></linearGradient>
+    <linearGradient id="c" x1="0" y1="6" x2="0" y2="12.5" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f6cd6a"/><stop offset="1" stop-color="#c98c1e"/></linearGradient>
+    <linearGradient id="l" x1="15" y1="24" x2="33" y2="34" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fbe39a"/><stop offset=".5" stop-color="#f0c55a"/><stop offset="1" stop-color="#d9a032"/></linearGradient>
+  </defs>
+  <path d="M19 12h10v4l4 5v17a4 4 0 0 1-4 4H19a4 4 0 0 1-4-4V21l4-5Z" fill="url(#b)"/>
+  <rect x="18.5" y="6" width="11" height="6.5" rx="1.6" fill="url(#c)"/>
+  <path d="M20 9.2h8" stroke="#9c6a12" stroke-opacity=".45" stroke-width="1.2" stroke-linecap="round"/>
+  <rect x="15" y="24" width="18" height="10" fill="url(#l)"/>
+  <path d="M20 29h8" stroke="#fff" stroke-opacity=".8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M17.8 21.4l2.4-3" stroke="#fff" stroke-opacity=".85" stroke-width="1.6" stroke-linecap="round"/>
 </svg>

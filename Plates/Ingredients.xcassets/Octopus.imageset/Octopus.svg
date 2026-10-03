@@ -1,11 +1,26 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Octopus">
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Boiled octopus">
+  <defs>
+    <radialGradient id="h" cx="19" cy="13" r="20" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff9a85"/><stop offset=".5" stop-color="#e2473b"/><stop offset="1" stop-color="#a8222a"/></radialGradient>
+    <linearGradient id="l" x1="4" y1="0" x2="44" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e85a4a"/><stop offset="1" stop-color="#b02a2a"/></linearGradient>
+  </defs>
   <g transform="translate(-2.29 -2.48) scale(1.1)">
-    <g stroke="#c9302c" stroke-width="4" fill="none" stroke-linecap="round">
+    <g stroke="url(#l)" stroke-width="4" fill="none" stroke-linecap="round">
       <path d="M14 27c-2 6-5 9-9 10"/><path d="M20 28c-2 6-3 10-2 13"/>
       <path d="M28 28c2 6 3 10 2 13"/><path d="M34 27c2 6 5 9 9 10"/>
     </g>
-    <path d="M24 9c7 0 12 5 12 12v7H12v-7c0-7 5-12 12-12Z" fill="#d94f45"/>
-    <circle cx="19" cy="20" r="2" fill="#3c2a1c"/>
-    <circle cx="29" cy="20" r="2" fill="#3c2a1c"/>
+    <g fill="#ffd6c8" fill-opacity=".75">
+      <circle cx="10" cy="36.6" r=".8"/>
+      <circle cx="7" cy="38.6" r=".8"/>
+      <circle cx="17.8" cy="35" r=".8"/>
+      <circle cx="17.4" cy="39" r=".8"/>
+      <circle cx="30.2" cy="35" r=".8"/>
+      <circle cx="30.6" cy="39" r=".8"/>
+      <circle cx="38" cy="36.6" r=".8"/>
+      <circle cx="41" cy="38.6" r=".8"/>
+    </g>
+    <path d="M24 9c7 0 12 5 12 12v7H12v-7c0-7 5-12 12-12Z" fill="url(#h)"/>
+    <circle cx="19" cy="21" r="2" fill="#3c2a1c"/>
+    <circle cx="29" cy="21" r="2" fill="#3c2a1c"/>
+    <ellipse cx="19" cy="14" rx="3.2" ry="1.8" transform="rotate(-30 19 14)" fill="#fff" fill-opacity=".7"/>
   </g>
 </svg>

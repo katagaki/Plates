@@ -1,7 +1,16 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Spider">
-  <path d="M26 22 44 4" stroke="#a97142" stroke-width="3.4" stroke-linecap="round"/>
-  <path d="M26 22l4-4" stroke="#8d939b" stroke-width="2.4" stroke-linecap="round"/>
-  <circle cx="17" cy="31" r="13" fill="#e8edf2" opacity=".5"/>
-  <circle cx="17" cy="31" r="13" fill="none" stroke="#8d939b" stroke-width="2"/>
-  <g stroke="#8d939b" stroke-width="1.2" fill="none"><circle cx="17" cy="31" r="9"/><circle cx="17" cy="31" r="5"/><path d="M17 18v26M4 31h26M8 22l18 18M26 22 8 40"/></g>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Spider strainer">
+  <defs>
+    <linearGradient id="h" x1="33" y1="11" x2="37" y2="15" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d79c64"/><stop offset=".5" stop-color="#b07440"/><stop offset="1" stop-color="#8a5530"/></linearGradient>
+    <linearGradient id="s" x1="4" y1="18" x2="30" y2="44" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#bcc5ce"/><stop offset=".5" stop-color="#8e99a4"/><stop offset="1" stop-color="#6b737c"/></linearGradient>
+  </defs>
+  <path d="M30 18 44 4" stroke="url(#h)" stroke-width="3.6" stroke-linecap="round"/>
+  <path d="M26 22l5-5" stroke="#8e99a4" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="17" cy="31" r="13" fill="#b2bcc6" fill-opacity=".35"/>
+  <g stroke="url(#s)" stroke-width="1.3" fill="none">
+    <circle cx="17" cy="31" r="9"/>
+    <circle cx="17" cy="31" r="5"/>
+    <path d="M17 18v26M4 31h26M7.8 21.8l18.4 18.4M26.2 21.8 7.8 40.2"/>
+  </g>
+  <circle cx="17" cy="31" r="13" fill="none" stroke="url(#s)" stroke-width="2.2"/>
+  <path d="M7.6 26c1-2.6 3-4.6 5.6-5.6" stroke="#fff" stroke-opacity=".8" stroke-width="1.5" fill="none" stroke-linecap="round"/>
 </svg>

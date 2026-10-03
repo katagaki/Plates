@@ -1,11 +1,16 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rhubarb">
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rhubarb stalks">
+  <defs>
+    <linearGradient id="s" x1="0" y1="44" x2="0" y2="16" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e2445a"/><stop offset=".6" stop-color="#c8304a"/><stop offset="1" stop-color="#a3a046"/></linearGradient>
+    <linearGradient id="g" x1="6" y1="4" x2="40" y2="20" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a6dc7e"/><stop offset=".5" stop-color="#5fa83f"/><stop offset="1" stop-color="#3f8a2e"/></linearGradient>
+  </defs>
   <g stroke-linecap="round">
-    <path d="M16 44 19 18" stroke="#c43a4f" stroke-width="5"/>
-    <path d="M25 44V16" stroke="#d94a5c" stroke-width="5"/>
-    <path d="M33 44 30 19" stroke="#b8304a" stroke-width="5"/>
-    <path d="M17 40l1.5-14M24.5 40V24M32 40l-1.5-12" stroke="#ec8a96" stroke-width="1.2"/>
+    <path d="M16 44 19 18" stroke="url(#s)" stroke-width="5"/>
+    <path d="M33 44 30 19" stroke="url(#s)" stroke-width="5"/>
+    <path d="M25 44V16" stroke="url(#s)" stroke-width="5"/>
+    <path d="M15.6 40l1.4-13M23.6 40V24M31.4 40l-1.2-11" stroke="#fff" stroke-opacity=".45" stroke-width="1.3"/>
   </g>
-  <path d="M19 18C11 18 5 13 6 7c4 3 9 1 13 3Z" fill="#5f9e4a"/>
-  <path d="M25 16c-4-6-3-12 0-14 2 3 7 4 7 8 0 3-3 5-7 6Z" fill="#6fae58"/>
-  <path d="M30 19c6-3 12-2 13 2-4 1-8 4-13-2Z" fill="#5f9e4a"/>
+  <path d="M19 18C11 18 5 13 6 7c4 3 9 1 13 3Z" fill="url(#g)"/>
+  <path d="M30 19c6-3 12-2 13 2-4 1-8 4-13-2Z" fill="url(#g)"/>
+  <path d="M25 16c-4-6-3-12 0-14 2 3 7 4 7 8 0 3-3 5-7 6Z" fill="url(#g)"/>
+  <path d="M25 14.6c0-3.6.6-6.6 1.6-9M19 16c-3-1.6-6.6-4-10-6.4" stroke="#2f6e22" stroke-opacity=".45" stroke-width="1.2" fill="none" stroke-linecap="round"/>
 </svg>

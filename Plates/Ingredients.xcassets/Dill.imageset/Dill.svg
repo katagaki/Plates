@@ -1,11 +1,8 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dill">
-  <g transform="translate(-3 -3.02) scale(1.125)">
-    <path d="M24 42V14" stroke="#5f8c3f" stroke-width="2.2" stroke-linecap="round"/>
-    <g stroke="#6ba14a" stroke-width="2" fill="none" stroke-linecap="round">
-      <path d="M24 15l-9-5M24 15l9-5M24 22l-10-3M24 22l10-3M24 29l-9 1M24 29l9 1M24 35l-8 4M24 35l8 4"/>
-    </g>
-    <g stroke="#8fb35c" stroke-width="1.6" fill="none" stroke-linecap="round">
-      <path d="M15 10l-4-2M15 10V6M33 10l4-2M33 10V6M14 19l-4-2M34 19l4-2M15 30l-4 1M33 30l4 1"/>
-    </g>
-  </g>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sprig of dill">
+  <defs>
+    <linearGradient id="g" x1="8" y1="4" x2="40" y2="44" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a6dc7e"/><stop offset=".5" stop-color="#5fa83f"/><stop offset="1" stop-color="#3f8a2e"/></linearGradient>
+    <linearGradient id="s" x1="8" y1="4" x2="40" y2="44" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a6dc7e"/><stop offset="1" stop-color="#4f8f34"/></linearGradient>
+  </defs>
+  <path d="M24 44C24 34 23 26 24 14" stroke="url(#s)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <path d="M24 34Q19 29 14 28 M14 28Q10.26 28.86 7.2 31.17 M14 28Q10.29 27.04 6.51 27.67 M14 28Q11.15 25.43 7.5 24.25 M14 28Q12.66 24.41 9.97 21.67 M14 28Q14.47 24.19 13.35 20.53 M24 34Q29 29 34 28 M34 28Q35.12 24.33 34.65 20.53 M34 28Q36.69 25.27 38.03 21.67 M34 28Q37.65 26.82 40.5 24.25 M34 28Q37.78 28.64 41.49 27.67 M34 28Q37.06 30.31 40.8 31.17 M23.6 25Q19.3 18 15 17 M15 17Q11.19 16.53 7.53 17.65 M15 17Q11.84 14.83 8.07 14.13 M15 17Q13.2 13.61 10.18 11.25 M15 17Q14.97 13.17 13.38 9.68 M15 17Q16.74 13.58 16.94 9.76 M23.6 25Q28.3 18 33 17 M33 17Q32.8 13.17 31.06 9.76 M33 17Q34.59 13.51 34.62 9.68 M33 17Q36.02 14.64 37.82 11.25 M33 17Q36.77 16.3 39.93 14.13 M33 17Q36.67 18.12 40.47 17.65 M24 13Q21.39 10.19 17.86 8.7 M24 13Q22.98 9.3 20.54 6.35 M24 13Q24.8 9.25 24 5.5 M24 13Q26.44 10.04 27.46 6.35 M24 13Q27.53 11.5 30.14 8.7" stroke="url(#g)" stroke-width="1.25" fill="none" stroke-linecap="round"/>
 </svg>

@@ -1,8 +1,11 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Peach">
-  <g transform="translate(-3 -2.88) scale(1.125)">
-    <circle cx="24" cy="27" r="14" fill="#f8a07a"/>
-    <path d="M24 13a14 14 0 0 1 0 28Z" fill="#e8795a"/>
-    <path d="M24 13v28" stroke="#e05f45" stroke-width="1.5"/>
-    <path d="M24 13c1-4 4-7 9-8-1 5-4 8-9 8Z" fill="#5f9e4a"/>
-  </g>
+  <defs>
+    <radialGradient id="b" cx="15" cy="18" r="30" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffd89a"/><stop offset=".4" stop-color="#ffa07a"/><stop offset=".75" stop-color="#ec5f60"/><stop offset="1" stop-color="#c23a4c"/></radialGradient>
+    <linearGradient id="l" x1="26" y1="5" x2="36" y2="13" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a6dc7e"/><stop offset="1" stop-color="#3f8a2e"/></linearGradient>
+  </defs>
+  <path d="M24 15.5c-3-3-9-3.5-13 0-4 3.6-5 9.6-3 15 2.4 6.4 8.6 10.5 16 10.5s13.6-4.1 16-10.5c2-5.4 1-11.4-3-15-4-3.5-10-3-13 0Z" fill="url(#b)"/>
+  <path d="M24 15.6c-2.4 7.4-2.4 17 0 25.4" stroke="#b3304a" stroke-opacity=".45" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <path d="M24 15.6c-.2-3 .4-5.6 1.6-7.6" stroke="#7a5a3a" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M25.4 11.4c2-4 5.6-6 10.4-5.8-1.6 4.6-5.4 6.8-10.4 5.8Z" fill="url(#l)"/>
+  <ellipse cx="14.4" cy="21.6" rx="4.4" ry="2.6" transform="rotate(-40 14.4 21.6)" fill="#fff" fill-opacity=".45"/>
 </svg>

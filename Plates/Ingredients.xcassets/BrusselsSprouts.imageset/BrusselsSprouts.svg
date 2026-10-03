@@ -1,8 +1,13 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Brussels sprouts">
+  <defs>
+    <radialGradient id="a" cx="13" cy="21" r="14" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a6dc7e"/><stop offset=".5" stop-color="#5f9e3e"/><stop offset="1" stop-color="#3a7a28"/></radialGradient>
+    <radialGradient id="b" cx="28" cy="27" r="12" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#b8e690"/><stop offset=".5" stop-color="#74b04e"/><stop offset="1" stop-color="#4a8a32"/></radialGradient>
+  </defs>
   <g transform="translate(-3.06 -3.62) scale(1.125)">
-    <circle cx="18" cy="27" r="9" fill="#6ba14a"/>
-    <circle cx="32" cy="32" r="8" fill="#7fb069"/>
-    <path d="M18 18v18M10 26c6 3 10 3 16 0" stroke="#4f7f36" stroke-width="1.5" fill="none"/>
-    <path d="M32 24v16M25 31c5 3 9 3 14 0" stroke="#5f8c3f" stroke-width="1.5" fill="none"/>
+    <circle cx="32" cy="32" r="8" fill="url(#b)"/>
+    <path d="M32 24v16M25 31c5 3 9 3 14 0" stroke="#3f7a2a" stroke-opacity=".55" stroke-width="1.4" fill="none"/>
+    <circle cx="18" cy="27" r="9" fill="url(#a)"/>
+    <path d="M18 18v18M10 26c6 3 10 3 16 0" stroke="#2f6e22" stroke-opacity=".55" stroke-width="1.4" fill="none"/>
+    <path d="M11.6 23.4c.8-2 2.2-3.6 4-4.4" stroke="#fff" stroke-opacity=".6" stroke-width="1.6" fill="none" stroke-linecap="round"/>
   </g>
 </svg>

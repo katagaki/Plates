@@ -1,6 +1,20 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sieve">
-  <path d="M9 20h22a11 11 0 0 1-22 0Z" fill="#e0e5ea"/>
-  <g stroke="#a8b0b8" stroke-width="1.4"><path d="M13 20v8"/><path d="M17 20v11"/><path d="M20 20v11"/><path d="M24 20v11"/><path d="M27 20v8"/><path d="M10 24h20"/><path d="M12 28h16"/></g>
-  <rect x="7" y="17" width="26" height="4" rx="2" fill="#8d939b"/>
-  <rect x="31" y="17" width="12" height="4" rx="2" fill="#a97142"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fine mesh sieve">
+  <defs>
+    <linearGradient id="b" x1="9" y1="20" x2="31" y2="31" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#eef2f5"/><stop offset=".5" stop-color="#c3ccd5"/><stop offset="1" stop-color="#9aa5b0"/></linearGradient>
+    <linearGradient id="r" x1="4" y1="0" x2="34" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d3dae1"/><stop offset="1" stop-color="#8e99a4"/></linearGradient>
+    <linearGradient id="h" x1="0" y1="17" x2="0" y2="21" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d79c64"/><stop offset="1" stop-color="#8a5530"/></linearGradient>
+  </defs>
+  <rect x="31" y="17" width="13" height="4" rx="2" fill="url(#h)"/>
+  <path d="M9 20h22a11 11 0 0 1-22 0Z" fill="url(#b)"/>
+  <g stroke="#7c858f" stroke-opacity=".55" stroke-width="1.2">
+    <path d="M13 20v8"/>
+    <path d="M16.6 20v10.4"/>
+    <path d="M20 20v11"/>
+    <path d="M23.4 20v10.4"/>
+    <path d="M27 20v8"/>
+    <path d="M9.6 24h20.8"/>
+    <path d="M11.4 28h17.2"/>
+  </g>
+  <rect x="7" y="17" width="26" height="4" rx="2" fill="url(#r)"/>
+  <path d="M11 23.4c.4 2 1.2 3.6 2.4 5" stroke="#fff" stroke-opacity=".7" stroke-width="1.6" fill="none" stroke-linecap="round"/>
 </svg>

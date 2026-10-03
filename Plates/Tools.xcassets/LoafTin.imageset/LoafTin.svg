@@ -1,6 +1,14 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Loaf tin">
-  <path d="M6 16h36l-4 24H10Z" fill="#cfd6dd"/>
-  <path d="M9 19h30l-3 18H12Z" fill="#a8b0b8"/>
-  <rect x="4" y="14" width="40" height="4" rx="1.5" fill="#8d939b"/>
-  <path d="M13 22l2 12" stroke="#e8edf2" stroke-width="2" stroke-linecap="round"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Loaf tin with a loaf">
+  <defs>
+    <radialGradient id="c" cx="17" cy="14" r="22" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f7cf86"/><stop offset=".5" stop-color="#d9973f"/><stop offset="1" stop-color="#a5601f"/></radialGradient>
+    <linearGradient id="t" x1="6" y1="0" x2="42" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e3e9ef"/><stop offset=".45" stop-color="#b2bcc6"/><stop offset="1" stop-color="#8e99a4"/></linearGradient>
+    <linearGradient id="r" x1="3" y1="0" x2="45" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c5ced6"/><stop offset="1" stop-color="#7c8792"/></linearGradient>
+  </defs>
+  <path d="M7.5 25C7.5 16 14.5 11.5 24 11.5S40.5 16 40.5 25Z" fill="url(#c)"/>
+  <path d="M15.5 15.4c3.4-1.8 7.6-2.2 11.4-1.6" stroke="#fff" stroke-opacity=".45" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <path d="M17 20c4.4-1.6 9.6-1.6 14 0" stroke="#8a4a16" stroke-opacity=".45" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <path d="M5.5 25h37l-2.6 11.2a2.4 2.4 0 0 1-2.3 1.8H10.4a2.4 2.4 0 0 1-2.3-1.8Z" fill="url(#t)"/>
+  <rect x="3" y="23" width="42" height="3.8" rx="1.9" fill="url(#r)"/>
+  <path d="M11.4 29.2l1.2 5.4" stroke="#fff" stroke-opacity=".6" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M36.6 29.2l-1.2 5.4" stroke="#6f7a85" stroke-opacity=".45" stroke-width="1.2" stroke-linecap="round"/>
 </svg>

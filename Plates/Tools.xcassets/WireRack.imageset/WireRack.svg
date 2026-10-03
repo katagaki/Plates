@@ -1,11 +1,17 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Wire rack">
-  <path d="M8 32v8M40 32v8" stroke="#8d939b" stroke-width="2.4" stroke-linecap="round"/>
-  <path d="M4 32 12 14h32l-8 18Z" fill="none" stroke="#8d939b" stroke-width="2.2" stroke-linejoin="round"/>
-  <path d="M6 27.5h32" stroke="#8d939b" stroke-width="1"/>
-  <path d="M8 23h32" stroke="#8d939b" stroke-width="1"/>
-  <path d="M10 18.5h32" stroke="#8d939b" stroke-width="1"/>
-  <path d="M10.4 32 18.4 14" stroke="#8d939b" stroke-width="1"/>
-  <path d="M16.8 32 24.8 14" stroke="#8d939b" stroke-width="1"/>
-  <path d="M23.2 32 31.2 14" stroke="#8d939b" stroke-width="1"/>
-  <path d="M29.6 32 37.6 14" stroke="#8d939b" stroke-width="1"/>
+  <defs>
+    <linearGradient id="s" x1="4" y1="14" x2="44" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#b2bcc6"/><stop offset=".5" stop-color="#8e99a4"/><stop offset="1" stop-color="#6b737c"/></linearGradient>
+  </defs>
+  <path d="M8 32v8M40 32v8" stroke="url(#s)" stroke-width="2.4" stroke-linecap="round"/>
+  <g stroke="url(#s)" stroke-width="1.2">
+    <path d="M6 27.5h32"/>
+    <path d="M8 23h32"/>
+    <path d="M10 18.5h32"/>
+    <path d="M10.4 32 18.4 14"/>
+    <path d="M16.8 32 24.8 14"/>
+    <path d="M23.2 32 31.2 14"/>
+    <path d="M29.6 32 37.6 14"/>
+  </g>
+  <path d="M4 32 12 14h32l-8 18Z" fill="none" stroke="url(#s)" stroke-width="2.2" stroke-linejoin="round"/>
+  <path d="M13.6 15.2h10" stroke="#fff" stroke-opacity=".7" stroke-width="1.2" stroke-linecap="round"/>
 </svg>

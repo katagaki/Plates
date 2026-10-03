@@ -1,29 +1,26 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Juniper berries">
-  <path d="M10 14 30 34" stroke="#5a6a3a" stroke-width="1.8" stroke-linecap="round"/>
-  <path d="M13 17l-4 2" stroke="#4f7a4a" stroke-width="1.6" stroke-linecap="round"/>
-  <path d="M13 17l2 -4" stroke="#4f7a4a" stroke-width="1.6" stroke-linecap="round"/>
-  <path d="M17 21l-4 2" stroke="#4f7a4a" stroke-width="1.6" stroke-linecap="round"/>
-  <path d="M17 21l2 -4" stroke="#4f7a4a" stroke-width="1.6" stroke-linecap="round"/>
-  <path d="M21 25l-4 2" stroke="#4f7a4a" stroke-width="1.6" stroke-linecap="round"/>
-  <path d="M21 25l2 -4" stroke="#4f7a4a" stroke-width="1.6" stroke-linecap="round"/>
-  <path d="M25 29l-4 2" stroke="#4f7a4a" stroke-width="1.6" stroke-linecap="round"/>
-  <path d="M25 29l2 -4" stroke="#4f7a4a" stroke-width="1.6" stroke-linecap="round"/>
-  <circle cx="31" cy="22" r="4.4" fill="#34405e"/>
-  <circle cx="31" cy="22" r="4.4" fill="#8a9ab8" opacity=".35"/>
-  <circle cx="29.6" cy="20.6" r="1.2" fill="#a8b4cc"/>
-  <circle cx="38" cy="28" r="4.4" fill="#34405e"/>
-  <circle cx="38" cy="28" r="4.4" fill="#8a9ab8" opacity=".35"/>
-  <circle cx="36.6" cy="26.6" r="1.2" fill="#a8b4cc"/>
-  <circle cx="31" cy="31" r="4.4" fill="#34405e"/>
-  <circle cx="31" cy="31" r="4.4" fill="#8a9ab8" opacity=".35"/>
-  <circle cx="29.6" cy="29.6" r="1.2" fill="#a8b4cc"/>
-  <circle cx="36" cy="37" r="4.4" fill="#34405e"/>
-  <circle cx="36" cy="37" r="4.4" fill="#8a9ab8" opacity=".35"/>
-  <circle cx="34.6" cy="35.6" r="1.2" fill="#a8b4cc"/>
-  <circle cx="27" cy="38" r="4.4" fill="#34405e"/>
-  <circle cx="27" cy="38" r="4.4" fill="#8a9ab8" opacity=".35"/>
-  <circle cx="25.6" cy="36.6" r="1.2" fill="#a8b4cc"/>
-  <circle cx="40" cy="19" r="4.4" fill="#34405e"/>
-  <circle cx="40" cy="19" r="4.4" fill="#8a9ab8" opacity=".35"/>
-  <circle cx="38.6" cy="17.6" r="1.2" fill="#a8b4cc"/>
+  <defs>
+    <linearGradient id="st" x1="10" y1="14" x2="30" y2="34" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8a7a4a"/><stop offset="1" stop-color="#5a5a32"/></linearGradient>
+    <linearGradient id="nd" x1="8" y1="12" x2="28" y2="32" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7ab06a"/><stop offset="1" stop-color="#3f6e3a"/></linearGradient>
+    <radialGradient id="b0" cx="29.4" cy="20.4" r="6.6" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#93a3c6"/><stop offset=".5" stop-color="#4b5a7c"/><stop offset="1" stop-color="#262f4a"/></radialGradient>
+    <radialGradient id="b1" cx="36.4" cy="26.4" r="6.6" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#93a3c6"/><stop offset=".5" stop-color="#4b5a7c"/><stop offset="1" stop-color="#262f4a"/></radialGradient>
+    <radialGradient id="b2" cx="38.4" cy="17.4" r="6.6" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#93a3c6"/><stop offset=".5" stop-color="#4b5a7c"/><stop offset="1" stop-color="#262f4a"/></radialGradient>
+    <radialGradient id="b3" cx="29.4" cy="29.4" r="6.6" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#93a3c6"/><stop offset=".5" stop-color="#4b5a7c"/><stop offset="1" stop-color="#262f4a"/></radialGradient>
+    <radialGradient id="b4" cx="34.4" cy="35.4" r="6.6" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#93a3c6"/><stop offset=".5" stop-color="#4b5a7c"/><stop offset="1" stop-color="#262f4a"/></radialGradient>
+    <radialGradient id="b5" cx="25.4" cy="36.4" r="6.6" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#93a3c6"/><stop offset=".5" stop-color="#4b5a7c"/><stop offset="1" stop-color="#262f4a"/></radialGradient>
+  </defs>
+  <path d="M10 14 30 34" stroke="url(#st)" stroke-width="1.8" stroke-linecap="round"/>
+  <g stroke="url(#nd)" stroke-width="1.6" stroke-linecap="round"><path d="M13 17l-4 2M13 17l2-4M17 21l-4 2M17 21l2-4M21 25l-4 2M21 25l2-4M25 29l-4 2M25 29l2-4"/></g>
+  <circle cx="31" cy="22" r="4.4" fill="url(#b0)"/>
+  <circle cx="29.5" cy="20.5" r="1.1" fill="#fff" fill-opacity=".6"/>
+  <circle cx="38" cy="28" r="4.4" fill="url(#b1)"/>
+  <circle cx="36.5" cy="26.5" r="1.1" fill="#fff" fill-opacity=".6"/>
+  <circle cx="40" cy="19" r="4.4" fill="url(#b2)"/>
+  <circle cx="38.5" cy="17.5" r="1.1" fill="#fff" fill-opacity=".6"/>
+  <circle cx="31" cy="31" r="4.4" fill="url(#b3)"/>
+  <circle cx="29.5" cy="29.5" r="1.1" fill="#fff" fill-opacity=".6"/>
+  <circle cx="36" cy="37" r="4.4" fill="url(#b4)"/>
+  <circle cx="34.5" cy="35.5" r="1.1" fill="#fff" fill-opacity=".6"/>
+  <circle cx="27" cy="38" r="4.4" fill="url(#b5)"/>
+  <circle cx="25.5" cy="36.5" r="1.1" fill="#fff" fill-opacity=".6"/>
 </svg>

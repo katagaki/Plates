@@ -1,8 +1,16 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Evaporated milk">
-  <path d="M11 12h26v26a4 4 0 0 1-4 4H15a4 4 0 0 1-4-4Z" fill="#cfd6dd"/>
-  <ellipse cx="24" cy="12" rx="13" ry="3" fill="#e8edf2"/>
-  <ellipse cx="24" cy="12" rx="10.5" ry="2" fill="#cfd6dd"/>
-  <rect x="11" y="17" width="26" height="19" fill="#3a6ab0"/>
-  <path d="M24 20c-3 4-5 6.5-5 9a5 5 0 0 0 10 0c0-2.5-2-5-5-9Z" fill="#fbfaf4"/>
-  <path d="M11 17h26M11 36h26" stroke="#2a4f88" stroke-width="1.2"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Can of evaporated milk">
+  <defs>
+    <linearGradient id="m" x1="11" y1="0" x2="37" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#eef2f6"/><stop offset=".5" stop-color="#c2cbd4"/><stop offset="1" stop-color="#8e99a4"/></linearGradient>
+    <linearGradient id="t" x1="11" y1="9" x2="37" y2="15" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#cfd6dd"/></linearGradient>
+    <linearGradient id="l" x1="11" y1="0" x2="37" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6a9be0"/><stop offset=".45" stop-color="#3a6ab0"/><stop offset="1" stop-color="#22457e"/></linearGradient>
+    <radialGradient id="d" cx="22" cy="25" r="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#fbfaf4"/><stop offset="1" stop-color="#e4ded0"/></radialGradient>
+  </defs>
+  <path d="M11 12h26v26a4 4 0 0 1-4 4H15a4 4 0 0 1-4-4Z" fill="url(#m)"/>
+  <ellipse cx="24" cy="12" rx="13" ry="3" fill="url(#t)"/>
+  <ellipse cx="24" cy="12" rx="10.5" ry="2" fill="#c2cbd4"/>
+  <rect x="11" y="17" width="26" height="19" fill="url(#l)"/>
+  <path d="M11 17h26M11 36h26" stroke="#1c3a6a" stroke-opacity=".6" stroke-width="1.2"/>
+  <path d="M24 20c-3 4-5 6.5-5 9a5 5 0 0 0 10 0c0-2.5-2-5-5-9Z" fill="url(#d)"/>
+  <path d="M13.6 19v15" stroke="#fff" stroke-opacity=".45" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M13.6 38.6v.6" stroke="#fff" stroke-opacity=".6" stroke-width="1.6" stroke-linecap="round"/>
 </svg>

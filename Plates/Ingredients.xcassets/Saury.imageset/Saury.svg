@@ -1,11 +1,18 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pacific saury">
-  <path d="M9.5 24L1 18L4 24L1 30Z" fill="#2c3f63"/>
-  <g fill="#2c3f63"><path d="M11 21.6l1.6-2 .8 1.6Z"/><path d="M13.6 21.2l1.6-2 .8 1.6Z"/><path d="M16.2 20.8l1.6-2.2.9 1.7Z"/><path d="M11 26.4l1.6 2 .8-1.6Z"/><path d="M13.6 26.8l1.6 2 .8-1.6Z"/></g>
-  <path d="M43 24C42 20.62 35 18.8 27 18.8C17.5 18.8 11 22.3 8 22.9L8 25.1C11 25.7 17.5 29 27 29C35 29 42 27.25 43 24Z" fill="#d9dee4"/>
-  <path d="M43 24C42 20.62 35 18.8 27 18.8C17.5 18.8 11 22.3 8 22.9L8 24.3C20 24.3 33 24.3 43 24Z" fill="#2c3f63"/>
+  <defs>
+    <linearGradient id="k" x1="0" y1="18.8" x2="0" y2="24.3" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2c3f63"/><stop offset="1" stop-color="#5a77a8"/></linearGradient>
+    <linearGradient id="w" x1="0" y1="23" x2="0" y2="29" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#c3cbd4"/></linearGradient>
+    <linearGradient id="t" x1="0" y1="18" x2="0" y2="30" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5a77a8"/><stop offset="1" stop-color="#25365a"/></linearGradient>
+  </defs>
+  <path d="M9.5 24L1 18L4 24L1 30Z" fill="url(#t)"/>
+  <g fill="url(#t)"><path d="M11 21.6l1.6-2 .8 1.6Z"/><path d="M13.6 21.2l1.6-2 .8 1.6Z"/><path d="M16.2 20.8l1.6-2.2.9 1.7Z"/><path d="M11 26.4l1.6 2 .8-1.6Z"/><path d="M13.6 26.8l1.6 2 .8-1.6Z"/></g>
+  <path d="M43 24C42 20.62 35 18.8 27 18.8C17.5 18.8 11 22.3 8 22.9L8 25.1C11 25.7 17.5 29 27 29C35 29 42 27.25 43 24Z" fill="url(#w)"/>
+  <path d="M43 24C42 20.62 35 18.8 27 18.8C17.5 18.8 11 22.3 8 22.9L8 24.3C20 24.3 33 24.3 43 24Z" fill="url(#k)"/>
   <path d="M42 23.2 47 24.6l-5 .8Z" fill="#2c3f63"/>
-  <path d="M45 24.1l2 .5-2 .3Z" fill="#e8b23a"/>
-  <path d="M12 25.6c8 .6 17 .6 25 0" stroke="#ffffff" stroke-width="1" fill="none" stroke-linecap="round"/>
+  <path d="M45 24.1l2 .5-2 .3Z" fill="#f0b83a"/>
+  <path d="M12 25.6c8 .6 17 .6 25 0" stroke="#8fa2bd" stroke-opacity=".5" stroke-width="1" fill="none" stroke-linecap="round"/>
+  <path d="M19 21c5-1.2 10-1.4 14-.8" stroke="#fff" stroke-opacity=".4" stroke-width="1" fill="none" stroke-linecap="round"/>
   <path d="M35.5 20.9C33 23 33 26 35.5 27.2" stroke="#9aa6b2" stroke-width="1" fill="none" stroke-linecap="round"/>
   <circle cx="39.5" cy="23" r="1.5" fill="#121a26"/>
+  <circle cx="39.1" cy="22.6" r=".45" fill="#fff"/>
 </svg>

@@ -1,7 +1,15 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Oven">
-  <rect x="7" y="9" width="34" height="32" rx="3" fill="#cfd6dd"/>
-  <rect x="10" y="19" width="28" height="19" rx="2" fill="#4a4e54"/>
-  <rect x="13" y="22" width="22" height="13" rx="1.5" fill="#8d939b"/>
-  <rect x="10" y="12" width="28" height="4" rx="2" fill="#8d939b"/>
-  <g fill="#5c6066"><circle cx="14" cy="14" r="1.4"/><circle cx="19" cy="14" r="1.4"/></g>
+  <defs>
+    <linearGradient id="b" x1="7" y1="7" x2="41" y2="41" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e3e9ef"/><stop offset=".5" stop-color="#b2bcc6"/><stop offset="1" stop-color="#8e99a4"/></linearGradient>
+    <radialGradient id="w" cx="24" cy="32" r="14" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffcf7a"/><stop offset=".5" stop-color="#f08a32"/><stop offset="1" stop-color="#9e4416"/></radialGradient>
+  </defs>
+  <rect x="7" y="7" width="34" height="34" rx="3.4" fill="url(#b)"/>
+  <rect x="10" y="10" width="28" height="5" rx="2" fill="#6f7a85"/>
+  <g fill="#e3e9ef"><circle cx="14" cy="12.5" r="1.5"/><circle cx="19" cy="12.5" r="1.5"/></g>
+  <rect x="31" y="11.6" width="4.6" height="1.8" rx=".9" fill="#42be65"/>
+  <rect x="12" y="18.2" width="24" height="2.4" rx="1.2" fill="#6f7a85"/>
+  <rect x="11" y="23" width="26" height="15" rx="2" fill="#3a3f45"/>
+  <rect x="13" y="25" width="22" height="11" rx="1.2" fill="url(#w)"/>
+  <path d="M13 31.6h22" stroke="#6e2e10" stroke-opacity=".5" stroke-width="1.2"/>
+  <path d="M15.4 27.2h5" stroke="#fff" stroke-opacity=".5" stroke-width="1.3" stroke-linecap="round"/>
 </svg>

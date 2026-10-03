@@ -1,9 +1,15 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hokke">
-  <path d="M11.5 24L2 15L5.5 24L2 33Z" fill="#5f5f45"/>
-  <path d="M30 17.5 26 13l-4 6Z" fill="#5f5f45"/>
-  <path d="M46 24C45 20 37 17 28 17C19 17 13 21.8 10 22.4L10 25.6C13 26.2 19 30 28 30C37 30 45 28 46 24Z" fill="#e8e2c8"/>
-  <path d="M46 24C45 20 37 17 28 17C19 17 13 21.8 10 22.4L10 24C22 24 36 24.5 46 24Z" fill="#7a7a5a"/>
-  <g stroke="#4a4a32" stroke-width="2.4" stroke-linecap="round"><path d="M17 19v8M23 17.5v10M29 17v10.5M35 18v9"/></g>
-  <path d="M37.5 19.5C35 21.5 35 26 37.5 28" stroke="#5f5f45" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="k" x1="0" y1="17" x2="0" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a2a27a"/><stop offset=".5" stop-color="#7a7a5a"/><stop offset="1" stop-color="#55553a"/></linearGradient>
+    <linearGradient id="v" x1="0" y1="22" x2="0" y2="30" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fbf7e4"/><stop offset=".5" stop-color="#e8e2c8"/><stop offset="1" stop-color="#c8c0a0"/></linearGradient>
+    <linearGradient id="t" x1="2" y1="15" x2="11" y2="33" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8a8a64"/><stop offset="1" stop-color="#4a4a32"/></linearGradient>
+  </defs>
+  <path d="M11.5 24L2 15L5.5 24L2 33Z" fill="url(#t)"/>
+  <path d="M30 17.5 26 13l-4 6Z" fill="#6a6a4c"/>
+  <path d="M46 24C45 20 37 17 28 17C19 17 13 21.8 10 22.4L10 25.6C13 26.2 19 30 28 30C37 30 45 28 46 24Z" fill="url(#v)"/>
+  <path d="M46 24C45 20 37 17 28 17C19 17 13 21.8 10 22.4L10 24C22 24 36 24.5 46 24Z" fill="url(#k)"/>
+  <g stroke="#3e3e28" stroke-opacity=".6" stroke-width="2.4" stroke-linecap="round"><path d="M17 19v8M23 17.5v10M29 17v10.5M35 18v9"/></g>
+  <path d="M37.5 19.5C35 21.5 35 26 37.5 28" stroke="#5f5f45" stroke-opacity=".6" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <path d="M38.6 19.2c2 .2 3.8 1 5 2.2" stroke="#fff" stroke-opacity=".45" stroke-width="1.2" fill="none" stroke-linecap="round"/>
   <circle cx="41.5" cy="22.2" r="1.8" fill="#2a2a2a"/>
 </svg>

@@ -1,9 +1,16 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Minced meat">
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Minced meat on a tray">
+  <defs>
+    <radialGradient id="m" cx="18" cy="21" r="20" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ec8a80"/><stop offset=".5" stop-color="#c85550"/><stop offset="1" stop-color="#8e3030"/></radialGradient>
+    <linearGradient id="t" x1="7" y1="0" x2="41" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e3e9ef"/><stop offset=".5" stop-color="#b2bcc6"/><stop offset="1" stop-color="#8e99a4"/></linearGradient>
+  </defs>
   <g transform="translate(-3 -3.56) scale(1.125)">
-    <path d="M9 32c0-7 7-12 15-12s15 5 15 12Z" fill="#b04a44"/>
-    <g stroke="#d3675f" stroke-width="3" stroke-linecap="round" fill="none">
+    <path d="M9 32c0-7 7-12 15-12s15 5 15 12Z" fill="url(#m)"/>
+    <g stroke="#ffc2b8" stroke-opacity=".6" stroke-width="2.6" stroke-linecap="round" fill="none">
       <path d="M13 30c3-3 6-4 9-4"/><path d="M24 30c3-3 6-4 9-4"/><path d="M18 24c3-2 5-2 8-2"/>
     </g>
-    <path d="M7 32h34v3a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2Z" fill="#8d939b"/>
+    <g stroke="#7a2424" stroke-opacity=".4" stroke-width="1.4" stroke-linecap="round" fill="none">
+      <path d="M17 31c2-2 4-2.6 6-2.8"/><path d="M28 31c2-2 4-2.6 6-2.6"/><path d="M22 27c2-1.4 4-1.8 6-1.8"/>
+    </g>
+    <path d="M7 32h34v3a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2Z" fill="url(#t)"/>
   </g>
 </svg>

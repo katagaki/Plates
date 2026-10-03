@@ -1,8 +1,16 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bottle of yakisoba sauce">
+  <defs>
+    <linearGradient id="b" x1="15" y1="0" x2="33" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d79a63"/><stop offset=".45" stop-color="#a4693a"/><stop offset="1" stop-color="#6e3d1c"/></linearGradient>
+    <linearGradient id="n" x1="20" y1="0" x2="28" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7a5232"/><stop offset="1" stop-color="#3e2612"/></linearGradient>
+    <linearGradient id="c" x1="19" y1="0" x2="29" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffb25c"/><stop offset=".5" stop-color="#ff7a1f"/><stop offset="1" stop-color="#d9520c"/></linearGradient>
+    <radialGradient id="l" cx="22" cy="29" r="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e6dfd0"/></radialGradient>
+  </defs>
   <g transform="translate(-3 -3.62) scale(1.125)">
-    <path d="M18 16h12v6l3 5v15a3 3 0 0 1-3 3H18a3 3 0 0 1-3-3V27l3-5Z" fill="#a4693a"/>
-    <path d="M20 10h8v7h-8Z" fill="#5c3a1e"/>
-    <rect x="19" y="7" width="10" height="5" rx="1.5" fill="#ff832b"/>
-    <ellipse cx="24" cy="31" rx="7" ry="5" fill="#f0ece4"/>
+    <path d="M18 16h12v6l3 5v15a3 3 0 0 1-3 3H18a3 3 0 0 1-3-3V27l3-5Z" fill="url(#b)"/>
+    <path d="M20 10h8v7h-8Z" fill="url(#n)"/>
+    <rect x="19" y="7" width="10" height="5" rx="1.5" fill="url(#c)"/>
+    <ellipse cx="24" cy="31" rx="7" ry="5" fill="url(#l)"/>
+    <path d="M21 31h6" stroke="#a4693a" stroke-opacity=".6" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M16.6 37.4v3M17.2 27l1.8-3" stroke="#fff" stroke-opacity=".45" stroke-width="1.4" stroke-linecap="round"/>
   </g>
 </svg>

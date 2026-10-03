@@ -1,8 +1,16 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Olives">
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Green and black olives">
+  <defs>
+    <radialGradient id="k" cx="27" cy="23" r="13" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8a6a88"/><stop offset=".5" stop-color="#4a2e4a"/><stop offset="1" stop-color="#24142a"/></radialGradient>
+    <radialGradient id="g" cx="14" cy="21" r="14" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d2dc7e"/><stop offset=".5" stop-color="#8e9e3e"/><stop offset="1" stop-color="#5a6a20"/></radialGradient>
+    <radialGradient id="pm" cx="17" cy="22.6" r="4" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff8a75"/><stop offset=".5" stop-color="#e2473b"/><stop offset="1" stop-color="#a8262a"/></radialGradient>
+    <linearGradient id="lf" x1="18" y1="12" x2="25" y2="18" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a6dc7e"/><stop offset="1" stop-color="#4f8a34"/></linearGradient>
+  </defs>
   <g transform="translate(-3 -3.19) scale(1.125)">
-    <ellipse cx="18" cy="28" rx="8" ry="10" fill="#5f6b33"/>
-    <ellipse cx="31" cy="30" rx="7" ry="9" fill="#7f8c45"/>
-    <ellipse cx="18" cy="24" rx="3" ry="2.4" fill="#d94f45"/>
-    <path d="M18 18c1-4 4-6 7-6-2 2-3 4-3 6Z" fill="#7a9e4e"/>
+    <ellipse cx="31" cy="30" rx="7" ry="9" fill="url(#k)"/>
+    <ellipse cx="28.4" cy="25" rx="2" ry="1.2" transform="rotate(-50 28.4 25)" fill="#fff" fill-opacity=".7"/>
+    <ellipse cx="18" cy="28" rx="8" ry="10" fill="url(#g)"/>
+    <ellipse cx="18" cy="24" rx="3" ry="2.4" fill="url(#pm)"/>
+    <ellipse cx="13.6" cy="29.4" rx="1.6" ry="3" transform="rotate(10 13.6 29.4)" fill="#fff" fill-opacity=".75"/>
+    <path d="M18 18c1-4 4-6 7-6-2 2-3 4-3 6Z" fill="url(#lf)"/>
   </g>
 </svg>

@@ -1,8 +1,17 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Arrabbiata sauce">
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Jar of arrabbiata sauce">
+  <defs>
+    <linearGradient id="b" x1="14" y1="0" x2="34" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff7a62"/><stop offset=".5" stop-color="#d23a2c"/><stop offset="1" stop-color="#9a1f1c"/></linearGradient>
+    <linearGradient id="c" x1="12" y1="0" x2="36" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#b8443a"/><stop offset=".5" stop-color="#8a1f18"/><stop offset="1" stop-color="#5e120e"/></linearGradient>
+    <linearGradient id="l" x1="0" y1="24.5" x2="0" y2="35" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e6e0d4"/></linearGradient>
+    <linearGradient id="p" x1="20" y1="29" x2="30" y2="33" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff7a62"/><stop offset="1" stop-color="#c4241a"/></linearGradient>
+  </defs>
   <g transform="translate(-3 -3.31) scale(1.125)">
-    <path d="M14 17h20v21a3 3 0 0 1-3 3H17a3 3 0 0 1-3-3Z" fill="#c4342a"/>
-    <rect x="12" y="12" width="24" height="6" rx="2" fill="#8a1f18"/>
-    <rect x="14" y="24.5" width="20" height="10.5" fill="#f0ece4"/>
-    <path d="M19.5 31.5c3 1.4 7 1 9.5-2.4l1.4-1.2c-.2 4.4-5.6 6.8-10.9 3.6Z" fill="#d9301f"/><path d="M29 29.1l1.4-1.2 1.2.9" stroke="#4f8a3a" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <path d="M14 17h20v21a3 3 0 0 1-3 3H17a3 3 0 0 1-3-3Z" fill="url(#b)"/>
+    <rect x="12" y="12" width="24" height="6" rx="2" fill="url(#c)"/>
+    <rect x="14" y="24.5" width="20" height="10.5" fill="url(#l)"/>
+    <path d="M19.5 31.5c3 1.4 7 1 9.5-2.4l1.4-1.2c-.2 4.4-5.6 6.8-10.9 3.6Z" fill="url(#p)"/>
+    <path d="M29 29.1l1.4-1.2 1.2.9" stroke="#4f8a3a" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <path d="M15.8 37v1" stroke="#fff" stroke-opacity=".6" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M14.6 13.6h7" stroke="#fff" stroke-opacity=".3" stroke-width="1.4" stroke-linecap="round"/>
   </g>
 </svg>

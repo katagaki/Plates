@@ -1,8 +1,13 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mandoline">
-  <path d="M14 6h20v34a3 3 0 0 1-3 3H17a3 3 0 0 1-3-3Z" fill="#f0ece4" stroke="#d9d2c4" stroke-width="1"/>
-  <rect x="17" y="10" width="14" height="26" rx="1" fill="#cfd6dd"/>
-  <path d="M17 21h14l-3 3H17Z" fill="#8d939b"/>
-  <path d="M17 24h11" stroke="#e8edf2" stroke-width=".8"/>
-  <path d="M20 13v5M24 13v5M28 13v5M20 28v5M24 28v5M28 28v5" stroke="#b8c0c8" stroke-width="1" stroke-linecap="round"/>
-  <rect x="19" y="40" width="10" height="5" rx="2" fill="#5f9a45"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mandoline slicer">
+  <defs>
+    <linearGradient id="f" x1="13" y1="4" x2="35" y2="44" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a6dc7e"/><stop offset=".5" stop-color="#5fa83f"/><stop offset="1" stop-color="#3f8a2e"/></linearGradient>
+    <linearGradient id="d" x1="16" y1="8" x2="32" y2="36" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e3e9ef"/><stop offset=".5" stop-color="#b2bcc6"/><stop offset="1" stop-color="#8e99a4"/></linearGradient>
+  </defs>
+  <path d="M13 7a3 3 0 0 1 3-3h16a3 3 0 0 1 3 3v29l-3 8H16l-3-8Z" fill="url(#f)"/>
+  <rect x="16.5" y="8" width="15" height="28" rx="1.5" fill="url(#d)"/>
+  <path d="M16.5 22.5 31.5 16v3.6l-15 6.5Z" fill="#2f3338"/>
+  <path d="M16.5 22.3 31.5 15.8" stroke="#fff" stroke-opacity=".9" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M20 30v3M24 29v4M28 27.4v5.6" stroke="#6f7a85" stroke-opacity=".55" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M19 10.6v6" stroke="#fff" stroke-opacity=".7" stroke-width="1.4" stroke-linecap="round"/>
+  <circle cx="24" cy="40" r="1.6" fill="#2f6e22" fill-opacity=".7"/>
 </svg>

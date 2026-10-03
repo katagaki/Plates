@@ -1,7 +1,16 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zucchini">
+  <defs>
+    <linearGradient id="b" x1="0" y1="18.6" x2="0" y2="31.4" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5a9a3c"/><stop offset=".5" stop-color="#2f6524"/><stop offset="1" stop-color="#163d12"/></linearGradient>
+    <linearGradient id="st" x1="0" y1="22" x2="0" y2="28" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d2dc9a"/><stop offset="1" stop-color="#7e9446"/></linearGradient>
+  </defs>
   <g transform="translate(-3 -2.83) scale(1.125)">
-    <rect x="6" y="19" width="36" height="12" rx="6" transform="rotate(-20 24 25)" fill="#3f6d34"/>
-    <path d="M14 31 31 16" stroke="#5f8c3f" stroke-width="4" stroke-linecap="round"/>
-    <rect x="33" y="10" width="3" height="6" rx="1.5" transform="rotate(-20 34.5 13)" fill="#7a9e4e"/>
+    <g transform="rotate(-20 24 25)">
+      <path d="M10.4 18.6 35.4 20.4a4.6 4.6 0 0 1 0 9.2L10.4 31.4a6.4 6.4 0 0 1 0-12.8Z" fill="url(#b)"/>
+      <g stroke="#a6dc7e" stroke-opacity=".3" stroke-width="1" stroke-linecap="round"><path d="M12 27.6l22-.6M10 24.8l26 .2"/></g>
+      <path d="M11 21.6l20 1" stroke="#fff" stroke-opacity=".4" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M39 23.4h2.6v3.2H39Z" fill="url(#st)"/>
+      <path d="M41.2 22.2l2.4-.6v6.8l-2.4-.6Z" fill="url(#st)"/>
+      <ellipse cx="5.4" cy="25" rx="1" ry="1.8" fill="#9bb85a" fill-opacity=".7"/>
+    </g>
   </g>
 </svg>

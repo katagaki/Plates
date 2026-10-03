@@ -1,8 +1,18 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Corned beef">
-  <path d="M15 17h18l3.5 22h-25Z" fill="#b8c2cc"/>
-  <path d="M15 17h18l.5 3h-19Z" fill="#8f9aa6"/>
-  <path d="M13 26h22l1 8H12Z" fill="#c0392b"/>
-  <path d="M19 30h10" stroke="#f3d6a0" stroke-width="1.8" stroke-linecap="round"/>
-  <path d="M16 17c2-6 14-6 16 0Z" fill="#c9636a"/>
-  <path d="M20 14.5c2-1 5-1.5 8-.5" stroke="#e08d93" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tin of corned beef">
+  <defs>
+    <linearGradient id="c" x1="11" y1="0" x2="37" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e3e9ef"/><stop offset=".5" stop-color="#b2bcc6"/><stop offset="1" stop-color="#8e99a4"/></linearGradient>
+    <linearGradient id="l" x1="12" y1="0" x2="36" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff7a62"/><stop offset=".5" stop-color="#d83a2c"/><stop offset="1" stop-color="#a8202a"/></linearGradient>
+    <radialGradient id="m" cx="20" cy="11" r="12" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f2a3a3"/><stop offset=".5" stop-color="#d06a6e"/><stop offset="1" stop-color="#a8444c"/></radialGradient>
+  </defs>
+  <path d="M15 17h18l3.5 22h-25Z" fill="url(#c)"/>
+  <path d="M15 17h18l.5 3h-19Z" fill="#7f8a96"/>
+  <path d="M13 26h22l1 8H12Z" fill="url(#l)"/>
+  <path d="M19 30h10" stroke="#ffe3a8" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M16 17c2-6 14-6 16 0Z" fill="url(#m)"/>
+  <g fill="#fff4ea" fill-opacity=".6">
+    <circle cx="25" cy="14.4" r=".7"/>
+    <circle cx="28.6" cy="15.6" r=".6"/>
+  </g>
+  <path d="M19.6 14.4c1.4-1 3.2-1.6 5-1.6" stroke="#fff" stroke-opacity=".6" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <path d="M15.4 22.6l-1.6 14" stroke="#fff" stroke-opacity=".55" stroke-width="1.4" stroke-linecap="round"/>
 </svg>

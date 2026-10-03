@@ -1,7 +1,14 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Golden syrup">
-  <rect x="11" y="16" width="26" height="25" rx="3" fill="#2f6e3a"/>
-  <rect x="11" y="23" width="26" height="11" fill="#d9a53a"/>
-  <rect x="10" y="13" width="28" height="5" rx="2" fill="#c9952a"/>
-  <path d="M22 13c0 5 .5 9 2 12 1.5-3 2-7 2-12Z" fill="#f2b33a"/>
-  <path d="M18 28.5h12" stroke="#2f6e3a" stroke-width="1.8" stroke-linecap="round"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tin of golden syrup">
+  <defs>
+    <linearGradient id="b" x1="11" y1="0" x2="37" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4f9a5a"/><stop offset="0.5" stop-color="#2f6e3a"/><stop offset="1" stop-color="#1c4a24"/></linearGradient>
+    <linearGradient id="g" x1="11" y1="0" x2="37" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f6cc6a"/><stop offset="0.5" stop-color="#d9a53a"/><stop offset="1" stop-color="#a8761a"/></linearGradient>
+    <linearGradient id="c" x1="0" y1="13" x2="0" y2="18" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f2c45a"/><stop offset="1" stop-color="#a8761a"/></linearGradient>
+    <linearGradient id="d" x1="22" y1="0" x2="26" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffd27a"/><stop offset="1" stop-color="#e09a20"/></linearGradient>
+  </defs>
+  <rect x="11" y="16" width="26" height="25" rx="3" fill="url(#b)"/>
+  <rect x="11" y="23" width="26" height="11" fill="url(#g)"/>
+  <rect x="10" y="13" width="28" height="5" rx="2" fill="url(#c)"/>
+  <path d="M22 13c0 5 .5 9 2 12 1.5-3 2-7 2-12Z" fill="url(#d)"/>
+  <path d="M18 28.5h12" stroke="#1c4a24" stroke-opacity=".7" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M13.6 19v19" stroke="#fff" stroke-opacity=".4" stroke-width="1.6" stroke-linecap="round"/>
 </svg>

@@ -1,6 +1,12 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kinako">
-  <path d="M7 30h34c-1 6-8 10-17 10S8 36 7 30Z" fill="#4a5a6a"/>
-  <path d="M7 30h34" stroke="#61738a" stroke-width="2" stroke-linecap="round"/>
-  <path d="M10 30c2-8 8-12 14-12s12 4 14 12Z" fill="#d6ad62"/>
-  <g fill="#e8c887"><circle cx="18" cy="25" r=".9"/><circle cx="24" cy="22" r=".9"/><circle cx="29" cy="26" r=".9"/><circle cx="22" cy="27" r=".8"/></g>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bowl of kinako">
+  <defs>
+    <radialGradient id="p" cx="18" cy="20" r="18" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f7e2a8"/><stop offset=".5" stop-color="#dcb468"/><stop offset="1" stop-color="#a87c34"/></radialGradient>
+    <linearGradient id="b" x1="7" y1="0" x2="41" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8597ad"/><stop offset=".45" stop-color="#56677c"/><stop offset="1" stop-color="#323f50"/></linearGradient>
+  </defs>
+  <path d="M10 30.5c2-8 8-12.5 14-12.5s12 4.5 14 12.5Z" fill="url(#p)"/>
+  <g fill="#a87c34" fill-opacity=".5"><circle cx="18" cy="25" r=".9"/><circle cx="24" cy="22" r=".9"/><circle cx="29.4" cy="25.6" r=".9"/><circle cx="22" cy="27.6" r=".8"/><circle cx="33" cy="28.6" r=".7"/></g>
+  <path d="M14.6 25.4c1.6-2.6 3.8-4.4 6.4-5.2" stroke="#fff" stroke-opacity=".45" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <path d="M6.5 30h35c-1 6.4-8 10.5-17.5 10.5S7.5 36.4 6.5 30Z" fill="url(#b)"/>
+  <path d="M6.5 30h35" stroke="#a3b2c4" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M11 33.6c1.6 2.2 4 3.6 6.8 4.4" stroke="#fff" stroke-opacity=".3" stroke-width="1.6" fill="none" stroke-linecap="round"/>
 </svg>

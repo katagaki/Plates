@@ -1,6 +1,11 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sausages">
-  <g transform="translate(-3 -3.18) scale(1.125)">
-    <path d="M11 15c8-3 14 1 18 6s8 8 8 12" stroke="#d9705c" stroke-width="9" fill="none" stroke-linecap="round"/>
-    <path d="M11 25c8-3 12 2 15 6s5 5 7 6" stroke="#e8927c" stroke-width="9" fill="none" stroke-linecap="round"/>
-  </g>
+  <defs>
+    <linearGradient id="a" x1="0" y1="6" x2="0" y2="25" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e8916a"/><stop offset=".5" stop-color="#c4552f"/><stop offset="1" stop-color="#8a3218"/></linearGradient>
+    <linearGradient id="b" x1="0" y1="21" x2="0" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e8916a"/><stop offset=".5" stop-color="#c4552f"/><stop offset="1" stop-color="#8a3218"/></linearGradient>
+  </defs>
+  <path d="M10 20C17 12 29 10.4 37 14" stroke="url(#a)" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <path d="M11 35C18 27 30 25.4 38 29" stroke="url(#b)" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <g fill="#8a3218"><ellipse cx="5.2" cy="22.4" rx="1.4" ry="1.8" transform="rotate(40 5.2 22.4)"/><ellipse cx="42" cy="15.6" rx="1.4" ry="1.8" transform="rotate(-70 42 15.6)"/><ellipse cx="6.2" cy="37.4" rx="1.4" ry="1.8" transform="rotate(40 6.2 37.4)"/><ellipse cx="43" cy="30.6" rx="1.4" ry="1.8" transform="rotate(-70 43 30.6)"/></g>
+  <path d="M12.4 15.4C17 11.4 23 9.6 29 9.4" stroke="#fff" stroke-opacity=".55" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <path d="M13.4 30.4C18 26.4 24 24.6 30 24.4" stroke="#fff" stroke-opacity=".55" stroke-width="1.8" fill="none" stroke-linecap="round"/>
 </svg>

@@ -1,12 +1,45 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pine nuts">
-  <g transform="translate(-3 -3.44) scale(1.125)">
-    <path d="M9 30c0-6 7-10 15-10s15 4 15 10Z" fill="#e0d9c6"/>
-    <g fill="#f2e2b8">
-      <ellipse cx="16" cy="26" rx="2.6" ry="4" transform="rotate(-25 16 26)"/>
-      <ellipse cx="24" cy="24" rx="2.6" ry="4" transform="rotate(10 24 24)"/>
-      <ellipse cx="32" cy="27" rx="2.6" ry="4" transform="rotate(-15 32 27)"/>
-      <ellipse cx="20" cy="30" rx="2.6" ry="4" transform="rotate(20 20 30)"/>
-    </g>
-    <path d="M7 30h34v3a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2Z" fill="#c8c2b6"/>
+  <defs>
+    <radialGradient id="k" cx="-1.6" cy="-1.6" r="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fffaf0"/><stop offset=".5" stop-color="#f2e0b0"/><stop offset="1" stop-color="#d2b478"/></radialGradient>
+  </defs>
+  <g transform="translate(13 30) rotate(-30)">
+    <path d="M0 -6.4C2 -5.4 3.6-2.4 3.6 1.4 3.6 4.4 2 6 0 6S-3.6 4.4-3.6 1.4C-3.6-2.4-2-5.4 0-6.4Z" fill="url(#k)"/>
+    <ellipse cx="0" cy="-5.2" rx="1" ry="1.2" fill="#b8955a" fill-opacity=".6"/>
+    <ellipse cx="-1.4" cy="0" rx=".8" ry="2.2" fill="#fff" fill-opacity=".7"/>
+  </g>
+  <g transform="translate(21 33) rotate(15)">
+    <path d="M0 -6.4C2 -5.4 3.6-2.4 3.6 1.4 3.6 4.4 2 6 0 6S-3.6 4.4-3.6 1.4C-3.6-2.4-2-5.4 0-6.4Z" fill="url(#k)"/>
+    <ellipse cx="0" cy="-5.2" rx="1" ry="1.2" fill="#b8955a" fill-opacity=".6"/>
+    <ellipse cx="-1.4" cy="0" rx=".8" ry="2.2" fill="#fff" fill-opacity=".7"/>
+  </g>
+  <g transform="translate(30 31) rotate(-10)">
+    <path d="M0 -6.4C2 -5.4 3.6-2.4 3.6 1.4 3.6 4.4 2 6 0 6S-3.6 4.4-3.6 1.4C-3.6-2.4-2-5.4 0-6.4Z" fill="url(#k)"/>
+    <ellipse cx="0" cy="-5.2" rx="1" ry="1.2" fill="#b8955a" fill-opacity=".6"/>
+    <ellipse cx="-1.4" cy="0" rx=".8" ry="2.2" fill="#fff" fill-opacity=".7"/>
+  </g>
+  <g transform="translate(37 28) rotate(30)">
+    <path d="M0 -6.4C2 -5.4 3.6-2.4 3.6 1.4 3.6 4.4 2 6 0 6S-3.6 4.4-3.6 1.4C-3.6-2.4-2-5.4 0-6.4Z" fill="url(#k)"/>
+    <ellipse cx="0" cy="-5.2" rx="1" ry="1.2" fill="#b8955a" fill-opacity=".6"/>
+    <ellipse cx="-1.4" cy="0" rx=".8" ry="2.2" fill="#fff" fill-opacity=".7"/>
+  </g>
+  <g transform="translate(17 21) rotate(20)">
+    <path d="M0 -6.4C2 -5.4 3.6-2.4 3.6 1.4 3.6 4.4 2 6 0 6S-3.6 4.4-3.6 1.4C-3.6-2.4-2-5.4 0-6.4Z" fill="url(#k)"/>
+    <ellipse cx="0" cy="-5.2" rx="1" ry="1.2" fill="#b8955a" fill-opacity=".6"/>
+    <ellipse cx="-1.4" cy="0" rx=".8" ry="2.2" fill="#fff" fill-opacity=".7"/>
+  </g>
+  <g transform="translate(26 22) rotate(-20)">
+    <path d="M0 -6.4C2 -5.4 3.6-2.4 3.6 1.4 3.6 4.4 2 6 0 6S-3.6 4.4-3.6 1.4C-3.6-2.4-2-5.4 0-6.4Z" fill="url(#k)"/>
+    <ellipse cx="0" cy="-5.2" rx="1" ry="1.2" fill="#b8955a" fill-opacity=".6"/>
+    <ellipse cx="-1.4" cy="0" rx=".8" ry="2.2" fill="#fff" fill-opacity=".7"/>
+  </g>
+  <g transform="translate(33 18) rotate(10)">
+    <path d="M0 -6.4C2 -5.4 3.6-2.4 3.6 1.4 3.6 4.4 2 6 0 6S-3.6 4.4-3.6 1.4C-3.6-2.4-2-5.4 0-6.4Z" fill="url(#k)"/>
+    <ellipse cx="0" cy="-5.2" rx="1" ry="1.2" fill="#b8955a" fill-opacity=".6"/>
+    <ellipse cx="-1.4" cy="0" rx=".8" ry="2.2" fill="#fff" fill-opacity=".7"/>
+  </g>
+  <g transform="translate(23 13) rotate(-5)">
+    <path d="M0 -6.4C2 -5.4 3.6-2.4 3.6 1.4 3.6 4.4 2 6 0 6S-3.6 4.4-3.6 1.4C-3.6-2.4-2-5.4 0-6.4Z" fill="url(#k)"/>
+    <ellipse cx="0" cy="-5.2" rx="1" ry="1.2" fill="#b8955a" fill-opacity=".6"/>
+    <ellipse cx="-1.4" cy="0" rx=".8" ry="2.2" fill="#fff" fill-opacity=".7"/>
   </g>
 </svg>

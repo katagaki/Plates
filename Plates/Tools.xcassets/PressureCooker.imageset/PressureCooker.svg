@@ -1,9 +1,16 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pressure cooker">
-  <path d="M8 22h28v13a6 6 0 0 1-6 6H14a6 6 0 0 1-6-6Z" fill="#cfd6dd"/>
-  <path d="M6 21c0-5 8-8 16-8s16 3 16 8Z" fill="#8d939b"/>
-  <rect x="5" y="20" width="34" height="3.4" rx="1.7" fill="#6f747b"/>
-  <rect x="19.5" y="8" width="5" height="6" rx="1.5" fill="#3c4046"/>
-  <circle cx="22" cy="7.5" r="2" fill="#d9402f"/>
-  <rect x="36" y="18" width="10" height="4" rx="2" fill="#3c4046"/>
-  <path d="M12 27v9" stroke="#e8edf2" stroke-width="2.4" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="b" x1="8" y1="0" x2="36" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e3e9ef"/><stop offset=".45" stop-color="#b2bcc6"/><stop offset="1" stop-color="#8e99a4"/></linearGradient>
+    <linearGradient id="l" x1="8" y1="13" x2="34" y2="22" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c5ced6"/><stop offset=".5" stop-color="#97a2ad"/><stop offset="1" stop-color="#6f7a85"/></linearGradient>
+    <linearGradient id="d" x1="0" y1="17" x2="0" y2="23" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#767d86"/><stop offset=".5" stop-color="#4e545c"/><stop offset="1" stop-color="#25282d"/></linearGradient>
+  </defs>
+  <path d="M8 22h28v13a6 6 0 0 1-6 6H14a6 6 0 0 1-6-6Z" fill="url(#b)"/>
+  <path d="M6 21c0-5 8-8 16-8s16 3 16 8Z" fill="url(#l)"/>
+  <rect x="5" y="20" width="34" height="3.4" rx="1.7" fill="#6f7a85"/>
+  <rect x="19.5" y="8.4" width="5" height="5.6" rx="1.5" fill="url(#d)"/>
+  <circle cx="22" cy="7.6" r="2.2" fill="#ec4a3c"/>
+  <circle cx="21.4" cy="7" r=".7" fill="#fff" fill-opacity=".8"/>
+  <rect x="36" y="17.6" width="10" height="4.6" rx="2.3" fill="url(#d)"/>
+  <path d="M11.6 16.8c2-1.4 4.6-2.2 7.4-2.4" stroke="#fff" stroke-opacity=".6" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+  <path d="M12 27v9" stroke="#fff" stroke-opacity=".8" stroke-width="2.2" stroke-linecap="round"/>
 </svg>

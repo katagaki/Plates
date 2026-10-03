@@ -1,6 +1,10 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Butternut squash">
-  <path d="M19 9h10c1 8 2 12 5 17 4.5 7 3 17-10 17s-14.5-10-10-17c3-5 4-9 5-17Z" fill="#e9b46b"/>
-  <path d="M15 32c1 6 5 9 11 9" stroke="#d4964c" stroke-width="2" fill="none" stroke-linecap="round"/>
-  <path d="M21 13v10" stroke="#f3cf92" stroke-width="2" stroke-linecap="round"/>
-  <path d="M24 9V4" stroke="#7a5a33" stroke-width="3.4" stroke-linecap="round"/>
+  <defs>
+    <radialGradient id="s" cx="18.5" cy="20" r="27" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fde4b8"/><stop offset=".5" stop-color="#ebb877"/><stop offset="1" stop-color="#c07e3a"/></radialGradient>
+  </defs>
+  <path d="M24 9.6V5.2" stroke="#7a5a33" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M18.5 12.4c0-2 2.5-3 5.5-3s5.5 1 5.5 3v10c0 3 1.5 4.6 3.5 6.6 3 3 4 5.5 4 8.5 0 5-5.5 7-13 7s-13-2-13-7c0-3 1-5.5 4-8.5 2-2 3.5-3.6 3.5-6.6Z" fill="url(#s)"/>
+  <path d="M14.2 34c.8 3.4 3.4 5.6 7 6.4" stroke="#b07034" stroke-opacity=".4" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <ellipse cx="24" cy="41.2" rx="2.2" ry="1.1" fill="#9c6630" fill-opacity=".55"/>
+  <path d="M21.2 13.4v8" stroke="#fff" stroke-opacity=".6" stroke-width="2" stroke-linecap="round"/>
 </svg>

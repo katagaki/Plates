@@ -1,8 +1,15 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fish sauce">
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bottle of fish sauce">
+  <defs>
+    <linearGradient id="b" x1="16" y1="0" x2="32" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#eaa45c"/><stop offset="0.45" stop-color="#b9622a"/><stop offset="1" stop-color="#7a3416"/></linearGradient>
+    <linearGradient id="c" x1="0" y1="9" x2="0" y2="16" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ee6a55"/><stop offset="1" stop-color="#ad2f28"/></linearGradient>
+    <linearGradient id="l" x1="0" y1="27" x2="0" y2="35" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e6dfd0"/></linearGradient>
+  </defs>
   <g transform="translate(-3 -3.12) scale(1.125)">
-    <path d="M20 15h8v3l4 6v14a3 3 0 0 1-3 3H19a3 3 0 0 1-3-3V24l4-6Z" fill="#8a5a2b"/>
-    <rect x="19" y="9" width="10" height="7" rx="2" fill="#c99a5e"/>
-    <rect x="18" y="27" width="12" height="8" rx="1" fill="#f0ece4"/>
-    <path d="M21 31h5" stroke="#a97142" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M20 15h8v3l4 6v14a3 3 0 0 1-3 3H19a3 3 0 0 1-3-3V24l4-6Z" fill="url(#b)"/>
+    <rect x="19" y="9" width="10" height="7" rx="2" fill="url(#c)"/>
+    <rect x="18" y="27" width="12" height="8" rx="1" fill="url(#l)"/>
+    <path d="M21 31c1.1-1.5 2.6-2.1 4-2.1 1.5 0 2.4.8 2.9 2.1-.5 1.3-1.4 2.1-2.9 2.1-1.4 0-2.9-.6-4-2.1Z" fill="#c4612a"/>
+    <path d="M21.6 31l-1.8-1.6v3.2Z" fill="#c4612a"/>
+    <path d="M18.2 24.6V36" stroke="#fff" stroke-opacity=".45" stroke-width="1.4" stroke-linecap="round"/>
   </g>
 </svg>

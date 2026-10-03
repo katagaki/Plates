@@ -1,7 +1,14 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mango">
-  <g transform="translate(-3.12 -2.94) scale(1.125)">
-    <path d="M22 12c8-2 15 5 15 14 0 8-6 14-13 14-6 0-11-5-11-12 0-8 4-15 9-16Z" fill="#ff9d3b"/>
-    <path d="M28 13c6 2 9 8 9 13 0 8-6 14-13 14Z" fill="#e8622d"/>
-    <path d="M22 12c1-3 4-5 8-5-1 4-4 6-8 5Z" fill="#5f9e4a"/>
+  <defs>
+    <radialGradient id="b" cx="-9" cy="-7" r="30" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffd25c"/><stop offset=".4" stop-color="#ffa030"/><stop offset=".75" stop-color="#ec5a2d"/><stop offset="1" stop-color="#c23a26"/></radialGradient>
+    <radialGradient id="g" cx="-15" cy="-4" r="10" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a6c84a" stop-opacity=".95"/><stop offset="1" stop-color="#a6c84a" stop-opacity="0"/></radialGradient>
+    <linearGradient id="l" x1="-18" y1="-17" x2="-8" y2="-10" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a6dc7e"/><stop offset=".5" stop-color="#5fa83f"/><stop offset="1" stop-color="#3f8a2e"/></linearGradient>
+  </defs>
+  <g transform="translate(25 24.8) rotate(42)">
+    <path d="M-17.6 0C-17.6-8.4-9.6-11.6-1.6-10.4 3.6-9.6 6.6-11.2 10.6-10.4 15.6-9.2 18.4-4 17.6 1.6 16.6 8 9.6 11.2.4 11.2-9 11.2-17.6 8.2-17.6 0Z" fill="url(#b)"/>
+    <path d="M-17.6 0C-17.6-6-13.6-9.6-8.4-10.6-10.4-6.4-10.8-1.6-9.6 3.2-13.6 3.6-17.6 3.2-17.6 0Z" fill="url(#g)"/>
+    <path d="M-12.6-6.6c3.4-2.4 7.6-3 11.6-2.4" stroke="#fff" stroke-opacity=".7" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    <path d="M-16-5.4c-.8-1-1.4-1.6-2.4-2" stroke="#6e4a30" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M-18.2-7.6c-3.4-3.6-2.4-8 1.8-10.6 1.4 4.2.4 8.2-1.8 10.6Z" fill="url(#l)"/>
   </g>
 </svg>

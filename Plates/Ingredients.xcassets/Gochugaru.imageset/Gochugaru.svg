@@ -1,7 +1,11 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gochugaru">
-  <path d="M7 30h34c-1 6-8 10-17 10S8 36 7 30Z" fill="#e8e2d6"/>
-  <path d="M7 30h34" stroke="#f4efe6" stroke-width="2" stroke-linecap="round"/>
-  <path d="M10 30c2-8 8-12 14-12s12 4 14 12Z" fill="#d0301f"/>
-  <g fill="#8e1a10"><circle cx="16" cy="27" r=".9"/><circle cx="21" cy="23" r=".9"/><circle cx="26" cy="25" r=".9"/><circle cx="31" cy="27" r=".9"/><circle cx="24" cy="28" r=".8"/><circle cx="19" cy="28" r=".8"/></g>
-  <g fill="#f07a4a"><circle cx="18" cy="24.5" r=".8"/><circle cx="28" cy="22" r=".8"/><circle cx="33" cy="26" r=".7"/></g>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bowl of gochugaru">
+  <defs>
+    <linearGradient id="w" x1="7" y1="28" x2="41" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset="0.5" stop-color="#f1ece0"/><stop offset="1" stop-color="#cfc6b2"/></linearGradient>
+    <radialGradient id="p" cx="18" cy="21" r="18" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff7a5a"/><stop offset="0.5" stop-color="#d8321f"/><stop offset="1" stop-color="#9a1a10"/></radialGradient>
+  </defs>
+  <path d="M10 30c2-8 8-12 14-12s12 4 14 12Z" fill="url(#p)"/>
+  <g fill="#7a120a" fill-opacity=".6"><rect x="15.4" y="26.4" width="1.8" height="1" rx=".3" transform="rotate(30 16.3 26.9)"/><rect x="20" y="22.4" width="1.8" height="1" rx=".3" transform="rotate(-20 20.9 22.9)"/><rect x="25.4" y="24.6" width="1.8" height="1" rx=".3"/><rect x="30.6" y="26.6" width="1.8" height="1" rx=".3" transform="rotate(40 31.5 27.1)"/><rect x="23.4" y="27.6" width="1.6" height="1" rx=".3" transform="rotate(-30 24.2 28.1)"/><rect x="18.4" y="28" width="1.6" height="1" rx=".3"/></g>
+  <g fill="#ffb07a"><circle cx="18" cy="24.5" r=".8"/><circle cx="28" cy="22" r=".8"/><circle cx="33" cy="26" r=".7"/><circle cx="22" cy="20.6" r=".6"/></g>
+  <path d="M7 30h34c-1 6-8 10-17 10S8 36 7 30Z" fill="url(#w)"/>
+  <path d="M10.6 32.4c1.4 2.2 3.6 3.8 6.4 4.8" stroke="#fff" stroke-opacity=".85" stroke-width="1.6" fill="none" stroke-linecap="round"/>
 </svg>

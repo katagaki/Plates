@@ -1,6 +1,13 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Crème fraîche">
-  <path d="M8 26h32l-3 12a3 3 0 0 1-3 2H14a3 3 0 0 1-3-2Z" fill="#7fa3c2"/>
-  <path d="M8 26h32" stroke="#9dbad4" stroke-width="2.4" stroke-linecap="round"/>
-  <path d="M10 26c0-4 4-7 8-7 1-3 4-5 6.5-3.5C27 13 31 14 32 18c4 0 7 4 6 8Z" fill="#fbf8f0"/>
-  <path d="M19 22c3-2.5 7-2.5 10 0M23 17.5c1.5-1 3-1 4 0" stroke="#e5ddcb" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tub of crème fraîche">
+  <defs>
+    <linearGradient id="t" x1="8" y1="0" x2="40" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a9c6e0"/><stop offset=".45" stop-color="#7aa0c2"/><stop offset="1" stop-color="#4e7499"/></linearGradient>
+    <linearGradient id="r" x1="8" y1="0" x2="40" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#cfe0ef"/><stop offset="1" stop-color="#93b2cf"/></linearGradient>
+    <radialGradient id="c" cx="18" cy="15" r="22" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#f7f2e6"/><stop offset="1" stop-color="#ddd2bb"/></radialGradient>
+  </defs>
+  <path d="M8 26h32l-3 12a3 3 0 0 1-3 2H14a3 3 0 0 1-3-2Z" fill="url(#t)"/>
+  <path d="M10 26c0-4 4-7 8-7 1-3 4-5 6.5-3.5C27 13 31 14 32 18c4 0 7 4 6 8Z" fill="url(#c)"/>
+  <path d="M8 26h32" stroke="url(#r)" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M19 22.4c3-2.5 7-2.5 10 0M23 17.8c1.5-1 3-1 4 0" stroke="#cdbf9f" stroke-opacity=".6" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M13 22.6c.6-1.4 1.8-2.4 3.2-2.8" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <path d="M12.6 30l1.4 6" stroke="#fff" stroke-opacity=".35" stroke-width="1.6" stroke-linecap="round"/>
 </svg>

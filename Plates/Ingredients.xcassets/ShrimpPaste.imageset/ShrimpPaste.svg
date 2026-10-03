@@ -1,7 +1,12 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shrimp paste">
-  <path d="M6 24 22 15l20 6v12L26 42 6 36Z" fill="#e8e0cc"/>
-  <path d="M12 27 26 21l12 4v8l-12 6-14-4Z" fill="#6a3a40"/>
-  <path d="M12 27 26 21l12 4-12 5.5Z" fill="#8a4a50"/>
-  <path d="M16 28.5c3-1 6-2 9-2.5M19 31c3-1 6-1.6 9-2" stroke="#a86068" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-  <path d="M6 24 22 15l6 2-16 9Z" fill="#f6f0e0"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Block of shrimp paste">
+  <defs>
+    <linearGradient id="w" x1="6" y1="15" x2="42" y2="42" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#ece4d0"/><stop offset="1" stop-color="#c8bca0"/></linearGradient>
+    <linearGradient id="p" x1="12" y1="27" x2="38" y2="39" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8a4e56"/><stop offset=".5" stop-color="#6a3a40"/><stop offset="1" stop-color="#42202a"/></linearGradient>
+    <linearGradient id="t" x1="12" y1="21" x2="38" y2="30" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#be7880"/><stop offset="1" stop-color="#8a4a50"/></linearGradient>
+  </defs>
+  <path d="M6 24 22 15l20 6v12L26 42 6 36Z" fill="url(#w)"/>
+  <path d="M12 27 26 21l12 4v8l-12 6-14-4Z" fill="url(#p)"/>
+  <path d="M12 27 26 21l12 4-12 5.5Z" fill="url(#t)"/>
+  <path d="M17 27.6c3-1 6-2 9-2.5M20 30c3-1 6-1.6 9-2" stroke="#5a2a32" stroke-opacity=".5" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <path d="M6 24 22 15l6 2-16 9Z" fill="#fff" fill-opacity=".85"/>
 </svg>

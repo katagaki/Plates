@@ -1,8 +1,13 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kumquats">
-  <ellipse cx="16" cy="29" rx="9" ry="11" transform="rotate(-15 16 29)" fill="#f29a1f"/>
-  <ellipse cx="32" cy="30" rx="9" ry="11" transform="rotate(12 32 30)" fill="#f7b02f"/>
-  <path d="M10 26c0-4 2-7 5-8" stroke="#fbcf6e" stroke-width="2.4" fill="none" stroke-linecap="round"/>
-  <path d="M27 26c1-4 3-6 6-7" stroke="#fde08f" stroke-width="2.4" fill="none" stroke-linecap="round"/>
-  <path d="M19 18c1-5 3-9 7-12M30 19c-1-5-2-9-4-13" stroke="#6b5a3a" stroke-width="1.6" fill="none" stroke-linecap="round"/>
-  <path d="M26 7c4-3 9-3 12-1-3 4-8 4-12 1Z" fill="#4f8a3a"/>
+  <defs>
+    <radialGradient id="a" cx="13" cy="22" r="16" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffc46a"/><stop offset=".5" stop-color="#ff8f1f"/><stop offset="1" stop-color="#d9600c"/></radialGradient>
+    <radialGradient id="b" cx="28" cy="21" r="16" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffd27a"/><stop offset=".5" stop-color="#ffa02a"/><stop offset="1" stop-color="#d96a0c"/></radialGradient>
+    <linearGradient id="g" x1="25" y1="6" x2="38" y2="14" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a6dc7e"/><stop offset=".5" stop-color="#5fa83f"/><stop offset="1" stop-color="#3f8a2e"/></linearGradient>
+  </defs>
+  <ellipse cx="32" cy="28.5" rx="8.6" ry="12" transform="rotate(14 32 28.5)" fill="url(#b)"/>
+  <ellipse cx="17" cy="29" rx="8.6" ry="12" transform="rotate(-16 17 29)" fill="url(#a)"/>
+  <ellipse cx="12.6" cy="24" rx="2.2" ry="4" transform="rotate(-16 12.6 24)" fill="#fff" fill-opacity=".75"/>
+  <ellipse cx="28" cy="22.6" rx="1.8" ry="3.4" transform="rotate(14 28 22.6)" fill="#fff" fill-opacity=".7"/>
+  <path d="M28 9.4c3.4-4 9-4.8 12.6-2.4-2.6 4.4-8.6 5.4-12.6 2.4Z" fill="url(#g)"/>
+  <path d="M28.4 9.4c-.6 2.4-1 4.6-.8 7.4M20 17.6c.4-1.8 1.2-3 2.4-3.8" stroke="#6b5a3a" stroke-width="1.6" fill="none" stroke-linecap="round"/>
 </svg>

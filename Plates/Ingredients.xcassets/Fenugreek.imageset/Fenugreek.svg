@@ -1,26 +1,29 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fenugreek">
-  <rect x="7.4" y="32.1" width="5.2" height="3.8" rx="1" fill="#d9a03a" transform="rotate(-45 10 34)"/>
-  <path d="M8.6 33.4l1.4 1.2" stroke="#a8702a" stroke-width=".8" transform="rotate(-45 10 34)"/>
-  <rect x="13.4" y="28.1" width="5.2" height="3.8" rx="1" fill="#d9a03a" transform="rotate(8 16 30)"/>
-  <path d="M14.6 29.4l1.4 1.2" stroke="#a8702a" stroke-width=".8" transform="rotate(8 16 30)"/>
-  <rect x="19.4" y="33.1" width="5.2" height="3.8" rx="1" fill="#d9a03a" transform="rotate(-29 22 35)"/>
-  <path d="M20.6 34.4l1.4 1.2" stroke="#a8702a" stroke-width=".8" transform="rotate(-29 22 35)"/>
-  <rect x="25.4" y="29.1" width="5.2" height="3.8" rx="1" fill="#d9a03a" transform="rotate(24 28 31)"/>
-  <path d="M26.6 30.4l1.4 1.2" stroke="#a8702a" stroke-width=".8" transform="rotate(24 28 31)"/>
-  <rect x="31.4" y="33.1" width="5.2" height="3.8" rx="1" fill="#d9a03a" transform="rotate(-13 34 35)"/>
-  <path d="M32.6 34.4l1.4 1.2" stroke="#a8702a" stroke-width=".8" transform="rotate(-13 34 35)"/>
-  <rect x="36.4" y="28.1" width="5.2" height="3.8" rx="1" fill="#d9a03a" transform="rotate(40 39 30)"/>
-  <path d="M37.6 29.4l1.4 1.2" stroke="#a8702a" stroke-width=".8" transform="rotate(40 39 30)"/>
-  <rect x="10.4" y="37.1" width="5.2" height="3.8" rx="1" fill="#d9a03a" transform="rotate(3 13 39)"/>
-  <path d="M11.6 38.4l1.4 1.2" stroke="#a8702a" stroke-width=".8" transform="rotate(3 13 39)"/>
-  <rect x="22.4" y="38.1" width="5.2" height="3.8" rx="1" fill="#d9a03a" transform="rotate(-34 25 40)"/>
-  <path d="M23.6 39.4l1.4 1.2" stroke="#a8702a" stroke-width=".8" transform="rotate(-34 25 40)"/>
-  <rect x="33.4" y="38.1" width="5.2" height="3.8" rx="1" fill="#d9a03a" transform="rotate(19 36 40)"/>
-  <path d="M34.6 39.4l1.4 1.2" stroke="#a8702a" stroke-width=".8" transform="rotate(19 36 40)"/>
-  <rect x="16.4" y="23.1" width="5.2" height="3.8" rx="1" fill="#d9a03a" transform="rotate(-18 19 25)"/>
-  <path d="M17.6 24.4l1.4 1.2" stroke="#a8702a" stroke-width=".8" transform="rotate(-18 19 25)"/>
-  <rect x="28.4" y="23.1" width="5.2" height="3.8" rx="1" fill="#d9a03a" transform="rotate(35 31 25)"/>
-  <path d="M29.6 24.4l1.4 1.2" stroke="#a8702a" stroke-width=".8" transform="rotate(35 31 25)"/>
-  <rect x="22.4" y="18.1" width="5.2" height="3.8" rx="1" fill="#d9a03a" transform="rotate(-2 25 20)"/>
-  <path d="M23.6 19.4l1.4 1.2" stroke="#a8702a" stroke-width=".8" transform="rotate(-2 25 20)"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fenugreek seeds">
+  <defs>
+    <linearGradient id="f" x1="7" y1="17" x2="42" y2="42" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f6cf72"/><stop offset="0.5" stop-color="#dba03a"/><stop offset="1" stop-color="#a8682a"/></linearGradient>
+  </defs>
+  <rect x="7.4" y="32.1" width="5.2" height="3.8" rx="1.2" fill="url(#f)" transform="rotate(-45 10 34)"/>
+  <rect x="13.4" y="28.1" width="5.2" height="3.8" rx="1.2" fill="url(#f)" transform="rotate(8 16 30)"/>
+  <rect x="19.4" y="33.1" width="5.2" height="3.8" rx="1.2" fill="url(#f)" transform="rotate(-29 22 35)"/>
+  <rect x="25.4" y="29.1" width="5.2" height="3.8" rx="1.2" fill="url(#f)" transform="rotate(24 28 31)"/>
+  <rect x="31.4" y="33.1" width="5.2" height="3.8" rx="1.2" fill="url(#f)" transform="rotate(-13 34 35)"/>
+  <rect x="36.4" y="28.1" width="5.2" height="3.8" rx="1.2" fill="url(#f)" transform="rotate(40 39 30)"/>
+  <rect x="10.4" y="37.1" width="5.2" height="3.8" rx="1.2" fill="url(#f)" transform="rotate(3 13 39)"/>
+  <rect x="22.4" y="38.1" width="5.2" height="3.8" rx="1.2" fill="url(#f)" transform="rotate(-34 25 40)"/>
+  <rect x="33.4" y="38.1" width="5.2" height="3.8" rx="1.2" fill="url(#f)" transform="rotate(19 36 40)"/>
+  <rect x="16.4" y="23.1" width="5.2" height="3.8" rx="1.2" fill="url(#f)" transform="rotate(-18 19 25)"/>
+  <rect x="28.4" y="23.1" width="5.2" height="3.8" rx="1.2" fill="url(#f)" transform="rotate(35 31 25)"/>
+  <rect x="22.4" y="18.1" width="5.2" height="3.8" rx="1.2" fill="url(#f)" transform="rotate(-2 25 20)"/>
+  <path d="M8.6 33.4l1.4 1.2" stroke="#8a5418" stroke-opacity=".55" stroke-width=".8" stroke-linecap="round" transform="rotate(-45 10 34)"/>
+  <path d="M14.6 29.4l1.4 1.2" stroke="#8a5418" stroke-opacity=".55" stroke-width=".8" stroke-linecap="round" transform="rotate(8 16 30)"/>
+  <path d="M20.6 34.4l1.4 1.2" stroke="#8a5418" stroke-opacity=".55" stroke-width=".8" stroke-linecap="round" transform="rotate(-29 22 35)"/>
+  <path d="M26.6 30.4l1.4 1.2" stroke="#8a5418" stroke-opacity=".55" stroke-width=".8" stroke-linecap="round" transform="rotate(24 28 31)"/>
+  <path d="M32.6 34.4l1.4 1.2" stroke="#8a5418" stroke-opacity=".55" stroke-width=".8" stroke-linecap="round" transform="rotate(-13 34 35)"/>
+  <path d="M37.6 29.4l1.4 1.2" stroke="#8a5418" stroke-opacity=".55" stroke-width=".8" stroke-linecap="round" transform="rotate(40 39 30)"/>
+  <path d="M11.6 38.4l1.4 1.2" stroke="#8a5418" stroke-opacity=".55" stroke-width=".8" stroke-linecap="round" transform="rotate(3 13 39)"/>
+  <path d="M23.6 39.4l1.4 1.2" stroke="#8a5418" stroke-opacity=".55" stroke-width=".8" stroke-linecap="round" transform="rotate(-34 25 40)"/>
+  <path d="M34.6 39.4l1.4 1.2" stroke="#8a5418" stroke-opacity=".55" stroke-width=".8" stroke-linecap="round" transform="rotate(19 36 40)"/>
+  <path d="M17.6 24.4l1.4 1.2" stroke="#8a5418" stroke-opacity=".55" stroke-width=".8" stroke-linecap="round" transform="rotate(-18 19 25)"/>
+  <path d="M29.6 24.4l1.4 1.2" stroke="#8a5418" stroke-opacity=".55" stroke-width=".8" stroke-linecap="round" transform="rotate(35 31 25)"/>
+  <path d="M23.6 19.4l1.4 1.2" stroke="#8a5418" stroke-opacity=".55" stroke-width=".8" stroke-linecap="round" transform="rotate(-2 25 20)"/>
 </svg>

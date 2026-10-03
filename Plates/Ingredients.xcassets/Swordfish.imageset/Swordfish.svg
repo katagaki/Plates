@@ -1,11 +1,18 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Swordfish">
-  <path d="M11.5 24C8 20 5 16 2 11C4.5 19 5 22 5 24C5 26 4.5 29 2 37C5 32 8 28 11.5 24Z" fill="#3f4a6b"/>
-  <path d="M31.5 18.5c-.5-5-2.5-9-6-11 1.5 4.5 1 8-1.5 11.2Z" fill="#3f4a6b"/>
+  <defs>
+    <linearGradient id="k" x1="0" y1="10" x2="0" y2="30" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7686b0"/><stop offset=".5" stop-color="#3f4a6b"/><stop offset="1" stop-color="#262e48"/></linearGradient>
+    <linearGradient id="s" x1="0" y1="22" x2="0" y2="30" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f4f7fa"/><stop offset="1" stop-color="#aeb8c4"/></linearGradient>
+    <linearGradient id="w" x1="35" y1="0" x2="48" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8a96b2"/><stop offset="1" stop-color="#4e5a78"/></linearGradient>
+  </defs>
+  <path d="M11.5 24C8 20 5 16 2 11C4.5 19 5 22 5 24C5 26 4.5 29 2 37C5 32 8 28 11.5 24Z" fill="url(#k)"/>
+  <path d="M31.5 18.5c-.5-5-2.5-9-6-11 1.5 4.5 1 8-1.5 11.2Z" fill="url(#k)"/>
   <path d="M14.5 22.6l1.2-2 1 1.6Z" fill="#3f4a6b"/>
-  <path d="M36 24C35 19.71 30.5 17.4 25 17.4C17.5 17.4 13 21.8 10 22.4L10 25.6C13 26.2 17.5 30 25 30C30.5 30 35 27.9 36 24Z" fill="#cbd2da"/>
-  <path d="M36 24C35 19.71 30.5 17.4 25 17.4C17.5 17.4 13 21.8 10 22.4L10 24.3C22 24.5 26 24.5 36 24Z" fill="#3f4a6b"/>
-  <path d="M35 22.6 47.5 24.2 35 25.6Z" fill="#56627f"/>
+  <path d="M36 24C35 19.71 30.5 17.4 25 17.4C17.5 17.4 13 21.8 10 22.4L10 25.6C13 26.2 17.5 30 25 30C30.5 30 35 27.9 36 24Z" fill="url(#s)"/>
+  <path d="M36 24C35 19.71 30.5 17.4 25 17.4C17.5 17.4 13 21.8 10 22.4L10 24.3C22 24.5 26 24.5 36 24Z" fill="url(#k)"/>
+  <path d="M35 22.6 47.5 24.2 35 25.6Z" fill="url(#w)"/>
   <path d="M29.5 27c-2 3.5-5 6.5-9 8.5 3.5-.4 7-2.6 9.5-6Z" fill="#3f4a6b"/>
   <path d="M16 27.8l2.5 3.5.8-3Z" fill="#8a9bb0"/>
-  <circle cx="32.5" cy="22.6" r="1.6" fill="#1d2633"/>
+  <path d="M20 20.2c2.6-1.2 5.2-1.6 8-1.4" stroke="#fff" stroke-linecap="round" fill="none" stroke-opacity=".5" stroke-width="1.2"/>
+  <circle cx="32.5" cy="22.6" r="1.6" fill="#141a26"/>
+  <circle cx="32" cy="22.1" r=".5" fill="#fff" fill-opacity=".8"/>
 </svg>

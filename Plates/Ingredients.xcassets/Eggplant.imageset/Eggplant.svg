@@ -1,7 +1,11 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Eggplant">
+  <defs>
+    <radialGradient id="b" cx="18" cy="22" r="24" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#9b74c4"/><stop offset=".5" stop-color="#5f3c86"/><stop offset="1" stop-color="#341d52"/></radialGradient>
+    <linearGradient id="c" x1="29" y1="8" x2="36" y2="18" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a6dc7e"/><stop offset="1" stop-color="#4b8a30"/></linearGradient>
+  </defs>
   <g transform="translate(-2.99 -3.03) scale(1.125)">
-    <path d="M31 15c8 4 9 15 2 21s-19 6-22-1c-3-6 3-12 9-14s8-4 11-6Z" fill="#6b4a8f"/>
-    <path d="M15 30c0-6 5-11 11-12" stroke="#8f6bb0" stroke-width="3" fill="none" stroke-linecap="round"/>
-    <path d="M30 16c-2-4 0-7 3-8-1 3 0 5 3 6-2 2-4 3-6 2Z" fill="#7a9e4e"/>
+    <path d="M31 15c8 4 9 15 2 21s-19 6-22-1c-3-6 3-12 9-14s8-4 11-6Z" fill="url(#b)"/>
+    <path d="M15 30c0-6 5-11 11-12" stroke="#d2b8ec" stroke-opacity=".7" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    <path d="M30 16c-2-4 0-7 3-8-1 3 0 5 3 6-2 2-4 3-6 2Z" fill="url(#c)"/>
   </g>
 </svg>

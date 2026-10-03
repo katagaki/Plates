@@ -1,8 +1,14 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lamb chop">
-  <g transform="translate(-1.81 -3.72) scale(1.125)">
-    <path d="M16 30c-2-7 3-13 11-13 8 0 13 5 12 12-1 6-7 10-13 10-5 0-9-3-10-9Z" fill="#b04a44"/>
-    <path d="M22 29c2-4 6-6 10-5 4 1 5 5 3 8-2 4-7 5-11 4s-4-4-2-7Z" fill="#d3675f"/>
-    <path d="M16 32c-4 1-7 3-9 6" stroke="#f0ece4" stroke-width="5" fill="none" stroke-linecap="round"/>
-    <circle cx="6" cy="39" r="3.5" fill="#f0ece4"/>
-  </g>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lamb rib chop">
+  <defs>
+    <linearGradient id="bn" x1="28" y1="8" x2="42" y2="22" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#f1ece0"/><stop offset="1" stop-color="#cfc6b2"/></linearGradient>
+    <linearGradient id="ft" x1="8" y1="18" x2="30" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff6ea"/><stop offset=".5" stop-color="#f3e6d2"/><stop offset="1" stop-color="#d6c2a2"/></linearGradient>
+    <radialGradient id="m" cx="14" cy="24" r="20" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f08a80"/><stop offset=".5" stop-color="#c94a4a"/><stop offset="1" stop-color="#8e2a2e"/></radialGradient>
+  </defs>
+  <path d="M29.4 21.4 39.6 10" stroke="url(#bn)" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="40.2" cy="9.2" r="2.6" fill="url(#bn)"/>
+  <path d="M31 19.4C29.2 24 30.2 27 29.8 31 29 37.6 23.6 41 17.6 41 11 41 7 36.4 7 30.4 7 23.4 12.4 18.4 19.4 18.6 23.6 18.7 27 19.8 31 19.4Z" fill="url(#m)"/>
+  <path d="M7.6 26.6C9.4 21.4 14 18.6 19.4 18.6 23.6 18.7 27 19.8 31 19.4L30 23.4C26.6 23.8 23.4 22.4 19.6 22.4 15 22.4 11.4 23.8 7.6 26.6Z" fill="url(#ft)"/>
+  <path d="M15 28c3 .4 5.6 2.4 6.6 5.6M24.4 25.6c1 2 1.4 4 1.2 6.4" stroke="#8e2a2e" stroke-opacity=".5" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <path d="M10.6 30c.4-1.6 1.2-2.8 2.4-3.6" stroke="#fff" stroke-opacity=".5" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <path d="M31.2 17.6 37.4 10.8" stroke="#fff" stroke-opacity=".9" stroke-width="1.2" stroke-linecap="round"/>
 </svg>

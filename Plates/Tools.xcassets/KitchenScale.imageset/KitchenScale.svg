@@ -1,9 +1,13 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kitchen scale">
-  <path d="M6 26h36v10a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4Z" fill="#f0ece4"/>
-  <path d="M6 26h36v10a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4Z" fill="none" stroke="#d9d2c4" stroke-width="1"/>
-  <ellipse cx="24" cy="24" rx="17" ry="4" fill="#cfd6dd"/>
-  <ellipse cx="24" cy="22.6" rx="17" ry="4" fill="#e8edf2"/>
-  <rect x="13" y="30" width="14" height="6" rx="1.5" fill="#3c4046"/>
-  <path d="M15.5 33h2M19 33h2M22.5 33h2" stroke="#7fe0a0" stroke-width="1.6"/>
-  <circle cx="34" cy="33" r="2" fill="#d9402f"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Digital kitchen scale">
+  <defs>
+    <linearGradient id="b" x1="6" y1="24" x2="42" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#f1ece0"/><stop offset="1" stop-color="#cfc6b2"/></linearGradient>
+    <linearGradient id="p" x1="7" y1="18" x2="41" y2="27" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f2f5f8"/><stop offset=".5" stop-color="#d3dae1"/><stop offset="1" stop-color="#a4aeb8"/></linearGradient>
+  </defs>
+  <path d="M6 25h36v11a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4Z" fill="url(#b)"/>
+  <ellipse cx="24" cy="24.4" rx="17" ry="4" fill="#8e99a4"/>
+  <ellipse cx="24" cy="22.8" rx="17" ry="4" fill="url(#p)"/>
+  <rect x="12.5" y="30" width="15" height="6.4" rx="1.6" fill="#2d3136"/>
+  <path d="M15.5 33.2h2M19 33.2h2M22.5 33.2h2" stroke="#7fe0a0" stroke-width="1.6"/>
+  <circle cx="34" cy="33.2" r="2.1" fill="#ec4a3c"/>
+  <path d="M14 21.2h9" stroke="#fff" stroke-opacity=".9" stroke-width="1.4" stroke-linecap="round"/>
 </svg>

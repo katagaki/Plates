@@ -1,9 +1,16 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Thai curry paste">
-  <path d="M8 22h32l-2.5 16a4 4 0 0 1-4 3.4H14.5a4 4 0 0 1-4-3.4Z" fill="#f2efe6"/>
-  <ellipse cx="24" cy="22" rx="16" ry="4.5" fill="#d9d2c0"/>
-  <path d="M11 22c1-5 6-8 13-8s12 3 13 8c-4 2-8.5 2.6-13 2.6S15 24 11 22Z" fill="#c43a2a"/>
-  <path d="M16 19c2-2 5-3 8-3" stroke="#e2604a" stroke-width="2" fill="none" stroke-linecap="round"/>
-  <g fill="#7a1a12"><circle cx="21" cy="21" r=".8"/><circle cx="28" cy="19" r=".8"/><circle cx="31" cy="22" r=".7"/></g>
-  <rect x="11" y="28" width="26" height="6" fill="#4f8a3a"/>
-  <path d="M37 16c2-5 4-9 7-11" stroke="#9cc45a" stroke-width="3" fill="none" stroke-linecap="round"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tub of Thai red curry paste">
+  <defs>
+    <linearGradient id="t" x1="8" y1="0" x2="40" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#f1ece0"/><stop offset="1" stop-color="#cfc6b2"/></linearGradient>
+    <radialGradient id="p" cx="18" cy="15" r="19" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff8a6a"/><stop offset=".5" stop-color="#d8402e"/><stop offset="1" stop-color="#a32a20"/></radialGradient>
+    <linearGradient id="g" x1="9" y1="0" x2="39" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7cc25a"/><stop offset=".5" stop-color="#4f9a34"/><stop offset="1" stop-color="#2f6e22"/></linearGradient>
+    <linearGradient id="s" x1="36" y1="6" x2="43" y2="17" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d8eea0"/><stop offset="1" stop-color="#7fb046"/></linearGradient>
+  </defs>
+  <path d="M37 17c2-5 3.8-8.6 6.6-11" stroke="url(#s)" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+  <path d="M8 22h32l-2.5 16a4 4 0 0 1-4 3.4H14.5a4 4 0 0 1-4-3.4Z" fill="url(#t)"/>
+  <ellipse cx="24" cy="22" rx="16" ry="4.5" fill="#e4ddcc"/>
+  <path d="M11 22c1-5 6-8 13-8s12 3 13 8c-4 2-8.5 2.6-13 2.6S15 24 11 22Z" fill="url(#p)"/>
+  <ellipse cx="18" cy="18" rx="3.4" ry="1.6" transform="rotate(-20 18 18)" fill="#fff" fill-opacity=".6"/>
+  <g fill="#7a1a12" fill-opacity=".55"><circle cx="23" cy="21" r=".9"/><circle cx="28.5" cy="18.6" r=".9"/><circle cx="31.5" cy="21.6" r=".8"/></g>
+  <path d="M8.9 28h30.2l-.9 6H9.8Z" fill="url(#g)"/>
+  <path d="M11.6 25.4l.5 3M12.9 35.4l.4 2.2" stroke="#fff" stroke-opacity=".8" stroke-width="1.6" stroke-linecap="round"/>
 </svg>

@@ -1,9 +1,16 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Garlic chives">
-  <g stroke="#3f7f2e" stroke-width="3.2" stroke-linecap="round" fill="none">
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bunch of garlic chives">
+  <defs>
+    <linearGradient id="d" x1="10" y1="0" x2="38" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5fa040"/><stop offset="1" stop-color="#2f6a22"/></linearGradient>
+    <linearGradient id="f" x1="14" y1="0" x2="34" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a6dc7e"/><stop offset=".5" stop-color="#6aaa45"/><stop offset="1" stop-color="#4f8a34"/></linearGradient>
+    <linearGradient id="r" x1="16" y1="31" x2="32" y2="36" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f2766a"/><stop offset=".5" stop-color="#d8473b"/><stop offset="1" stop-color="#a8262a"/></linearGradient>
+  </defs>
+  <g stroke="url(#d)" stroke-width="3.2" stroke-linecap="round" fill="none">
     <path d="M19 42 11 7"/><path d="M22 42 19 5"/><path d="M26 42 29 5"/><path d="M29 42 37 7"/>
   </g>
-  <g stroke="#6aaa45" stroke-width="2.6" stroke-linecap="round" fill="none">
+  <g stroke="url(#f)" stroke-width="2.6" stroke-linecap="round" fill="none">
     <path d="M20.5 42 15 6"/><path d="M24 42V4"/><path d="M27.5 42 33 6"/>
   </g>
-  <rect x="16" y="31" width="16" height="4.5" rx="1.5" fill="#d0473b"/>
+  <path d="M15.6 10l2.2 14" stroke="#fff" stroke-opacity=".5" stroke-width="1" stroke-linecap="round"/>
+  <rect x="16" y="31" width="16" height="4.5" rx="1.5" fill="url(#r)"/>
+  <path d="M18 32.6h5" stroke="#fff" stroke-opacity=".5" stroke-width="1" stroke-linecap="round"/>
 </svg>

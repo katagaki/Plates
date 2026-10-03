@@ -1,8 +1,13 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kefir">
-  <rect x="20" y="4" width="8" height="5" rx="1.5" fill="#4a78b8"/>
-  <path d="M21 9h6v6c5 2 8 5 8 10v14a4 4 0 0 1-4 4H17a4 4 0 0 1-4-4V25c0-5 3-8 8-10Z" fill="#e8eef2"/>
-  <path d="M13 24h22v15a4 4 0 0 1-4 4H17a4 4 0 0 1-4-4Z" fill="#fbfaf4"/>
-  <rect x="13" y="27" width="22" height="10" fill="#4a78b8"/>
-  <path d="M18 32c2-2 4-2 6 0s4 2 6 0" stroke="#fbfaf4" stroke-width="1.6" fill="none" stroke-linecap="round"/>
-  <path d="M21 9h6v6c5 2 8 5 8 10v14a4 4 0 0 1-4 4H17a4 4 0 0 1-4-4V25c0-5 3-8 8-10Z" fill="none" stroke="#b8c4cc" stroke-width="1.2"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bottle of kefir">
+  <defs>
+    <linearGradient id="g" x1="13" y1="0" x2="35" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#e9eef2"/><stop offset="1" stop-color="#bcc8d2"/></linearGradient>
+    <linearGradient id="c" x1="0" y1="4" x2="0" y2="9" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7fa8e0"/><stop offset="1" stop-color="#3e6aa8"/></linearGradient>
+    <linearGradient id="l" x1="13" y1="27" x2="35" y2="37" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6f9bd8"/><stop offset=".5" stop-color="#4a78b8"/><stop offset="1" stop-color="#2f5a96"/></linearGradient>
+  </defs>
+  <path d="M21 8.5h6v6.2c5 2 8 5 8 10.3v14a4 4 0 0 1-4 4H17a4 4 0 0 1-4-4V25c0-5.3 3-8.3 8-10.3Z" fill="url(#g)"/>
+  <rect x="20" y="4" width="8" height="5.2" rx="1.5" fill="url(#c)"/>
+  <rect x="13" y="27" width="22" height="10" fill="url(#l)"/>
+  <path d="M18 32c2-2 4-2 6 0s4 2 6 0" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <path d="M16 23c.6-2.2 2-3.8 4-4.8" stroke="#fff" stroke-opacity=".85" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <path d="M15.6 38.6v1.4" stroke="#fff" stroke-opacity=".8" stroke-width="1.6" stroke-linecap="round"/>
 </svg>

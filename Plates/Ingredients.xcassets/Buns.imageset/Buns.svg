@@ -1,12 +1,17 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Buns">
-  <path d="M6 28h36v3a5 5 0 0 1-5 5H11a5 5 0 0 1-5-5Z" fill="#c9803a"/>
-  <path d="M6 28c0-9 8-16 18-16s18 7 18 16Z" fill="#d9903f"/>
-  <path d="M11 21c3-4 7-6 12-6.5" stroke="#eab060" stroke-width="2.6" fill="none" stroke-linecap="round"/>
-  <ellipse cx="18" cy="19" rx="1.4" ry=".8" transform="rotate(20 18 19)" fill="#fbf2d8"/>
-  <ellipse cx="24" cy="16.5" rx="1.4" ry=".8" transform="rotate(-10 24 16.5)" fill="#fbf2d8"/>
-  <ellipse cx="30" cy="19" rx="1.4" ry=".8" transform="rotate(30 30 19)" fill="#fbf2d8"/>
-  <ellipse cx="22" cy="23" rx="1.4" ry=".8" transform="rotate(-30 22 23)" fill="#fbf2d8"/>
-  <ellipse cx="34" cy="24" rx="1.4" ry=".8" transform="rotate(10 34 24)" fill="#fbf2d8"/>
-  <ellipse cx="14" cy="25" rx="1.4" ry=".8" transform="rotate(40 14 25)" fill="#fbf2d8"/>
-  <ellipse cx="27" cy="24.5" rx="1.4" ry=".8" transform="rotate(0 27 24.5)" fill="#fbf2d8"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hamburger bun">
+  <defs>
+    <radialGradient id="t" cx="17" cy="15" r="28" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f6c27a"/><stop offset=".5" stop-color="#dc9340"/><stop offset="1" stop-color="#a95f22"/></radialGradient>
+    <linearGradient id="b" x1="6" y1="0" x2="42" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e0a058"/><stop offset=".5" stop-color="#c7803a"/><stop offset="1" stop-color="#985220"/></linearGradient>
+  </defs>
+  <path d="M6 28h36v3a5 5 0 0 1-5 5H11a5 5 0 0 1-5-5Z" fill="url(#b)"/>
+  <path d="M6 28c0-9 8-16 18-16s18 7 18 16Z" fill="url(#t)"/>
+  <path d="M7 28.6h34" stroke="#8a4a1c" stroke-opacity=".45" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M11.4 21.4c2.6-3.6 6.6-5.8 11.4-6.4" stroke="#fff" stroke-opacity=".5" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <ellipse cx="18" cy="19" rx="1.4" ry=".8" transform="rotate(20 18 19)" fill="#fff7e2"/>
+  <ellipse cx="24" cy="16.5" rx="1.4" ry=".8" transform="rotate(-10 24 16.5)" fill="#fff7e2"/>
+  <ellipse cx="30" cy="19" rx="1.4" ry=".8" transform="rotate(30 30 19)" fill="#fff7e2"/>
+  <ellipse cx="22" cy="23" rx="1.4" ry=".8" transform="rotate(-30 22 23)" fill="#fff7e2"/>
+  <ellipse cx="34" cy="24" rx="1.4" ry=".8" transform="rotate(10 34 24)" fill="#fff7e2"/>
+  <ellipse cx="14" cy="25" rx="1.4" ry=".8" transform="rotate(40 14 25)" fill="#fff7e2"/>
+  <ellipse cx="27" cy="24.5" rx="1.4" ry=".8" transform="rotate(0 27 24.5)" fill="#fff7e2"/>
 </svg>

@@ -1,7 +1,19 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Smoked paprika">
-  <g stroke="#a8b0b8" stroke-width="2.2" fill="none" stroke-linecap="round"><path d="M18 11c-2-2 0-4 0-6"/><path d="M24 9c-2-2 0-4 0-6"/><path d="M30 11c-2-2 0-4 0-6"/></g>
-  <rect x="10" y="17" width="28" height="25" rx="2.5" fill="#c4302a"/>
-  <rect x="9" y="14" width="30" height="5" rx="2" fill="#e8b830"/>
-  <rect x="14" y="23" width="20" height="13" rx="2" fill="#f6e6c0"/>
-  <path d="M18 32c1-4 4-6 8-6 2 0 3.5 1 4 2-2 0-3 1-3.5 2.5-1.5 3-5 4-8.5 1.5Z" fill="#c4302a"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tin of smoked paprika">
+  <defs>
+    <linearGradient id="t" x1="10" y1="0" x2="38" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f26a54"/><stop offset=".45" stop-color="#c4302a"/><stop offset="1" stop-color="#8a1c18"/></linearGradient>
+    <linearGradient id="l" x1="9" y1="14" x2="39" y2="19" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffe27a"/><stop offset=".5" stop-color="#e8b830"/><stop offset="1" stop-color="#b8860b"/></linearGradient>
+    <linearGradient id="c" x1="14" y1="23" x2="34" y2="36" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fffaf0"/><stop offset="1" stop-color="#ead6a8"/></linearGradient>
+    <linearGradient id="p" x1="18" y1="26" x2="30" y2="34" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ec4a3c"/><stop offset="1" stop-color="#a8202a"/></linearGradient>
+    <linearGradient id="s" x1="0" y1="3" x2="0" y2="11" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d6dde3"/><stop offset="1" stop-color="#8e99a4"/></linearGradient>
+  </defs>
+  <g stroke="url(#s)" stroke-width="2.2" fill="none" stroke-linecap="round">
+    <path d="M18 11c-2-2 0-4 0-6"/>
+    <path d="M24 9c-2-2 0-4 0-6"/>
+    <path d="M30 11c-2-2 0-4 0-6"/>
+  </g>
+  <rect x="10" y="17" width="28" height="25" rx="2.5" fill="url(#t)"/>
+  <rect x="9" y="14" width="30" height="5" rx="2" fill="url(#l)"/>
+  <rect x="14" y="23" width="20" height="13" rx="2" fill="url(#c)"/>
+  <path d="M18 32c1-4 4-6 8-6 2 0 3.5 1 4 2-2 0-3 1-3.5 2.5-1.5 3-5 4-8.5 1.5Z" fill="url(#p)"/>
+  <path d="M11.8 21v18" stroke="#fff" stroke-opacity=".4" stroke-width="1.6" stroke-linecap="round"/>
 </svg>

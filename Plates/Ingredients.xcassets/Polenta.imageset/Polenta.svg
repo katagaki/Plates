@@ -1,8 +1,14 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Polenta">
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bowl of polenta">
+  <defs>
+    <radialGradient id="p" cx="19" cy="21" r="14" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff09a"/><stop offset=".55" stop-color="#ffcf2e"/><stop offset="1" stop-color="#e29c08"/></radialGradient>
+    <linearGradient id="b" x1="9" y1="0" x2="39" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f3eee4"/><stop offset=".5" stop-color="#ddd5c6"/><stop offset="1" stop-color="#b9b0a0"/></linearGradient>
+  </defs>
   <g transform="translate(-3 -3.88) scale(1.125)">
-    <path d="M9 28h30a15 12 0 0 1-30 0Z" fill="#e6e0d4"/>
-    <path d="M12 28c2-6 7-9 12-9s10 3 12 9Z" fill="#f1c21b"/>
-    <g fill="#ffe97a"><circle cx="19" cy="25" r="1.4"/><circle cx="25" cy="23" r="1.4"/><circle cx="30" cy="26" r="1.4"/></g>
-    <rect x="20" y="40" width="8" height="3" rx="1.5" fill="#c8c2b6"/>
+    <path d="M12 28c2-6 7-9 12-9s10 3 12 9Z" fill="url(#p)"/>
+    <path d="M18 25.6c2-2.4 6-3.2 9-1.6-2.4.2-4 1.2-4.6 2.6" stroke="#c98200" stroke-opacity=".5" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+    <ellipse cx="18.6" cy="22.6" rx="2.6" ry="1.3" transform="rotate(-25 18.6 22.6)" fill="#fff" fill-opacity=".6"/>
+    <path d="M9 28h30a15 12 0 0 1-30 0Z" fill="url(#b)"/>
+    <rect x="20" y="40" width="8" height="3" rx="1.5" fill="#b3aa9a"/>
+    <path d="M12.4 31.4c1.4 3 3.8 5.4 7 6.6" stroke="#fff" stroke-opacity=".8" stroke-width="1.8" fill="none" stroke-linecap="round"/>
   </g>
 </svg>

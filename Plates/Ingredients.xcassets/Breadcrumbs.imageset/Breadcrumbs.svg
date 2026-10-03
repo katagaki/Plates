@@ -1,7 +1,23 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Breadcrumbs">
+  <defs>
+    <radialGradient id="m" cx="18" cy="24" r="20" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f6d3a0"/><stop offset=".5" stop-color="#d9a877"/><stop offset="1" stop-color="#a8723e"/></radialGradient>
+    <linearGradient id="p" x1="6" y1="0" x2="42" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e3ded4"/><stop offset=".5" stop-color="#c8c2b6"/><stop offset="1" stop-color="#a39c8f"/></linearGradient>
+  </defs>
   <g transform="translate(-3 -3.81) scale(1.125)">
-    <path d="M8 34c0-7 7-12 16-12s16 5 16 12Z" fill="#d9a877"/>
-    <g fill="#efc99e"><circle cx="16" cy="29" r="2.2"/><circle cx="24" cy="27" r="2.6"/><circle cx="32" cy="30" r="2"/><circle cx="20" cy="33" r="1.8"/><circle cx="29" cy="34" r="1.6"/></g>
-    <path d="M6 34h36v3a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2Z" fill="#c8c2b6"/>
+    <path d="M8 34Q6.61 32.29 8.40 30.90Q7.46 29.17 9.58 28.34Q9.11 26.53 11.49 26.16Q11.49 24.29 14.02 24.38Q14.52 22.49 17.06 23.08Q18.08 21.22 20.44 22.27Q21.98 20.55 24.00 22.00Q26.02 20.55 27.56 22.27Q29.92 21.22 30.94 23.08Q33.48 22.49 33.98 24.38Q36.51 24.29 36.51 26.16Q38.89 26.53 38.42 28.34Q40.54 29.17 39.60 30.90Q41.39 32.29 40.00 34.00Z" fill="url(#m)"/>
+    <rect x="14.1" y="27.7" width="2.6" height="1.8" rx=".5" transform="rotate(20 15.4 28.6)" fill="#f6dcb4"/>
+    <rect x="19.1" y="24.4" width="1.8" height="1.2" rx=".5" transform="rotate(40 20 25)" fill="#a8723e"/>
+    <rect x="29" y="24.7" width="2" height="1.4" rx=".5" transform="rotate(-20 30 25.4)" fill="#fbe6c4"/>
+    <rect x="16.2" y="34.4" width="1.6" height="1.2" rx=".5" transform="rotate(0 17 35)" fill="#fbe6c4"/>
+    <rect x="22.5" y="35" width="1.8" height="1.2" rx=".5" transform="rotate(30 23.4 35.6)" fill="#a8723e"/>
+    <rect x="21.9" y="25.2" width="3" height="2" rx=".5" transform="rotate(-15 23.4 26.2)" fill="#f6dcb4"/>
+    <rect x="30.4" y="28.6" width="2.4" height="1.6" rx=".5" transform="rotate(35 31.6 29.4)" fill="#f6dcb4"/>
+    <rect x="18.5" y="31.7" width="2.2" height="1.4" rx=".5" transform="rotate(-30 19.6 32.4)" fill="#b9824a"/>
+    <rect x="27.4" y="32.5" width="2" height="1.4" rx=".5" transform="rotate(10 28.4 33.2)" fill="#b9824a"/>
+    <rect x="25.8" y="29.2" width="1.6" height="1.2" rx=".5" transform="rotate(50 26.6 29.8)" fill="#b9824a"/>
+    <rect x="11.6" y="32" width="1.6" height="1.2" rx=".5" transform="rotate(-10 12.4 32.6)" fill="#f6dcb4"/>
+    <rect x="34.6" y="32.05" width="1.6" height="1.1" rx=".5" transform="rotate(25 35.4 32.6)" fill="#b9824a"/>
+    <path d="M6 34h36v3a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2Z" fill="url(#p)"/>
+    <path d="M12.4 27.4c1.6-2.2 4-3.6 6.6-4.2" stroke="#fff" stroke-opacity=".45" stroke-width="1.4" fill="none" stroke-linecap="round"/>
   </g>
 </svg>

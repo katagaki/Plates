@@ -95,6 +95,8 @@ of the evals, so do not undo one without running them again.
   will not take it.
 - Adding an icon means adding its `Ingredient.Name.` or `Tool.Name.` key in both languages, by
   hand, with `extractionState` set to `manual`.
+- Ingredient and tool icons are drawn in the Fluent style in `Assets/IconStyle/STYLE.md`. Check
+  each one against the real thing before drawing it, and render it with `batch_sheet.py` there.
 
 ### Dish icons
 

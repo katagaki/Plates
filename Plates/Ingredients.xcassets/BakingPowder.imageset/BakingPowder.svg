@@ -1,8 +1,14 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Baking powder">
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tub of baking powder">
+  <defs>
+    <linearGradient id="b" x1="14" y1="0" x2="34" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f0f8ff"/><stop offset=".5" stop-color="#cfe6f8"/><stop offset="1" stop-color="#9fc4e2"/></linearGradient>
+    <linearGradient id="c" x1="17" y1="0" x2="31" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7fd0ff"/><stop offset=".5" stop-color="#2fa6f2"/><stop offset="1" stop-color="#1576c4"/></linearGradient>
+    <linearGradient id="l" x1="0" y1="21" x2="0" y2="32" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e6e0d4"/></linearGradient>
+  </defs>
   <g transform="translate(-3 -3.06) scale(1.125)">
-    <rect x="14" y="14" width="20" height="27" rx="3" fill="#d8eefc"/>
-    <rect x="17" y="8" width="14" height="7" rx="2" fill="#33b1ff"/>
-    <rect x="17" y="21" width="14" height="11" rx="1.5" fill="#f8f6f1"/>
-    <path d="M20 26h8M20 29h5" stroke="#8d939b" stroke-width="1.6" stroke-linecap="round"/>
+    <rect x="14" y="14" width="20" height="27" rx="3" fill="url(#b)"/>
+    <rect x="17" y="8" width="14" height="7" rx="2" fill="url(#c)"/>
+    <rect x="17" y="21" width="14" height="11" rx="1.5" fill="url(#l)"/>
+    <path d="M20 26h8M20 29h5" stroke="#5a6470" stroke-opacity=".6" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M15.8 18v19" stroke="#fff" stroke-opacity=".8" stroke-width="1.6" stroke-linecap="round"/>
   </g>
 </svg>

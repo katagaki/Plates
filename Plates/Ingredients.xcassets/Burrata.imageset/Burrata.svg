@@ -1,9 +1,14 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Burrata">
-  <path d="M5 38c6-6 14-5 19-2-6 5-14 5-19 2Z" fill="#4f9a3a"/>
-  <path d="M43 36c-5-6-13-6-19-2 6 5 14 5 19 2Z" fill="#5fae47"/>
-  <circle cx="24" cy="27" r="12" fill="#e8e3d6"/>
-  <circle cx="24" cy="26" r="12" fill="#faf8f2"/>
-  <path d="M19 15c1-3.5 9-3.5 10 0l-1.5 3.5h-7Z" fill="#ece6d8"/>
-  <path d="M20.5 18.5c2 1 5 1 7 0" stroke="#dcd5c4" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-  <path d="M16 25c1.5-3 4-4.5 7-5" stroke="#ffffff" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Burrata on basil leaves">
+  <defs>
+    <linearGradient id="l1" x1="5" y1="33" x2="22" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a6dc7e"/><stop offset=".5" stop-color="#5fa83f"/><stop offset="1" stop-color="#3f8a2e"/></linearGradient>
+    <linearGradient id="l2" x1="26" y1="31" x2="43" y2="39" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a6dc7e"/><stop offset=".5" stop-color="#5fa83f"/><stop offset="1" stop-color="#3f8a2e"/></linearGradient>
+    <radialGradient id="b" cx="19" cy="20" r="18" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#f3efe5"/><stop offset="1" stop-color="#d3cab5"/></radialGradient>
+    <linearGradient id="k" x1="19" y1="12" x2="29" y2="19" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fdfaf3"/><stop offset="1" stop-color="#d9cfba"/></linearGradient>
+  </defs>
+  <path d="M5 38c6-6 14-5 19-2-6 5-14 5-19 2Z" fill="url(#l1)"/>
+  <path d="M43 36c-5-6-13-6-19-2 6 5 14 5 19 2Z" fill="url(#l2)"/>
+  <circle cx="24" cy="26.5" r="12" fill="url(#b)"/>
+  <path d="M19 15c1-3.5 9-3.5 10 0l-1.5 3.5h-7Z" fill="url(#k)"/>
+  <path d="M20.5 18.6c2 1.1 5 1.1 7 0M22.4 17.6l.8-3M25.6 17.6l-.8-3" stroke="#b5a98f" stroke-opacity=".6" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <path d="M15.8 25.4c1.4-3 3.8-4.8 6.8-5.4" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round"/>
 </svg>

@@ -1,8 +1,13 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Brandy">
-  <path d="M11 18c0-3 1-6 2-7h22c1 1 2 4 2 7 0 8-6 13-13 13s-13-5-13-13Z" fill="#e8eef2"/>
-  <path d="M11.4 21h25.2c-.8 6-6 10-12.6 10s-11.8-4-12.6-10Z" fill="#b8641f"/>
-  <path d="M14 23c1 2 3 3.5 5 4" stroke="#e0903a" stroke-width="1.6" fill="none" stroke-linecap="round"/>
-  <rect x="22.5" y="30" width="3" height="9" fill="#dce4ea"/>
-  <ellipse cx="24" cy="40" rx="9" ry="2.6" fill="#dce4ea"/>
-  <path d="M11 18c0-3 1-6 2-7h22c1 1 2 4 2 7 0 8-6 13-13 13s-13-5-13-13Z" fill="none" stroke="#b8c4cc" stroke-width="1.2"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Glass of brandy">
+  <defs>
+    <linearGradient id="g" x1="11" y1="0" x2="37" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f7fafc"/><stop offset=".6" stop-color="#e4ebf0"/><stop offset="1" stop-color="#c3ced6"/></linearGradient>
+    <linearGradient id="a" x1="0" y1="21" x2="0" y2="31" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#eea04a"/><stop offset=".5" stop-color="#c26c22"/><stop offset="1" stop-color="#8a4512"/></linearGradient>
+    <linearGradient id="s" x1="15" y1="0" x2="33" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#eef2f5"/><stop offset="1" stop-color="#bcc7cf"/></linearGradient>
+  </defs>
+  <ellipse cx="24" cy="40" rx="9" ry="2.6" fill="url(#s)"/>
+  <rect x="22.5" y="30" width="3" height="9" fill="url(#s)"/>
+  <path d="M11 18c0-3 1-6 2-7h22c1 1 2 4 2 7 0 8-6 13-13 13s-13-5-13-13Z" fill="url(#g)"/>
+  <path d="M11.4 21h25.2c-.8 6-6 10-12.6 10s-11.8-4-12.6-10Z" fill="url(#a)"/>
+  <path d="M13.6 17.4c0-2 .4-3.6 1-4.6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <path d="M14.4 23.6c1 2 3 3.4 5 4" stroke="#ffc888" stroke-opacity=".7" stroke-width="1.4" fill="none" stroke-linecap="round"/>
 </svg>

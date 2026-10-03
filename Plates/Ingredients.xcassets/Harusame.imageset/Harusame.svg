@@ -1,10 +1,15 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Glass noodles">
-  <g stroke="#cfdde3" stroke-width="1.5" fill="none" stroke-linecap="round">
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bundle of glass noodles">
+  <defs>
+    <linearGradient id="n" x1="12" y1="0" x2="38" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f4fafc"/><stop offset=".5" stop-color="#cfdee5"/><stop offset="1" stop-color="#a9bfc9"/></linearGradient>
+    <linearGradient id="b" x1="0" y1="22" x2="0" y2="28" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffa070"/><stop offset=".5" stop-color="#e2703c"/><stop offset="1" stop-color="#b84e22"/></linearGradient>
+  </defs>
+  <g stroke="url(#n)" stroke-width="1.5" fill="none" stroke-linecap="round">
     <path d="M14 8c-3 8 3 12 0 18s3 10 2 16"/><path d="M18 7c-3 8 3 12 0 19s3 10 2 16"/><path d="M22 7c-3 8 3 12 0 19s3 10 2 16"/>
     <path d="M26 7c-3 8 3 12 0 19s3 10 2 16"/><path d="M30 7c-3 8 3 12 0 19s3 10 2 16"/><path d="M34 8c-3 8 3 12 0 18s3 10 2 16"/>
   </g>
-  <g stroke="#e9f1f4" stroke-width="1.1" fill="none" stroke-linecap="round">
+  <g stroke="#ffffff" stroke-opacity=".85" stroke-width="1.1" fill="none" stroke-linecap="round">
     <path d="M16 8c-3 8 3 12 0 18s3 10 2 16"/><path d="M20 7c-3 8 3 12 0 19s3 10 2 16"/><path d="M24 7c-3 8 3 12 0 19s3 10 2 16"/><path d="M28 7c-3 8 3 12 0 19s3 10 2 16"/><path d="M32 7c-3 8 3 12 0 19s3 10 2 16"/>
   </g>
-  <rect x="11" y="22" width="26" height="6" rx="1.5" fill="#d86b3b"/>
+  <rect x="11" y="22" width="26" height="6" rx="1.5" fill="url(#b)"/>
+  <path d="M13.6 23.8h8" stroke="#fff" stroke-opacity=".5" stroke-width="1.2" stroke-linecap="round"/>
 </svg>

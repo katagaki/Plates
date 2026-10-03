@@ -1,9 +1,14 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pumpkin">
+  <defs>
+    <radialGradient id="b" cx="16" cy="20" r="26" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffb25c"/><stop offset=".5" stop-color="#ff7a1f"/><stop offset="1" stop-color="#d9520c"/></radialGradient>
+    <linearGradient id="c" x1="19" y1="13" x2="31" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffc47a"/><stop offset="1" stop-color="#f28a30"/></linearGradient>
+    <linearGradient id="s" x1="22" y1="6" x2="29" y2="13" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a5c46a"/><stop offset="1" stop-color="#5a7a34"/></linearGradient>
+  </defs>
   <g transform="translate(-3 -2.94) scale(1.125)">
-    <ellipse cx="24" cy="27" rx="18" ry="14" fill="#e8873d"/>
-    <path d="M24 13c4 0 7 6 7 14s-3 14-7 14" fill="#f2a45c"/>
-    <path d="M17 15c-3 3-4 7-4 12s1 9 4 12" stroke="#cf6f28" stroke-width="2" fill="none"/>
-    <path d="M31 15c3 3 4 7 4 12s-1 9-4 12" stroke="#cf6f28" stroke-width="2" fill="none"/>
-    <path d="M23 13c-1-4 1-6 4-7-1 3 0 5 2 6-2 2-4 2-6 1Z" fill="#7a9e4e"/>
+    <ellipse cx="24" cy="27" rx="18" ry="14" fill="url(#b)"/>
+    <path d="M24 13c4 0 7 6 7 14s-3 14-7 14-7-6-7-14 3-14 7-14Z" fill="url(#c)"/>
+    <path d="M17 15c-3 3-4 7-4 12s1 9 4 12M31 15c3 3 4 7 4 12s-1 9-4 12" stroke="#b8400a" stroke-opacity=".5" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <path d="M23 13c-1-4 1-6 4-7-1 3 0 5 2 6-2 2-4 2-6 1Z" fill="url(#s)"/>
+    <ellipse cx="12.6" cy="21" rx="2.8" ry="1.6" transform="rotate(-55 12.6 21)" fill="#fff" fill-opacity=".5"/>
   </g>
 </svg>

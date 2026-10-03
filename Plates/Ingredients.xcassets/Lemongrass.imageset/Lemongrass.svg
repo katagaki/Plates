@@ -1,10 +1,24 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lemongrass">
-  <g transform="rotate(-18 24 24)">
-    <path d="M17 12h4v26a3 3 0 0 1-4 0Z" fill="#dde6b0"/>
-    <path d="M23 8h4v31a3 3 0 0 1-4 0Z" fill="#e6ecc0"/>
-    <path d="M29 12h4v26a3 3 0 0 1-4 0Z" fill="#dde6b0"/>
-    <path d="M17 12h4v8h-4ZM23 8h4v9h-4ZM29 12h4v8h-4Z" fill="#8fb35c"/>
-    <g stroke="#c3cf8c" stroke-width="1" fill="none"><path d="M19 22v14M25 19v18M31 22v14"/></g>
-    <g fill="#e9dcc9"><ellipse cx="19" cy="39" rx="2.2" ry="1.4"/><ellipse cx="25" cy="40" rx="2.2" ry="1.4"/><ellipse cx="31" cy="39" rx="2.2" ry="1.4"/></g>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lemongrass stalks">
+  <defs>
+    <linearGradient id="p" x1="-3" y1="0" x2="3" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f6f8dc"/><stop offset=".5" stop-color="#e2e9b4"/><stop offset="1" stop-color="#b8c27a"/></linearGradient>
+    <linearGradient id="g" x1="-3" y1="0" x2="3" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#b2d872"/><stop offset=".5" stop-color="#7fa84a"/><stop offset="1" stop-color="#557a2e"/></linearGradient>
+  </defs>
+  <g transform="rotate(-18 24 24) translate(17 24)">
+    <path d="M-2.5-17h5V12c.6 1.4.8 2.6.6 3.6-.4 2.2-1.8 3.2-3.1 3.2S-2.7 17.8-3.1 15.6c-.2-1 0-2.2.6-3.6Z" fill="url(#p)"/>
+    <path d="M-2.5-17h5v8h-5Z" fill="url(#g)"/>
+    <path d="M-2.5-1h5M-2.5 7h5" stroke="#9aa65e" stroke-opacity=".5" stroke-width="1"/>
+    <path d="M-1.2-6v12" stroke="#fff" stroke-opacity=".7" stroke-width="1" stroke-linecap="round"/>
+  </g>
+  <g transform="rotate(-18 24 24) translate(24 22)">
+    <path d="M-2.5-17h5V12c.6 1.4.8 2.6.6 3.6-.4 2.2-1.8 3.2-3.1 3.2S-2.7 17.8-3.1 15.6c-.2-1 0-2.2.6-3.6Z" fill="url(#p)"/>
+    <path d="M-2.5-17h5v8h-5Z" fill="url(#g)"/>
+    <path d="M-2.5-1h5M-2.5 7h5" stroke="#9aa65e" stroke-opacity=".5" stroke-width="1"/>
+    <path d="M-1.2-6v12" stroke="#fff" stroke-opacity=".7" stroke-width="1" stroke-linecap="round"/>
+  </g>
+  <g transform="rotate(-18 24 24) translate(31 24)">
+    <path d="M-2.5-17h5V12c.6 1.4.8 2.6.6 3.6-.4 2.2-1.8 3.2-3.1 3.2S-2.7 17.8-3.1 15.6c-.2-1 0-2.2.6-3.6Z" fill="url(#p)"/>
+    <path d="M-2.5-17h5v8h-5Z" fill="url(#g)"/>
+    <path d="M-2.5-1h5M-2.5 7h5" stroke="#9aa65e" stroke-opacity=".5" stroke-width="1"/>
+    <path d="M-1.2-6v12" stroke="#fff" stroke-opacity=".7" stroke-width="1" stroke-linecap="round"/>
   </g>
 </svg>

@@ -1,12 +1,12 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Green beans">
+  <defs>
+    <linearGradient id="a" x1="18" y1="16" x2="26" y2="30" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a6dc7e"/><stop offset=".5" stop-color="#5fa83f"/><stop offset="1" stop-color="#3f8a2e"/></linearGradient>
+    <linearGradient id="b" x1="20" y1="24" x2="28" y2="38" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a6dc7e"/><stop offset=".5" stop-color="#5fa83f"/><stop offset="1" stop-color="#3f8a2e"/></linearGradient>
+  </defs>
   <g transform="translate(-3 -3.38) scale(1.125)">
-    <g stroke="#5f8c3f" stroke-width="6" stroke-linecap="round" fill="none">
-      <path d="M10 32c6-10 16-16 26-18"/>
-      <path d="M12 40c6-10 16-16 26-18"/>
-    </g>
-    <g stroke="#8fb35c" stroke-width="1.6" fill="none">
-      <path d="M14 31c6-8 14-13 21-15"/>
-      <path d="M16 39c6-8 14-13 21-15"/>
-    </g>
+    <path d="M10 32c6-10 16-16 26-18" stroke="url(#a)" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <path d="M12 40c6-10 16-16 26-18" stroke="url(#b)" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <path d="M36 14l3.4-1.4M38 22l3.4-1.4" stroke="#3f8a2e" stroke-width="1.6" stroke-linecap="round"/>
+    <g stroke="#fff" stroke-opacity=".55" stroke-width="1.5" stroke-linecap="round" fill="none"><path d="M13 29c5-7 12-11.6 18-13.4"/><path d="M15 37c5-7 12-11.6 18-13.4"/></g>
   </g>
 </svg>

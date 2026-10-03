@@ -1,14 +1,20 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nest of yakisoba noodles">
+  <defs>
+    <linearGradient id="tr" x1="7" y1="12" x2="41" y2="38" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fbf6ea"/><stop offset="1" stop-color="#ece2cc"/></linearGradient>
+    <linearGradient id="rim" x1="7" y1="12" x2="41" y2="38" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e2be82"/><stop offset=".5" stop-color="#c9a15f"/><stop offset="1" stop-color="#9a7436"/></linearGradient>
+    <linearGradient id="n" x1="10" y1="14" x2="38" y2="36" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffdf78"/><stop offset=".5" stop-color="#eeb336"/><stop offset="1" stop-color="#c08018"/></linearGradient>
+  </defs>
   <g transform="translate(-3 -3.13) scale(1.125)">
-    <g stroke="#e8c66a" stroke-width="3" stroke-linecap="round" fill="none">
-      <path d="M10 18q7 -6 14 0t14 0"/>
-      <path d="M10 25q7 -6 14 0t14 0"/>
-      <path d="M10 32q7 -6 14 0t14 0"/>
+    <rect x="7" y="12" width="34" height="26" rx="6" fill="url(#tr)" fill-opacity=".9"/>
+    <g stroke="url(#n)" stroke-width="3.2" stroke-linecap="round" fill="none">
+      <path d="M11 18q6.5 -6 13 0t13 0"/>
+      <path d="M11 25q6.5 -6 13 0t13 0"/>
+      <path d="M11 32q6.5 -6 13 0t13 0"/>
     </g>
-    <g stroke="#f3dfae" stroke-width="1.4" stroke-linecap="round" fill="none">
-      <path d="M12 17q6 -5 12 0"/>
-      <path d="M12 31q6 -5 12 0"/>
+    <g stroke="#fff" stroke-opacity=".7" stroke-width="1.1" stroke-linecap="round" fill="none">
+      <path d="M12.6 16.6q5 -4.2 9.4 -.6"/>
+      <path d="M12.6 23.6q5 -4.2 9.4 -.6"/>
     </g>
-    <rect x="7" y="12" width="34" height="26" rx="6" fill="none" stroke="#c9a15f" stroke-width="2.5"/>
+    <rect x="7" y="12" width="34" height="26" rx="6" fill="none" stroke="url(#rim)" stroke-width="2.6"/>
   </g>
 </svg>

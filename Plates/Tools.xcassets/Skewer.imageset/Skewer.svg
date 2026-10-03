@@ -1,9 +1,16 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Skewers">
-  <rect x="6" y="21" width="36" height="3" rx="1.5" transform="rotate(-15 24 22.5)" fill="#c99a5e"/>
-  <rect x="6" y="30" width="36" height="3" rx="1.5" transform="rotate(-15 24 31.5)" fill="#a97142"/>
-  <g fill="#b04a44">
-    <rect x="16" y="16" width="8" height="8" rx="2" transform="rotate(-15 20 20)"/>
-    <rect x="26" y="13" width="8" height="8" rx="2" transform="rotate(-15 30 17)"/>
-    <rect x="20" y="26" width="8" height="8" rx="2" transform="rotate(-15 24 30)"/>
+  <defs>
+    <linearGradient id="s" x1="0" y1="17" x2="0" y2="33" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f3dcae"/><stop offset=".5" stop-color="#d9b779"/><stop offset="1" stop-color="#b08d50"/></linearGradient>
+    <linearGradient id="a" x1="14" y1="14" x2="32" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e8a46a"/><stop offset=".5" stop-color="#b8642e"/><stop offset="1" stop-color="#7c3a17"/></linearGradient>
+    <linearGradient id="c" x1="12" y1="26" x2="30" y2="36" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e8a46a"/><stop offset=".5" stop-color="#b8642e"/><stop offset="1" stop-color="#7c3a17"/></linearGradient>
+  </defs>
+  <g transform="rotate(-20 24 24)">
+    <path d="M5.2 17.8H40L44 19l-4 1.2H5.2a1.2 1.2 0 0 1 0-2.4Z" fill="url(#s)"/>
+    <path d="M7.2 29.8H38L42 31l-4 1.2H7.2a1.2 1.2 0 0 1 0-2.4Z" fill="url(#s)"/>
+    <rect x="17" y="15" width="8.4" height="8" rx="2.6" fill="url(#a)"/>
+    <rect x="27" y="15" width="8.4" height="8" rx="2.6" fill="url(#a)"/>
+    <rect x="15" y="27" width="8.4" height="8" rx="2.6" fill="url(#c)"/>
+    <rect x="25" y="27" width="8.4" height="8" rx="2.6" fill="url(#c)"/>
+    <path d="M18.8 17h3M28.8 17h3M16.8 29h3M26.8 29h3" stroke="#fff" stroke-opacity=".55" stroke-width="1.4" stroke-linecap="round"/>
   </g>
 </svg>

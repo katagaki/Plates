@@ -1,8 +1,27 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kiwi">
-  <g transform="translate(-3 -3) scale(1.125)">
-    <circle cx="24" cy="24" r="15" fill="#8a6a3a"/>
-    <circle cx="24" cy="24" r="12" fill="#7fb069"/>
-    <circle cx="24" cy="24" r="4" fill="#f2f0e6"/>
-    <path d="M24 12v4M24 32v4M12 24h4M32 24h4M16 16l3 3M29 29l3 3M32 16l-3 3M19 29l-3 3" stroke="#3f6b2a" stroke-width="1.5" stroke-linecap="round"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kiwi half">
+  <defs>
+    <radialGradient id="r" cx="17" cy="17" r="26" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c49a64"/><stop offset=".5" stop-color="#8a6a3a"/><stop offset="1" stop-color="#5a4020"/></radialGradient>
+    <radialGradient id="f" cx="24" cy="24" r="15" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#eef6c0"/><stop offset=".35" stop-color="#b4dc66"/><stop offset="1" stop-color="#5f9e30"/></radialGradient>
+  </defs>
+  <circle cx="24" cy="24" r="17" fill="url(#r)"/>
+  <circle cx="24" cy="24" r="15" fill="url(#f)"/>
+  <g stroke="#eef6c0" stroke-opacity=".55" stroke-width="1" stroke-linecap="round"><path d="M29 24L37 24"/><path d="M28.33 26.5L35.26 30.5"/><path d="M26.5 28.33L30.5 35.26"/><path d="M24 29L24 37"/><path d="M21.5 28.33L17.5 35.26"/><path d="M19.67 26.5L12.74 30.5"/><path d="M19 24L11 24"/><path d="M19.67 21.5L12.74 17.5"/><path d="M21.5 19.67L17.5 12.74"/><path d="M24 19L24 11"/><path d="M26.5 19.67L30.5 12.74"/><path d="M28.33 21.5L35.26 17.5"/></g>
+  <ellipse cx="24" cy="24" rx="4.4" ry="3.6" fill="#fbf8e6"/>
+  <g fill="#2a2414">
+    <ellipse cx="24" cy="17.2" rx=".75" ry="1.5" transform="rotate(0 24 24)"/>
+    <ellipse cx="24" cy="17.2" rx=".75" ry="1.5" transform="rotate(25.71 24 24)"/>
+    <ellipse cx="24" cy="17.2" rx=".75" ry="1.5" transform="rotate(51.43 24 24)"/>
+    <ellipse cx="24" cy="17.2" rx=".75" ry="1.5" transform="rotate(77.14 24 24)"/>
+    <ellipse cx="24" cy="17.2" rx=".75" ry="1.5" transform="rotate(102.86 24 24)"/>
+    <ellipse cx="24" cy="17.2" rx=".75" ry="1.5" transform="rotate(128.57 24 24)"/>
+    <ellipse cx="24" cy="17.2" rx=".75" ry="1.5" transform="rotate(154.29 24 24)"/>
+    <ellipse cx="24" cy="17.2" rx=".75" ry="1.5" transform="rotate(180 24 24)"/>
+    <ellipse cx="24" cy="17.2" rx=".75" ry="1.5" transform="rotate(205.71 24 24)"/>
+    <ellipse cx="24" cy="17.2" rx=".75" ry="1.5" transform="rotate(231.43 24 24)"/>
+    <ellipse cx="24" cy="17.2" rx=".75" ry="1.5" transform="rotate(257.14 24 24)"/>
+    <ellipse cx="24" cy="17.2" rx=".75" ry="1.5" transform="rotate(282.86 24 24)"/>
+    <ellipse cx="24" cy="17.2" rx=".75" ry="1.5" transform="rotate(308.57 24 24)"/>
+    <ellipse cx="24" cy="17.2" rx=".75" ry="1.5" transform="rotate(334.29 24 24)"/>
   </g>
+  <path d="M11.6 19c1.4-3.2 3.8-5.6 7-7" stroke="#fff" stroke-opacity=".55" stroke-width="1.8" fill="none" stroke-linecap="round"/>
 </svg>

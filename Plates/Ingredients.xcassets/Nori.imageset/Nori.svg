@@ -1,7 +1,12 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nori sheets">
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sheets of nori">
+  <defs>
+    <linearGradient id="a" x1="9" y1="12" x2="35" y2="38" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3a5a4c"/><stop offset="1" stop-color="#14251e"/></linearGradient>
+    <linearGradient id="b" x1="13" y1="10" x2="39" y2="36" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5c8a74"/><stop offset=".45" stop-color="#2c5144"/><stop offset="1" stop-color="#142a22"/></linearGradient>
+  </defs>
   <g transform="translate(-3 -3) scale(1.125)">
-    <rect x="9" y="12" width="26" height="26" rx="2" fill="#1f3a33"/>
-    <rect x="13" y="10" width="26" height="26" rx="2" fill="#2c5148"/>
-    <g stroke="#3f6f63" stroke-width="1.6" fill="none"><path d="M17 15h18"/><path d="M17 21h18"/><path d="M17 27h18"/></g>
+    <rect x="9" y="12" width="26" height="26" rx="2" fill="url(#a)"/>
+    <rect x="13" y="10" width="26" height="26" rx="2" fill="url(#b)"/>
+    <g stroke="#7fb09a" stroke-opacity=".35" stroke-width="1.3" stroke-linecap="round" fill="none"><path d="M17 16.5h18"/><path d="M17 22.5h18"/><path d="M17 28.5h18"/></g>
+    <path d="M14.4 30V13.4c0-1 .6-1.6 1.6-1.6h10" stroke="#c8ead8" stroke-opacity=".6" stroke-width="1.3" fill="none" stroke-linecap="round"/>
   </g>
 </svg>

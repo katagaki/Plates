@@ -1,8 +1,14 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lasagna sheets">
-  <g transform="translate(-3.06 -3.31) scale(1.125)">
-    <rect x="8" y="14" width="30" height="9" rx="2" fill="#f0c463"/>
-    <rect x="11" y="22" width="30" height="9" rx="2" fill="#e8b850"/>
-    <rect x="8" y="30" width="30" height="9" rx="2" fill="#f0c463"/>
-    <g stroke="#d9a63c" stroke-width="1.4"><path d="M8 18h30"/><path d="M11 26h30"/><path d="M8 34h30"/></g>
+  <defs>
+    <linearGradient id="p" x1="-15" y1="-7" x2="15" y2="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffe08a"/><stop offset=".5" stop-color="#f2c04e"/><stop offset="1" stop-color="#d49a26"/></linearGradient>
+  </defs>
+  <g transform="translate(25 18) rotate(-8)">
+    <path d="M-15 -7Q-13.75 -8.3 -12.5 -7 Q-11.25 -5.7 -10 -7 Q-8.75 -8.3 -7.5 -7 Q-6.25 -5.7 -5 -7 Q-3.75 -8.3 -2.5 -7 Q-1.25 -5.7 0 -7 Q1.25 -8.3 2.5 -7 Q3.75 -5.7 5 -7 Q6.25 -8.3 7.5 -7 Q8.75 -5.7 10 -7 Q11.25 -8.3 12.5 -7 Q13.75 -5.7 15 -7L15 7Q13.75 8.3 12.5 7 Q11.25 5.7 10 7 Q8.75 8.3 7.5 7 Q6.25 5.7 5 7 Q3.75 8.3 2.5 7 Q1.25 5.7 0 7 Q-1.25 8.3 -2.5 7 Q-3.75 5.7 -5 7 Q-6.25 8.3 -7.5 7 Q-8.75 5.7 -10 7 Q-11.25 8.3 -12.5 7 Q-13.75 5.7 -15 7Z" fill="url(#p)"/>
+    <path d="M-14 -3.6h28M-14 3.6h28" stroke="#c48a1e" stroke-opacity=".5" stroke-width="1" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(23 31) rotate(-8)">
+    <path d="M-15 -7Q-13.75 -8.3 -12.5 -7 Q-11.25 -5.7 -10 -7 Q-8.75 -8.3 -7.5 -7 Q-6.25 -5.7 -5 -7 Q-3.75 -8.3 -2.5 -7 Q-1.25 -5.7 0 -7 Q1.25 -8.3 2.5 -7 Q3.75 -5.7 5 -7 Q6.25 -8.3 7.5 -7 Q8.75 -5.7 10 -7 Q11.25 -8.3 12.5 -7 Q13.75 -5.7 15 -7L15 7Q13.75 8.3 12.5 7 Q11.25 5.7 10 7 Q8.75 8.3 7.5 7 Q6.25 5.7 5 7 Q3.75 8.3 2.5 7 Q1.25 5.7 0 7 Q-1.25 8.3 -2.5 7 Q-3.75 5.7 -5 7 Q-6.25 8.3 -7.5 7 Q-8.75 5.7 -10 7 Q-11.25 8.3 -12.5 7 Q-13.75 5.7 -15 7Z" fill="url(#p)"/>
+    <path d="M-14 -3.6h28M-14 3.6h28" stroke="#c48a1e" stroke-opacity=".5" stroke-width="1" stroke-linecap="round"/>
+    <path d="M-12 -1.2h9" stroke="#fff" stroke-opacity=".6" stroke-width="1.6" stroke-linecap="round"/>
   </g>
 </svg>

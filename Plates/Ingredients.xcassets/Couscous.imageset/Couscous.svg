@@ -1,8 +1,25 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Couscous">
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bowl of couscous">
+  <defs>
+    <radialGradient id="m" cx="19" cy="18" r="16" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff2cc"/><stop offset=".5" stop-color="#ead09a"/><stop offset="1" stop-color="#c9a464"/></radialGradient>
+    <linearGradient id="b" x1="9" y1="0" x2="39" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#ece6da"/><stop offset="1" stop-color="#c9c1b2"/></linearGradient>
+  </defs>
   <g transform="translate(-3 -3.69) scale(1.125)">
-    <path d="M9 26h30a15 13 0 0 1-30 0Z" fill="#e6e0d4"/>
-    <path d="M12 26c2-6 7-9 12-9s10 3 12 9Z" fill="#e8cf9c"/>
-    <g fill="#f5e6c4"><circle cx="18" cy="23" r="1.6"/><circle cx="24" cy="21" r="1.6"/><circle cx="30" cy="23" r="1.6"/><circle cx="21" cy="25" r="1.4"/><circle cx="27" cy="25" r="1.4"/></g>
-    <rect x="20" y="39" width="8" height="3" rx="1.5" fill="#c8c2b6"/>
+    <path d="M12 26c2-6 7-9 12-9s10 3 12 9Z" fill="url(#m)"/>
+    <g fill="#a8803e" fill-opacity=".5">
+      <circle cx="18" cy="23" r=".9"/>
+      <circle cx="24" cy="20.4" r=".9"/>
+      <circle cx="30" cy="23" r=".9"/>
+      <circle cx="21" cy="25" r=".8"/>
+      <circle cx="27" cy="25" r=".8"/>
+      <circle cx="26.6" cy="22" r=".8"/>
+    </g>
+    <g fill="#fff" fill-opacity=".75">
+      <circle cx="20.4" cy="21.4" r=".8"/>
+      <circle cx="23" cy="23.6" r=".7"/>
+      <circle cx="29" cy="24.6" r=".7"/>
+    </g>
+    <path d="M9 26h30a15 13 0 0 1-30 0Z" fill="url(#b)"/>
+    <rect x="20" y="38.6" width="8" height="3" rx="1.5" fill="#c9c1b2"/>
+    <path d="M12.4 29.4c1 2.6 3 4.8 5.6 6" stroke="#fff" stroke-opacity=".8" stroke-width="1.6" fill="none" stroke-linecap="round"/>
   </g>
 </svg>

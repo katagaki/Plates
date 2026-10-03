@@ -1,8 +1,15 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gouda">
-  <path d="M4 22c0-6 9-10 20-10s20 4 20 10v8c0 6-9 10-20 10S4 36 4 30Z" fill="#e88f1f"/>
-  <path d="M4 22c0 6 9 10 20 10s20-4 20-10-9-10-20-10S4 16 4 22Z" fill="#f4ac3a"/>
-  <path d="M24 22 34 31.2V40.4L24 31Z" fill="#f8d878"/>
-  <path d="M24 22l20 0v8l-10 1.2Z" fill="#fbe6a0"/>
-  <path d="M24 22l20 0c0 4-4 7.5-10 9.2Z" fill="#fbe6a0"/>
-  <path d="M24 22 34 31.2c4-1.5 8.8-4 10-9.2Z" fill="#fbeab0"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Wheel of Gouda with a wedge cut out">
+  <defs>
+    <linearGradient id="s" x1="4" y1="0" x2="44" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffbe55"/><stop offset=".45" stop-color="#f0971f"/><stop offset="1" stop-color="#c8680c"/></linearGradient>
+    <radialGradient id="t" cx="15" cy="15" r="30" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffd37e"/><stop offset=".5" stop-color="#f6ae3c"/><stop offset="1" stop-color="#e08e1e"/></radialGradient>
+    <linearGradient id="a" x1="24" y1="22" x2="44" y2="30" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff4c4"/><stop offset="1" stop-color="#fbe08c"/></linearGradient>
+    <linearGradient id="b" x1="24" y1="22" x2="34" y2="39" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f9dc80"/><stop offset="1" stop-color="#efc254"/></linearGradient>
+  </defs>
+  <path d="M4 22A20 10 0 0 0 34 30.66V38.66A20 10 0 0 1 4 30Z" fill="url(#s)"/>
+  <path d="M44 22A20 10 0 0 0 4 22A20 10 0 0 0 34 30.66L24 22Z" fill="url(#t)"/>
+  <path d="M24 22H44V30H24Z" fill="url(#a)"/>
+  <path d="M24 22 34 30.66V38.66L24 30Z" fill="url(#b)"/>
+  <path d="M44 22V30" stroke="#e8861a" stroke-width="1.4"/>
+  <g fill="#e3b450" fill-opacity=".6"><circle cx="31" cy="26.4" r="1.1"/><circle cx="38" cy="25" r=".8"/><circle cx="28.6" cy="31" r=".8"/></g>
+  <ellipse cx="13" cy="17.5" rx="5" ry="1.8" transform="rotate(-12 13 17.5)" fill="#fff" fill-opacity=".5"/>
 </svg>

@@ -1,7 +1,17 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Edamame">
-  <g transform="translate(-3.04 -3.19) scale(1.125)">
-    <path d="M10 32c-2-8 4-16 13-17 6-1 10 2 10 6s-5 6-10 8-11 8-13 3Z" fill="#5f8c3f"/>
-    <g fill="#a8cf8e"><circle cx="17" cy="27" r="3.2"/><circle cx="25" cy="22" r="3.2"/></g>
-    <path d="M24 36c8 1 14-3 15-9-7-2-14 2-15 9Z" fill="#7a9e4e"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Edamame pods">
+  <defs>
+    <linearGradient id="p" x1="-8" y1="-7" x2="6" y2="7" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#b9e48c"/><stop offset=".5" stop-color="#72b546"/><stop offset="1" stop-color="#3f7f24"/></linearGradient>
+  </defs>
+  <g transform="translate(22 17) rotate(-28)">
+    <path d="M-16 0.4C-15.97 -1.03 -14.57 -3.33 -13.4 -4.4C-12.23 -5.47 -10.48 -6 -9 -6C-7.52 -6 -6 -4.4 -4.5 -4.4C-3 -4.4 -1.5 -6 0 -6C1.5 -6 3 -4.43 4.5 -4.4C6 -4.37 7.48 -5.9 9 -5.8C10.52 -5.7 12.37 -4.7 13.6 -3.8C14.83 -2.9 16.4 -1.7 16.4 -0.4C16.4 0.9 14.83 3 13.6 4C12.37 5 10.52 5.6 9 5.6C7.48 5.6 6 4 4.5 4C3 4 1.5 5.6 0 5.6C-1.5 5.6 -3 4 -4.5 4C-6 4 -7.48 5.57 -9 5.6C-10.52 5.63 -12.43 5.07 -13.6 4.2C-14.77 3.33 -16.03 1.83 -16 0.4Z" fill="url(#p)"/>
+    <path d="M16 -.8c1.6-.8 3-1 4.2-.6" stroke="#4f8f2e" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    <path d="M-4.6-2.6v4.4M4.4-2.6v4.4" stroke="#2f6a1c" stroke-opacity=".45" stroke-width="1.2" stroke-linecap="round"/>
+    <ellipse cx="-11" cy="-1.6" rx="2.4" ry="1.2" fill="#fff" fill-opacity=".45"/>
+  </g>
+  <g transform="translate(26 32) rotate(-28)">
+    <path d="M-16 0.4C-15.97 -1.03 -14.57 -3.33 -13.4 -4.4C-12.23 -5.47 -10.48 -6 -9 -6C-7.52 -6 -6 -4.4 -4.5 -4.4C-3 -4.4 -1.5 -6 0 -6C1.5 -6 3 -4.43 4.5 -4.4C6 -4.37 7.48 -5.9 9 -5.8C10.52 -5.7 12.37 -4.7 13.6 -3.8C14.83 -2.9 16.4 -1.7 16.4 -0.4C16.4 0.9 14.83 3 13.6 4C12.37 5 10.52 5.6 9 5.6C7.48 5.6 6 4 4.5 4C3 4 1.5 5.6 0 5.6C-1.5 5.6 -3 4 -4.5 4C-6 4 -7.48 5.57 -9 5.6C-10.52 5.63 -12.43 5.07 -13.6 4.2C-14.77 3.33 -16.03 1.83 -16 0.4Z" fill="url(#p)"/>
+    <path d="M16 -.8c1.6-.8 3-1 4.2-.6" stroke="#4f8f2e" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    <path d="M-4.6-2.6v4.4M4.4-2.6v4.4" stroke="#2f6a1c" stroke-opacity=".45" stroke-width="1.2" stroke-linecap="round"/>
+    <ellipse cx="-11" cy="-1.6" rx="2.4" ry="1.2" fill="#fff" fill-opacity=".45"/>
   </g>
 </svg>

@@ -1,9 +1,14 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Donabe">
-  <path d="M6 25h36c0 9-8 16-18 16S6 34 6 25Z" fill="#5a3a2a"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Donabe clay pot">
+  <defs>
+    <linearGradient id="b" x1="6" y1="0" x2="42" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#9a6a4c"/><stop offset=".45" stop-color="#6a4330"/><stop offset="1" stop-color="#3f281c"/></linearGradient>
+    <radialGradient id="l" cx="17" cy="14" r="26" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fffaf0"/><stop offset=".5" stop-color="#ece1c6"/><stop offset="1" stop-color="#c9b994"/></radialGradient>
+  </defs>
   <path d="M3 26h5M40 26h5" stroke="#5a3a2a" stroke-width="4" stroke-linecap="round"/>
-  <path d="M7 25c0-8 8-14 17-14s17 6 17 14Z" fill="#e8dcc0"/>
-  <path d="M9 21c4-1.5 9-2 15-2s11 .5 15 2" stroke="#4a6a8a" stroke-width="1.6" fill="none" stroke-linecap="round"/>
-  <path d="M12 17c2-.8 4-1.2 6-1.4" stroke="#fbf6e6" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-  <ellipse cx="24" cy="11" rx="3.6" ry="2.4" fill="#5a3a2a"/>
+  <path d="M6 25h36c0 9-8 16-18 16S6 34 6 25Z" fill="url(#b)"/>
+  <path d="M7 25c0-8 8-14 17-14s17 6 17 14Z" fill="url(#l)"/>
+  <path d="M9 21c4-1.5 9-2 15-2s11 .5 15 2" stroke="#3f6a94" stroke-opacity=".8" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <path d="M12.5 17c2-.9 4-1.4 6-1.6" stroke="#fff" stroke-opacity=".9" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <ellipse cx="24" cy="11" rx="3.6" ry="2.4" fill="#6a4330"/>
   <rect x="5" y="24" width="38" height="2.4" rx="1.2" fill="#3f281c"/>
+  <path d="M10.5 29.5c.8 2 2 3.6 3.6 5" stroke="#fff" stroke-opacity=".3" stroke-width="1.8" fill="none" stroke-linecap="round"/>
 </svg>

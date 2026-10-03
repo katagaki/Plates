@@ -1,10 +1,18 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fettuccine">
+  <defs>
+    <linearGradient id="p" x1="10" y1="14" x2="38" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffe08a"/><stop offset="0.5" stop-color="#f0c463"/><stop offset="1" stop-color="#d9a03c"/></linearGradient>
+  </defs>
   <g transform="translate(-3 -3.36) scale(1.125)">
-    <g stroke="#f0c463" stroke-width="5" fill="none" stroke-linecap="round">
-      <path d="M10 16c8 5 20 5 28 0"/><path d="M10 25c8 5 20 5 28 0"/><path d="M10 34c8 5 20 5 28 0"/>
+    <g stroke="url(#p)" stroke-width="5" fill="none" stroke-linecap="round">
+      <path d="M10 16c8 5 20 5 28 0"/>
+      <path d="M10 25c8 5 20 5 28 0"/>
+      <path d="M10 34c8 5 20 5 28 0"/>
     </g>
-    <g stroke="#d9a63c" stroke-width="1.2" fill="none">
-      <path d="M10 16c8 5 20 5 28 0"/><path d="M10 25c8 5 20 5 28 0"/><path d="M10 34c8 5 20 5 28 0"/>
+    <g stroke="#b9842a" stroke-opacity=".5" stroke-width="1.2" fill="none">
+      <path d="M10 16c8 5 20 5 28 0"/>
+      <path d="M10 25c8 5 20 5 28 0"/>
+      <path d="M10 34c8 5 20 5 28 0"/>
     </g>
+    <path d="M12.4 15.6c2 1.2 4 2 6 2.4" stroke="#fff" stroke-opacity=".6" stroke-width="1.2" fill="none" stroke-linecap="round"/>
   </g>
 </svg>

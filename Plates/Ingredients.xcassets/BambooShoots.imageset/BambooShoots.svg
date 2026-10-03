@@ -1,7 +1,16 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bamboo shoots">
-  <g transform="translate(-3 -2.88) scale(1.125)">
-    <path d="M24 8c7 8 10 20 10 30H14c0-10 3-22 10-30Z" fill="#e8d7a8"/>
-    <path d="M24 8c7 8 10 20 10 30H24Z" fill="#d8c48d"/>
-    <path d="M16 26h16M14 34h20" stroke="#b79f6a" stroke-width="2" stroke-linecap="round"/>
-  </g>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Whole bamboo shoot">
+  <defs>
+    <linearGradient id="h" x1="13" y1="10" x2="35" y2="30" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d9ae74"/><stop offset=".5" stop-color="#a87a42"/><stop offset="1" stop-color="#6e4a22"/></linearGradient>
+    <linearGradient id="l" x1="12" y1="14" x2="28" y2="36" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ecca92"/><stop offset=".5" stop-color="#c49558"/><stop offset="1" stop-color="#8a5f2e"/></linearGradient>
+    <linearGradient id="r" x1="24" y1="16" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#b8864a"/><stop offset="1" stop-color="#5e3e1a"/></linearGradient>
+    <linearGradient id="t" x1="22" y1="5" x2="28" y2="14" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#eef0a0"/><stop offset="1" stop-color="#a8b048"/></linearGradient>
+    <linearGradient id="b" x1="12" y1="0" x2="36" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#f4ecd2"/><stop offset="1" stop-color="#d4c69e"/></linearGradient>
+  </defs>
+  <path d="M26 5c-1 7 9.5 15 9.5 31h-23c.5-14 7-24 13.5-31Z" fill="url(#h)"/>
+  <path d="M26 5c-1.8 2.6-3 5.4-3.4 8.4 1.8-.6 3.6-.4 5 .4.2-3-.4-6-1.6-8.8Z" fill="url(#t)"/>
+  <path d="M12.5 36c0-10 3.6-17.6 9-22.6.6 8.4 3 16.4 7 22.6Z" fill="url(#l)"/>
+  <path d="M35.5 36c-.4-8.4-3.4-15-7.6-19.8.6 7.4-.6 14-4.4 19.8Z" fill="url(#r)"/>
+  <path d="M17 27.6c.6-4.6 2.2-8.6 4.4-11.6" stroke="#fff" stroke-opacity=".5" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <path d="M12 35h24v3.4a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2Z" fill="url(#b)"/>
+  <g fill="#a0505c" fill-opacity=".55"><circle cx="16" cy="37.8" r=".8"/><circle cx="20.6" cy="38.4" r=".8"/><circle cx="25.4" cy="37.8" r=".8"/><circle cx="30" cy="38.4" r=".8"/></g>
 </svg>

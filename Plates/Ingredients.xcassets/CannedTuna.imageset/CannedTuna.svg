@@ -1,8 +1,15 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Can of tuna">
+  <defs>
+    <linearGradient id="s" x1="8" y1="0" x2="40" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d3dae1"/><stop offset=".5" stop-color="#a3adb7"/><stop offset="1" stop-color="#76818c"/></linearGradient>
+    <linearGradient id="r" x1="8" y1="14" x2="40" y2="26" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f6f8fa"/><stop offset="1" stop-color="#b4bec8"/></linearGradient>
+    <radialGradient id="t" cx="19" cy="17.5" r="14" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f3d3a8"/><stop offset=".55" stop-color="#dca76f"/><stop offset="1" stop-color="#b57c45"/></radialGradient>
+  </defs>
   <g transform="translate(-3 -3) scale(1.125)">
-    <ellipse cx="24" cy="20" rx="16" ry="6" fill="#cfd6dd"/>
-    <path d="M8 20v8a16 6 0 0 0 32 0v-8Z" fill="#a8b0b8"/>
-    <ellipse cx="24" cy="20" rx="12" ry="4.2" fill="#d9a877"/>
-    <path d="M18 19c3-1 8-1 11 0" stroke="#c08f5c" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    <path d="M8 20v8a16 6 0 0 0 32 0v-8Z" fill="url(#s)"/>
+    <path d="M8.4 24.2a16 6 0 0 0 31.2 0" stroke="#6f7a85" stroke-opacity=".45" stroke-width="1.2" fill="none"/>
+    <ellipse cx="24" cy="20" rx="16" ry="6" fill="url(#r)"/>
+    <ellipse cx="24" cy="20.3" rx="12" ry="4.2" fill="url(#t)"/>
+    <path d="M17.6 19.2c3-1 8-1 11 0M21 22c2 .5 4.6.5 6.6-.2" stroke="#a06a38" stroke-opacity=".5" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <path d="M10.6 23.4c.8 1.6 2.2 2.6 4 3.4" stroke="#fff" stroke-opacity=".6" stroke-width="1.6" fill="none" stroke-linecap="round"/>
   </g>
 </svg>

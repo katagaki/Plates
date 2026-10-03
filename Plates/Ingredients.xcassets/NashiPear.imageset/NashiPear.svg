@@ -1,6 +1,19 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nashi pear">
-  <circle cx="24" cy="27" r="15" fill="#d9b25a"/>
-  <path d="M13 22c2-5 7-8 12-8" stroke="#ecd08a" stroke-width="3.2" fill="none" stroke-linecap="round"/>
-  <g fill="#b88f3e"><circle cx="18" cy="28" r=".8"/><circle cx="23" cy="24" r=".8"/><circle cx="29" cy="27" r=".8"/><circle cx="21" cy="33" r=".8"/><circle cx="27" cy="34" r=".8"/><circle cx="33" cy="31" r=".8"/><circle cx="31" cy="21" r=".8"/><circle cx="15" cy="33" r=".8"/></g>
-  <path d="M24 12c0-3 1-6 3-8" stroke="#6b5a3a" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <defs>
+    <radialGradient id="p" cx="18" cy="21" r="23" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f8e2a0"/><stop offset=".5" stop-color="#dbb15a"/><stop offset="1" stop-color="#a8782c"/></radialGradient>
+  </defs>
+  <ellipse cx="24" cy="28" rx="15.5" ry="14.5" fill="url(#p)"/>
+  <g fill="#8a5e1e" fill-opacity=".45">
+    <circle cx="18" cy="29" r=".85"/>
+    <circle cx="23" cy="25" r=".85"/>
+    <circle cx="29" cy="28" r=".85"/>
+    <circle cx="21" cy="34" r=".85"/>
+    <circle cx="27" cy="35" r=".85"/>
+    <circle cx="33" cy="32" r=".85"/>
+    <circle cx="31" cy="22" r=".85"/>
+    <circle cx="15" cy="34" r=".85"/>
+    <circle cx="25" cy="30" r=".85"/>
+  </g>
+  <ellipse cx="17" cy="20.5" rx="4.4" ry="2.4" transform="rotate(-35 17 20.5)" fill="#fff" fill-opacity=".45"/>
+  <path d="M24 14.5c0-3.4 1-6.4 3-8.6" stroke="#6b4a2a" stroke-width="2.2" fill="none" stroke-linecap="round"/>
 </svg>

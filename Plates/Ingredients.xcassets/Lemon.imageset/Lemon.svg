@@ -1,7 +1,9 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lemon">
-  <g transform="translate(-3.08 -3.12) scale(1.125)">
-    <ellipse cx="24" cy="25" rx="16" ry="12" transform="rotate(-15 24 25)" fill="#f1c21b"/>
-    <path d="M11 20c3-4 8-6 12-5" stroke="#ffe97a" stroke-width="3.4" fill="none" stroke-linecap="round"/>
-    <path d="M37 15c2-1 4 0 4 2s-3 3-4 1Z" fill="#e0a900"/>
-  </g>
+  <defs>
+    <radialGradient id="b" cx="16" cy="19" r="26" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff59a"/><stop offset=".5" stop-color="#ffd21f"/><stop offset="1" stop-color="#e09a00"/></radialGradient>
+    <radialGradient id="s" cx="15" cy="21" r="6" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  </defs>
+  <path d="M41.6 14.2c1.4 1.2 1.2 3.6-.2 4.4 1.2 9-6.6 18-17.4 20.2C14 40.8 6.2 36 5.6 30.4c-1.4-.4-2-2.4-.8-3.8 2.6-8.4 10.4-14.6 19-15.4 7.2-.6 12.8 1.2 15.8 4.4.8-.8 1.4-1.2 2-1.4Z" fill="url(#b)"/>
+  <ellipse cx="15" cy="21" rx="6.5" ry="3.2" transform="rotate(-25 15 21)" fill="url(#s)"/>
+  <path d="M39.6 15.6c1.2-1 2.4-.8 3 0" stroke="#b07a00" stroke-width="1.6" fill="none" stroke-linecap="round"/>
 </svg>

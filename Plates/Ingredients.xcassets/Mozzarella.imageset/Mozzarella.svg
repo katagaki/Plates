@@ -1,10 +1,12 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mozzarella">
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Balls of fresh mozzarella">
+  <defs>
+    <radialGradient id="a" cx="15" cy="19" r="20" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#f4f0e6"/><stop offset="1" stop-color="#d4ccba"/></radialGradient>
+    <radialGradient id="b" cx="31" cy="26" r="12" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#f1ece0"/><stop offset="1" stop-color="#cfc6b2"/></radialGradient>
+  </defs>
   <g transform="translate(-3.12 -3.25) scale(1.125)">
-    <circle cx="21" cy="27" r="13" fill="#e0d9c6"/>
-    <circle cx="21" cy="25" r="13" fill="#f8f6f1"/>
-    <circle cx="16" cy="20" r="4" fill="#ffffff"/>
-    <circle cx="34" cy="31" r="8" fill="#e0d9c6"/>
-    <circle cx="34" cy="29.5" r="8" fill="#f2ede0"/>
-    <circle cx="32" cy="27" r="2.4" fill="#ffffff"/>
+    <circle cx="21" cy="25" r="13" fill="url(#a)"/>
+    <circle cx="16" cy="20" r="3.6" fill="#fff" fill-opacity=".9"/>
+    <circle cx="34" cy="30" r="8" fill="url(#b)"/>
+    <circle cx="31.6" cy="27.2" r="2.2" fill="#fff" fill-opacity=".9"/>
   </g>
 </svg>

@@ -1,8 +1,13 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cast iron skillet">
-  <path d="M5 22h28l-1.5 9a6 6 0 0 1-6 5H12.5a6 6 0 0 1-6-5Z" fill="#2a2c30"/>
-  <rect x="3.5" y="19.5" width="31" height="4" rx="2" fill="#45484e"/>
-  <path d="M34 21.5h9a2.6 2.6 0 0 1 0 5.2h-9Z" fill="#2a2c30"/>
-  <circle cx="41.5" cy="24.1" r="1.2" fill="#ffffff"/>
-  <path d="M1 23.5c0-1.8 1.4-3 3.4-3V25c-2 0-3.4-.3-3.4-1.5Z" fill="#2a2c30"/>
-  <path d="M10 27c3 1.6 9 2 15 1" stroke="#5a5e66" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="b" x1="0" y1="22" x2="0" y2="36" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5d636b"/><stop offset=".5" stop-color="#3c4148"/><stop offset="1" stop-color="#25282d"/></linearGradient>
+    <linearGradient id="r" x1="3" y1="0" x2="35" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#9aa1aa"/><stop offset="1" stop-color="#4e545c"/></linearGradient>
+    <linearGradient id="h" x1="0" y1="21" x2="0" y2="27" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#767d86"/><stop offset="1" stop-color="#25282d"/></linearGradient>
+  </defs>
+  <path d="M5 22h28l-1.5 9a6 6 0 0 1-6 5H12.5a6 6 0 0 1-6-5Z" fill="url(#b)"/>
+  <path d="M33 21.2h10a2.8 2.8 0 0 1 0 5.6H33Z" fill="url(#h)"/>
+  <circle cx="41.6" cy="24" r="1.3" fill="#f2f2f2"/>
+  <path d="M1 23.5c0-1.8 1.4-3 3.4-3V25c-2 0-3.4-.3-3.4-1.5Z" fill="#4e545c"/>
+  <rect x="3.5" y="19.5" width="31" height="4" rx="2" fill="url(#r)"/>
+  <path d="M10 26.5c.4 2.2 1.2 4 2.4 5.4" stroke="#fff" stroke-opacity=".3" stroke-width="2" fill="none" stroke-linecap="round"/>
 </svg>

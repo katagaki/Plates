@@ -1,9 +1,14 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fig">
-  <path transform="translate(17 22)" d="M0-14c2 0 3 2 3 4 6 4 9 11 9 17 0 7-5 11-12 11s-12-4-12-11c0-6 3-13 9-17 0-2 1-4 3-4Z" fill="#5d2a55"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fig, whole and halved">
+  <defs>
+    <radialGradient id="w" cx="12" cy="18" r="22" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#9a5a8e"/><stop offset="0.5" stop-color="#5d2a55"/><stop offset="1" stop-color="#3a1435"/></radialGradient>
+    <radialGradient id="k" cx="29" cy="20" r="16" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a6c86a"/><stop offset="0.6" stop-color="#6b8f3a"/><stop offset="1" stop-color="#4a6a26"/></radialGradient>
+    <radialGradient id="m" cx="31" cy="25" r="10" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff9a8a"/><stop offset="0.55" stop-color="#e35d6a"/><stop offset="1" stop-color="#b8344a"/></radialGradient>
+  </defs>
+  <path transform="translate(17 22)" d="M0-14c2 0 3 2 3 4 6 4 9 11 9 17 0 7-5 11-12 11s-12-4-12-11c0-6 3-13 9-17 0-2 1-4 3-4Z" fill="url(#w)"/>
   <path d="M17 8V4" stroke="#6b8f3a" stroke-width="2.2" stroke-linecap="round"/>
-  <path d="M13 17c1.5-2 3-3 5-3.5" stroke="#8a4f80" stroke-width="2" stroke-linecap="round" fill="none"/>
-  <path transform="translate(33 26) scale(.85)" d="M0-14c2 0 3 2 3 4 6 4 9 11 9 17 0 7-5 11-12 11s-12-4-12-11c0-6 3-13 9-17 0-2 1-4 3-4Z" fill="#6b8f3a"/>
-  <path transform="translate(33 27) scale(.7)" d="M0-14c2 0 3 2 3 4 6 4 9 11 9 17 0 7-5 11-12 11s-12-4-12-11c0-6 3-13 9-17 0-2 1-4 3-4Z" fill="#f4e4c8"/>
-  <path transform="translate(33 29) scale(.5)" d="M0-14c2 0 3 2 3 4 6 4 9 11 9 17 0 7-5 11-12 11s-12-4-12-11c0-6 3-13 9-17 0-2 1-4 3-4Z" fill="#e35d6a"/>
-  <g fill="#f4e4c8"><circle cx="31.5" cy="31" r=".8"/><circle cx="34.5" cy="30" r=".8"/><circle cx="33" cy="34" r=".8"/><circle cx="35" cy="33" r=".7"/></g>
+  <path d="M10.4 22c.6-3 2-5.6 4-7.2" stroke="#fff" stroke-opacity=".55" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <path transform="translate(33 26) scale(.85)" d="M0-14c2 0 3 2 3 4 6 4 9 11 9 17 0 7-5 11-12 11s-12-4-12-11c0-6 3-13 9-17 0-2 1-4 3-4Z" fill="url(#k)"/>
+  <path transform="translate(33 27) scale(.7)" d="M0-14c2 0 3 2 3 4 6 4 9 11 9 17 0 7-5 11-12 11s-12-4-12-11c0-6 3-13 9-17 0-2 1-4 3-4Z" fill="#f8ead0"/>
+  <path transform="translate(33 29) scale(.5)" d="M0-14c2 0 3 2 3 4 6 4 9 11 9 17 0 7-5 11-12 11s-12-4-12-11c0-6 3-13 9-17 0-2 1-4 3-4Z" fill="url(#m)"/>
+  <g fill="#fbe9c8"><circle cx="31.5" cy="31" r=".8"/><circle cx="34.5" cy="30" r=".8"/><circle cx="33" cy="34" r=".8"/><circle cx="35" cy="33" r=".7"/><circle cx="32" cy="27.6" r=".6"/></g>
 </svg>

@@ -1,9 +1,15 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stand mixer">
-  <path d="M8 40h32v3H8Z" fill="#b8302a"/>
-  <path d="M8 42V14c0-4 3-7 7-7h17c5 0 9 3 9 7v3c0 2-2 3.5-4 3.5H18V42Z" fill="#d9402f"/>
-  <path d="M14 10c3-1.5 8-2 13-1.5" stroke="#ef7a6a" stroke-width="2.4" fill="none" stroke-linecap="round"/>
-  <path d="M30 20.5v5" stroke="#8d939b" stroke-width="2.4"/>
-  <path d="M20 27h21l-2 10a4 4 0 0 1-4 3.2H26a4 4 0 0 1-4-3.2Z" fill="#cfd6dd"/>
-  <path d="M20 27h21" stroke="#8d939b" stroke-width="1.6"/>
-  <path d="M27 28c2 4 6 4 7 0" stroke="#8d939b" stroke-width="1.6" fill="none"/>
+  <defs>
+    <linearGradient id="r" x1="8" y1="7" x2="41" y2="42" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff8a75"/><stop offset=".5" stop-color="#ec4a3c"/><stop offset="1" stop-color="#b3242b"/></linearGradient>
+    <linearGradient id="f" x1="0" y1="40" x2="0" y2="43" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c8342c"/><stop offset="1" stop-color="#8f1c22"/></linearGradient>
+    <linearGradient id="b" x1="20" y1="0" x2="41" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e3e9ef"/><stop offset=".5" stop-color="#b2bcc6"/><stop offset="1" stop-color="#8e99a4"/></linearGradient>
+  </defs>
+  <path d="M8 40h32v3H8Z" fill="url(#f)"/>
+  <path d="M8 42V14c0-4 3-7 7-7h17c5 0 9 3 9 7v3c0 2-2 3.5-4 3.5H18V42Z" fill="url(#r)"/>
+  <path d="M13 11c3-1.6 8-2 13-1.5" stroke="#fff" stroke-opacity=".6" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M30 20.5v5" stroke="#6b737c" stroke-width="2.4"/>
+  <path d="M20 27h21l-2 10a4 4 0 0 1-4 3.2H26a4 4 0 0 1-4-3.2Z" fill="url(#b)"/>
+  <rect x="19.5" y="26" width="22" height="2.4" rx="1.2" fill="#8e99a4"/>
+  <path d="M27 28.4c2 4 6 4 7 0" stroke="#6b737c" stroke-width="1.6" fill="none"/>
+  <path d="M23.2 30.5l.8 4.4" stroke="#fff" stroke-opacity=".7" stroke-width="1.4" stroke-linecap="round"/>
 </svg>

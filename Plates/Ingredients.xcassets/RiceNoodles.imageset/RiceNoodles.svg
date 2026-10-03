@@ -1,9 +1,15 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rice noodles">
-  <g transform="translate(-3 -3.5) scale(1.125)">
-    <path d="M11 20h26v4c0 9-5 16-13 16s-13-7-13-16Z" fill="#f2ede0"/>
-    <g stroke="#ddd6c4" stroke-width="1.8" fill="none" stroke-linecap="round">
-      <path d="M16 22v12"/><path d="M20 22v15"/><path d="M24 22v16"/><path d="M28 22v15"/><path d="M32 22v12"/>
-    </g>
-    <rect x="10" y="16" width="28" height="5" rx="2.5" fill="#e0d9c6"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bundle of dried rice noodles">
+  <defs>
+    <linearGradient id="b" x1="8" y1="12" x2="40" y2="37" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#f1ece0"/><stop offset="1" stop-color="#cfc6b2"/></linearGradient>
+    <linearGradient id="t" x1="21" y1="0" x2="27" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff8a75"/><stop offset=".5" stop-color="#ec4a3c"/><stop offset="1" stop-color="#b3242b"/></linearGradient>
+  </defs>
+  <rect x="6" y="13" width="36" height="23" rx="10" fill="url(#b)"/>
+  <g stroke="#b9ae96" stroke-opacity=".6" stroke-width="1.3" fill="none" stroke-linecap="round">
+    <path d="M10 18c3-2 5 2 8 0s5-2 8 0 5 2 8 0 3-1 4 0"/>
+    <path d="M8.5 22.5c3-2 5 2 8 0s5-2 8 0 5 2 8 0 5-2 7 0"/>
+    <path d="M8.5 27c3-2 5 2 8 0s5-2 8 0 5 2 8 0 5-2 7 0"/>
+    <path d="M10 31.5c3-2 5 2 8 0s5-2 8 0 5 2 8 0 3-1 4 0"/>
   </g>
+  <rect x="21.6" y="11" width="4.8" height="27" rx="1.8" fill="url(#t)"/>
+  <path d="M10.5 18.5c1.2-2 3-3.2 5-3.6" stroke="#fff" stroke-opacity=".9" stroke-width="1.8" fill="none" stroke-linecap="round"/>
 </svg>

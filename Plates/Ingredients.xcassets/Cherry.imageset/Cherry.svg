@@ -1,8 +1,15 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cherries">
+  <defs>
+    <radialGradient id="a" cx="12.4" cy="27.4" r="12" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff7a7a"/><stop offset=".5" stop-color="#d12a35"/><stop offset="1" stop-color="#86101e"/></radialGradient>
+    <radialGradient id="b" cx="29.8" cy="28.8" r="10.5" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff7a7a"/><stop offset=".5" stop-color="#d12a35"/><stop offset="1" stop-color="#86101e"/></radialGradient>
+    <linearGradient id="l" x1="24" y1="8" x2="32" y2="12" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a6dc7e"/><stop offset=".5" stop-color="#5fa83f"/><stop offset="1" stop-color="#3f8a2e"/></linearGradient>
+  </defs>
   <g transform="translate(-2.88 -2.96) scale(1.125)">
-    <path d="M24 11c-4 5-8 8-9 13M24 11c3 5 6 9 7 13" stroke="#5f9e4a" stroke-width="2" fill="none" stroke-linecap="round"/>
-    <circle cx="15" cy="31" r="8" fill="#c9302c"/>
-    <circle cx="32" cy="32" r="7" fill="#d94f45"/>
-    <path d="M24 11c2-3 5-3 8-2-2 4-6 5-8 2Z" fill="#5f9e4a"/>
+    <path d="M24 11c-4 5-8 8-9 13M24 11c3 5 6 9 7 13" stroke="#5f8a3a" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <circle cx="15" cy="31" r="8" fill="url(#a)"/>
+    <circle cx="32" cy="32" r="7" fill="url(#b)"/>
+    <path d="M24 11c2-3 5-3 8-2-2 4-6 5-8 2Z" fill="url(#l)"/>
+    <ellipse cx="11.8" cy="27.6" rx="2.2" ry="1.4" transform="rotate(-35 11.8 27.6)" fill="#fff" fill-opacity=".85"/>
+    <ellipse cx="29.4" cy="29.2" rx="1.9" ry="1.2" transform="rotate(-35 29.4 29.2)" fill="#fff" fill-opacity=".85"/>
   </g>
 </svg>

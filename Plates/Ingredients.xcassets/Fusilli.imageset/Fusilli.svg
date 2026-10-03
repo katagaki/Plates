@@ -1,12 +1,16 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fusilli">
+  <defs>
+    <linearGradient id="p" x1="10" y1="16" x2="36" y2="42" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffe08a"/><stop offset="0.5" stop-color="#f0c463"/><stop offset="1" stop-color="#d9a03c"/></linearGradient>
+  </defs>
   <g transform="translate(-2.81 -3.62) scale(1.125)">
-    <g stroke="#f0c463" stroke-width="6" fill="none" stroke-linecap="round">
+    <g stroke="url(#p)" stroke-width="6" fill="none" stroke-linecap="round">
       <path d="M15 40c-4-4 4-6 0-10s4-6 0-10"/>
       <path d="M30 38c-4-4 4-6 0-10s4-6 0-10"/>
     </g>
-    <g stroke="#d9a63c" stroke-width="1.6" fill="none">
+    <g stroke="#b9842a" stroke-opacity=".55" stroke-width="1.6" fill="none">
       <path d="M15 40c-4-4 4-6 0-10s4-6 0-10"/>
       <path d="M30 38c-4-4 4-6 0-10s4-6 0-10"/>
     </g>
+    <path d="M13.6 21.4c.6.8 1 1.6 1 2.4M28.6 19.4c.6.8 1 1.6 1 2.4" stroke="#fff" stroke-opacity=".7" stroke-width="1.2" fill="none" stroke-linecap="round"/>
   </g>
 </svg>

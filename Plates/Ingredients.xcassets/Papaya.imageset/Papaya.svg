@@ -1,6 +1,13 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Papaya">
-  <path d="M24 5c9 0 14 9 14 20 0 10-6 18-14 18S10 35 10 25C10 14 15 5 24 5Z" fill="#8fb24a"/>
-  <path d="M24 8c7 0 11 8 11 17 0 9-5 15-11 15s-11-6-11-15c0-9 4-17 11-17Z" fill="#f28a3a"/>
-  <path d="M24 16c4 0 6 5 6 10 0 5-3 8-6 8s-6-3-6-8c0-5 2-10 6-10Z" fill="#f7b170"/>
-  <g fill="#2a2220"><circle cx="22" cy="20" r="1.4"/><circle cx="26" cy="20" r="1.4"/><circle cx="21" cy="25" r="1.4"/><circle cx="25" cy="24" r="1.4"/><circle cx="27" cy="28" r="1.4"/><circle cx="22" cy="29" r="1.4"/><circle cx="24" cy="32" r="1.3"/></g>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Half a papaya">
+  <defs>
+    <linearGradient id="s" x1="12" y1="6" x2="38" y2="42" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c8de6a"/><stop offset=".5" stop-color="#8fb24a"/><stop offset="1" stop-color="#5a8a2e"/></linearGradient>
+    <radialGradient id="f" cx="19" cy="15" r="28" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffb46a"/><stop offset=".5" stop-color="#f57c2c"/><stop offset="1" stop-color="#d9520c"/></radialGradient>
+    <radialGradient id="c" cx="22" cy="20" r="14" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffd8a6"/><stop offset="1" stop-color="#f59a52"/></radialGradient>
+  </defs>
+  <path d="M24 5c9 0 14 9 14 20 0 10-6 18-14 18S10 35 10 25C10 14 15 5 24 5Z" fill="url(#s)"/>
+  <path d="M24 8c7 0 11 8 11 17 0 9-5 15-11 15s-11-6-11-15c0-9 4-17 11-17Z" fill="url(#f)"/>
+  <path d="M24 16c4 0 6 5 6 10 0 5-3 8-6 8s-6-3-6-8c0-5 2-10 6-10Z" fill="url(#c)"/>
+  <g fill="#2e2220"><circle cx="22" cy="20" r="1.5"/><circle cx="26" cy="20" r="1.5"/><circle cx="21" cy="25" r="1.5"/><circle cx="25" cy="24" r="1.5"/><circle cx="27" cy="28.4" r="1.5"/><circle cx="22" cy="29" r="1.5"/><circle cx="24.4" cy="32.2" r="1.4"/></g>
+  <g fill="#fff" fill-opacity=".6"><circle cx="21.5" cy="19.5" r=".5"/><circle cx="25.5" cy="19.5" r=".5"/><circle cx="20.5" cy="24.5" r=".5"/><circle cx="24.5" cy="23.5" r=".5"/></g>
+  <path d="M15.6 17.6c1-3 2.6-5.6 5-7.2" stroke="#fff" stroke-opacity=".6" stroke-width="1.6" fill="none" stroke-linecap="round"/>
 </svg>

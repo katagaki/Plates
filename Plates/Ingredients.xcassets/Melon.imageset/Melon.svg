@@ -1,7 +1,18 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Melon">
-  <g transform="translate(-3 -2.81) scale(1.125)">
-    <circle cx="24" cy="25" r="15" fill="#cdd98c"/>
-    <path d="M12 17c8 3 16 3 24 0M10 25h28M12 33c8-3 16-3 24 0" stroke="#e6ecc4" stroke-width="1.5" fill="none"/>
-    <path d="M24 10V6" stroke="#7a5a3a" stroke-width="2" stroke-linecap="round"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Netted muskmelon">
+  <defs>
+    <radialGradient id="b" cx="17" cy="19" r="25" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#dbe9a6"/><stop offset=".5" stop-color="#a9c26e"/><stop offset="1" stop-color="#6c8a40"/></radialGradient>
+    <linearGradient id="s" x1="17" y1="0" x2="31" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#b8c98a"/><stop offset="1" stop-color="#6e7a44"/></linearGradient>
+  </defs>
+  <circle cx="24" cy="27" r="16" fill="url(#b)"/>
+  <g stroke="#f6f4e2" stroke-opacity=".75" stroke-width="1.2" fill="none" stroke-linecap="round">
+    <path d="M24 11.4c-.6 5 .8 10-.4 15.6s.6 10.4 0 15.6"/>
+    <path d="M18 12.6c-4 5-3.6 9.6-4.6 14.6s.6 9 3.6 13.6"/>
+    <path d="M30 12.6c4 5 3.6 9.6 4.6 14.6s-.6 9-3.6 13.6"/>
+    <path d="M11 19.4c4 1.6 7.6.6 12 1.4s9 .6 14-1.4"/>
+    <path d="M8.2 27c5 .8 9.6-.4 15.6.6s10-.8 16 0"/>
+    <path d="M10.6 35c4.4-1.4 8.6-.6 13-1.2s8.4.4 13.6 1.4"/>
+    <path d="M14.2 15.6l3.6 2.6M30.6 22.6l3.4 2M16.4 31.6l-2.8 2.4M28.6 30.4l2.4 3M20.6 23.6l2.6 3"/>
   </g>
+  <ellipse cx="16.8" cy="19.6" rx="4.4" ry="2.6" transform="rotate(-40 16.8 19.6)" fill="#fff" fill-opacity=".35"/>
+  <path d="M24 11.6V7.4M19.6 7.2h8.8" stroke="url(#s)" stroke-width="2.2" stroke-linecap="round"/>
 </svg>

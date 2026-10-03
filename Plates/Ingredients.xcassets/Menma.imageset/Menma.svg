@@ -1,6 +1,18 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Menma">
-  <path d="M7 30h34c-1 6-8 10-17 10S8 36 7 30Z" fill="#e8e2d6"/>
-  <path d="M7 30h34" stroke="#f4efe6" stroke-width="2" stroke-linecap="round"/>
-  <g transform="rotate(-12 24 24)"><rect x="11" y="17" width="5" height="15" rx="1.5" fill="#c9953f"/><rect x="17.5" y="15" width="5" height="17" rx="1.5" fill="#d8a650"/><rect x="24" y="16" width="5" height="16" rx="1.5" fill="#c9953f"/><rect x="30.5" y="18" width="5" height="14" rx="1.5" fill="#d8a650"/></g>
-  <g stroke="#a8772b" stroke-width=".9" transform="rotate(-12 24 24)"><path d="M13.5 19v11M20 17v13M26.5 18v12M33 20v10"/></g>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dish of menma, seasoned bamboo shoots">
+  <defs>
+    <linearGradient id="d" x1="7" y1="0" x2="41" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#ece6d8"/><stop offset="1" stop-color="#c8bea8"/></linearGradient>
+    <linearGradient id="m" x1="10" y1="15" x2="36" y2="32" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ecc070"/><stop offset=".5" stop-color="#c9953f"/><stop offset="1" stop-color="#9a6a24"/></linearGradient>
+    <linearGradient id="n" x1="10" y1="15" x2="36" y2="32" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f4cf86"/><stop offset=".5" stop-color="#d8a650"/><stop offset="1" stop-color="#a87830"/></linearGradient>
+  </defs>
+  <g transform="rotate(-12 24 24)">
+    <rect x="11" y="17" width="5" height="15" rx="1.5" fill="url(#m)"/>
+    <rect x="17.5" y="15" width="5" height="17" rx="1.5" fill="url(#n)"/>
+    <rect x="24" y="16" width="5" height="16" rx="1.5" fill="url(#m)"/>
+    <rect x="30.5" y="18" width="5" height="14" rx="1.5" fill="url(#n)"/>
+    <path d="M13.5 19v11M20 17v13M26.5 18v12M33 20v10" stroke="#7a4f14" stroke-opacity=".45" stroke-width=".9"/>
+    <path d="M18.8 17.6v5" stroke="#fff" stroke-opacity=".5" stroke-width="1.1" stroke-linecap="round"/>
+  </g>
+  <path d="M7 30h34c-1 6-8 10-17 10S8 36 7 30Z" fill="url(#d)"/>
+  <path d="M7 30h34" stroke="#f8f4ec" stroke-width="2" stroke-linecap="round"/>
+  <path d="M11 33.4c1.6 2.2 3.8 3.6 6.4 4.4" stroke="#fff" stroke-opacity=".85" stroke-width="1.4" fill="none" stroke-linecap="round"/>
 </svg>

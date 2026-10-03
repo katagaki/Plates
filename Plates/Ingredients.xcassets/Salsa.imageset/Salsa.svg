@@ -1,15 +1,22 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Salsa">
-  <path d="M38 20 46 6l-1 15Z" fill="#f2c85a"/>
-  <path d="M40 18l5-9" stroke="#e8b040" stroke-width="1" />
-  <path d="M6 30h36c0 7-8 12-18 12S6 37 6 30Z" fill="#3f8f8a"/>
-  <path d="M10 30c0-7 6-12 14-12s14 5 14 12Z" fill="#d9402f"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bowl of salsa with a tortilla chip">
+  <defs>
+    <linearGradient id="c" x1="38" y1="6" x2="46" y2="20" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffe08a"/><stop offset=".5" stop-color="#f2c85a"/><stop offset="1" stop-color="#d9a032"/></linearGradient>
+    <radialGradient id="s" cx="19" cy="20" r="16" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff8a75"/><stop offset=".5" stop-color="#e0402f"/><stop offset="1" stop-color="#b3242b"/></radialGradient>
+    <linearGradient id="b" x1="6" y1="0" x2="42" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6cc0b9"/><stop offset=".5" stop-color="#3f8f8a"/><stop offset="1" stop-color="#2a6a66"/></linearGradient>
+  </defs>
+  <path d="M38 20 46 6l-1 15Z" fill="url(#c)"/>
+  <path d="M40 18l5-9" stroke="#c98e22" stroke-opacity=".5" stroke-width="1"/>
+  <path d="M6 30h36c0 7-8 12-18 12S6 37 6 30Z" fill="url(#b)"/>
+  <path d="M10 30c0-7 6-12 14-12s14 5 14 12Z" fill="url(#s)"/>
   <rect x="14" y="25" width="2.6" height="2.6" rx=".6" fill="#f6f0e0"/>
-  <rect x="19" y="21" width="2.6" height="2.6" rx=".6" fill="#5f9a45"/>
+  <rect x="19" y="21" width="2.6" height="2.6" rx=".6" fill="#5fa83f"/>
   <rect x="24" y="24" width="2.6" height="2.6" rx=".6" fill="#f6f0e0"/>
-  <rect x="29" y="21" width="2.6" height="2.6" rx=".6" fill="#b8261f"/>
-  <rect x="32" y="26" width="2.6" height="2.6" rx=".6" fill="#5f9a45"/>
-  <rect x="20" y="26" width="2.6" height="2.6" rx=".6" fill="#b8261f"/>
-  <rect x="27" y="27" width="2.6" height="2.6" rx=".6" fill="#5f9a45"/>
+  <rect x="29" y="21" width="2.6" height="2.6" rx=".6" fill="#9e1f1a"/>
+  <rect x="32" y="26" width="2.6" height="2.6" rx=".6" fill="#5fa83f"/>
+  <rect x="20" y="26" width="2.6" height="2.6" rx=".6" fill="#9e1f1a"/>
+  <rect x="27" y="27" width="2.6" height="2.6" rx=".6" fill="#5fa83f"/>
   <rect x="24" y="19.5" width="2.6" height="2.6" rx=".6" fill="#f6f0e0"/>
-  <rect x="5" y="28.5" width="38" height="3" rx="1.5" fill="#52a8a2"/>
+  <path d="M13.4 24.4c.8-1.8 2-3.2 3.6-4.2" stroke="#fff" stroke-opacity=".7" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <rect x="5" y="28.5" width="38" height="3" rx="1.5" fill="#6cc0b9"/>
+  <path d="M10 34c1.6 2.4 4 4 7 5" stroke="#fff" stroke-opacity=".45" stroke-width="1.6" fill="none" stroke-linecap="round"/>
 </svg>

@@ -1,7 +1,12 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ghee">
-  <rect x="11" y="17" width="26" height="24" rx="4" fill="#f0b93a"/>
-  <path d="M11 22h26" stroke="#f7d27a" stroke-width="3"/>
-  <rect x="10" y="10" width="28" height="8" rx="2" fill="#7a5a3a"/>
-  <path d="M16 27v9" stroke="#f9dc8c" stroke-width="2.4" stroke-linecap="round"/>
-  <rect x="20" y="28" width="12" height="7" rx="1.5" fill="#fbf1d6"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Jar of ghee">
+  <defs>
+    <linearGradient id="g" x1="11" y1="0" x2="37" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffd76a"/><stop offset="0.5" stop-color="#f0b62a"/><stop offset="1" stop-color="#c98a10"/></linearGradient>
+    <linearGradient id="c" x1="0" y1="10" x2="0" y2="18" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#9a7652"/><stop offset="1" stop-color="#5a3e22"/></linearGradient>
+    <linearGradient id="l" x1="0" y1="28" x2="0" y2="35" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#f4e8c8"/></linearGradient>
+  </defs>
+  <rect x="11" y="17" width="26" height="24" rx="4" fill="url(#g)"/>
+  <path d="M11 22h26" stroke="#fff3c2" stroke-opacity=".6" stroke-width="3"/>
+  <rect x="10" y="10" width="28" height="8" rx="2" fill="url(#c)"/>
+  <path d="M15 26v10" stroke="#fff" stroke-opacity=".65" stroke-width="2.2" stroke-linecap="round"/>
+  <rect x="20" y="28" width="12" height="7" rx="1.5" fill="url(#l)"/>
 </svg>

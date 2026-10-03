@@ -1,8 +1,11 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mushroom">
-  <g transform="translate(-3 -3.19) scale(1.125)">
-    <path d="M9 26c0-9 7-15 15-15s15 6 15 15Z" fill="#a4693a"/>
-    <path d="M16 20c3-4 8-6 13-5" stroke="#c08a56" stroke-width="3" fill="none" stroke-linecap="round"/>
-    <path d="M18 26h12v9a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5Z" fill="#f0e6c0"/>
-    <path d="M9 26h30v3H9Z" fill="#f3dfae"/>
-  </g>
+  <defs>
+    <radialGradient id="c" cx="17" cy="13" r="24" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d79a63"/><stop offset=".6" stop-color="#a4693a"/><stop offset="1" stop-color="#6e3d1c"/></radialGradient>
+    <linearGradient id="s" x1="17" y1="0" x2="31" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fffaea"/><stop offset="1" stop-color="#dccb9c"/></linearGradient>
+    <linearGradient id="r" x1="0" y1="26" x2="0" y2="30" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fbeac0"/><stop offset="1" stop-color="#d9bf86"/></linearGradient>
+  </defs>
+  <path d="M17.2 26.3h13.6v12.1a5.6 5.6 0 0 1-5.6 5.6h-2.4a5.6 5.6 0 0 1-5.6-5.6Z" fill="url(#s)"/>
+  <path d="M7.1 26.3c0-10.1 7.9-16.9 16.9-16.9s16.9 6.8 16.9 16.9c0 1.6-1.2 2.8-2.8 2.8H9.9c-1.6 0-2.8-1.2-2.8-2.8Z" fill="url(#c)"/>
+  <path d="M10 26.6h28" stroke="url(#r)" stroke-width="2.6" stroke-linecap="round"/>
+  <ellipse cx="17" cy="16.4" rx="4.6" ry="2.4" transform="rotate(-30 17 16.4)" fill="#fff" fill-opacity=".35"/>
 </svg>

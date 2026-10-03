@@ -1,7 +1,18 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nuts">
-  <g transform="translate(-3.12 -3.34) scale(1.125)">
-    <path d="M14 30c-3-6 0-12 5-12 4 0 6 5 4 10-1 4-7 7-9 2Z" fill="#c98a45"/>
-    <path d="M28 34c-4-5-2-12 3-13 4-1 7 3 6 8-1 4-6 9-9 5Z" fill="#a9682e"/>
-    <path d="M18 20c2 3 3 7 2 10M32 22c-1 4-1 8 0 11" stroke="#e0a869" stroke-width="1.6" fill="none"/>
-  </g>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mixed nuts">
+  <defs>
+    <radialGradient id="al" cx="11" cy="14" r="15" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d99a5c"/><stop offset=".5" stop-color="#a4693a"/><stop offset="1" stop-color="#6e3d1c"/></radialGradient>
+    <radialGradient id="ps" cx="27" cy="9" r="17" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fbf1dc"/><stop offset=".5" stop-color="#e6cfa4"/><stop offset="1" stop-color="#b8986a"/></radialGradient>
+    <linearGradient id="pg" x1="28" y1="10" x2="38" y2="22" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c8e88a"/><stop offset=".5" stop-color="#8cbf4a"/><stop offset="1" stop-color="#5a8a2a"/></linearGradient>
+    <radialGradient id="cs" cx="16" cy="25" r="20" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff2d4"/><stop offset=".5" stop-color="#efd09a"/><stop offset="1" stop-color="#c99a58"/></radialGradient>
+  </defs>
+  <path d="M13.5 5.5C18.8 8.4 21 15.4 19.6 21.4C18.6 25.6 15.4 27.4 12.4 26.4C8.8 25.2 7.2 20.6 8 15.6C8.8 11 10.6 7.6 13.5 5.5Z" fill="url(#al)"/>
+  <path d="M13.6 9.4c1.4 3 2 6.4 1.6 9.6M11 14c.2 3 .6 6 1.6 8.4" stroke="#4a2410" stroke-opacity=".45" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+  <path d="M11.2 11.6c-1 2-1.4 4-1.4 6" stroke="#fff" stroke-opacity=".5" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M31.4 4.8C36.8 4.8 41 10.2 40.6 17.4C40.2 23.6 36.6 26.4 32.2 26.4C27.6 26.4 24.2 23 24.2 16.8C24.2 9.6 27.2 4.8 31.4 4.8Z" fill="url(#ps)"/>
+  <path d="M31.8 7.4C35.4 9.6 37.6 13.6 37.4 18.2C37.2 21.6 35.8 23.4 34.6 24C33.4 20.4 31.6 16.6 30 13.4C29.4 11.2 30 8.6 31.8 7.4Z" fill="url(#pg)"/>
+  <path d="M31.2 6.4C29 9.6 29.4 14 31.2 18.4C32.4 21.2 33.6 23.6 34.2 25.6" stroke="#9a7a4a" stroke-opacity=".55" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+  <path d="M26.8 12c-.8 1.6-1 3.4-.8 5.2" stroke="#fff" stroke-opacity=".75" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <path d="M9.2 33.2C8.4 28.6 12 25.6 15.6 27C17.6 27.8 18 30.4 19.8 31.8C22 33.6 26.4 33.6 29.2 31.4C31 30 33.4 30.6 34 32.8C34.8 36 32.6 40 27.4 41.8C20.4 44.2 10.6 41 9.2 33.2Z" fill="url(#cs)"/>
+  <path d="M12 31.4c.6 3 2.8 5.4 6 6.6" stroke="#fff" stroke-opacity=".75" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <path d="M15 39c4 2 9 2 13 .4" stroke="#a8783a" stroke-opacity=".45" stroke-width="1.1" fill="none" stroke-linecap="round"/>
 </svg>

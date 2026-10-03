@@ -1,11 +1,28 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Star anise">
+  <defs>
+    <radialGradient id="b" cx="17" cy="16" r="28" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c9844e"/><stop offset=".5" stop-color="#8a4a2a"/><stop offset="1" stop-color="#55260f"/></radialGradient>
+    <radialGradient id="s" cx="22" cy="13" r="14" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f0b874"/><stop offset="1" stop-color="#b8743a"/></radialGradient>
+  </defs>
   <g transform="translate(-3 -3) scale(1.125)">
-    <g fill="#8a4a2a">
-      <path d="M24 6l4 10-4 4-4-4Z"/><path d="M42 24l-10 4-4-4 4-4Z"/>
-      <path d="M24 42l-4-10 4-4 4 4Z"/><path d="M6 24l10-4 4 4-4 4Z"/>
-      <path d="M37 11l-5 9-5-1-1-5Z"/><path d="M37 37l-9-5 1-5 5-1Z"/>
-      <path d="M11 37l5-9 5 1 1 5Z"/><path d="M11 11l9 5-1 5-5 1Z"/>
+    <g fill="url(#b)">
+      <path d="M24.00 5.50Q27.00 9.50 27.80 15.50L24.00 22.00L20.20 15.50Q21.00 9.50 24.00 5.50Z"/>
+      <path d="M37.08 10.92Q36.37 15.87 32.70 20.68L25.41 22.59L27.32 15.30Q32.13 11.63 37.08 10.92Z"/>
+      <path d="M42.50 24.00Q38.50 27.00 32.50 27.80L26.00 24.00L32.50 20.20Q38.50 21.00 42.50 24.00Z"/>
+      <path d="M37.08 37.08Q32.13 36.37 27.32 32.70L25.41 25.41L32.70 27.32Q36.37 32.13 37.08 37.08Z"/>
+      <path d="M24.00 42.50Q21.00 38.50 20.20 32.50L24.00 26.00L27.80 32.50Q27.00 38.50 24.00 42.50Z"/>
+      <path d="M10.92 37.08Q11.63 32.13 15.30 27.32L22.59 25.41L20.68 32.70Q15.87 36.37 10.92 37.08Z"/>
+      <path d="M5.50 24.00Q9.50 21.00 15.50 20.20L22.00 24.00L15.50 27.80Q9.50 27.00 5.50 24.00Z"/>
+      <path d="M10.92 10.92Q15.87 11.63 20.68 15.30L22.59 22.59L15.30 20.68Q11.63 15.87 10.92 10.92Z"/>
     </g>
-    <circle cx="24" cy="24" r="4" fill="#6b3a1e"/>
+    <path d="M24.00 8.00L24.00 19.00M35.31 12.69L27.54 20.46M40.00 24.00L29.00 24.00M35.31 35.31L27.54 27.54M24.00 40.00L24.00 29.00M12.69 35.31L20.46 27.54M8.00 24.00L19.00 24.00M12.69 12.69L20.46 20.46" stroke="#4a1f0a" stroke-opacity=".5" stroke-width="1" fill="none" stroke-linecap="round"/>
+    <g fill="url(#s)">
+      <ellipse cx="31.50" cy="16.50" rx="1.3" ry="2.2" transform="rotate(45 31.50 16.50)"/>
+      <ellipse cx="31.50" cy="31.50" rx="1.3" ry="2.2" transform="rotate(135 31.50 31.50)"/>
+      <ellipse cx="16.50" cy="31.50" rx="1.3" ry="2.2" transform="rotate(225 16.50 31.50)"/>
+      <ellipse cx="16.50" cy="16.50" rx="1.3" ry="2.2" transform="rotate(315 16.50 16.50)"/>
+    </g>
+    <circle cx="24" cy="24" r="3.6" fill="#5a2c14"/>
+    <circle cx="23" cy="23" r="1.1" fill="#fff" fill-opacity=".35"/>
+    <path d="M21.2 10.4c.6-1.6 1.4-2.8 2.4-3.6" stroke="#fff" stroke-linecap="round" fill="none" stroke-opacity=".5" stroke-width="1.2"/>
   </g>
 </svg>

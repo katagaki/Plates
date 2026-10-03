@@ -1,10 +1,15 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sugar cubes">
+  <defs>
+    <linearGradient id="l" x1="9" y1="22" x2="22" y2="34" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#faf8f2"/><stop offset="1" stop-color="#e2dbca"/></linearGradient>
+    <linearGradient id="r" x1="22" y1="17" x2="29" y2="34" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d2cab8"/><stop offset="1" stop-color="#b3a890"/></linearGradient>
+  </defs>
   <g transform="translate(-3.06 -3.56) scale(1.125)">
     <path d="M9 22 16 17h13l-7 5Z" fill="#ffffff"/>
-    <rect x="9" y="22" width="13" height="12" fill="#f0ece4"/>
-    <path d="M22 22 29 17v12l-7 5Z" fill="#dcd7cc"/>
+    <rect x="9" y="22" width="13" height="12" fill="url(#l)"/>
+    <path d="M22 22 29 17v12l-7 5Z" fill="url(#r)"/>
     <path d="M25 32 31 28h9l-6 4Z" fill="#ffffff"/>
-    <rect x="25" y="32" width="9" height="8" fill="#f0ece4"/>
-    <path d="M34 32 40 28v8l-6 4Z" fill="#dcd7cc"/>
+    <rect x="25" y="32" width="9" height="8" fill="url(#l)"/>
+    <path d="M34 32 40 28v8l-6 4Z" fill="url(#r)"/>
+    <g fill="#cfc6b2" fill-opacity=".6"><circle cx="12.4" cy="26" r=".6"/><circle cx="17.6" cy="29.4" r=".6"/><circle cx="14.6" cy="31.6" r=".6"/><circle cx="28.4" cy="36.6" r=".6"/></g>
   </g>
 </svg>

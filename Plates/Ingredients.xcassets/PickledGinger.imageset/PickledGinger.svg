@@ -1,9 +1,24 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pickled ginger">
-  <g transform="translate(-2.95 -3.62) scale(1.125)">
-    <g fill="#f2a7b8" stroke="#dd8298" stroke-width="1.4">
-      <ellipse cx="18" cy="27" rx="8" ry="4" transform="rotate(-15 18 27)"/>
-      <ellipse cx="29" cy="24" rx="8" ry="4" transform="rotate(10 29 24)"/>
-      <ellipse cx="24" cy="34" rx="8" ry="4" transform="rotate(-5 24 34)"/>
-    </g>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Red pickled ginger on a dish">
+  <defs>
+    <linearGradient id="d" x1="6" y1="0" x2="42" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#eef0f2"/><stop offset="1" stop-color="#c8ced6"/></linearGradient>
+    <linearGradient id="m" x1="14" y1="16" x2="34" y2="36" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff7a86"/><stop offset=".5" stop-color="#e0283c"/><stop offset="1" stop-color="#a8142a"/></linearGradient>
+  </defs>
+  <path d="M5 33h38c-1 4.6-8 7.6-19 7.6S6 37.6 5 33Z" fill="url(#d)"/>
+  <ellipse cx="24" cy="33" rx="19" ry="3.4" fill="#f4f5f7"/>
+  <path d="M10.6 34c.6-9 6.6-16 13.4-16S36.8 25 37.4 34Z" fill="url(#m)"/>
+  <g stroke-width="1.8" stroke-linecap="round" fill="none">
+    <path d="M12 33c3-5 7-8 12-9" stroke="#e0283c"/>
+    <path d="M14 34c4-7 9-12 15-13" stroke="#ff5a6a"/>
+    <path d="M17 34c2-6 6-12 11-15" stroke="#c41a32"/>
+    <path d="M36 33c-3-5-7-9-13-10" stroke="#e0283c"/>
+    <path d="M34 34c-3-6-8-11-14-13" stroke="#ff5a6a"/>
+    <path d="M31 34c-2-7-5-13-10-16" stroke="#c41a32"/>
+    <path d="M20 34c1-6 3-12 6-17" stroke="#ff6a7a"/>
+    <path d="M28 34c0-6-1-12-4-17" stroke="#e0283c"/>
+    <path d="M15 31c5-2 12-3 19-1" stroke="#ff5a6a"/>
+    <path d="M18 27c4-2 9-2 13 0" stroke="#c41a32"/>
+    <path d="M21 23c2-1 5-1 7 0" stroke="#ff6a7a"/>
   </g>
+  <g stroke="#b3142c" stroke-width="1.6" stroke-linecap="round" fill="none"><path d="M25 18.6l3.4-3.8"/><path d="M22.6 18.8l-2.6-4"/><path d="M31.6 22.4l3.6-2"/><path d="M15.6 23.4l-3.4-1.8"/></g>
+  <path d="M18.6 22.6c1.4-1.4 3-2.4 4.8-2.8" stroke="#fff" stroke-opacity=".7" stroke-width="1.4" fill="none" stroke-linecap="round"/>
 </svg>

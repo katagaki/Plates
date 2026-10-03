@@ -1,8 +1,14 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Onion powder">
-  <path d="M14 16h20l-2 22a3 3 0 0 1-3 3H19a3 3 0 0 1-3-3Z" fill="#f0ece4"/>
-  <path d="M15 24h18l-1 14a3 3 0 0 1-3 3H19a3 3 0 0 1-3-3Z" fill="#d9a95a"/>
-  <rect x="12" y="12" width="24" height="5" rx="2" fill="#6b4a2a"/>
-
-  <circle cx="24" cy="33" r="5" fill="#f5e3b5"/>
-  <path d="M24 28v10M21 29.5c-1.5 2-1.5 5 0 7M27 29.5c1.5 2 1.5 5 0 7" stroke="#d9a95a" stroke-width="1" fill="none"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Jar of onion powder">
+  <defs>
+    <linearGradient id="g" x1="14" y1="0" x2="34" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#f1ece0"/><stop offset="1" stop-color="#cfc6b2"/></linearGradient>
+    <linearGradient id="lid" x1="12" y1="0" x2="36" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#9a7450"/><stop offset=".5" stop-color="#6b4a2a"/><stop offset="1" stop-color="#432c16"/></linearGradient>
+    <linearGradient id="p" x1="15" y1="0" x2="33" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f0c682"/><stop offset=".5" stop-color="#d9a95a"/><stop offset="1" stop-color="#b07c32"/></linearGradient>
+    <radialGradient id="o" cx="22" cy="31" r="7" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fffaf0"/><stop offset=".55" stop-color="#f5e3b5"/><stop offset="1" stop-color="#d8bf86"/></radialGradient>
+  </defs>
+  <path d="M14 16h20l-2 22a3 3 0 0 1-3 3H19a3 3 0 0 1-3-3Z" fill="url(#g)"/>
+  <path d="M15 24h18l-1 14a3 3 0 0 1-3 3H19a3 3 0 0 1-3-3Z" fill="url(#p)"/>
+  <rect x="12" y="12" width="24" height="5" rx="2" fill="url(#lid)"/>
+  <circle cx="24" cy="33" r="5" fill="url(#o)"/>
+  <path d="M24 28v10M21 29.5c-1.5 2-1.5 5 0 7M27 29.5c1.5 2 1.5 5 0 7" stroke="#b07c32" stroke-opacity=".6" stroke-width="1" fill="none"/>
+  <path d="M16.8 19v17" stroke="#fff" stroke-opacity=".7" stroke-width="1.5" stroke-linecap="round"/>
 </svg>

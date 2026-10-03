@@ -1,7 +1,12 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Scallops">
-  <g transform="translate(-3 -3.12) scale(1.125)">
-    <path d="M24 12c9 0 16 8 16 17 0 3-2 5-5 5H13c-3 0-5-2-5-5 0-9 7-17 16-17Z" fill="#f0e0c8"/>
-    <path d="M24 13v21M17 15l-3 19M31 15l3 19M11 21l-1 13M37 21l1 13" stroke="#d9c3a3" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-    <rect x="20" y="34" width="8" height="4" rx="2" fill="#e0cbb0"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Scallop shell">
+  <defs>
+    <radialGradient id="s" cx="17" cy="11" r="34" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffe9cf"/><stop offset=".5" stop-color="#f2c99a"/><stop offset="1" stop-color="#c98a52"/></radialGradient>
+    <linearGradient id="e" x1="15" y1="34" x2="33" y2="42" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f2c99a"/><stop offset="1" stop-color="#c08048"/></linearGradient>
+  </defs>
+  <path d="M15 34.5h18l3 4.4a1.4 1.4 0 0 1-1.2 2.1H13.2a1.4 1.4 0 0 1-1.2-2.1Z" fill="url(#e)"/>
+  <path d="M20 37C12 33 6.5 26 6.5 19.5 6.5 12 14.5 6.5 24 6.5S41.5 12 41.5 19.5C41.5 26 36 33 28 37c-2.4 1.2-5.6 1.2-8 0Z" fill="url(#s)"/>
+  <g stroke="#b5784a" stroke-opacity=".5" stroke-width="1.4" fill="none" stroke-linecap="round">
+    <path d="M22.4 35 9.6 17.4"/><path d="M23 35 14 10.6"/><path d="M23.6 35 19 8"/><path d="M24 35V7.4"/><path d="M24.4 35 29 8"/><path d="M25 35 34 10.6"/><path d="M25.6 35l12.8-17.6"/>
   </g>
+  <path d="M10.4 16c1.4-3 3.8-5.4 7-6.8" stroke="#fff" stroke-opacity=".7" stroke-width="1.8" fill="none" stroke-linecap="round"/>
 </svg>

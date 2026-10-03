@@ -1,8 +1,16 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dried daikon">
-  <g stroke="#cdb785" stroke-width="2" fill="none" stroke-linecap="round">
-    <path d="M8 30c5-8 10 4 16-4s10 2 16-6"/><path d="M8 24c6-6 10 6 17-2s10 4 15-2"/><path d="M10 36c5-6 10 2 15-4s10 2 14-3"/>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dried daikon strips">
+  <defs>
+    <linearGradient id="a" x1="8" y1="16" x2="40" y2="38" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fbf0d4"/><stop offset=".5" stop-color="#e2cc98"/><stop offset="1" stop-color="#b8995e"/></linearGradient>
+  </defs>
+  <g stroke="#b8995e" stroke-opacity=".9" stroke-width="2.2" fill="none" stroke-linecap="round">
+    <path d="M8 30c5-8 10 4 16-4s10 2 16-6"/>
+    <path d="M10 36c5-6 10 2 15-4s10 2 14-3"/>
   </g>
-  <g stroke="#e8d9b4" stroke-width="1.6" fill="none" stroke-linecap="round">
-    <path d="M9 27c5-7 10 5 16-3s9 3 15-5"/><path d="M9 33c5-6 10 3 16-3s9 2 14-4"/><path d="M12 20c5-4 9 4 14-2s8 3 12-2"/>
+  <g stroke="url(#a)" stroke-width="2.2" fill="none" stroke-linecap="round">
+    <path d="M8 24c6-6 10 6 17-2s10 4 15-2"/>
+    <path d="M9 27c5-7 10 5 16-3s9 3 15-5"/>
+    <path d="M9 33c5-6 10 3 16-3s9 2 14-4"/>
+    <path d="M12 20c5-4 9 4 14-2s8 3 12-2"/>
   </g>
+  <path d="M12.6 19.4c2-1.4 3.6-1.4 5 0" stroke="#fff" stroke-opacity=".8" stroke-width="1.2" fill="none" stroke-linecap="round"/>
 </svg>

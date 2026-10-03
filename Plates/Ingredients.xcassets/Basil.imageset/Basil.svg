@@ -1,9 +1,16 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Basil">
-  <g transform="translate(-3 -3.14) scale(1.125)">
-    <path d="M24 42V18" stroke="#5f8c3f" stroke-width="2.6" stroke-linecap="round"/>
-    <path d="M23 26c-8 0-13-4-13-9 7-1 12 3 13 9Z" fill="#4f7c37"/>
-    <path d="M25 26c8 0 13-4 13-9-7-1-12 3-13 9Z" fill="#7a9e4e"/>
-    <path d="M23 16c-5-1-8-5-8-9 5 0 8 4 8 9Z" fill="#4f7c37"/>
-    <path d="M25 16c5-1 8-5 8-9-5 0-8 4-8 9Z" fill="#7a9e4e"/>
-  </g>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sprig of basil">
+  <defs>
+    <linearGradient id="s" x1="0" y1="10" x2="0" y2="46" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6fb34a"/><stop offset="1" stop-color="#3f7f2c"/></linearGradient>
+    <radialGradient id="a" cx="12" cy="18" r="22" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#b4e38a"/><stop offset=".5" stop-color="#62ad42"/><stop offset="1" stop-color="#3f8a2e"/></radialGradient>
+    <radialGradient id="b" cx="24" cy="14" r="24" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#9fd577"/><stop offset=".5" stop-color="#4f9a34"/><stop offset="1" stop-color="#2f6e22"/></radialGradient>
+  </defs>
+  <path d="M24 46V12" stroke="url(#s)" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M24 33C22.98 24.83 11.84 23.95 6 29C9.16 36.05 19.62 39.97 24 33Z" fill="url(#a)"/>
+  <path d="M24 33C28.38 39.97 38.84 36.05 42 29C36.16 23.95 25.02 24.83 24 33Z" fill="url(#b)"/>
+  <path d="M24 22C24.73 15.59 15.77 12.14 10 14.5C11.23 20.61 19.07 26.16 24 22Z" fill="url(#a)"/>
+  <path d="M24 22C28.93 26.16 36.77 20.61 38 14.5C32.23 12.14 23.27 15.59 24 22Z" fill="url(#b)"/>
+  <path d="M24 13C27.17 9.76 23.7 4.42 19.5 3.5C17.55 7.33 19.48 13.39 24 13Z" fill="url(#a)"/>
+  <path d="M24 13C28.52 13.39 30.45 7.33 28.5 3.5C24.3 4.42 20.83 9.76 24 13Z" fill="url(#b)"/>
+  <path d="M21.84 32.52L9.96 29.88M26.16 32.52L38.04 29.88M22.32 21.1L13.08 16.15M25.68 21.1L34.92 16.15" stroke="#2f6e22" stroke-opacity=".5" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+  <path d="M10.5 27.2c1.6-1.6 3.6-2.6 6-3" stroke="#fff" stroke-opacity=".6" stroke-width="1.6" stroke-linecap="round" fill="none"/>
 </svg>

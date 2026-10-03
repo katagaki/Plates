@@ -1,12 +1,21 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Penne">
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Penne pasta">
+  <defs>
+    <linearGradient id="pn" x1="0" y1="-5.5" x2="0" y2="5.5" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffe08a"/><stop offset=".5" stop-color="#f0c463"/><stop offset="1" stop-color="#d39a2f"/></linearGradient>
+  </defs>
   <g transform="translate(-2.94 -3.07) scale(1.125)">
-    <g transform="rotate(-35 24 24)">
-      <rect x="6" y="12" width="22" height="11" rx="3" fill="#f0c463"/>
-      <ellipse cx="27" cy="17.5" rx="2.6" ry="5.5" fill="#d9a63c"/>
-      <g stroke="#e0b04a" stroke-width="1.4"><path d="M8 16h17"/><path d="M8 20h17"/></g>
-      <rect x="18" y="26" width="22" height="11" rx="3" fill="#e8b850"/>
-      <ellipse cx="39" cy="31.5" rx="2.6" ry="5.5" fill="#c9942f"/>
-      <g stroke="#d9a63c" stroke-width="1.4"><path d="M20 30h17"/><path d="M20 34h17"/></g>
-    </g>
+    <g transform="translate(17 17.5) rotate(-35) translate(0 0)">
+    <path d="M-8 -5.5H12.4a1.2 1.2 0 0 1 1.1 1.7L9 5.5H-13.4Z" fill="url(#pn)"/>
+    <g stroke="#c9902a" stroke-opacity=".5" stroke-width="1.2" stroke-linecap="round"><path d="M-8.6 -2H9.4"/><path d="M-10.4 1.6H7.4"/></g>
+    <ellipse cx="11.2" cy="0" rx="3" ry="5.6" transform="rotate(26.6 11.2 0)" fill="#c48a28"/>
+    <ellipse cx="11.6" cy="-.2" rx="1.6" ry="4.2" transform="rotate(26.6 11.8 -.4)" fill="#9a6418" fill-opacity=".6"/>
+    <path d="M-6.6 -3.8H6" stroke="#fff" stroke-opacity=".6" stroke-width="1.2" stroke-linecap="round"/>
+  </g>
+    <g transform="translate(29.6 30.4) rotate(-35)">
+    <path d="M-8 -5.5H12.4a1.2 1.2 0 0 1 1.1 1.7L9 5.5H-13.4Z" fill="url(#pn)"/>
+    <g stroke="#c9902a" stroke-opacity=".5" stroke-width="1.2" stroke-linecap="round"><path d="M-8.6 -2H9.4"/><path d="M-10.4 1.6H7.4"/></g>
+    <ellipse cx="11.2" cy="0" rx="3" ry="5.6" transform="rotate(26.6 11.2 0)" fill="#c48a28"/>
+    <ellipse cx="11.6" cy="-.2" rx="1.6" ry="4.2" transform="rotate(26.6 11.8 -.4)" fill="#9a6418" fill-opacity=".6"/>
+    <path d="M-6.6 -3.8H6" stroke="#fff" stroke-opacity=".6" stroke-width="1.2" stroke-linecap="round"/>
+  </g>
   </g>
 </svg>

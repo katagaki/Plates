@@ -1,9 +1,14 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bonito fillet">
-  <path d="M5 26 13 16h30l-7 10Z" fill="#c9d0d8"/>
-  <g stroke="#3f4a66" stroke-width="1.6" stroke-linecap="round"><path d="M12 22.6h23"/><path d="M15.6 19.4h23.4"/></g>
+  <defs>
+    <linearGradient id="t" x1="13" y1="16" x2="40" y2="26" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#eef1f4"/><stop offset="1" stop-color="#bcc4ce"/></linearGradient>
+    <linearGradient id="f" x1="5" y1="26" x2="36" y2="34" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d04a56"/><stop offset=".5" stop-color="#a32c38"/><stop offset="1" stop-color="#7a1e2a"/></linearGradient>
+    <linearGradient id="s" x1="36" y1="16" x2="43" y2="34" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#86232f"/><stop offset="1" stop-color="#5e1520"/></linearGradient>
+  </defs>
+  <path d="M5 26 13 16h30l-7 10Z" fill="url(#t)"/>
+  <g stroke="#2f3f66" stroke-opacity=".8" stroke-width="1.6" stroke-linecap="round"><path d="M12 22.6h23"/><path d="M15.6 19.4h23.4"/></g>
   <path d="M13 16h30l-1.6 1.8h-29.8Z" fill="#2f3f66"/>
-  <path d="M5 26h31v8H5Z" fill="#9e2a36"/>
-  <path d="M36 26l7-10v8l-7 10Z" fill="#7e1f2a"/>
-  <path d="M5 26h31" stroke="#6e5a52" stroke-width="1.4"/>
-  <g stroke="#bf4a56" stroke-width="1.1" fill="none" stroke-linecap="round"><path d="M9 29.6c3-.8 6 .8 9 0"/><path d="M21 31c3-.8 6 .8 9 0"/></g>
+  <path d="M5 26h31v8H5Z" fill="url(#f)"/>
+  <path d="M36 26l7-10v8l-7 10Z" fill="url(#s)"/>
+  <g stroke="#ffb3b8" stroke-opacity=".5" stroke-width="1.1" fill="none" stroke-linecap="round"><path d="M9 29.6c3-.8 6 .8 9 0"/><path d="M21 31c3-.8 6 .8 9 0"/></g>
+  <path d="M7.6 27.6h6" stroke="#fff" stroke-opacity=".45" stroke-width="1.2" stroke-linecap="round"/>
 </svg>

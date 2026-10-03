@@ -1,5 +1,12 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Wok">
-  <path d="M8 20h28c0 11-6 18-14 18S8 31 8 20Z" fill="#3c4046"/>
-  <rect x="6" y="17" width="32" height="4" rx="2" fill="#6f747b"/>
-  <path d="M36 15c5-3 8 3 4 5" stroke="#a97142" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <defs>
+    <radialGradient id="b" cx="12" cy="20" r="24" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#767d86"/><stop offset=".45" stop-color="#4e545c"/><stop offset="1" stop-color="#25282d"/></radialGradient>
+    <linearGradient id="r" x1="3" y1="0" x2="35" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a7aeb7"/><stop offset="1" stop-color="#5f656d"/></linearGradient>
+    <linearGradient id="h" x1="40.5" y1="12" x2="43.5" y2="16" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d79c64"/><stop offset=".5" stop-color="#b07440"/><stop offset="1" stop-color="#8a5530"/></linearGradient>
+  </defs>
+  <path d="M33 19.6l5-3" stroke="#8e99a4" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M38 16 45 11.6" stroke="url(#h)" stroke-width="4.4" stroke-linecap="round"/>
+  <path d="M4 20h30c0 10-6.7 17-15 17S4 30 4 20Z" fill="url(#b)"/>
+  <rect x="3" y="17.8" width="32" height="4.4" rx="2.2" fill="url(#r)"/>
+  <path d="M8.6 25c1 3.6 3 6.4 5.8 8.2" stroke="#fff" stroke-opacity=".3" stroke-width="2" fill="none" stroke-linecap="round"/>
 </svg>

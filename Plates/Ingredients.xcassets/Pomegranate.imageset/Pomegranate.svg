@@ -1,6 +1,10 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pomegranate">
-  <circle cx="24" cy="27" r="14" fill="#c62c3a"/>
-  <path d="M18.5 15l.5-7 2.5 3.5L24 7l2.5 4.5L29 8l.5 7Z" fill="#a52030"/>
-  <ellipse cx="17" cy="22" rx="4.2" ry="2.6" transform="rotate(-35 17 22)" fill="#e0606b"/>
-  <path d="M24 38c5 0 9-3 11-7" stroke="#a52030" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <defs>
+    <radialGradient id="b" cx="17" cy="20" r="23" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff7f7c"/><stop offset=".5" stop-color="#d12f3f"/><stop offset="1" stop-color="#8c1628"/></radialGradient>
+    <linearGradient id="c" x1="18" y1="6" x2="30" y2="16" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e0505c"/><stop offset="1" stop-color="#8c1628"/></linearGradient>
+  </defs>
+  <circle cx="24" cy="27" r="14" fill="url(#b)"/>
+  <path d="M18.6 15.4 17.4 7.6l3.6 3L24 6.6l3 4 3.6-3-1.2 7.8Z" fill="url(#c)" stroke="#a01d2f" stroke-width=".8" stroke-linejoin="round"/>
+  <path d="M24 38.4c5 0 9-3 11-7" stroke="#7a1020" stroke-opacity=".5" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <ellipse cx="17" cy="21.6" rx="4" ry="2.4" transform="rotate(-35 17 21.6)" fill="#fff" fill-opacity=".7"/>
 </svg>

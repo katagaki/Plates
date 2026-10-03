@@ -1,9 +1,19 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rosemary">
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sprig of rosemary">
+  <defs>
+    <linearGradient id="s" x1="13" y1="42" x2="33" y2="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7a5a3a"/><stop offset="1" stop-color="#7f9a52"/></linearGradient>
+    <linearGradient id="l" x1="8" y1="10" x2="24" y2="36" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a3c48a"/><stop offset=".5" stop-color="#6f9a55"/><stop offset="1" stop-color="#4d7a3e"/></linearGradient>
+    <linearGradient id="r" x1="18" y1="10" x2="34" y2="34" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6f9a55"/><stop offset=".5" stop-color="#4f7d40"/><stop offset="1" stop-color="#355e2c"/></linearGradient>
+  </defs>
   <g transform="translate(-2.63 -3.12) scale(1.125)">
-    <path d="M13 42C18 30 24 18 33 8" stroke="#6b8a4a" stroke-width="3" fill="none" stroke-linecap="round"/>
-    <g stroke="#5f8c3f" stroke-width="2.6" stroke-linecap="round">
-      <path d="M16 36 8 33"/><path d="M19 30l-8-2"/><path d="M22 24l-8-1"/><path d="M26 18l-8-1"/><path d="M30 12l-7-1"/>
+    <path d="M13 42C18 30 24 18 33 8" stroke="url(#s)" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <g stroke="url(#r)" stroke-width="2.6" stroke-linecap="round">
       <path d="M17 33l6-6"/><path d="M20 27l6-6"/><path d="M23 21l7-6"/><path d="M27 15l7-5"/>
+    </g>
+    <g stroke="url(#l)" stroke-width="2.6" stroke-linecap="round">
+      <path d="M16 36 8 33"/><path d="M19 30l-8-2"/><path d="M22 24l-8-1"/><path d="M26 18l-8-1"/><path d="M30 12l-7-1"/>
+    </g>
+    <g stroke="#fff" stroke-opacity=".45" stroke-width="1" stroke-linecap="round">
+      <path d="M13 32.4 10 31.3"/><path d="M16 27.6l-3-.7"/><path d="M19 22.2l-3-.4"/>
     </g>
   </g>
 </svg>
