@@ -73,10 +73,7 @@ struct CookingStepPage: View {
             VStack(spacing: 6) {
                 RecipeIcon(path: icon, size: 48)
                     .padding(10)
-                    .background(
-                        Color(uiColor: .secondarySystemGroupedBackground),
-                        in: .rect(cornerRadius: 18, style: .continuous)
-                    )
+                    .glassEffect(.clear.interactive(), in: .rect(cornerRadius: 18, style: .continuous))
                 if let amount = item?.detail, !amount.isEmpty {
                     Text(verbatim: amount)
                         .font(.caption.weight(.semibold))
