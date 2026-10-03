@@ -1,0 +1,10 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Slow cooker">
+  <ellipse cx="24" cy="15" rx="15" ry="4" fill="#dce8ee" opacity=".9"/>
+  <rect x="21" y="9" width="6" height="4" rx="2" fill="#3c4046"/>
+  <path d="M7 18h34v15a8 8 0 0 1-8 8H15a8 8 0 0 1-8-8Z" fill="#cfd6dd"/>
+  <path d="M7 18h34v3H7Z" fill="#8d939b"/>
+  <rect x="3" y="22" width="5" height="3" rx="1.5" fill="#3c4046"/>
+  <rect x="40" y="22" width="5" height="3" rx="1.5" fill="#3c4046"/>
+  <circle cx="24" cy="33" r="3.6" fill="#3c4046"/>
+  <path d="M24 30.6v2.4" stroke="#e8edf2" stroke-width="1.2" stroke-linecap="round"/>
+</svg>

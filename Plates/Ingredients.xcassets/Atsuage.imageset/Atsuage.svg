@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Thick fried tofu">
+  <path d="M6 20 22 12l20 6v14l-16 9-20-7Z" fill="#c9802f"/>
+  <path d="M6 20 22 12l20 6-16 8Z" fill="#d99a4a"/>
+  <path d="M26 26 42 18v14l-16 9Z" fill="#fbf6e6"/>
+  <path d="M26 26 42 18v2.4L26 28.4ZM26 38.6 42 29.6V32l-16 9Z" fill="#d99a4a"/>
+  <path d="M11 21c3-2 7-3.5 10-4M18 23c3-1.6 6-3 9-3.6" stroke="#b8702a" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+</svg>

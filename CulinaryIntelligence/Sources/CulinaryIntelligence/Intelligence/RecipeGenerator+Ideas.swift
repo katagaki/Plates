@@ -168,7 +168,7 @@ extension RecipeGenerator {
         "pasta": ["pasta", "spaghetti", "penne", "fusilli", "fettuccine", "rigatoni", "macaroni", "lasagna", "orzo", "ravioli", "gnocchi"],
         "rice": ["rice", "arborio-rice", "glutinous-rice"],
         "noodles": ["noodles", "egg-noodles", "ramen", "udon", "soba", "somen", "rice-noodles", "harusame"],
-        "bread": ["bread", "pita"],
+        "bread": ["bread", "pita", "naan", "baguette", "buns"],
     ]
 
     /// Five dishes from Gemma, in English, one a line, then put into the reader's language.

@@ -1,0 +1,9 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stand mixer">
+  <path d="M8 40h32v3H8Z" fill="#b8302a"/>
+  <path d="M8 42V14c0-4 3-7 7-7h17c5 0 9 3 9 7v3c0 2-2 3.5-4 3.5H18V42Z" fill="#d9402f"/>
+  <path d="M14 10c3-1.5 8-2 13-1.5" stroke="#ef7a6a" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  <path d="M30 20.5v5" stroke="#8d939b" stroke-width="2.4"/>
+  <path d="M20 27h21l-2 10a4 4 0 0 1-4 3.2H26a4 4 0 0 1-4-3.2Z" fill="#cfd6dd"/>
+  <path d="M20 27h21" stroke="#8d939b" stroke-width="1.6"/>
+  <path d="M27 28c2 4 6 4 7 0" stroke="#8d939b" stroke-width="1.6" fill="none"/>
+</svg>

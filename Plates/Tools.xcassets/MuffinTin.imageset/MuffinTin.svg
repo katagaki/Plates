@@ -1,0 +1,15 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Muffin tin">
+  <rect x="4" y="9" width="40" height="30" rx="3" fill="#cfd6dd"/>
+  <circle cx="12.5" cy="17" r="5.6" fill="#8d939b"/>
+  <circle cx="12.5" cy="17.6" r="4.2" fill="#a8b0b8"/>
+  <circle cx="12.5" cy="31" r="5.6" fill="#8d939b"/>
+  <circle cx="12.5" cy="31.6" r="4.2" fill="#a8b0b8"/>
+  <circle cx="24" cy="17" r="5.6" fill="#8d939b"/>
+  <circle cx="24" cy="17.6" r="4.2" fill="#a8b0b8"/>
+  <circle cx="24" cy="31" r="5.6" fill="#8d939b"/>
+  <circle cx="24" cy="31.6" r="4.2" fill="#a8b0b8"/>
+  <circle cx="35.5" cy="17" r="5.6" fill="#8d939b"/>
+  <circle cx="35.5" cy="17.6" r="4.2" fill="#a8b0b8"/>
+  <circle cx="35.5" cy="31" r="5.6" fill="#8d939b"/>
+  <circle cx="35.5" cy="31.6" r="4.2" fill="#a8b0b8"/>
+</svg>

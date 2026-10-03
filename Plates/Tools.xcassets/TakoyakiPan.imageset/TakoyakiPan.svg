@@ -1,0 +1,16 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Takoyaki pan">
+  <rect x="5" y="9" width="38" height="30" rx="4" fill="#2a2c30"/>
+  <circle cx="12.5" cy="16.5" r="4.4" fill="#16181b"/>
+  <circle cx="11.7" cy="15.7" r="3.2" fill="#d99a4a"/>
+  <circle cx="24" cy="16.5" r="4.4" fill="#16181b"/>
+  <circle cx="23.2" cy="15.7" r="3.2" fill="#16181b"/>
+  <circle cx="35.5" cy="16.5" r="4.4" fill="#16181b"/>
+  <circle cx="34.7" cy="15.7" r="3.2" fill="#d99a4a"/>
+  <circle cx="12.5" cy="31.5" r="4.4" fill="#16181b"/>
+  <circle cx="11.7" cy="30.7" r="3.2" fill="#16181b"/>
+  <circle cx="24" cy="31.5" r="4.4" fill="#16181b"/>
+  <circle cx="23.2" cy="30.7" r="3.2" fill="#d99a4a"/>
+  <circle cx="35.5" cy="31.5" r="4.4" fill="#16181b"/>
+  <circle cx="34.7" cy="30.7" r="3.2" fill="#16181b"/>
+  <path d="M5 24h38" stroke="#45484e" stroke-width="1"/>
+</svg>

@@ -1,0 +1,11 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fish grill">
+  <rect x="4" y="22" width="40" height="5" rx="2" fill="#d9402f" opacity=".85"/>
+  <path d="M8 23c1-2 2-3 2-5 1 2 2 3 2 5M18 23c1-2 2-3 2-5 1 2 2 3 2 5M28 23c1-2 2-3 2-5 1 2 2 3 2 5M38 23c1-2 2-3 2-5 1 2 2 3 2 5" fill="#f6a23a"/>
+  <rect x="4" y="13" width="40" height="8" rx="1.5" fill="none" stroke="#8d939b" stroke-width="1.6"/>
+  <path d="M10 13v8M16 13v8M22 13v8M28 13v8M34 13v8M40 13v8M4 17h40" stroke="#8d939b" stroke-width="1"/>
+  <path d="M14 15.5 8 11.5l1.6 4L8 19.5Z" fill="#5a6a7a"/>
+  <path d="M40 15.5c-1-2.5-6-4-11-4s-9 2.5-15 4c6 1.5 10 4 15 4s10-1.5 11-4Z" fill="#8a9aa8"/>
+  <circle cx="37" cy="14.6" r="1" fill="#2a2a2a"/>
+  <rect x="6" y="30" width="36" height="12" rx="2" fill="#3c4046"/>
+  <rect x="17" y="34" width="14" height="3" rx="1.5" fill="#8d939b"/>
+</svg>

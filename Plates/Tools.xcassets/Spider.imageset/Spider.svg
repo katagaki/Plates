@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Spider">
+  <path d="M26 22 44 4" stroke="#a97142" stroke-width="3.4" stroke-linecap="round"/>
+  <path d="M26 22l4-4" stroke="#8d939b" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="17" cy="31" r="13" fill="#e8edf2" opacity=".5"/>
+  <circle cx="17" cy="31" r="13" fill="none" stroke="#8d939b" stroke-width="2"/>
+  <g stroke="#8d939b" stroke-width="1.2" fill="none"><circle cx="17" cy="31" r="9"/><circle cx="17" cy="31" r="5"/><path d="M17 18v26M4 31h26M8 22l18 18M26 22 8 40"/></g>
+</svg>

@@ -1,0 +1,14 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kitchen twine">
+  <path d="M12 14h18v22H12Z" fill="#f2ead2"/>
+  <path d="M12 16c6 1.4 12 1.4 18 0" stroke="#d9c89a" stroke-width="1" fill="none"/>
+  <path d="M12 19c6 1.4 12 1.4 18 0" stroke="#d9c89a" stroke-width="1" fill="none"/>
+  <path d="M12 22c6 1.4 12 1.4 18 0" stroke="#d9c89a" stroke-width="1" fill="none"/>
+  <path d="M12 25c6 1.4 12 1.4 18 0" stroke="#d9c89a" stroke-width="1" fill="none"/>
+  <path d="M12 28c6 1.4 12 1.4 18 0" stroke="#d9c89a" stroke-width="1" fill="none"/>
+  <path d="M12 31c6 1.4 12 1.4 18 0" stroke="#d9c89a" stroke-width="1" fill="none"/>
+  <path d="M12 34c6 1.4 12 1.4 18 0" stroke="#d9c89a" stroke-width="1" fill="none"/>
+  <ellipse cx="21" cy="14" rx="9" ry="3" fill="#f6efdc" stroke="#d9c89a" stroke-width="1"/>
+  <ellipse cx="21" cy="14" rx="3" ry="1" fill="#b8a070"/>
+  <ellipse cx="21" cy="36" rx="9" ry="3" fill="#e8dcbc"/>
+  <path d="M30 28c6 0 8 3 7 6s-6 4-4 7 7 2 9 0" stroke="#d9c89a" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+</svg>

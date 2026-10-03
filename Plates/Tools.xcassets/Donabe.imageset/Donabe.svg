@@ -1,0 +1,9 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Donabe">
+  <path d="M6 25h36c0 9-8 16-18 16S6 34 6 25Z" fill="#5a3a2a"/>
+  <path d="M3 26h5M40 26h5" stroke="#5a3a2a" stroke-width="4" stroke-linecap="round"/>
+  <path d="M7 25c0-8 8-14 17-14s17 6 17 14Z" fill="#e8dcc0"/>
+  <path d="M9 21c4-1.5 9-2 15-2s11 .5 15 2" stroke="#4a6a8a" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <path d="M12 17c2-.8 4-1.2 6-1.4" stroke="#fbf6e6" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <ellipse cx="24" cy="11" rx="3.6" ry="2.4" fill="#5a3a2a"/>
+  <rect x="5" y="24" width="38" height="2.4" rx="1.2" fill="#3f281c"/>
+</svg>

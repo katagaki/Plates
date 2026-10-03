@@ -1,0 +1,16 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shio koji">
+  <path d="M12 16h24v22a4 4 0 0 1-4 4H16a4 4 0 0 1-4-4Z" fill="#e8eef2"/>
+  <path d="M14 22h20v15a3 3 0 0 1-3 3H17a3 3 0 0 1-3-3Z" fill="#f6efd8"/>
+  <ellipse cx="17" cy="25" rx="1.6" ry="1" fill="#fbf8ec" stroke="#e2d6b0" stroke-width=".6"/>
+  <ellipse cx="21" cy="28" rx="1.6" ry="1" fill="#fbf8ec" stroke="#e2d6b0" stroke-width=".6"/>
+  <ellipse cx="26" cy="25" rx="1.6" ry="1" fill="#fbf8ec" stroke="#e2d6b0" stroke-width=".6"/>
+  <ellipse cx="30" cy="29" rx="1.6" ry="1" fill="#fbf8ec" stroke="#e2d6b0" stroke-width=".6"/>
+  <ellipse cx="18" cy="33" rx="1.6" ry="1" fill="#fbf8ec" stroke="#e2d6b0" stroke-width=".6"/>
+  <ellipse cx="24" cy="32" rx="1.6" ry="1" fill="#fbf8ec" stroke="#e2d6b0" stroke-width=".6"/>
+  <ellipse cx="29" cy="35" rx="1.6" ry="1" fill="#fbf8ec" stroke="#e2d6b0" stroke-width=".6"/>
+  <ellipse cx="21" cy="37" rx="1.6" ry="1" fill="#fbf8ec" stroke="#e2d6b0" stroke-width=".6"/>
+  <ellipse cx="31" cy="24" rx="1.6" ry="1" fill="#fbf8ec" stroke="#e2d6b0" stroke-width=".6"/>
+  <rect x="11" y="10" width="26" height="7" rx="2" fill="#f2efe6"/>
+  <rect x="11" y="10" width="26" height="7" rx="2" fill="#5a7a9a"/>
+  <path d="M12 16h24v22a4 4 0 0 1-4 4H16a4 4 0 0 1-4-4Z" fill="none" stroke="#b8c4cc" stroke-width="1.2"/>
+</svg>

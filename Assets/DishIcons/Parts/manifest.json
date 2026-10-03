@@ -427,6 +427,20 @@
         ]
       }
     },
+    "atsuage": {
+      "pieces": {
+        "kind": "piece",
+        "file": "Pieces/AtsuagePieces.svg",
+        "size": 15,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f8f0e0",
+          "#c88028"
+        ]
+      }
+    },
     "avocado": {
       "half": {
         "kind": "piece",
@@ -463,6 +477,21 @@
         "tones": [
           "#c8d888",
           "#688838"
+        ]
+      }
+    },
+    "ayu": {
+      "grilled": {
+        "kind": "piece",
+        "file": "Pieces/AyuGrilled.svg",
+        "size": 20,
+        "count": 2,
+        "tier": 0,
+        "rank": 0,
+        "most": 3,
+        "tones": [
+          "#687868",
+          "#e0e8d8"
         ]
       }
     },
@@ -514,6 +543,20 @@
         "rank": 2,
         "tones": [
           "#a84028"
+        ]
+      }
+    },
+    "baguette": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/BaguetteSlices.svg",
+        "size": 19,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0e0b0",
+          "#c88838"
         ]
       }
     },
@@ -936,6 +979,20 @@
         ]
       }
     },
+    "brie": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/BrieSlices.svg",
+        "size": 18,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f8f8f0",
+          "#f0d890"
+        ]
+      }
+    },
     "broccoli": {
       "florets": {
         "kind": "piece",
@@ -960,6 +1017,47 @@
         "tones": [
           "#68a048",
           "#c0d8a8"
+        ]
+      }
+    },
+    "bulgur": {
+      "mound": {
+        "kind": "fill",
+        "file": "Fills/BulgurMound.svg",
+        "vessels": [
+          "plate",
+          "pan"
+        ],
+        "rank": 0,
+        "tones": [
+          "#d8b068"
+        ]
+      },
+      "bowl": {
+        "kind": "fill",
+        "file": "Fills/BulgurBowl.svg",
+        "vessels": [
+          "bowl",
+          "pot"
+        ],
+        "rank": 1,
+        "tones": [
+          "#d8b068"
+        ]
+      }
+    },
+    "buns": {
+      "bun": {
+        "kind": "piece",
+        "file": "Pieces/BunsBun.svg",
+        "size": 40,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "most": 2,
+        "tones": [
+          "#d89038",
+          "#c88038"
         ]
       }
     },
@@ -1188,6 +1286,44 @@
         ]
       }
     },
+    "cashews": {
+      "whole": {
+        "kind": "piece",
+        "file": "Pieces/CashewsWhole.svg",
+        "size": 11,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#e0c078"
+        ]
+      }
+    },
+    "cassava": {
+      "chunks": {
+        "kind": "piece",
+        "file": "Pieces/CassavaChunks.svg",
+        "size": 15,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0e8d8"
+        ]
+      },
+      "fried": {
+        "kind": "piece",
+        "file": "Pieces/CassavaFried.svg",
+        "size": 18,
+        "count": 5,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#e8c070",
+          "#f0d8a0"
+        ]
+      }
+    },
     "cauliflower": {
       "florets": {
         "kind": "piece",
@@ -1211,6 +1347,33 @@
         "rank": 0,
         "tones": [
           "#d85038"
+        ]
+      }
+    },
+    "celeriac": {
+      "cubes": {
+        "kind": "piece",
+        "file": "Pieces/CeleriacCubes.svg",
+        "size": 12,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#e8e0c8",
+          "#d8c8a0"
+        ]
+      },
+      "mash": {
+        "kind": "fill",
+        "file": "Fills/CeleriacMash.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pot"
+        ],
+        "rank": 1,
+        "tones": [
+          "#e8e8d0"
         ]
       }
     },
@@ -1335,6 +1498,32 @@
         ]
       }
     },
+    "chia-seeds": {
+      "sprinkle": {
+        "kind": "piece",
+        "file": "Pieces/ChiaSeedsSprinkle.svg",
+        "size": 9,
+        "count": 3,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#383030",
+          "#888080"
+        ]
+      },
+      "pudding": {
+        "kind": "fill",
+        "file": "Fills/ChiaSeedsPudding.svg",
+        "vessels": [
+          "bowl",
+          "pot"
+        ],
+        "rank": 1,
+        "tones": [
+          "#e8e0d0"
+        ]
+      }
+    },
     "chicken": {
       "pieces": {
         "kind": "piece",
@@ -1369,6 +1558,58 @@
         "tones": [
           "#d8a068",
           "#c88848"
+        ]
+      }
+    },
+    "chicken-thigh": {
+      "pieces": {
+        "kind": "piece",
+        "file": "Pieces/ChickenThighPieces.svg",
+        "size": 15,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#d09058"
+        ]
+      },
+      "grilled": {
+        "kind": "piece",
+        "file": "Pieces/ChickenThighGrilled.svg",
+        "size": 50,
+        "count": 1,
+        "tier": 1,
+        "rank": 1,
+        "tones": [
+          "#d8a068",
+          "#c88848"
+        ]
+      },
+      "cutlet": {
+        "kind": "piece",
+        "file": "Pieces/ChickenThighCutlet.svg",
+        "size": 40,
+        "count": 1,
+        "tier": 1,
+        "rank": 2,
+        "tones": [
+          "#f0e0c8",
+          "#d89038"
+        ]
+      }
+    },
+    "chicken-wings": {
+      "wings": {
+        "kind": "piece",
+        "file": "Pieces/ChickenWingsWings.svg",
+        "size": 19,
+        "count": 3,
+        "tier": 0,
+        "rank": 0,
+        "most": 6,
+        "tones": [
+          "#d89048",
+          "#c88838"
         ]
       }
     },
@@ -1437,6 +1678,19 @@
         "rank": 0,
         "tones": [
           "#c83018"
+        ]
+      }
+    },
+    "chili-powder": {
+      "dusting": {
+        "kind": "piece",
+        "file": "Pieces/ChiliPowderDusting.svg",
+        "size": 12,
+        "count": 2,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#a83028"
         ]
       }
     },
@@ -1676,6 +1930,19 @@
         ]
       }
     },
+    "cottage-cheese": {
+      "dollop": {
+        "kind": "piece",
+        "file": "Pieces/CottageCheeseDollop.svg",
+        "size": 22,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f8f8f0"
+        ]
+      }
+    },
     "couscous": {
       "mound": {
         "kind": "fill",
@@ -1857,6 +2124,20 @@
         ]
       }
     },
+    "curry-leaves": {
+      "leaves": {
+        "kind": "piece",
+        "file": "Pieces/CurryLeavesLeaves.svg",
+        "size": 10,
+        "count": 5,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#286828",
+          "#387830"
+        ]
+      }
+    },
     "curry-roux": {
       "sauce": {
         "kind": "fill",
@@ -1988,6 +2269,20 @@
         "tones": [
           "#d83078",
           "#e86098"
+        ]
+      }
+    },
+    "dried-scallops": {
+      "shredded": {
+        "kind": "piece",
+        "file": "Pieces/DriedScallopsShredded.svg",
+        "size": 10,
+        "count": 5,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#d89038",
+          "#e8b060"
         ]
       }
     },
@@ -2203,6 +2498,19 @@
         ]
       }
     },
+    "fava-beans": {
+      "beans": {
+        "kind": "piece",
+        "file": "Pieces/FavaBeansBeans.svg",
+        "size": 11,
+        "count": 7,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#a8c868"
+        ]
+      }
+    },
     "fennel": {
       "slices": {
         "kind": "piece",
@@ -2256,6 +2564,20 @@
         "tones": [
           "#683858",
           "#e88888"
+        ]
+      }
+    },
+    "filo-pastry": {
+      "pieces": {
+        "kind": "piece",
+        "file": "Pieces/FiloPastryPieces.svg",
+        "size": 20,
+        "count": 3,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0c880",
+          "#e8b860"
         ]
       }
     },
@@ -2344,6 +2666,21 @@
         "tones": [
           "#488838",
           "#386838"
+        ]
+      }
+    },
+    "ganmodoki": {
+      "simmered": {
+        "kind": "piece",
+        "file": "Pieces/GanmodokiSimmered.svg",
+        "size": 22,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "most": 3,
+        "tones": [
+          "#d8a050",
+          "#c88838"
         ]
       }
     },
@@ -2526,6 +2863,35 @@
         "rank": 0,
         "tones": [
           "#e8a828"
+        ]
+      }
+    },
+    "gouda": {
+      "grated": {
+        "kind": "piece",
+        "file": "Pieces/GoudaGrated.svg",
+        "size": 10,
+        "count": 6,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#f0d068",
+          "#f8e098"
+        ]
+      },
+      "melted": {
+        "kind": "fill",
+        "file": "Fills/GoudaMelted.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 1,
+        "covers": true,
+        "tones": [
+          "#f0c858"
         ]
       }
     },
@@ -2731,6 +3097,19 @@
         ]
       }
     },
+    "harissa": {
+      "dollop": {
+        "kind": "piece",
+        "file": "Pieces/HarissaDollop.svg",
+        "size": 22,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#b83028"
+        ]
+      }
+    },
     "harusame": {
       "noodles": {
         "kind": "fill",
@@ -2744,6 +3123,19 @@
         "rank": 0,
         "tones": [
           "#d8e0e0"
+        ]
+      }
+    },
+    "hazelnuts": {
+      "chopped": {
+        "kind": "piece",
+        "file": "Pieces/HazelnutsChopped.svg",
+        "size": 9,
+        "count": 7,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#b87038"
         ]
       }
     },
@@ -2788,6 +3180,20 @@
         ]
       }
     },
+    "hokke": {
+      "grilled": {
+        "kind": "piece",
+        "file": "Pieces/HokkeGrilled.svg",
+        "size": 50,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#e8d0b0",
+          "#686848"
+        ]
+      }
+    },
     "honey": {
       "drizzle": {
         "kind": "piece",
@@ -2813,6 +3219,19 @@
         "tones": [
           "#8898a8",
           "#e0d8c0"
+        ]
+      }
+    },
+    "horseradish": {
+      "grated": {
+        "kind": "piece",
+        "file": "Pieces/HorseradishGrated.svg",
+        "size": 22,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#f0f0e0"
         ]
       }
     },
@@ -2921,6 +3340,20 @@
         ]
       }
     },
+    "kaiware": {
+      "sprouts": {
+        "kind": "piece",
+        "file": "Pieces/KaiwareSprouts.svg",
+        "size": 10,
+        "count": 7,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#f0f0e8",
+          "#78b068"
+        ]
+      }
+    },
     "kale": {
       "torn": {
         "kind": "piece",
@@ -3011,6 +3444,20 @@
         "rank": 0,
         "tones": [
           "#882828"
+        ]
+      }
+    },
+    "kikurage": {
+      "strips": {
+        "kind": "piece",
+        "file": "Pieces/KikurageStrips.svg",
+        "size": 14,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#382820",
+          "#685050"
         ]
       }
     },
@@ -3188,6 +3635,20 @@
         "tones": [
           "#a85848",
           "#f0d0c0"
+        ]
+      }
+    },
+    "lap-cheong": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/LapCheongSlices.svg",
+        "size": 12,
+        "count": 7,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#c03838",
+          "#a82828"
         ]
       }
     },
@@ -3464,6 +3925,19 @@
         ]
       }
     },
+    "maitake": {
+      "torn": {
+        "kind": "piece",
+        "file": "Pieces/MaitakeTorn.svg",
+        "size": 16,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#685848"
+        ]
+      }
+    },
     "mandarin": {
       "segments": {
         "kind": "piece",
@@ -3705,6 +4179,19 @@
         ]
       }
     },
+    "mitsuba": {
+      "leaves": {
+        "kind": "piece",
+        "file": "Pieces/MitsubaLeaves.svg",
+        "size": 10,
+        "count": 5,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#589840"
+        ]
+      }
+    },
     "mizuna": {
       "leaves": {
         "kind": "piece",
@@ -3874,6 +4361,47 @@
         ]
       }
     },
+    "naan": {
+      "bread": {
+        "kind": "fill",
+        "file": "Fills/NaanBread.svg",
+        "vessels": [
+          "plate",
+          "board"
+        ],
+        "rank": 0,
+        "tones": [
+          "#f0d8a0"
+        ]
+      }
+    },
+    "nameko": {
+      "caps": {
+        "kind": "piece",
+        "file": "Pieces/NamekoCaps.svg",
+        "size": 10,
+        "count": 7,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#c86828"
+        ]
+      }
+    },
+    "nanohana": {
+      "stalks": {
+        "kind": "piece",
+        "file": "Pieces/NanohanaStalks.svg",
+        "size": 19,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#488838",
+          "#e8d038"
+        ]
+      }
+    },
     "napa-cabbage": {
       "chopped": {
         "kind": "piece",
@@ -4019,6 +4547,20 @@
         "tones": [
           "#c05868",
           "#f0e0e0"
+        ]
+      }
+    },
+    "okara": {
+      "mound": {
+        "kind": "fill",
+        "file": "Fills/OkaraMound.svg",
+        "vessels": [
+          "plate",
+          "pan"
+        ],
+        "rank": 0,
+        "tones": [
+          "#f0e8d0"
         ]
       }
     },
@@ -4472,6 +5014,19 @@
         ]
       }
     },
+    "pecans": {
+      "halves": {
+        "kind": "piece",
+        "file": "Pieces/PecansHalves.svg",
+        "size": 14,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#783818"
+        ]
+      }
+    },
     "pecorino": {
       "grated": {
         "kind": "piece",
@@ -4522,6 +5077,30 @@
         "rank": 0,
         "tones": [
           "#383030"
+        ]
+      }
+    },
+    "perilla-leaves": {
+      "leaf": {
+        "kind": "piece",
+        "file": "Pieces/PerillaLeavesLeaf.svg",
+        "size": 28,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#387830"
+        ]
+      },
+      "shredded": {
+        "kind": "piece",
+        "file": "Pieces/PerillaLeavesShredded.svg",
+        "size": 9,
+        "count": 7,
+        "tier": 2,
+        "rank": 1,
+        "tones": [
+          "#387830"
         ]
       }
     },
@@ -4578,6 +5157,20 @@
         ]
       }
     },
+    "pickles": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/PicklesSlices.svg",
+        "size": 14,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#c8d888",
+          "#588838"
+        ]
+      }
+    },
     "pine-nuts": {
       "toasted": {
         "kind": "piece",
@@ -4613,6 +5206,19 @@
         "rank": 1,
         "tones": [
           "#f0c848"
+        ]
+      }
+    },
+    "pistachios": {
+      "chopped": {
+        "kind": "piece",
+        "file": "Pieces/PistachiosChopped.svg",
+        "size": 9,
+        "count": 7,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#88a848"
         ]
       }
     },
@@ -4682,6 +5288,19 @@
         ]
       }
     },
+    "poblano": {
+      "strips": {
+        "kind": "piece",
+        "file": "Pieces/PoblanoStrips.svg",
+        "size": 16,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#285828"
+        ]
+      }
+    },
     "polenta": {
       "soft": {
         "kind": "fill",
@@ -4707,6 +5326,19 @@
         "rank": 0,
         "tones": [
           "#b82038"
+        ]
+      }
+    },
+    "pomegranate-molasses": {
+      "drizzle": {
+        "kind": "piece",
+        "file": "Pieces/PomegranateMolassesDrizzle.svg",
+        "size": 24,
+        "count": 2,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#581828"
         ]
       }
     },
@@ -4757,6 +5389,35 @@
           "pot"
         ],
         "rank": 3,
+        "covers": true,
+        "tones": [
+          "#b87050"
+        ]
+      }
+    },
+    "pork-belly": {
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/PorkBellySlices.svg",
+        "size": 18,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#e89888",
+          "#f8f0e0"
+        ]
+      },
+      "simmered": {
+        "kind": "fill",
+        "file": "Fills/PorkBellySimmered.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 1,
         "covers": true,
         "tones": [
           "#b87050"
@@ -4879,6 +5540,19 @@
         ]
       }
     },
+    "pumpkin-seeds": {
+      "seeds": {
+        "kind": "piece",
+        "file": "Pieces/PumpkinSeedsSeeds.svg",
+        "size": 8,
+        "count": 8,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#487838"
+        ]
+      }
+    },
     "puttanesca-sauce": {
       "sauce": {
         "kind": "fill",
@@ -4892,6 +5566,19 @@
         "rank": 0,
         "tones": [
           "#b83028"
+        ]
+      }
+    },
+    "queso-fresco": {
+      "crumbled": {
+        "kind": "piece",
+        "file": "Pieces/QuesoFrescoCrumbled.svg",
+        "size": 11,
+        "count": 7,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f8f8f0"
         ]
       }
     },
@@ -4921,6 +5608,19 @@
         ]
       }
     },
+    "radicchio": {
+      "torn": {
+        "kind": "piece",
+        "file": "Pieces/RadicchioTorn.svg",
+        "size": 18,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#881838"
+        ]
+      }
+    },
     "radish": {
       "slices": {
         "kind": "piece",
@@ -4945,6 +5645,19 @@
         "rank": 0,
         "tones": [
           "#482828"
+        ]
+      }
+    },
+    "rakkyo": {
+      "whole": {
+        "kind": "piece",
+        "file": "Pieces/RakkyoWhole.svg",
+        "size": 11,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0f0d8"
         ]
       }
     },
@@ -5305,6 +6018,19 @@
         ]
       }
     },
+    "salsa": {
+      "spooned": {
+        "kind": "piece",
+        "file": "Pieces/SalsaSpooned.svg",
+        "size": 22,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#d84028"
+        ]
+      }
+    },
     "sambal": {
       "dollop": {
         "kind": "piece",
@@ -5330,6 +6056,20 @@
         "tones": [
           "#98a0b0",
           "#d8c0b0"
+        ]
+      }
+    },
+    "sauerkraut": {
+      "heap": {
+        "kind": "piece",
+        "file": "Pieces/SauerkrautHeap.svg",
+        "size": 15,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#e8e8b8",
+          "#d8c888"
         ]
       }
     },
@@ -5665,6 +6405,34 @@
         ]
       }
     },
+    "shishamo": {
+      "grilled": {
+        "kind": "piece",
+        "file": "Pieces/ShishamoGrilled.svg",
+        "size": 19,
+        "count": 3,
+        "tier": 0,
+        "rank": 0,
+        "most": 4,
+        "tones": [
+          "#887858",
+          "#f0d090"
+        ]
+      }
+    },
+    "shishito": {
+      "blistered": {
+        "kind": "piece",
+        "file": "Pieces/ShishitoBlistered.svg",
+        "size": 19,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#488838"
+        ]
+      }
+    },
     "shiso": {
       "shredded": {
         "kind": "piece",
@@ -5686,6 +6454,20 @@
         "rank": 1,
         "tones": [
           "#488838"
+        ]
+      }
+    },
+    "shortcrust-pastry": {
+      "square": {
+        "kind": "fill",
+        "file": "Fills/ShortcrustPastrySquare.svg",
+        "vessels": [
+          "plate",
+          "board"
+        ],
+        "rank": 0,
+        "tones": [
+          "#d8a858"
         ]
       }
     },
@@ -5726,6 +6508,19 @@
         "tones": [
           "#883828",
           "#c86048"
+        ]
+      }
+    },
+    "smoked-paprika": {
+      "dusting": {
+        "kind": "piece",
+        "file": "Pieces/SmokedPaprikaDusting.svg",
+        "size": 12,
+        "count": 3,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#b84028"
         ]
       }
     },
@@ -5811,6 +6606,19 @@
         ]
       }
     },
+    "soybeans": {
+      "beans": {
+        "kind": "piece",
+        "file": "Pieces/SoybeansBeans.svg",
+        "size": 9,
+        "count": 9,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#e8c888"
+        ]
+      }
+    },
     "spaghetti": {
       "plain": {
         "kind": "fill",
@@ -5858,6 +6666,21 @@
         "rank": 3,
         "tones": [
           "#e8b098"
+        ]
+      }
+    },
+    "spare-ribs": {
+      "ribs": {
+        "kind": "piece",
+        "file": "Pieces/SpareRibsRibs.svg",
+        "size": 20,
+        "count": 3,
+        "tier": 0,
+        "rank": 0,
+        "most": 4,
+        "tones": [
+          "#883820",
+          "#b85830"
         ]
       }
     },
@@ -5955,6 +6778,31 @@
         ]
       }
     },
+    "steak": {
+      "steak": {
+        "kind": "piece",
+        "file": "Pieces/SteakSteak.svg",
+        "size": 46,
+        "count": 1,
+        "tier": 1,
+        "rank": 0,
+        "tones": [
+          "#683020"
+        ]
+      },
+      "slices": {
+        "kind": "piece",
+        "file": "Pieces/SteakSlices.svg",
+        "size": 19,
+        "count": 5,
+        "tier": 0,
+        "rank": 1,
+        "tones": [
+          "#884838",
+          "#c08068"
+        ]
+      }
+    },
     "strawberry": {
       "halves": {
         "kind": "piece",
@@ -6009,6 +6857,20 @@
         ]
       }
     },
+    "sumac": {
+      "dusting": {
+        "kind": "piece",
+        "file": "Pieces/SumacDusting.svg",
+        "size": 12,
+        "count": 3,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#881828",
+          "#b03848"
+        ]
+      }
+    },
     "sun-dried-tomatoes": {
       "strips": {
         "kind": "piece",
@@ -6019,6 +6881,19 @@
         "rank": 0,
         "tones": [
           "#982828"
+        ]
+      }
+    },
+    "sunflower-seeds": {
+      "seeds": {
+        "kind": "piece",
+        "file": "Pieces/SunflowerSeedsSeeds.svg",
+        "size": 7,
+        "count": 9,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#d8c8b8"
         ]
       }
     },
@@ -6184,6 +7059,19 @@
         ]
       }
     },
+    "tenkasu": {
+      "sprinkle": {
+        "kind": "piece",
+        "file": "Pieces/TenkasuSprinkle.svg",
+        "size": 8,
+        "count": 8,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#f0d088"
+        ]
+      }
+    },
     "teriyaki-sauce": {
       "glaze": {
         "kind": "piece",
@@ -6207,6 +7095,22 @@
         "rank": 0,
         "tones": [
           "#387838"
+        ]
+      }
+    },
+    "thai-curry-paste": {
+      "curry": {
+        "kind": "fill",
+        "file": "Fills/ThaiCurryPasteCurry.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 0,
+        "tones": [
+          "#d86038"
         ]
       }
     },
@@ -6276,6 +7180,20 @@
         "rank": 2,
         "tones": [
           "#f8f8e8"
+        ]
+      }
+    },
+    "tomatillo": {
+      "diced": {
+        "kind": "piece",
+        "file": "Pieces/TomatilloDiced.svg",
+        "size": 11,
+        "count": 7,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#88b838",
+          "#b8d868"
         ]
       }
     },
@@ -6394,6 +7312,20 @@
         "tones": [
           "#f0a088",
           "#788850"
+        ]
+      }
+    },
+    "tteok": {
+      "pieces": {
+        "kind": "piece",
+        "file": "Pieces/TteokPieces.svg",
+        "size": 16,
+        "count": 6,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0f0e8",
+          "#f8f8f8"
         ]
       }
     },
@@ -6663,6 +7595,19 @@
         ]
       }
     },
+    "white-beans": {
+      "beans": {
+        "kind": "piece",
+        "file": "Pieces/WhiteBeansBeans.svg",
+        "size": 11,
+        "count": 7,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0f0e0"
+        ]
+      }
+    },
     "wonton-wrappers": {
       "wontons": {
         "kind": "piece",
@@ -6779,6 +7724,19 @@
         ]
       }
     },
+    "yuba": {
+      "sheets": {
+        "kind": "piece",
+        "file": "Pieces/YubaSheets.svg",
+        "size": 16,
+        "count": 4,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#f0d088"
+        ]
+      }
+    },
     "yuzu": {
       "zest": {
         "kind": "piece",
@@ -6816,6 +7774,20 @@
         "rank": 0,
         "tones": [
           "#b8c848"
+        ]
+      }
+    },
+    "zaatar": {
+      "sprinkle": {
+        "kind": "piece",
+        "file": "Pieces/ZaatarSprinkle.svg",
+        "size": 12,
+        "count": 3,
+        "tier": 2,
+        "rank": 0,
+        "tones": [
+          "#787838",
+          "#f0e8d8"
         ]
       }
     },
@@ -6864,6 +7836,9 @@
     "cardamom": "taken out before serving",
     "cloves": "taken out before serving",
     "lemongrass": "taken out before serving",
+    "galangal": "taken out before serving",
+    "juniper": "taken out before serving",
+    "caraway": "cooked into the dish",
     "cumin": "ground into the dish",
     "curry-powder": "ground into the dish",
     "fennel-seeds": "ground into the dish",
@@ -6877,6 +7852,9 @@
     "salt": "dissolved",
     "sansho": "ground into the dish",
     "turmeric": "colours the dish",
+    "allspice": "ground into the dish",
+    "asafoetida": "ground into the dish",
+    "fenugreek": "ground into the dish",
     "red-wine": "cooked off",
     "white-wine": "cooked off",
     "black-vinegar": "absorbed",
@@ -6912,6 +7890,14 @@
     "tomato-paste": "colours the sauce",
     "molasses": "absorbed",
     "vanilla": "absorbed",
+    "chipotle-in-adobo": "colours the sauce",
+    "shrimp-paste": "dissolved",
+    "shio-koji": "absorbed",
+    "sake-kasu": "dissolved",
+    "rum": "cooked off",
+    "brandy": "cooked off",
+    "evaporated-milk": "absorbed",
+    "kefir": "absorbed",
     "agar": "sets the dish",
     "almond-flour": "baked in",
     "baking-powder": "baked in",
@@ -6924,6 +7910,8 @@
     "flour": "baked in",
     "gelatin": "sets the dish",
     "rice-flour": "baked in",
-    "yeast": "baked in"
+    "yeast": "baked in",
+    "palm-sugar": "dissolved",
+    "masa-harina": "baked in"
   }
 }

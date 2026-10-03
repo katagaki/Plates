@@ -1,0 +1,8 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Brandy">
+  <path d="M11 18c0-3 1-6 2-7h22c1 1 2 4 2 7 0 8-6 13-13 13s-13-5-13-13Z" fill="#e8eef2"/>
+  <path d="M11.4 21h25.2c-.8 6-6 10-12.6 10s-11.8-4-12.6-10Z" fill="#b8641f"/>
+  <path d="M14 23c1 2 3 3.5 5 4" stroke="#e0903a" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <rect x="22.5" y="30" width="3" height="9" fill="#dce4ea"/>
+  <ellipse cx="24" cy="40" rx="9" ry="2.6" fill="#dce4ea"/>
+  <path d="M11 18c0-3 1-6 2-7h22c1 1 2 4 2 7 0 8-6 13-13 13s-13-5-13-13Z" fill="none" stroke="#b8c4cc" stroke-width="1.2"/>
+</svg>

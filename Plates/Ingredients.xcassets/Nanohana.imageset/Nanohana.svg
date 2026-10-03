@@ -1,0 +1,21 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nanohana">
+  <g stroke="#4f8a3a" stroke-width="3" stroke-linecap="round" fill="none"><path d="M18 44 20 18"/><path d="M29 44 28 14"/></g>
+  <path d="M19 34c-5-1-9-5-10-10 5 0 9 4 10 10Z" fill="#5f9a45"/>
+  <path d="M28.5 30c5-1 9-5 10-10-5 0-9 4-10 10Z" fill="#5f9a45"/>
+  <circle cx="17" cy="17" r="2.3" fill="#8fbf4a"/>
+  <circle cx="21.5" cy="16" r="2.3" fill="#8fbf4a"/>
+  <circle cx="19" cy="13" r="2.3" fill="#8fbf4a"/>
+  <circle cx="26" cy="12" r="2.3" fill="#8fbf4a"/>
+  <circle cx="30.5" cy="12" r="2.3" fill="#8fbf4a"/>
+  <circle cx="28" cy="8.5" r="2.3" fill="#8fbf4a"/>
+  <circle cx="15" cy="13" r="2.6" fill="#f6d22a"/>
+  <circle cx="15" cy="13" r="1" fill="#e8a81b"/>
+  <circle cx="22" cy="11" r="2.6" fill="#f6d22a"/>
+  <circle cx="22" cy="11" r="1" fill="#e8a81b"/>
+  <circle cx="24" cy="8" r="2.6" fill="#f6d22a"/>
+  <circle cx="24" cy="8" r="1" fill="#e8a81b"/>
+  <circle cx="32" cy="7.5" r="2.6" fill="#f6d22a"/>
+  <circle cx="32" cy="7.5" r="1" fill="#e8a81b"/>
+  <circle cx="34" cy="12" r="2.6" fill="#f6d22a"/>
+  <circle cx="34" cy="12" r="1" fill="#e8a81b"/>
+</svg>

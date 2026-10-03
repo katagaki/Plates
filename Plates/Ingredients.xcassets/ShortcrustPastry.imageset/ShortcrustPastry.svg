@@ -1,0 +1,23 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shortcrust pastry">
+  <path d="M5 25h38l-3 11a4 4 0 0 1-4 3H12a4 4 0 0 1-4-3Z" fill="#d9a85a"/>
+  <path d="M10 27v11" stroke="#c4904a" stroke-width="1.2"/>
+  <path d="M14 27v11" stroke="#c4904a" stroke-width="1.2"/>
+  <path d="M18 27v11" stroke="#c4904a" stroke-width="1.2"/>
+  <path d="M22 27v11" stroke="#c4904a" stroke-width="1.2"/>
+  <path d="M26 27v11" stroke="#c4904a" stroke-width="1.2"/>
+  <path d="M30 27v11" stroke="#c4904a" stroke-width="1.2"/>
+  <path d="M34 27v11" stroke="#c4904a" stroke-width="1.2"/>
+  <path d="M38 27v11" stroke="#c4904a" stroke-width="1.2"/>
+  <ellipse cx="24" cy="25" rx="19" ry="6" fill="#e8c07a"/>
+  <ellipse cx="24" cy="25" rx="15.5" ry="4.2" fill="#f2dca8"/>
+  <circle cx="37" cy="25.3" r=".7" fill="#e8c88a"/>
+  <circle cx="34.52" cy="27.18" r=".7" fill="#e8c88a"/>
+  <circle cx="28.02" cy="28.34" r=".7" fill="#e8c88a"/>
+  <circle cx="19.98" cy="28.34" r=".7" fill="#e8c88a"/>
+  <circle cx="13.48" cy="27.18" r=".7" fill="#e8c88a"/>
+  <circle cx="11" cy="25.3" r=".7" fill="#e8c88a"/>
+  <circle cx="13.48" cy="23.42" r=".7" fill="#e8c88a"/>
+  <circle cx="19.98" cy="22.26" r=".7" fill="#e8c88a"/>
+  <circle cx="28.02" cy="22.26" r=".7" fill="#e8c88a"/>
+  <circle cx="34.52" cy="23.42" r=".7" fill="#e8c88a"/>
+</svg>

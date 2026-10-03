@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chicken thigh">
+  <path d="M7 24c0-8 8-13.5 17.5-13.5S42 16 42 24.5 34.5 38 24 38 7 32 7 24Z" fill="#f0b8a4"/>
+  <path d="M8.5 19.5c3.5-6 10.5-9 17.5-9 7 0 13 3 15.5 8-6-2.5-12-3.5-18-3-6 .5-10.5 2.5-15 4Z" fill="#f8e6c8"/>
+  <path d="M14 27c4 2 9 2.5 13 1M20 33c4 .5 8 0 11-1.5M30 22c3 1 5 2.5 6.5 4.5" stroke="#e2988a" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <path d="M11 31c1 1.5 2.5 2.5 4 3" stroke="#fbeee2" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>

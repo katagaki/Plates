@@ -1,0 +1,8 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Piping bag">
+  <path d="M6 10 34 6 26 34Z" fill="#f0ece4" stroke="#d9d2c4" stroke-width="1"/>
+  <path d="M10 14 31 11 25 30Z" fill="#f6c4d0"/>
+  <path d="M24 32l4 1.2-1 4.6-4.4-1.6Z" fill="#8d939b"/>
+  <path d="M28 40c2 .5 4 2 4 4h-8c0-2 2-3.5 4-4Z" fill="#f6c4d0"/>
+  <path d="M28 40c-1 1.4-1.4 2.6-1.4 4M28 40c1 1.4 1.4 2.6 1.4 4" stroke="#e8a0b0" stroke-width=".9" fill="none"/>
+  <path d="M4 9c4-1 8-2 10-1" stroke="#b8b0a0" stroke-width="2" stroke-linecap="round" fill="none"/>
+</svg>

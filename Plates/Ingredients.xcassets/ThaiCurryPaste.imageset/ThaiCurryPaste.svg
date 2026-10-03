@@ -1,0 +1,9 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Thai curry paste">
+  <path d="M8 22h32l-2.5 16a4 4 0 0 1-4 3.4H14.5a4 4 0 0 1-4-3.4Z" fill="#f2efe6"/>
+  <ellipse cx="24" cy="22" rx="16" ry="4.5" fill="#d9d2c0"/>
+  <path d="M11 22c1-5 6-8 13-8s12 3 13 8c-4 2-8.5 2.6-13 2.6S15 24 11 22Z" fill="#c43a2a"/>
+  <path d="M16 19c2-2 5-3 8-3" stroke="#e2604a" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <g fill="#7a1a12"><circle cx="21" cy="21" r=".8"/><circle cx="28" cy="19" r=".8"/><circle cx="31" cy="22" r=".7"/></g>
+  <rect x="11" y="28" width="26" height="6" fill="#4f8a3a"/>
+  <path d="M37 16c2-5 4-9 7-11" stroke="#9cc45a" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

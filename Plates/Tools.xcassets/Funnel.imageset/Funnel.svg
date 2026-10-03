@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Funnel">
+  <path d="M6 10h36L28 26v14a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V26Z" fill="#cfd6dd"/>
+  <ellipse cx="24" cy="10" rx="18" ry="3.6" fill="#8d939b"/>
+  <ellipse cx="24" cy="10" rx="15.5" ry="2.4" fill="#5a6066"/>
+  <path d="M12 14l10 11" stroke="#e8edf2" stroke-width="2" stroke-linecap="round"/>
+</svg>

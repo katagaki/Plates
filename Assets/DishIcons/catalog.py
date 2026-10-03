@@ -126,6 +126,22 @@ V["watercress"] = {"sprigs": p(sprig("#3f6b3a", "#5f8f45"), 13, 5)}
 V["yam"] = {"grated": center(dollop("#f6f2e6", "#e2dccb"), 22), "cubes": p(cube("#f6f2e6", "#fbf9f4", "#c9b48f"), 10, 6)}
 V["zucchini"] = {"coins": p(round_slice("#4f8a3a", "#e6eec0", seeds="#c5d89a"), 12, 5), "half-moons": p(half_moon("#4f8a3a", "#e6eec0"), 12, 6)}
 
+V["cassava"] = {"chunks": p(chunk("#f6efdc", "#ffffff"), 12, 4), "fried": p(stick("#e8c070", "#f6dca0"), 14, 5)}
+V["celeriac"] = {"cubes": p(cube("#efe6c8", "#fbf6e2", "#d9c9a0"), 10, 6), "mash": fl(lambda r: smooth(r, "#efe8d0", "#faf6e8", ridges="#e0d6b4"), PLATES + BOWLS)}
+V["curry-leaves"] = {"leaves": garnish(leaf("#2f6a2a", "#3f7f35"), 9, 5)}
+V["fava-beans"] = {"beans": p(bean("#a8cf6f", "#d4e8a8"), 9, 7)}
+V["horseradish"] = {"grated": center(dollop("#f6f2e2", "#e6e0cc"), 22)}
+V["kaiware"] = {"sprouts": garnish(julienne("#f4f1e8", "#7fb069"), 9, 7)}
+V["maitake"] = {"torn": p(flake("#6f5a48", "#b49c84"), 13, 5)}
+V["mitsuba"] = {"leaves": garnish(torn_leaf("#5f9a45", "#a8cf8e"), 9, 5)}
+V["nameko"] = {"caps": p(small_round("#c8682a", "#f2b880"), 8, 7)}
+V["nanohana"] = {"stalks": p(spear("#4f8a3a", "#e8d23a", "#7fb069"), 15, 4)}
+V["perilla-leaves"] = {"leaf": center(leaf("#3f7a35", "#7fb069"), 28), "shredded": garnish(shred("#3f7a35", 1.8), 8, 7)}
+V["poblano"] = {"strips": p(strip("#2f5a2a", "#5a9045"), 13, 5)}
+V["radicchio"] = {"torn": p(torn_leaf("#8a1f3a", "#f2e6ea"), 14, 5)}
+V["shishito"] = {"blistered": p(stick("#4f8a3a", "#7fb069", "#3f6b3a"), 15, 4)}
+V["tomatillo"] = {"diced": p(dice("#8fbf3a", "#b9dc6a"), 9, 7)}
+
 # Fruits ------------------------------------------------------------------------------------
 
 V["apple"] = {"slices": p(crescent("#c9373f", "#f6ecc8"), 14, 5), "diced": p(cube("#f6ecc8", "#fbf7ea", "#c9373f"), 9, 7)}
@@ -192,6 +208,13 @@ V["sausage"] = {"links": whole(p(link("#a8603f", "#c98a5f"), 15, 3), 4), "coins"
 V["turkey"] = {"slices": p(meat_slice("#ead8bc", "#c9a07a"), 15, 4)}
 V["veal"] = {"cutlet": center(sliced_fan("#f2e6d0", "#c9904b", "#d9a04f"), 40)}
 
+V["chicken-thigh"] = {"pieces": V["chicken"]["pieces"], "grilled": V["chicken"]["grilled"], "cutlet": V["chicken"]["cutlet"]}
+V["chicken-wings"] = {"wings": whole(p('<path d="M3.5 4.5 7 10" stroke="#c98a3f" stroke-width="4" stroke-linecap="round"/><path d="M7 10.5l5.5-5" stroke="#d9944a" stroke-width="4.6" stroke-linecap="round"/><path d="M13 5l1.6-2" stroke="#c98a3f" stroke-width="1.8" stroke-linecap="round"/>', 15, 3), 6)}
+V["lap-cheong"] = {"slices": p(coin("#a8282a", "#c43a3a", "#f2d6c8"), 10, 7)}
+V["pork-belly"] = {"slices": p('<rect x="1" y="4" width="14" height="8" rx="2" fill="#e8988a"/><rect x="1" y="4" width="14" height="2" rx="1" fill="#faf2e6"/><rect x="1" y="7.6" width="14" height="1.4" fill="#faf2e6"/>', 14, 4), "simmered": V["pork"]["simmered"]}
+V["spare-ribs"] = {"ribs": whole(p('<rect x="1" y="5" width="12" height="6" rx="3" fill="#8a3f22"/><rect x="2" y="6" width="10" height="3" rx="1.5" fill="#b85a32"/><rect x="12" y="6.6" width="3.4" height="2.8" rx="1.4" fill="#f4ecdc"/>', 16, 3), 4)}
+V["steak"] = {"steak": V["beef"]["steak"], "slices": V["beef"]["slices"]}
+
 # Seafood -----------------------------------------------------------------------------------
 
 V["abalone"] = {"slices": p(round_slice("#6a5c48", "#ece0c4"), 13, 4)}
@@ -247,6 +270,11 @@ V["trout-fillet"] = V["trout"]
 V["tuna-steak"] = {"sashimi": V["tuna"]["sashimi"], "cubes": V["tuna"]["cubes"]}
 V["yellowtail-fillet"] = V["yellowtail"]
 
+V["ayu"] = {"grilled": whole(p(stick("#6f7f6a", "#e6e8dc"), 16, 2), 3)}
+V["dried-scallops"] = {"shredded": garnish(shreds("#d9963f", "#e8b060"), 9, 5)}
+V["hokke"] = {"grilled": center(fillet("#e8d4b0", "#d9b88a", "#6a6a4a"), 50)}
+V["shishamo"] = {"grilled": whole(p(stick("#8a7a5a", "#f2d690"), 15, 3), 4)}
+
 # Dairy and eggs ----------------------------------------------------------------------------
 
 V["blue-cheese"] = {"crumbled": p(crumble("#ece4cc", "#5a7a98") + '<circle cx="9" cy="9" r="1" fill="#5a7a98"/><circle cx="6" cy="10" r="0.8" fill="#5a7a98"/>', 11, 6)}
@@ -271,6 +299,11 @@ V["pecorino"] = {"grated": garnish('<path d="M4 9c3-3 6-3 8-1" stroke="#fdf6dc" 
 V["ricotta"] = {"dollop": center(dollop("#fbfaf4", "#e8e4d8"), 22)}
 V["sour-cream"] = {"dollop": center(dollop("#fbfaf6", "#e6e2d8"), 22)}
 V["yogurt"] = {"dollop": center(dollop("#fbfaf6", "#e6e2d8"), 22), "bowl": fl(lambda r: smooth(r, "#fbfaf6", "#ffffff", full=True, ridges="#ece8de"), BOWLS)}
+
+V["brie"] = {"slices": p(wedge("#fbf8f0", "#f6dc94"), 14, 4)}
+V["cottage-cheese"] = {"dollop": center(dollop("#fbfaf4", "#ece6d6"), 22)}
+V["gouda"] = {"grated": garnish(shreds("#f6d06a", "#fbe29a"), 9, 6), "melted": fl(lambda r: melted(r, "#f6c85a", "#fbe29a", "#d9a03a"), ANY, covers=True)}
+V["queso-fresco"] = {"crumbled": p(crumble("#fbfaf4", "#e6e0d0"), 9, 7)}
 
 # Grains, noodles, and bread ----------------------------------------------------------------
 
@@ -311,6 +344,12 @@ V["tortilla"] = {"flat": fl(lambda r: flatbread(r, "#f2dca8", "#d9b070", "#e8c88
 V["udon"] = {"broth": fl(lambda r: noodles(r, "#fbf6e6", "#ffffff", "#ece4cc", 4.2, 16, broth="#c99a5a"), BOWLS), "swirl": fl(lambda r: noodles(r, "#fbf6e6", "#ffffff", "#ece4cc", 4.2, 16), PLATES + ["pan"])}
 V["wonton-wrappers"] = {"wontons": p(dumpling("#f6f0e0", "#e2d8c0"), 15, 4)}
 
+V["baguette"] = {"slices": p('<ellipse cx="8" cy="8" rx="7" ry="5" fill="#c98a3a"/><ellipse cx="8" cy="8" rx="5.6" ry="3.8" fill="#f6e2b0"/>', 15, 4)}
+V["bulgur"] = {"mound": fl(lambda r: grains_in(r, "#d9b06a", "#b8863f", 120, 1.2, 1), MOUND), "bowl": fl(lambda r: grains_in(r, "#d9b06a", "#b8863f", 140, 1.2, 1, shape="full"), BOWLS)}
+V["buns"] = {"bun": whole(center('<path d="M1.5 9c0-4 3-7 6.5-7s6.5 3 6.5 7Z" fill="#d9903f"/><rect x="1.5" y="9" width="13" height="4" rx="2" fill="#c9803a"/><ellipse cx="6" cy="5" rx=".8" ry=".5" fill="#fbf2d8"/><ellipse cx="9.5" cy="4.5" rx=".8" ry=".5" fill="#fbf2d8"/><ellipse cx="11" cy="7" rx=".8" ry=".5" fill="#fbf2d8"/>', 40), 2)}
+V["naan"] = {"bread": fl(lambda r: flatbread(r, "#f2d8a0", "#c9803a", "#e2bc7a", oval=True), FLAT)}
+V["tteok"] = {"pieces": p(stick("#f6f3ea", "#ffffff"), 13, 6)}
+
 # Seasonings --------------------------------------------------------------------------------
 
 V["basil"] = {"leaves": garnish(leaf("#4f8f3a", "#7fb069"), 12, 4)}
@@ -339,6 +378,11 @@ V["thai-basil"] = {"leaves": garnish(leaf("#3f7f3a", "#8a4a7a"), 12, 4)}
 V["thyme"] = {"sprigs": garnish(sprig("#5f7f4a", "#8a7a5a"), 13, 3)}
 V["wasabi"] = {"dollop": center(dollop("#9cc45a", "#c4e08a"), 22)}
 V["yuzu-kosho"] = {"dollop": center(dollop("#b8c84a", "#dce88a"), 22)}
+
+V["chili-powder"] = {"dusting": garnish(dust("#a8342a"), 10, 2)}
+V["smoked-paprika"] = {"dusting": garnish(dust("#b8402a"), 10, 3)}
+V["sumac"] = {"dusting": garnish(dust("#8a1f2f", "#b03a48"), 10, 3)}
+V["zaatar"] = {"sprinkle": garnish(dust("#7a7f3a", "#f6eedc"), 10, 3)}
 
 # Sauces and condiments ---------------------------------------------------------------------
 
@@ -382,6 +426,11 @@ V["mayonnaise"] = {"drizzle": center(zigzag("#fbf6dc"), 24, 1), "dollop": center
 V["mustard"] = {"drizzle": center(zigzag("#e8b81b"), 22, 1), "dollop": center(dollop("#d9a81b", "#f2c84a"), 22)}
 V["tahini"] = {"drizzle": center(drizzle("#d9c08a", 2.2), 24, 2)}
 
+V["harissa"] = {"dollop": center(dollop("#b8302a", "#d9504a"), 22)}
+V["pomegranate-molasses"] = {"drizzle": center(drizzle("#5a1828", 2), 24, 2)}
+V["salsa"] = {"spooned": center(dollop("#d9402f", "#e8604a") + '<rect x="5" y="9" width="1.6" height="1.6" fill="#5f9a45"/><rect x="9.5" y="10" width="1.6" height="1.6" fill="#f6f0e0"/>', 22)}
+V["thai-curry-paste"] = {"curry": fl(lambda r: smooth(r, "#d9603a", "#e8805a", specks="#4f8a3a"), SAUCE)}
+
 # Baking and sweet --------------------------------------------------------------------------
 
 V["anko"] = {"dollop": center(dollop("#5a2a2a", "#7a3f3a") + '<circle cx="7" cy="9" r="0.8" fill="#3a1a1a"/><circle cx="10" cy="10" r="0.8" fill="#3a1a1a"/>', 24)}
@@ -397,6 +446,9 @@ V["puff-pastry"] = {"square": fl(lambda r: place(pastry_square("#d99a3f", "#f2c4
 V["raisins"] = {"raisins": garnish(cluster("#4a2a2a", "#6a4040", 1.8, 5), 8, 4)}
 V["shiratamako"] = {"dumplings": p(small_round("#fbfaf6", "#ffffff"), 11, 5)}
 V["sugar"] = {"dusting": garnish('<circle cx="8" cy="8" r="1.4" fill="#ffffff" opacity="0.95"/>', 4, 14)}
+
+V["filo-pastry"] = {"pieces": p(pastry_square("#e8b860", "#f6dca0", "#f2cc80"), 16, 3)}
+V["shortcrust-pastry"] = {"square": fl(lambda r: place(pastry_square("#d9a85a", "#f2dca8", "#e8c07a"), C, C, 52), FLAT)}
 
 # Preserved and dried -----------------------------------------------------------------------
 
@@ -441,17 +493,40 @@ V["walnuts"] = {"halves": p(walnut("#b8864a", "#8a5a2a"), 11, 5)}
 V["wheat-gluten"] = {"fu": p(ring("#f2dcb0", "#fbecd0", 3), 12, 3)}
 V["zha-cai"] = {"strips": p(strip("#b8b064", "#d4cc88"), 11, 5)}
 
+V["atsuage"] = {"pieces": p(cube("#fbf6e6", "#ffffff", "#c9802f"), 12, 5)}
+V["cashews"] = {"whole": p('<path d="M3 6c0 5 3 8 7 8s5-3 5-5c-1.4.8-2.6 1.2-4 1.2-2.6 0-3.6-1.8-4-4-.3-1.4-1.6-1.6-2.4-.8Z" fill="#e6c27e"/>', 9, 6)}
+V["chia-seeds"] = {"sprinkle": garnish(dust("#3a3632", "#8a8580"), 8, 3), "pudding": fl(lambda r: smooth(r, "#e8e2d6", "#f6f2ea", specks="#2d2a28", full=True), BOWLS)}
+V["ganmodoki"] = {"simmered": whole(center('<circle cx="8" cy="8" r="6.5" fill="#c98a3a"/><circle cx="8" cy="8" r="5" fill="#d9a050"/><rect x="5" y="6" width="1.4" height=".8" fill="#e8602a"/><rect x="9" y="9" width="1.4" height=".8" fill="#4f8a3a"/>', 22), 3)}
+V["hazelnuts"] = {"chopped": garnish(crumble("#b8763a", "#e2c49a"), 8, 7)}
+V["kikurage"] = {"strips": p(shreds("#3a2a26", "#6a5550"), 11, 5)}
+V["okara"] = {"mound": fl(lambda r: grains_in(r, "#f2ead2", "#e2d6b4", 120, 1, 0.9), MOUND)}
+V["pecans"] = {"halves": p('<path d="M1.5 8c0-3 3-4.5 6.5-4.5s6.5 1.5 6.5 4.5-3 4.5-6.5 4.5S1.5 11 1.5 8Z" fill="#7a3a1f"/><path d="M1.5 8h13" stroke="#4f2210" stroke-width="1"/><path d="M5 5.2c.7 1 .7 1.8 0 2.8M8 4.6c.7 1 .7 2.4 0 3.4M11 5c.7 1 .7 2 0 3" stroke="#a85a32" stroke-width="1" fill="none" stroke-linecap="round"/>', 11, 5)}
+V["pickles"] = {"slices": p(round_slice("#5f8a3a", "#c9dc8a", seeds="#a8c070"), 11, 6)}
+V["pistachios"] = {"chopped": garnish(crumble("#8fae4a", "#c4d888"), 8, 7)}
+V["pumpkin-seeds"] = {"seeds": garnish('<ellipse cx="8" cy="8" rx="3" ry="1.7" fill="#4f7a3a"/><ellipse cx="7.4" cy="7.6" rx="1.4" ry=".6" fill="#8ab05a"/>', 7, 8)}
+V["rakkyo"] = {"whole": p(teardrop("#f6f2dc", "#ffffff"), 9, 5)}
+V["sauerkraut"] = {"heap": p(shreds("#efe8b8", "#d9cf88"), 12, 5)}
+V["soybeans"] = {"beans": p(small_round("#e8c98a", "#f6e2b4"), 7, 9)}
+V["sunflower-seeds"] = {"seeds": garnish('<ellipse cx="8" cy="8" rx="2.6" ry="1.5" fill="#d9cfb8"/>', 6, 9)}
+V["tenkasu"] = {"sprinkle": garnish(crumble("#f2d48a", "#fbe6b0"), 7, 8)}
+V["white-beans"] = {"beans": p(bean("#f6f2e4", "#ffffff"), 9, 7)}
+V["yuba"] = {"sheets": p(flake("#f2d68a", "#f8e6b0"), 13, 4)}
+
 HIDDEN = {
     # Cooked into the dish or taken out before serving.
     "bay-leaf": "taken out before serving",
     "cardamom": "taken out before serving",
     "cloves": "taken out before serving",
     "lemongrass": "taken out before serving",
+    "galangal": "taken out before serving",
+    "juniper": "taken out before serving",
+    "caraway": "cooked into the dish",
     # Ground spices and powders colour the dish rather than sit on it.
     "cumin": "ground into the dish", "curry-powder": "ground into the dish", "fennel-seeds": "ground into the dish",
     "five-spice": "ground into the dish", "garam-masala": "ground into the dish", "garlic-powder": "ground into the dish",
     "msg": "dissolved", "nutmeg": "ground into the dish", "onion-powder": "ground into the dish",
     "saffron": "colours the rice", "salt": "dissolved", "sansho": "ground into the dish", "turmeric": "colours the dish",
+    "allspice": "ground into the dish", "asafoetida": "ground into the dish", "fenugreek": "ground into the dish",
     # Liquids and seasonings that are absorbed.
     "red-wine": "cooked off", "white-wine": "cooked off", "black-vinegar": "absorbed", "char-siu-sauce": "absorbed",
     "dark-soy-sauce": "absorbed", "doubanjiang": "colours the sauce", "oyster-sauce": "absorbed", "sesame-oil": "absorbed",
@@ -462,9 +537,11 @@ HIDDEN = {
     "soy-milk": "absorbed", "vinegar": "absorbed", "water": "absorbed", "worcestershire": "absorbed",
     "buttermilk": "absorbed", "ghee": "cooking fat", "milk": "absorbed", "bouillon": "dissolved",
     "tomato-paste": "colours the sauce", "molasses": "absorbed", "vanilla": "absorbed",
+    "chipotle-in-adobo": "colours the sauce", "shrimp-paste": "dissolved", "shio-koji": "absorbed", "sake-kasu": "dissolved",
+    "rum": "cooked off", "brandy": "cooked off", "evaporated-milk": "absorbed", "kefir": "absorbed",
     # Baking staples that become something else.
     "agar": "sets the dish", "almond-flour": "baked in", "baking-powder": "baked in", "baking-soda": "baked in",
     "bread-flour": "baked in", "brown-sugar": "dissolved", "cake-flour": "baked in", "cornmeal": "baked in",
     "cornstarch": "thickens the sauce", "flour": "baked in", "gelatin": "sets the dish", "rice-flour": "baked in",
-    "yeast": "baked in",
+    "yeast": "baked in", "palm-sugar": "dissolved", "masa-harina": "baked in",
 }

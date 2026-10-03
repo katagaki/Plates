@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Loaf tin">
+  <path d="M6 16h36l-4 24H10Z" fill="#cfd6dd"/>
+  <path d="M9 19h30l-3 18H12Z" fill="#a8b0b8"/>
+  <rect x="4" y="14" width="40" height="4" rx="1.5" fill="#8d939b"/>
+  <path d="M13 22l2 12" stroke="#e8edf2" stroke-width="2" stroke-linecap="round"/>
+</svg>

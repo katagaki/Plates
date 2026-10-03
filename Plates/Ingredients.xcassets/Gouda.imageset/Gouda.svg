@@ -1,0 +1,8 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gouda">
+  <path d="M4 22c0-6 9-10 20-10s20 4 20 10v8c0 6-9 10-20 10S4 36 4 30Z" fill="#e88f1f"/>
+  <path d="M4 22c0 6 9 10 20 10s20-4 20-10-9-10-20-10S4 16 4 22Z" fill="#f4ac3a"/>
+  <path d="M24 22 34 31.2V40.4L24 31Z" fill="#f8d878"/>
+  <path d="M24 22l20 0v8l-10 1.2Z" fill="#fbe6a0"/>
+  <path d="M24 22l20 0c0 4-4 7.5-10 9.2Z" fill="#fbe6a0"/>
+  <path d="M24 22 34 31.2c4-1.5 8.8-4 10-9.2Z" fill="#fbeab0"/>
+</svg>

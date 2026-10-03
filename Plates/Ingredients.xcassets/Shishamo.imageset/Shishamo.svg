@@ -1,0 +1,10 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shishamo">
+  <path d="M11.5 24L2 15L5.5 24L2 33Z" fill="#6f6248"/>
+  <path d="M30 18.55 26 14.05l-4 6Z" fill="#6f6248"/>
+  <path d="M46 24C45 21.05 37 18.05 28 18.05C19 18.05 13 21.8 10 22.4L10 25.6C13 26.2 19 29.1 28 29.1C37 29.1 45 27.1 46 24Z" fill="#f2d690"/>
+  <path d="M46 24C45 21.05 37 18.05 28 18.05C19 18.05 13 21.8 10 22.4L10 24C22 24 36 24.5 46 24Z" fill="#8a7a5a"/>
+  <path d="M20 27.5c5 1.5 11 1.5 17 0" stroke="#f6b860" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  <g fill="#5a4a32"><ellipse cx="22" cy="20" rx="1.6" ry=".9"/><ellipse cx="30" cy="19" rx="1.6" ry=".9"/><ellipse cx="26" cy="23" rx="1.4" ry=".8"/></g>
+  <path d="M37.5 20.55C35 21.5 35 26 37.5 27.1" stroke="#6f6248" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <circle cx="41.5" cy="22.2" r="1.8" fill="#2a2a2a"/>
+</svg>

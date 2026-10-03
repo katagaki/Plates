@@ -1,0 +1,4 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Meat mallet">
+  <path d="M22 22 41 41" stroke="#a97142" stroke-width="5" stroke-linecap="round"/>
+  <g transform="rotate(45 18 18)"><rect x="6" y="11" width="24" height="13" rx="2" fill="#cfd6dd"/><rect x="6" y="11" width="4" height="13" fill="#8d939b"/><rect x="26" y="11" width="4" height="13" fill="#8d939b"/><path d="M12 11v13" stroke="#e8edf2" stroke-width=".8"/><path d="M16 11v13" stroke="#e8edf2" stroke-width=".8"/><path d="M20 11v13" stroke="#e8edf2" stroke-width=".8"/><path d="M24 11v13" stroke="#e8edf2" stroke-width=".8"/></g>
+</svg>

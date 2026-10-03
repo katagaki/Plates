@@ -1,0 +1,9 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chipotle in adobo">
+  <path d="M8 20h32v18a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4Z" fill="#cfd6dd"/>
+  <rect x="8" y="27" width="32" height="10" fill="#d9a02a"/>
+  <ellipse cx="24" cy="20" rx="16" ry="4.5" fill="#8d939b"/>
+  <ellipse cx="24" cy="20" rx="14" ry="3.4" fill="#7a2a1a"/>
+  <path d="M13 19c3-6 10-10 17-10 3 0 4 2 2 3.5-5 1.5-10 4.5-13 9Z" fill="#5a2215"/>
+  <path d="M17 17c3-3 7-5 11-6" stroke="#8a3a25" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <path d="M31 11c2-1 4-.5 5 1" stroke="#6a5a2a" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+</svg>

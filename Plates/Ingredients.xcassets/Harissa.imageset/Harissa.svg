@@ -1,0 +1,9 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Harissa">
+  <path d="M8 30 32 12l5 6-24 18Z" fill="#c4302a"/>
+  <path d="M14 26 30 14l3.2 4-16 12Z" fill="#f2e2c4"/>
+  <path d="M18 26c1-2 3-4 6-5 1.5 0 2 1 1.5 2-1.5 2-4 3.5-7.5 3Z" fill="#c4302a"/>
+  <path d="M31 11l7 8.5 4-3-7-8.5Z" fill="#8a8f96"/>
+  <path d="M34 10l4 5M36.5 8.5l4 5" stroke="#cfd6dd" stroke-width="1"/>
+  <path d="M8 30l5 6-3 2.4-5-6Z" fill="#2d2d2d"/>
+  <path d="M4.5 36c-1 2-1 4 .5 5 2 1 4-.5 4-2.5" fill="#c4302a"/>
+</svg>

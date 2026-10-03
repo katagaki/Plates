@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Yuba">
+  <path d="M6 22c4-4 10-5 16-3s12 2 18-2l2 14c-6 4-12 4-18 2s-12-1-16 3Z" fill="#f2d68a"/>
+  <path d="M8 28c4-3 9-4 14-2.5s11 2 16-1" stroke="#e2bc5a" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <path d="M10 34c4-2 8-3 12-2s10 1.5 14-.5" stroke="#e2bc5a" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+  <path d="M6 22c4-4 10-5 16-3s12 2 18-2c-1 4-4 6-8 6.5-4 .5-7-1-10-1.5-5-.8-9 .5-14 2.5-1-.8-1.6-1.6-2-2Z" fill="#f8e6b0"/>
+</svg>

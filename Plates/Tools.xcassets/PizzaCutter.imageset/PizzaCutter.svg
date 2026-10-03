@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pizza cutter">
+  <path d="M24 24 42 42" stroke="#3c4046" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="17" cy="17" r="12" fill="#cfd6dd"/>
+  <circle cx="17" cy="17" r="12" fill="none" stroke="#e8edf2" stroke-width="1.6"/>
+  <path d="M17 17 26 26" stroke="#8d939b" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="17" cy="17" r="2.6" fill="#8d939b"/>
+</svg>

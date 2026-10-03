@@ -1,0 +1,9 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Food processor">
+  <rect x="20" y="4" width="7" height="9" rx="1.5" fill="#dce8ee" stroke="#a8b4bc" stroke-width="1"/>
+  <path d="M10 12h28l-2 20H12Z" fill="#e2ecf2"/>
+  <path d="M10 12h28l-2 20H12Z" fill="none" stroke="#a8b4bc" stroke-width="1.2"/>
+  <path d="M24 14v16" stroke="#8d939b" stroke-width="1.8"/>
+  <path d="M16 24l8-2 8 2-8 1Z" fill="#8d939b"/>
+  <path d="M8 32h32v6a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4Z" fill="#6f747b"/>
+  <circle cx="24" cy="37" r="2.4" fill="#cfd6dd"/>
+</svg>

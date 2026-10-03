@@ -1,0 +1,8 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pomegranate molasses">
+  <rect x="20" y="4" width="8" height="5" rx="1.5" fill="#2d2d2d"/>
+  <path d="M21 9h6v6c5 2 8 5 8 10v14a4 4 0 0 1-4 4H17a4 4 0 0 1-4-4V25c0-5 3-8 8-10Z" fill="#5a1828"/>
+  <path d="M13 24h22v15a4 4 0 0 1-4 4H17a4 4 0 0 1-4-4Z" fill="#4a1020"/>
+  <rect x="13" y="27" width="22" height="10" fill="#f2e6d0"/>
+  <circle cx="24" cy="32" r="3.6" fill="#b8243a"/>
+  <path d="M22.5 28.6l1.5-1.6 1.5 1.6" stroke="#b8243a" stroke-width="1.2" fill="none"/>
+</svg>

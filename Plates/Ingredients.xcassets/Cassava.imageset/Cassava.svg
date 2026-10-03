@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cassava">
+  <path d="M8 33c-1-6 3-11 9-13 9-3 18-7 25-6 3 .5 4 3.5 1.5 5.5-7 5-15 11-24 15-5 2-10.5 2-11.5-1.5Z" fill="#6f4426"/>
+  <path d="M18 23.5c6-2 13-5 20-6.5M19 32c6-2.5 12-6 17-10" stroke="#8a5a34" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <ellipse cx="12.5" cy="29" rx="6" ry="8.5" transform="rotate(-20 12.5 29)" fill="#f6efdc" stroke="#e8b0a0" stroke-width="1.2"/>
+  <circle cx="12.5" cy="29" r="1.4" fill="#e2d6b8"/>
+</svg>

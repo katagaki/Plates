@@ -242,9 +242,9 @@ private nonisolated struct DishPlanner {
 
     /// Sauces that fill a region of their own, most telling first.
     private static let sauces = [
-        "curry-roux", "coconut-milk", "lentils", "bolognese-sauce", "arrabbiata-sauce", "puttanesca-sauce", "vodka-sauce",
-        "marinara-sauce", "passata", "canned-tomatoes", "carbonara-sauce", "alfredo-sauce", "mentaiko-pasta-sauce",
-        "tarako-pasta-sauce", "pesto", "tianmianjiang", "beans",
+        "curry-roux", "thai-curry-paste", "coconut-milk", "lentils", "bolognese-sauce", "arrabbiata-sauce", "puttanesca-sauce",
+        "vodka-sauce", "marinara-sauce", "passata", "canned-tomatoes", "carbonara-sauce", "alfredo-sauce",
+        "mentaiko-pasta-sauce", "tarako-pasta-sauce", "pesto", "tianmianjiang", "beans",
     ]
     private static let soups = ["miso", "doenjang", "pumpkin", "butternut-squash", "dashi"]
 
@@ -265,7 +265,7 @@ private nonisolated struct DishPlanner {
         if let grain, !DishParts.variants(of: grain).contains(where: { $0.part.kind == .fill && ($0.part.vessels ?? []).contains("plate") }) {
             return "bowl"
         }
-        if ["bread", "tortilla", "pita", "rice-paper"].contains(grain) { return "plate" }
+        if ["bread", "tortilla", "pita", "naan", "rice-paper"].contains(grain) { return "plate" }
         let hasPlate = tools.contains("plate")
         let hasBowl = tools.contains("bowl")
         if !hasPlate, !hasBowl, tools.contains("pan") || tools.contains("wok") { return "pan" }

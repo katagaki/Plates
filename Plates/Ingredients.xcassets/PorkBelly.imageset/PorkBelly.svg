@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pork belly">
+  <rect x="5" y="13" width="38" height="24" rx="3" fill="#e8988a"/>
+  <rect x="5" y="13" width="38" height="4" rx="2" fill="#e8c8a0"/>
+  <rect x="5" y="16.5" width="38" height="3.6" fill="#faf2e6"/>
+  <path d="M5 25.5c6-1.5 12 1 19-.5s12-1.5 19 0v3.4c-7-1.5-12-1.5-19 0s-13-1-19 .5Z" fill="#faf2e6"/>
+  <path d="M5 32c7 .8 13-.8 19 0s12 .8 19-.4v2c-7 1.2-13 1-19 .4s-12 .8-19 0Z" fill="#faf2e6"/>
+</svg>

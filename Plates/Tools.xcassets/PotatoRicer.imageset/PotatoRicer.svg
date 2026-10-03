@@ -1,0 +1,15 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Potato ricer">
+  <path d="M24 16 44 10" stroke="#8d939b" stroke-width="3.4" stroke-linecap="round"/>
+  <path d="M24 22 44 30" stroke="#8d939b" stroke-width="3.4" stroke-linecap="round"/>
+  <path d="M6 16h20l-2 16H8Z" fill="#cfd6dd"/>
+  <circle cx="10" cy="21" r=".9" fill="#8d939b"/>
+  <circle cx="10" cy="26" r=".9" fill="#8d939b"/>
+  <circle cx="14" cy="21" r=".9" fill="#8d939b"/>
+  <circle cx="14" cy="26" r=".9" fill="#8d939b"/>
+  <circle cx="18" cy="21" r=".9" fill="#8d939b"/>
+  <circle cx="18" cy="26" r=".9" fill="#8d939b"/>
+  <circle cx="22" cy="21" r=".9" fill="#8d939b"/>
+  <circle cx="22" cy="26" r=".9" fill="#8d939b"/>
+  <rect x="4" y="13" width="24" height="4" rx="2" fill="#8d939b"/>
+  <g stroke="#f2e2b0" stroke-width="1.8" stroke-linecap="round"><path d="M11 34v6M15 34v8M19 34v6M23 34v5"/></g>
+</svg>

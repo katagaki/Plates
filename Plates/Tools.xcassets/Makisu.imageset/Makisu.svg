@@ -1,0 +1,17 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sushi mat">
+  <rect x="5" y="10" width="38" height="28" rx="1.5" fill="#c9cf88"/>
+  <path d="M5 13h38" stroke="#a8ae68" stroke-width="1"/>
+  <path d="M5 16h38" stroke="#a8ae68" stroke-width="1"/>
+  <path d="M5 19h38" stroke="#a8ae68" stroke-width="1"/>
+  <path d="M5 22h38" stroke="#a8ae68" stroke-width="1"/>
+  <path d="M5 25h38" stroke="#a8ae68" stroke-width="1"/>
+  <path d="M5 28h38" stroke="#a8ae68" stroke-width="1"/>
+  <path d="M5 31h38" stroke="#a8ae68" stroke-width="1"/>
+  <path d="M5 34h38" stroke="#a8ae68" stroke-width="1"/>
+  <path d="M5 37h38" stroke="#a8ae68" stroke-width="1"/>
+  <path d="M13 10v28M35 10v28" stroke="#7a6a4a" stroke-width="1.2"/>
+  <circle cx="33" cy="33" r="9" fill="#1f3a33"/>
+  <circle cx="33" cy="33" r="6.6" fill="#fbf8f0"/>
+  <circle cx="33" cy="33" r="2.6" fill="#f2702a"/>
+  <path d="M35.6 33h2" stroke="#7fb069" stroke-width="1.6"/>
+</svg>

@@ -1,0 +1,9 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hokke">
+  <path d="M11.5 24L2 15L5.5 24L2 33Z" fill="#5f5f45"/>
+  <path d="M30 17.5 26 13l-4 6Z" fill="#5f5f45"/>
+  <path d="M46 24C45 20 37 17 28 17C19 17 13 21.8 10 22.4L10 25.6C13 26.2 19 30 28 30C37 30 45 28 46 24Z" fill="#e8e2c8"/>
+  <path d="M46 24C45 20 37 17 28 17C19 17 13 21.8 10 22.4L10 24C22 24 36 24.5 46 24Z" fill="#7a7a5a"/>
+  <g stroke="#4a4a32" stroke-width="2.4" stroke-linecap="round"><path d="M17 19v8M23 17.5v10M29 17v10.5M35 18v9"/></g>
+  <path d="M37.5 19.5C35 21.5 35 26 37.5 28" stroke="#5f5f45" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <circle cx="41.5" cy="22.2" r="1.8" fill="#2a2a2a"/>
+</svg>

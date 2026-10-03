@@ -1,0 +1,8 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dutch oven">
+  <path d="M8 22h32v12a8 8 0 0 1-8 8H16a8 8 0 0 1-8-8Z" fill="#d9532a"/>
+  <path d="M3 24c0-2.5 2-4 5-4v6c-3 0-5-.5-5-2ZM45 24c0-2.5-2-4-5-4v6c3 0 5-.5 5-2Z" fill="#b8401f"/>
+  <path d="M7 20c0-5 7.5-8 17-8s17 3 17 8Z" fill="#e8653a"/>
+  <rect x="6" y="19" width="36" height="3.4" rx="1.7" fill="#2d2d2d"/>
+  <rect x="20" y="8" width="8" height="5" rx="2.5" fill="#8d939b"/>
+  <path d="M12 27v8" stroke="#ef8a5a" stroke-width="2.4" stroke-linecap="round"/>
+</svg>

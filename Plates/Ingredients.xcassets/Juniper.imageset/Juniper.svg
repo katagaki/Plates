@@ -1,0 +1,29 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Juniper berries">
+  <path d="M10 14 30 34" stroke="#5a6a3a" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M13 17l-4 2" stroke="#4f7a4a" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M13 17l2 -4" stroke="#4f7a4a" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M17 21l-4 2" stroke="#4f7a4a" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M17 21l2 -4" stroke="#4f7a4a" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M21 25l-4 2" stroke="#4f7a4a" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M21 25l2 -4" stroke="#4f7a4a" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M25 29l-4 2" stroke="#4f7a4a" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M25 29l2 -4" stroke="#4f7a4a" stroke-width="1.6" stroke-linecap="round"/>
+  <circle cx="31" cy="22" r="4.4" fill="#34405e"/>
+  <circle cx="31" cy="22" r="4.4" fill="#8a9ab8" opacity=".35"/>
+  <circle cx="29.6" cy="20.6" r="1.2" fill="#a8b4cc"/>
+  <circle cx="38" cy="28" r="4.4" fill="#34405e"/>
+  <circle cx="38" cy="28" r="4.4" fill="#8a9ab8" opacity=".35"/>
+  <circle cx="36.6" cy="26.6" r="1.2" fill="#a8b4cc"/>
+  <circle cx="31" cy="31" r="4.4" fill="#34405e"/>
+  <circle cx="31" cy="31" r="4.4" fill="#8a9ab8" opacity=".35"/>
+  <circle cx="29.6" cy="29.6" r="1.2" fill="#a8b4cc"/>
+  <circle cx="36" cy="37" r="4.4" fill="#34405e"/>
+  <circle cx="36" cy="37" r="4.4" fill="#8a9ab8" opacity=".35"/>
+  <circle cx="34.6" cy="35.6" r="1.2" fill="#a8b4cc"/>
+  <circle cx="27" cy="38" r="4.4" fill="#34405e"/>
+  <circle cx="27" cy="38" r="4.4" fill="#8a9ab8" opacity=".35"/>
+  <circle cx="25.6" cy="36.6" r="1.2" fill="#a8b4cc"/>
+  <circle cx="40" cy="19" r="4.4" fill="#34405e"/>
+  <circle cx="40" cy="19" r="4.4" fill="#8a9ab8" opacity=".35"/>
+  <circle cx="38.6" cy="17.6" r="1.2" fill="#a8b4cc"/>
+</svg>

@@ -1,0 +1,14 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hazelnuts">
+  <circle cx="14" cy="33" r="8.2" fill="#9a5a2a"/>
+  <path d="M7 29c2-5 12-5 14 0-2 2-5 3-7 3s-5-1-7-3Z" fill="#e2c49a"/>
+  <path d="M9.5 35c0 2 1.5 3.5 3.5 4" stroke="#b8763a" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <circle cx="14" cy="26.4" r="1" fill="#6a3a1a"/>
+  <circle cx="31" cy="34" r="8.2" fill="#9a5a2a"/>
+  <path d="M24 30c2-5 12-5 14 0-2 2-5 3-7 3s-5-1-7-3Z" fill="#e2c49a"/>
+  <path d="M26.5 36c0 2 1.5 3.5 3.5 4" stroke="#b8763a" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <circle cx="31" cy="27.4" r="1" fill="#6a3a1a"/>
+  <circle cx="23" cy="19" r="8.2" fill="#9a5a2a"/>
+  <path d="M16 15c2-5 12-5 14 0-2 2-5 3-7 3s-5-1-7-3Z" fill="#e2c49a"/>
+  <path d="M18.5 21c0 2 1.5 3.5 3.5 4" stroke="#b8763a" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <circle cx="23" cy="12.4" r="1" fill="#6a3a1a"/>
+</svg>
