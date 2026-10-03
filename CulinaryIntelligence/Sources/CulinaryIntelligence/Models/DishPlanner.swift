@@ -242,7 +242,8 @@ private nonisolated struct DishPlanner {
 
     /// Sauces that fill a region of their own, most telling first.
     private static let sauces = [
-        "curry-roux", "coconut-milk", "lentils", "passata", "canned-tomatoes", "pesto", "tianmianjiang", "beans",
+        "curry-roux", "coconut-milk", "lentils", "bolognese-sauce", "arrabbiata-sauce", "vodka-sauce", "marinara-sauce",
+        "passata", "canned-tomatoes", "carbonara-sauce", "alfredo-sauce", "pesto", "tianmianjiang", "beans",
     ]
     private static let soups = ["miso", "doenjang", "pumpkin", "butternut-squash", "dashi"]
 
@@ -282,12 +283,16 @@ private nonisolated struct DishPlanner {
             }
             return kind == "bowl" || kind == "pot" ? "bowl" : "mound"
         case "spaghetti", "fettuccine":
-            let tomato = ["tomato", "passata", "canned-tomatoes", "tomato-paste", "ketchup"].first { assets.contains($0) }
+            let tomato = [
+                "bolognese-sauce", "arrabbiata-sauce", "vodka-sauce", "marinara-sauce", "tomato", "passata", "canned-tomatoes",
+                "tomato-paste", "ketchup",
+            ].first { assets.contains($0) }
             if grain == "spaghetti", let tomato {
                 consumed.insert(tomato)
                 return "tomato"
             }
-            let creamy = ["cream", "egg", "milk", "cream-cheese", "mascarpone"].filter { assets.contains($0) }
+            let creamy = ["carbonara-sauce", "alfredo-sauce", "cream", "egg", "milk", "cream-cheese", "mascarpone"]
+                .filter { assets.contains($0) }
             if grain == "spaghetti", !creamy.isEmpty {
                 consumed.formUnion(creamy)
                 return "creamy"

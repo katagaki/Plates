@@ -197,6 +197,22 @@
         ]
       }
     },
+    "alfredo-sauce": {
+      "sauce": {
+        "kind": "fill",
+        "file": "Fills/AlfredoSauceSauce.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 0,
+        "tones": [
+          "#f0e8c8"
+        ]
+      }
+    },
     "almonds": {
       "slivered": {
         "kind": "piece",
@@ -327,6 +343,22 @@
         "rank": 0,
         "tones": [
           "#f0e0c0"
+        ]
+      }
+    },
+    "arrabbiata-sauce": {
+      "sauce": {
+        "kind": "fill",
+        "file": "Fills/ArrabbiataSauceSauce.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 0,
+        "tones": [
+          "#c83828"
         ]
       }
     },
@@ -798,6 +830,22 @@
         ]
       }
     },
+    "bolognese-sauce": {
+      "sauce": {
+        "kind": "fill",
+        "file": "Fills/BologneseSauceSauce.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 0,
+        "tones": [
+          "#983828"
+        ]
+      }
+    },
     "bonito": {
       "sashimi": {
         "kind": "piece",
@@ -1072,6 +1120,22 @@
         "rank": 0,
         "tones": [
           "#687838"
+        ]
+      }
+    },
+    "carbonara-sauce": {
+      "sauce": {
+        "kind": "fill",
+        "file": "Fills/CarbonaraSauceSauce.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 0,
+        "tones": [
+          "#f0d888"
         ]
       }
     },
@@ -3450,6 +3514,22 @@
         "rank": 0,
         "tones": [
           "#a05018"
+        ]
+      }
+    },
+    "marinara-sauce": {
+      "sauce": {
+        "kind": "fill",
+        "file": "Fills/MarinaraSauceSauce.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 0,
+        "tones": [
+          "#c83828"
         ]
       }
     },
@@ -6409,6 +6489,22 @@
         "tones": [
           "#f0e0d0",
           "#d8a048"
+        ]
+      }
+    },
+    "vodka-sauce": {
+      "sauce": {
+        "kind": "fill",
+        "file": "Fills/VodkaSauceSauce.svg",
+        "vessels": [
+          "plate",
+          "bowl",
+          "pan",
+          "pot"
+        ],
+        "rank": 0,
+        "tones": [
+          "#e07858"
         ]
       }
     },

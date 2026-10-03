@@ -1415,6 +1415,23 @@
         }
       }
     },
+    "Ingredient.Name.AlfredoSauce": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alfredo sauce"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アルフレッドソース"
+          }
+        }
+      }
+    },
     "Ingredient.Name.AlmondFlour": {
       "extractionState": "manual",
       "localizations": {
@@ -1564,6 +1581,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "アルボリオ米"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.ArrabbiataSauce": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arrabbiata sauce"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アラビアータソース"
           }
         }
       }
@@ -2044,6 +2078,23 @@
         }
       }
     },
+    "Ingredient.Name.BologneseSauce": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bolognese sauce"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ミートソース"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Bonito": {
       "extractionState": "manual",
       "localizations": {
@@ -2363,6 +2414,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "ケッパー"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.CarbonaraSauce": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Carbonara sauce"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "カルボナーラソース"
           }
         }
       }
@@ -4879,6 +4947,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "メープルシロップ"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.MarinaraSauce": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Marinara sauce"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マリナーラソース"
           }
         }
       }
@@ -7973,6 +8058,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "酢"
+          }
+        }
+      }
+    },
+    "Ingredient.Name.VodkaSauce": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vodka sauce"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ウォッカソース"
           }
         }
       }

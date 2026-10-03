@@ -344,6 +344,12 @@ V["yuzu-kosho"] = {"dollop": center(dollop("#b8c84a", "#dce88a"), 22)}
 
 V["balsamic-vinegar"] = {"drizzle": center(drizzle("#3a1f1a", 1.6), 24, 2)}
 V["olive-oil"] = {"drizzle": center(drizzle("#c9b43a", 1.8), 24, 2)}
+V["alfredo-sauce"] = {"sauce": fl(lambda r: smooth(r, "#f2e8cc", "#fbf6e6", specks="#d9c48a"), SAUCE)}
+V["arrabbiata-sauce"] = {"sauce": fl(lambda r: smooth(r, "#c8382a", "#e2584a", specks="#7a1a12"), SAUCE)}
+V["bolognese-sauce"] = {"sauce": fl(lambda r: smooth(r, "#9a3f28", "#b85a3a", specks="#5f2a1a"), SAUCE)}
+V["carbonara-sauce"] = {"sauce": fl(lambda r: smooth(r, "#f2d888", "#fbeab8", specks="#3a3530"), SAUCE)}
+V["marinara-sauce"] = {"sauce": fl(lambda r: smooth(r, "#cc3e2e", "#e8604a", specks="#4f7a3a"), SAUCE)}
+V["vodka-sauce"] = {"sauce": fl(lambda r: smooth(r, "#e07a5a", "#f0a080"), SAUCE)}
 V["pesto"] = {"dollop": center(dollop("#5f8f3a", "#8ab55a"), 22), "sauce": fl(lambda r: smooth(r, "#6a9a3f", "#8ab55a", specks="#3f6b2a"), PLATES + ["pan"])}
 V["chili-oil"] = {"drizzle": center(drizzle("#c9301f", 2.4) + '<circle cx="5" cy="9" r="0.8" fill="#6a1f15"/><circle cx="11" cy="7" r="0.8" fill="#6a1f15"/>', 24, 2)}
 V["douchi"] = {"beans": garnish(cluster("#2a2422", "#5a4a42", 1.6, 5), 7, 4)}
