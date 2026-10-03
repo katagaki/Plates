@@ -1,13 +1,14 @@
+import CulinaryIntelligence
 import SwiftUI
 import UIKit
 
 extension Color {
-    /// The background of one step in cooking mode. Each step turns the hue on by the golden
-    /// angle, so no two steps in a recipe share a colour and neighbours are never close. The
-    /// colour is then darkened until white text on it passes 7:1, which reads at arm's length
-    /// and across a kitchen.
-    static func step(_ index: Int) -> Color {
-        let hue = (0.58 + Double(index) * 0.381966).truncatingRemainder(dividingBy: 1)
+    /// The background of one step in cooking mode, taken from the step's title, so a step keeps
+    /// its colour wherever it appears and however the recipe is reordered. The colour is then
+    /// darkened until white text on it passes 7:1, which reads at arm's length and across a
+    /// kitchen.
+    static func step(_ title: String) -> Color {
+        let hue = Double(stableHash(Step.comparable(title)) % 360) / 360
         let saturation = 0.55
         var brightness = 0.75
         while brightness > 0.2,
@@ -15,6 +16,14 @@ extension Color {
             brightness -= 0.01
         }
         return Color(hue: hue, saturation: saturation, brightness: brightness)
+    }
+
+    /// FNV-1a over the text's bytes. `hashValue` is seeded afresh on every launch, so it would
+    /// give a step a new colour each time the app is opened.
+    private static func stableHash(_ text: String) -> UInt64 {
+        text.utf8.reduce(14_695_981_039_346_656_037) { hash, byte in
+            (hash ^ UInt64(byte)) &* 1_099_511_628_211
+        }
     }
 
     private static func contrastWithWhite(hue: Double, saturation: Double, brightness: Double) -> Double {

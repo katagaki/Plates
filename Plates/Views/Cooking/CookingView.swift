@@ -36,11 +36,11 @@ struct CookingView: View {
                                 timer.start(duration)
                             }
                         )
-                        .page(insets: insets, background: .step(index))
+                        .page(insets: insets, background: .step(step.title))
                     }
 
                     finished
-                        .page(insets: insets, background: .step(recipe.steps.count))
+                        .page(insets: insets, background: .step(recipe.title))
                         .id(recipe.steps.count)
                 }
                 .scrollTargetLayout()
