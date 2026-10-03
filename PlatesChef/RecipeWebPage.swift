@@ -9,11 +9,15 @@ enum RecipeWebPage {
         var html: String
     }
 
+    // The page is read with the same script Safari runs before sharing.
     private static let script = """
+        \(Bundle.main.url(forResource: "PagePreprocessing", withExtension: "js")
+            .flatMap { try? String(contentsOf: $0, encoding: .utf8) } ?? "")
+        var page = typeof ExtensionPreprocessingJS === 'undefined'
+            ? { jsonLD: [] }
+            : ExtensionPreprocessingJS.read();
         return {
-            jsonLD: Array.prototype.slice.call(
-                document.querySelectorAll('script[type="application/ld+json"]'), 0, 10
-            ).map(function (script) { return script.textContent.slice(0, 100000); }),
+            jsonLD: page.jsonLD,
             html: document.documentElement.outerHTML.slice(0, 3000000)
         };
         """
