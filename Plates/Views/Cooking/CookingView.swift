@@ -148,16 +148,27 @@ struct CookingView: View {
 
     private var topBar: some View {
         HStack {
-            Button("Recipe.Cook.Close", systemImage: "xmark") {
+            Button {
                 dismiss()
+            } label: {
+                Label {
+                    Text("Recipe.Cook.Close")
+                } icon: {
+                    topBarIcon("xmark", font: .title3)
+                }
             }
-            .font(.title3)
 
             Spacer()
 
             if !recipe.troubleshooting.isEmpty {
-                Button("Recipe.Detail.Troubleshooting", systemImage: "questionmark") {
+                Button {
                     isShowingTroubleshooting = true
+                } label: {
+                    Label {
+                        Text("Recipe.Detail.Troubleshooting")
+                    } icon: {
+                        topBarIcon("questionmark")
+                    }
                 }
             }
         }
@@ -166,6 +177,17 @@ struct CookingView: View {
         .buttonBorderShape(.circle)
         .controlSize(.large)
         .padding(.horizontal, 16)
+    }
+
+    /// A glyph drawn over a hidden xmark at the usual size, so both circles in the top bar are
+    /// the same size whatever glyph or font is drawn in them.
+    private func topBarIcon(_ systemName: String, font: Font? = nil) -> some View {
+        Image(systemName: "xmark")
+            .hidden()
+            .overlay {
+                Image(systemName: systemName)
+                    .font(font)
+            }
     }
 
     /// The page after the last step: the dish, and the way back out.
