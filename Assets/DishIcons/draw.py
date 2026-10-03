@@ -174,7 +174,9 @@ def julienne(m, l=None):
 def ring(m, l=None, width=2.2):
     s = f'<circle cx="8" cy="8" r="5.4" fill="none" stroke="{m}" stroke-width="{width}"/>'
     if l:
-        s += f'<circle cx="8" cy="8" r="3.4" fill="none" stroke="{l}" stroke-width="1"/>'
+        # The second colour runs inside the band itself, so the hole stays open and a ring never
+        # reads as a target.
+        s += f'<circle cx="8" cy="8" r="{f(5.4 - width * 0.22)}" fill="none" stroke="{l}" stroke-width="{f(min(0.8, width * 0.35))}"/>'
     return s
 
 
@@ -239,7 +241,7 @@ def dust(m, l=None):
 
 
 def shred(m, width=2.4):
-    return f'<path d="M3 11c2-5 6-7 10-6" stroke="{m}" stroke-width="{width}" fill="none" stroke-linecap="round"/>'
+    return f'<path d="M3 10.6c3-1.8 6.6-3 10-3.2" stroke="{m}" stroke-width="{width}" fill="none" stroke-linecap="round"/>'
 
 
 def shreds(m, l=None):
@@ -251,13 +253,6 @@ def shreds(m, l=None):
 
 def flake(m, l):
     return f'<path d="M2 9c2-5 7-7 12-5-1 2-3 3-5 3 2 1 3 3 3 5-4 1-8 0-10-3Z" fill="{m}"/><path d="M5 8c2-1.5 4-2 6-2" stroke="{l}" stroke-width="1" fill="none" stroke-linecap="round"/>'
-
-
-def meat_slice(m, fat, sear=None):
-    s = f'<path d="M1.5 6c4-3 9-3 13 0 1 2 1 4 0 5-4 3-9 3-13 0-1-1.5-1-3.5 0-5Z" fill="{m}"/><path d="M2.5 6.2c4-2.4 7-2.4 11 0" stroke="{fat}" stroke-width="1.6" fill="none" stroke-linecap="round"/>'
-    if sear:
-        s += f'<path d="M5 9.5h6" stroke="{sear}" stroke-width="1.2" stroke-linecap="round"/>'
-    return s
 
 
 def bacon(m, fat):
@@ -399,10 +394,6 @@ def egg_fried():
     return '<path d="M2 8c0-5 4-7 7-6s6 3 5 7-3 6-7 6-5-3-5-7Z" fill="#fbf9f4"/><circle cx="8" cy="8" r="3.4" fill="#f1c21b"/><circle cx="7" cy="7" r="1.2" fill="#ffe97a"/>'
 
 
-def egg_scrambled():
-    return '<path d="M3 8c0-4 4-6 7-5s4 4 3 7-5 4-7 3-3-2-3-5Z" fill="#f6d55c"/><circle cx="7" cy="7" r="2" fill="#ffe97a"/>'
-
-
 def egg_half(white, yolk, l):
     return f'<ellipse cx="8" cy="8" rx="5.6" ry="7" fill="{white}"/><circle cx="8" cy="8.6" r="3.4" fill="{yolk}"/><circle cx="7.2" cy="7.8" r="1" fill="{l}"/>'
 
@@ -437,10 +428,6 @@ def kernels(m, l):
     return "".join(f'<rect x="{x}" y="{y}" width="3.4" height="3" rx="1" fill="{m}"/>' for x, y in ((2.5, 4), (6.3, 3.5), (10.1, 4), (4.4, 8), (8.2, 7.8), (6.3, 11.6))) + f'<rect x="3" y="4.5" width="1.4" height="1" rx="0.5" fill="{l}"/>'
 
 
-def olive_ring(m, hole):
-    return f'<ellipse cx="8" cy="8" rx="5.6" ry="4.8" fill="{m}"/><ellipse cx="8" cy="8" rx="2" ry="1.6" fill="{hole}"/>'
-
-
 def teardrop(m, l):
     return f'<path d="M8 1.5c3 3 5 6 5 8.5a5 5 0 0 1-10 0c0-2.5 2-5.5 5-8.5Z" fill="{m}"/><path d="M8 4v8" stroke="{l}" stroke-width="0.9" stroke-linecap="round"/>'
 
@@ -473,15 +460,12 @@ def avocado_half(skin, flesh, pit):
 
 
 def crescent(skin, flesh):
-    return f'<path d="M2 12C3 6 8 2.5 14 2.5 12 8 8 12 2 12Z" fill="{flesh}"/><path d="M14 2.5C12 8 8 12 2 12l.6 1.2C9 13 13 8.5 15 3Z" fill="{skin}"/>'
+    """A slice of fruit cut from the core out: a plump curve with the skin along its outer edge."""
+    return f'<path d="M2 13C1.6 6.6 6.6 2 14 2.4 14.2 9.6 9.2 13.6 2 13Z" fill="{flesh}"/><path d="M14 2.4C14.2 9.6 9.2 13.6 2 13" stroke="{skin}" stroke-width="1.8" fill="none" stroke-linecap="round"/>'
 
 
 def heart_half(m, l, s):
     return f'<path d="M8 14C4 11 1.5 8 2 5c.5-3 3.5-3.5 6-1.5 2.5-2 5.5-1.5 6 1.5.5 3-2 6-6 9Z" fill="{m}"/><path d="M8 12c-2-1.8-3.4-3.6-3.2-5.4" stroke="{l}" stroke-width="1.6" fill="none" stroke-linecap="round"/>' + "".join(f'<circle cx="{x}" cy="{y}" r="0.5" fill="{s}"/>' for x, y in ((5, 6), (11, 6), (8, 9), (10, 9.5), (6, 9.5)))
-
-
-def quarter(skin, flesh, seed_color):
-    return f'<path d="M2 13 8 2l6 11Z" fill="{skin}"/><path d="M4 12 8 4.5 12 12Z" fill="{flesh}"/>' + "".join(f'<circle cx="{x}" cy="{y}" r="0.6" fill="{seed_color}"/>' for x, y in ((7, 9), (9, 9.5), (8, 7.5), (8, 11)))
 
 
 def cherry(m, l, stem):
@@ -517,6 +501,419 @@ def spiral(m, l):
 
 def elbow(m, l):
     return f'<path d="M3 11a6 6 0 0 1 9-7" stroke="{m}" stroke-width="3.6" fill="none" stroke-linecap="round"/><path d="M4.4 10a4.6 4.6 0 0 1 6.6-5" stroke="{l}" stroke-width="0.9" fill="none" stroke-linecap="round"/>'
+
+
+def artichoke_quarter(leaf, heart, line):
+    """A quartered heart: the pale base at the stem end, its inner leaves fanning to the tip."""
+    return f'<path d="M8 15c-3 0-5-2-5.5-5C2 7 4 3.5 8 1.5c4 2 6 5.5 5.5 8.5-.5 3-2.5 5-5.5 5Z" fill="{leaf}"/><path d="M8 14c-2.2 0-3.7-1.5-3.9-3.5C3.9 8.4 5.5 6 8 4.6c2.5 1.4 4.1 3.8 3.9 5.9-.2 2-1.7 3.5-3.9 3.5Z" fill="{heart}"/><path d="M8 13 5.6 7.4M8 13l2.4-5.6M8 13V5.6" stroke="{line}" stroke-width="0.7" stroke-linecap="round"/>'
+
+
+def rocket_leaf(m, v):
+    """A rocket leaf: a round end lobe and smaller lobes in pairs down the rib."""
+    s = f'<path d="M2.5 13.5 11 5" stroke="{m}" stroke-width="1.3" stroke-linecap="round"/><ellipse cx="11.4" cy="4.6" rx="3.4" ry="2.7" fill="{m}" transform="rotate(-45 11.4 4.6)"/>'
+    for x, y, r in ((8.2, 7.8, 2.1), (5.8, 10.2, 1.7), (4, 12, 1.3)):
+        for dx in (-1, 1):
+            cx, cy = x + dx * r * 0.75, y + dx * r * 0.75
+            s += f'<ellipse cx="{f(cx)}" cy="{f(cy)}" rx="{f(r)}" ry="{f(r * 0.62)}" fill="{m}" transform="rotate(45 {f(cx)} {f(cy)})"/>'
+    return s + f'<path d="M3.5 12.5 12.4 3.6" stroke="{v}" stroke-width="0.7" stroke-linecap="round"/>'
+
+
+def asparagus_piece(m, tip, l):
+    """A short length of spear, cut on the bias, with the tip on it."""
+    return f'<rect x="5.6" y="4" width="4.8" height="10.5" rx="2.2" fill="{m}"/><path d="M5.6 7.2c0-2.8 1-5.7 2.4-5.7s2.4 2.9 2.4 5.7c-.8-.7-1.6-1-2.4-1s-1.6.3-2.4 1Z" fill="{tip}"/><path d="M6.6 5.2 8 6.2l1.4-1" stroke="{m}" stroke-width="0.7" fill="none" stroke-linecap="round"/><path d="M6.2 9.2l1.4.6M8.4 11.8l1.4.6" stroke="{l}" stroke-width="0.9" stroke-linecap="round"/>'
+
+
+def goya_slice(rind, flesh):
+    """A slice of a halved, seeded bitter melon: a bumpy green arch around a pale lining."""
+    s = f'<path d="M1.5 11.5a6.5 6.5 0 0 1 13 0h-3.6a2.9 2.9 0 0 0-5.8 0Z" fill="{rind}"/><path d="M3 11.5a5 5 0 0 1 10 0h-2.2a2.8 2.8 0 0 0-5.6 0Z" fill="{flesh}"/>'
+    for i in range(7):
+        a = math.pi + math.pi * (i + 0.5) / 7
+        s += f'<circle cx="{f(8 + 6.4 * math.cos(a))}" cy="{f(11.5 + 6.4 * math.sin(a))}" r="1" fill="{rind}"/>'
+    return s
+
+
+def whole_fish(back, belly, spot=None):
+    """A small whole fish on its side, head to the left, salt grilled."""
+    s = f'<path d="M1.2 8c1.8-2.8 4.8-3.6 7.8-3.4 1.6.1 2.8.8 3.6 1.8L15 4.4v7.2l-2.4-2c-.8 1-2 1.7-3.6 1.8-3 .2-6-.6-7.8-3.4Z" fill="{back}"/>'
+    s += f'<path d="M2.4 8.8c1.8 1.6 4.2 2.2 6.6 2.1 1.4-.1 2.6-.6 3.4-1.4-2-.6-6.2-1-10-.7Z" fill="{belly}"/>'
+    if spot:
+        s += f'<ellipse cx="5.8" cy="7.2" rx="1" ry="0.6" fill="{spot}"/>'
+    return s + '<circle cx="3.2" cy="7.4" r="0.6" fill="#1f1f1f"/><path d="M6.6 5.4l-.8 4.8M9.4 5l-.8 5.6" stroke="#3a3020" stroke-width="0.8" stroke-linecap="round" opacity="0.45"/>'
+
+
+def basil_leaf(m, v):
+    """A broad, cupped basil leaf with its side veins."""
+    return f'<path d="M8 1.5c3.6 2 5.2 5.4 4.6 8.6-.5 3-2.8 4.9-4.6 4.9s-4.1-1.9-4.6-4.9C2.8 6.9 4.4 3.5 8 1.5Z" fill="{m}"/><path d="M8 3.4v10.4M8 6.4 5.8 7.8M8 6.4l2.2 1.4M8 9.4l-2.6 1.4M8 9.4l2.6 1.4" stroke="{v}" stroke-width="0.7" fill="none" stroke-linecap="round"/>'
+
+
+def celery_slice(skin, flesh):
+    return f'<path d="M3 5.5a5 5 0 0 0 10 0" stroke="{skin}" stroke-width="3.6" fill="none" stroke-linecap="round"/><path d="M3.6 5.6a4.4 4.4 0 0 0 8.8 0" stroke="{flesh}" stroke-width="1.3" fill="none" stroke-linecap="round"/>'
+
+
+def capsule(x0, y0, x1, y1, w, m):
+    cx, cy, length = (x0 + x1) / 2, (y0 + y1) / 2, math.hypot(x1 - x0, y1 - y0) + w
+    return f'<rect x="{f(cx - length / 2)}" y="{f(cy - w / 2)}" width="{f(length)}" height="{w}" rx="{w / 2}" fill="{m}" transform="rotate({f(math.degrees(math.atan2(y1 - y0, x1 - x0)))} {f(cx)} {f(cy)})"/>'
+
+
+def wing(m, l):
+    return capsule(3.6, 4.6, 7, 10.2, 4.2, m) + '<circle cx="3.2" cy="3.8" r="2.6" fill="' + m + '"/>' + capsule(7.2, 10.4, 12.4, 5.4, 5, m) + capsule(12.6, 5, 14.2, 2.4, 2, m) + f'<path d="M4.4 6.6l2.2 3.4M8.6 9.6l3-2.8" stroke="{l}" stroke-width="1.1" stroke-linecap="round"/>'
+
+
+def brie_slice(rind, paste):
+    return f'<path d="M1.5 12.5 12 2c1.8.8 3 2.8 3 5.4Z" fill="{rind}"/><path d="M4.6 11.3 12.2 3.9c.9.6 1.5 1.7 1.6 3Z" fill="{paste}"/>'
+
+
+def grated_mound(m, l):
+    """A small mound of grated root, its shreds showing as short strokes."""
+    return f'<path d="M2.5 9c0-4 3-6.5 5.5-6.5S13.5 5 13.5 9 11 13.5 8 13.5 2.5 12.5 2.5 9Z" fill="{m}"/><path d="M5 6.5l1.2 1M8.5 5l.6 1.4M11 7.5l-1 1M4.6 10l1.4.4M8 9.2l.8 1.2M10.6 11l1.2-.6M7 12l1.2.2" stroke="{l}" stroke-width="0.8" stroke-linecap="round"/>'
+
+
+def fig_quarter(skin, pith, flesh, seed_color):
+    """A fig cut into quarters, cut face up: purple skin, a pale band, a red middle full of seeds."""
+    s = f'<path d="M8 1.5C10 4 14 8 13.5 11.5 13 14 10.5 14.8 8 14.8S3 14 2.5 11.5C2 8 6 4 8 1.5Z" fill="{skin}"/>'
+    s += f'<path d="M8 3.2C9.6 5.4 12.6 8.6 12.2 11.4 11.8 13.2 10 13.6 8 13.6S4.2 13.2 3.8 11.4C3.4 8.6 6.4 5.4 8 3.2Z" fill="{pith}"/>'
+    s += f'<path d="M8 5.6C9 7.2 10.8 9.4 10.6 11.2 10.4 12.3 9.2 12.5 8 12.5S5.6 12.3 5.4 11.2C5.2 9.4 7 7.2 8 5.6Z" fill="{flesh}"/>'
+    return s + "".join(f'<circle cx="{x}" cy="{y}" r="0.5" fill="{seed_color}"/>' for x, y in ((7.2, 9.6), (8.8, 9.4), (8, 8), (7, 11.2), (9, 11.2), (8, 10.6)))
+
+
+def crab_meat(m, red, fibre):
+    """A lump of white crab meat with the red-orange tinge of the shell on one side."""
+    return f'<path d="M1.5 8.5c.5-2.5 3-4 6-4.2 1.5-.1 2.5.6 3.6.2 1.5-.4 3 .6 3.4 2.5.6 1.6-.4 3.6-2.6 4.4-2.4 1-6 1.2-8.4.4C1.8 11.2 1.2 10 1.5 8.5Z" fill="{m}"/><path d="M3.4 6.4c1.6-1 3.4-1.4 5.4-1.3" stroke="{red}" stroke-width="1.7" stroke-linecap="round"/><path d="M3.6 9.2c2.6-.6 5.6-.8 8.6-.4M4.6 11c2-.3 4.2-.4 6-.2" stroke="{fibre}" stroke-width="0.8" fill="none" stroke-linecap="round"/>'
+
+
+def cream_swirl(m):
+    """Cream spooned on and drawn round into a spiral, as on a soup."""
+    return f'<path d="M8 8a1 1 0 0 1 2 0 2 2 0 0 1-4 0 3 3 0 0 1 6 0 4 4 0 0 1-8 0 5 5 0 0 1 10 0" stroke="{m}" stroke-width="1.5" fill="none" stroke-linecap="round"/>'
+
+
+def scrambled_curd(m, l, fold):
+    """A soft, folded curd of scrambled egg, uneven at the edge."""
+    return f'<path d="M2.5 8.5c-.5-3 2-5.5 4.5-5 1.5-1.5 4.5-1 5.5 1 2 .5 2.5 3 1.5 4.5.5 2-1 4-3.5 4-1.5 1.5-4 1-5-.5-2 0-3.5-1.5-3-4Z" fill="{m}"/><path d="M6.4 11.4c1.8-.2 3.4-1.4 3.8-3" stroke="{fold}" stroke-width="0.9" fill="none" stroke-linecap="round"/><ellipse cx="6.6" cy="5.8" rx="1.8" ry="1" fill="{l}"/>'
+
+
+def curds(m, l, shade):
+    """A spoonful of loose curds: a soft mound under small round lumps."""
+    s = f'<path d="M2.5 9c0-4 3-6.5 5.5-6.5S13.5 5 13.5 9 11 13.5 8 13.5 2.5 12.5 2.5 9Z" fill="{shade}"/>'
+    for x, y, r in ((5.4, 6.4, 2.2), (9, 5, 2.2), (11.4, 8.4, 2), (8, 8.6, 2.3), (4.8, 10.4, 2), (8.6, 11.6, 2), (11, 11.4, 1.6)):
+        s += f'<circle cx="{x}" cy="{y}" r="{r}" fill="{m}"/><circle cx="{f(x - 0.6)}" cy="{f(y - 0.6)}" r="0.6" fill="{l}"/>'
+    return s
+
+
+def coriander_leaf(m, stem, v):
+    """A flat leaf of three rounded lobes on a short stem, so it does not read as a pea."""
+    return f'<path d="M8 14.5V8.5" stroke="{stem}" stroke-width="1" stroke-linecap="round"/><circle cx="4.8" cy="7.6" r="3" fill="{m}"/><circle cx="11.2" cy="7.6" r="3" fill="{m}"/><circle cx="8" cy="5" r="3.3" fill="{m}"/><path d="M8 9.4V3.6M8 9.4 5 7.6M8 9.4l3-1.8" stroke="{v}" stroke-width="0.7" fill="none" stroke-linecap="round"/>'
+
+
+def filo_shard(edge, m, l):
+    """A broken shard of baked filo, its thin layers showing along one edge."""
+    return f'<path d="M1.5 7 5 3l5.5-.5 4 3-1 5-3 3.5-6 .5-2.5-3Z" fill="{edge}"/><path d="M3 6.4 5.8 3.4l4.8-.2 3.2 2.6-1.2 4.4-3 2.8-4.8.2-1.6-2.4Z" fill="{m}"/><path d="M4.4 6l2.4-2.4 3.8-.2M3.8 8.8l1.8-1.6" stroke="{l}" stroke-width="0.9" fill="none" stroke-linecap="round"/>'
+
+
+# A stalk of gai-lan with the broad leaf still on it.
+def stalk_with_leaf(stalk, leaf_m, vein):
+    return f'<path d="M2 14 8.5 7.5" stroke="{stalk}" stroke-width="2.6" stroke-linecap="round"/><path d="M7 9c-1-4 1.5-7.5 6.5-7.5.5 5-2.5 8-6.5 7.5Z" fill="{leaf_m}"/><path d="M8 8.2 12.6 2.6" stroke="{vein}" stroke-width="0.9" stroke-linecap="round"/>'
+
+
+# A thick wedge of squash, cut side up: a band of flesh with the skin along its outer arc.
+def squash_wedge(skin, flesh):
+    return f'<path d="M1.5 14A12.5 12.5 0 0 1 14 1.5V8.5A5.5 5.5 0 0 0 8.5 14Z" fill="{flesh}"/><path d="M1.5 14A12.5 12.5 0 0 1 14 1.5" stroke="{skin}" stroke-width="2" fill="none" stroke-linecap="round"/>'
+
+
+# A grape cut lengthwise, cut side up.
+def grape_half(skin, flesh, line):
+    return f'<ellipse cx="8" cy="8" rx="6.6" ry="5.2" fill="{skin}"/><ellipse cx="8" cy="8" rx="5.4" ry="4.1" fill="{flesh}"/><path d="M5 8h6" stroke="{line}" stroke-width="0.9" stroke-linecap="round"/>'
+
+
+# A small oily fish fillet, skin side up: a dark back, a silver belly and the line between.
+def oily_fillet(back, belly, line):
+    return f'<path d="M1 8.5C2 3.5 9 2.5 15 6.5c-3 5-10 7-14 2Z" fill="{belly}"/><path d="M1 8.5C2 3.5 9 2.5 15 6.5c-4 .6-9 1.4-14 2Z" fill="{back}"/><path d="M2.5 8.4C6 7.6 10 7.2 14 6.6" stroke="{line}" stroke-width="0.9" fill="none" stroke-linecap="round"/>'
+
+
+def curly_leaf(m, rib):
+    """A torn piece of curly kale, frilled all the way round, with its pale rib."""
+    s = f'<circle cx="8" cy="8" r="5" fill="{m}"/>'
+    for i in range(10):
+        a = math.tau * i / 10
+        s += f'<circle cx="{f(8 + 5.2 * math.cos(a))}" cy="{f(8 + 5.2 * math.sin(a))}" r="1.9" fill="{m}"/>'
+    return s + f'<path d="M3.5 12.5C6 10 9 7 12.5 3.5M7 9 5.6 6.4M9.4 6.8l2.6 1.4" stroke="{rib}" stroke-width="0.9" fill="none" stroke-linecap="round"/>'
+
+
+def king_oyster_slice(cap, flesh):
+    """Cut lengthwise: a thick pale stem under a small brown cap."""
+    return f'<rect x="4.6" y="4" width="6.8" height="11" rx="3" fill="{flesh}"/><path d="M3.4 5.2C3.4 3 5.4 1.6 8 1.6s4.6 1.4 4.6 3.6c0 1-.8 1.4-1.8 1.4H5.2c-1 0-1.8-.4-1.8-1.4Z" fill="{cap}"/><path d="M6.6 8v5" stroke="#e2d4b4" stroke-width="0.8" stroke-linecap="round"/>'
+
+
+def sprout(stem, leaf):
+    """A radish sprout: a thin white stem with two small round leaves at its tip."""
+    return f'<path d="M4 15C5 11 6.5 8 8.6 5.6" stroke="{stem}" stroke-width="1.2" fill="none" stroke-linecap="round"/><ellipse cx="7.2" cy="3.6" rx="2.3" ry="1.5" fill="{leaf}" transform="rotate(-30 7.2 3.6)"/><ellipse cx="11" cy="5.2" rx="2.3" ry="1.5" fill="{leaf}" transform="rotate(20 11 5.2)"/>'
+
+
+def maitake(cap, edge, stem):
+    """A torn piece of hen of the woods: overlapping fronds on a pale branching base."""
+    s = f'<path d="M8 15 5 9.5M8 15l3-5.2M8 15V6" stroke="{stem}" stroke-width="1.8" stroke-linecap="round"/>'
+    for x, y in ((4.4, 8.4), (11.6, 8.6), (5.8, 4.6), (10.2, 4.4), (8, 7)):
+        s += f'<ellipse cx="{x}" cy="{y}" rx="3" ry="2.2" fill="{cap}"/><path d="M{f(x - 2)} {f(y + 1)}c1.2.8 2.8.8 4 0" stroke="{edge}" stroke-width="0.8" fill="none" stroke-linecap="round"/>'
+    return s
+
+
+def segment(m, l):
+    """A plump fruit segment seen from the side it lies on: round outside, hollow inside."""
+    return f'<path d="M1.5 10.5a6.5 6 0 0 1 13 0c-2 1.4-4.2 2-6.5 2s-4.5-.6-6.5-2Z" fill="{m}"/><path d="M5 10.6 4.6 7M8 11V6M11 10.6 11.4 7" stroke="{l}" stroke-width="0.7" stroke-linecap="round"/>'
+
+
+def roast_slice(crust, pink, fat):
+    """A slice off a roast: a browned edge, a pink middle and a band of fat along one side."""
+    return f'<path d="M1.5 8c0-3.5 3-5.5 6.5-5.5s6.5 2 6.5 5.5-3 5.5-6.5 5.5S1.5 11.5 1.5 8Z" fill="{crust}"/><path d="M3 8.3c0-2.6 2.3-4.2 5-4.2s5 1.6 5 4.2-2.3 4-5 4-5-1.4-5-4Z" fill="{pink}"/><path d="M3 5.4c2.6-2.6 7.4-2.6 10 0" stroke="{fat}" stroke-width="1.4" fill="none" stroke-linecap="round"/>'
+
+
+def mackerel_skin():
+    """A mackerel fillet grilled skin side up, the way saba is served: a blue back with dark
+    wavy bars over a silver belly."""
+    return (
+        '<path d="M1 9c1-4 5-6.5 9-6.5s5 2.5 5 5.5-2 6-7 6-7.5-2-7-5Z" fill="#d2d9df"/>'
+        '<path d="M1.1 8.6C2.4 4.8 6.2 2.5 10 2.5c3 0 4.7 2 5 4.6-3.6 1-9 1.6-13.9 1.5Z" fill="#4f6a84"/>'
+        '<path d="M4 6.6c.6-.9 1.4.3 2-.6M6.6 4.6c.6-.9 1.4.3 2-.6M9.8 3.8c.6-.9 1.4.3 2-.6M8.4 6.6c.6-.9 1.4.3 2-.6M11.8 6.2c.6-.9 1.4.3 2-.6M3 8.4c.6-.9 1.4.3 2-.6M5.6 8.2c.6-.9 1.4.3 2-.6" stroke="#22303f" stroke-width="0.8" fill="none" stroke-linecap="round"/>'
+    )
+
+
+def lentils(m, l):
+    """A few cooked lentils: small flat discs, not beads."""
+    return "".join(f'<ellipse cx="{x}" cy="{y}" rx="2.4" ry="2" fill="{m}"/><path d="M{f(x - 1.4)} {f(y - .6)}a1.6 1.4 0 0 1 2.2-1" stroke="{l}" stroke-width="0.6" fill="none" stroke-linecap="round"/>' for x, y in ((5, 5.5), (10.5, 5), (8, 9.5), (4, 11), (12, 10.5)))
+
+
+def mizuna_sprig(m, stem):
+    """A cut length of mizuna: a thin pale stem with narrow, jagged leaflets off the top half."""
+    s = f'<path d="M2.5 13.5 13.5 2.5" stroke="{stem}" stroke-width="1.3" stroke-linecap="round"/>'
+    for t in (0.42, 0.62, 0.82):
+        x, y = 2.5 + 11 * t, 13.5 - 11 * t
+        for side in (-1, 1):
+            s += f'<path d="M{f(x)} {f(y)}l{f(side * -1.2)} {f(side * -3.6)}l{f(side * 0.6)} {f(side * 0.5)}l{f(side * -0.8)} {f(side * -1.6)}l{f(side * 2.6)} {f(side * 2.2)}Z" fill="{m}" stroke="{m}" stroke-width="0.9"/>'
+    return s
+
+
+def mushroom_quarter(cap, flesh, stem):
+    """A button mushroom cut in four through the stem, cut face up: half the cap's dome over half the stem."""
+    return f'<path d="M3.5 2.5C9 2.5 13.5 5.5 13.5 10H3.5Z" fill="{cap}"/><path d="M3.5 4C8 4 11.8 6.4 12 9H3.5Z" fill="{flesh}"/><rect x="3.5" y="8.6" width="4.4" height="5.4" rx="1" fill="{stem}"/>'
+
+
+def trefoil(m, v):
+    """Three rounded leaflets on a short stem, the way a mitsuba leaf sits."""
+    s = f'<path d="M8 9v6" stroke="{v}" stroke-width="1" stroke-linecap="round"/>'
+    for a in (-90, 30, 150):
+        x, y = 8 + 3.3 * math.cos(math.radians(a)), 7 + 3.3 * math.sin(math.radians(a))
+        s += f'<ellipse cx="{f(x)}" cy="{f(y)}" rx="3.4" ry="2.7" fill="{m}" transform="rotate({a} {f(x)} {f(y)})"/>'
+    return s + f'<path d="M8 7V2.6M8 7l3.4 2M8 7l-3.4 2" stroke="{v}" stroke-width="0.7" stroke-linecap="round"/>'
+
+
+def thick_wedge(skin, flesh, l):
+    """A wedge lying on its side: two cut faces meeting along a ridge, skin down one long edge."""
+    return f'<path d="M1.5 12C2 7 6.5 3 13 2.5c1 0 1.6.6 1.5 1.5-.5 5.5-5 10-11 10-1.2 0-2.1-.8-2-2Z" fill="{skin}"/><path d="M1.5 12C2 7 6.5 3 13 2.5c1 0 1.6.6 1.5 1.5-1.4 3.8-5.2 7-10.4 8.2-1.4.3-2.4.6-2.6-.2Z" fill="{flesh}"/><path d="M4 9.6C6 7 8.8 5.2 11.8 4.6" stroke="{l}" stroke-width="1.2" fill="none" stroke-linecap="round"/>'
+
+
+def serrated_leaf(m, v):
+    """A broad ovate leaf with a toothed edge, widest below the middle, as perilla is."""
+    n = 14
+    right, left = [], []
+    for i in range(n + 1):
+        t = i / n
+        w = 6.4 * math.sin(math.pi * t ** 0.75) + (0.5 if 0 < i < n and i % 2 else 0)
+        y = 15 - 13.5 * t
+        right.append((8 + w, y))
+        left.append((8 - w, y))
+    pts = right + left[::-1][1:-1]
+    d = "M" + "L".join(f"{f(x)} {f(y)}" for x, y in pts) + "Z"
+    veins = "".join(f'M8 {y}l{dx} -2.6' for y, dx in ((11.5, 3.6), (11.5, -3.6), (8, 3.2), (8, -3.2), (5, 2.2), (5, -2.2)))
+    return f'<path d="{d}" fill="{m}"/><path d="M8 15V3{veins}" stroke="{v}" stroke-width="0.8" fill="none" stroke-linecap="round"/>'
+
+
+def pulp(m, l, seed):
+    """A spoonful of seeded fruit pulp: a glossy pool with dark seeds through it."""
+    s = f'<path d="M2 9c0-3.5 3-5.5 6-5 2-1 5 0 5.5 2.5 1.5 2 0 5-2 5.5-2 1.5-5 1.5-7 .5-2-.5-2.5-2-2.5-3.5Z" fill="{m}"/><ellipse cx="6.4" cy="6.6" rx="1.8" ry="0.9" fill="{l}" opacity="0.7"/>'
+    return s + "".join(f'<ellipse cx="{x}" cy="{y}" rx="1" ry="0.75" fill="{seed}"/>' for x, y in ((5, 9.6), (8.6, 7.6), (11, 9.2), (7.8, 11.2), (10.4, 6)))
+
+
+def arils(m, l):
+    """Three loose pomegranate seeds, each a rounded kernel with a glint."""
+    s = ""
+    for x, y, a in ((5.2, 5.6, 20), (10.8, 6.6, -30), (7.6, 11.2, 70)):
+        s += f'<path d="M{x - 2.4} {y + 0.4}c0-1.8 1.2-2.8 2.4-2.8s2.4 1 2.4 2.6c0 1.6-1 2.6-2.4 2.6s-2.4-.8-2.4-2.4Z" fill="{m}" transform="rotate({a} {x} {y})"/><circle cx="{f(x - 0.7)}" cy="{f(y - 0.8)}" r="0.7" fill="{l}"/>'
+    return s
+
+
+def tidbit(m, l):
+    """A pineapple chunk: a ring sector with fibres running from the core to the rind."""
+    return f'<path d="M1.5 5C5.5 1.6 10.5 1.6 14.5 5L10.6 13.5H5.4Z" fill="{m}"/><path d="M5 5 6.8 12M8 3.8V12.4M11 5 9.2 12" stroke="{l}" stroke-width="0.8" stroke-linecap="round"/>'
+
+
+def draped(m, fat, fold):
+    """A thin slice of cured ham laid in loose folds, the fat along one edge."""
+    return f'<path d="M2 9c-.5-3 1.5-5.5 4-5 1-1.5 3.5-2 5-.5 2-.2 3.5 1.8 3 4 1.5 1.5.5 4.5-1.5 4.5-1 1.6-3.6 2-5 .8-2 1-4.6 0-5.5-1.8Z" fill="{m}"/><path d="M2.6 9.6c1 1.6 3.2 2.4 5 1.5 1.6 1 3.8.6 4.8-.8" stroke="{fat}" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M4.6 7c1.6-1.2 3.4-1.2 5 0M7.4 4.6c1.2 1 1.4 2.6.6 4" stroke="{fold}" stroke-width="0.8" fill="none" stroke-linecap="round"/>'
+
+
+def shaving(m, l, edge):
+    """A thin shard of hard cheese pulled off with a peeler, one edge curled up into the light."""
+    return f'<path d="M2 7 9.5 2.6 14 5.4 12.2 11.6 5.4 13.6 2.4 11Z" fill="{m}"/><path d="M2.8 7.2 9.4 3.4" stroke="{l}" stroke-width="1.5" stroke-linecap="round"/><path d="M5.6 12.8 11.8 11" stroke="{edge}" stroke-width="0.8" stroke-linecap="round"/>'
+
+
+def quill(m, l):
+    """A penne quill: a ridged tube cut on the slant at both ends."""
+    return f'<g transform="rotate(-20 8 8)"><path d="M1.5 10.5 4.5 5.5H14.5L11.5 10.5Z" fill="{m}"/><ellipse cx="13" cy="8" rx="1.1" ry="2.8" fill="{l}" transform="rotate(31 13 8)"/><path d="M4.4 7h8.4M3.4 9h8.4" stroke="{l}" stroke-width="0.6"/></g>'
+
+
+def parsley_sprig(m, stem):
+    s = f'<path d="M4 14.5 8 9M8 9 5 5.5M8 9l1.5-5M8 9l4 .5" stroke="{stem}" stroke-width="0.9" fill="none" stroke-linecap="round"/>'
+    for cx, cy in ((4.6, 4.8), (9.8, 3.4), (12.4, 9)):
+        for dx, dy in ((-1.3, 0.6), (1.3, 0.6), (0, -1.1)):
+            s += f'<circle cx="{f(cx + dx)}" cy="{f(cy + dy)}" r="1.6" fill="{m}"/>'
+    return s
+
+
+def ribbed_leaf(m, rib):
+    """A torn leaf with a thick pale midrib, as radicchio shows."""
+    return f'<path d="M2 8c0-4 3-6 6-5.5 2-1.5 5 0 5.5 2.5 2 1.5 1.5 5-.5 6-1 2.5-4 3.5-6.5 2-3 .5-4.5-2-4.5-5Z" fill="{m}"/><path d="M3.5 12.5C6 10 9 7 12.5 4" stroke="{rib}" stroke-width="1.6" fill="none" stroke-linecap="round"/><path d="M6 10 4.2 6.4M8.4 7.6 7.4 3.8M8 9.6l3.6 1M10.2 6.8l3 .8" stroke="{rib}" stroke-width="0.7" fill="none" stroke-linecap="round"/>'
+
+
+def rhubarb_piece(m, l, cut):
+    return f'<rect x="1.5" y="4.5" width="13" height="7" rx="1.6" fill="{m}"/><path d="M3.5 6.5h8M4 9.4h7.5" stroke="{l}" stroke-width="0.9" stroke-linecap="round"/><ellipse cx="13.2" cy="8" rx="1.2" ry="3.1" fill="{cut}"/>'
+
+
+def sashimi(m, l, skin=None):
+    """A slice cut across the grain: a flat block with the fat lines running across it."""
+    s = f'<rect x="1.5" y="4" width="13" height="8" rx="1.4" fill="{m}"/><path d="M4.6 4.6c-.8 2-1 4.6-.4 6.8M8.2 4.6c-.8 2-1 4.6-.4 6.8M11.8 4.6c-.8 2-1 4.6-.4 6.8" stroke="{l}" stroke-width="0.9" fill="none" stroke-linecap="round"/>'
+    if skin:
+        s += f'<path d="M2.4 4.7h11.2" stroke="{skin}" stroke-width="1.1" stroke-linecap="round"/>'
+    return s
+
+
+def roe(m, l):
+    """Loose beads of roe in a small heap, each with its own glint."""
+    beads = ((5, 5.4), (9.4, 4.4), (12.2, 7.8), (8, 8.6), (4, 9.8), (7.4, 12.6), (11.4, 11.8))
+    return "".join(f'<circle cx="{x}" cy="{y}" r="2.2" fill="{m}"/><circle cx="{f(x - 0.7)}" cy="{f(y - 0.8)}" r="0.7" fill="{l}"/>' for x, y in beads)
+
+
+def small_fillet(skin, back, line):
+    """A small oily fish fillet skin side up, tail left on, with its dark back along one edge."""
+    return f'<path d="M1 8.4C2.6 5 9 4.4 13 6.6L15.2 4.8 14.8 8 15.2 11.2 13 9.6C9 11.6 2.6 11.4 1 8.4Z" fill="{skin}"/><path d="M1.6 7.6C3.6 5.4 9 4.8 13 6.6" stroke="{back}" stroke-width="1.6" fill="none" stroke-linecap="round"/><path d="M3 8.6C6 7.8 9.6 7.8 12.6 8.2" stroke="{line}" stroke-width="0.7" fill="none" stroke-linecap="round"/>'
+
+
+def uni_lobe(m, l, groove):
+    return f'<path d="M2 8c0-2 1.2-3.2 3-3.2.8-.6 1.8-.6 2.6 0 .8-.6 1.8-.6 2.6 0 .8-.6 1.8-.6 2.6 0 1.4.4 2.2 1.6 2.2 3.2s-.8 2.8-2.2 3.2c-.8.6-1.8.6-2.6 0-.8.6-1.8.6-2.6 0-.8.6-1.8.6-2.6 0C3.2 11.2 2 10 2 8Z" fill="{m}"/><path d="M3.6 8h8.8" stroke="{groove}" stroke-width="0.8" stroke-linecap="round"/>' + "".join(f'<circle cx="{x}" cy="{y}" r="0.7" fill="{l}"/>' for x, y in ((4.6, 6.4), (7.4, 6.2), (10.2, 6.4), (6, 9.8), (8.8, 9.8), (11.6, 9.4)))
+
+
+def long_fish(belly, back, char, eye):
+    """A long, slender fish such as saury, grilled whole, with a pointed head and a forked tail."""
+    return (
+        f'<path d="M.6 8C3 5.8 10 5.6 13.2 7.2L15.4 5.6 14.8 8 15.4 10.4 13.2 8.8C10 10.4 3 10.2.6 8Z" fill="{belly}"/>'
+        f'<path d="M.6 8C3 5.8 10 5.6 13.2 7.2V8C10 7.4 4 7.4.6 8Z" fill="{back}"/>'
+        f'<path d="M5 7.6l.5 1.4M8 7.6l.5 1.5M11 7.8l.4 1.2" stroke="{char}" stroke-width="0.7" stroke-linecap="round"/>'
+        f'<circle cx="2.6" cy="7.6" r="0.5" fill="{eye}"/>'
+    )
+
+
+def raisin(m, l):
+    return f'<path d="M3 8.5c-.5-3 2-5 5-4.6 2.5-.6 5 .8 5.2 3.4.4 2.8-1.6 4.6-4.6 4.6-3 .4-5.2-1-5.6-3.4Z" fill="{m}"/><path d="M5 7.4c1.5-1 3-1 4.5 0M5.8 10c1.2.6 2.8.6 4.2-.2" stroke="{l}" stroke-width="0.8" fill="none" stroke-linecap="round"/>'
+
+
+def shiso_leaf(m, v):
+    """A broad leaf with a toothed edge and a short point, as shiso is laid on a dish."""
+    top, bottom = [], []
+    for i in range(15):
+        t = i / 14
+        w = 5.4 * math.sin(math.pi * min(1, t * 1.08)) ** 0.75 * (1 - 0.25 * t)
+        w += 0.55 if i % 2 else 0
+        x = 2 + 12.5 * t
+        top.append((x, 8 - w))
+        bottom.append((x, 8 + w))
+    pts = top + bottom[::-1]
+    d = "M" + "L".join(f"{f(x)} {f(y)}" for x, y in pts) + "Z"
+    veins = "M2.6 8H13.4" + "".join(f"M{x} 8l1.8-{h}M{x} 8l1.8 {h}" for x, h in ((4.5, 3), (7, 3.4), (9.5, 2.8)))
+    return f'<path d="{d}" fill="{m}" stroke="{m}" stroke-width="0.6"/><path d="{veins}" stroke="{v}" stroke-width="0.6" fill="none" stroke-linecap="round"/>'
+
+
+def lobed_leaf(m, v):
+    """A deeply cut leaf with rounded lobes in pairs along the rib, as shungiku and chrysanthemum leaves are."""
+    s = f'<path d="M1.5 12.5 13 3.5" stroke="{m}" stroke-width="1.4" stroke-linecap="round"/>'
+    for t, r in ((0.28, 2.9), (0.53, 2.7), (0.76, 2.2)):
+        x, y = 1.5 + 11.5 * t, 12.5 - 9 * t
+        for side in (-1, 1):
+            cx, cy = x + side * 1.8, y + side * 2
+            s += f'<ellipse cx="{f(cx)}" cy="{f(cy)}" rx="{r}" ry="{f(r * 0.7)}" fill="{m}" transform="rotate({-38 + side * 50} {f(cx)} {f(cy)})"/>'
+    s += f'<ellipse cx="13" cy="3.5" rx="2.4" ry="1.7" fill="{m}" transform="rotate(-38 13 3.5)"/>'
+    return s + f'<path d="M2.5 11.7 13 3.5" stroke="{v}" stroke-width="0.5" stroke-linecap="round"/>'
+
+
+def steak_strip(crust, band, inner):
+    """A slice cut across a seared steak: crust at the ends, pink through the middle."""
+    return f'<rect x="1.5" y="4.5" width="13" height="7" rx="2" fill="{crust}"/><rect x="2.6" y="5.4" width="10.8" height="5.2" rx="1.6" fill="{band}"/><rect x="3.8" y="6.2" width="8.4" height="3.6" rx="1.4" fill="{inner}"/>'
+
+
+def small_fish(back, belly, mark):
+    """A small fish grilled whole, head to the left and the tail forked."""
+    return (
+        f'<path d="M12.2 8 15.2 5.4 14.4 8 15.2 10.6Z" fill="{back}"/>'
+        f'<path d="M1.2 8C2.6 5.6 7.5 5 12.6 7.2V8.8C7.5 11 2.6 10.4 1.2 8Z" fill="{belly}"/>'
+        f'<path d="M2 7.3C4.6 5.8 8.6 5.6 12.4 7.3" stroke="{back}" stroke-width="1.5" fill="none" stroke-linecap="round"/>'
+        f'<path d="M5.5 8.4 6.6 7.4M8.4 8.6 9.4 7.6" stroke="{mark}" stroke-width="0.9" stroke-linecap="round"/>'
+        f'<circle cx="3" cy="7.6" r="0.7" fill="#2a2420"/>'
+    )
+
+
+def star_anise(m, s):
+    """Eight pointed pods around the stalk, a seed showing in some."""
+    out = ""
+    for i in range(8):
+        out += f'<path d="M8 8Q10.8 6.4 15 8 10.8 9.6 8 8Z" fill="{m}" transform="rotate({i * 45} 8 8)"/>'
+        if i % 2 == 0:
+            out += f'<ellipse cx="11" cy="8" rx="1.1" ry="0.55" fill="{s}" transform="rotate({i * 45} 8 8)"/>'
+    return out + f'<circle cx="8" cy="8" r="1.3" fill="{m}"/>'
+
+
+def narrow_sprig(m, stem=None):
+    """A short stem with long, narrow leaves, as tarragon is picked."""
+    st = stem or m
+    s = f'<path d="M3 13 12 4" stroke="{st}" stroke-width="0.8" stroke-linecap="round"/>'
+    for x, y, a in ((5, 11, -95), (7, 9, 5), (9, 7, -95), (10.6, 5.4, 5), (12, 4, -45)):
+        s += f'<path d="M{x} {y}q2.8-1.4 5.6 0-2.8 1.4-5.6 0Z" fill="{m}" transform="rotate({a} {x} {y})"/>'
+    return s
+
+
+def powder(m, l=None):
+    """A fine dusting, specks smaller than any grain or seed."""
+    pts = ((3, 5), (5.5, 3.2), (8.4, 4.2), (11.6, 3.6), (13, 6.4), (10, 7), (6.6, 6.8), (3.8, 8.6), (7.8, 9.4), (11.2, 9.8), (13.4, 11.4), (9.4, 12.4), (5.6, 11.8), (3, 12), (7, 14))
+    s = "".join(f'<circle cx="{x}" cy="{y}" r="0.85" fill="{m}"/>' for x, y in pts)
+    if l:
+        s += "".join(f'<circle cx="{x}" cy="{y}" r="0.7" fill="{l}"/>' for x, y in ((5, 7.4), (10.6, 5.4), (8.6, 11), (12.2, 8.2)))
+    return s
+
+
+def sector(skin, flesh):
+    """A wedge lying on its cut face: a pie slice of flesh under a thin rim of skin."""
+    return f'<path d="M3 14V2.5A11.5 11.5 0 0 1 14.5 14Z" fill="{skin}"/><path d="M3 14V4.3A9.7 9.7 0 0 1 12.7 14Z" fill="{flesh}"/>'
+
+
+def round_leaflets(m, stem):
+    s = f'<path d="M3 13 12.5 3.5" stroke="{stem}" stroke-width="1" stroke-linecap="round"/>'
+    for x, y, r in ((3.9, 8.5, 2.1), (7.5, 12.1, 2.1), (6.6, 5.8, 2.2), (10.2, 9.4, 2.2), (12, 4, 2.8)):
+        s += f'<circle cx="{x}" cy="{y}" r="{r}" fill="{m}"/>'
+    return s
+
+
+def rice_cake(m, l):
+    return f'<rect x="1.5" y="4.5" width="13" height="7" rx="3.5" fill="{m}"/><path d="M4 6.6h7" stroke="{l}" stroke-width="1.2" stroke-linecap="round"/>'
+
+
+def frond(m, rib):
+    return f'<path d="M1.5 9c1-3 3-2 4-4s3-3 5-2 2 2 4 2c-.5 2-2 2.5-2 4.5s-2 3.5-4 3-3 .5-4.5-.5S1 11 1.5 9Z" fill="{m}"/><path d="M3 10.5c3-1.5 6-4 10-5.5" stroke="{rib}" stroke-width="1" fill="none" stroke-linecap="round"/>'
+
+
+def folded_sheet(m, fold):
+    return f'<path d="M2 5c2-2 4-1 6-2s4-1 6 1c.5 2.5-.5 5 0 7.5-2 2-4 1-6 2s-4 1-6-1c-.5-2.5.5-5 0-7.5Z" fill="{m}"/><path d="M3 7.5c3 1 7 .5 10-.5M3.5 10.5c3 1 6 .5 9-.5" stroke="{fold}" stroke-width="0.9" fill="none" stroke-linecap="round"/>'
+
+
+def strip_heap(m, l):
+    """A small heap of thin strips, as shredded pickled ginger is served."""
+    s = "".join(f'<rect x="2.5" y="{f(7.2 - h)}" width="11" height="1.6" rx="0.8" fill="{m}" transform="rotate({r} 8 8)"/>' for h, r in ((2.4, -24), (0.8, 18), (-1, -8), (-2.6, 30), (0.2, 62)))
+    return s + f'<path d="M5 6.4l5-2" stroke="{l}" stroke-width="0.7" stroke-linecap="round"/>'
 
 
 # Fills -------------------------------------------------------------------------------------
@@ -629,17 +1026,6 @@ def block(rng, m, l, edge):
     return f'<rect x="{C - 21}" y="{C - 17}" width="42" height="34" rx="4" fill="{edge}"/><rect x="{C - 19}" y="{C - 15}" width="38" height="30" rx="3" fill="{m}"/><path d="M{C - 13} {C - 9}h14" stroke="{l}" stroke-width="3" stroke-linecap="round"/>'
 
 
-def layered_square(rng, top, sauce, edge):
-    return f'<rect x="{C - 22}" y="{C - 22}" width="44" height="44" rx="4" fill="{edge}"/><rect x="{C - 19}" y="{C - 19}" width="38" height="38" rx="3" fill="{top}"/>' + "".join(f'<path d="{blob_path(rng, x, y, 5, 0.25, 7)}" fill="{sauce}"/>' for x, y in scatter_in_circle(rng, C, C, 14, 6, 9))
-
-
-def rolls(rng, m, l, fill_color):
-    s = ""
-    for dy in (-14, 0, 14):
-        s += f'<rect x="{C - 24}" y="{C + dy - 6}" width="48" height="12" rx="6" fill="{m}"/><path d="M{C - 20} {C + dy}h40" stroke="{fill_color}" stroke-width="3.2" stroke-linecap="round" opacity="0.6"/><path d="M{C - 18} {C + dy - 3}h20" stroke="{l}" stroke-width="1.2" stroke-linecap="round"/>'
-    return s
-
-
 def row_of(rng, piece_svg, size, n=5):
     """Pieces set side by side the way gyoza come out of the pan, two short rows."""
     s = ""
@@ -663,6 +1049,36 @@ def covering_slices(rng, piece_svg, size, n=5):
     s = ""
     for (dx, dy, rot) in [(-10, -11, -20), (9, -10, 15), (-12, 6, 10), (10, 8, -15), (0, -1, 5)][:n]:
         s += place(piece_svg, C + dx, C + dy, size, rot)
+    return s
+
+
+def kale_bed(rng):
+    colors = ["#2f5f2e", "#3a6a35", "#447540"]
+    s = f'<path d="{blob_path(rng, C, C, R * 0.95, 0.1)}" fill="{colors[0]}"/>'
+    for i, (x, y) in enumerate(scatter_in_circle(rng, C, C, R * 0.72, 16)):
+        s += place(curly_leaf(colors[i % len(colors)], "#a8cf8e"), x, y, 18, rng.uniform(0, 360))
+    return s
+
+
+def lasagna_top(rng):
+    """A square of lasagna from above: browned cheese, with sauce seeping out at the edges."""
+    s = f'<rect x="{C - 22}" y="{C - 22}" width="44" height="44" rx="4" fill="#b8502f"/><rect x="{C - 19}" y="{C - 19}" width="38" height="38" rx="3" fill="#eec060"/>'
+    for x, y in ((C - 14, C + 12), (C + 13, C - 5), (C + 3, C + 15), (C - 10, C - 15)):
+        s += f'<path d="{blob_path(rng, x, y, 4.6, 0.3, 7)}" fill="#c43a2a"/>'
+    for x, y in scatter_in_circle(rng, C, C, 13, 6, 7):
+        s += f'<path d="{blob_path(rng, x, y, 2.4, 0.3, 6)}" fill="#d49a48"/>'
+    return s + f'<path d="{blob_path(rng, C - 8, C - 8, 6, 0.3, 7)}" fill="#ffffff" opacity="0.22"/>'
+
+
+def spring_rolls(rng, m, l, shrimp, herb):
+    """Fresh rolls with the herbs and halved shrimp showing through the wrapper."""
+    s = ""
+    for dy in (-14, 0, 14):
+        s += f'<rect x="{C - 24}" y="{C + dy - 6}" width="48" height="12" rx="6" fill="{m}"/>'
+        s += f'<path d="M{C - 20} {C + dy + 2}h40" stroke="{herb}" stroke-width="2.6" stroke-linecap="round" opacity="0.55"/>'
+        for dx in (-14, 0, 14):
+            s += f'<path d="M{C + dx - 4} {C + dy + 1}a4 3.4 0 0 1 8 0" stroke="{shrimp}" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>'
+        s += f'<path d="M{C - 18} {C + dy - 3.6}h20" stroke="{l}" stroke-width="1.2" stroke-linecap="round"/>'
     return s
 
 
