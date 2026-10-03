@@ -21,14 +21,26 @@ nonisolated enum RecipePageParser {
 
     static func structuredRecipe(in scripts: [String]) -> ChefRecipe? {
         for script in scripts {
-            guard let data = script.data(using: .utf8),
-                  let root = try? JSONSerialization.jsonObject(with: data)
-            else { continue }
+            guard let root = jsonObject(script) else { continue }
             for object in recipeObjects(in: root) {
                 if let recipe = makeRecipe(from: object) { return recipe }
             }
         }
         return nil
+    }
+
+    // Some pages break lines inside their JSON-LD strings, which JSON does not allow,
+    // so a script that does not parse is read again with its control characters as spaces.
+    private static func jsonObject(_ script: String) -> Any? {
+        if let data = script.data(using: .utf8),
+           let root = try? JSONSerialization.jsonObject(with: data) {
+            return root
+        }
+        let cleaned = String(String.UnicodeScalarView(script.unicodeScalars.map {
+            $0.value < 0x20 ? " " : $0
+        }))
+        guard let data = cleaned.data(using: .utf8) else { return nil }
+        return try? JSONSerialization.jsonObject(with: data)
     }
 
     private static func recipeObjects(in value: Any) -> [[String: Any]] {
@@ -131,14 +143,19 @@ nonisolated enum RecipePageParser {
     }
 
     private static func durationMinutes(_ value: String?) -> Int? {
-        guard let value, let regex = try? NSRegularExpression(pattern: #"^P(?:(\d+)D)?(?:T(?:(\d+)H)?(?:(\d+)M)?)?$"#, options: [.caseInsensitive]),
+        let number = #"(\d+(?:[.,]\d+)?)"#
+        guard let value = value?.trimmingCharacters(in: .whitespaces),
+              let regex = try? NSRegularExpression(
+                pattern: "^P(?:\(number)D)?(?:T(?:\(number)H)?(?:\(number)M)?(?:\(number)S)?)?$",
+                options: [.caseInsensitive]
+              ),
               let match = regex.firstMatch(in: value, range: NSRange(value.startIndex..., in: value))
         else { return nil }
-        func count(_ index: Int) -> Int {
+        func count(_ index: Int) -> Double {
             guard let range = Range(match.range(at: index), in: value) else { return 0 }
-            return Int(value[range]) ?? 0
+            return Double(value[range].replacingOccurrences(of: ",", with: ".")) ?? 0
         }
-        let minutes = count(1) * 1440 + count(2) * 60 + count(3)
+        let minutes = Int((count(1) * 1440 + count(2) * 60 + count(3) + count(4) / 60).rounded(.up))
         return minutes > 0 ? minutes : nil
     }
 }
