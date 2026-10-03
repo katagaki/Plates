@@ -7178,6 +7178,23 @@
         }
       }
     },
+    "Ingredient.Name.PeaShoots": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pea shoots"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "豆苗"
+          }
+        }
+      }
+    },
     "Ingredient.Name.Peas": {
       "extractionState": "manual",
       "localizations": {

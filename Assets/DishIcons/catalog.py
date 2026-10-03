@@ -103,6 +103,7 @@ V["nira"] = {"cut": p(julienne("#3f6b3a", "#5f8f45"), 11, 7)}
 V["okra"] = {"slices": p('<path d="M8 1.5 10 4.5 13.6 4.8 12.4 8 13.6 11.2 10 11.5 8 14.5 6 11.5 2.4 11.2 3.6 8 2.4 4.8 6 4.5Z" fill="#5f9a45"/><circle cx="8" cy="8" r="3.2" fill="#e8efcf"/>' + "".join(f'<circle cx="{f(8 + 2 * math.cos(math.tau * i / 5))}" cy="{f(8 + 2 * math.sin(math.tau * i / 5))}" r="0.6" fill="#c5dea8"/>' for i in range(5)), 10, 6)}
 V["onion"] = {"rings": p(ring("#efe2c4", "#f8f2e2", 2.2), 11, 5), "diced": p(dice("#f4ecd6", "#fbf7ea"), 7, 9), "caramelized": p(shreds("#b9763c", "#d39a5a"), 12, 5)}
 V["parsnip"] = {"coins": p(round_slice("#e2cfa0", "#f2e6c4", core="#e8d6a8"), 11, 6), "roasted": p(chunk("#d9a85c", "#f0d49a"), 12, 4)}
+V["pea-shoots"] = {"shoots": p(pea_shoot("#bfe08e", "#5fa83f", "#7fb85a"), 14, 5)}
 V["peas"] = {"peas": p(small_round("#6aa04f", "#a8cf8e"), 6, 10)}
 V["potato"] = {"chunks": p(chunk("#ead08f", "#f6e3b0"), 12, 4), "wedges": p(thick_wedge("#9a6630", "#e9b860", "#f6d68e"), 15, 4), "slices": p(round_slice("#e6c36f", "#f4dc9a"), 13, 4), "mash": fl(lambda r: smooth(r, "#f2e2b0", "#faf0d0", ridges="#e4cf92"), PLATES + BOWLS)}
 V["pumpkin"] = {"cubes": p(dice("#f08a2b", "#f7ad5c"), 11, 6), "soup": fl(lambda r: soup(r, "#f08a2b", "#f7ad5c"), BOWLS)}

@@ -5139,6 +5139,20 @@
         ]
       }
     },
+    "pea-shoots": {
+      "shoots": {
+        "kind": "piece",
+        "file": "Pieces/PeaShootsShoots.svg",
+        "size": 18,
+        "count": 5,
+        "tier": 0,
+        "rank": 0,
+        "tones": [
+          "#6ab145",
+          "#bfe08e"
+        ]
+      }
+    },
     "peach": {
       "slices": {
         "kind": "piece",

@@ -653,6 +653,11 @@ def sprout(stem, leaf):
     return f'<path d="M4 15C5 11 6.5 8 8.6 5.6" stroke="{stem}" stroke-width="1.2" fill="none" stroke-linecap="round"/><ellipse cx="7.2" cy="3.6" rx="2.3" ry="1.5" fill="{leaf}" transform="rotate(-30 7.2 3.6)"/><ellipse cx="11" cy="5.2" rx="2.3" ry="1.5" fill="{leaf}" transform="rotate(20 11 5.2)"/>'
 
 
+def pea_shoot(stem, leaf, tendril):
+    """A cut length of pea shoot: a pale green stem with round leaves at the top and a curled tendril."""
+    return f'<path d="M2.5 14 10 5" stroke="{stem}" stroke-width="1.4" stroke-linecap="round"/><path d="M10.4 4.6c.6-2 2.6-3 4-2 1 .8.2 2.2-.8 1.6" stroke="{tendril}" stroke-width="0.8" fill="none" stroke-linecap="round"/><ellipse cx="7.4" cy="5.2" rx="2.8" ry="2" fill="{leaf}" transform="rotate(-40 7.4 5.2)"/><ellipse cx="11.6" cy="8" rx="2.8" ry="2" fill="{leaf}" transform="rotate(20 11.6 8)"/><ellipse cx="4.6" cy="9.6" rx="2.2" ry="1.6" fill="{leaf}" transform="rotate(-20 4.6 9.6)"/>'
+
+
 def maitake(cap, edge, stem):
     """A torn piece of hen of the woods: overlapping fronds on a pale branching base."""
     s = f'<path d="M8 15 5 9.5M8 15l3-5.2M8 15V6" stroke="{stem}" stroke-width="1.8" stroke-linecap="round"/>'
