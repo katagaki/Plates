@@ -21,6 +21,14 @@ enum RecipePageLoader {
             return recipe
         }
         if let recipe = try await onePanRecipe(at: url) { return recipe }
+        var recipe = try await structuredRecipe(at: url, sharing: page)
+        recipe.page?.url = url.absoluteString
+        return recipe
+    }
+
+    /// A recipe read from the page's structured data: what Safari read off the page first,
+    /// then the page downloaded, then the page loaded in a hidden web view.
+    private static func structuredRecipe(at url: URL, sharing page: SafariPage) async throws -> ChefRecipe {
         if let recipe = RecipePageParser.structuredRecipe(in: page.jsonLD) { return recipe }
 
         let downloaded = try? await download(url)
@@ -39,14 +47,14 @@ enum RecipePageLoader {
         throw LoadError.noRecipe
     }
 
-    private struct SharedPage {
+    private struct SafariPage {
         var url: URL?
         var jsonLD: [String] = []
     }
 
-    private static func sharedPage(from items: [NSExtensionItem]) async throws -> SharedPage {
+    private static func sharedPage(from items: [NSExtensionItem]) async throws -> SafariPage {
         let providers = items.flatMap { $0.attachments ?? [] }
-        var page = SharedPage()
+        var page = SafariPage()
         for provider in providers where provider.hasItemConformingToTypeIdentifier(UTType.propertyList.identifier) {
             guard let dictionary = try? await propertyList(from: provider),
                   let result = dictionary[NSExtensionJavaScriptPreprocessingResultsKey] as? [String: Any]

@@ -62,9 +62,9 @@ nonisolated enum RecipePageParser {
 
     private static func makeRecipe(from object: [String: Any]) -> ChefRecipe? {
         guard let title = object["name"] as? String, !title.isEmpty else { return nil }
-        let ingredients = (object["recipeIngredient"] as? [String] ?? [])
+        let lines = (object["recipeIngredient"] as? [String] ?? [])
             .filter { !$0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
-            .map(ingredient)
+        let ingredients = lines.map(ingredient)
         let instructions = instructionLines(object["recipeInstructions"])
         guard !ingredients.isEmpty, !instructions.isEmpty else { return nil }
         var titles = Set<String>()
@@ -84,17 +84,35 @@ nonisolated enum RecipePageParser {
             let cook = durationMinutes(object["cookTime"] as? String)
             time = prep == nil && cook == nil ? "" : "\((prep ?? 0) + (cook ?? 0)) min"
         }
+        let serves = yieldText(object["recipeYield"])
         return ChefRecipe(
             id: ChefRecipe.makeID(from: title),
             title: title,
             time: time,
-            serves: yieldText(object["recipeYield"]),
+            serves: serves,
             tried: nil,
             ingredients: .init(supermarket: ingredients),
             tools: [],
             steps: steps,
-            troubleshooting: []
+            troubleshooting: [],
+            page: .init(
+                title: title,
+                time: time,
+                serves: serves,
+                ingredients: lines,
+                steps: instructions.map(pageStep)
+            )
         )
+    }
+
+    /// A step as the app is handed it: the page's name for it in front of its text, when the
+    /// name says something the text does not.
+    private static func pageStep(_ line: (name: String, text: String)) -> String {
+        let name = line.name.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !name.isEmpty, !line.text.hasPrefix(name.trimmingCharacters(in: .punctuationCharacters)) else {
+            return line.text
+        }
+        return "\(name): \(line.text)"
     }
 
     private static func instructionLines(_ value: Any?) -> [(name: String, text: String)] {

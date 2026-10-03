@@ -25,6 +25,8 @@ struct MainView: View {
     @State private var showTriedOnly = false
     @State private var search = ""
     @State private var generation: Generation?
+    /// The shared web page being sorted, one at a time.
+    @State private var sharedImport: SharedImport?
     @State private var isShowingLimits = false
     @AppStorage("Onboarding.Completed") private var onboardingCompleted = false
     @State private var isOnboarding = false
@@ -63,7 +65,7 @@ struct MainView: View {
                         }
                     }
                 }
-                .sheet(item: $generation) { generation in
+                .sheet(item: $generation, onDismiss: openNextImport) { generation in
                     GenerateRecipeView(
                         store: store,
                         dish: generation.dish,
@@ -75,6 +77,9 @@ struct MainView: View {
         .sheet(isPresented: $isShowingLimits) {
             LimitsView()
         }
+        .sheet(item: $sharedImport, onDismiss: openNextImport) { shared in
+            ImportRecipeView(store: store, shared: shared)
+        }
         .sheet(isPresented: $isOnboarding, onDismiss: openFirstRecipe) {
             OnboardingView { dish in
                 onboardingCompleted = true
@@ -85,9 +90,12 @@ struct MainView: View {
         .onAppear {
             store.importSharedRecipes()
             if !onboardingCompleted { isOnboarding = true }
+            openNextImport()
         }
         .onChange(of: scenePhase) {
-            if scenePhase == .active { store.importSharedRecipes() }
+            guard scenePhase == .active else { return }
+            store.importSharedRecipes()
+            openNextImport()
         }
         #if DEBUG
         .onOpenURL(perform: openDebugLink)
@@ -108,6 +116,14 @@ struct MainView: View {
     private func openFirstRecipe() {
         if !firstDish.isEmpty { generation = Generation(dish: firstDish) }
         firstDish = ""
+        openNextImport()
+    }
+
+    /// Opens the next shared web page once nothing else is on screen, so a page shared while
+    /// the cook was busy waits its turn rather than covering what they were doing.
+    private func openNextImport() {
+        guard sharedImport == nil, generation == nil, !isOnboarding, !isShowingLimits else { return }
+        sharedImport = store.sharedPages.first
     }
 
     #if DEBUG

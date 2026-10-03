@@ -9,7 +9,6 @@ struct ChefImportView: View {
     @State private var isLoading = true
     @State private var failure: Failure?
     @State private var saveFailed = false
-    @State private var isEditing = false
 
     private enum Failure {
         case noURL, unsupportedURL, downloadFailed, noRecipe
@@ -22,19 +21,12 @@ struct ChefImportView: View {
                     ProgressView("Chef.Loading")
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                 } else if let recipe {
-                    if isEditing {
-                        ChefReviewView(recipe: Binding(
-                            get: { self.recipe! },
-                            set: { self.recipe = $0 }
-                        ))
-                    } else {
-                        RecipeConfirmationView(recipe: ConfirmationRecipe(recipe))
-                    }
+                    RecipeConfirmationView(recipe: ConfirmationRecipe(recipe))
                 } else {
                     errorView
                 }
             }
-            .navigationTitle(isEditing ? String(localized: "Chef.Title") : recipe?.title ?? String(localized: "Chef.Title"))
+            .navigationTitle(recipe?.title ?? String(localized: "Chef.Title"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
@@ -46,14 +38,16 @@ struct ChefImportView: View {
                             .disabled(recipe?.canSave != true)
                     }
                 }
-                ToolbarItem(placement: .bottomBar) {
-                    if recipe != nil {
-                        if isEditing {
-                            Button("Chef.Review") { isEditing = false }
-                        } else {
-                            Button("Chef.Edit") { isEditing = true }
-                        }
-                    }
+            }
+            // The app sorts a page's recipe when it next opens, so the cook is told to go there.
+            .safeAreaBar(edge: .bottom) {
+                if recipe?.page != nil {
+                    Text("Chef.OpenPlates")
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 16)
+                        .padding(.bottom, 8)
                 }
             }
         }
@@ -80,7 +74,6 @@ struct ChefImportView: View {
 
     private func load() async {
         isLoading = true
-        isEditing = false
         do {
             recipe = try await RecipePageLoader.load(from: items)
             failure = nil

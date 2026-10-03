@@ -201,6 +201,9 @@ public struct GenerationProgress: Equatable, Sendable {
     public var problems: [String] = []
     /// Set when the last pass ends, so the bar always lands on full.
     public var isFinished = false
+    /// Set when the recipe came off a web page, which has nothing for Gemma to write, so the
+    /// sorting is the whole of the work.
+    public var readsPage = false
 
     public init() {}
 
@@ -225,19 +228,28 @@ public struct GenerationProgress: Equatable, Sendable {
     /// a recipe usually runs to and held short of full until it stops.
     public var fraction: Double {
         guard !isFinished else { return 1 }
+        let sorting = sortingFraction
+        guard !readsPage else { return sorting.shopping * 0.4 + sorting.method * 0.6 }
         let write = stage.rawValue > Stage.write.rawValue
             ? 1
             : min(Double(writtenTokens) / Self.typicalTokens, 0.95)
+        return write * 0.5 + sorting.shopping * 0.2 + sorting.method * 0.3
+    }
+
+    /// How far each sorting pass is along, each out of one.
+    private var sortingFraction: (shopping: Double, method: Double) {
         let shopping = stage.rawValue > Stage.shopping.rawValue ? 1 : [
             title == nil ? 0 : 1,
             min(Double(ingredientCount) / 6, 1),
-            min(Double(toolCount) / 3, 1),
+            readsPage ? 1 : min(Double(toolCount) / 3, 1),
         ].reduce(0, +) / 3
-        let method = [
-            min(Double(stepCount) / 5, 1),
-            min(Double(troubleshootingCount) / 2, 1),
-        ].reduce(0, +) / 2
-        return write * 0.5 + shopping * 0.2 + method * 0.3
+        let method = readsPage
+            ? min(Double(stepCount) / 5, 1)
+            : [
+                min(Double(stepCount) / 5, 1),
+                min(Double(troubleshootingCount) / 2, 1),
+            ].reduce(0, +) / 2
+        return (shopping, method)
     }
 
     /// About how many tokens a recipe runs to, read off the Plates Kitchen evals.
@@ -277,7 +289,7 @@ public final class RecipeGenerator {
     public internal(set) var state: State = .idle
 
     /// Every change is passed on to the observer, so the lock screen keeps up with the sheet.
-    public private(set) var progress = GenerationProgress() {
+    public internal(set) var progress = GenerationProgress() {
         didSet { observer?.runUpdated(progress.activity) }
     }
 
@@ -292,7 +304,7 @@ public final class RecipeGenerator {
     let cloud = PlatesCloud.shared
 
     /// Where the run reports how far along it is.
-    private let observer: (any RunObserver)?
+    let observer: (any RunObserver)?
 
     public init(observer: (any RunObserver)? = nil) {
         self.observer = observer
@@ -398,11 +410,13 @@ public final class RecipeGenerator {
 
     // MARK: - Sorting
 
-    /// Sorts what Gemma wrote into the recipe, a line at a time.
-    private func sort(
+    /// Sorts what Gemma wrote into the recipe, a line at a time. A recipe read off a web page
+    /// lists no tools, so the ones its method names are found in code and handed in as `found`.
+    func sort(
         _ written: WrittenRecipe,
         text: String,
-        request: GenerationRequest
+        request: GenerationRequest,
+        found: [GeneratedTool]? = nil
     ) async throws -> SortedRecipe {
         progress.stage = .shopping
         progress.time = Self.time(from: written.time)
@@ -412,7 +426,7 @@ public final class RecipeGenerator {
 
         var ingredients: [(entry: StructuredIngredient, line: String)] = []
         var tools: [GeneratedTool] = []
-        if written.ingredients.isEmpty || written.tools.isEmpty {
+        if written.ingredients.isEmpty || (written.tools.isEmpty && found == nil) {
             let whole = try await sortWholeShopping(text: text)
             ingredients = whole.0.map { ($0, "") }
             tools = whole.1
@@ -434,7 +448,12 @@ public final class RecipeGenerator {
                 progress.ingredients.append(.init(name: entry.item.withoutLeakedSyntax, detail: entry.amount.withoutLeakedSyntax))
                 progress.ingredientCount = ingredients.count
             }
-            for line in written.tools {
+            if let found {
+                tools = found
+                progress.tools = found.map { .init(name: $0.name, detail: "") }
+                progress.toolCount = found.count
+            }
+            for line in written.tools where found == nil {
                 var tool = try await sortLine(
                     GeneratedTool.self,
                     Self.text("Generate.Prompt.Structure.Tool.Ask", Measures.forReader(line))

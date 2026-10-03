@@ -9,15 +9,22 @@ struct GenerationProgressView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             VStack(alignment: .leading, spacing: 12) {
-                row("Generate.Progress.Row.Write", count: 0, stage: .write)
+                // A recipe off a web page was written by the page, and has no fixes to sort.
+                row(
+                    progress.readsPage ? "Import.Progress.Row.Read" : "Generate.Progress.Row.Write",
+                    count: 0,
+                    stage: .write
+                )
                 row("Generate.Progress.Row.Ingredients", count: progress.ingredientCount, stage: .shopping)
                 row("Generate.Progress.Row.Tools", count: progress.toolCount, stage: .shopping)
                 row("Generate.Progress.Row.Steps", count: progress.stepCount, stage: .method)
-                row(
-                    "Generate.Progress.Row.Troubleshooting",
-                    count: progress.troubleshootingCount,
-                    stage: .method
-                )
+                if !progress.readsPage {
+                    row(
+                        "Generate.Progress.Row.Troubleshooting",
+                        count: progress.troubleshootingCount,
+                        stage: .method
+                    )
+                }
             }
             .animation(.default, value: progress)
 

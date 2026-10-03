@@ -10,6 +10,19 @@ nonisolated struct ChefRecipe: Codable {
     var tools: [Tool]
     var steps: [Step]
     var troubleshooting: [Troubleshooting]
+    /// The page's own lines, for the app to sort. A recipe that was already in the app's
+    /// schema has none.
+    var page: Page? = nil
+
+    /// A recipe as a web page gives it, with the same keys as `SharedPage` in the app.
+    nonisolated struct Page: Codable {
+        var title: String
+        var time: String
+        var serves: String
+        var ingredients: [String]
+        var steps: [String]
+        var url: String?
+    }
 
     nonisolated struct IngredientSections: Codable {
         var supermarket: [Ingredient]? = nil
@@ -58,8 +71,10 @@ nonisolated struct ChefRecipe: Codable {
         enum CodingKeys: String, CodingKey { case problem, solution }
     }
 
+    /// A page is sorted in the app, which works out a time the page left out, so only a
+    /// recipe already in the schema needs its time and servings here.
     var canSave: Bool {
-        !title.trimmed.isEmpty && !time.trimmed.isEmpty && !serves.trimmed.isEmpty
+        !title.trimmed.isEmpty && (page != nil || (!time.trimmed.isEmpty && !serves.trimmed.isEmpty))
             && [ingredients.supermarket, ingredients.general, ingredients.optional]
                 .compactMap { $0 }.joined().contains { !$0.item.trimmed.isEmpty }
             && !steps.isEmpty

@@ -120,74 +120,6 @@
         }
       }
     },
-    "Chef.Ingredient.Add": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Add Ingredient"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "材料を追加"
-          }
-        }
-      }
-    },
-    "Chef.Ingredient.Amount": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Amount"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "分量"
-          }
-        }
-      }
-    },
-    "Chef.Ingredient.Name": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ingredient"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "材料名"
-          }
-        }
-      }
-    },
-    "Chef.Ingredients": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ingredients"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "材料"
-          }
-        }
-      }
-    },
     "Chef.Loading": {
       "extractionState": "manual",
       "localizations": {
@@ -201,23 +133,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "レシピを読み込んでいます…"
-          }
-        }
-      }
-    },
-    "Chef.Name": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Name"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "名前"
           }
         }
       }
@@ -239,57 +154,6 @@
         }
       }
     },
-    "Chef.Optional": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Optional"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "お好みで"
-          }
-        }
-      }
-    },
-    "Chef.Pantry": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "From the pantry"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "常備品"
-          }
-        }
-      }
-    },
-    "Chef.Problem": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Problem"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "困りごと"
-          }
-        }
-      }
-    },
     "Chef.Retry": {
       "extractionState": "manual",
       "localizations": {
@@ -307,159 +171,6 @@
         }
       }
     },
-    "Chef.Review": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Review recipe"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "レシピを確認"
-          }
-        }
-      }
-    },
-    "Chef.Review.AmountHelp": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Move quantities from ingredient names into their Amount fields when needed."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "必要に応じて、材料名に含まれる分量を「分量」欄へ移してください。"
-          }
-        }
-      }
-    },
-    "Chef.Review.Help": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Check the ingredients and steps. Fill in any missing time or servings before adding."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "材料と手順を確認してください。時間や人数がない場合は、追加する前に入力してください。"
-          }
-        }
-      }
-    },
-    "Chef.Serves": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Serves"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "人数"
-          }
-        }
-      }
-    },
-    "Chef.Solution": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Solution"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "解決方法"
-          }
-        }
-      }
-    },
-    "Chef.Step.Add": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Add Step"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "手順を追加"
-          }
-        }
-      }
-    },
-    "Chef.Step.Title": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Step title"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "手順の見出し"
-          }
-        }
-      }
-    },
-    "Chef.Steps": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Steps"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "手順"
-          }
-        }
-      }
-    },
-    "Chef.Time": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Time"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "時間"
-          }
-        }
-      }
-    },
     "Chef.Title": {
       "extractionState": "manual",
       "localizations": {
@@ -473,74 +184,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "Platesに追加"
-          }
-        }
-      }
-    },
-    "Chef.Tool.Name": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tool"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "道具名"
-          }
-        }
-      }
-    },
-    "Chef.Tools": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tools"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "道具"
-          }
-        }
-      }
-    },
-    "Chef.Troubleshooting": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Troubleshooting"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "困ったとき"
-          }
-        }
-      }
-    },
-    "Chef.Edit": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Edit Recipe"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "レシピを編集"
           }
         }
       }
@@ -728,6 +371,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "完了"
+          }
+        }
+      }
+    },
+    "Chef.OpenPlates": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "After you add it, open Plates to sort the recipe and save it."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "追加したあとPlatesを開くと、レシピが整理され、保存できます。"
           }
         }
       }

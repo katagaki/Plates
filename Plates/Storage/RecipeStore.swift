@@ -57,21 +57,48 @@ final class RecipeStore {
         }
     }
 
-    /// Moves complete recipes from the App Group inbox into the selected storage location.
-    /// A file stays in the inbox if saving fails, so the next app launch can retry it.
+    /// Recipes read off web pages that are waiting to be sorted, oldest first. Each one opens
+    /// in the import sheet, and stays in the inbox until the cook saves or discards it.
+    private(set) var sharedPages: [SharedImport] = []
+
+    /// Moves complete recipes from the App Group inbox into the selected storage location, and
+    /// holds back the ones read off web pages for the import sheet to sort. A file stays in the
+    /// inbox if saving fails, so the next app launch can retry it.
     func importSharedRecipes() {
         do {
+            var pages: [SharedImport] = []
             for pending in try SharedRecipeInbox.pendingRecipes() {
-                var recipe = pending.recipe
-                recipe.ingredients.supermarket = importedIcons(in: recipe.ingredients.supermarket)
-                recipe.ingredients.general = importedIcons(in: recipe.ingredients.general)
-                recipe.ingredients.optional = importedIcons(in: recipe.ingredients.optional)
-                guard save(recipe, isNew: true) else { return }
+                if pending.page != nil {
+                    pages.append(pending)
+                    continue
+                }
+                guard save(asRead(pending.recipe), isNew: true) else { return }
                 try SharedRecipeInbox.remove(pending.url)
             }
+            sharedPages = pages
         } catch {
             loadError = error.localizedDescription
         }
+    }
+
+    /// A shared recipe as the extension read it, with an icon on each ingredient the catalog
+    /// knows by name, for when it is not sorted.
+    func asRead(_ recipe: Recipe) -> Recipe {
+        var recipe = recipe
+        recipe.ingredients.supermarket = importedIcons(in: recipe.ingredients.supermarket)
+        recipe.ingredients.general = importedIcons(in: recipe.ingredients.general)
+        recipe.ingredients.optional = importedIcons(in: recipe.ingredients.optional)
+        return recipe
+    }
+
+    /// Saves a shared page's recipe, or discards the page when there is none, and takes it out
+    /// of the inbox. A recipe that fails to save leaves the page where it was.
+    @discardableResult
+    func finish(_ shared: SharedImport, saving recipe: Recipe?) -> Bool {
+        if let recipe, !save(recipe, isNew: true) { return false }
+        try? SharedRecipeInbox.remove(shared.url)
+        sharedPages.removeAll { $0.id == shared.id }
+        return true
     }
 
     private func importedIcons(in ingredients: [Ingredient]?) -> [Ingredient]? {
