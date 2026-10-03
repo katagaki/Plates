@@ -1639,13 +1639,13 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cook"
+            "value": "Start cooking"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "調理する"
+            "value": "調理を始める"
           }
         }
       }
@@ -1673,13 +1673,13 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Swipe up to finish"
+            "value": "Swipe to finish"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "上にスワイプして完了"
+            "value": "スワイプして完了"
           }
         }
       }
@@ -1690,13 +1690,13 @@
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Swipe up for the next step"
+            "value": "Swipe to go to the next step"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "上にスワイプして次の手順へ"
+            "value": "スワイプして次の手順へ"
           }
         }
       }

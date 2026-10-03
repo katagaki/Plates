@@ -86,8 +86,8 @@ struct RecipeDetailView: View {
                     Button {
                         isCooking = true
                     } label: {
-                        Label("Recipe.Cook.Start", systemImage: "frying.pan")
-                            .labelStyle(.titleAndIcon)
+                        Text("Recipe.Cook.Start")
+                            .fontWeight(.semibold)
                     }
                     .buttonStyle(.glassProminent)
                 }
