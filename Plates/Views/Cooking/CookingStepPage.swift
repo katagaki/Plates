@@ -9,6 +9,9 @@ struct CookingStepPage: View {
     let step: Step
     /// The recipe's ingredients and tools, for the amount under an icon and the name a tap shows.
     let items: [TileInfo]
+    let timer: CookingTimer
+    /// The wait the timer was started from on this step, whose button gives way to the controls.
+    let runningDuration: Duration?
     let startTimer: (Duration) -> Void
 
     @ScaledMetric(relativeTo: .largeTitle) private var titleSize: CGFloat = 46
@@ -98,23 +101,39 @@ struct CookingStepPage: View {
     }
 
     private var timers: some View {
-        HStack(spacing: 10) {
+        VStack(spacing: 10) {
             ForEach(step.durations.prefix(3), id: \.self) { duration in
-                let text = duration.formatted(.units(allowed: [.hours, .minutes, .seconds], width: .abbreviated))
-                Button {
-                    startTimer(duration)
-                } label: {
-                    Label {
-                        Text(verbatim: text)
-                    } icon: {
-                        Image(systemName: "timer")
-                    }
-                    .font(.headline)
+                if duration == runningDuration, timer.isSet {
+                    CookingTimerBar(timer: timer)
+                        .transition(.opacity.combined(with: .scale(scale: 0.95)))
+                } else {
+                    timerButton(duration)
+                        .transition(.opacity.combined(with: .scale(scale: 0.95)))
                 }
-                .buttonStyle(.glass)
-                .controlSize(.large)
-                .accessibilityLabel(Text(String(format: String(localized: "Recipe.Cook.Timer.Start"), text)))
             }
         }
+        .animation(.default, value: runningDuration)
+        .animation(.default, value: timer.isSet)
+    }
+
+    private func timerButton(_ duration: Duration) -> some View {
+        let text = duration.formatted(.units(allowed: [.hours, .minutes, .seconds], width: .abbreviated))
+        return Button {
+            startTimer(duration)
+        } label: {
+            Label {
+                Text(verbatim: text)
+                    .monospacedDigit()
+            } icon: {
+                Image(systemName: "timer")
+            }
+            .font(.title.weight(.bold))
+            // The glass style pads the label, so it is cut by that much to match the bar.
+            .frame(maxWidth: .infinity)
+            .frame(height: CookingTimerBar.height - 14)
+        }
+        .buttonStyle(.glass)
+        .buttonBorderShape(.capsule)
+        .accessibilityLabel(Text(String(format: String(localized: "Recipe.Cook.Timer.Start"), text)))
     }
 }

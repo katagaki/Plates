@@ -1,9 +1,12 @@
 import CulinaryIntelligence
 import SwiftUI
 
-/// The timer while it is set, kept along the bottom of every step so it can be read and
-/// paused from wherever the cook has scrolled to.
+/// The timer while it is set. It takes the place of the button it was started from, and is
+/// kept along the bottom of every other step so it can be read and paused from anywhere.
 struct CookingTimerBar: View {
+    /// The height of the bar, which the button it replaces matches so nothing moves.
+    static let height: CGFloat = 72
+
     let timer: CookingTimer
 
     var body: some View {
@@ -52,7 +55,7 @@ struct CookingTimerBar: View {
             .controlSize(.large)
             .padding(.leading, 20)
             .padding(.trailing, 10)
-            .padding(.vertical, 10)
+            .frame(height: Self.height)
             .glassEffect(isFinished ? .regular.tint(.red) : .regular, in: .capsule)
         }
     }

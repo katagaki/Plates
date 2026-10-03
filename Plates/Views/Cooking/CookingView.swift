@@ -11,6 +11,10 @@ struct CookingView: View {
 
     @Environment(\.dismiss) private var dismiss
     @State private var timer = CookingTimer()
+    /// The step and wait the timer was started from, where its controls take the button's place.
+    @State private var timerSource: TimerSource?
+    /// The page on screen, so the timer is kept along the bottom of every other page.
+    @State private var page: Int?
     @State private var rings = 0
     @State private var isShowingTroubleshooting = false
 
@@ -25,23 +29,30 @@ struct CookingView: View {
                             count: recipe.steps.count,
                             step: step,
                             items: items,
-                            startTimer: { timer.start($0) }
+                            timer: timer,
+                            runningDuration: timerSource?.step == index ? timerSource?.duration : nil,
+                            startTimer: { duration in
+                                timerSource = TimerSource(step: index, duration: duration)
+                                timer.start(duration)
+                            }
                         )
                         .page(insets: insets, background: .step(index))
                     }
 
                     finished
                         .page(insets: insets, background: .step(recipe.steps.count))
+                        .id(recipe.steps.count)
                 }
                 .scrollTargetLayout()
             }
+            .scrollPosition(id: $page)
             .scrollTargetBehavior(.paging)
             .scrollIndicators(.hidden)
             .ignoresSafeArea()
         }
         .overlay(alignment: .top) { topBar }
         .overlay(alignment: .bottom) {
-            if timer.isSet {
+            if timer.isSet, timerSource?.step != page ?? 0 {
                 CookingTimerBar(timer: timer)
                     .padding(.horizontal, 16)
                     .padding(.bottom, 8)
@@ -49,6 +60,10 @@ struct CookingView: View {
             }
         }
         .animation(.default, value: timer.isSet)
+        .animation(.default, value: page)
+        .onChange(of: timer.isSet) {
+            if !timer.isSet { timerSource = nil }
+        }
         .preferredColorScheme(.dark)
         .sheet(isPresented: $isShowingTroubleshooting) {
             TroubleshootingView(entries: recipe.troubleshooting)
@@ -130,6 +145,12 @@ struct CookingView: View {
     private var items: [TileInfo] {
         RecipeList.allCases.flatMap { recipe.items(in: $0) }
     }
+}
+
+/// Where a timer was started from: which step, and which of the waits it names.
+private struct TimerSource: Equatable {
+    let step: Int
+    let duration: Duration
 }
 
 private extension View {
