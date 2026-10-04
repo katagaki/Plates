@@ -30,7 +30,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "レシピを書くときは、リクエストと選んだ材料・道具が、Cloudflare Workers AIのGemmaに送られます。おまかせとレシピのアイコンでは、リクエストとレシピがTypeSafeのJevに送られます。あなたを特定する情報は送られません。"
+            "value" : "レシピを書くときは、リクエストと選んだ材料・道具が、Cloudflare Workers AIのGemmaに送られます。おまかせとレシピのアイコンでは、リクエストとレシピがTypeSafeのJevに送られます。個人情報は送られません。"
           }
         }
       }
