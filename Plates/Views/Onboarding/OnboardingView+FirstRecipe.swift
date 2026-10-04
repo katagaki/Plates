@@ -32,6 +32,10 @@ extension OnboardingView {
                     .buttonStyle(.glass)
                 }
             }
+
+            Text("Onboarding.FirstRecipe.Disclosure")
+                .font(.footnote)
+                .foregroundStyle(.secondary)
         } buttons: {
             primaryButton("Onboarding.FirstRecipe.Create") { createFirstRecipe() }
                 .disabled(trimmedDish.isEmpty)

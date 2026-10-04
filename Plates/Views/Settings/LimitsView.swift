@@ -40,26 +40,31 @@ struct LimitsView: View {
         }
     }
 
-    /// What is left of one limit, as a count and a bar that empties as the day's calls are used,
-    /// under a line saying what the limit counts.
+    /// What is left of one limit, as a bar that empties as the day's calls are used and a count
+    /// under its trailing end, below a line saying what the limit counts.
     private func row(
         _ label: LocalizedStringResource,
         _ detail: LocalizedStringResource,
         _ allowance: CloudLimits.Allowance
     ) -> some View {
         VStack(alignment: .leading, spacing: 8) {
-            LabeledContent {
+            VStack(alignment: .leading, spacing: 2) {
+                Text(label)
+                Text(detail)
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+            }
+            VStack(alignment: .trailing, spacing: 4) {
+                ProgressView(value: Double(allowance.remaining), total: Double(max(allowance.limit, 1)))
                 Text(verbatim: String(
                     format: String(localized: "Limits.Remaining"),
                     allowance.remaining,
                     allowance.limit
                 ))
+                .font(.subheadline)
                 .monospacedDigit()
-            } label: {
-                Text(label)
-                Text(detail)
+                .foregroundStyle(.secondary)
             }
-            ProgressView(value: Double(allowance.remaining), total: Double(max(allowance.limit, 1)))
         }
         .padding(.vertical, 4)
     }

@@ -1497,6 +1497,23 @@
         }
       }
     },
+    "Onboarding.FirstRecipe.Disclosure" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "To write a recipe, Plates sends your request and the ingredients and tools you pick to Gemma on Cloudflare Workers AI. Decide for Me and recipe icons send your request and the recipe to Jev by TypeSafe. Nothing that identifies you is sent."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レシピを書くときは、リクエストと選んだ材料・道具が、Cloudflare Workers AIのGemmaに送られます。おまかせとレシピのアイコンでは、リクエストとレシピがTypeSafeのJevに送られます。あなたを特定する情報は送られません。"
+          }
+        }
+      }
+    },
     "Onboarding.FirstRecipe.Prompt" : {
       "extractionState" : "manual",
       "localizations" : {
