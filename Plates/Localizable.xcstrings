@@ -1,2829 +1,2829 @@
 {
-  "sourceLanguage": "en-US",
-  "strings": {
-    "Edit.Activity.Done": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Recipe updated"
+  "sourceLanguage" : "en-US",
+  "strings" : {
+    "Edit.Activity.Done" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recipe updated"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "レシピを更新しました"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レシピを更新しました"
           }
         }
       }
     },
-    "Edit.Activity.Failed": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Could not finish the changes"
+    "Edit.Activity.Failed" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Could not finish the changes"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "変更を完了できませんでした"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "変更を完了できませんでした"
           }
         }
       }
     },
-    "Edit.Ask.Label": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "What should change?"
+    "Edit.Ask.Label" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What should change?"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "どこを変更しますか？"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "どこを変更しますか？"
           }
         }
       }
     },
-    "Edit.Ask.Prompt": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Make it for four, without the pork"
+    "Edit.Ask.Prompt" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Make it for four, without the pork"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "4人分にして、豚肉を抜く"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4人分にして、豚肉を抜く"
           }
         }
       }
     },
-    "Edit.Ask.Title": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ask for Changes"
+    "Edit.Ask.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ask for Changes"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "変更を依頼"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "変更を依頼"
           }
         }
       }
     },
-    "Edit.Progress.Planning": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Working out what to change"
+    "Edit.Progress.Planning" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Working out what to change"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "変更内容を検討しています"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "変更内容を検討しています"
           }
         }
       }
     },
-    "Generate.Activity.Done": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Recipe ready"
+    "Generate.Activity.Done" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recipe ready"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "レシピが完成しました"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レシピが完成しました"
           }
         }
       }
     },
-    "Generate.Activity.Failed": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Could not finish the recipe"
+    "Generate.Activity.Failed" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Could not finish the recipe"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "レシピを生成できませんでした"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レシピを生成できませんでした"
           }
         }
       }
     },
-    "Generate.Choose.Ingredients": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Choose ingredients"
+    "Generate.Choose.Ingredients" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose ingredients"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "材料を選択"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "材料を選択"
           }
         }
       }
     },
-    "Generate.Choose.Pantry": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Choose pantry items"
+    "Generate.Choose.Pantry" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose pantry items"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "常備品を選択"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "常備品を選択"
           }
         }
       }
     },
-    "Generate.Choose.Tools": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Choose tools"
+    "Generate.Choose.Tools" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose tools"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "道具を選択"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "道具を選択"
           }
         }
       }
     },
-    "Generate.Description.Footer": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Name a dish, or say what you would like to cook."
+    "Generate.Description.Footer" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name a dish, or say what you would like to cook."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "料理名か、作りたいものを入力してください。"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "料理名か、作りたいものを入力してください。"
           }
         }
       }
     },
-    "Generate.Description.Label": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "What do you want to cook?"
+    "Generate.Description.Label" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What do you want to cook?"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "何を調理しますか？"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "何を調理しますか？"
           }
         }
       }
     },
-    "Generate.Description.Prompt": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Kimchi fried rice"
+    "Generate.Description.Prompt" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kimchi fried rice"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "キムチチャーハン"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "キムチチャーハン"
           }
         }
       }
     },
-    "Generate.Ideas.Decide": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Decide for Me"
+    "Generate.Ideas.Decide" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Decide for Me"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "おまかせ"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "おまかせ"
           }
         }
       }
     },
-    "Generate.Ideas.Decide.LimitReached": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Decide for Me is used up for today and comes back at midnight. You can still pick a dish yourself."
+    "Generate.Ideas.Decide.LimitReached" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Decide for Me is used up for today and comes back at midnight. You can still pick a dish yourself."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "今日のおまかせは使い切りました。午前0時にまた使えます。料理はご自身で選べます。"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日のおまかせは使い切りました。午前0時にまた使えます。料理はご自身で選べます。"
           }
         }
       }
     },
-    "Generate.Ideas.Decide.Privacy": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Decide for Me sends your request and these dishes to TypeSafe, which picks one."
+    "Generate.Ideas.Decide.Privacy" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Decide for Me sends your request and these dishes to TypeSafe, which picks one."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "おまかせを使うと、リクエストとこれらの料理がTypeSafeに送られ、1つが選ばれます。"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "おまかせを使うと、リクエストとこれらの料理がTypeSafeに送られ、1つが選ばれます。"
           }
         }
       }
     },
-    "Generate.Ideas.Decide.Remaining": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%1$lld left today"
+    "Generate.Ideas.Decide.Remaining" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld left today"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "今日はあと%1$lld回"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日はあと%1$lld回"
           }
         }
       }
     },
-    "Generate.Ideas.Edit": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Change Request"
+    "Generate.Ideas.Edit" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Change Request"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "リクエストを変更"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "リクエストを変更"
           }
         }
       }
     },
-    "Generate.Ideas.Footer": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tap a dish to write its recipe."
+    "Generate.Ideas.Footer" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap a dish to write its recipe."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "料理をタップすると、そのレシピを書きます。"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "料理をタップすると、そのレシピを書きます。"
           }
         }
       }
     },
-    "Generate.Ideas.Header": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Pick a dish"
+    "Generate.Ideas.Header" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pick a dish"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "料理を選んでください"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "料理を選んでください"
           }
         }
       }
     },
-    "Generate.Ingredients.Empty": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "No ingredients selected"
+    "Generate.Ingredients.Empty" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No ingredients selected"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "材料が選択されていません"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "材料が選択されていません"
           }
         }
       }
     },
-    "Generate.Ingredients.Search": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Search ingredients"
+    "Generate.Ingredients.Search" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search ingredients"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "材料を検索"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "材料を検索"
           }
         }
       }
     },
-    "Generate.Ingredients.Title": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ingredients"
+    "Generate.Ingredients.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingredients"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "材料"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "材料"
           }
         }
       }
     },
-    "Generate.Pantry.Empty": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "No pantry items selected"
+    "Generate.Pantry.Empty" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No pantry items selected"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "常備品が選択されていません"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "常備品が選択されていません"
           }
         }
       }
     },
-    "Generate.Pantry.Search": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Search pantry"
+    "Generate.Pantry.Search" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search pantry"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "常備品を検索"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "常備品を検索"
           }
         }
       }
     },
-    "Generate.Pantry.Title": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Pantry"
+    "Generate.Pantry.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pantry"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "常備品"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "常備品"
           }
         }
       }
     },
-    "Generate.Picker.Selected": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Selected items"
+    "Generate.Picker.Selected" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selected items"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "選択中の項目"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選択中の項目"
           }
         }
       }
     },
-    "Generate.Planning": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Working out what to cook"
+    "Generate.Planning" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Working out what to cook"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "何を作るか考えています"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "何を作るか考えています"
           }
         }
       }
     },
-    "Generate.Progress.Row.Ingredients": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Listing ingredients"
+    "Generate.Progress.Row.Ingredients" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listing ingredients"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "材料を整理中"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "材料を整理中"
           }
         }
       }
     },
-    "Generate.Progress.Row.Steps": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sorting steps"
+    "Generate.Progress.Row.Steps" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sorting steps"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "手順を整理中"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "手順を整理中"
           }
         }
       }
     },
-    "Generate.Progress.Row.Tools": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Listing tools"
+    "Generate.Progress.Row.Tools" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listing tools"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "道具を整理中"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "道具を整理中"
           }
         }
       }
     },
-    "Generate.Progress.Row.Troubleshooting": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Noting fixes"
+    "Generate.Progress.Row.Troubleshooting" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noting fixes"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "対処法を整理中"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "対処法を整理中"
           }
         }
       }
     },
-    "Generate.Progress.Row.Write": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Writing the recipe"
+    "Generate.Progress.Row.Write" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Writing the recipe"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "レシピを記述中"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レシピを記述中"
           }
         }
       }
     },
-    "Generate.Title": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "New Recipe"
+    "Generate.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New Recipe"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "新しいレシピ"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新しいレシピ"
           }
         }
       }
     },
-    "Generate.Tools.Empty": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "No tools selected"
+    "Generate.Tools.Empty" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No tools selected"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "道具が選択されていません"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "道具が選択されていません"
           }
         }
       }
     },
-    "Generate.Tools.Search": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Search tools"
+    "Generate.Tools.Search" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search tools"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "道具を検索"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "道具を検索"
           }
         }
       }
     },
-    "Generate.Tools.Title": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tools"
+    "Generate.Tools.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tools"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "道具"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "道具"
           }
         }
       }
     },
-    "Import.AsRead": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Apple Intelligence could not sort this recipe, so it is shown as the page wrote it."
+    "Import.AsRead" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Intelligence could not sort this recipe, so it is shown as the page wrote it."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Apple Intelligenceでレシピを整理できなかったため、ページに書かれたとおりに表示しています。"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Intelligenceでレシピを整理できなかったため、ページに書かれたとおりに表示しています。"
           }
         }
       }
     },
-    "Import.Progress.Row.Read": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Reading the page"
+    "Import.Progress.Row.Read" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reading the page"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ページを読み込み中"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ページを読み込み中"
           }
         }
       }
     },
-    "Import.Title": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Shared Recipe"
+    "Import.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shared Recipe"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "共有されたレシピ"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "共有されたレシピ"
           }
         }
       }
     },
-    "Ingredient.Category.Baking": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Baking"
+    "Ingredient.Category.Baking" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Baking"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "製菓"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "製菓"
           }
         }
       }
     },
-    "Ingredient.Category.Dairy": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Dairy and Eggs"
+    "Ingredient.Category.Dairy" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dairy and Eggs"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "乳製品と卵"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "乳製品と卵"
           }
         }
       }
     },
-    "Ingredient.Category.Fruits": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Fruits"
+    "Ingredient.Category.Fruits" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fruits"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "果物"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "果物"
           }
         }
       }
     },
-    "Ingredient.Category.Grains": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Grains and Noodles"
+    "Ingredient.Category.Grains" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grains and Noodles"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "穀類と麺"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "穀類と麺"
           }
         }
       }
     },
-    "Ingredient.Category.Meat": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Meat"
+    "Ingredient.Category.Meat" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meat"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "肉"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "肉"
           }
         }
       }
     },
-    "Ingredient.Category.Preserved": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tins and Dried Goods"
+    "Ingredient.Category.Preserved" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tins and Dried Goods"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "缶詰と乾物"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "缶詰と乾物"
           }
         }
       }
     },
-    "Ingredient.Category.Sauces": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sauces and Oils"
+    "Ingredient.Category.Sauces" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sauces and Oils"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "調味料と油"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "調味料と油"
           }
         }
       }
     },
-    "Ingredient.Category.Seafood": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Seafood"
+    "Ingredient.Category.Seafood" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seafood"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "魚介"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "魚介"
           }
         }
       }
     },
-    "Ingredient.Category.Seasonings": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Herbs and Spices"
+    "Ingredient.Category.Seasonings" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Herbs and Spices"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ハーブとスパイス"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ハーブとスパイス"
           }
         }
       }
     },
-    "Ingredient.Category.Vegetables": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Vegetables"
+    "Ingredient.Category.Vegetables" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vegetables"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "野菜"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "野菜"
           }
         }
       }
     },
-    "Inventory.Check.Footer": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tap what you have to add it to your inventory."
+    "Inventory.Check.Footer" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap what you have to add it to your inventory."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "あるものをタップすると、在庫に追加されます。"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "あるものをタップすると、在庫に追加されます。"
           }
         }
       }
     },
-    "Inventory.Check.Label": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Not in your inventory"
+    "Inventory.Check.Label" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not in your inventory"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "在庫にないもの"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在庫にないもの"
           }
         }
       }
     },
-    "Inventory.Check.Title.Ingredients": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Do you have the ingredients?"
+    "Inventory.Check.Title.Ingredients" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do you have the ingredients?"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "材料は足りていますか？"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "材料は足りていますか？"
           }
         }
       }
     },
-    "Inventory.Check.Title.Tools": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Do you have the tools?"
+    "Inventory.Check.Title.Tools" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do you have the tools?"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "道具は足りていますか？"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "道具は足りていますか？"
           }
         }
       }
     },
-    "Inventory.Title": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Inventory"
+    "Inventory.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inventory"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "在庫"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在庫"
           }
         }
       }
     },
-    "Limits.Decide": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Decide for Me"
+    "Limits.Decide" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Decide for Me"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "おまかせ"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "おまかせ"
           }
         }
       }
     },
-    "Limits.Decide.Detail": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Picking one of the suggested dishes for you."
+    "Limits.Decide.Detail" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Picking one of the suggested dishes for you."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "提案された料理から1つを選びます。"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "提案された料理から1つを選びます。"
           }
         }
       }
     },
-    "Limits.DishIcon": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Recipe Icon Generation"
+    "Limits.DishIcon" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recipe Icon Generation"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "アイコン描画"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アイコン描画"
           }
         }
       }
     },
-    "Limits.DishIcon.Detail": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Deciding which seasonings and garnishes show on a recipe's icon."
+    "Limits.DishIcon.Detail" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deciding which seasonings and garnishes show on a recipe's icon."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "レシピのアイコンに、どの調味料や薬味を描くかを決めます。"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レシピのアイコンに、どの調味料や薬味を描くかを決めます。"
           }
         }
       }
     },
-    "Limits.Footer": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "The limits reset at midnight."
+    "Limits.Footer" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The limits reset at midnight."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "上限は午前0時にリセットされます。"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上限は午前0時にリセットされます。"
           }
         }
       }
     },
-    "Limits.Ideate": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Idea Generation"
+    "Limits.Ideate" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Idea Generation"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "アイディア生成"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アイディア生成"
           }
         }
       }
     },
-    "Limits.Ideate.Detail": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Suggesting five dishes to choose from. Each set of five counts once."
+    "Limits.Ideate.Detail" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suggesting five dishes to choose from. Each set of five counts once."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "選べる料理を5つ提案します。5つで1回と数えます。"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選べる料理を5つ提案します。5つで1回と数えます。"
           }
         }
       }
     },
-    "Limits.Remaining": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%1$lld/%2$lld"
+    "Limits.Remaining" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld/%2$lld"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%1$lld/%2$lld回"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld/%2$lld回"
           }
         }
       }
     },
-    "Limits.Title": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Today's Limits"
+    "Limits.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today's Limits"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "今日の上限"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日の上限"
           }
         }
       }
     },
-    "Limits.Write": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Recipe Generation"
+    "Limits.Write" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recipe Generation"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "レシピ生成"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レシピ生成"
           }
         }
       }
     },
-    "Limits.Write.Detail": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Writing a new recipe from what you asked for."
+    "Limits.Write.Detail" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Writing a new recipe from what you asked for."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "頼んだ内容から新しいレシピを書きます。"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "頼んだ内容から新しいレシピを書きます。"
           }
         }
       }
     },
-    "Menu.AddSamples": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Add Sample Recipes"
+    "Menu.AddSamples" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Sample Recipes"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "サンプルレシピを追加"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サンプルレシピを追加"
           }
         }
       }
     },
-    "Menu.Delete": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Delete"
+    "Menu.Delete" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "削除"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "削除"
           }
         }
       }
     },
-    "Menu.Generate": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Generate Recipe"
+    "Menu.Generate" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generate Recipe"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "レシピを生成"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レシピを生成"
           }
         }
       }
     },
-    "Menu.Inventory": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Inventory"
+    "Menu.Inventory" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inventory"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "在庫"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在庫"
           }
         }
       }
     },
-    "Menu.Label": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Menu"
+    "Menu.Label" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "メニュー"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "メニュー"
           }
         }
       }
     },
-    "Menu.Limits": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Today's Limits"
+    "Menu.Limits" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today's Limits"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "今日の上限"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日の上限"
           }
         }
       }
     },
-    "Menu.Refresh": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Refresh"
+    "Menu.Refresh" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Refresh"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "再読み込み"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "再読み込み"
           }
         }
       }
     },
-    "Menu.Sort.Title": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sort"
+    "Menu.Sort.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sort"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "並べ替え"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "並べ替え"
           }
         }
       }
     },
-    "Menu.Sort.TriedOnly": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Human tested only"
+    "Menu.Sort.TriedOnly" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Human tested only"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "人が検証したレシピのみ"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "人が検証したレシピのみ"
           }
         }
       }
     },
-    "Menu.Storage.Title": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Recipes are stored in"
+    "Menu.Storage.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recipes are stored in"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "レシピの保存先"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レシピの保存先"
           }
         }
       }
     },
-    "Onboarding.Back": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Back"
+    "Onboarding.Back" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "戻る"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "戻る"
           }
         }
       }
     },
-    "Onboarding.Continue": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Continue"
+    "Onboarding.Continue" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "続ける"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "続ける"
           }
         }
       }
     },
-    "Onboarding.Feature.Edit": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Change Recipes"
+    "Onboarding.Feature.Edit" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Change Recipes"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "レシピを変える"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レシピを変える"
           }
         }
       }
     },
-    "Onboarding.Feature.Edit.Description": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ask for a change in your own words, such as less salt or no oven."
+    "Onboarding.Feature.Edit.Description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ask for a change in your own words, such as less salt or no oven."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "塩を控えめに、オーブンを使わずに、など自分の言葉で変更を頼めます。"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "塩を控えめに、オーブンを使わずに、など自分の言葉で変更を頼めます。"
           }
         }
       }
     },
-    "Onboarding.Feature.Files": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Kept as Files"
+    "Onboarding.Feature.Files" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kept as Files"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ファイルで保存"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ファイルで保存"
           }
         }
       }
     },
-    "Onboarding.Feature.Files.Description": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Recipes are saved as files on your iPhone or in iCloud Drive."
+    "Onboarding.Feature.Files.Description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recipes are saved as files on your iPhone or in iCloud Drive."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "レシピはiPhoneまたはiCloud Driveにファイルとして保存されます。"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レシピはiPhoneまたはiCloud Driveにファイルとして保存されます。"
           }
         }
       }
     },
-    "Onboarding.Feature.Shopping": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Shop and Cook"
+    "Onboarding.Feature.Shopping" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shop and Cook"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "買い物と調理"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "買い物と調理"
           }
         }
       }
     },
-    "Onboarding.Feature.Shopping.Description": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Each recipe lists what to buy, the tools you need, and the steps in order."
+    "Onboarding.Feature.Shopping.Description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Each recipe lists what to buy, the tools you need, and the steps in order."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "レシピごとに、買うもの、使う道具、手順を順番に示します。"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レシピごとに、買うもの、使う道具、手順を順番に示します。"
           }
         }
       }
     },
-    "Onboarding.Feature.Write": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Write Recipes"
+    "Onboarding.Feature.Write" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Write Recipes"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "レシピを書く"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レシピを書く"
           }
         }
       }
     },
-    "Onboarding.Feature.Write.Description": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Name a dish or pick what is in your kitchen, and Plates writes the recipe."
+    "Onboarding.Feature.Write.Description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name a dish or pick what is in your kitchen, and Plates writes the recipe."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "料理の名前を入れるか、台所にあるものを選ぶと、Platesがレシピを書きます。"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "料理の名前を入れるか、台所にあるものを選ぶと、Platesがレシピを書きます。"
           }
         }
       }
     },
-    "Onboarding.FirstRecipe.Create": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Create Recipe"
+    "Onboarding.FirstRecipe.Create" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Create Recipe"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "レシピを作成"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レシピを作成"
           }
         }
       }
     },
-    "Onboarding.FirstRecipe.Description": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Name a dish to write your first recipe. On the next screen you can add the ingredients and tools you have."
+    "Onboarding.FirstRecipe.Description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name a dish to write your first recipe. On the next screen you can add the ingredients and tools you have."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "料理の名前を入れて、最初のレシピを書きましょう。次の画面で、手元にある材料や道具を追加できます。"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "料理の名前を入れて、最初のレシピを書きましょう。次の画面で、手元にある材料や道具を追加できます。"
           }
         }
       }
     },
-    "Onboarding.FirstRecipe.Prompt": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "What would you like to cook?"
+    "Onboarding.FirstRecipe.Prompt" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What would you like to cook?"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "何を作りますか？"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "何を作りますか？"
           }
         }
       }
     },
-    "Onboarding.FirstRecipe.Suggestion.Curry": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Chicken curry"
+    "Onboarding.FirstRecipe.Suggestion.Curry" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chicken curry"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "チキンカレー"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "チキンカレー"
           }
         }
       }
     },
-    "Onboarding.FirstRecipe.Suggestion.FriedRice": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Egg fried rice"
+    "Onboarding.FirstRecipe.Suggestion.FriedRice" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Egg fried rice"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "卵チャーハン"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "卵チャーハン"
           }
         }
       }
     },
-    "Onboarding.FirstRecipe.Suggestion.Pasta": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tomato pasta"
+    "Onboarding.FirstRecipe.Suggestion.Pasta" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tomato pasta"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "トマトパスタ"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "トマトパスタ"
           }
         }
       }
     },
-    "Onboarding.FirstRecipe.Suggestions": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Or start with one of these"
+    "Onboarding.FirstRecipe.Suggestions" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Or start with one of these"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "または、次から選ぶ"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "または、次から選ぶ"
           }
         }
       }
     },
-    "Onboarding.FirstRecipe.Title": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Create a Recipe"
+    "Onboarding.FirstRecipe.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Create a Recipe"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "レシピを作成"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レシピを作成"
           }
         }
       }
     },
-    "Onboarding.Skip": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Skip for Now"
+    "Onboarding.Skip" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skip for Now"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "今はスキップ"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今はスキップ"
           }
         }
       }
     },
-    "Onboarding.Welcome.Title": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Welcome to Plates"
+    "Onboarding.Welcome.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Welcome to Plates"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Platesへようこそ"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Platesへようこそ"
           }
         }
       }
     },
-    "Recipe.Cook.Close": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Close"
+    "Recipe.Cook.Close" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "閉じる"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "閉じる"
           }
         }
       }
     },
-    "Recipe.Cook.Finished": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ready to serve"
+    "Recipe.Cook.Finished" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ready to serve"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "できあがりです"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "できあがりです"
           }
         }
       }
     },
-    "Recipe.Cook.MarkTried": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Mark as human tested"
+    "Recipe.Cook.MarkTried" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mark as human tested"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "人が検証済みにする"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "人が検証済みにする"
           }
         }
       }
     },
-    "Recipe.Cook.Start": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Start cooking"
+    "Recipe.Cook.Start" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start cooking"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "調理を始める"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "調理を始める"
           }
         }
       }
     },
-    "Recipe.Cook.Step": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Step %1$lld of %2$lld"
+    "Recipe.Cook.Step" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Step %1$lld of %2$lld"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "手順 %1$lld/%2$lld"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "手順 %1$lld/%2$lld"
           }
         }
       }
     },
-    "Recipe.Cook.Swipe.Finish": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Swipe to finish"
+    "Recipe.Cook.Swipe.Finish" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swipe to finish"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "スワイプして完了"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スワイプして完了"
           }
         }
       }
     },
-    "Recipe.Cook.Swipe.Next": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Swipe to go to the next step"
+    "Recipe.Cook.Swipe.Next" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swipe to go to the next step"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "スワイプして次の手順へ"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スワイプして次の手順へ"
           }
         }
       }
     },
-    "Recipe.Cook.Timer.AddMinute": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Add 1 minute"
+    "Recipe.Cook.Timer.AddMinute" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add 1 minute"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "1分延長"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1分延長"
           }
         }
       }
     },
-    "Recipe.Cook.Timer.Finished": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Time's up"
+    "Recipe.Cook.Timer.Finished" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Time's up"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "時間です"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "時間です"
           }
         }
       }
     },
-    "Recipe.Cook.Timer.Pause": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Pause timer"
+    "Recipe.Cook.Timer.Pause" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pause timer"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "タイマーを一時停止"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "タイマーを一時停止"
           }
         }
       }
     },
-    "Recipe.Cook.Timer.Resume": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Resume timer"
+    "Recipe.Cook.Timer.Resume" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resume timer"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "タイマーを再開"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "タイマーを再開"
           }
         }
       }
     },
-    "Recipe.Cook.Timer.Start": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Start a %1$@ timer"
+    "Recipe.Cook.Timer.Start" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start a %1$@ timer"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%1$@のタイマーを開始"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@のタイマーを開始"
           }
         }
       }
     },
-    "Recipe.Cook.Timer.Stop": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Stop timer"
+    "Recipe.Cook.Timer.Stop" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stop timer"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "タイマーを止める"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "タイマーを止める"
           }
         }
       }
     },
-    "Recipe.Detail.Ingredients": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ingredients"
+    "Recipe.Detail.Ingredients" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingredients"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "材料"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "材料"
           }
         }
       }
     },
-    "Recipe.Detail.Ingredients.Optional": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Optional Ingredients"
+    "Recipe.Detail.Ingredients.Optional" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Optional Ingredients"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "任意の材料"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "任意の材料"
           }
         }
       }
     },
-    "Recipe.Detail.Serves": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Serves"
+    "Recipe.Detail.Serves" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Serves"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "人数"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "人数"
           }
         }
       }
     },
-    "Recipe.Detail.Step.Title": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%1$lld. %2$@"
+    "Recipe.Detail.Step.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld. %2$@"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%1$lld. %2$@"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld. %2$@"
           }
         }
       }
     },
-    "Recipe.Detail.Steps": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Steps"
+    "Recipe.Detail.Steps" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Steps"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "手順"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "手順"
           }
         }
       }
     },
-    "Recipe.Detail.Time": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Time"
+    "Recipe.Detail.Time" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Time"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "時間"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "時間"
           }
         }
       }
     },
-    "Recipe.Detail.Tools": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tools"
+    "Recipe.Detail.Tools" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tools"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "道具"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "道具"
           }
         }
       }
     },
-    "Recipe.Detail.Tools.Optional": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Optional Tools"
+    "Recipe.Detail.Tools.Optional" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Optional Tools"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "任意の道具"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "任意の道具"
           }
         }
       }
     },
-    "Recipe.Detail.Tried": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Human tested"
+    "Recipe.Detail.Tried" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Human tested"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "人が検証済み"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "人が検証済み"
           }
         }
       }
     },
-    "Recipe.Detail.Troubleshooting": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Troubleshooting"
+    "Recipe.Detail.Troubleshooting" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Troubleshooting"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "対処法"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "対処法"
           }
         }
       }
     },
-    "Recipe.Edit.Add": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Add"
+    "Recipe.Edit.Add" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "追加"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "追加"
           }
         }
       }
     },
-    "Recipe.Edit.Ingredient.Title": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ingredient"
+    "Recipe.Edit.Ingredient.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingredient"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "材料"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "材料"
           }
         }
       }
     },
-    "Recipe.Edit.Item.Amount": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Amount"
+    "Recipe.Edit.Item.Amount" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Amount"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "分量"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "分量"
           }
         }
       }
     },
-    "Recipe.Edit.Item.Note": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Note"
+    "Recipe.Edit.Item.Note" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Note"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "メモ"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "メモ"
           }
         }
       }
     },
-    "Recipe.Edit.Name": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Name"
+    "Recipe.Edit.Name" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "名前"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "名前"
           }
         }
       }
     },
-    "Recipe.Edit.Note.Add": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Add Note"
+    "Recipe.Edit.Note.Add" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Note"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "メモを追加"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "メモを追加"
           }
         }
       }
     },
-    "Recipe.Edit.Note.Problem": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Problem"
+    "Recipe.Edit.Note.Problem" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Problem"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "問題"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "問題"
           }
         }
       }
     },
-    "Recipe.Edit.Note.Solution": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Solution"
+    "Recipe.Edit.Note.Solution" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solution"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "対処"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "対処"
           }
         }
       }
     },
-    "Recipe.Edit.Note.Title": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Note"
+    "Recipe.Edit.Note.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Note"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "メモ"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "メモ"
           }
         }
       }
     },
-    "Recipe.Edit.RedrawDish": {
-      "comment": "Button under the dish icon while a recipe is edited. Works the dish out again from the recipe as it now stands.",
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Redraw Dish"
+    "Recipe.Edit.RedrawDish" : {
+      "comment" : "Button under the dish icon while a recipe is edited. Works the dish out again from the recipe as it now stands.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Redraw Dish"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "料理の絵を描き直す"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "料理の絵を描き直す"
           }
         }
       }
     },
-    "Recipe.Edit.Serves.Message": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Scaling multiplies every ingredient amount by the change in servings."
+    "Recipe.Edit.Serves.Message" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scaling multiplies every ingredient amount by the change in servings."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "分量も調整すると、人数の変化に合わせてすべての材料の分量を掛け直します。"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "分量も調整すると、人数の変化に合わせてすべての材料の分量を掛け直します。"
           }
         }
       }
     },
-    "Recipe.Edit.Serves.Prompt": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "2"
+    "Recipe.Edit.Serves.Prompt" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "2"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2"
           }
         }
       }
     },
-    "Recipe.Edit.Serves.Scale": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Save and Scale"
+    "Recipe.Edit.Serves.Scale" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save and Scale"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "保存して分量も調整"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保存して分量も調整"
           }
         }
       }
     },
-    "Recipe.Edit.Start": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Edit"
+    "Recipe.Edit.Start" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "編集"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "編集"
           }
         }
       }
     },
-    "Recipe.Edit.Step.Add": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Add Step"
+    "Recipe.Edit.Step.Add" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Step"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "手順を追加"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "手順を追加"
           }
         }
       }
     },
-    "Recipe.Edit.Step.Icons": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ingredients and tools used"
+    "Recipe.Edit.Step.Icons" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingredients and tools used"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "使う材料と道具"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使う材料と道具"
           }
         }
       }
     },
-    "Recipe.Edit.Step.Name": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Title"
+    "Recipe.Edit.Step.Name" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Title"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "タイトル"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "タイトル"
           }
         }
       }
     },
-    "Recipe.Edit.Step.Points": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Method"
+    "Recipe.Edit.Step.Points" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Method"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "説明"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "説明"
           }
         }
       }
     },
-    "Recipe.Edit.Step.Points.Footer": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Write one point per line."
+    "Recipe.Edit.Step.Points.Footer" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Write one point per line."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "1行につき1つの説明を書きます。"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1行につき1つの説明を書きます。"
           }
         }
       }
     },
-    "Recipe.Edit.Step.Title": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Step"
+    "Recipe.Edit.Step.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Step"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "手順"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "手順"
           }
         }
       }
     },
-    "Recipe.Edit.Time.Message": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Write the time the way you would read it, such as 25 min."
+    "Recipe.Edit.Time.Message" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Write the time the way you would read it, such as 25 min."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "「25分」のように、読みやすい形で書きます。"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「25分」のように、読みやすい形で書きます。"
           }
         }
       }
     },
-    "Recipe.Edit.Time.Prompt": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "25 min"
+    "Recipe.Edit.Time.Prompt" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "25 min"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "25分"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "25分"
           }
         }
       }
     },
-    "Recipe.Edit.Tool.Title": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tool"
+    "Recipe.Edit.Tool.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tool"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "道具"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "道具"
           }
         }
       }
     },
-    "Recipe.List.Empty.Description": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Generate one with Apple Intelligence, or start from the samples."
+    "Recipe.List.Empty.Description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generate one with Apple Intelligence, or start from the samples."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Apple Intelligenceで生成するか、サンプルから始めてください。"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Intelligenceで生成するか、サンプルから始めてください。"
           }
         }
       }
     },
-    "Recipe.List.Empty.Title": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "No Recipes"
+    "Recipe.List.Empty.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Recipes"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "レシピがありません"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レシピがありません"
           }
         }
       }
     },
-    "Recipe.List.Search.Prompt": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Search recipes"
+    "Recipe.List.Search.Prompt" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search recipes"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "レシピを検索"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レシピを検索"
           }
         }
       }
     },
-    "Recipe.List.Title": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Recipes"
+    "Recipe.List.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recipes"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "レシピ"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レシピ"
           }
         }
       }
     },
-    "Recipe.Row.Subtitle": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%1$@, serves %2$@"
+    "Recipe.Row.Subtitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@, serves %2$@"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%1$@、%2$@人分"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@、%2$@人分"
           }
         }
       }
     },
-    "Recipe.Share.Error": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Could not prepare the file."
+    "Recipe.Share.Error" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Could not prepare the file."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ファイルを作成できませんでした。"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ファイルを作成できませんでした。"
           }
         }
       }
     },
-    "Recipe.Share.Image": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Image"
+    "Recipe.Share.Image" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Image"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "画像"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "画像"
           }
         }
       }
     },
-    "Recipe.Share.PDF": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "PDF"
+    "Recipe.Share.Page" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Page %1$lld of %2$lld"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "PDF"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld / %2$lld ページ"
           }
         }
       }
     },
-    "Recipe.Share.Page": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Page %1$lld of %2$lld"
+    "Recipe.Share.PDF" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PDF"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%1$lld / %2$lld ページ"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PDF"
           }
         }
       }
     },
-    "Recipe.Share.Plate": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Plates Recipe"
+    "Recipe.Share.Plate" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plates Recipe"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Plates レシピ"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plates レシピ"
           }
         }
       }
     },
-    "Recipe.Share.Title": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Share"
+    "Recipe.Share.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Share"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "共有"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "共有"
           }
         }
       }
     },
-    "Shared.Cancel": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cancel"
+    "Shared.Cancel" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "キャンセル"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "キャンセル"
           }
         }
       }
     },
-    "Shared.Delete": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Delete"
+    "Shared.Delete" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "削除"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "削除"
           }
         }
       }
     },
-    "Shared.Done": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Done"
+    "Shared.Done" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "完了"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "完了"
           }
         }
       }
     },
-    "Shared.Save": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Save"
+    "Shared.Save" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "保存"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保存"
           }
         }
       }
     },
-    "Sort.Alphabetical": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Alphabetical"
+    "Sort.Alphabetical" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alphabetical"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "名前順"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "名前順"
           }
         }
       }
     },
-    "Sort.Quickest": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Quickest"
+    "Sort.Quickest" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quickest"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "短い順"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "短い順"
           }
         }
       }
     },
-    "Storage.Error.NoDirectory": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Could not open the recipes folder."
+    "Storage.Error.NoDirectory" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Could not open the recipes folder."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "レシピフォルダを開けませんでした。"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レシピフォルダを開けませんでした。"
           }
         }
       }
     },
-    "Storage.ICloudDrive": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "iCloud Drive"
+    "Storage.ICloudDrive" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud Drive"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "iCloud Drive"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud Drive"
           }
         }
       }
     },
-    "Storage.OnMyDevice": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "On My Device"
+    "Storage.OnMyDevice" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "On My Device"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "このデバイス内"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このデバイス内"
           }
         }
       }
     },
-    "Tool.Category.Other": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Other tools"
+    "Tool.Category.Other" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Other tools"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "その他の道具"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "その他の道具"
           }
         }
       }
     },
-    "Tool.Category.Stovetop": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Stovetop and appliances"
+    "Tool.Category.Stovetop" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stovetop and appliances"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "加熱器具・家電"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加熱器具・家電"
           }
         }
       }
     },
-    "Tool.Category.Utensils": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Utensils"
+    "Tool.Category.Utensils" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utensils"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "調理器具"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "調理器具"
           }
         }
       }
     }
   },
-  "version": "1.0"
+  "version" : "1.0"
 }
