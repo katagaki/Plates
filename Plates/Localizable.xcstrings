@@ -188,6 +188,23 @@
         }
       }
     },
+    "Generate.ByHand" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Write It Myself"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自分で書く"
+          }
+        }
+      }
+    },
     "Generate.Choose.Ingredients" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1225,6 +1242,23 @@
         }
       }
     },
+    "Menu.Generation" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recipe Generation"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レシピの生成"
+          }
+        }
+      }
+    },
     "Menu.Inventory" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1272,6 +1306,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "今日の上限"
+          }
+        }
+      }
+    },
+    "Menu.New" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New Recipe"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新しいレシピ"
           }
         }
       }
@@ -1418,13 +1469,13 @@
         "en-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "If you do not allow this, you can still add sample recipes, write your own, and cook from them. Plates asks again before your first recipe."
+            "value" : "If you do not allow this, you can still write recipes yourself, add the samples, and cook from them. You can turn on recipe generation later in the menu."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "許可しなくても、サンプルのレシピを追加したり、自分でレシピを書いて調理したりできます。最初のレシピを書く前に、もう一度確認します。"
+            "value" : "許可しなくても、自分でレシピを書いたり、サンプルを追加して調理したりできます。レシピの生成は、あとからメニューでオンにできます。"
           }
         }
       }
@@ -1765,6 +1816,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "料理の名前を入れて、最初のレシピを書きましょう。次の画面で、手元にある材料や道具を追加できます。"
+          }
+        }
+      }
+    },
+    "Onboarding.FirstRecipe.Description.ByHand" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name a dish to start your first recipe. On the next screen you write in the ingredients, tools, and steps yourself."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "料理の名前を入れて、最初のレシピを始めましょう。次の画面で、材料・道具・手順を自分で書き込みます。"
           }
         }
       }
@@ -2705,6 +2773,23 @@
         }
       }
     },
+    "Recipe.List.Empty.Description.ByHand" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Write one yourself, or start from the samples."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自分で書くか、サンプルから始めてください。"
+          }
+        }
+      }
+    },
     "Recipe.List.Empty.Title" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -2752,6 +2837,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "レシピ"
+          }
+        }
+      }
+    },
+    "Recipe.New.Untitled" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Untitled Recipe"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無題のレシピ"
           }
         }
       }

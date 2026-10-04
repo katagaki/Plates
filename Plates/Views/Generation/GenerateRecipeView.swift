@@ -9,6 +9,8 @@ struct GenerateRecipeView: View {
     @Environment(\.dismiss) private var dismiss
 
     let store: RecipeStore
+    /// Starts a blank recipe instead, titled with whatever was typed, for the cook to fill in.
+    let writeByHand: (String) -> Void
 
     @State private var generator = RecipeGenerator(observer: GenerationActivity.generation)
     @State private var request: GenerationRequest
@@ -25,14 +27,13 @@ struct GenerateRecipeView: View {
     @State private var editor = RecipeAskEditor(observer: GenerationActivity.edit)
     @State private var revision = ""
     @State private var revisionError: String?
-    /// Asks once, before the first recipe, to send the request to Gemma and Jev.
-    @State private var isAskingToAllow = false
     @FocusState private var isDescriptionFocused: Bool
 
     /// Opens with the dish already written in when the cook named one before the sheet came
     /// up, as they do at the end of onboarding.
-    init(store: RecipeStore, dish: String = "") {
+    init(store: RecipeStore, dish: String = "", writeByHand: @escaping (String) -> Void) {
         self.store = store
+        self.writeByHand = writeByHand
         _request = State(initialValue: GenerationRequest(description: dish))
     }
 
@@ -98,15 +99,6 @@ struct GenerateRecipeView: View {
         } message: {
             Text(verbatim: revisionError ?? "")
         }
-        .alert("Consent.Title", isPresented: $isAskingToAllow) {
-            Button("Shared.Cancel", role: .cancel) {}
-            Button("Consent.Allow") {
-                PlatesCloud.shared.isAllowed = true
-                Task { await start() }
-            }
-        } message: {
-            Text("Consent.Message")
-        }
         .interactiveDismissDisabled(isBusy)
         // A pass can take a while, and the sheet is not touched while it runs, so the screen
         // is held awake rather than locking part way through a recipe.
@@ -134,18 +126,18 @@ struct GenerateRecipeView: View {
                 )
                 .lineLimit(2...5)
                 .focused($isDescriptionFocused)
-                .disabled(!generator.isAvailable)
             } footer: {
                 Text("Generate.Description.Footer")
             }
         }
         .safeAreaInset(edge: .bottom) { generateBar }
         // The keyboard comes up with the sheet.
-        .onAppear { if generator.isAvailable { isDescriptionFocused = true } }
+        .onAppear { isDescriptionFocused = true }
     }
 
     /// The one thing left to do on this screen, so it floats over the form rather than sitting
-    /// at the end of it. Whatever is keeping the model from answering is said above the button.
+    /// at the end of it. Whatever is keeping the model from answering is said above the button,
+    /// and the recipe can always be written by hand instead.
     private var generateBar: some View {
         VStack(spacing: 8) {
             if let reason = generator.unavailableReason {
@@ -159,11 +151,7 @@ struct GenerateRecipeView: View {
             }
 
             Button {
-                if PlatesCloud.shared.isAllowed {
-                    Task { await start() }
-                } else {
-                    isAskingToAllow = true
-                }
+                Task { await start() }
             } label: {
                 HStack(spacing: 8) {
                     Image(systemName: "apple.intelligence")
@@ -177,6 +165,11 @@ struct GenerateRecipeView: View {
             .controlSize(.large)
             .tint(.accentColor)
             .disabled(!canGenerate)
+
+            Button("Generate.ByHand") {
+                writeByHand(request.description.trimmingCharacters(in: .whitespacesAndNewlines))
+            }
+            .controlSize(.large)
         }
         .multilineTextAlignment(.center)
         .padding(.horizontal, 16)

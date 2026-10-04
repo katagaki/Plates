@@ -120,14 +120,7 @@ final class RecipeStore {
     @discardableResult
     func save(_ recipe: Recipe, isNew: Bool = false) -> Bool {
         guard let directory else { return false }
-        var recipe = recipe
-        if isNew {
-            recipe.id = uniqueID(for: recipe)
-            if recipe.dish == nil {
-                recipe.dish = Dish.planned(for: recipe)
-                askDish(for: recipe)
-            }
-        }
+        let recipe = isNew ? prepared(recipe) : recipe
         do {
             try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
             try recipe.fileContents().write(to: url(for: recipe.id, in: directory), options: .atomic)
@@ -137,6 +130,24 @@ final class RecipeStore {
             loadError = error.localizedDescription
             return false
         }
+    }
+
+    /// Writes out a new recipe and hands back what was written, with its id and dish, so the
+    /// view that goes on editing it saves over the same file.
+    func create(_ recipe: Recipe) -> Recipe? {
+        let recipe = prepared(recipe)
+        return save(recipe) ? recipe : nil
+    }
+
+    /// A new recipe with an id of its own, and a dish when it came without one.
+    private func prepared(_ recipe: Recipe) -> Recipe {
+        var recipe = recipe
+        recipe.id = uniqueID(for: recipe)
+        if recipe.dish == nil {
+            recipe.dish = Dish.planned(for: recipe)
+            askDish(for: recipe)
+        }
+        return recipe
     }
 
     /// Asks for a new recipe's dish and writes it in, unless its dish was redrawn while Jev

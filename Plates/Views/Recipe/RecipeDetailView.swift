@@ -27,6 +27,8 @@ struct RecipeDetailView: View {
     @State private var editor = RecipeAskEditor(observer: GenerationActivity.edit)
     @State private var revision = ""
     @State private var revisionError: String?
+    /// Asking for changes is left out when the cook writes their recipes by hand.
+    @AppStorage(PlatesCloud.allowedKey) private var isGenerationAllowed = false
 
     /// The three things about a recipe that are edited in an alert rather than a sheet.
     private enum Field {
@@ -35,8 +37,10 @@ struct RecipeDetailView: View {
         case serves
     }
 
-    init(recipe: Recipe, store: RecipeStore? = nil) {
+    /// A recipe started by hand opens already being edited.
+    init(recipe: Recipe, store: RecipeStore? = nil, isEditing: Bool = false) {
         _recipe = State(initialValue: recipe)
+        _isEditing = State(initialValue: isEditing)
         self.store = store
     }
 
@@ -49,7 +53,7 @@ struct RecipeDetailView: View {
             }
         }
         .safeAreaBar(edge: .bottom) {
-            if isEditing {
+            if isEditing, isGenerationAllowed {
                 RecipeRevisionBar(
                     text: $revision,
                     isEnabled: editor.isAvailable && !isRevising,

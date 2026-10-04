@@ -33,13 +33,23 @@ struct MainView: View {
     @State private var isOnboarding = false
     /// The dish named at the end of onboarding, written in once the recipe sheet opens.
     @State private var firstDish = ""
+    /// Whether recipes are generated, or only written by hand, as the cook chose in onboarding
+    /// or later in the menu.
+    @AppStorage(PlatesCloud.allowedKey) private var isGenerationAllowed = false
+    @State private var isAskingToAllow = false
+    @State private var path = NavigationPath()
+    /// The title a recipe written by hand starts with, once the recipe sheet is gone.
+    @State private var byHandTitle: String?
 
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $path) {
             RecipesGridView(recipes: visibleRecipes, delete: store.delete)
                 .navigationTitle("Recipe.List.Title")
                 .toolbarTitleDisplayMode(.inlineLarge)
                 .navigationDestination(for: Recipe.self) { RecipeDetailView(recipe: $0, store: store) }
+                .navigationDestination(for: ByHand.self) {
+                    RecipeDetailView(recipe: $0.recipe, store: store, isEditing: true)
+                }
                 .searchable(text: $search, prompt: Text("Recipe.List.Search.Prompt"))
                 .overlay {
                     if store.recipes.isEmpty {
@@ -67,15 +77,16 @@ struct MainView: View {
                     DefaultToolbarItem(kind: .search, placement: .bottomBar)
                     ToolbarSpacer(.fixed, placement: .bottomBar)
                     ToolbarItem(placement: .bottomBar) {
-                        Button {
-                            generation = Generation()
-                        } label: {
-                            Label("Menu.Generate", systemImage: "plus")
+                        Button(action: newRecipe) {
+                            Label(newRecipeTitle, systemImage: "plus")
                         }
                     }
                 }
-                .sheet(item: $generation, onDismiss: openNextImport) { generation in
-                    GenerateRecipeView(store: store, dish: generation.dish)
+                .sheet(item: $generation, onDismiss: generationDismissed) { generation in
+                    GenerateRecipeView(store: store, dish: generation.dish) { title in
+                        byHandTitle = title
+                        self.generation = nil
+                    }
                 }
         }
         .sheet(isPresented: $isShowingLimits) {
@@ -93,6 +104,12 @@ struct MainView: View {
                 firstDish = dish ?? ""
                 isOnboarding = false
             }
+        }
+        .alert("Consent.Title", isPresented: $isAskingToAllow) {
+            Button("Shared.Cancel", role: .cancel) {}
+            Button("Consent.Allow") { isGenerationAllowed = true }
+        } message: {
+            Text("Consent.Message")
         }
         .onAppear {
             store.importSharedRecipes()
@@ -113,10 +130,57 @@ struct MainView: View {
         var dish = ""
     }
 
+    /// A recipe started by hand, opened in the editor rather than read.
+    struct ByHand: Hashable {
+        let recipe: Recipe
+    }
+
+    private var newRecipeTitle: LocalizedStringKey {
+        isGenerationAllowed ? "Menu.Generate" : "Menu.New"
+    }
+
+    /// The recipe sheet when recipes are generated, and a blank recipe when they are not.
+    private func newRecipe() {
+        if isGenerationAllowed {
+            generation = Generation()
+        } else {
+            writeByHand(titled: "")
+        }
+    }
+
+    /// Writes out a blank recipe and opens it in the editor, where every change is saved as it
+    /// is made.
+    private func writeByHand(titled title: String) {
+        let recipe = Recipe(
+            id: "",
+            title: title.isEmpty ? String(localized: "Recipe.New.Untitled") : title,
+            time: "30 min",
+            serves: "2",
+            ingredients: IngredientSections(),
+            tools: [],
+            steps: [],
+            troubleshooting: []
+        )
+        guard let created = store.create(recipe) else { return }
+        path.append(ByHand(recipe: created))
+    }
+
+    private func generationDismissed() {
+        if let byHandTitle { writeByHand(titled: byHandTitle) }
+        byHandTitle = nil
+        openNextImport()
+    }
+
     /// The recipe sheet waits for onboarding to be gone, since one sheet cannot open over
     /// another that is closing.
     private func openFirstRecipe() {
-        if !firstDish.isEmpty { generation = Generation(dish: firstDish) }
+        if !firstDish.isEmpty {
+            if isGenerationAllowed {
+                generation = Generation(dish: firstDish)
+            } else {
+                writeByHand(titled: firstDish)
+            }
+        }
         firstDish = ""
         openNextImport()
     }
@@ -163,11 +227,26 @@ struct MainView: View {
                 }
             }
 
-            if PlatesCloud.shared.isConfigured {
-                Button {
-                    isShowingLimits = true
-                } label: {
-                    Label("Menu.Limits", systemImage: "gauge.with.dots.needle.33percent")
+            Section {
+                Toggle(isOn: Binding(
+                    get: { isGenerationAllowed },
+                    set: { allowed in
+                        if allowed {
+                            isAskingToAllow = true
+                        } else {
+                            isGenerationAllowed = false
+                        }
+                    }
+                )) {
+                    Label("Menu.Generation", systemImage: "apple.intelligence")
+                }
+
+                if PlatesCloud.shared.isConfigured, isGenerationAllowed {
+                    Button {
+                        isShowingLimits = true
+                    } label: {
+                        Label("Menu.Limits", systemImage: "gauge.with.dots.needle.33percent")
+                    }
                 }
             }
         } label: {
@@ -195,11 +274,13 @@ struct MainView: View {
         } description: {
             if let loadError = store.loadError {
                 Text(verbatim: loadError)
-            } else {
+            } else if isGenerationAllowed {
                 Text("Recipe.List.Empty.Description")
+            } else {
+                Text("Recipe.List.Empty.Description.ByHand")
             }
         } actions: {
-            Button("Menu.Generate") { generation = Generation() }
+            Button(newRecipeTitle, action: newRecipe)
                 .buttonStyle(.borderedProminent)
             Button("Menu.AddSamples") { store.addSampleRecipes() }
         }

@@ -1,9 +1,8 @@
-import CulinaryIntelligence
 import SwiftUI
 
 extension OnboardingView {
-    /// Where a request goes, asked before the first recipe. A cook who does not allow it can
-    /// still go on, and is asked again when they first generate a recipe.
+    /// Where a request goes, asked before the first recipe. A cook who does not allow it writes
+    /// their recipes by hand, and can turn generation on later from the menu.
     var consentStep: some View {
         page {
             stepHeader(
@@ -44,10 +43,13 @@ extension OnboardingView {
                 .foregroundStyle(.secondary)
         } buttons: {
             primaryButton("Onboarding.Consent.Allow") {
-                PlatesCloud.shared.isAllowed = true
+                isGenerationAllowed = true
                 advance()
             }
-            secondaryButton("Onboarding.Consent.Deny") { advance() }
+            secondaryButton("Onboarding.Consent.Deny") {
+                isGenerationAllowed = false
+                advance()
+            }
         }
     }
 

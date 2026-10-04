@@ -1,3 +1,4 @@
+import CulinaryIntelligence
 import SwiftUI
 
 /// What a new install shows first: what Plates does, where a request goes, and a way into the first recipe.
@@ -14,6 +15,8 @@ struct OnboardingView: View {
     @State var step = Step.welcome
     @State var dish = ""
     @FocusState var isDishFocused: Bool
+    /// Whether the first recipe is generated, or started blank for the cook to write.
+    @AppStorage(PlatesCloud.allowedKey) var isGenerationAllowed = false
 
     var body: some View {
         content

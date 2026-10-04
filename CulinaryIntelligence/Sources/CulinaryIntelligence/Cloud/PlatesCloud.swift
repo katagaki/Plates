@@ -79,7 +79,8 @@ public final class PlatesCloud {
 
     public var isConfigured: Bool { baseURL != nil }
 
-    private static let allowedKey = "PlatesCloud.Allowed"
+    /// Where `isAllowed` is kept, for views that follow it with `@AppStorage`.
+    nonisolated public static let allowedKey = "PlatesCloud.Allowed"
 
     /// Whether the cook has allowed their requests and recipes to go to Gemma and Jev. Until
     /// they have, nothing but a limits check leaves the device, and a dish icon is drawn from

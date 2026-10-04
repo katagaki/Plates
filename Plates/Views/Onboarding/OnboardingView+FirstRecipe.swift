@@ -8,7 +8,9 @@ extension OnboardingView {
             stepHeader(
                 icon: "plus.circle",
                 title: "Onboarding.FirstRecipe.Title",
-                description: "Onboarding.FirstRecipe.Description"
+                description: isGenerationAllowed
+                    ? "Onboarding.FirstRecipe.Description"
+                    : "Onboarding.FirstRecipe.Description.ByHand"
             )
 
             TextField("Onboarding.FirstRecipe.Prompt", text: $dish)
