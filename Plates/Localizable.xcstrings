@@ -13,7 +13,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "AI処理を許可"
+            "value" : "外部処理を許可"
           }
         }
       }
@@ -64,7 +64,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "AI処理"
+            "value" : "外部処理"
           }
         }
       }
@@ -1356,7 +1356,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "AI処理"
+            "value" : "外部処理"
           }
         }
       }
@@ -1628,7 +1628,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "許可しなくても、自分でレシピを書いたり、サンプルを追加して調理したりできます。あとからメニューの「AI処理」で変更できます。"
+            "value" : "許可しなくても、自分でレシピを書いたり、サンプルを追加して調理したりできます。あとからメニューの「外部処理」で変更できます。"
           }
         }
       }
