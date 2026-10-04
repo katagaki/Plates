@@ -36,7 +36,7 @@ struct RecipeHeader: View {
 
     private var title: some View {
         Text(verbatim: recipe.title)
-            .font(.system(size: 30, weight: .bold, design: .serif))
+            .font(.system(size: 30, weight: .bold))
             .foregroundStyle(Color.paperInk)
             .fixedSize(horizontal: false, vertical: true)
     }

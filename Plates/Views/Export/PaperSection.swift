@@ -11,9 +11,7 @@ struct PaperSection<Content: View>: View {
         VStack(alignment: .leading, spacing: 10) {
             HStack(spacing: 10) {
                 Text(title)
-                    .font(.system(size: 12, weight: .bold))
-                    .textCase(.uppercase)
-                    .tracking(0.8)
+                    .font(.system(size: 15, weight: .semibold))
                     .foregroundStyle(Color.paperAccent)
                     .fixedSize()
                 Rectangle()
