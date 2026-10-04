@@ -16,17 +16,20 @@ extension OnboardingView {
                 featureRow(
                     icon: "text.page",
                     title: "Onboarding.Consent.Gemma",
-                    description: "Onboarding.Consent.Gemma.Description"
+                    description: "Onboarding.Consent.Gemma.Description",
+                    spacing: 8
                 )
                 featureRow(
                     icon: "dice",
                     title: "Onboarding.Consent.Jev",
-                    description: "Onboarding.Consent.Jev.Description"
+                    description: "Onboarding.Consent.Jev.Description",
+                    spacing: 8
                 )
                 featureRow(
                     icon: "lock.shield",
                     title: "Onboarding.Consent.Private",
-                    description: "Onboarding.Consent.Private.Description"
+                    description: "Onboarding.Consent.Private.Description",
+                    spacing: 8
                 )
             }
 

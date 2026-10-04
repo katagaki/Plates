@@ -23,8 +23,15 @@ extension OnboardingView {
 
     // MARK: - Feature row
 
-    func featureRow(icon: String, title: LocalizedStringKey, description: LocalizedStringKey) -> some View {
-        HStack(alignment: .top, spacing: 14) {
+    /// An icon beside a title and a line under it. Narrow icons sit in the same column as wide
+    /// ones, so a page of narrow icons can draw the text in closer.
+    func featureRow(
+        icon: String,
+        title: LocalizedStringKey,
+        description: LocalizedStringKey,
+        spacing: CGFloat = 14
+    ) -> some View {
+        HStack(alignment: .top, spacing: spacing) {
             Image(systemName: icon)
                 .font(.title)
                 .foregroundStyle(.tint)
