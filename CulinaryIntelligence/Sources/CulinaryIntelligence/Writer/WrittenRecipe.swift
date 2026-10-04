@@ -71,12 +71,17 @@ nonisolated struct WrittenRecipe: Equatable {
                 case let .section(next):
                     section = next
                     isInferred = false
-                    if !rest.isEmpty {
-                        if section == .problems {
-                            problemLines.append(ProblemLine(text: rest, startsItem: true, startsBlock: startsBlock))
-                        } else {
-                            append(rest, to: section, startsItem: true)
+                    if section == .problems, !rest.isEmpty {
+                        problemLines.append(ProblemLine(text: rest, startsItem: true, startsBlock: startsBlock))
+                    } else if section == .tools {
+                        // "Tools: 1 small bowl, 1 wok" lists them on the heading's line. A tool
+                        // line has no prep to set off with a comma, as an ingredient's has.
+                        for tool in rest.split(separator: ",") {
+                            let name = tool.trimmingCharacters(in: .whitespaces)
+                            if !name.isEmpty { append(name, to: section, startsItem: true) }
                         }
+                    } else if !rest.isEmpty {
+                        append(rest, to: section, startsItem: true)
                     }
                     continue
                 }
@@ -165,7 +170,15 @@ nonisolated struct WrittenRecipe: Equatable {
         }
         switch section {
         case .ingredients: add(&ingredients)
-        case .tools: add(&tools)
+        case .tools:
+            // "1 large pot, 1 cutting board, 1 chef knife" is a list on one line when each
+            // piece is counted.
+            let pieces = text.split(separator: ",").map { $0.trimmingCharacters(in: .whitespaces) }
+            if startsItem, pieces.count > 1, pieces.allSatisfy({ $0.first?.isNumber == true }) {
+                tools += pieces
+            } else {
+                add(&tools)
+            }
         case .method: add(&steps)
         case .problems: add(&problems)
         case .none: break

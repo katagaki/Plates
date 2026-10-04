@@ -84,7 +84,7 @@ extension RecipeGenerator {
         return text.isEmpty ? nil : text
     }
 
-    /// What pages call a tool that the catalog names another way.
+    /// What pages and Gemma call a tool that the catalog names another way.
     private static let toolAliases: [String: String] = [
         "skillet": "pan",
         "frying pan": "pan",
@@ -102,6 +102,10 @@ extension RecipeGenerator {
         "aluminium foil": "foil",
         "rubber spatula": "spatula",
         "chef s knife": "knife",
+        "pastry cutter": "cookie-cutter",
+        "biscuit cutter": "cookie-cutter",
+        "ramekin": "bowl",
+        "cooling rack": "wire-rack",
     ]
 
     /// Tools whose English name is mostly read as something else in a method: "fork tender",
