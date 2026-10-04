@@ -1,53 +1,206 @@
 {
   "sourceLanguage" : "en-US",
   "strings" : {
-    "Consent.Allow" : {
+    "AIProcessing.Allow" : {
       "extractionState" : "manual",
       "localizations" : {
         "en-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Allow"
+            "value" : "Allow AI Processing"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "許可"
+            "value" : "AI処理を許可"
           }
         }
       }
     },
-    "Consent.Message" : {
+    "AIProcessing.Footer.Off" : {
       "extractionState" : "manual",
       "localizations" : {
         "en-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "To write a recipe, Plates sends your request and the ingredients and tools you pick to Gemma on Cloudflare Workers AI. Decide for Me and recipe icons send your request and the recipe to Jev by TypeSafe. No personal information is sent."
+            "value" : "Recipes are written by hand, and nothing is sent to Gemma or Jev."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "レシピを書くときは、リクエストと選んだ材料・道具が、Cloudflare Workers AIのGemmaに送られます。おまかせとレシピのアイコンでは、リクエストとレシピがTypeSafeのJevに送られます。個人情報は送られません。"
+            "value" : "レシピは自分で書きます。GemmaやJevには何も送られません。"
           }
         }
       }
     },
-    "Consent.Title" : {
+    "AIProcessing.Footer.On" : {
       "extractionState" : "manual",
       "localizations" : {
         "en-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Send Your Request?"
+            "value" : "Plates generates recipes, and sends what is listed below to Gemma and Jev."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "リクエストを送信しますか？"
+            "value" : "Platesがレシピを生成し、以下の情報をGemmaとJevに送ります。"
+          }
+        }
+      }
+    },
+    "AIProcessing.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AI Processing"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AI処理"
+          }
+        }
+      }
+    },
+    "Consent.Gemma" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gemma Writes Recipes"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gemmaがレシピを書きます"
+          }
+        }
+      }
+    },
+    "Consent.Gemma.Description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your request and the ingredients and tools you pick go to Gemma, an open model on Cloudflare Workers AI."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "リクエストと選んだ材料・道具が、Cloudflare Workers AI上のオープンモデル、Gemmaに送られます。"
+          }
+        }
+      }
+    },
+    "Consent.Jev" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jev Picks Dishes and Icons"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jevが料理とアイコンを選びます"
+          }
+        }
+      }
+    },
+    "Consent.Jev.Description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Decide for Me and recipe icons send your request and the recipe to Jev by TypeSafe."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "おまかせとレシピのアイコンでは、リクエストとレシピがTypeSafeのJevに送られます。"
+          }
+        }
+      }
+    },
+    "Consent.Policy.Cloudflare" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cloudflare Privacy Policy"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cloudflareのプライバシーポリシー"
+          }
+        }
+      }
+    },
+    "Consent.Policy.TypeSafe" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TypeSafe Privacy Policy"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TypeSafeのプライバシーポリシー"
+          }
+        }
+      }
+    },
+    "Consent.Private" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Personal Information"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "個人情報は送られません"
+          }
+        }
+      }
+    },
+    "Consent.Private.Description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No name, account, or location is sent. Recipes stay as files on your iPhone or in iCloud Drive."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "名前、アカウント、位置情報は送られません。レシピはiPhoneまたはiCloud Driveにファイルとして残ります。"
           }
         }
       }
@@ -1191,6 +1344,23 @@
         }
       }
     },
+    "Menu.AIProcessing" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AI Processing"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AI処理"
+          }
+        }
+      }
+    },
     "Menu.AddSamples" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1238,23 +1408,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "レシピを生成"
-          }
-        }
-      }
-    },
-    "Menu.Generation" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en-US" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Recipe Generation"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "レシピの生成"
           }
         }
       }
@@ -1469,149 +1622,13 @@
         "en-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "If you do not allow this, you can still write recipes yourself, add the samples, and cook from them. You can turn on recipe generation later in the menu."
+            "value" : "If you do not allow this, you can still write recipes yourself, add the samples, and cook from them. You can change this later under AI Processing in the menu."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "許可しなくても、自分でレシピを書いたり、サンプルを追加して調理したりできます。レシピの生成は、あとからメニューでオンにできます。"
-          }
-        }
-      }
-    },
-    "Onboarding.Consent.Gemma" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en-US" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gemma Writes Recipes"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gemmaがレシピを書きます"
-          }
-        }
-      }
-    },
-    "Onboarding.Consent.Gemma.Description" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en-US" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Your request and the ingredients and tools you pick go to Gemma, an open model on Cloudflare Workers AI."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "リクエストと選んだ材料・道具が、Cloudflare Workers AI上のオープンモデル、Gemmaに送られます。"
-          }
-        }
-      }
-    },
-    "Onboarding.Consent.Jev" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en-US" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jev Picks Dishes and Icons"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jevが料理とアイコンを選びます"
-          }
-        }
-      }
-    },
-    "Onboarding.Consent.Jev.Description" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en-US" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Decide for Me and recipe icons send your request and the recipe to Jev by TypeSafe."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "おまかせとレシピのアイコンでは、リクエストとレシピがTypeSafeのJevに送られます。"
-          }
-        }
-      }
-    },
-    "Onboarding.Consent.Policy.Cloudflare" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en-US" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cloudflare Privacy Policy"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cloudflareのプライバシーポリシー"
-          }
-        }
-      }
-    },
-    "Onboarding.Consent.Policy.TypeSafe" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en-US" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "TypeSafe Privacy Policy"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "TypeSafeのプライバシーポリシー"
-          }
-        }
-      }
-    },
-    "Onboarding.Consent.Private" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en-US" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No Personal Information"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "個人情報は送られません"
-          }
-        }
-      }
-    },
-    "Onboarding.Consent.Private.Description" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en-US" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No name, account, or location is sent. Recipes stay as files on your iPhone or in iCloud Drive."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "名前、アカウント、位置情報は送られません。レシピはiPhoneまたはiCloud Driveにファイルとして残ります。"
+            "value" : "許可しなくても、自分でレシピを書いたり、サンプルを追加して調理したりできます。あとからメニューの「AI処理」で変更できます。"
           }
         }
       }

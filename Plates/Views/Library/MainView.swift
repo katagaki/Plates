@@ -36,7 +36,7 @@ struct MainView: View {
     /// Whether recipes are generated, or only written by hand, as the cook chose in onboarding
     /// or later in the menu.
     @AppStorage(PlatesCloud.allowedKey) private var isGenerationAllowed = false
-    @State private var isAskingToAllow = false
+    @State private var isShowingAIProcessing = false
     @State private var path = NavigationPath()
     /// The title a recipe written by hand starts with, once the recipe sheet is gone.
     @State private var byHandTitle: String?
@@ -105,11 +105,8 @@ struct MainView: View {
                 isOnboarding = false
             }
         }
-        .alert("Consent.Title", isPresented: $isAskingToAllow) {
-            Button("Shared.Cancel", role: .cancel) {}
-            Button("Consent.Allow") { isGenerationAllowed = true }
-        } message: {
-            Text("Consent.Message")
+        .sheet(isPresented: $isShowingAIProcessing, onDismiss: openNextImport) {
+            AIProcessingView()
         }
         .onAppear {
             store.importSharedRecipes()
@@ -189,7 +186,7 @@ struct MainView: View {
     /// the cook was busy waits its turn rather than covering what they were doing.
     private func openNextImport() {
         guard sharedImport == nil, generation == nil, !isOnboarding, !isShowingLimits,
-              !isShowingInventory else { return }
+              !isShowingInventory, !isShowingAIProcessing else { return }
         sharedImport = store.sharedPages.first
     }
 
@@ -228,17 +225,10 @@ struct MainView: View {
             }
 
             Section {
-                Toggle(isOn: Binding(
-                    get: { isGenerationAllowed },
-                    set: { allowed in
-                        if allowed {
-                            isAskingToAllow = true
-                        } else {
-                            isGenerationAllowed = false
-                        }
-                    }
-                )) {
-                    Label("Menu.Generation", systemImage: "apple.intelligence")
+                Button {
+                    isShowingAIProcessing = true
+                } label: {
+                    Label("Menu.AIProcessing", systemImage: "apple.intelligence")
                 }
 
                 if PlatesCloud.shared.isConfigured, isGenerationAllowed {

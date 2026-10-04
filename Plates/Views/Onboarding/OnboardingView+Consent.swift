@@ -14,27 +14,27 @@ extension OnboardingView {
             VStack(alignment: .leading, spacing: 24) {
                 featureRow(
                     icon: "text.page",
-                    title: "Onboarding.Consent.Gemma",
-                    description: "Onboarding.Consent.Gemma.Description",
+                    title: "Consent.Gemma",
+                    description: "Consent.Gemma.Description",
                     spacing: 8
                 )
                 featureRow(
                     icon: "dice",
-                    title: "Onboarding.Consent.Jev",
-                    description: "Onboarding.Consent.Jev.Description",
+                    title: "Consent.Jev",
+                    description: "Consent.Jev.Description",
                     spacing: 8
                 )
                 featureRow(
                     icon: "lock.shield",
-                    title: "Onboarding.Consent.Private",
-                    description: "Onboarding.Consent.Private.Description",
+                    title: "Consent.Private",
+                    description: "Consent.Private.Description",
                     spacing: 8
                 )
             }
 
             VStack(alignment: .leading, spacing: 12) {
-                Link("Onboarding.Consent.Policy.Cloudflare", destination: Self.cloudflarePolicy)
-                Link("Onboarding.Consent.Policy.TypeSafe", destination: Self.typeSafePolicy)
+                Link("Consent.Policy.Cloudflare", destination: AIProcessingView.cloudflarePolicy)
+                Link("Consent.Policy.TypeSafe", destination: AIProcessingView.typeSafePolicy)
             }
             .font(.subheadline)
 
@@ -52,7 +52,4 @@ extension OnboardingView {
             }
         }
     }
-
-    private static let cloudflarePolicy = URL(string: "https://www.cloudflare.com/privacypolicy/")!
-    private static let typeSafePolicy = URL(string: "https://typesafe.ai/legal/privacy-policy")!
 }
