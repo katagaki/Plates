@@ -3,9 +3,8 @@ import AppKit
 let scriptDir = URL(fileURLWithPath: CommandLine.arguments[0]).deletingLastPathComponent()
 let languages = ["en", "ja"]
 
-/// iPhone captures live in `Raw/<lang>/` and are written to `<lang>/`. iPad captures live in
-/// `Raw/iPad/<lang>/` and are written to `iPad/<lang>/`.
-enum Device {
+/// Captures live in `Raw/<device>/<lang>/` and are written to `<device>/<lang>/`.
+enum Device: String {
     case iPhone
     case iPad
 
@@ -21,18 +20,12 @@ enum Device {
     var scale: CGFloat { canvasSize.width / Device.iPhone.canvasSize.width }
 
     func rawDir(_ language: String) -> URL {
-        let raw = scriptDir.appendingPathComponent("Raw")
-        switch self {
-        case .iPhone: return raw.appendingPathComponent(language)
-        case .iPad: return raw.appendingPathComponent("iPad").appendingPathComponent(language)
-        }
+        scriptDir.appendingPathComponent("Raw").appendingPathComponent(rawValue)
+            .appendingPathComponent(language)
     }
 
     func outDir(_ language: String) -> URL {
-        switch self {
-        case .iPhone: return scriptDir.appendingPathComponent(language)
-        case .iPad: return scriptDir.appendingPathComponent("iPad").appendingPathComponent(language)
-        }
+        scriptDir.appendingPathComponent(rawValue).appendingPathComponent(language)
     }
 }
 
