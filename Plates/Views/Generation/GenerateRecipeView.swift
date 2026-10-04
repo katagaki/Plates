@@ -166,10 +166,19 @@ struct GenerateRecipeView: View {
             .tint(.accentColor)
             .disabled(!canGenerate)
 
-            Button("Generate.ByHand") {
+            Button {
                 writeByHand(request.description.trimmingCharacters(in: .whitespacesAndNewlines))
+            } label: {
+                HStack(spacing: 8) {
+                    Image(systemName: "pencil")
+                    Text("Generate.ByHand")
+                }
+                .font(.body.weight(.semibold))
+                .frame(maxWidth: .infinity)
             }
+            .buttonStyle(.glass)
             .controlSize(.large)
+            .disabled(isBusy)
         }
         .multilineTextAlignment(.center)
         .padding(.horizontal, 16)
