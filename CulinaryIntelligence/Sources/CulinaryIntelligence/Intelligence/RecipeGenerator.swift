@@ -120,25 +120,6 @@ struct StructuredStep {
     var text: String
 }
 
-/// What goes wrong and how to fix it. The editor rewrites the notes in this shape.
-@Generable(description: "Problems a cook runs into with this recipe, and their fixes")
-struct GeneratedTroubleshootingList {
-    @Guide(description: "Things that commonly go wrong and how to fix them", .count(2...5))
-    var entries: [GeneratedTroubleshooting]
-}
-
-@Generable
-struct GeneratedIngredient {
-    @Guide(description: "The ingredient's name")
-    var item: String
-
-    @Guide(description: "The quantity only, such as '150 g', '1/2', '2 tbsp', or 'to taste'")
-    var amount: String
-
-    @Guide(description: "One sentence, only when it changes what you buy. Otherwise leave empty.")
-    var note: String
-}
-
 @Generable(description: "One tool a recipe uses")
 struct GeneratedTool {
     @Guide(description: "The tool name on its own, such as 'Pan'. A size or a qualifier goes in the note.")

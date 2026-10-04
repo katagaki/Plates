@@ -1580,11 +1580,6 @@ public nonisolated enum IconCatalog {
         return ingredients.first { normalized($0) == cleaned }
     }
 
-    /// The nearest ingredients to a name the catalog does not carry, for suggesting a swap.
-    public static func ingredientSuggestions(for name: String, limit: Int = 4) -> [String] {
-        Array(search(name, in: ingredients).prefix(limit))
-    }
-
     /// Ranks a set by how well each name matches the search text: whole word, then prefix,
     /// then anywhere in the name. Both the asset's own name and its localized name are scored,
     /// so a cook finds an icon by either.

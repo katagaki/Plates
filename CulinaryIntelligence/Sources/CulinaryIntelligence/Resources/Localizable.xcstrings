@@ -103,40 +103,6 @@
         }
       }
     },
-    "Download.Error.Incomplete": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "The download did not finish. Try again."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ダウンロードが最後まで終わりませんでした。もう一度お試しください。"
-          }
-        }
-      }
-    },
-    "Download.Error.Server": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "The download server returned error %1$@. Try again."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ダウンロード元のサーバーがエラー%1$@を返しました。もう一度お試しください。"
-          }
-        }
-      }
-    },
     "Edit.Error.NoChanges": {
       "extractionState": "manual",
       "localizations": {
