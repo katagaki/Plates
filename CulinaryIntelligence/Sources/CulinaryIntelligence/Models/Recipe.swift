@@ -203,6 +203,14 @@ extension Step {
         "thin", "whole",
     ]
 
+    /// Words that are part of a name but too common in a method to put an icon on a step by
+    /// themselves: "turn dark red" is no call for dark soy sauce, "the sauce thickens" none for
+    /// soy sauce, and a baking sheet none for baking soda. Only the icons leave them out, so
+    /// what an edit takes a step to name is unchanged.
+    private static let unmarked: Set<String> = [
+        "baking", "black", "dark", "green", "light", "red", "sauce", "white", "yellow",
+    ]
+
     /// The icons a step's words point at, taken from the recipe's own lists so a step never
     /// shows something the recipe does not carry. Ingredients come first, then tools.
     public static func icons(
@@ -230,7 +238,7 @@ extension Step {
             names.append(IconCatalog.displayName(for: asset))
         }
         if names.contains(where: { runsTogether($0) && text.contains($0.lowercased()) }) { return true }
-        return names.flatMap(terms).contains { words.contains($0) }
+        return names.flatMap(terms).contains { !unmarked.contains($0) && words.contains($0) }
     }
 
     /// Whether some text names an ingredient or tool by the name a recipe lists it under. The
