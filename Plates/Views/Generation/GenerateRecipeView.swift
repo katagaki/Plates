@@ -25,6 +25,7 @@ struct GenerateRecipeView: View {
     @State private var editor = RecipeAskEditor(observer: GenerationActivity.edit)
     @State private var revision = ""
     @State private var revisionError: String?
+    @FocusState private var isDescriptionFocused: Bool
 
     /// Set by a `plates-debug://` link, so a debug run can go from launch to Jev's pick untouched.
     private let startsAtOnce: Bool
@@ -128,12 +129,15 @@ struct GenerateRecipeView: View {
                     axis: .vertical
                 )
                 .lineLimit(2...5)
+                .focused($isDescriptionFocused)
                 .disabled(!generator.isAvailable)
             } footer: {
                 Text("Generate.Description.Footer")
             }
         }
         .safeAreaInset(edge: .bottom) { generateBar }
+        // The keyboard comes up with the sheet, unless a debug link is about to start it.
+        .onAppear { if generator.isAvailable, !startsAtOnce { isDescriptionFocused = true } }
     }
 
     /// The one thing left to do on this screen, so it floats over the form rather than sitting
