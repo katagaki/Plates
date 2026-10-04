@@ -18,12 +18,6 @@ struct PaperNoteRow: View {
         .padding(.vertical, 10)
         .padding(.horizontal, 14)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(alignment: .leading) {
-            ZStack(alignment: .leading) {
-                Color.paperTint
-                Color.paperAccent.frame(width: 3)
-            }
-        }
-        .clipShape(.rect(cornerRadius: 10))
+        .background(Color.paperTint, in: .rect(cornerRadius: 10))
     }
 }
