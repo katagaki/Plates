@@ -44,8 +44,6 @@ limit. The app only shows what it is told is left.
 - App Attest does not run in Simulator, so a debug build there sends unsigned requests to
   `http://localhost:8787`. Run `npm run dev` in `../PlatesCloud` with `SKIP_APP_ATTEST=true` in
   its `.dev.vars`.
-- Debug builds register `plates-debug://generate?request=...&decide=true` to write a request at
-  once. `Info.plist` is preprocessed so Release builds do not list the scheme.
 
 ## Model lessons
 

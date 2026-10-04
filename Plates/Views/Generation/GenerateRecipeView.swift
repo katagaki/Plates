@@ -27,16 +27,10 @@ struct GenerateRecipeView: View {
     @State private var revisionError: String?
     @FocusState private var isDescriptionFocused: Bool
 
-    /// Set by a `plates-debug://` link, so a debug run can go from launch to Jev's pick untouched.
-    private let startsAtOnce: Bool
-    private let decidesAtOnce: Bool
-
     /// Opens with the dish already written in when the cook named one before the sheet came
     /// up, as they do at the end of onboarding.
-    init(store: RecipeStore, dish: String = "", startsAtOnce: Bool = false, decidesAtOnce: Bool = false) {
+    init(store: RecipeStore, dish: String = "") {
         self.store = store
-        self.startsAtOnce = startsAtOnce
-        self.decidesAtOnce = decidesAtOnce
         _request = State(initialValue: GenerationRequest(description: dish))
     }
 
@@ -107,7 +101,6 @@ struct GenerateRecipeView: View {
         // is held awake rather than locking part way through a recipe.
         .onChange(of: isBusy) { UIApplication.shared.isIdleTimerDisabled = isBusy }
         .onDisappear { UIApplication.shared.isIdleTimerDisabled = false }
-        .task { if startsAtOnce, canGenerate { await start() } }
     }
 
     /// A generated recipe titles itself, so its title is shown as written.
@@ -136,8 +129,8 @@ struct GenerateRecipeView: View {
             }
         }
         .safeAreaInset(edge: .bottom) { generateBar }
-        // The keyboard comes up with the sheet, unless a debug link is about to start it.
-        .onAppear { if generator.isAvailable, !startsAtOnce { isDescriptionFocused = true } }
+        // The keyboard comes up with the sheet.
+        .onAppear { if generator.isAvailable { isDescriptionFocused = true } }
     }
 
     /// The one thing left to do on this screen, so it floats over the form rather than sitting
@@ -236,7 +229,6 @@ struct GenerateRecipeView: View {
             ideas = offered
             requestID = id
             decisionsRemaining = await generator.decisionsRemaining()
-            if decidesAtOnce { decide() }
         }
     }
 

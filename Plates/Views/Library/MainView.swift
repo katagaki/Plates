@@ -75,12 +75,7 @@ struct MainView: View {
                     }
                 }
                 .sheet(item: $generation, onDismiss: openNextImport) { generation in
-                    GenerateRecipeView(
-                        store: store,
-                        dish: generation.dish,
-                        startsAtOnce: generation.startsAtOnce,
-                        decidesAtOnce: generation.decidesAtOnce
-                    )
+                    GenerateRecipeView(store: store, dish: generation.dish)
                 }
         }
         .sheet(isPresented: $isShowingLimits) {
@@ -109,9 +104,6 @@ struct MainView: View {
             store.importSharedRecipes()
             openNextImport()
         }
-        #if DEBUG
-        .onOpenURL(perform: openDebugLink)
-        #endif
     }
 
     /// What the recipe sheet opens with. It is handed over whole, since a sheet shown from a
@@ -119,8 +111,6 @@ struct MainView: View {
     struct Generation: Identifiable {
         let id = UUID()
         var dish = ""
-        var startsAtOnce = false
-        var decidesAtOnce = false
     }
 
     /// The recipe sheet waits for onboarding to be gone, since one sheet cannot open over
@@ -138,24 +128,6 @@ struct MainView: View {
               !isShowingInventory else { return }
         sharedImport = store.sharedPages.first
     }
-
-    #if DEBUG
-    /// `plates-debug://generate?request=...&decide=true` writes a recipe on launch, and with
-    /// `decide` lets Jev pick from the ideas. Debug builds only register the scheme.
-    private func openDebugLink(_ url: URL) {
-        guard url.host() == "generate", generation == nil,
-              let items = URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems,
-              let request = items.first(where: { $0.name == "request" })?.value, !request.isEmpty
-        else { return }
-        onboardingCompleted = true
-        isOnboarding = false
-        generation = Generation(
-            dish: request,
-            startsAtOnce: true,
-            decidesAtOnce: items.contains { $0.name == "decide" && $0.value == "true" }
-        )
-    }
-    #endif
 
     private var menu: some View {
         Menu {
