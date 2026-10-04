@@ -9,7 +9,11 @@ struct RecipeDetailView: View {
     @State private var recipe: Recipe
     @State private var isEditing = false
     @State private var isShowingTroubleshooting = false
-    @State private var isShowingShoppingList = false
+    /// The list whose missing lines are being asked about.
+    @State private var checking: RecipeList?
+    /// What the inventory held when it was last read, so a list can say it is missing lines.
+    @State private var inventoryIngredients = Pantry.ingredients
+    @State private var inventoryTools = Pantry.tools
     @State private var isCooking = false
     @State private var tapped: TileInfo?
     @State private var field: Field?
@@ -79,13 +83,6 @@ struct RecipeDetailView: View {
                 ToolbarItem(placement: .bottomBar) {
                     shareMenu
                 }
-                ToolbarItem(placement: .bottomBar) {
-                    Button {
-                        isShowingShoppingList = true
-                    } label: {
-                        Label("ShoppingList.Title", systemImage: "cart")
-                    }
-                }
             }
 
             if !recipe.steps.isEmpty, !isEditing {
@@ -115,9 +112,6 @@ struct RecipeDetailView: View {
         .sheet(isPresented: $isShowingTroubleshooting) {
             TroubleshootingView(entries: recipe.troubleshooting)
         }
-        .sheet(isPresented: $isShowingShoppingList) {
-            ShoppingListView(recipe: recipe)
-        }
         .fullScreenCover(isPresented: $isCooking) {
             CookingView(recipe: recipe, markTried: store == nil ? nil : {
                 recipe.tried = true
@@ -140,6 +134,10 @@ struct RecipeDetailView: View {
         .onChange(of: isRevising) { UIApplication.shared.isIdleTimerDisabled = isRevising }
         // Covering the page with cooking mode can count as leaving it, and cooking mode keeps
         // the screen awake itself, so it is left alone then.
+        // The inventory is changed from the popover and from the main screen, so it is read
+        // again whenever either could have changed it.
+        .onAppear(perform: readInventory)
+        .onChange(of: checking) { if checking == nil { readInventory() } }
         .onDisappear {
             if !isCooking { UIApplication.shared.isIdleTimerDisabled = false }
         }
@@ -282,9 +280,14 @@ struct RecipeDetailView: View {
         let items = recipe.items(in: list)
         if !items.isEmpty || isEditing {
             VStack(alignment: .leading, spacing: 12) {
-                Text(list.title)
-                    .font(.headline)
-                    .padding(.horizontal, .listRowInset)
+                HStack(spacing: 6) {
+                    Text(list.title)
+                        .font(.headline)
+                    if !isEditing {
+                        inventoryCheck(list)
+                    }
+                }
+                .padding(.horizontal, .listRowInset)
 
                 ScrollView(.horizontal) {
                     LazyHStack(spacing: 12) {
@@ -317,6 +320,40 @@ struct RecipeDetailView: View {
                 .contentMargins(.horizontal, .listRowInset, for: .scrollContent)
             }
         }
+    }
+
+    /// A mark beside a list's title when the inventory is missing some of its lines. A tap asks
+    /// whether the cook has them.
+    @ViewBuilder
+    private func inventoryCheck(_ list: RecipeList) -> some View {
+        let missing = ShoppingList(
+            recipe: recipe,
+            in: list,
+            inventoryIngredients: inventoryIngredients,
+            inventoryTools: inventoryTools
+        )
+        if !missing.isEmpty {
+            Button {
+                checking = list
+            } label: {
+                Image(systemName: "exclamationmark.circle")
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(.orange)
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel(Text("Inventory.Check.Label"))
+            .popover(isPresented: Binding(
+                get: { checking == list },
+                set: { if !$0 { checking = nil } }
+            )) {
+                InventoryCheckView(list: missing)
+            }
+        }
+    }
+
+    private func readInventory() {
+        inventoryIngredients = Pantry.ingredients
+        inventoryTools = Pantry.tools
     }
 
     /// The method. While the recipe is being edited a step opens on a tap and moves on a drag,

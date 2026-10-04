@@ -868,6 +868,57 @@
         }
       }
     },
+    "Inventory.Check.Footer": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap what you have to add it to your inventory."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "あるものをタップすると、在庫に追加されます。"
+          }
+        }
+      }
+    },
+    "Inventory.Check.Label": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not in your inventory"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在庫にないもの"
+          }
+        }
+      }
+    },
+    "Inventory.Check.Title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Do you have these?"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "これらはありますか？"
+          }
+        }
+      }
+    },
     "Inventory.Title": {
       "extractionState": "manual",
       "localizations": {
@@ -2599,74 +2650,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "保存"
-          }
-        }
-      }
-    },
-    "ShoppingList.Empty.Description": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Everything this recipe needs is in your inventory."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "このレシピに必要なものはすべて在庫にあります。"
-          }
-        }
-      }
-    },
-    "ShoppingList.Empty.Title": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nothing to Buy"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "買うものはありません"
-          }
-        }
-      }
-    },
-    "ShoppingList.Footer": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tap what you have bought to add it to your inventory."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "購入したものをタップすると、在庫に追加されます。"
-          }
-        }
-      }
-    },
-    "ShoppingList.Title": {
-      "extractionState": "manual",
-      "localizations": {
-        "en-US": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "To Buy"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "買うもの"
           }
         }
       }

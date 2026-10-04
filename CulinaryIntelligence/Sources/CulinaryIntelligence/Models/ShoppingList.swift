@@ -1,22 +1,26 @@
 import Foundation
 
-/// What a recipe needs that the kitchen does not have: the required ingredients and tools whose
-/// icons are missing from the inventory. Optional lines are left off, since the dish is made
-/// without them.
+/// What one of a recipe's lists holds that the kitchen does not have: the ingredients or tools
+/// whose icons are missing from the inventory.
 public nonisolated struct ShoppingList: Hashable {
     public let ingredients: [Ingredient]
     public let tools: [Tool]
 
     /// `inventoryIngredients` and `inventoryTools` are catalog names, such as `spring-onion`.
-    public init(recipe: Recipe, inventoryIngredients: [String], inventoryTools: [String]) {
+    public init(
+        recipe: Recipe,
+        in list: RecipeList,
+        inventoryIngredients: [String],
+        inventoryTools: [String]
+    ) {
         let haveIngredients = Set(inventoryIngredients)
         let haveTools = Set(inventoryTools)
-        ingredients = Self.unique(recipe.ingredientList(in: .ingredients).filter {
-            !Self.has($0.icon, in: haveIngredients)
-        })
-        tools = Self.unique(recipe.toolList(in: .tools).filter {
-            !Self.has($0.icon, in: haveTools)
-        })
+        ingredients = list.isIngredients
+            ? Self.unique(recipe.ingredientList(in: list).filter { !Self.has($0.icon, in: haveIngredients) })
+            : []
+        tools = list.isIngredients
+            ? []
+            : Self.unique(recipe.toolList(in: list).filter { !Self.has($0.icon, in: haveTools) })
     }
 
     public var isEmpty: Bool { ingredients.isEmpty && tools.isEmpty }
