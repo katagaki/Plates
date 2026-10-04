@@ -877,8 +877,7 @@ public final class RecipeGenerator {
     }
 
     /// Drops a step that is the step above it written out again. A step that only shares a
-    /// title keeps its place, since what it says is still part of the method, and the read
-    /// through is left to sort it out.
+    /// title keeps its place, since what it says is still part of the method.
     private static func withoutRepeats(
         _ steps: [(title: String, points: [String])]
     ) -> [(title: String, points: [String])] {
