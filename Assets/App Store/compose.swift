@@ -209,35 +209,38 @@ let iPadScreenshots: [Screenshot] = [
 
 // MARK: - Text
 
-/// Draws one line centered at `top`, shrinking until it fits `maxWidth`.
-/// Returns the drawn height.
-@discardableResult
-func drawLine(
-    _ text: String,
-    size: CGFloat,
-    weight: NSFont.Weight,
-    color: NSColor,
-    top: CGFloat,
-    canvasWidth: CGFloat,
-    maxWidth: CGFloat
-) -> CGFloat {
-    var fontSize = size
-    var attrs: [NSAttributedString.Key: Any] = [:]
-    var lineSize = NSSize.zero
-    while fontSize > 10 {
-        attrs = [
-            .font: NSFont.systemFont(ofSize: fontSize, weight: weight),
-            .foregroundColor: color,
-        ]
-        lineSize = (text as NSString).size(withAttributes: attrs)
-        if lineSize.width <= maxWidth { break }
-        fontSize -= 2
+/// One line of text at the largest size up to `size` that fits `maxWidth`.
+struct Line {
+    let text: String
+    let attributes: [NSAttributedString.Key: Any]
+    let font: NSFont
+    let size: NSSize
+
+    init(_ text: String, size: CGFloat, weight: NSFont.Weight, color: NSColor, maxWidth: CGFloat) {
+        var fontSize = size
+        var font = NSFont.systemFont(ofSize: fontSize, weight: weight)
+        var attributes: [NSAttributedString.Key: Any] = [:]
+        var lineSize = NSSize.zero
+        while fontSize > 10 {
+            font = NSFont.systemFont(ofSize: fontSize, weight: weight)
+            attributes = [.font: font, .foregroundColor: color]
+            lineSize = (text as NSString).size(withAttributes: attributes)
+            if lineSize.width <= maxWidth { break }
+            fontSize -= 2
+        }
+        self.text = text
+        self.attributes = attributes
+        self.font = font
+        self.size = lineSize
     }
-    (text as NSString).draw(
-        at: NSPoint(x: (canvasWidth - lineSize.width) / 2, y: top - lineSize.height),
-        withAttributes: attrs
-    )
-    return lineSize.height
+
+    /// Draws the line centered across `canvasWidth`, with the top of its line box at `top`.
+    func draw(top: CGFloat, canvasWidth: CGFloat) {
+        (text as NSString).draw(
+            at: NSPoint(x: (canvasWidth - size.width) / 2, y: top - size.height),
+            withAttributes: attributes
+        )
+    }
 }
 
 // MARK: - Device frames
@@ -351,20 +354,16 @@ func compose(_ shot: Screenshot, language: String, device: Device) -> Bool {
 
     // One-line header and caption. AppKit's origin is bottom-left.
     let textWidth = canvasSize.width - 96 * s
-    let headerTop = canvasSize.height - 96 * s
-    let headerHeight = drawLine(
-        copy.header, size: 84 * s, weight: .bold,
-        color: .white, top: headerTop, canvasWidth: canvasSize.width, maxWidth: textWidth
-    )
-    let captionTop = headerTop - headerHeight - 4 * s
-    let captionHeight = drawLine(
+    let header = Line(copy.header, size: 84 * s, weight: .bold, color: .white, maxWidth: textWidth)
+    let caption = Line(
         copy.caption, size: 44 * s, weight: .medium,
-        color: NSColor.white.withAlphaComponent(0.92), top: captionTop,
-        canvasWidth: canvasSize.width, maxWidth: textWidth
+        color: NSColor.white.withAlphaComponent(0.92), maxWidth: textWidth
     )
+    let captionGap = 4 * s
+    var headerTop = canvasSize.height - 96 * s
+    let textBottom = headerTop - header.size.height - captionGap - caption.size.height
 
     // The device fills what is left below the text.
-    let textBottom = captionTop - captionHeight
     let deviceTopMargin = 64 * s
     let deviceBottomMargin = 88 * s
     let availableHeight = textBottom - deviceTopMargin - deviceBottomMargin
@@ -374,6 +373,19 @@ func compose(_ shot: Screenshot, language: String, device: Device) -> Bool {
         deviceSize.width = canvasSize.width - 120 * s
         deviceSize.height = deviceSize.width / aspect
     }
+
+    // The iPad leaves more room above it, so its text is centered, by the header's cap height
+    // and the caption's baseline, between the top of the canvas and the top of the device.
+    if device == .iPad {
+        let deviceTop = deviceBottomMargin + deviceSize.height
+        let capInset = header.font.ascender - header.font.capHeight
+        let visualHeight = header.size.height + captionGap + caption.font.ascender - capInset
+        let visualTop = (canvasSize.height + deviceTop) / 2 + visualHeight / 2
+        headerTop = (visualTop + capInset).rounded()
+    }
+    header.draw(top: headerTop, canvasWidth: canvasSize.width)
+    caption.draw(top: headerTop - header.size.height - captionGap, canvasWidth: canvasSize.width)
+
     let deviceRect = NSRect(
         x: ((canvasSize.width - deviceSize.width) / 2).rounded(),
         y: deviceBottomMargin,
