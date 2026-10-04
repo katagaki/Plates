@@ -122,6 +122,11 @@ nonisolated struct WrittenRecipe: Equatable {
             } else if isInferred, startsBlock, !isGroup, let next = section.next,
                       !(section == .method && (marked || bareNumber != nil)) {
                 section = next
+            } else if startsBlock, line.firstMatch(of: #/^\d+[.)]\s/#) != nil,
+                      (section == .ingredients && !ingredients.isEmpty) || (section == .tools && !tools.isEmpty) {
+                // Numbered steps after the lists are the method, heading or not.
+                section = .method
+                isInferred = true
             }
             if isGroup { continue }
             if section == .method, !marked, let bareNumber {
