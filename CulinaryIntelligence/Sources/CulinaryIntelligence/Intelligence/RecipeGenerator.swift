@@ -13,6 +13,9 @@ public struct GenerationRequest: Equatable, Sendable {
     public var tools: [String] = []
     /// Set when the cook wants the picks left out, so the model writes from the dish alone.
     public var ignoresPicks = false
+    /// The cook's own words, kept beside a translation of them. The on-device model tells
+    /// what 宮保鶏丁 or 親子丼 is made of rather than naming it, and Gemma knows both by name.
+    var writtenAs = ""
 
     public init(
         description: String = "",
@@ -323,7 +326,12 @@ public final class RecipeGenerator {
             }
             let text = try await write(english)
             let written = Self.withoutUnusedPicks(WrittenRecipe(parsing: text), request: request)
-            let sorted = try await sort(written, text: text, request: request)
+            let sorted = try await sort(
+                written,
+                text: text,
+                request: request,
+                translation: english.writtenAs.isEmpty ? "" : english.description
+            )
             var recipe = Self.makeRecipe(sorted)
             recipe.dish = await Dish.asked(for: recipe)
             progress.isFinished = true
@@ -357,6 +365,7 @@ public final class RecipeGenerator {
             guard !translated.isEmpty else { return request }
             var asked = request
             asked.description = translated
+            asked.writtenAs = words
             return asked
         } catch {
             return request
@@ -393,16 +402,19 @@ public final class RecipeGenerator {
 
     /// Sorts what Gemma wrote into the recipe, a line at a time. A recipe read off a web page
     /// lists no tools, so the ones its method names are found in code and handed in as `found`.
+    /// `translation` is the cook's request as Gemma was given it, when it had to be put into
+    /// English.
     func sort(
         _ written: WrittenRecipe,
         text: String,
         request: GenerationRequest,
+        translation: String = "",
         found: [GeneratedTool]? = nil
     ) async throws -> SortedRecipe {
         progress.stage = .shopping
         progress.time = Self.time(from: written.time)
         progress.serves = Self.serves(from: written.serves)
-        let title = try await sortTitle(written, text: text, request: request)
+        let title = try await sortTitle(written, text: text, request: request, translation: translation)
         progress.title = title
 
         var ingredients: [(entry: StructuredIngredient, line: String)] = []
@@ -418,8 +430,14 @@ public final class RecipeGenerator {
                 let measured = Measures.forReader(line)
                 var prompt = Self.text("Generate.Prompt.Structure.Ingredient.Ask", measured)
                 // The catalog's own name for what the line names, so the pass translates
-                // "frozen peas" with the word for peas rather than one it half remembers.
-                if let asset = Self.namedIngredient(in: line) {
+                // "frozen peas" with the word for peas rather than one it half remembers. A
+                // reader in English is not given it: there is nothing to translate, and handed
+                // the catalog's word the pass wrote it in place of the line's, so ground pork
+                // came back as minced meat and lemon juice as lemon. Nor is it given when the line
+                // only reaches the catalog through another word for it, as "chicken stock" does
+                // the bouillon, which in Japanese is a stock cube.
+                if !Self.readsInEnglish, let asset = Self.namedIngredient(in: line),
+                   line.lowercased().contains(IconCatalog.englishName(for: asset).lowercased()) {
                     prompt += "\n" + Self.text("Generate.Prompt.Structure.Ingredient.Known", IconCatalog.displayName(for: asset))
                 }
                 var entry = try await sortLine(StructuredIngredient.self, prompt)
@@ -442,8 +460,22 @@ public final class RecipeGenerator {
                 // Gemma says when a tool can be done without. The pass has marked the only pan
                 // in a recipe as optional, so its guess is not asked for.
                 tool.required = !Self.isOptional(line)
+                // The icon is read from Gemma's English, as an ingredient's is. The pass has put
+                // a cutting board on a knife and a cast iron skillet on a non-stick one.
+                if let named = Self.namedTools(in: [line], limit: 1).first {
+                    tool.icon = named
+                }
                 tools.append(tool)
                 progress.tools.append(.init(name: tool.name.withoutLeakedSyntax, detail: ""))
+                progress.toolCount = tools.count
+            }
+            // Gemma lists the tins a cake bakes in and leaves out the oven, in every baking
+            // recipe the evals asked for. One the method bakes in is listed for it.
+            if found == nil, !tools.contains(where: { $0.icon == "oven" }),
+               Self.namedTools(in: written.steps).contains("oven") {
+                let oven = GeneratedTool(name: IconCatalog.displayName(for: "oven"), icon: "oven", required: true, note: "")
+                tools.append(oven)
+                progress.tools.append(.init(name: oven.name, detail: ""))
                 progress.toolCount = tools.count
             }
         }
@@ -456,7 +488,13 @@ public final class RecipeGenerator {
             (steps, notes) = try await sortWholeMethod(text: text)
         } else {
             for line in written.steps {
-                let step = try await sortLine(StructuredStep.self, Self.text("Generate.Prompt.Structure.Step.Ask", Measures.forReader(line)))
+                let prompt = Self.text("Generate.Prompt.Structure.Step.Ask", Measures.forReader(line))
+                var step = try await sortLine(StructuredStep.self, prompt)
+                // In Japanese, a step has come back with English left in it, "cooked riceを".
+                // Asked again it is usually put into Japanese the whole way.
+                if !Self.readsInEnglish, Self.leavesEnglish(step.title + " " + step.text) {
+                    step = (try? await sortLine(StructuredStep.self, prompt)) ?? step
+                }
                 steps.append((step.title.withoutLeakedSyntax, Self.sentences(in: step.text.withoutLeakedSyntax)))
                 progress.outline.append(step.title.withoutLeakedSyntax)
                 progress.stepCount = steps.count
@@ -488,7 +526,19 @@ public final class RecipeGenerator {
 
     /// The title in the reader's language. The cook's own words for the dish go with it, so it
     /// reads the way they asked for it rather than as a translation of Gemma's.
-    private func sortTitle(_ written: WrittenRecipe, text: String, request: GenerationRequest) async throws -> String {
+    private func sortTitle(
+        _ written: WrittenRecipe,
+        text: String,
+        request: GenerationRequest,
+        translation: String
+    ) async throws -> String {
+        // A cook who named a dish in their own language and got that dish has the best title
+        // for it already. Asked to write one, the pass called わかめ 海苔 and misspelled
+        // アラビアータ, with the cook's words in front of it.
+        if !translation.isEmpty, request.trimmedDescription.count <= 20,
+           Self.namesSameDish(written.title, translation) {
+            return request.trimmedDescription
+        }
         var lines = [
             written.title.isEmpty
                 ? Self.text("Generate.Prompt.Structure.Source", text)
@@ -498,7 +548,34 @@ public final class RecipeGenerator {
             lines.append(Self.text("Generate.Prompt.Structure.Request", request.trimmedDescription))
         }
         lines.append(Self.text("Generate.Prompt.Structure.Title.Ask"))
-        return try await sortLine(GeneratedTitle.self, lines.joined(separator: "\n")).title.withoutLeakedSyntax
+        do {
+            return try await sortLine(GeneratedTitle.self, lines.joined(separator: "\n")).title.withoutLeakedSyntax
+        } catch is CancellationError {
+            throw CancellationError()
+        } catch {
+            // The guardrails have turned down a dish's own name, "Oyakodon", with every other
+            // line of the recipe sorted. The cook's words name the dish in the reader's
+            // language, and Gemma's do for a reader in English, so the recipe is not lost to
+            // its title.
+            let fallback = request.trimmedDescription.isEmpty && !Measures.readsJapanese
+                ? written.title
+                : request.trimmedDescription
+            guard !fallback.isEmpty else { throw error }
+            return fallback.prefix(1).uppercased() + fallback.dropFirst()
+        }
+    }
+
+    /// Whether Gemma's title names the dish the cook asked for: half the words of the request,
+    /// as it was put into English, are in the title. "Tofu and seaweed miso soup" is "Miso Soup
+    /// with Tofu and Wakame", and "Spicy chicken pieces" is not "Kung Pao Chicken".
+    static func namesSameDish(_ title: String, _ asked: String) -> Bool {
+        let filler: Set<String> = ["and", "with", "the", "for", "in", "of", "a"]
+        func stems(_ text: String) -> Set<String> {
+            Set(words(in: text).filter { !filler.contains($0) }.map(stem))
+        }
+        let askedWords = stems(asked)
+        guard !askedWords.isEmpty else { return false }
+        return Double(askedWords.intersection(stems(title)).count) / Double(askedWords.count) >= 0.5
     }
 
     /// The total time from the method, for a recipe Gemma gave none for. The answer is read
@@ -600,15 +677,35 @@ public final class RecipeGenerator {
 
     // MARK: - Reading what Gemma wrote
 
-    /// An amount with its metric unit put back when the pass wrote the figure alone. "1 lb
-    /// (450g)" has come back as "450" from a pass that was told to keep the unit.
+    /// An amount with its unit put back when the pass wrote the figure alone. "1 lb (450g)"
+    /// has come back as "450", and "1/2 teaspoon salt" as "1/2", from a pass that was told to
+    /// keep the unit. The unit is taken from the line as the reader reads it: a metric unit
+    /// after the figure, a spoon or cup before it in Japanese, and in English a spoon, cup, or
+    /// count after it.
     static func amount(_ amount: String, from line: String) -> String {
         let figure = amount.trimmingCharacters(in: .whitespaces)
-        guard !figure.isEmpty, figure.allSatisfy({ $0.isNumber || $0 == "." || $0 == "/" }),
-              let match = line.firstMatch(of: #/(\d+(?:\.\d+)?)\s*(kg|g|ml|l)\b/#),
-              String(match.output.1) == figure
-        else { return amount }
-        return "\(figure) \(match.output.2)"
+        guard !figure.isEmpty, figure.allSatisfy({ $0.isNumber || $0 == "." || $0 == "/" }) else { return amount }
+        let escaped = NSRegularExpression.escapedPattern(for: figure)
+        let metric = "kg|g|ml|l|kilograms?|grams?|millilit(?:er|re)s?|lit(?:er|re)s?"
+        let units = Measures.readsJapanese
+            ? metric
+            : metric + "|teaspoons?|tablespoons?|tsp|tbsp|cups?|cloves?|slices?|pinch(?:es)?|cans?|stalks?"
+        let patterns = [
+            #"(?<![\d/.])"# + escaped + #"\s*(?:"# + units + #")\b"#,
+            #"(?:小さじ|大さじ|カップ)"# + escaped + #"(?![\d/.])"#,
+        ]
+        for pattern in patterns {
+            if let range = line.range(of: pattern, options: [.regularExpression, .caseInsensitive]) {
+                return String(line[range])
+            }
+        }
+        return amount
+    }
+
+    /// Whether a translation has an English word of four letters or more left in it. Units and
+    /// short marks such as "g", "ml", and "IH" are allowed.
+    static func leavesEnglish(_ text: String) -> Bool {
+        text.contains(#/[A-Za-z]{4,}/#)
     }
 
     /// Whether a line Gemma wrote says the recipe can do without it.
@@ -788,6 +885,9 @@ public final class RecipeGenerator {
             lines.append(english(request.ingredients.isEmpty ? "Generate.Prompt.Ask.Any" : "Generate.Prompt.Ask.FromKitchen"))
         } else {
             lines.append(english("Generate.Prompt.Ask.Dish", request.trimmedDescription))
+        }
+        if !request.writtenAs.isEmpty {
+            lines.append(english("Generate.Prompt.Ask.WrittenAs", request.writtenAs))
         }
         if !request.ingredients.isEmpty {
             lines.append(english("Generate.Prompt.Have.Ingredients", request.ingredientNames.joined(separator: separator)))

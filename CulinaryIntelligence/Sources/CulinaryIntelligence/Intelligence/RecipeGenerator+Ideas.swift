@@ -205,7 +205,7 @@ extension RecipeGenerator {
     static let ideaCount = 5
 
     /// Whether the app is read in English, in which case Gemma's ideas are shown as written.
-    private static var readsInEnglish: Bool {
+    static var readsInEnglish: Bool {
         Bundle.module.preferredLocalizations.first?.hasPrefix("en") ?? true
     }
 
@@ -229,6 +229,9 @@ extension RecipeGenerator {
         case (.dish, false): lines.append(english("Generate.Prompt.Ideas.Near", words))
         case (.goals, false): lines.append(english("Generate.Prompt.Ideas.Goals", words))
         case (.open, false): lines.append(english("Generate.Prompt.Ideas.Open", words))
+        }
+        if !request.writtenAs.isEmpty {
+            lines.append(english("Generate.Prompt.Ask.WrittenAs", request.writtenAs))
         }
         if !request.ingredients.isEmpty {
             lines.append(english("Generate.Prompt.Have.Ingredients", request.ingredientNames.joined(separator: separator)))

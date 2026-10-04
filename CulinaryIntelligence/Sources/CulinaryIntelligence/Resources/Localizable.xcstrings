@@ -1058,6 +1058,23 @@
         }
       }
     },
+    "Generate.Prompt.Ask.WrittenAs": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The cook wrote it as: %1$@"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "作る人の原文: %1$@"
+          }
+        }
+      }
+    },
     "Generate.Prompt.Have.Ingredients": {
       "comment": "Given to Gemma, which is always asked in English whatever language the app is read in. The Japanese value is kept for completeness and is not sent.",
       "extractionState": "manual",
