@@ -273,23 +273,6 @@
         }
       }
     },
-    "Generate.Ideas.Decide.Privacy" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en-US" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Decide for Me sends your request and these dishes to TypeSafe, which picks one."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "おまかせを使うと、リクエストとこれらの料理がTypeSafeに送られ、1つが選ばれます。"
-          }
-        }
-      }
-    },
     "Generate.Ideas.Decide.Remaining" : {
       "extractionState" : "manual",
       "localizations" : {

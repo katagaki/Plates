@@ -297,8 +297,8 @@ struct GenerateRecipeView: View {
         .safeAreaInset(edge: .bottom) { decideBar }
     }
 
-    /// Decide for me, with what is left of today's picks. The line above it says where the
-    /// request goes, or why the button is out for the day.
+    /// Decide for me, with what is left of today's picks. The line above it says why the button
+    /// is out for the day, or what went wrong.
     private var decideBar: some View {
         VStack(spacing: 8) {
             if let message = decideError ?? failedMessage {
@@ -307,10 +307,6 @@ struct GenerateRecipeView: View {
                     .foregroundStyle(.red)
             } else if decisionsRemaining == 0 {
                 Text("Generate.Ideas.Decide.LimitReached")
-                    .font(.footnote)
-                    .foregroundStyle(.secondary)
-            } else {
-                Text("Generate.Ideas.Decide.Privacy")
                     .font(.footnote)
                     .foregroundStyle(.secondary)
             }
