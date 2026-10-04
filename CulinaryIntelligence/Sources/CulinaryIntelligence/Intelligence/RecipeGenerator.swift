@@ -549,7 +549,8 @@ public final class RecipeGenerator {
         }
         lines.append(Self.text("Generate.Prompt.Structure.Title.Ask"))
         do {
-            return try await sortLine(GeneratedTitle.self, lines.joined(separator: "\n")).title.withoutLeakedSyntax
+            let title = try await sortLine(GeneratedTitle.self, lines.joined(separator: "\n")).title.withoutLeakedSyntax
+            return Self.titleCased(title)
         } catch is CancellationError {
             throw CancellationError()
         } catch {
@@ -563,6 +564,16 @@ public final class RecipeGenerator {
             guard !fallback.isEmpty else { throw error }
             return fallback.prefix(1).uppercased() + fallback.dropFirst()
         }
+    }
+
+    /// A title the pass wrote all in lower case, "mapo tofu", put in title case. One with any
+    /// capital in it is left as written, so "Penne all'arrabbiata" keeps its small words.
+    static func titleCased(_ title: String) -> String {
+        guard title.contains(where: \.isLetter), title == title.lowercased(), title.allSatisfy(\.isASCII) else { return title }
+        let small: Set<String> = ["a", "an", "and", "in", "of", "on", "or", "the", "with"]
+        return title.split(separator: " ").enumerated().map { index, word in
+            index > 0 && small.contains(String(word)) ? String(word) : word.prefix(1).uppercased() + word.dropFirst()
+        }.joined(separator: " ")
     }
 
     /// Whether Gemma's title names the dish the cook asked for: half the words of the request,
