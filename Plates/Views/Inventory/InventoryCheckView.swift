@@ -17,7 +17,7 @@ struct InventoryCheckView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 12) {
-                Text("Inventory.Check.Title")
+                Text(title)
                     .font(.headline)
 
                 VStack(alignment: .leading, spacing: 10) {
@@ -40,6 +40,10 @@ struct InventoryCheckView: View {
         .presentationCompactAdaptation(.popover)
         .onChange(of: ingredients) { Pantry.ingredients = ingredients }
         .onChange(of: tools) { Pantry.tools = tools }
+    }
+
+    private var title: LocalizedStringResource {
+        list.ingredients.isEmpty ? "Inventory.Check.Title.Tools" : "Inventory.Check.Title.Ingredients"
     }
 
     /// One line the inventory does not hold. A line drawn with an icon the catalog does not

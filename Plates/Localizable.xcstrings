@@ -902,19 +902,36 @@
         }
       }
     },
-    "Inventory.Check.Title": {
+    "Inventory.Check.Title.Ingredients": {
       "extractionState": "manual",
       "localizations": {
         "en-US": {
           "stringUnit": {
             "state": "translated",
-            "value": "Do you have these?"
+            "value": "Do you have the ingredients?"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "これらはありますか？"
+            "value": "材料は足りていますか？"
+          }
+        }
+      }
+    },
+    "Inventory.Check.Title.Tools": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Do you have the tools?"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "道具は足りていますか？"
           }
         }
       }
