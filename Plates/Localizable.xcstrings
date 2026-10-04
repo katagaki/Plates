@@ -24,7 +24,7 @@
         "en-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "To write a recipe, Plates sends your request and the ingredients and tools you pick to Gemma on Cloudflare Workers AI. Decide for Me and recipe icons send your request and the recipe to Jev by TypeSafe. Nothing that identifies you is sent."
+            "value" : "To write a recipe, Plates sends your request and the ingredients and tools you pick to Gemma on Cloudflare Workers AI. Decide for Me and recipe icons send your request and the recipe to Jev by TypeSafe. No personal information is sent."
           }
         },
         "ja" : {
@@ -1357,6 +1357,193 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "戻る"
+          }
+        }
+      }
+    },
+    "Onboarding.Consent.Allow" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Allow"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "許可"
+          }
+        }
+      }
+    },
+    "Onboarding.Consent.Deny" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Don't Allow"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "許可しない"
+          }
+        }
+      }
+    },
+    "Onboarding.Consent.Description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plates writes recipes with two models that run outside your iPhone. Allow Plates to send them what they need."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Platesは、iPhoneの外で動く2つのモデルを使ってレシピを書きます。必要な情報をこれらのモデルに送ることを許可してください。"
+          }
+        }
+      }
+    },
+    "Onboarding.Consent.Footer" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If you do not allow this, you can still add sample recipes, write your own, and cook from them. Plates asks again before your first recipe."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "許可しなくても、サンプルのレシピを追加したり、自分でレシピを書いて調理したりできます。最初のレシピを書く前に、もう一度確認します。"
+          }
+        }
+      }
+    },
+    "Onboarding.Consent.Gemma" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gemma Writes Recipes"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gemmaがレシピを書きます"
+          }
+        }
+      }
+    },
+    "Onboarding.Consent.Gemma.Description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your request and the ingredients and tools you pick go to Gemma, an open model on Cloudflare Workers AI."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "リクエストと選んだ材料・道具が、Cloudflare Workers AI上のオープンモデル、Gemmaに送られます。"
+          }
+        }
+      }
+    },
+    "Onboarding.Consent.Jev" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jev Picks Dishes and Icons"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jevが料理とアイコンを選びます"
+          }
+        }
+      }
+    },
+    "Onboarding.Consent.Jev.Description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Decide for Me and recipe icons send your request and the recipe to Jev by TypeSafe."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "おまかせとレシピのアイコンでは、リクエストとレシピがTypeSafeのJevに送られます。"
+          }
+        }
+      }
+    },
+    "Onboarding.Consent.Private" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Personal Information"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "個人情報は送られません"
+          }
+        }
+      }
+    },
+    "Onboarding.Consent.Private.Description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No name, account, or location is sent. Recipes stay as files on your iPhone or in iCloud Drive."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "名前、アカウント、位置情報は送られません。レシピはiPhoneまたはiCloud Driveにファイルとして残ります。"
+          }
+        }
+      }
+    },
+    "Onboarding.Consent.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sending Your Requests"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "リクエストの送信について"
           }
         }
       }

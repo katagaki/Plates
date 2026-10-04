@@ -1,9 +1,10 @@
 import SwiftUI
 
-/// What a new install shows first: what Plates does, and a way into the first recipe.
+/// What a new install shows first: what Plates does, where a request goes, and a way into the first recipe.
 struct OnboardingView: View {
     enum Step: Int, CaseIterable {
         case welcome
+        case consent
         case firstRecipe
     }
 
@@ -38,6 +39,7 @@ struct OnboardingView: View {
     private var content: some View {
         switch step {
         case .welcome: welcomeStep
+        case .consent: consentStep
         case .firstRecipe: firstRecipeStep
         }
     }

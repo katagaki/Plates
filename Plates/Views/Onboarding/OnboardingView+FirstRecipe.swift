@@ -32,10 +32,6 @@ extension OnboardingView {
                     .buttonStyle(.glass)
                 }
             }
-
-            Text("Consent.Message")
-                .font(.footnote)
-                .foregroundStyle(.secondary)
         } buttons: {
             primaryButton("Onboarding.FirstRecipe.Create") { createFirstRecipe() }
                 .disabled(trimmedDish.isEmpty)
