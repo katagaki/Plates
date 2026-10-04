@@ -33,7 +33,8 @@ struct InventoryCheckView: View {
                     .font(.footnote)
                     .foregroundStyle(.secondary)
             }
-            .padding(16)
+            .padding(.vertical, 16)
+            .padding(.horizontal, 20)
         }
         .scrollBounceBehavior(.basedOnSize)
         .frame(idealWidth: 300, maxHeight: 420)
@@ -76,6 +77,7 @@ struct InventoryCheckView: View {
                     Image(systemName: isHad ? "checkmark.circle.fill" : "circle")
                         .foregroundStyle(isHad ? Color.accentColor : .secondary)
                         .font(.title3)
+                        .padding(.trailing, 2)
                 }
             }
             .contentShape(.rect)
