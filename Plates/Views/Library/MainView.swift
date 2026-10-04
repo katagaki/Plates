@@ -31,6 +31,8 @@ struct MainView: View {
     @State private var isShowingInventory = false
     @AppStorage("Onboarding.Completed") private var onboardingCompleted = false
     @State private var isOnboarding = false
+    /// Set by plates://onboardme, so onboarding opens once the sheets in its way are gone.
+    @State private var isOnboardingRequested = false
     /// The dish named at the end of onboarding, written in once the recipe sheet opens.
     @State private var firstDish = ""
     /// Whether recipes are generated, or only written by hand, as the cook chose in onboarding
@@ -89,7 +91,7 @@ struct MainView: View {
                     }
                 }
         }
-        .sheet(isPresented: $isShowingLimits) {
+        .sheet(isPresented: $isShowingLimits, onDismiss: openNextImport) {
             LimitsView()
         }
         .sheet(isPresented: $isShowingInventory, onDismiss: openNextImport) {
@@ -112,6 +114,10 @@ struct MainView: View {
             store.importSharedRecipes()
             if !onboardingCompleted { isOnboarding = true }
             openNextImport()
+        }
+        .onOpenURL { url in
+            guard url.scheme == "plates", url.host() == "onboardme" else { return }
+            onboardAgain()
         }
         .onChange(of: scenePhase) {
             guard scenePhase == .active else { return }
@@ -182,11 +188,30 @@ struct MainView: View {
         openNextImport()
     }
 
+    /// Closes whatever sheet is open and brings onboarding back, which opens from
+    /// `openNextImport` once the sheet is gone.
+    private func onboardAgain() {
+        guard !isOnboarding else { return }
+        isOnboardingRequested = true
+        generation = nil
+        sharedImport = nil
+        isShowingLimits = false
+        isShowingInventory = false
+        isShowingAIProcessing = false
+        openNextImport()
+    }
+
     /// Opens the next shared web page once nothing else is on screen, so a page shared while
-    /// the cook was busy waits its turn rather than covering what they were doing.
+    /// the cook was busy waits its turn rather than covering what they were doing. Onboarding
+    /// asked for by URL goes first.
     private func openNextImport() {
         guard sharedImport == nil, generation == nil, !isOnboarding, !isShowingLimits,
               !isShowingInventory, !isShowingAIProcessing else { return }
+        if isOnboardingRequested {
+            isOnboardingRequested = false
+            isOnboarding = true
+            return
+        }
         sharedImport = store.sharedPages.first
     }
 
