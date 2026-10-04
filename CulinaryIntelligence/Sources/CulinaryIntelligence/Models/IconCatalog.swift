@@ -746,6 +746,7 @@ public nonisolated enum IconCatalog {
         "bicarbonate of soda": "baking-soda",
         "bitter gourd": "bitter-melon",
         "black bean sauce": "douchi",
+        "black bean paste": "douchi",
         "black fungus": "kikurage",
         "blackberries": "blackberry",
         "bolognese": "bolognese-sauce",
@@ -757,6 +758,7 @@ public nonisolated enum IconCatalog {
         "bread rolls": "buns",
         "brioche bun": "buns",
         "broad beans": "fava-beans",
+        "broad bean paste": "doubanjiang",
         "broth": "bouillon",
         "brown butter": "ghee",
         "brown mustard seeds": "mustard-seeds",
@@ -798,8 +800,10 @@ public nonisolated enum IconCatalog {
         "chicken wing": "chicken-wings",
         "chicory": "radicchio",
         "chili paste": "sambal",
+        "chili bean paste": "doubanjiang",
         "chilli": "chili",
         "chilli paste": "sambal",
+        "chilli bean paste": "doubanjiang",
         "chilli powder": "chili-powder",
         "chinese black beans": "douchi",
         "chinese black vinegar": "black-vinegar",
@@ -901,6 +905,7 @@ public nonisolated enum IconCatalog {
         "farfalle": "pasta",
         "fava": "fava-beans",
         "fermented bamboo shoots": "menma",
+        "fermented black bean paste": "douchi",
         "filberts": "hazelnuts",
         "filo": "filo-pastry",
         "fish cake": "kamaboko",
@@ -1164,6 +1169,7 @@ public nonisolated enum IconCatalog {
         "rape blossoms": "nanohana",
         "raspberries": "raspberry",
         "rayu": "chili-oil",
+        "red bean paste": "anko",
         "red beans": "azuki",
         "red beet": "beetroot",
         "red caviar": "salmon-roe",
@@ -1216,6 +1222,8 @@ public nonisolated enum IconCatalog {
         "sesame paste": "tahini",
         "sesame sauce": "sesame-dressing",
         "sha cha": "shacha-sauce",
+        "shaoxing": "shaoxing-wine",
+        "shaoxing rice wine": "shaoxing-wine",
         "shiitake mushroom": "shiitake",
         "shime saba": "mackerel-fillet",
         "shimi dofu": "koya-dofu",
@@ -1255,6 +1263,7 @@ public nonisolated enum IconCatalog {
         "spam": "luncheon-meat",
         "spanish onion": "red-onion",
         "spareribs": "spare-ribs",
+        "spicy bean paste": "doubanjiang",
         "spicy cod roe": "mentaiko",
         "spiny lobster": "lobster",
         "spring roll rice paper": "rice-paper",
@@ -1601,13 +1610,16 @@ public nonisolated enum IconCatalog {
             .map(\.name)
     }
 
-    /// How well one name answers the search text.
+    /// How well one name answers the search text. Of two names found inside the text, the
+    /// longer says more, so "ground sichuan peppercorns" is the peppercorns rather than corn.
     private static func score(_ candidate: String, against query: String, words: [String]) -> Int {
         if candidate == query {
             return 100
         } else if candidate.hasPrefix(query) || query.hasPrefix(candidate) {
             return 60
-        } else if candidate.contains(query) || query.contains(candidate) {
+        } else if query.contains(candidate) {
+            return 40 + min(candidate.count, 19)
+        } else if candidate.contains(query) {
             return 40
         }
         let candidateWords = Set(candidate.split(separator: " ").map(String.init))
