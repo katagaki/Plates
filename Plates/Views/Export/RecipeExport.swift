@@ -8,7 +8,7 @@ enum RecipeExport {
     /// The page a printed or pictured recipe is laid out on, in points.
     static let pageWidth: CGFloat = 612
     static let pageHeight: CGFloat = 792
-    private static let margin: CGFloat = 48
+    static let margin: CGFloat = 48
     private static let spacing: CGFloat = 12
 
     @MainActor
@@ -28,11 +28,14 @@ enum RecipeExport {
         return url
     }
 
-    /// The whole recipe in one tall picture.
+    /// The whole recipe in one tall picture. A long recipe is drawn at a lower scale, as the
+    /// renderer gives nothing back for a picture much over eight thousand pixels tall.
     @MainActor
     static func image(_ recipe: Recipe) throws -> URL {
         let renderer = ImageRenderer(content: RecipePage(recipe: recipe))
-        renderer.scale = 3
+        var height: CGFloat = 0
+        renderer.render { size, _ in height = size.height }
+        renderer.scale = min(3, 8000 / max(height, 1))
         guard let image = renderer.uiImage, let data = image.pngData() else {
             throw ExportError.renderFailed
         }
@@ -45,7 +48,7 @@ enum RecipeExport {
     /// text and can be selected, searched, and edited in a reader.
     @MainActor
     static func pdf(_ recipe: Recipe) throws -> URL {
-        let pages = paginate(blocks(for: recipe))
+        let pages = paginate(blocks(for: recipe), title: recipe.title)
         let data = NSMutableData()
         var box = CGRect(x: 0, y: 0, width: pageWidth, height: pageHeight)
         guard let consumer = CGDataConsumer(data: data),
@@ -79,8 +82,8 @@ enum RecipeExport {
     private static func blocks(for recipe: Recipe) -> [AnyView] {
         var blocks: [AnyView] = [AnyView(RecipeHeader(recipe: recipe))]
         for list in RecipeList.allCases {
-            for (index, item) in recipe.items(in: list).enumerated() {
-                blocks.append(heading(list.title, over: PaperItemRow(item: item), first: index == 0))
+            for (index, pair) in PaperItemPair.pairs(recipe.items(in: list)).enumerated() {
+                blocks.append(heading(list.title, over: PaperItemPair(items: pair), first: index == 0))
             }
         }
         for (index, step) in recipe.steps.enumerated() {
@@ -112,18 +115,18 @@ enum RecipeExport {
     /// The blocks packed into pages, measured one at a time so nothing is cut in half. A block
     /// taller than a page keeps a page of its own.
     @MainActor
-    private static func paginate(_ blocks: [AnyView]) -> [AnyView] {
+    private static func paginate(_ blocks: [AnyView], title: String) -> [AnyView] {
         // A little is kept back, so a block measured a hair short of how it draws is never
         // squeezed into what is left of a page and cut short.
         let available = pageHeight - margin * 2 - 12
         let width = pageWidth - margin * 2
-        var pages: [AnyView] = []
+        var sheets: [(blocks: [AnyView], used: CGFloat)] = []
         var current: [AnyView] = []
         var used: CGFloat = 0
 
         func close() {
             guard !current.isEmpty else { return }
-            pages.append(AnyView(PaperPage(blocks: current, height: max(pageHeight, used + margin * 2))))
+            sheets.append((current, used))
             current = []
             used = 0
         }
@@ -137,7 +140,15 @@ enum RecipeExport {
             current.append(block)
         }
         close()
-        return pages
+        return sheets.enumerated().map { index, sheet in
+            AnyView(PaperPage(
+                title: title,
+                blocks: sheet.blocks,
+                height: max(pageHeight, sheet.used + margin * 2),
+                number: index + 1,
+                count: sheets.count
+            ))
+        }
     }
 
     /// How tall a block draws at the page's text width.
