@@ -33,7 +33,7 @@ extension OnboardingView {
                 }
             }
 
-            Text("Onboarding.FirstRecipe.Disclosure")
+            Text("Consent.Message")
                 .font(.footnote)
                 .foregroundStyle(.secondary)
         } buttons: {

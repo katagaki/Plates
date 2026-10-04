@@ -6,6 +6,8 @@ import Foundation
 public enum CloudError: LocalizedError, Equatable {
     /// The app was built without the address of the Worker.
     case notConfigured
+    /// The cook has not yet allowed requests to go to Gemma and Jev.
+    case notAllowed
     /// This device cannot prove it is running Plates, which every request has to.
     case unsupported
     /// Today's allowance is used up.
@@ -16,6 +18,7 @@ public enum CloudError: LocalizedError, Equatable {
     public var errorDescription: String? {
         switch self {
         case .notConfigured: String(culinary: "Cloud.Error.NotConfigured")
+        case .notAllowed: String(culinary: "Cloud.Error.NotAllowed")
         case .unsupported: String(culinary: "Cloud.Error.Unsupported")
         case .limitReached: String(culinary: "Cloud.Error.LimitReached")
         case let .server(code, message):
@@ -75,6 +78,16 @@ public final class PlatesCloud {
     }
 
     public var isConfigured: Bool { baseURL != nil }
+
+    private static let allowedKey = "PlatesCloud.Allowed"
+
+    /// Whether the cook has allowed their requests and recipes to go to Gemma and Jev. Until
+    /// they have, nothing but a limits check leaves the device, and a dish icon is drawn from
+    /// the recipe's words alone.
+    public var isAllowed: Bool {
+        get { UserDefaults.standard.bool(forKey: Self.allowedKey) }
+        set { UserDefaults.standard.set(newValue, forKey: Self.allowedKey) }
+    }
 
     // MARK: - Writing
 
@@ -164,6 +177,7 @@ public final class PlatesCloud {
     /// Sends a signed request. A key the Worker no longer knows, as after the app is deleted and
     /// installed again, is dropped and a new one made, once.
     private func send(_ path: String, body: Data) async throws -> (URLSession.AsyncBytes, HTTPURLResponse) {
+        guard isAllowed || path == "/v1/limits" else { throw CloudError.notAllowed }
         do {
             return try await sendOnce(path, body: body)
         } catch let error as CloudError where error == .server(401, nil) {

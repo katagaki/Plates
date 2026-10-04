@@ -1,6 +1,57 @@
 {
   "sourceLanguage" : "en-US",
   "strings" : {
+    "Consent.Allow" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Allow"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "許可"
+          }
+        }
+      }
+    },
+    "Consent.Message" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "To write a recipe, Plates sends your request and the ingredients and tools you pick to Gemma on Cloudflare Workers AI. Decide for Me and recipe icons send your request and the recipe to Jev by TypeSafe. Nothing that identifies you is sent."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レシピを書くときは、リクエストと選んだ材料・道具が、Cloudflare Workers AIのGemmaに送られます。おまかせとレシピのアイコンでは、リクエストとレシピがTypeSafeのJevに送られます。あなたを特定する情報は送られません。"
+          }
+        }
+      }
+    },
+    "Consent.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Send Your Request?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "リクエストを送信しますか？"
+          }
+        }
+      }
+    },
     "Edit.Activity.Done" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1493,23 +1544,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "料理の名前を入れて、最初のレシピを書きましょう。次の画面で、手元にある材料や道具を追加できます。"
-          }
-        }
-      }
-    },
-    "Onboarding.FirstRecipe.Disclosure" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en-US" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "To write a recipe, Plates sends your request and the ingredients and tools you pick to Gemma on Cloudflare Workers AI. Decide for Me and recipe icons send your request and the recipe to Jev by TypeSafe. Nothing that identifies you is sent."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "レシピを書くときは、リクエストと選んだ材料・道具が、Cloudflare Workers AIのGemmaに送られます。おまかせとレシピのアイコンでは、リクエストとレシピがTypeSafeのJevに送られます。あなたを特定する情報は送られません。"
           }
         }
       }
