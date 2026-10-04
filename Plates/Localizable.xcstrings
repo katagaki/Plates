@@ -1497,6 +1497,40 @@
         }
       }
     },
+    "Onboarding.Consent.Policy.Cloudflare" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cloudflare Privacy Policy"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cloudflareのプライバシーポリシー"
+          }
+        }
+      }
+    },
+    "Onboarding.Consent.Policy.TypeSafe" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TypeSafe Privacy Policy"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TypeSafeのプライバシーポリシー"
+          }
+        }
+      }
+    },
     "Onboarding.Consent.Private" : {
       "extractionState" : "manual",
       "localizations" : {

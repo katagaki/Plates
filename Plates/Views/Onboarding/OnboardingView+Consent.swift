@@ -30,6 +30,12 @@ extension OnboardingView {
                 )
             }
 
+            VStack(alignment: .leading, spacing: 12) {
+                Link("Onboarding.Consent.Policy.Cloudflare", destination: Self.cloudflarePolicy)
+                Link("Onboarding.Consent.Policy.TypeSafe", destination: Self.typeSafePolicy)
+            }
+            .font(.subheadline)
+
             Text("Onboarding.Consent.Footer")
                 .font(.footnote)
                 .foregroundStyle(.secondary)
@@ -41,4 +47,7 @@ extension OnboardingView {
             secondaryButton("Onboarding.Consent.Deny") { advance() }
         }
     }
+
+    private static let cloudflarePolicy = URL(string: "https://www.cloudflare.com/privacypolicy/")!
+    private static let typeSafePolicy = URL(string: "https://typesafe.ai/legal/privacy-policy")!
 }
