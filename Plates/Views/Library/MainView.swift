@@ -264,6 +264,12 @@ struct MainView: View {
                     }
                 }
             }
+
+            Section {
+                Link(destination: URL(string: "https://github.com/katagaki/Plates")!) {
+                    Label("Menu.SourceCode", systemImage: "chevron.left.forwardslash.chevron.right")
+                }
+            }
         } label: {
             Label("Menu.Label", systemImage: "ellipsis")
         }

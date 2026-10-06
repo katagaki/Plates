@@ -1531,6 +1531,23 @@
         }
       }
     },
+    "Menu.SourceCode" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Source Code"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ソースコード"
+          }
+        }
+      }
+    },
     "Menu.Storage.Title" : {
       "extractionState" : "manual",
       "localizations" : {
